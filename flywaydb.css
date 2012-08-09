@@ -1,12 +1,13 @@
 .navbar-inner {
     background-color: #EEEEEE;
     background-image: none;
-    min-height: 80px;
+    min-height: 70px;
 }
 
-#social-buttons {
-    padding-top: 30px;
-    width: 400px;
+#logo {
+    display: inline-block;
+    padding-top: 7px;
+    margin-right: 50px;
 }
 
 .brand :hover {
@@ -14,12 +15,12 @@
 }
 
 ul.nav {
-    height: 80px;
+    height: 70px;
 }
 
 .navbar .nav > li > a {
     height: 40px;
-    padding-top: 30px;
+    padding-top: 25px;
     font-size: 20px;
 }
 
@@ -29,5 +30,76 @@ ul.nav {
 
 #big-sell {
     min-height: 400px;
-    background-image: url("bg/landscape.png");
+    text-align: center;
+    font-size: 20px;
+}
+
+.btn-jumbo {
+    font-size: 20px;
+    padding: 14px 24px;
+    margin: 20px 5px;
+    border-radius: 6px;
+}
+
+#social-buttons table {
+    margin: auto;
+}
+
+#social-buttons td {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+}
+
+hr.soften {
+    height: 1px;
+    margin: 54px 0;
+    background-image: -webkit-linear-gradient(left, transparent, rgba(0, 0, 0, .1), transparent);
+    background-image: -moz-linear-gradient(left, transparent, rgba(0, 0, 0, .1), transparent);
+    background-image: -ms-linear-gradient(left, transparent, rgba(0, 0, 0, .1), transparent);
+    background-image: -o-linear-gradient(left, transparent, rgba(0, 0, 0, .1), transparent);
+    border: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    color: #AAAAAA;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px auto 25px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+#marketing {
+    text-align: center;
+    margin: auto;
+}
+
+#marketing .row {
+    margin-top: 10px;
+    text-align: left;
+}
+
+#marketing .row img {
+    float: left;
+    margin-right: 7px;
+}
+
+#marketing .row p {
+    margin-top: 5px;
+}
+
+#features h3 {
+    margin-top: 10px;
+}
+
+#features td:not(:first-child) {
+    text-align: center;
 }

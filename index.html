@@ -11,91 +11,581 @@
 </head>
 <body>
 <div class="container">
-    <div class="navbar">
-        <div class="navbar-inner">
-            <div class="container">
-                <a class="brand" href="#">
-                    <img src="logo/flyway-logo-transparent-notext-55.png" alt="Flyway"/>
-                </a>
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="nav" id="logo" href="#">
+                <img src="logo/flyway-logo-transparent-55.png" alt="Flyway"/>
+            </a>
 
-                <div id="social-buttons" class="nav">
-                    <table>
-                        <tr>
-                            <td>
-                                <a href="https://twitter.com/share" class="twitter-share-button"
-                                   data-url="http://www.flywaydb.org"
-                                   data-text="Check out #Flyway, the agile #database migration framework for #Java"></a>
-                                <script>!function (d, s, id) {
-                                    var js, fjs = d.getElementsByTagName(s)[0];
-                                    if (!d.getElementById(id)) {
-                                        js = d.createElement(s);
-                                        js.id = id;
-                                        js.src = "http://platform.twitter.com/widgets.js";
-                                        fjs.parentNode.insertBefore(js, fjs);
-                                    }
-                                }(document, "script", "twitter-wjs");</script>
-                            </td>
-                            <td>
-                                <div id="fb-root"></div>
-                                <div class="fb-like" data-href="http://flywaydb.org" data-send="false"
-                                     data-layout="button_count"
-                                     data-width="100" data-show-faces="true"></div>
-                                <script>(function (d, s, id) {
-                                    var js, fjs = d.getElementsByTagName(s)[0];
-                                    if (d.getElementById(id)) return;
-                                    js = d.createElement(s);
-                                    js.id = id;
-                                    js.src = "http://connect.facebook.net/en_US/all.js#xfbml=1";
-                                    fjs.parentNode.insertBefore(js, fjs);
-                                }(document, 'script', 'facebook-jssdk'));</script>
-                            </td>
-                            <td>
-                                <g:plusone size="medium" href="http://flywaydb.org"></g:plusone>
-                                <script type="text/javascript">
-                                    (function () {
-                                        var po = document.createElement('script');
-                                        po.type = 'text/javascript';
-                                        po.async = true;
-                                        po.src = 'https://apis.google.com/js/plusone.js';
-                                        var s = document.getElementsByTagName('script')[0];
-                                        s.parentNode.insertBefore(po, s);
-                                    })();
-                                </script>
-                            </td>
-                            <td>
-                                <script src="http://platform.linkedin.com/in.js" type="text/javascript"></script>
-                                <script type="IN/Share" data-url="http://flywaydb.org" data-counter="right"></script>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-                <ul class="nav pull-right">
-                    <li class="active">
-                        <a href="#">Learn</a>
-                    </li>
-                    <li><a href="#">Download</a></li>
-                    <li><a href="#">Contribute</a></li>
-                </ul>
-            </div>
+            <ul class="nav">
+                <li class="active">
+                    <a href="#">Learn</a>
+                </li>
+                <li><a href="#">Download</a></li>
+                <li><a href="#">Contribute</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
         </div>
     </div>
-    <div id="top-space"></div>
+</div>
+<div id="top-space"></div>
+<div id="big-sell">
+    <p>
+        <img src="logo/flyway-logo-transparent-300.png" alt="Flyway"/>
+    </p>
+
+    <p>
+        <span>The agile database migration framework for Java</span>
+    </p>
+
+    <p>
+        <a class="btn btn-primary btn-large btn-jumbo" href="">Download v1.7</a>
+        <a class="btn btn-large btn-jumbo" href="">Release Notes</a>
+    </p>
+</div>
+<div id="social-buttons">
+    <table>
+        <tr>
+            <td>
+                <a href="https://twitter.com/flywaydb" class="twitter-follow-button" data-show-count="true"
+                   data-dnt="true"></a>
+                <script>!function (d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (!d.getElementById(id)) {
+                        js = d.createElement(s);
+                        js.id = id;
+                        js.src = "http://platform.twitter.com/widgets.js";
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }
+                }(document, "script", "twitter-wjs");</script>
+            </td>
+            <td>
+                <a href="https://twitter.com/share" class="twitter-share-button"
+                   data-url="http://www.flywaydb.org"
+                   data-text="Check out #Flyway, the agile #database migration framework for #Java"></a>
+                <script>!function (d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (!d.getElementById(id)) {
+                        js = d.createElement(s);
+                        js.id = id;
+                        js.src = "http://platform.twitter.com/widgets.js";
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }
+                }(document, "script", "twitter-wjs");</script>
+            </td>
+            <td>
+                <div id="fb-root"></div>
+                <div class="fb-like" data-href="http://flywaydb.org" data-send="false"
+                     data-layout="button_count"
+                     data-width="100" data-show-faces="true"></div>
+                <script>(function (d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) return;
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = "http://connect.facebook.net/en_US/all.js#xfbml=1";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));</script>
+            </td>
+            <td>
+                <g:plusone size="medium" href="http://flywaydb.org"></g:plusone>
+                <script type="text/javascript">
+                    (function () {
+                        var po = document.createElement('script');
+                        po.type = 'text/javascript';
+                        po.async = true;
+                        po.src = 'https://apis.google.com/js/plusone.js';
+                        var s = document.getElementsByTagName('script')[0];
+                        s.parentNode.insertBefore(po, s);
+                    })();
+                </script>
+            </td>
+            <td>
+                <script src="http://platform.linkedin.com/in.js" type="text/javascript"></script>
+                <script type="IN/Share" data-url="http://flywaydb.org" data-counter="right"></script>
+            </td>
+        </tr>
+    </table>
+</div>
+<hr class="soften"/>
+<div id="marketing">
+    <h1>It just works. Refreshingly simple.</h1>
+
+    <h2>Migrate from any version (incl. an empty database) to the latest version of the schema</h2>
+
     <div class="row">
-        <div id="big-sell" class="span12">
-            <div class="row">
-                <div class="span6">
-                    <img src="logo/flyway-logo-transparent-notext-400.png"/>
-                    sdfghjk
-                    jbbjksbkjksjd
-                </div>
-                <div class="span6">
-                    <img src="logo/flyway-logo-transparent-100.png"/>
-                    sdfghjk
-                    jbbjksbkjksjd
-                </div>
-            </div>
+        <div class="span4">
+            <img src="glyphicons/glyphicons_026_road.png" class=""/>
+
+            <h3>Auto-migration on startup</h3>
+
+            <p>Ship migrations together with the application and run them automatically on startup using the API</p>
+        </div>
+        <div class="span4">
+            <img src="glyphicons/glyphicons_009_magic.png" class=""/>
+
+            <h3>Convention Over Configuration</h3>
+
+            <p>Classpath Scanning to automatically discover Sql and Java migrations</p>
+        </div>
+        <div class="span4">
+            <img src="glyphicons/glyphicons_036_file.png" class=""/>
+
+            <h3>Plain Old Sql</h3>
+
+            <p>SQL scripts for migrations (incl. placeholder replacement). No proprietary XML formats, no lock-in.</p>
         </div>
     </div>
+    <div class="row">
+        <div class="span4">
+            <img src="glyphicons/glyphicons_294_coffe_cup.png" class=""/>
+
+            <h3>No limits</h3>
+
+            <p>Java-based migrations for advanced data transformations and handling with LOBs</p>
+        </div>
+        <div class="span4">
+            <img src="glyphicons/glyphicons_332_certificate.png" class=""/>
+
+            <h3>Highly reliable</h3>
+
+            <p>Safe for cluster environments (Multiple machines can migrate in parallel)</p>
+        </div>
+        <div class="span4">
+            <img src="glyphicons/glyphicons_023_cogwheels.png" class=""/>
+
+            <h3>Build tool support</h3>
+
+            <p>Maven plugin and Ant tasks for migrating manually</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span4">
+            <img src="glyphicons/glyphicons_160_imac.png" class=""/>
+
+            <h3>Not only for Java</h3>
+
+            <p>Command-line tool for non-JVM users and environments without Maven</p>
+        </div>
+        <div class="span4">
+            <img src="glyphicons/glyphicons_070_umbrella.png" class=""/>
+
+            <h3>Fail fast</h3>
+
+            <p>Inconsistent database or failed migration prevents app from starting.</p>
+        </div>
+        <div class="span4">
+            <img src="glyphicons/glyphicons_067_cleaning.png" class=""/>
+
+            <h3>Schema Clean</h3>
+
+            <p>Drop all tables, views, triggers, ... from a schema without dropping the schema itself</p>
+        </div>
+    </div>
+</div>
+<hr class="soften"/>
+<div id="features">
+<h1>Feature Comparison</h1>
+
+<h2>Pick the right tool for the job.</h2>
+<table class="table table-condensed">
+<thead>
+<tr>
+    <td></td>
+    <td><strong>Flyway</strong></td>
+    <td><a href="http://liquibase.org">Liquibase</a></td>
+    <td><a href="http://code.google.com/p/c5-db-migration/">c5-db-migration</a></td>
+    <td><a href="http://dbdeploy.com">dbdeploy</a></td>
+    <td><a href="http://www.mybatis.org/java.html">mybatis</a></td>
+    <td><a href="http://migratedb.sourceforge.net">MIGRATEdb</a></td>
+    <td><a href="http://migrate4j.sourceforge.net">migrate4j</a></td>
+    <td><a href="http://www.dbmaintain.org">dbmaintain</a></td>
+    <td><a href="http://autopatch.sourceforge.net">AutoPatch</a></td>
+</tr>
+</thead>
+<tr>
+    <td colspan="10"><h3>Migration types</h3></td>
+</tr>
+<tr>
+    <td>Plain Old Sql migrations</td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/><sup>1</sup></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+</tr>
+<tr>
+    <td>Java migrations</td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/><sup>1</sup></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+</tr>
+<tr>
+    <td>Groovy migrations</td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+</tr>
+<tr>
+    <td>Xml migrations</td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+</tr>
+<tr>
+    <td>DDL abstraction DSL</td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+</tr>
+<tr>
+    <td colspan="10"><h3>Execution</h3></td>
+</tr>
+<tr>
+    <td>Migrate from within application (API)</td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+</tr>
+<tr>
+    <td>Maven plugin</td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+</tr>
+<tr>
+    <td>Ant tasks</td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+</tr>
+<tr>
+    <td>Command-line tool</td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+</tr>
+<tr>
+    <td colspan="10"><h3>Databases</h3></td>
+</tr>
+<tr>
+    <td>Oracle</td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+</tr>
+<tr>
+    <td>SQL Server</td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+</tr>
+<tr>
+    <td>DB2</td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+</tr>
+<tr>
+    <td>MySQL</td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+</tr>
+<tr>
+    <td>PostgreSQL</td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+</tr>
+<tr>
+    <td>H2</td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+</tr>
+<tr>
+    <td>Hsql</td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+</tr>
+<tr>
+    <td>Derby</td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+</tr>
+<tr>
+    <td colspan="10"><h3>Sql Parser</h3></td>
+</tr>
+<tr>
+    <td>Oracle PL/SQL</td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/><sup>2</sup></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+</tr>
+<tr>
+    <td>SQL Server T-SQL</td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/><sup>2</sup></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+</tr>
+<tr>
+    <td>DB2 SQL PL</td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/><sup>2</sup></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+</tr>
+<tr>
+    <td>MySQL stored procedures</td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/><sup>2</sup></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/><sup>3</sup></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+</tr>
+<tr>
+    <td>PostgreSQL stored procedures</td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/><sup>2</sup></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+</tr>
+<tr>
+    <td colspan="10"><h3>Other</h3></td>
+</tr>
+<tr>
+    <td>Automatic creation of metadata table</td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+</tr>
+<tr>
+    <td>Cluster-safe</td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+</tr>
+<tr>
+    <td>Checksum validation</td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+</tr>
+<tr>
+    <td>Placeholder replacement</td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+</tr>
+<tr>
+    <td>Multiple schema support</td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+</tr>
+<tr>
+    <td>Clean existing schema</td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+</tr>
+<tr>
+    <td><a href="http://repo1.maven.org/maven2/com/googlecode/flyway">Available on Maven Central</a></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/yes.png"/></td>
+    <td><img src="http://wiki.flyway.googlecode.com/hg/img/no.png"/></td>
+</tr>
+<tr>
+    <td>License</td>
+    <td>Apache v2</td>
+    <td>Apache v2</td>
+    <td>Apache v2</td>
+    <td>BSD</td>
+    <td>Apache v2</td>
+    <td>BSD</td>
+    <td>LGPL v3</td>
+    <td>Apache v2</td>
+    <td>Apache</td>
+</tr>
+</table>
+<br/>
+<sup>1. Sql files and Java classes can be used indirectly through references in xml migrations</sup><br/>
+<sup>2. Only a single statement at a time is supported. No mixed delimiters.</sup><br/>
+<sup>3. Only Oracle-style PL/SQL delimeters. No MySQL standard syntax using the DELIMITER statement.</sup><br/>
+</div>
+<hr class="soften"/>
 </div>
 <script src="jquery-1.7.2/jquery-1.7.2.min.js" type="text/javascript"></script>
 </body>
