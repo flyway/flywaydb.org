@@ -103,3 +103,9 @@ h3 {
 #features td:not(:first-child) {
     text-align: center;
 }
+
+#footer {
+    text-align: center;
+    color: #AAAAAA;
+    font-size: 10px;
+}
