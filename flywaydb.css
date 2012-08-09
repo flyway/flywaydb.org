@@ -1,0 +1,33 @@
+.navbar-inner {
+    background-color: #EEEEEE;
+    background-image: none;
+    min-height: 80px;
+}
+
+#social-buttons {
+    padding-top: 30px;
+    width: 400px;
+}
+
+.brand :hover {
+    background-color: #DDDDDD;
+}
+
+ul.nav {
+    height: 80px;
+}
+
+.navbar .nav > li > a {
+    height: 40px;
+    padding-top: 30px;
+    font-size: 20px;
+}
+
+#top-space {
+    min-height: 100px;
+}
+
+#big-sell {
+    min-height: 400px;
+    background-image: url("bg/landscape.png");
+}
