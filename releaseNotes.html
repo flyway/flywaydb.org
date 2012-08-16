@@ -84,12 +84,18 @@ title: Release Notes
         <li><a href="http://code.google.com/p/flyway/issues/detail?id=300">Issue 300</a> flyway:clean
             doesn&#x27;t remove Schema-level triggers on Oracle
         </li>
-        <li><a href="http://code.google.com/p/flyway/issues/detail?id=304">Issue 304</a> SQL migration with multiline INSERT takes too long
+        <li>
+            <a href="http://code.google.com/p/flyway/issues/detail?id=304">Issue 304</a>
+            SQL migration with multiline INSERT takes too long
+        </li>
+        <li>
+            <a href="http://code.google.com/p/flyway/issues/detail?id=305">Issue 305</a>
+            SqlScript parser misses */ closing comment if line starts with --
         </li>
         <li>Added JBoss VFS v2 support to enable deployment inside JBoss 5.</li>
     </ul>
-    <p>Thanks to Adriano Machado, alehby, Alix Warnke, donald87, Geir Nerboe, Greg Bujak, Haam Tham, Jochen Munz, Kris Mulica,
-        Stefan Röck, Steve Tarka and Tomek Kaczanowski for reporting these issues.</p>
+    <p>Thanks to Adriano Machado, alehby, Alix Warnke, Dmitry Bedrin, donald87, Geir Nerboe, Greg Bujak, Haam Tham,
+        Jochen Munz, Kris Mulica, Stefan Röck, Steve Tarka and Tomek Kaczanowski for reporting these issues.</p>
 </div>
 
 <div class="release">
@@ -111,7 +117,8 @@ title: Release Notes
         <li>Core: Removed deprecated Flyway.get/setTransactionManager() methods. They already had no effect anymore
             since 1.6
         </li>
-        <li>Core: Deprecated <a href="http://code.google.com/p/flyway/wiki/JavaMigration">JavaMigration</a>. Use SpringJdbcMigration instead.
+        <li>Core: Deprecated <a href="http://code.google.com/p/flyway/wiki/JavaMigration">JavaMigration</a>. Use
+            SpringJdbcMigration instead.
         </li>
         <li>Core: Deprecated JavaMigrationInfoProvider. Use MigrationInfoProvider instead.</li>
         <li>Core: Deprecated JavaMigrationChecksumProvider. Use MigrationChecksumProvider instead.</li>
@@ -278,7 +285,8 @@ title: Release Notes
         </li>
         <li>Removed the deprecated Flyway.init(version,description) method</li>
         <li>Removed the deprecated BaseJavaMigration class and the pre
-            1.0 inheritance-based Java Migration support (update to implements <a href="http://code.google.com/p/flyway/wiki/JavaMigration">JavaMigration</a>
+            1.0 inheritance-based Java Migration support (update to implements <a
+                    href="http://code.google.com/p/flyway/wiki/JavaMigration">JavaMigration</a>
             if you haven't already done so)
         </li>
     </ul>
