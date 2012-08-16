@@ -16,8 +16,8 @@ title: Java Migration
                                                                       class="section_anchor"></a></h2>
 
     <p>Java migrations reside on the classpath in the package referenced by the <strong><a
-            href="http://wiki.flyway.googlecode.com/hg/javadoc/com/googlecode/flyway/core/Flyway.html#setLocations(java.lang.String...)"
-            rel="nofollow">locations</a></strong> property.<br/></p>
+            href="/javadoc/com/googlecode/flyway/core/Flyway.html#setLocations(java.lang.String...)"
+           >locations</a></strong> property.<br/></p>
 
     <p><img src="/balsamiq/JavaMigrationBasePackage.png"/></p>
 
@@ -27,8 +27,8 @@ title: Java Migration
     <h2><a name="Naming"></a>Naming<a href="#Naming" class="section_anchor"></a></h2>
 
     <p>In order to be picked up, the Java Migrations must implement <strong><a
-            href="http://wiki.flyway.googlecode.com/hg/javadoc/com/googlecode/flyway/core/api/migration/jdbc/JdbcMigration.html"
-            rel="nofollow">JdbcMigration</a></strong>.<br/></p>
+            href="/javadoc/com/googlecode/flyway/core/api/migration/jdbc/JdbcMigration.html"
+           >JdbcMigration</a></strong>.<br/></p>
 
     <p>A Java Migration automatically
     <ul>
@@ -46,8 +46,8 @@ title: Java Migration
     </ul>
     <br/> </p><p>If you need more control over the class name, you can override the default convention by
     implementing <strong><a
-            href="http://wiki.flyway.googlecode.com/hg/javadoc/com/googlecode/flyway/core/api/migration/MigrationInfoProvider.html"
-            rel="nofollow">MigrationInfoProvider</a></strong>. </p>
+            href="/javadoc/com/googlecode/flyway/core/api/migration/MigrationInfoProvider.html"
+           >MigrationInfoProvider</a></strong>. </p>
 
     <p>This will allow you to name your class as you wish. Version and description are provided by implement the
         respective methods.<br/></p>
@@ -57,8 +57,8 @@ title: Java Migration
 
     <p>Unlike SQL migrations, Java migrations by default do not have a checksum and therefore do not participate in the
         change detection of Flyway&#x27;s validation. This can be remedied by implementing <strong><a
-                href="http://wiki.flyway.googlecode.com/hg/javadoc/com/googlecode/flyway/core/api/migration/MigrationChecksumProvider.html"
-                rel="nofollow">MigrationChecksumProvider</a></strong>. </p>
+                href="/javadoc/com/googlecode/flyway/core/api/migration/MigrationChecksumProvider.html"
+               >MigrationChecksumProvider</a></strong>. </p>
 
     <p>By implementing the getChecksum() method you can provide your own checksum, which will then be stored and
         validated for changes.<br/></p>
@@ -67,10 +67,10 @@ title: Java Migration
                                                                             class="section_anchor"></a></h2>
 
     <p>If you use Spring, you can also implement <strong><a
-            href="http://wiki.flyway.googlecode.com/hg/javadoc/com/googlecode/flyway/core/api/migration/spring/SpringJdbcMigration.html"
-            rel="nofollow">SpringJdbcMigration</a></strong>. This works exactly like <a
-            href="http://wiki.flyway.googlecode.com/hg/javadoc/com/googlecode/flyway/core/api/migration/jdbc/JdbcMigration.html"
-            rel="nofollow">JdbcMigration</a>, the only difference being that you now receive a convenient Spring
+            href="/javadoc/com/googlecode/flyway/core/api/migration/spring/SpringJdbcMigration.html"
+           >SpringJdbcMigration</a></strong>. This works exactly like <a
+            href="/javadoc/com/googlecode/flyway/core/api/migration/jdbc/JdbcMigration.html"
+           >JdbcMigration</a>, the only difference being that you now receive a convenient Spring
         JdbcTemplate to work with instead of a plain Jdbc
         Connection.<br/></p>
 

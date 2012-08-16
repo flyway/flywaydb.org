@@ -11,11 +11,11 @@ title: Releasing Flyway (Committers only)
     <ol>
         <li>GPG installed, available on the PATH and a key generated (see <a
                 href="https://docs.sonatype.org/display/Repository/Sonatype+OSS+Maven+Repository+Usage+Guide#SonatypeOSSMavenRepositoryUsageGuide-5.Prerequisites"
-                rel="nofollow">https://docs.sonatype.org/display/Repository/Sonatype+OSS+Maven+Repository+Usage+Guide#SonatypeOSSMavenRepositoryUsageGuide-5.Prerequisites</a>)
+               >https://docs.sonatype.org/display/Repository/Sonatype+OSS+Maven+Repository+Usage+Guide#SonatypeOSSMavenRepositoryUsageGuide-5.Prerequisites</a>)
         </li>
         <li>A checkout of Flyway in two locations: <i>/flyway</i> and <i>/flyway-release</i></li>
         <li>A checkout of the Flyway Wiki by executing <i>hg clone <a href="https://code.google.com/p/flyway.wiki/"
-                                                                      rel="nofollow">https://code.google.com/p/flyway.wiki/</a>
+                                                                     >https://code.google.com/p/flyway.wiki/</a>
             flyway-wiki</i></li>
         <li>Maven settings.xml contains</li>
         <ul>
@@ -71,13 +71,13 @@ title: Releasing Flyway (Committers only)
         <li>Then, we the release is done, we can push the changes to the POMs by running <strong>hg push</strong> in <i>/flyway</i>
         </li>
         <li>The old downloads must now be deprecated. We go to <a href="http://code.google.com/p/flyway/downloads/list"
-                                                                  rel="nofollow">http://code.google.com/p/flyway/downloads/list</a>.
+                                                                 >http://code.google.com/p/flyway/downloads/list</a>.
         </li>
         <li>We mark each download for the old version as deprecated by removing the <strong>Featured</strong> tag and
             adding the <strong>Deprecated</strong> tag
         </li>
         <li>Now the artifacts, must be promoted to Maven Central by logging in to <a href="https://oss.sonatype.org/"
-                                                                                     rel="nofollow">https://oss.sonatype.org/</a>
+                                                                                    >https://oss.sonatype.org/</a>
         </li>
         <li>We select <strong>Staging Repositories</strong> on the left and tick the checkbox in front of the open
             <strong>com.googlecode.flyway</strong> repository

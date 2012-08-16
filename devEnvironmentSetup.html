@@ -17,9 +17,9 @@ title: Dev Environment Setup
 
     <p>Flyway uses Mercurial for version control. Download the latest version here: <a
             href="http://mercurial.selenic.com/wiki/Download"
-            rel="nofollow">http://mercurial.selenic.com/wiki/Download</a></p>
+           >http://mercurial.selenic.com/wiki/Download</a></p>
 
-    <p>Alternatively Windows users can use <a href="http://tortoisehg.bitbucket.org/" rel="nofollow">TortoiseHg</a>
+    <p>Alternatively Windows users can use <a href="http://tortoisehg.bitbucket.org/">TortoiseHg</a>
         (which comes bundled with the command-line client) </p>
 
     <p>Make sure the directory containing the binaries has been added the PATH. If you downloaded an installer this
@@ -28,7 +28,7 @@ title: Dev Environment Setup
     <h2><a name="JDK"></a>JDK<a href="#JDK" class="section_anchor"></a></h2>
 
     <p>Flyway depends on JDK 6. So grab the latest version here: <a
-            href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" rel="nofollow">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a>
+            href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a>
     </p>
 
     <p>After the installation is complete
@@ -39,7 +39,7 @@ title: Dev Environment Setup
     <br/> </p><h2><a name="Maven"></a>Maven<a href="#Maven" class="section_anchor"></a></h2>
 
     <p>Flyway depends on Maven 2. So grab the latest version here: <a href="http://maven.apache.org/download.html"
-                                                                      rel="nofollow">http://maven.apache.org/download.html</a>
+                                                                     >http://maven.apache.org/download.html</a>
     </p>
 
     <p>After the installation is complete
@@ -50,7 +50,7 @@ title: Dev Environment Setup
     <br/> </p><h2><a name="Ant"></a>Ant<a href="#Ant" class="section_anchor"></a></h2>
 
     <p>Flyway depends on Ant 1.8.4 and later. So grab the latest version here: <a
-            href="http://ant.apache.org/bindownload.cgi" rel="nofollow">http://ant.apache.org/bindownload.cgi</a></p>
+            href="http://ant.apache.org/bindownload.cgi">http://ant.apache.org/bindownload.cgi</a></p>
 
     <p>After the installation is complete
     <ul>
@@ -66,7 +66,7 @@ title: Dev Environment Setup
     <h2><a name="Oracle"></a>Oracle<a href="#Oracle" class="section_anchor"></a></h2>
 
     <p>The best Oracle edition for development is the free XE. Grab your copy here: <a
-            href="http://www.oracle.com/technetwork/database/express-edition/downloads/index.html" rel="nofollow">http://www.oracle.com/technetwork/database/express-edition/downloads/index.html</a>
+            href="http://www.oracle.com/technetwork/database/express-edition/downloads/index.html">http://www.oracle.com/technetwork/database/express-edition/downloads/index.html</a>
     </p>
 
     <p>Install it with all the default settings and use <i>flyway</i> as the password for the system user. </p>
@@ -81,7 +81,7 @@ title: Dev Environment Setup
     <p>The Oracle Jdbc drivers aren&#x27;t available from Maven Central. So you&#x27;ll need to download your copy of
         <i>ojdbc5.jar</i> here: <a
                 href="http://www.oracle.com/technetwork/database/enterprise-edition/jdbc-112010-090769.html"
-                rel="nofollow">http://www.oracle.com/technetwork/database/enterprise-edition/jdbc-112010-090769.html</a>
+               >http://www.oracle.com/technetwork/database/enterprise-edition/jdbc-112010-090769.html</a>
     </p>
 
     <p>Now add the jar as <i>ojdbc5-11.2.0.2.0.jar</i> under <i>com/oracle/ojdbc5/11.2.0.2.0</i> in your local Maven
@@ -90,7 +90,7 @@ title: Dev Environment Setup
     <h2><a name="MySQL"></a>MySQL<a href="#MySQL" class="section_anchor"></a></h2>
 
     <p>Flyway supports MySQL 5.1 and later. You can grab the latest 5.1 version here: <a
-            href="http://dev.mysql.com/downloads/mysql/5.1.html#downloads" rel="nofollow">http://dev.mysql.com/downloads/mysql/5.1.html#downloads</a>
+            href="http://dev.mysql.com/downloads/mysql/5.1.html#downloads">http://dev.mysql.com/downloads/mysql/5.1.html#downloads</a>
     </p>
 
     <p>Install it with the defaults, except for the following settings:
@@ -105,7 +105,7 @@ title: Dev Environment Setup
     <h2><a name="PostgreSQL"></a>PostgreSQL<a href="#PostgreSQL" class="section_anchor"></a></h2>
 
     <p>Flyway supports PostgreSQL 9.0 and later. You can grab the latest 9.0 version here: <a
-            href="http://www.postgresql.org/download/" rel="nofollow">http://www.postgresql.org/download/</a></p>
+            href="http://www.postgresql.org/download/">http://www.postgresql.org/download/</a></p>
 
     <p>Install it with all the default settings and use <i>flyway</i> as the password for the postgres user. </p>
 
@@ -116,14 +116,14 @@ title: Dev Environment Setup
 
     <p>E.g. edit C:\Programme\PostgreSQL\9.0\data\pg_hba.conf: </p><pre class="prettyprint">  # TYPE  DATABASE        USER            CIDR-ADDRESS            METHOD
      host    all             all             127.0.0.1/0		     md5</pre>
-    <blockquote>see <a href="http://developer.postgresql.org/pgdocs/postgres/auth-pg-hba-conf.html" rel="nofollow">http://developer.postgresql.org/pgdocs/postgres/auth-pg-hba-conf.html</a><br/>
+    <blockquote>see <a href="http://developer.postgresql.org/pgdocs/postgres/auth-pg-hba-conf.html">http://developer.postgresql.org/pgdocs/postgres/auth-pg-hba-conf.html</a><br/>
     </blockquote>
     <p><br/></p>
 
     <h2><a name="SQL_Server"></a>SQL Server<a href="#SQL_Server" class="section_anchor"></a></h2>
 
     <p>Flyway supports SQL Server 2008 and later. You can grab the latest free Express version with Management Tools
-        here: <a href="http://www.microsoft.com/en-us/download/details.aspx?id=22973" rel="nofollow">http://www.microsoft.com/en-us/download/details.aspx?id=22973</a>
+        here: <a href="http://www.microsoft.com/en-us/download/details.aspx?id=22973">http://www.microsoft.com/en-us/download/details.aspx?id=22973</a>
     </p>
 
     <p>Install it with the defaults, except for the following settings:
@@ -162,7 +162,7 @@ title: Dev Environment Setup
     your copy of <i>sqljdbc4.jar</i> to your local Maven repository yourself. </p>
 
     <p>Download the 3.0.1301.101 driver from here: <a
-            href="http://www.microsoft.com/download/en/details.aspx?displaylang=en&amp;id=21599" rel="nofollow">http://www.microsoft.com/download/en/details.aspx?displaylang=en&amp;id=21599</a>
+            href="http://www.microsoft.com/download/en/details.aspx?displaylang=en&amp;id=21599">http://www.microsoft.com/download/en/details.aspx?displaylang=en&amp;id=21599</a>
     </p>
 
     <p>Extract the archive, go to <i>sqljdbc_3.0/enu</i> and rename <i>sqljdbc4.jar</i> into <i>sqljdbc4-3.0.1301.101.jar</i>.
@@ -172,7 +172,7 @@ title: Dev Environment Setup
     <h2><a name="DB2"></a>DB2<a href="#DB2" class="section_anchor"></a></h2>
 
     <p>Flyway supports DB2 9.7 and later. You can grab the free Express edition here: <a
-            href="http://www.ibm.com/software/data/db2/express/download.html" rel="nofollow">http://www.ibm.com/software/data/db2/express/download.html</a>
+            href="http://www.ibm.com/software/data/db2/express/download.html">http://www.ibm.com/software/data/db2/express/download.html</a>
     </p>
 
     <p>Install it with the defaults, except for the following settings:
@@ -186,7 +186,7 @@ title: Dev Environment Setup
         to your local Maven repository yourself. </p>
 
     <p>Download the 3.62.56 driver from here: <a href="https://www-304.ibm.com/support/docview.wss?uid=swg21363866"
-                                                 rel="nofollow">https://www-304.ibm.com/support/docview.wss?uid=swg21363866</a>
+                                                >https://www-304.ibm.com/support/docview.wss?uid=swg21363866</a>
     </p>
 
     <p>Extract the archive and then rename <i>db2jcc.jar</i> into <i>db2jcc-3.62.56.jar</i>. Copy
