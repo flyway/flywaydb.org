@@ -1,0 +1,2 @@
+auto: true
+exclude: .gitignore, Flywaydb.org.iml, flywaydb.org.ipr, flywaydb.org.iws
