@@ -1,0 +1,22 @@
+<mockup version="1.0" skin="sketch" measuredW="981" measuredH="432" mockupW="202" mockupH="197">
+  <controls>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::FieldSet" x="769" y="225" w="193" h="197" measuredW="200" measuredH="170" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Shiny%20DB</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::IconLabel" x="798" y="286" w="-1" h="-1" measuredW="134" measuredH="73" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>3700253</color>
+        <icon>TableIcon%7Clarge</icon>
+        <text>SCHEMA_VERSION</text>
+      </controlProperties>
+    </control>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::Tooltip" x="897" y="271" w="-1" h="-1" measuredW="74" measuredH="33.9" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Empty</text>
+        <tooltipDirection>SW</tooltipDirection>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

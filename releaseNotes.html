@@ -1,5 +1,6 @@
 ---
 layout: default
+tab: download
 title: Release Notes
 ---
 <div id="releaseNotes">
@@ -117,7 +118,7 @@ title: Release Notes
         <li>Core: Removed deprecated Flyway.get/setTransactionManager() methods. They already had no effect anymore
             since 1.6
         </li>
-        <li>Core: Deprecated <a href="http://code.google.com/p/flyway/wiki/JavaMigration">JavaMigration</a>. Use
+        <li>Core: Deprecated <a href="/javaMigration.html">JavaMigration</a>. Use
             SpringJdbcMigration instead.
         </li>
         <li>Core: Deprecated JavaMigrationInfoProvider. Use MigrationInfoProvider instead.</li>
@@ -286,7 +287,7 @@ title: Release Notes
         <li>Removed the deprecated Flyway.init(version,description) method</li>
         <li>Removed the deprecated BaseJavaMigration class and the pre
             1.0 inheritance-based Java Migration support (update to implements <a
-                    href="http://code.google.com/p/flyway/wiki/JavaMigration">JavaMigration</a>
+                    href="/javaMigration.html">JavaMigration</a>
             if you haven't already done so)
         </li>
     </ul>

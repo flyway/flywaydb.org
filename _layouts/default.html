@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>{% if page.title %} {{ page.title }} | {% endif %}Flyway: the agile datbase migration framework for
+    <title>{% if page.title %} {{ page.title }} - {% endif %}Flyway: the agile datbase migration framework for
         Java</title>
     <link href="/bootstrap-2.0.4/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     <link href="/prettify-20110601/prettify.css" rel="stylesheet" type="text/css"/>
@@ -34,13 +34,13 @@
         <div class="navbar-inner">
             <div class="container">
                 <ul class="nav">
-                    <li class="active">
-                        <a href="/">Overview</a>
+                    <li {% if page.tab == 'home' %} class="active" {% endif %}>
+                        <a href="/"><i class="icon-home icon-white"></i> Home</a>
                     </li>
-                    <li><a href="http://code.google.com/p/flyway/wiki/Introduction?tm=6">Learn</a></li>
-                    <li><a href="http://code.google.com/p/flyway/downloads/list">Download</a></li>
-                    <li><a href="/howToContribute.html">Contribute</a></li>
-                    <li><a href="http://code.google.com/p/flyway/wiki/FAQ">Support</a></li>
+                    <li {% if page.tab == 'learn' %} class="active" {% endif %}><a href="/introduction.html"><i class="icon-book icon-white"></i> Learn</a></li>
+                    <li {% if page.tab == 'download' %} class="active" {% endif %}><a href="http://code.google.com/p/flyway/downloads/list"><i class="icon-download icon-white"></i> Download</a></li>
+                    <li {% if page.tab == 'contribute' %} class="active" {% endif %}><a href="/howToContribute.html"><i class="icon-leaf icon-white"></i> Contribute</a></li>
+                    <li {% if page.tab == 'support' %} class="active" {% endif %}><a href="/faq.html"><i class="icon-question-sign icon-white"></i> Support</a></li>
                 </ul>
             </div>
         </div>
@@ -71,7 +71,6 @@
 <script type="text/javascript">
     $(function () {
         prettyPrint();
-        $('.carousel').carousel();
     });
 </script>
 </body>

@@ -1,0 +1,65 @@
+---
+layout: default
+tab: learn
+title: SQL Migration
+---
+<div id="sqlMigration">
+    <h1><a name="Sql-based_migrations"></a>Sql-based migrations<a href="#Sql-based_migrations"
+                                                                  class="section_anchor"></a></h1>
+
+    <h2><a name="Typical_usage"></a>Typical usage<a href="#Typical_usage" class="section_anchor"></a></h2>
+    <ul>
+        <li>DDL changes (CREATE/ALTER/DROP statements for TABLES,VIEWS,TRIGGERS,SEQUENCES,...)</li>
+        <li>Simple reference data changes (CRUD in reference data tables)</li>
+        <li>Simple bulk data changes (CRUD in regular data tables)</li>
+    </ul>
+    <h2><a name="Location_and_discovery"></a>Location and discovery<a href="#Location_and_discovery"
+                                                                      class="section_anchor"></a></h2>
+
+    <p>Sql migrations reside on the classpath in one or more directories referenced by the <strong><a
+            href="http://wiki.flyway.googlecode.com/hg/javadoc/com/googlecode/flyway/core/Flyway.html#setLocations(java.lang.String...)"
+            rel="nofollow">locations</a></strong> property.<br/></p>
+
+    <p><img src="/balsamiq/SqlMigrationBaseDir.png"/></p>
+
+    <p>New sql migrations are <strong>discovered automatically</strong> through classpath scanning at runtime. This
+        scanning is recursive. All migrations in directories below the specified ones are also picked up. </p>
+
+    <h2><a name="Naming"></a>Naming<a href="#Naming" class="section_anchor"></a></h2>
+
+    <p>In order to be picked by the classpath scanner, the sql migrations must follow a naming pattern: </p>
+
+    <p><img src="/balsamiq/SqlMigrationNaming.png"/></p>
+
+    <p>The file name consists of:
+    <ul>
+        <li><strong>prefix</strong> (Configurable, default: V)</li>
+        <li><strong>version</strong> (Dots or underscores separate the parts, you can use as many parts as you like)
+        </li>
+        <li><strong>separator</strong> (Two underscores, only if the description is present)</li>
+        <li><strong>description</strong> (Optional, underscores or spaces separate the words)</li>
+        <li><strong>suffix</strong> (Configurable, default: .sql)</li>
+    </ul>
+    </p><h2><a name="Sql_Script_syntax"></a>Sql Script syntax<a href="#Sql_Script_syntax" class="section_anchor"></a>
+</h2>
+    <ul>
+        <li>Single- or multi-line statements</li>
+        <li>Flexible placeholder replacement</li>
+        <li>Single- (--) or Multi-line (/<tt>*</tt> <tt>*</tt>/) comments spanning complete lines</li>
+        <li><a href="/supportedDatabases.html">Database-specific SQL syntax extensions</a></li>
+    </ul>
+    <h2><a name="Sample_Script"></a>Sample Script<a href="#Sample_Script" class="section_anchor"></a></h2><pre
+        class="prettyprint">/* Single line comment */
+    CREATE TABLE test_user (
+      name VARCHAR(25) NOT NULL,
+      PRIMARY KEY(name)
+    );
+
+    /*
+    Multi-line
+    comment
+    */
+
+    -- Placeholder
+    INSERT INTO ${tableName} (name) VALUES (&#x27;Mr. T&#x27;);</pre>
+</div>

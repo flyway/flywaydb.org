@@ -1,0 +1,26 @@
+<mockup version="1.0" skin="sketch" measuredW="1062" measuredH="736" mockupW="631" mockupH="648">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::TitleWindow" x="431" y="88" w="631" h="648" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bottomheight>0</bottomheight>
+        <close>true</close>
+        <maximizeRestore>true</maximizeRestore>
+        <minimize>true</minimize>
+        <text>Command%20Prompt</text>
+        <value>0</value>
+        <verticalScrollbar>false</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::TextArea" x="431" y="110" w="631" h="626" measuredW="200" measuredH="140" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <color>0</color>
+        <size>10</size>
+        <state>up</state>
+        <text>D%3A%5CAxel%5CDesktop%5Cflyway-commandline-1.7%3Eflyway%0AFlyway%20%28Command-line%20Tool%29%20v.1.7%0A%20%0A********%0A*%20Usage%0A********%0A%20%0Aflyway.cmd%20%5C%5Boptions%5C%5D%20command%0A%20%0ABy%20default%2C%20the%20configuration%20will%20be%20read%20from%20conf/flyway.properties.%0AOptions%20passed%20from%20the%20command-line%20override%20the%20configuration.%0A%20%0ACommands%0A%3D%3D%3D%3D%3D%3D%3D%3D%0Aclean%20%20%20%20%3A%20Drops%20all%20objects%20in%20the%20schema%20without%20dropping%20the%20schema%20itself%0Ainit%20%20%20%20%20%3A%20Creates%20and%20initializes%20the%20metadata%20table%20in%20the%20schema%0Amigrate%20%20%3A%20Migrates%20the%20schema%20to%20the%20latest%20version%0Avalidate%20%3A%20Validates%20the%20applied%20migrations%20against%20the%20ones%20on%20the%20classpath%0Astatus%20%20%20%3A%20Prints%20the%20current%20version%20of%20the%20schema%0Ahistory%20%20%3A%20Prints%20the%20full%20migration%20history%20of%20the%20schema%0A%20%0AOptions%20%28Format%3A%20-key%3Dvalue%29%0A%3D%3D%3D%3D%3D%3D%3D%0Adriver%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3A%20Fully%20qualified%20classname%20of%20the%20jdbc%20driver%0Aurl%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3A%20Jdbc%20url%20to%20use%20to%20connect%20to%20the%20database%0Auser%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3A%20User%20to%20use%20to%20connect%20to%20the%20database%0Apassword%20%20%20%20%20%20%20%20%20%20%20%20%3A%20Password%20to%20use%20to%20connect%20to%20the%20database%0Aschemas%20%20%20%20%20%20%20%20%20%20%20%20%3A%20Comma-separated%20list%20of%20schemas%20managed%20by%20Flyway%0Atable%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3A%20Name%20of%20Flyway%27s%20metadata%20table%0Alocations%20%20%20%20%20%20%20%20%20%3A%20Directories%20on%20the%20classpath%20to%20scan%20for%20Sql%20and%20Java%20migrations%0AsqlMigrationPrefix%20%20%3A%20File%20name%20prefix%20for%20Sql%20migrations%0AsqlMigrationSuffix%20%20%3A%20File%20name%20suffix%20for%20Sql%20migrations%0Aencoding%20%20%20%20%20%20%20%20%20%20%20%20%3A%20Encoding%20of%20Sql%20migrations%0Aplaceholders%20%20%20%20%20%20%20%20%3A%20Placeholders%20to%20replace%20in%20Sql%20migrations%0AplaceholderPrefix%20%20%20%3A%20Prefix%20of%20every%20placeholder%0AplaceholderSuffix%20%20%20%3A%20Suffix%20of%20every%20placeholder%0Atarget%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3A%20Target%20version%20up%20to%20which%20Flyway%20should%20run%20migrations%0AvalidationMode%20%20%20%20%20%20%3A%20Type%20of%20validation%20to%20be%20performed%20before%20migrating%0AvalidationErrorMode%20%3A%20Action%20to%20take%20when%20validation%20fails%0AinitialVersion%20%20%20%20%20%20%3A%20Initial%20version%20to%20put%20in%20the%20database%0AinitialDescription%20%20%3A%20Description%20of%20the%20initial%20version%0A%20%0AExample%0A%3D%3D%3D%3D%3D%3D%3D%0Aflyway.cmd%20%5C-target%3D1.5%20-placeholder.user%3Dmy_user%20history%0A%20%0AMore%20info%20at%20http%3A//code.google.com/p/flyway/wiki/CommandLine</text>
+        <value>0</value>
+        <verticalScrollbar>true</verticalScrollbar>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

@@ -1,0 +1,26 @@
+<mockup version="1.0" skin="sketch" measuredW="838" measuredH="334" mockupW="422" mockupH="193">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::TitleWindow" x="416" y="141" w="422" h="138" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bottomheight>0</bottomheight>
+        <close>true</close>
+        <maximizeRestore>true</maximizeRestore>
+        <minimize>true</minimize>
+        <text>Command%20Prompt</text>
+        <value>0</value>
+        <verticalScrollbar>false</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::TextArea" x="416" y="164" w="422" h="170" measuredW="200" measuredH="140" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <color>0</color>
+        <size>10</size>
+        <state>up</state>
+        <text>C%3A%5CWorkspaces%5Cflyway%5Cflyway-sample%3Eant%20init%0ABuildfile%3A%20C%3A%5CWorkspaces%5Cflyway%5Cflyway-sample%5Cbuild.xml%0A%20%0Ainit%3A%0A%5C%5Bflyway%3Ainit%5D%20Hsql%20does%20not%20support%20locking.%20No%20concurrent%20migration%20supported.%0A%5C%5Bflyway%3Ainit%5D%20Metadata%20table%20created%3A%20schema_version%20%28Schema%3A%20PUBLIC%29%0A%5C%5Bflyway%3Ainit%5D%20Schema%20initialized%20with%20version%3A%200%0A%20%0ABUILD%20SUCCESSFUL%0ATotal%20time%3A%2012%20seconds</text>
+        <value>0</value>
+        <verticalScrollbar>true</verticalScrollbar>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

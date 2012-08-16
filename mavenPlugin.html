@@ -1,0 +1,87 @@
+---
+layout: default
+tab: learn
+title: Maven Plugin
+---
+<div id="mavenPlugin">
+    <h1><a name="Flyway_Maven_Plugin"></a>Flyway Maven Plugin<a href="#Flyway_Maven_Plugin" class="section_anchor"></a>
+    </h1>
+
+    <h2><a name="Installation"></a>Installation<a href="#Installation" class="section_anchor"></a></h2>
+
+    <pre class="prettyprint">&lt;plugin&gt;
+    &lt;groupId&gt;com.googlecode.flyway&lt;/groupId&gt;
+    &lt;artifactId&gt;flyway-maven-plugin&lt;/artifactId&gt;
+    &lt;version&gt;{{ site.flywayVersion }}&lt;/version&gt;
+    &lt;configuration&gt;
+        ....
+    &lt;/configuration&gt;
+&lt;/plugin&gt;</pre>
+
+    <h2><a name="Goals"></a>Goals<a href="#Goals" class="section_anchor"></a></h2>
+
+    <p>
+    <table class="wikitable">
+        <tr>
+            <td style="border: 1px solid #ccc; padding: 5px;"><strong>Name</strong></td>
+            <td style="border: 1px solid #ccc; padding: 5px;"><strong>Description</strong></td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ccc; padding: 5px;"><a href="/mavenGoalClean.html">clean</a></td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> Drops all objects in the schema without dropping the
+                schema itself
+            </td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ccc; padding: 5px;"><a href="/mavenGoalInit.html">init</a></td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> Creates and initializes the metadata table in the
+                schema
+            </td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ccc; padding: 5px;"><a href="/mavenGoalMigrate.html">migrate</a></td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> Migrates the schema to the latest version</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ccc; padding: 5px;"><a href="/mavenGoalValidate.html">validate</a>
+            </td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> Validates the applied migrations against the ones
+                available on the classpath
+            </td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ccc; padding: 5px;"><a href="/mavenGoalStatus.html">status</a></td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> Prints the current version of the schema</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ccc; padding: 5px;"><a href="/mavenGoalHistory.html">history</a></td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> Prints the full migration history of the schema</td>
+        </tr>
+    </table>
+    </p><p><br/></p>
+
+    <h2><a name="Authentication"></a>Authentication<a href="#Authentication" class="section_anchor"></a></h2>
+
+    <p>Credentials can be passed in any of the following ways: </p><h4><a
+        name="Directly_in_the_configuration_of_the_plugin"></a>Directly in the configuration of the plugin<a
+        href="#Directly_in_the_configuration_of_the_plugin" class="section_anchor"></a></h4><pre class="prettyprint">...
+&lt;configuration&gt;
+    &lt;user&gt;myUser&lt;/user&gt;
+    &lt;password&gt;mySecretPwd&lt;/password&gt;
+    ...
+&lt;/configuration&gt;
+...</pre>
+    <h4><a name="As_system_properties"></a>As system properties<a href="#As_system_properties"
+                                                                  class="section_anchor"></a></h4>
+    <pre class="prettyprint">-Dflyway.user=myUser -Dflyway.password=mySecretPwd</pre>
+    <h4><a name="Loaded_from_the_Maven_settings.xml_file"></a>Loaded from the Maven settings.xml file<a
+            href="#Loaded_from_the_Maven_settings.xml_file" class="section_anchor"></a></h4><pre class="prettyprint">&lt;settings&gt;
+    &lt;servers&gt;
+        &lt;server&gt;
+            &lt;id&gt;flyway-db&lt;/id&gt;
+            &lt;username&gt;myUser&lt;/username&gt;
+            &lt;password&gt;mySecretPwd&lt;/password&gt;
+        &lt;/server&gt;
+    &lt;/servers&gt;
+&lt;/settings&gt;</pre>
+</div>

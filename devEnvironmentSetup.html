@@ -1,5 +1,6 @@
 ---
 layout: default
+tab: contribute
 title: Dev Environment Setup
 ---
 <div id="devEnvironmentSetup">
@@ -10,7 +11,7 @@ title: Dev Environment Setup
         test suite. </p>
 
     <p>For this you will need to set up the various DBMS Flyway supports as well as Mercurial, a JDK, Maven and your
-        IDE.<br></br> <br></br></p>
+        IDE.<br/> <br/></p>
 
     <h2><a name="Mercurial"></a>Mercurial<a href="#Mercurial" class="section_anchor"></a></h2>
 
@@ -22,7 +23,7 @@ title: Dev Environment Setup
         (which comes bundled with the command-line client) </p>
 
     <p>Make sure the directory containing the binaries has been added the PATH. If you downloaded an installer this
-        should have been taken care of for you.<br></br> <br></br></p>
+        should have been taken care of for you.<br/> <br/></p>
 
     <h2><a name="JDK"></a>JDK<a href="#JDK" class="section_anchor"></a></h2>
 
@@ -35,7 +36,7 @@ title: Dev Environment Setup
         <li>set up an environment variable called JAVA_HOME that points to your JDK installation directory</li>
         <li>add the bin directory under JAVA_HOME to the PATH</li>
     </ul>
-    <br></br> </p><h2><a name="Maven"></a>Maven<a href="#Maven" class="section_anchor"></a></h2>
+    <br/> </p><h2><a name="Maven"></a>Maven<a href="#Maven" class="section_anchor"></a></h2>
 
     <p>Flyway depends on Maven 2. So grab the latest version here: <a href="http://maven.apache.org/download.html"
                                                                       rel="nofollow">http://maven.apache.org/download.html</a>
@@ -46,7 +47,7 @@ title: Dev Environment Setup
         <li>set up an environment variable called M2_HOME that points to your Maven installation directory</li>
         <li>add the bin directory under M2_HOME to the PATH</li>
     </ul>
-    <br></br> </p><h2><a name="Ant"></a>Ant<a href="#Ant" class="section_anchor"></a></h2>
+    <br/> </p><h2><a name="Ant"></a>Ant<a href="#Ant" class="section_anchor"></a></h2>
 
     <p>Flyway depends on Ant 1.8.4 and later. So grab the latest version here: <a
             href="http://ant.apache.org/bindownload.cgi" rel="nofollow">http://ant.apache.org/bindownload.cgi</a></p>
@@ -56,11 +57,11 @@ title: Dev Environment Setup
         <li>set up an environment variable called ANT_HOME that points to your Ant installation directory</li>
         <li>add the bin directory under ANT_HOME to the PATH</li>
     </ul>
-    <br></br> </p><h2><a name="IDE"></a>IDE<a href="#IDE" class="section_anchor"></a></h2>
+    <br/> </p><h2><a name="IDE"></a>IDE<a href="#IDE" class="section_anchor"></a></h2>
 
     <p>We use IntelliJ 11.1 for development. Eclipse should be fine too. Just keep in mind that Eclipse has different
         defaults for code formatting and import reordering. Keep this in mind so merge conflicts can be reduced to a
-        minimum.<br></br> <br></br></p>
+        minimum.<br/> <br/></p>
 
     <h2><a name="Oracle"></a>Oracle<a href="#Oracle" class="section_anchor"></a></h2>
 
@@ -84,7 +85,7 @@ title: Dev Environment Setup
     </p>
 
     <p>Now add the jar as <i>ojdbc5-11.2.0.2.0.jar</i> under <i>com/oracle/ojdbc5/11.2.0.2.0</i> in your local Maven
-        repository.<br></br> <br></br></p>
+        repository.<br/> <br/></p>
 
     <h2><a name="MySQL"></a>MySQL<a href="#MySQL" class="section_anchor"></a></h2>
 
@@ -99,7 +100,7 @@ title: Dev Environment Setup
     </ul>
     </p><p>Use <i>flyway</i> as the password for the root user. </p>
 
-    <p>If the configuration hangs, try again after turning off User Account Control.<br></br> <br></br></p>
+    <p>If the configuration hangs, try again after turning off User Account Control.<br/> <br/></p>
 
     <h2><a name="PostgreSQL"></a>PostgreSQL<a href="#PostgreSQL" class="section_anchor"></a></h2>
 
@@ -115,9 +116,9 @@ title: Dev Environment Setup
 
     <p>E.g. edit C:\Programme\PostgreSQL\9.0\data\pg_hba.conf: </p><pre class="prettyprint">  # TYPE  DATABASE        USER            CIDR-ADDRESS            METHOD
      host    all             all             127.0.0.1/0		     md5</pre>
-    <blockquote>see <a href="http://developer.postgresql.org/pgdocs/postgres/auth-pg-hba-conf.html" rel="nofollow">http://developer.postgresql.org/pgdocs/postgres/auth-pg-hba-conf.html</a><br></br>
+    <blockquote>see <a href="http://developer.postgresql.org/pgdocs/postgres/auth-pg-hba-conf.html" rel="nofollow">http://developer.postgresql.org/pgdocs/postgres/auth-pg-hba-conf.html</a><br/>
     </blockquote>
-    <p><br></br></p>
+    <p><br/></p>
 
     <h2><a name="SQL_Server"></a>SQL Server<a href="#SQL_Server" class="section_anchor"></a></h2>
 
@@ -166,7 +167,7 @@ title: Dev Environment Setup
 
     <p>Extract the archive, go to <i>sqljdbc_3.0/enu</i> and rename <i>sqljdbc4.jar</i> into <i>sqljdbc4-3.0.1301.101.jar</i>.
         Copy <i>sqljdbc4-3.0.1301.101.jar</i> to <i>com/microsoft/sqlserver/sqljdbc4/3.0.1301.101</i> in your local
-        Maven repository.<br></br> <br></br></p>
+        Maven repository.<br/> <br/></p>
 
     <h2><a name="DB2"></a>DB2<a href="#DB2" class="section_anchor"></a></h2>
 
@@ -189,8 +190,8 @@ title: Dev Environment Setup
     </p>
 
     <p>Extract the archive and then rename <i>db2jcc.jar</i> into <i>db2jcc-3.62.56.jar</i>. Copy
-        <i>db2jcc-3.62.56.jar</i> to <i>com/ibm/db2/db2jcc/3.62.56</i> in your local Maven repository.<br></br>
-        <br></br></p>
+        <i>db2jcc-3.62.56.jar</i> to <i>com/ibm/db2/db2jcc/3.62.56</i> in your local Maven repository.<br/>
+        <br/></p>
 
     <h2><a name="Create_the_test_DBs"></a>Create the test DBs<a href="#Create_the_test_DBs" class="section_anchor"></a>
     </h2>
@@ -205,5 +206,5 @@ title: Dev Environment Setup
                 in <strong>${user.home}/flyway-mediumtests.properties</strong></td>
         </tr>
     </table>
-    </p><p><br></br></p>
+    </p><p><br/></p>
 </div>

@@ -1,0 +1,96 @@
+---
+layout: default
+tab: learn
+title: Java Migration
+---
+<div id="javaMigration">
+    <h1><a name="Java-based_migrations"></a>Java-based migrations<a href="#Java-based_migrations"
+                                                                    class="section_anchor"></a></h1>
+
+    <h2><a name="Typical_usage"></a>Typical usage<a href="#Typical_usage" class="section_anchor"></a></h2>
+    <ul>
+        <li>BLOB &amp; CLOB changes</li>
+        <li>Advanced bulk data changes (Recalculations, advanced format changes, ...)</li>
+    </ul>
+    <h2><a name="Location_and_discovery"></a>Location and discovery<a href="#Location_and_discovery"
+                                                                      class="section_anchor"></a></h2>
+
+    <p>Java migrations reside on the classpath in the package referenced by the <strong><a
+            href="http://wiki.flyway.googlecode.com/hg/javadoc/com/googlecode/flyway/core/Flyway.html#setLocations(java.lang.String...)"
+            rel="nofollow">locations</a></strong> property.<br/></p>
+
+    <p><img src="/balsamiq/JavaMigrationBasePackage.png"/></p>
+
+    <p>New java migrations are <strong>discovered automatically</strong> through classpath scanning at runtime. The
+        scanning is recursive. Java migrations in subpackages of the specified ones are also picked up.<br/></p>
+
+    <h2><a name="Naming"></a>Naming<a href="#Naming" class="section_anchor"></a></h2>
+
+    <p>In order to be picked up, the Java Migrations must implement <strong><a
+            href="http://wiki.flyway.googlecode.com/hg/javadoc/com/googlecode/flyway/core/api/migration/jdbc/JdbcMigration.html"
+            rel="nofollow">JdbcMigration</a></strong>.<br/></p>
+
+    <p>A Java Migration automatically
+    <ul>
+        <li>wraps the migration in a transaction</li>
+        <li>extracts the version and the description from the class name</li>
+    </ul>
+    </p><p><img src="/balsamiq/JavaMigrationNaming.png"/></p>
+
+    <p>The class name consists of:
+    <ul>
+        <li><strong>prefix</strong> (Always V)</li>
+        <li><strong>version</strong> (Underscores separate the parts, you can use as many parts as you like)</li>
+        <li><strong>separator</strong> (Two underscores, only if the description is present)</li>
+        <li><strong>description</strong> (Optional, underscores or spaces separate the words)</li>
+    </ul>
+    <br/> </p><p>If you need more control over the class name, you can override the default convention by
+    implementing <strong><a
+            href="http://wiki.flyway.googlecode.com/hg/javadoc/com/googlecode/flyway/core/api/migration/MigrationInfoProvider.html"
+            rel="nofollow">MigrationInfoProvider</a></strong>. </p>
+
+    <p>This will allow you to name your class as you wish. Version and description are provided by implement the
+        respective methods.<br/></p>
+
+    <h2><a name="Checksums_and_Validation"></a>Checksums and Validation<a href="#Checksums_and_Validation"
+                                                                          class="section_anchor"></a></h2>
+
+    <p>Unlike SQL migrations, Java migrations by default do not have a checksum and therefore do not participate in the
+        change detection of Flyway&#x27;s validation. This can be remedied by implementing <strong><a
+                href="http://wiki.flyway.googlecode.com/hg/javadoc/com/googlecode/flyway/core/api/migration/MigrationChecksumProvider.html"
+                rel="nofollow">MigrationChecksumProvider</a></strong>. </p>
+
+    <p>By implementing the getChecksum() method you can provide your own checksum, which will then be stored and
+        validated for changes.<br/></p>
+
+    <h2><a name="Spring_support_(Optional)"></a>Spring support (Optional)<a href="#Spring_support_(Optional)"
+                                                                            class="section_anchor"></a></h2>
+
+    <p>If you use Spring, you can also implement <strong><a
+            href="http://wiki.flyway.googlecode.com/hg/javadoc/com/googlecode/flyway/core/api/migration/spring/SpringJdbcMigration.html"
+            rel="nofollow">SpringJdbcMigration</a></strong>. This works exactly like <a
+            href="http://wiki.flyway.googlecode.com/hg/javadoc/com/googlecode/flyway/core/api/migration/jdbc/JdbcMigration.html"
+            rel="nofollow">JdbcMigration</a>, the only difference being that you now receive a convenient Spring
+        JdbcTemplate to work with instead of a plain Jdbc
+        Connection.<br/></p>
+
+    <h2><a name="Sample_Class"></a>Sample Class<a href="#Sample_Class" class="section_anchor"></a></h2><pre
+        class="prettyprint">import com.googlecode.flyway.core.api.migration.jdbc.JdbcMigration;
+    
+    import java.sql.Connection;
+    import java.sql.PreparedStatement;
+    
+    /**
+     * Example of a Java-based migration.
+     */
+    public class V1_2__Another_user implements JdbcMigration {
+        public void migrate(Connection connection) throws Exception {
+            PreparedStatement statement = connection.prepareStatement(&quot;INSERT INTO test_user (name) VALUES (&#x27;Obelix&#x27;)&quot;);
+            try {
+                statement.execute();
+            } finally {
+                statement.close();
+            }
+        }
+    }</pre>
+</div>

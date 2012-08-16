@@ -1,0 +1,105 @@
+<mockup version="1.0" skin="sketch" measuredW="907" measuredH="304" mockupW="389" mockupH="213">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::Tree" x="581" y="170" w="300" h="37" measuredW="300" measuredH="225" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <borderStyle>none</borderStyle>
+        <selectedIndex>-1</selectedIndex>
+        <size>16</size>
+        <text>-%20V2__Add_new_table.sql</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::Arrow" x="554" y="207" w="55" h="53" measuredW="150" measuredH="100" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>5263440</color>
+        <curvature>-1</curvature>
+        <direction>bottom</direction>
+        <leftArrow>false</leftArrow>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Title" x="518" y="260" w="-1" h="-1" measuredW="57" measuredH="20" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>12</size>
+        <text>Prefix%20%28V%29</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Arrow" x="784" y="202" w="59" h="53" measuredW="150" measuredH="100" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>5263440</color>
+        <curvature>-1</curvature>
+        <direction>top</direction>
+        <leftArrow>true</leftArrow>
+        <rightArrow>false</rightArrow>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Title" x="843" y="247" w="-1" h="-1" measuredW="64" measuredH="20" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>12</size>
+        <text>Suffix%20%28.sql%29</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::Canvas" x="647" y="164" w="113" h="37" measuredW="100" measuredH="70" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>0.25</backgroundAlpha>
+        <borderColor>3700253</borderColor>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Canvas" x="617" y="167" w="16" h="34" measuredW="100" measuredH="70" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>0.25</backgroundAlpha>
+        <borderColor>545684</borderColor>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Arrow" x="633" y="212" w="26" h="76" measuredW="150" measuredH="100" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>545684</color>
+        <curvature>0</curvature>
+        <direction>top</direction>
+        <leftArrow>true</leftArrow>
+        <rightArrow>false</rightArrow>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Title" x="631" y="284" w="-1" h="-1" measuredW="46" measuredH="20" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>545684</color>
+        <size>12</size>
+        <text>Version</text>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::Arrow" x="719" y="210" w="26" h="76" measuredW="150" measuredH="100" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>3700253</color>
+        <curvature>0</curvature>
+        <direction>bottom</direction>
+        <leftArrow>false</leftArrow>
+        <rightArrow>true</rightArrow>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::Title" x="696" y="283" w="-1" h="-1" measuredW="64" measuredH="20" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>3700253</color>
+        <size>12</size>
+        <text>Description</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::Arrow" x="639" y="111" w="14" h="53" measuredW="150" measuredH="100" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>5263440</color>
+        <curvature>0</curvature>
+        <direction>bottom</direction>
+        <leftArrow>true</leftArrow>
+        <rightArrow>false</rightArrow>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::Title" x="639" y="91" w="-1" h="-1" measuredW="159" measuredH="20" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>12</size>
+        <text>Separator%20%28two%20underscores%29</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

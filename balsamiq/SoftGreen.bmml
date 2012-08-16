@@ -1,0 +1,16 @@
+<mockup version="1.0" skin="sketch" measuredW="566" measuredH="287" mockupW="304" mockupH="162">
+  <controls>
+    <control controlID="29" controlTypeID="com.balsamiq.mockups::MultilineButton" x="252" y="115" w="-1" h="-1" measuredW="117" measuredH="60" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>3700253</color>
+        <text>Shiny%20Soft</text>
+      </controlProperties>
+    </control>
+    <control controlID="33" controlTypeID="com.balsamiq.mockups::Tooltip" x="369" y="175" w="187" h="102" measuredW="246" measuredH="102" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Version%3A%205.2.4%0A%20%0A-%3E%20Well%20defined%20and%20reproducible</text>
+        <tooltipDirection>NW</tooltipDirection>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

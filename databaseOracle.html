@@ -1,0 +1,54 @@
+---
+layout: default
+tab: learn
+title: Oracle
+---
+<div id="databaseOracle">
+    <h1><a name="Oracle"></a>Oracle<a href="#Oracle" class="section_anchor"></a></h1>
+
+    <h2><a name="Versions"></a>Versions<a href="#Versions" class="section_anchor"></a></h2>
+    <ul>
+        <li>10g and later (all editions, including XE)</li>
+    </ul>
+    <p><br/></p>
+
+    <h2><a name="Sql_Script_Syntax"></a>Sql Script Syntax<a href="#Sql_Script_Syntax" class="section_anchor"></a></h2>
+    <ul>
+        <li><a href="/sqlMigration.html#Sql_Script_syntax" rel="nofollow">Standard Sql
+            syntax</a> with statement delimiter ;
+        </li>
+        <li>PL/SQL blocks starting with DECLARE or BEGIN and finishing with END; /</li>
+    </ul>
+    <h3><a name="Compatibility"></a>Compatibility<a href="#Compatibility" class="section_anchor"></a></h3>
+    <ul>
+        <li>DDL exported by Oracle can be used unchanged in a Flyway migration.</li>
+        <li>Any Oracle sql script executed by Flyway, can be executed by SqlPlus
+            and other Oracle-compatible tools (after the placeholders have been replaced).
+        </li>
+    </ul>
+    <h3><a name="Example"></a>Example<a href="#Example" class="section_anchor"></a></h3><pre class="prettyprint">/* Single line comment */
+CREATE TABLE test_user (
+ name VARCHAR(25) NOT NULL,
+ PRIMARY KEY(name)
+);
+
+/*
+Multi-line
+comment
+*/
+-- PL/SQL block
+CREATE TRIGGER test_trig AFTER insert ON test_user
+BEGIN
+   UPDATE test_user SET name = CONCAT(name, &#x27; triggered&#x27;);
+END;
+/
+
+-- Placeholder
+INSERT INTO ${tableName} (name) VALUES (&#x27;Mr. T&#x27;);</pre>
+    <p><br/></p>
+
+    <h2><a name="Limitations"></a>Limitations<a href="#Limitations" class="section_anchor"></a></h2>
+    <ul>
+        <li>SPATIAL EXTENSIONS: sdo_geom_metadata can only be cleaned for the user currently logged in</li>
+    </ul>
+</div>

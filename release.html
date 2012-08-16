@@ -1,0 +1,103 @@
+---
+layout: default
+tab: contribute
+title: Releasing Flyway (Committers only)
+---
+<div id="release">
+    <h1><a name="Releasing_Flyway_(Committers_only)"></a>Releasing Flyway (Committers only)<a
+            href="#Releasing_Flyway_(Committers_only)" class="section_anchor"></a></h1>
+
+    <h2><a name="Prequesites"></a>Prequesites<a href="#Prequesites" class="section_anchor"></a></h2>
+    <ol>
+        <li>GPG installed, available on the PATH and a key generated (see <a
+                href="https://docs.sonatype.org/display/Repository/Sonatype+OSS+Maven+Repository+Usage+Guide#SonatypeOSSMavenRepositoryUsageGuide-5.Prerequisites"
+                rel="nofollow">https://docs.sonatype.org/display/Repository/Sonatype+OSS+Maven+Repository+Usage+Guide#SonatypeOSSMavenRepositoryUsageGuide-5.Prerequisites</a>)
+        </li>
+        <li>A checkout of Flyway in two locations: <i>/flyway</i> and <i>/flyway-release</i></li>
+        <li>A checkout of the Flyway Wiki by executing <i>hg clone <a href="https://code.google.com/p/flyway.wiki/"
+                                                                      rel="nofollow">https://code.google.com/p/flyway.wiki/</a>
+            flyway-wiki</i></li>
+        <li>Maven settings.xml contains</li>
+        <ul>
+            <li>credentials for Sonatype OSS Repo Hosting</li>
+            <li>credentials for Google Code</li>
+            <li>credentials for Google App Engine</li>
+            <li>the path to the local flyway-release repo checkout</li>
+            <li>the GPG passphrase key:</li><pre class="prettyprint">&lt;settings&gt;
+        &lt;servers&gt;
+            &lt;server&gt;
+                &lt;id&gt;sonatype-nexus-snapshots&lt;/id&gt;
+                &lt;username&gt;myuser&lt;/username&gt;
+                &lt;password&gt;XXX&lt;/password&gt;
+            &lt;/server&gt;
+            &lt;server&gt;
+                &lt;id&gt;sonatype-nexus-staging&lt;/id&gt;
+                &lt;username&gt;myuser&lt;/username&gt;
+                &lt;password&gt;XXX&lt;/password&gt;
+            &lt;/server&gt;
+            &lt;server&gt;
+                &lt;id&gt;googlecode&lt;/id&gt;
+                &lt;username&gt;myuser&lt;/username&gt;
+                &lt;password&gt;XXX&lt;/password&gt;
+            &lt;/server&gt;
+            &lt;server&gt;
+                &lt;id&gt;flyway-sample-appengine&lt;/id&gt;
+                &lt;username&gt;myemail@address.com&lt;/username&gt;
+                &lt;password&gt;XXX&lt;/password&gt;
+            &lt;/server&gt;
+        &lt;/servers&gt;
+        &lt;profiles&gt;
+            &lt;profile&gt;
+                &lt;id&gt;flyway-release&lt;/id&gt;
+                &lt;properties&gt;
+                    &lt;flyway.releaserepo&gt;/path/to/flyway-release/repo&lt;/flyway.releaserepo&gt;
+                    &lt;gpg.passphrase&gt;XXX&lt;/gpg.passphrase&gt;
+                &lt;/properties&gt;
+            &lt;/profile&gt;
+        &lt;/profiles&gt;
+    &lt;/settings&gt;</pre>
+        </ul>
+    </ol>
+    <p><br/></p>
+
+    <h2><a name="Required_Steps"></a>Required Steps<a href="#Required_Steps" class="section_anchor"></a></h2>
+    <ol>
+        <li>First, we make sure <i>/flyway</i> is up to date by running <strong>hg pull -u</strong></li>
+        <li>We also make sure <i>/flyway-wiki</i> is up to date by running <strong>hg pull -u</strong></li>
+        <li>Now under <i>/flyway</i>, we can start the release with <strong>mvn release:prepare release:perform
+            -Pflyway-release</strong></li>
+        <li>We now have to provide the version number for the new release, say <i>1.3.1</i> for example</li>
+        <li>We can use the defaults for the release tag and the new development version</li>
+        <li>Then, we the release is done, we can push the changes to the POMs by running <strong>hg push</strong> in <i>/flyway</i>
+        </li>
+        <li>The old downloads must now be deprecated. We go to <a href="http://code.google.com/p/flyway/downloads/list"
+                                                                  rel="nofollow">http://code.google.com/p/flyway/downloads/list</a>.
+        </li>
+        <li>We mark each download for the old version as deprecated by removing the <strong>Featured</strong> tag and
+            adding the <strong>Deprecated</strong> tag
+        </li>
+        <li>Now the artifacts, must be promoted to Maven Central by logging in to <a href="https://oss.sonatype.org/"
+                                                                                     rel="nofollow">https://oss.sonatype.org/</a>
+        </li>
+        <li>We select <strong>Staging Repositories</strong> on the left and tick the checkbox in front of the open
+            <strong>com.googlecode.flyway</strong> repository
+        </li>
+        <li>We then close it (without message) and release it (without message)</li>
+        <li>Go to <i>/flyway-wiki</i> and execute <strong>updateJavadoc.cmd <i>XYZ</i></strong> or <strong>updateJavadoc.sh
+            <i>XYZ</i></strong> (where XYZ is the new version, say 1.4.1) to update the wiki Javadoc to the latest
+            release.
+        </li>
+        <li>Then front page of the wiki must be now be updated</li>
+        <li>We put the new version number and the date of today in the latest version section</li>
+        <li>We also update the version number in the Flyway, Flyway Maven Plugin and the Flyway Ant Tasks snippets of
+            the Installation part
+        </li>
+        <li>We also update the <a href="/releaseNotes.html">Release Notes</a>)
+            by changing the Unreleased Version in the new version with the date of today
+        </li>
+        <li>The newly released version should also be removed from the <a href="/roadmap.html">Roadmap</a>
+        </li>
+        <li>Any remaining documentation changes to reflect changes in the code, must now be made to the Wiki</li>
+        <li>Great, we&#x27;re done ! We can now announce it on Twitter!</li>
+    </ol>
+</div>

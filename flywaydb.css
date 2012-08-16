@@ -1,5 +1,5 @@
 body {
-    background-image: url("bg/frenchstucco.png");
+    background-image: url("bg/tiny_grid.png");
     background-repeat: repeat;
 }
 
@@ -15,10 +15,18 @@ ul.nav {
     height: 70px;
 }
 
+.navbar .nav > li {
+    margin-right: 50px;
+}
+
 .navbar .nav > li > a {
     height: 30px;
-    padding-top: 25px;
+    padding-top: 20px;
     font-size: 20px;
+}
+
+.navbar .nav > li > a > i {
+    margin-top: 5px;
 }
 
 #top-space {
