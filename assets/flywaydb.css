@@ -1,36 +1,16 @@
-body {
-    background-image: url("bg/tiny_grid.png");
-    background-repeat: repeat;
-}
-
-.navbar {
-    position: absolute;
-}
-
-.navbar-inner {
-    min-height: 70px;
+#header {
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    margin-top: 10px;
 }
 
 ul.nav {
-    height: 70px;
+    float: right;
+    margin-top: 30px;
 }
 
-.navbar .nav > li {
-    margin-right: 50px;
-}
-
-.navbar .nav > li > a {
-    height: 30px;
-    padding-top: 20px;
-    font-size: 20px;
-}
-
-.navbar .nav > li > a > i {
-    margin-top: 5px;
-}
-
-#top-space {
-    min-height: 100px;
+ul.nav i {
+    background-image: url("/assets/bootstrap-2.1.0/img/glyphicons-halflings.png") !important;
 }
 
 #big-sell {
