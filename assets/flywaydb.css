@@ -56,6 +56,7 @@ ul.nav i {
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 20px;
+    width: 180px;
 }
 
 hr.soften {
@@ -68,52 +69,45 @@ hr.soften {
     border: 0;
 }
 
-h1 {
-    text-align: center;
+.marketing .row {
+    text-align: left;
+    padding-bottom: 10px;
 }
 
-h2 {
+.marketing .row img {
+    float: left;
+    margin-right: 7px;
+}
+
+.marketing-section-head {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 150%;
+}
+
+.marketing-section-sub {
     color: #AAAAAA;
     font-size: 16px;
     font-weight: bold;
     margin: 10px auto 25px;
     text-align: center;
+    line-height: 150%;
+}
+
+.marketing-item {
+    font-weight: bold;
+    line-height: 150%;
+    font-size: 16px;
+    margin-top: 5px;
 }
 
 h3 {
     font-size: 16px;
 }
 
-#marketing .row {
-    margin-top: 10px;
-    text-align: left;
-}
-
-#marketing .row img {
-    float: left;
-    margin-right: 7px;
-}
-
-#marketing .row p {
-    margin-top: 5px;
-}
-
-#marketing #clients {
+#clients {
     margin-top: 50px;
-}
-
-#databases .row {
-    margin-top: 10px;
-    text-align: left;
-}
-
-#databases .row img {
-    float: left;
-    margin-right: 7px;
-}
-
-#databases .row p {
-    margin-top: 5px;
 }
 
 #features h3 {
@@ -125,7 +119,7 @@ h3 {
 }
 
 #features td:nth-child(2) {
-    background: #ffffff;
+    background: #eeeeee;
 }
 
 .release {
@@ -156,4 +150,9 @@ h3 {
     text-align: center;
     color: #AAAAAA;
     font-size: 10px;
+}
+
+#left-nav {
+    float: left;
+    margin-top: 15px;
 }

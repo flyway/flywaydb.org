@@ -17,10 +17,10 @@ title: SQL Migration
                                                                       class="section_anchor"></a></h2>
 
     <p>Sql migrations reside on the classpath in one or more directories referenced by the <strong><a
-            href="/javadoc/com/googlecode/flyway/core/Flyway.html#setLocations(java.lang.String...)"
+            href="/api/javadoc/com/googlecode/flyway/core/Flyway.html#setLocations(java.lang.String...)"
            >locations</a></strong> property.<br/></p>
 
-    <p><img src="/balsamiq/SqlMigrationBaseDir.png"/></p>
+    <p><img src="/assets/balsamiq/SqlMigrationBaseDir.png"/></p>
 
     <p>New sql migrations are <strong>discovered automatically</strong> through classpath scanning at runtime. This
         scanning is recursive. All migrations in directories below the specified ones are also picked up. </p>
@@ -29,7 +29,7 @@ title: SQL Migration
 
     <p>In order to be picked by the classpath scanner, the sql migrations must follow a naming pattern: </p>
 
-    <p><img src="/balsamiq/SqlMigrationNaming.png"/></p>
+    <p><img src="/assets/balsamiq/SqlMigrationNaming.png"/></p>
 
     <p>The file name consists of:
     <ul>

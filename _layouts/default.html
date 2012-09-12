@@ -31,15 +31,16 @@
 <body>
 <div class="container">
     <div id="header" class="row">
-        <div class="span3">
-            <a href="/"><img src="/logo/flyway-logo-transparent-100.png"></a>
+        <div class="span2">
+            <a href="/"><img src="/assets/logo/flyway-logo-transparent-100.png"></a>
         </div>
-        <div class="span9">
+        <div class="span10">
             <ul class="nav nav-tabs ">
                 <li {% if page.tab == 'home' %} class="active" {% endif %}>
                     <a href="/"><i class="icon-home"></i> HOME</a>
                 </li>
-                <li {% if page.tab == 'learn' %} class="active" {% endif %}><a href="/introduction.html"><i class="icon-book"></i> DOCUMENTATION</a></li>
+                <li {% if page.tab == 'getstarted' %} class="active" {% endif %}><a href="/getstarted"><i class="icon-play"></i> GET STARTED</a></li>
+                <li {% if page.tab == 'documentation' %} class="active" {% endif %}><a href="/getstarted/index.html"><i class="icon-book"></i> DOCUMENTATION</a></li>
                 <li {% if page.tab == 'download' %} class="active" {% endif %}><a href="http://code.google.com/p/flyway/downloads/list"><i class="icon-download"></i> DOWNLOAD</a></li>
                 <li {% if page.tab == 'contribute' %} class="active" {% endif %}><a href="/howToContribute.html"><i class="icon-leaf"></i> CONTRIBUTE</a></li>
                 <li {% if page.tab == 'support' %} class="active" {% endif %}><a href="/faq.html"><i class="icon-question-sign"></i> SUPPORT</a></li>

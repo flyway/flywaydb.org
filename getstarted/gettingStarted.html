@@ -1,0 +1,66 @@
+---
+layout: getstarted
+menu: firststeps
+title: First Steps
+---
+<div id="firstSteps">
+    <h1>First Steps</h1>
+
+    <p>This guide will help you integrate Flyway into your project and configure it to fit your needs. <br/></p>
+
+    <h2><a name="Sample_application"></a>Sample application<a href="#Sample_application" class="section_anchor"></a>
+    </h2>
+
+    <p>First, have a look at the sample application available on the <a
+            href="http://code.google.com/p/flyway/downloads/list">Downloads tab</a>. <br/> This shows
+        you the simplest setup possible for Flyway. It&#x27;ll give you a quick impression of how Flyway can be used and
+        what both Sql and Java migrations look like.<br/> It contains a sample configuration for the <a
+                href="/maven/mavenPlugin.html">Maven Plugin</a> and the <a href="/ant/antTasks.html">Ant
+            Tasks</a>. <br/></p>
+
+    <h2><a name="Database_setup"></a>Database setup<a href="#Database_setup" class="section_anchor"></a></h2>
+
+    <p>Now it&#x27;s your turn. Start by preparing your database. </p>
+
+    <p>Which situation applies to you? </p><h4><a name="My_database_is_empty"></a>My database is empty<a
+        href="#My_database_is_empty" class="section_anchor"></a></h4>
+
+    <p>Great. Just point Flyway at your database and it&#x27;ll take care of the rest. No special preparation is
+        required. </p><h4><a name="I_want_to_start_using_Flyway_with_an_existing_database"></a>I want to start using
+    Flyway with an existing database<a href="#I_want_to_start_using_Flyway_with_an_existing_database"
+                                       class="section_anchor"></a></h4>
+
+    <p>Perfect. We have a <a href="/databaseSetupExisting.html">guide</a> to lead you through the different
+        steps. <br/></p>
+
+    <h2><a name="Maven_plugin_setup"></a>Maven plugin setup<a href="#Maven_plugin_setup" class="section_anchor"></a>
+    </h2>
+
+    <p>When your database is set up, you can give the <a href="/maven/mavenPlugin.html">Maven Plugin</a> a go. </p>
+
+    <p>Try </p>
+    <pre class="prettyprint">mvn flyway:status</pre>
+    <p>and check that Flyway can connect to your database. <br/></p>
+
+    <h2><a name="Ant_tasks_setup"></a>Ant tasks setup<a href="#Ant_tasks_setup" class="section_anchor"></a></h2>
+
+    <p>Alternatively you can give the <a href="/ant/antTasks.html">Ant Tasks</a> a go. </p>
+
+    <p>Execute a target containing </p>
+    <pre class="prettyprint">&lt;flyway:status /&gt;</pre>
+    <p>and check that Flyway can connect to your database. <br/></p>
+
+    <h2><a name="Application_integration"></a>Application integration<a href="#Application_integration"
+                                                                        class="section_anchor"></a></h2>
+
+    <p>After you&#x27;ve verified that the Maven plugin is working, the next step is to <a
+            href="/api/applicationIntegration.html">integrate Flyway in your application</a>. <br/></p>
+
+    <h2><a name="Write_your_first_migration"></a>Write your first migration<a href="#Write_your_first_migration"
+                                                                              class="section_anchor"></a></h2>
+
+    <p>Congratulations, Flyway is now fully set up. Manually updating databases on different machines is now officially
+        a thing of the past. </p>
+
+    <p>Start by writing your first migration and you&#x27;ll never look back. :-) </p>
+</div>

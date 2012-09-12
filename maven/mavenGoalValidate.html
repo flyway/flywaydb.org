@@ -1,0 +1,161 @@
+---
+layout: default
+tab: learn
+title: 'mvn flyway:validate'
+---
+<div id="mavenGoalValidate">
+    <h1><a name="Maven_Goal:_Validate"></a>Maven Goal: Validate<a href="#Maven_Goal:_Validate"
+                                                                  class="section_anchor"></a></h1>
+
+    <p>Validates the applied migrations against the ones available on the classpath. The build fails if differences in
+        migration names, types or checksums are found. </p>
+
+    <h2><a name="Default_Phase"></a>Default Phase<a href="#Default_Phase" class="section_anchor"></a></h2>
+    <ul>
+        <li>pre-integration-test</li>
+    </ul>
+    <h2><a name="Usage"></a>Usage<a href="#Usage" class="section_anchor"></a></h2>
+    <pre class="prettyprint">mvn flyway:validate</pre>
+    <h2><a name="Configuration"></a>Configuration<a href="#Configuration" class="section_anchor"></a></h2>
+
+    <p>
+    <table class="wikitable">
+        <tr>
+            <td style="border: 1px solid #ccc; padding: 5px;"><strong>Parameter</strong></td>
+            <td style="border: 1px solid #ccc; padding: 5px;"><strong>Maven / System Property</strong></td>
+            <td style="border: 1px solid #ccc; padding: 5px;"><strong>Required</strong></td>
+            <td style="border: 1px solid #ccc; padding: 5px;"><strong>Default Value</strong></td>
+            <td style="border: 1px solid #ccc; padding: 5px;"><strong>Description</strong></td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ccc; padding: 5px;"> driver</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> flyway.driver</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> YES</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"></td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> The fully qualified classname of the jdbc driver to use
+                to connect to the database
+            </td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ccc; padding: 5px;"> url</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> flyway.url</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> YES</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"></td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> The jdbc url to use to connect to the database</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ccc; padding: 5px;"> serverId</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> flyway.serverId</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> NO</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> flyway-db</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> The id of the server in the Maven settings.xml file to
+                load the credentials from.<br/><br/>This is an alternative to passing the credentials in
+                directly through properties.
+            </td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ccc; padding: 5px;"> user</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> flyway.user</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> NO</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"></td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> The user to use to connect to the
+                database.<br/><br/>Required if the credentials are not loaded through the serverId from the
+                Maven settings.xml
+            </td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ccc; padding: 5px;"> password</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> flyway.password</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> NO</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"><i>blank</i></td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> The password to use to connect to the database</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ccc; padding: 5px;"> schemas</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> flyway.schemas</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> NO</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"><i>default schema of the connection</i></td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> Comma-separated list of schemas managed by Flyway. The
+                first schema in the list will be the one containing the metadata table
+            </td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ccc; padding: 5px;"> table</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> flyway.table</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> NO</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> schema_version</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> The name of Flyway&#x27;s metadata table.<br/>By
+                default (single-schema mode) the metadata table is placed in the default schema for the connection
+                provided by the datasource.<br/>When the <i>flyway.schemas</i> property is set (multi-schema mode),
+                the metadata table is placed in the first schema of the list.
+            </td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ccc; padding: 5px;"> locations</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> flyway.locations</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> NO</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> db/migration</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> Locations on the classpath to scan recursively for
+                migrations. Locations may contain both sql and java-based migrations.<br/>Maven/System Property
+                takes a comma-separated list.
+            </td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ccc; padding: 5px;"> sqlMigrationPrefix</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> flyway.sqlMigrationPrefix</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> NO</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> V</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> The file name prefix for Sql migrations</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ccc; padding: 5px;"> sqlMigrationSuffix</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> flyway.sqlMigrationSuffix</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> NO</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> .sql</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> The file name suffix for Sql migrations</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ccc; padding: 5px;"> encoding</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> flyway.encoding</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> NO</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> UTF-8</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> The encoding of Sql migrations</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ccc; padding: 5px;"> validationErrorMode</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> flyway.validationErrorMode</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> NO</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> FAIL</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> The action to take when validation
+                fails.<br/><br/>Possible values are:<br/><br/> <b>FAIL</b><br/> Throw an exception
+                and fail<br/><br/> <b>CLEAN (Warning ! Do not use in production !)</b><br/> Cleans the
+                database<br/><br/>This is exclusively intended as a convenience for development. Even tough we
+                strongly recommend not to change migration scripts once they have been checked into SCM and run, this
+                provides a way of dealing with this case in a smooth manner. The database will be wiped clean
+                automatically, ensuring that the next migration will bring you back to the state checked into
+                SCM.<br/><br/>This property has no effect when <i>validationMode</i> is set to <i>NONE</i>.
+            </td>
+        </tr>
+    </table>
+    </p><h2><a name="Sample_configuration"></a>Sample configuration<a href="#Sample_configuration"
+                                                                      class="section_anchor"></a></h2><pre
+        class="prettyprint">&lt;configuration&gt;
+   &lt;driver&gt;org.hsqldb.jdbcDriver&lt;/driver&gt;
+   &lt;url&gt;jdbc:hsqldb:file:${project.build.directory}/db/flyway_sample;shutdown=true&lt;/url&gt;
+   &lt;user&gt;SA&lt;/user&gt;
+   &lt;password&gt;mySecretPwd&lt;/password&gt;
+   &lt;schemas&gt;schema1,schema2,schema3&lt;/schemas&gt;
+   &lt;table&gt;schema_history&lt;/table&gt;
+   &lt;locations&gt;
+       &lt;location&gt;com.mycompany.project.migration&lt;/location&gt;
+       &lt;location&gt;database/migrations&lt;/location&gt;
+   &lt;/locations&gt;
+   &lt;sqlMigrationPrefix&gt;Migration-&lt;/sqlMigrationPrefix&gt;
+   &lt;sqlMigrationSuffix&gt;-OK.sql&lt;/sqlMigrationSuffix&gt;
+   &lt;encoding&gt;ISO-8859-1&lt;/encoding&gt;
+   &lt;validationErrorMode&gt;FAIL&lt;/validationErrorMode&gt;
+&lt;/configuration&gt;</pre>
+    <h2><a name="Sample_output"></a>Sample output<a href="#Sample_output" class="section_anchor"></a></h2>
+
+    <p><img src="/assets/balsamiq/MavenValidateOutput.png"/></p>
+</div>
