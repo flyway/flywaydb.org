@@ -1,0 +1,110 @@
+---
+layout: ant
+pill: history
+subtitle: Ant Task History
+---
+<div id="antTaskHistory">
+    <h1><a name="Ant_Task:_History"></a>Ant Task: History<a href="#Ant_Task:_History" class="section_anchor"></a></h1>
+
+    <p>Prints the full migration history of the schema. <br/></p>
+
+    <h2><a name="Usage"></a>Usage<a href="#Usage" class="section_anchor"></a></h2>
+    <pre class="prettyprint">&lt;flyway:history /&gt;</pre>
+    <p><br/></p>
+
+    <h2><a name="Configuration"></a>Configuration<a href="#Configuration" class="section_anchor"></a></h2>
+
+    <p>
+    <table class="wikitable">
+        <tr>
+            <td style="border: 1px solid #ccc; padding: 5px;"><strong>Attribute</strong></td>
+            <td style="border: 1px solid #ccc; padding: 5px;"><strong>Ant / System Property</strong></td>
+            <td style="border: 1px solid #ccc; padding: 5px;"><strong>Required</strong></td>
+            <td style="border: 1px solid #ccc; padding: 5px;"><strong>Default Value</strong></td>
+            <td style="border: 1px solid #ccc; padding: 5px;"><strong>Description</strong></td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ccc; padding: 5px;"> driver</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> flyway.driver</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> YES</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"></td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> The fully qualified classname of the jdbc driver to use
+                to connect to the database
+            </td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ccc; padding: 5px;"> url</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> flyway.url</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> YES</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"></td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> The jdbc url to use to connect to the database</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ccc; padding: 5px;"> user</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> flyway.user</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> YES</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"></td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> The user to use to connect to the database</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ccc; padding: 5px;"> password</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> flyway.password</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> NO</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"><i>blank</i></td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> The password to use to connect to the database</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ccc; padding: 5px;"> schemas</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> flyway.schemas</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> NO</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"><i>default schema of the connection</i></td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> Comma-separated list of schemas managed by Flyway. The
+                first schema in the list will be the one containing the metadata table
+            </td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ccc; padding: 5px;"> table</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> flyway.table</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> NO</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> schema_version</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> The name of Flyway&#x27;s metadata table.<br/>By
+                default (single-schema mode) the metadata table is placed in the default schema for the connection
+                provided by the datasource.<br/>When the <i>flyway.schemas</i> property is set (multi-schema mode),
+                the metadata table is placed in the first schema of the list.
+            </td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ccc; padding: 5px;"> classpath</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> flyway.classpath</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> NO</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"></td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> The Ant classpath used to load the JDBC driver and the
+                migrations
+            </td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ccc; padding: 5px;"> classpathref</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> flyway.classpathref</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> NO</td>
+            <td style="border: 1px solid #ccc; padding: 5px;"></td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> The Ant classpath reference used to load the JDBC driver
+                and the migrations
+            </td>
+        </tr>
+    </table>
+    </p><p><br/></p>
+
+    <h2><a name="Sample_configuration"></a>Sample configuration<a href="#Sample_configuration"
+                                                                  class="section_anchor"></a></h2><pre
+        class="prettyprint">&lt;property name=&quot;flyway.driver&quot; value=&quot;org.hsqldb.jdbcDriver&quot;/&gt;
+&lt;property name=&quot;flyway.url&quot; value=&quot;jdbc:hsqldb:file:/db/flyway_sample&quot;/&gt;
+&lt;property name=&quot;flyway.user&quot; value=&quot;SA&quot;/&gt;
+&lt;property name=&quot;flyway.password&quot; value=&quot;mySecretPwd&quot;/&gt;
+&lt;property name=&quot;flyway.schemas&quot; value=&quot;schema1,schema2,schema3&quot;/&gt;
+&lt;property name=&quot;flyway.table&quot; value=&quot;schema_history&quot;/&gt;</pre>
+    <p><br/></p>
+
+    <h2><a name="Sample_output"></a>Sample output<a href="#Sample_output" class="section_anchor"></a></h2>
+
+    <p><img src="/assets/balsamiq/AntHistoryOutput.png"/></p>
+</div>

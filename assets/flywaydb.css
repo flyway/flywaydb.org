@@ -4,12 +4,12 @@
     margin-top: 10px;
 }
 
-ul.nav {
+#tabs {
     float: right;
     margin-top: 30px;
 }
 
-ul.nav i {
+#tabs i {
     background-image: url("/assets/bootstrap-2.1.0/img/glyphicons-halflings.png") !important;
 }
 
@@ -79,6 +79,10 @@ hr.soften {
     margin-right: 7px;
 }
 
+.marketing .row p {
+    clear: both;
+}
+
 .marketing-section-head {
     text-align: center;
     font-size: 36px;
@@ -99,6 +103,9 @@ hr.soften {
     font-weight: bold;
     line-height: 150%;
     font-size: 16px;
+}
+
+#databases .row .marketing-item{
     margin-top: 5px;
 }
 
@@ -152,7 +159,20 @@ h3 {
     font-size: 10px;
 }
 
-#left-nav {
-    float: left;
-    margin-top: 15px;
+.well {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.well ul.nav {
+    float: none;
+    margin-top: 0;
+}
+
+.nav-pills > li > a {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 12px;
 }

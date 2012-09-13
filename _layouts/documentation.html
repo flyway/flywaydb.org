@@ -1,0 +1,53 @@
+---
+layout: default
+tab: documentation
+title: Documentation
+---
+<div>
+    <div class="row">
+        <div class="span3">
+            <div class="well">
+                <ul class="nav nav-list">
+                    <li
+                    {% if page.menu == 'migration' %} class="active" {% endif %}>
+                    <a href="/documentation/migration">Migrations</a></li>
+                    <li
+                    {% if page.menu == 'api' %} class="active" {% endif %}>
+                    <a href="/documentation/api.html">API</a></li>
+                    <li
+                    {% if page.menu == 'maven' %} class="active" {% endif %}>
+                    <a href="/documentation/maven">Maven Plugin</a></li>
+                    <li
+                    {% if page.menu == 'commandLine' %} class="active" {% endif %}>
+                    <a href="/documentation/commandLine">Command-line Tool</a></li>
+                    <li
+                    {% if page.menu == 'ant' %} class="active" {% endif %}>
+                    <a href="/documentation/ant">Ant Tasks</a></li>
+                    <li
+                    {% if page.menu == 'database' %} class="active" {% endif %}>
+                    <a href="/documentation/database">Supported Databases</a></li>
+                    <li
+                    {% if page.menu == 'thirdParty' %} class="active" {% endif %}>
+                    <a href="/documentation/pluginsThirdParty.html">Third Party plugins</a></li>
+                    <li
+                    {% if page.menu == 'articles' %} class="active" {% endif %}>
+                    <a href="/documentation/articles.html">Articles about Flyway</a></li>
+                    <li
+                    {% if page.menu == 'releaseNotes' %} class="active" {% endif %}>
+                    <a href="/documentation/releaseNotes.html">Release Notes</a></li>
+                    <li
+                    {% if page.menu == 'roadmap' %} class="active" {% endif %}>
+                    <a href="/documentation/roadmap.html">Roadmap</a></li>
+                    <li
+                    {% if page.menu == 'faq' %} class="active" {% endif %}>
+                    <a href="/documentation/faq.html">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="span9">
+
+            {{ content }}
+
+        </div>
+    </div>
+</div>

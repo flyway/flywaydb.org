@@ -9,7 +9,8 @@ tab: home
         </p>
 
         <p>
-            <a class="btn btn-primary btn-large btn-jumbo" href="http://code.google.com/p/flyway/downloads/list">Download v{{ site.flywayVersion }}</a>
+            <a class="btn btn-primary btn-large btn-jumbo" href="http://code.google.com/p/flyway/downloads/list">Download
+                v{{ site.flywayVersion }}</a>
         </p>
 
     </div>
@@ -86,13 +87,15 @@ tab: home
 <div class="marketing">
     <div class="marketing-section-head">It just works. Refreshingly simple.</div>
 
-    <div class="marketing-section-sub">Migrate from any version (incl. an empty database) to the latest version of the schema</div>
+    <div class="marketing-section-sub">Migrate from any version (incl. an empty database) to the latest version of the
+        schema
+    </div>
 
     <div class="row">
         <div class="span4">
             <img src="assets/glyphicons/glyphicons_036_file.png"/>
 
-            <div class="marketing-item"><a href="/sqlMigration.html">Plain Old Sql</a></div>
+            <div class="marketing-item"><a href="/documentation/migration/migrationSql.html">Plain Old Sql</a></div>
 
             <p>Plain SQL scripts (incl. placeholder replacement). No proprietary XML formats, no lock-in.</p>
         </div>
@@ -101,7 +104,8 @@ tab: home
 
             <div class="marketing-item">No limits</div>
 
-            <p><a href="/javaMigration.html">Java-based migrations</a> for advanced data transformations and handling with LOBs</p>
+            <p><a href="/documentation/migration/migrationJava.html">Java-based migrations</a> for advanced data
+                transformations and handling with LOBs</p>
         </div>
         <div class="span4">
             <img src="assets/glyphicons/glyphicons_189_brightness_increase.png" class=""/>
@@ -124,14 +128,16 @@ tab: home
 
             <div class="marketing-item">Highly reliable</div>
 
-            <p>Safe for cluster environments (Multiple machines can migrate in parallel)</p>
+            <p><a href="/documentation/faq.html#Can_multiple_nodes_migrate_in_parallel?">Safe for cluster
+                environments</a> (Multiple machines can migrate in parallel)</p>
         </div>
         <div class="span4">
             <img src="assets/glyphicons/glyphicons_232_cloud.png" class=""/>
 
             <div class="marketing-item">Cloud support</div>
 
-            <p>Runs on Google App Engine with Google Cloud SQL</p>
+            <p>Runs on Google App Engine with full support for <a
+                    href="/documentation/database/databaseGoogleCloudSql.html">Google Cloud SQL</a></p>
         </div>
     </div>
     <div class="row">
@@ -140,9 +146,9 @@ tab: home
 
             <div class="marketing-item">Auto-migration on startup</div>
 
-            <p>Ship migrations together with the application and run them automatically on startup using the API</p>
+            <p><a href="/documentation/api.html">Ship migrations together with the application</a> and run them automatically on startup using the API</p>
         </div>
-       <div class="span4">
+        <div class="span4">
             <img src="assets/glyphicons/glyphicons_078_warning_sign.png"/>
 
             <div class="marketing-item">Fail fast</div>
@@ -152,7 +158,7 @@ tab: home
         <div class="span4">
             <img src="assets/glyphicons/glyphicons_067_cleaning.png"/>
 
-            <div class="marketing-item">Schema Clean</div>
+            <div class="marketing-item"><a href="/documentation/maven/mavenClean.html">Schema Clean</a></div>
 
             <p>Drop all tables, views, triggers, ... from a schema without dropping the schema itself</p>
         </div>
@@ -161,35 +167,35 @@ tab: home
         <div class="span3">
             <img src="/assets/glyphicons/glyphicons_294_coffe_cup.png"/>
 
-            <div class="marketing-item"><a href="/api/applicationIntegration.html">Java API</a></div>
+            <div class="marketing-item"><a href="/documentation/api.html">Java API</a></div>
 
             <p>Migrate directly from within your application</p>
         </div>
         <div class="span3">
             <img src="/assets/glyphicons/glyphicons_023_cogwheels.png"/>
 
-            <div class="marketing-item"><a href="/maven/mavenPlugin.html">Maven Plugin</a></div>
+            <div class="marketing-item"><a href="/documentation/maven/index.html">Maven Plugin</a></div>
 
             <p>Seamless integration with Maven 2/3 builds</p>
         </div>
         <div class="span3">
             <img src="assets/glyphicons/glyphicons_150_check.png"/>
 
-            <div class="marketing-item"><a href="/ant/antTasks.html">Ant Tasks</a></div>
+            <div class="marketing-item"><a href="/documentation/ant/index.html">Ant Tasks</a></div>
 
             <p>Antlib with tasks for Ant 1.8 and above</p>
         </div>
         <div class="span3">
             <img src="assets/glyphicons/glyphicons_160_imac.png"/>
 
-            <div class="marketing-item"><a href="/commandline/commandLine.html">Command-line Tool</a></div>
+            <div class="marketing-item"><a href="/documentation/commandLine/index.html">Command-line Tool</a></div>
 
             <p>For non-JVM users and environments without Maven or Ant</p>
         </div>
     </div>
 </div>
 <hr class="soften"/>
-<div class="marketing">
+<div id="databases" class="marketing">
     <div class="marketing-section-head">Your relational database. Supported.</div>
 
     <div class="marketing-section-sub">Choose from the wide range of supported databases</div>
@@ -198,21 +204,21 @@ tab: home
         <div class="span4">
             <img src="/assets/glyphicons/glyphicons_141_database_plus.png"/>
 
-            <div class="marketing-item"><a href="/databaseOracle.html">Oracle</a></div>
+            <div class="marketing-item"><a href="/documentation/database/databaseOracle.html">Oracle</a></div>
 
             <p>10g and later (all editions, including XE)</p>
         </div>
         <div class="span4">
             <img src="/assets/glyphicons/glyphicons_141_database_plus.png"/>
 
-            <div class="marketing-item"><a href="/databaseSqlServer.html">SQL Server</a></div>
+            <div class="marketing-item"><a href="/documentation/database/databaseSqlServer.html">SQL Server</a></div>
 
             <p>2008 and later</p>
         </div>
         <div class="span4">
             <img src="/assets/glyphicons/glyphicons_141_database_plus.png"/>
 
-            <div class="marketing-item"><a href="/databaseDb2.html">DB2</a></div>
+            <div class="marketing-item"><a href="/documentation/database/databaseDb2.html">DB2</a></div>
 
             <p>9.7 and later</p>
         </div>
@@ -221,21 +227,22 @@ tab: home
         <div class="span4">
             <img src="/assets/glyphicons/glyphicons_141_database_plus.png"/>
 
-            <div class="marketing-item"><a href="/databasePostgreSql.html">PostgreSQL</a></div>
+            <div class="marketing-item"><a href="/documentation/database/databasePostgreSql.html">PostgreSQL</a></div>
 
             <p>9.0 and later</p>
         </div>
         <div class="span4">
             <img src="/assets/glyphicons/glyphicons_141_database_plus.png"/>
 
-            <div class="marketing-item"><a href="/databaseMySql.html">MySQL</a></div>
+            <div class="marketing-item"><a href="/documentation/database/databaseMySql.html">MySQL</a></div>
 
             <p>5.1 and later</p>
         </div>
         <div class="span4">
             <img src="/assets/glyphicons/glyphicons_141_database_plus.png"/>
 
-            <div class="marketing-item"><a href="/databaseGoogleCloudSql.html">Google Cloud SQL</a></div>
+            <div class="marketing-item"><a href="/documentation/database/databaseGoogleCloudSql.html">Google Cloud
+                SQL</a></div>
 
             <p>1.6 and later</p>
         </div>
@@ -244,21 +251,21 @@ tab: home
         <div class="span4">
             <img src="/assets/glyphicons/glyphicons_141_database_plus.png"/>
 
-            <div class="marketing-item"><a href="/databaseH2.html">H2</a></div>
+            <div class="marketing-item"><a href="/documentation/database/databaseH2.html">H2</a></div>
 
             <p>1.2.137 and later</p>
         </div>
         <div class="span4">
             <img src="/assets/glyphicons/glyphicons_141_database_plus.png"/>
 
-            <div class="marketing-item"><a href="/databaseHsql.html">Hsql</a></div>
+            <div class="marketing-item"><a href="/documentation/database/databaseHsql.html">Hsql</a></div>
 
             <p>1.8 and later</p>
         </div>
         <div class="span4">
             <img src="/assets/glyphicons/glyphicons_141_database_plus.png"/>
 
-            <div class="marketing-item"><a href="/databaseDerby.html">Derby</a></div>
+            <div class="marketing-item"><a href="/documentation/database/databaseDerby.html">Derby</a></div>
 
             <p>10.8.2.2 and later</p>
         </div>
@@ -285,10 +292,12 @@ tab: home
 </tr>
 </thead>
 <tr>
-    <td><h3>Migration types</h3></td><td></td><td colspan="8"></td>
+    <td><h3>Migration types</h3></td>
+    <td></td>
+    <td colspan="8"></td>
 </tr>
 <tr>
-    <td><a href="/sqlMigration.html">Plain Old Sql migrations</a></td>
+    <td><a href="/documentation/migration/migrationSql.html">Plain Old Sql migrations</a></td>
     <td><i class="icon-ok" title="yes"></i></td>
     <td><i class="icon-ban-circle" title="no"></i><sup>1</sup></td>
     <td><i class="icon-ok" title="yes"></i></td>
@@ -300,7 +309,7 @@ tab: home
     <td><i class="icon-ok" title="yes"></i></td>
 </tr>
 <tr>
-    <td><a href="/javaMigration.html">Java migrations</a></td>
+    <td><a href="/documentation/migration/migrationJava.html">Java migrations</a></td>
     <td><i class="icon-ok" title="yes"></i></td>
     <td><i class="icon-ban-circle" title="no"></i><sup>1</sup></td>
     <td><i class="icon-ban-circle" title="no"></i></td>
@@ -348,10 +357,12 @@ tab: home
     <td><i class="icon-ban-circle" title="no"></i></td>
 </tr>
 <tr>
-    <td><h3>Execution</h3></td><td></td><td colspan="8"></td>
+    <td><h3>Execution</h3></td>
+    <td></td>
+    <td colspan="8"></td>
 </tr>
 <tr>
-    <td><a href="/api/applicationIntegration.html">API</a></td>
+    <td><a href="/documentation/api.html">API</a></td>
     <td><i class="icon-ok" title="yes"></i></td>
     <td><i class="icon-ok" title="yes"></i></td>
     <td><i class="icon-ok" title="yes"></i></td>
@@ -363,7 +374,7 @@ tab: home
     <td><i class="icon-ok" title="yes"></i></td>
 </tr>
 <tr>
-    <td><a href="/maven/mavenPlugin.html">Maven plugin</a></td>
+    <td><a href="/documentation/maven/index.html">Maven plugin</a></td>
     <td><i class="icon-ok" title="yes"></i></td>
     <td><i class="icon-ok" title="yes"></i></td>
     <td><i class="icon-ok" title="yes"></i></td>
@@ -375,7 +386,7 @@ tab: home
     <td><i class="icon-ban-circle" title="no"></i></td>
 </tr>
 <tr>
-    <td><a href="/ant/antTasks.html">Ant tasks</a></td>
+    <td><a href="/documentation/ant/index.html">Ant tasks</a></td>
     <td><i class="icon-ok" title="yes"></i></td>
     <td><i class="icon-ok" title="yes"></i></td>
     <td><i class="icon-ban-circle" title="no"></i></td>
@@ -387,7 +398,7 @@ tab: home
     <td><i class="icon-ban-circle" title="no"></i></td>
 </tr>
 <tr>
-    <td><a href="/commandline/commandLine.html">Command-line tool</a></td>
+    <td><a href="/documentation/commandLine/index.html">Command-line tool</a></td>
     <td><i class="icon-ok" title="yes"></i></td>
     <td><i class="icon-ok" title="yes"></i></td>
     <td><i class="icon-ban-circle" title="no"></i></td>
@@ -399,10 +410,12 @@ tab: home
     <td><i class="icon-ban-circle" title="no"></i></td>
 </tr>
 <tr>
-    <td><h3>Databases</h3></td><td></td><td colspan="8"></td>
+    <td><h3>Databases</h3></td>
+    <td></td>
+    <td colspan="8"></td>
 </tr>
 <tr>
-    <td><a href="/databaseOracle.html">Oracle</a></td>
+    <td><a href="/documentation/database/databaseOracle.html">Oracle</a></td>
     <td><i class="icon-ok" title="yes"></i></td>
     <td><i class="icon-ok" title="yes"></i></td>
     <td><i class="icon-ban-circle" title="no"></i></td>
@@ -414,7 +427,7 @@ tab: home
     <td><i class="icon-ok" title="yes"></i></td>
 </tr>
 <tr>
-    <td><a href="/databaseSqlServer.html">SQL Server</a></td>
+    <td><a href="/documentation/database/databaseSqlServer.html">SQL Server</a></td>
     <td><i class="icon-ok" title="yes"></i></td>
     <td><i class="icon-ok" title="yes"></i></td>
     <td><i class="icon-ok" title="yes"></i></td>
@@ -426,7 +439,7 @@ tab: home
     <td><i class="icon-ok" title="yes"></i></td>
 </tr>
 <tr>
-    <td><a href="/databaseDb2.html">DB2</a></td>
+    <td><a href="/documentation/database/databaseDb2.html">DB2</a></td>
     <td><i class="icon-ok" title="yes"></i></td>
     <td><i class="icon-ok" title="yes"></i></td>
     <td><i class="icon-ban-circle" title="no"></i></td>
@@ -438,7 +451,7 @@ tab: home
     <td><i class="icon-ok" title="yes"></i></td>
 </tr>
 <tr>
-    <td><a href="/databaseMySql.html">MySQL</a></td>
+    <td><a href="/documentation/database/databaseMySql.html">MySQL</a></td>
     <td><i class="icon-ok" title="yes"></i></td>
     <td><i class="icon-ok" title="yes"></i></td>
     <td><i class="icon-ok" title="yes"></i></td>
@@ -450,7 +463,7 @@ tab: home
     <td><i class="icon-ok" title="yes"></i></td>
 </tr>
 <tr>
-    <td><a href="/databasePostgreSql.html">PostgreSQL</a></td>
+    <td><a href="/documentation/database/databasePostgreSql.html">PostgreSQL</a></td>
     <td><i class="icon-ok" title="yes"></i></td>
     <td><i class="icon-ok" title="yes"></i></td>
     <td><i class="icon-ok" title="yes"></i></td>
@@ -462,7 +475,7 @@ tab: home
     <td><i class="icon-ok" title="yes"></i></td>
 </tr>
 <tr>
-    <td><a href="/databaseH2.html">H2</a></td>
+    <td><a href="/documentation/database/databaseH2.html">H2</a></td>
     <td><i class="icon-ok" title="yes"></i></td>
     <td><i class="icon-ok" title="yes"></i></td>
     <td><i class="icon-ok" title="yes"></i></td>
@@ -474,7 +487,7 @@ tab: home
     <td><i class="icon-ok" title="yes"></i></td>
 </tr>
 <tr>
-    <td><a href="/databaseHsql.html">Hsql</a></td>
+    <td><a href="/documentation/database/databaseHsql.html">Hsql</a></td>
     <td><i class="icon-ok" title="yes"></i></td>
     <td><i class="icon-ok" title="yes"></i></td>
     <td><i class="icon-ok" title="yes"></i></td>
@@ -486,7 +499,7 @@ tab: home
     <td><i class="icon-ok" title="yes"></i></td>
 </tr>
 <tr>
-    <td><a href="/databaseDerby.html">Derby</a></td>
+    <td><a href="/documentation/database/databaseDerby.html">Derby</a></td>
     <td><i class="icon-ok" title="yes"></i></td>
     <td><i class="icon-ok" title="yes"></i></td>
     <td><i class="icon-ban-circle" title="no"></i></td>
@@ -498,10 +511,12 @@ tab: home
     <td><i class="icon-ok" title="yes"></i></td>
 </tr>
 <tr>
-    <td><h3>Sql Parser</h3></td><td></td><td colspan="8"></td>
+    <td><h3>Sql Parser</h3></td>
+    <td></td>
+    <td colspan="8"></td>
 </tr>
 <tr>
-    <td><a href="/databaseOracle.html">Oracle PL/SQL</a></td>
+    <td><a href="/documentation/database/databaseOracle.html">Oracle PL/SQL</a></td>
     <td><i class="icon-ok" title="yes"></i></td>
     <td><i class="icon-ban-circle" title="no"></i><sup>2</sup></td>
     <td><i class="icon-ban-circle" title="no"></i></td>
@@ -513,7 +528,7 @@ tab: home
     <td><i class="icon-ban-circle" title="no"></i></td>
 </tr>
 <tr>
-    <td><a href="/databaseSqlServer.html">SQL Server T-SQL</a></td>
+    <td><a href="/documentation/database/databaseSqlServer.html">SQL Server T-SQL</a></td>
     <td><i class="icon-ok" title="yes"></i></td>
     <td><i class="icon-ban-circle" title="no"></i><sup>2</sup></td>
     <td><i class="icon-ban-circle" title="no"></i></td>
@@ -525,7 +540,7 @@ tab: home
     <td><i class="icon-ban-circle" title="no"></i></td>
 </tr>
 <tr>
-    <td><a href="/databaseDb2.html">DB2 SQL PL</a></td>
+    <td><a href="/documentation/database/databaseDb2.html">DB2 SQL PL</a></td>
     <td><i class="icon-ban-circle" title="no"></i></td>
     <td><i class="icon-ban-circle" title="no"></i><sup>2</sup></td>
     <td><i class="icon-ban-circle" title="no"></i></td>
@@ -537,7 +552,7 @@ tab: home
     <td><i class="icon-ban-circle" title="no"></i></td>
 </tr>
 <tr>
-    <td><a href="/databaseMySql.html">MySQL stored procedures</a></td>
+    <td><a href="/documentation/database/databaseMySql.html">MySQL stored procedures</a></td>
     <td><i class="icon-ok" title="yes"></i></td>
     <td><i class="icon-ban-circle" title="no"></i><sup>2</sup></td>
     <td><i class="icon-ok" title="yes"></i></td>
@@ -549,7 +564,7 @@ tab: home
     <td><i class="icon-ban-circle" title="no"></i></td>
 </tr>
 <tr>
-    <td><a href="/databasePostgreSql.html">PostgreSQL stored procedures</a></td>
+    <td><a href="/documentation/database/databasePostgreSql.html">PostgreSQL stored procedures</a></td>
     <td><i class="icon-ok" title="yes"></i></td>
     <td><i class="icon-ban-circle" title="no"></i><sup>2</sup></td>
     <td><i class="icon-ok" title="yes"></i></td>
@@ -561,10 +576,12 @@ tab: home
     <td><i class="icon-ban-circle" title="no"></i></td>
 </tr>
 <tr>
-    <td><h3>Other</h3></td><td></td><td colspan="8"></td>
+    <td><h3>Other</h3></td>
+    <td></td>
+    <td colspan="8"></td>
 </tr>
 <tr>
-    <td>Auto creation of metadata table</td>
+    <td><a href="/documentation/maven/mavenInit.html">Auto creation of metadata table</a></td>
     <td><i class="icon-ok" title="yes"></i></td>
     <td><i class="icon-ok" title="yes"></i></td>
     <td><i class="icon-ok" title="yes"></i></td>
@@ -573,22 +590,10 @@ tab: home
     <td><i class="icon-ban-circle" title="no"></i></td>
     <td><i class="icon-ban-circle" title="no"></i></td>
     <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-</tr>
-<tr>
-    <td>Cluster-safe</td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
     <td><i class="icon-ok" title="yes"></i></td>
 </tr>
 <tr>
-    <td>Checksum validation</td>
+    <td><a href="/documentation/faq.html#Can_multiple_nodes_migrate_in_parallel?">Cluster-safe</a></td>
     <td><i class="icon-ok" title="yes"></i></td>
     <td><i class="icon-ok" title="yes"></i></td>
     <td><i class="icon-ban-circle" title="no"></i></td>
@@ -596,25 +601,13 @@ tab: home
     <td><i class="icon-ban-circle" title="no"></i></td>
     <td><i class="icon-ban-circle" title="no"></i></td>
     <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
     <td><i class="icon-ban-circle" title="no"></i></td>
+    <td><i class="icon-ok" title="yes"></i></td>
 </tr>
 <tr>
-    <td>Placeholder replacement</td>
+    <td><a href="/documentation/maven/mavenValidate.html">Checksum validation</a></td>
     <td><i class="icon-ok" title="yes"></i></td>
     <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-</tr>
-<tr>
-    <td>Multiple schema support</td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
     <td><i class="icon-ban-circle" title="no"></i></td>
     <td><i class="icon-ban-circle" title="no"></i></td>
     <td><i class="icon-ban-circle" title="no"></i></td>
@@ -624,7 +617,31 @@ tab: home
     <td><i class="icon-ban-circle" title="no"></i></td>
 </tr>
 <tr>
-    <td>Clean existing schema</td>
+    <td><a href="/documentation/faq.html#Does_Flyway_support_placeholder_replacement?">Placeholder replacement</a></td>
+    <td><i class="icon-ok" title="yes"></i></td>
+    <td><i class="icon-ok" title="yes"></i></td>
+    <td><i class="icon-ban-circle" title="no"></i></td>
+    <td><i class="icon-ok" title="yes"></i></td>
+    <td><i class="icon-ban-circle" title="no"></i></td>
+    <td><i class="icon-ban-circle" title="no"></i></td>
+    <td><i class="icon-ban-circle" title="no"></i></td>
+    <td><i class="icon-ban-circle" title="no"></i></td>
+    <td><i class="icon-ban-circle" title="no"></i></td>
+</tr>
+<tr>
+    <td><a href="/documentation/faq.html#Does_Flyway_support_multiple_schemas?">Multiple schema support</a></td>
+    <td><i class="icon-ok" title="yes"></i></td>
+    <td><i class="icon-ban-circle" title="no"></i></td>
+    <td><i class="icon-ban-circle" title="no"></i></td>
+    <td><i class="icon-ban-circle" title="no"></i></td>
+    <td><i class="icon-ban-circle" title="no"></i></td>
+    <td><i class="icon-ban-circle" title="no"></i></td>
+    <td><i class="icon-ban-circle" title="no"></i></td>
+    <td><i class="icon-ok" title="yes"></i></td>
+    <td><i class="icon-ban-circle" title="no"></i></td>
+</tr>
+<tr>
+    <td><a href="/documentation/maven/mavenClean.html">Clean existing schema</a></td>
     <td><i class="icon-ok" title="yes"></i></td>
     <td><i class="icon-ban-circle" title="no"></i></td>
     <td><i class="icon-ban-circle" title="no"></i></td>
@@ -672,9 +689,9 @@ tab: home
     <div class="marketing-section-sub">Pick any of these to learn more.</div>
 
     <p>
-        <a class="btn btn-primary btn-large" href="/getstarted/whyDatabaseMigrations.html">Why database migrations?</a>
-        <a class="btn btn-large" href="/getstarted/howFlywayWorks.html">How does Flyway work?</a>
-        <a class="btn btn-large" href="/getstarted/gettingStarted.html">Getting started</a>
-        <a class="btn btn-large" href="/faq.html">Frequently Asked Questions</a>
+        <a class="btn btn-primary btn-large" href="/getStarted/whyDatabaseMigrations.html">Why database migrations?</a>
+        <a class="btn btn-large" href="/getStarted/howFlywayWorks.html">How does Flyway work?</a>
+        <a class="btn btn-large" href="/getStarted/firstSteps.html">Getting started</a>
+        <a class="btn btn-large" href="/documentation/faq.html">Frequently Asked Questions</a>
     </p>
 </div>

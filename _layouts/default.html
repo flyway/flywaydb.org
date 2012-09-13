@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>{% if page.title %} {{ page.title }} - {% endif %}Flyway: the agile datbase migration framework for
+    <title>{% if page.subtitle %} {{ page.subtitle }} - {% endif %}{% if page.title %} {{ page.title }} - {% endif %}Flyway: the agile database migration framework for
         Java</title>
     <link href="/assets/bootstrap-2.1.0/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     <link href="/assets/prettify-20110601/prettify.css" rel="stylesheet" type="text/css"/>
@@ -35,15 +35,19 @@
             <a href="/"><img src="/assets/logo/flyway-logo-transparent-100.png"></a>
         </div>
         <div class="span10">
-            <ul class="nav nav-tabs ">
+            <ul id="tabs" class="nav nav-tabs ">
                 <li {% if page.tab == 'home' %} class="active" {% endif %}>
                     <a href="/"><i class="icon-home"></i> HOME</a>
                 </li>
-                <li {% if page.tab == 'getstarted' %} class="active" {% endif %}><a href="/getstarted"><i class="icon-play"></i> GET STARTED</a></li>
-                <li {% if page.tab == 'documentation' %} class="active" {% endif %}><a href="/getstarted/index.html"><i class="icon-book"></i> DOCUMENTATION</a></li>
-                <li {% if page.tab == 'download' %} class="active" {% endif %}><a href="http://code.google.com/p/flyway/downloads/list"><i class="icon-download"></i> DOWNLOAD</a></li>
-                <li {% if page.tab == 'contribute' %} class="active" {% endif %}><a href="/howToContribute.html"><i class="icon-leaf"></i> CONTRIBUTE</a></li>
-                <li {% if page.tab == 'support' %} class="active" {% endif %}><a href="/faq.html"><i class="icon-question-sign"></i> SUPPORT</a></li>
+                <li {% if page.tab == 'getStarted' %} class="active" {% endif %}><a href="/getStarted"><i class="icon-play"></i> GET STARTED</a></li>
+                <li {% if page.tab == 'documentation' %} class="active" {% endif %}><a href="/documentation/migration"><i class="icon-bookmark"></i> DOCUMENTATION</a></li>
+                <!--
+                <li {% if page.tab == 'support' %} class="active" {% endif %}><a href="/documentation/faq.html"><i class="icon-question-sign"></i> SUPPORT</a></li>
+                -->
+                <li {% if page.tab == 'contribute' %} class="active" {% endif %}><a href="/contribute/howToContribute.html"><i class="icon-leaf"></i> CONTRIBUTE</a></li>
+                <!--
+                <li {% if page.tab == 'about' %} class="active" {% endif %}><a href="http://code.google.com/p/flyway/downloads/list"><i class="icon-download"></i> ABOUT</a></li>
+                -->
             </ul>
         </div>
     </div>
@@ -62,8 +66,10 @@
             Icons from <a href="http://glyphicons.com/">Glyphicons Free</a>,
             licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>
             <br/>
+            <!--
             Background pattern from <a href="http://subtlepatterns.com">Subtle Patterns</a>,
             licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>
+            -->
         </p>
     </div>
 </div>

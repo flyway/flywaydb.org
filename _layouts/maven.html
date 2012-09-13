@@ -1,0 +1,32 @@
+---
+layout: documentation
+menu: maven
+---
+<div>
+    <ul class="nav nav-pills">
+        <li
+        {% if page.pill == 'overview' %} class="active" {% endif %}>
+        <a href="/documentation/maven">Overview</a></li>
+        <li
+        {% if page.pill == 'clean' %} class="active" {% endif %}>
+        <a href="/documentation/maven/mavenClean.html">clean</a></li>
+        <li
+        {% if page.pill == 'init' %} class="active" {% endif %}>
+        <a href="/documentation/maven/mavenInit.html">init</a></li>
+        <li
+        {% if page.pill == 'migrate' %} class="active" {% endif %}>
+        <a href="/documentation/maven/mavenMigrate.html">migrate</a></li>
+        <li
+        {% if page.pill == 'validate' %} class="active" {% endif %}>
+        <a href="/documentation/maven/mavenValidate.html">validate</a></li>
+        <li
+        {% if page.pill == 'status' %} class="active" {% endif %}>
+        <a href="/documentation/maven/mavenStatus.html">status</a></li>
+        <li
+        {% if page.pill == 'history' %} class="active" {% endif %}>
+        <a href="/documentation/maven/mavenHistory.html">history</a></li>
+    </ul>
+    
+    {{ content }}
+
+</div>
