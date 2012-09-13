@@ -6,21 +6,21 @@ subtitle: Release Notes
 <div id="releaseNotes">
 <h1>Release Notes</h1>
 
-<h2>Thank you all for reporting all these issues and fixes!</h2>
+<p>Thank you all for reporting all these issues and fixes!</p>
 
 <div class="release">
     <h3>Unreleased Version</h3>
     <h4>New Features</h4>
     <ul>
         <li><a href="http://code.google.com/p/flyway/issues/detail?id=99">Issue 99</a> New
-            Flyway.repair() call for repairing the metadata table after a failed migration on a database without DDL
+            <code>Flyway.repair()</code> call for repairing the metadata table after a failed migration on a database without DDL
             transaction support.
         </li>
-        <li><a href="http://code.google.com/p/flyway/issues/detail?id=105">Issue 105</a> initOnMigrate
+        <li><a href="http://code.google.com/p/flyway/issues/detail?id=105">Issue 105</a> <code>initOnMigrate</code>
             flag to automatically initialize a non-empty schema to initialVersion.
         </li>
         <li><a href="http://code.google.com/p/flyway/issues/detail?id=248">Issue 248</a> New
-            Flyway.info() call for info about both applied and pending migrations and current status of the DB.
+            <code>Flyway.info()</code> call for info about both applied and pending migrations and current status of the DB.
         </li>
     </ul>
     <h4>Changes</h4>
@@ -28,29 +28,25 @@ subtitle: Release Notes
         <li><a href="http://code.google.com/p/flyway/issues/detail?id=290">Issue 290</a> Commons-Logging
             Dependency is now optional.
         </li>
-        <li>Deprecated Flyway.status(). Use Flyway.info() instead.</li>
-        <li>Deprecated Flyway.history(). Use Flyway.info() instead.</li>
-        <li>Deprecated validationMode. Use validateOnMigrate instead.</li>
-        <li>Deprecated validationErrorMode. Use cleanOnValidationError instead.</li>
-        <li>Deprecated disableInitCheck. Use initOnMigrate instead.</li>
-        <li>Core: Deprecated Flyway.setInitialVersion(SchemaVersion). Use
-            Flyway.setInitialVersion(MigrationVersion) instead.
+        <li>Deprecated <code><del>Flyway.status()</del></code>. Use <code>Flyway.info()</code> instead.</li>
+        <li>Deprecated <code><del>Flyway.history()</del></code>. Use <code>Flyway.info()</code> instead.</li>
+        <li>Deprecated <code><del>validationMode</del></code>. Use <code>validateOnMigrate</code> instead.</li>
+        <li>Deprecated <code><del>validationErrorMode</del></code>. Use <code>cleanOnValidationError</code> instead.</li>
+        <li>Deprecated <code><del>disableInitCheck</del></code>. Use <code>initOnMigrate</code> instead.</li>
+        <li>Core: Deprecated <code><del>Flyway.setInitialVersion(SchemaVersion)</code>. Use
+            <code>Flyway.setInitialVersion(MigrationVersion)</code> instead.
         </li>
-        <li>Core: Deprecated Flyway.setTarget(SchemaVersion). Use
-            Flyway.setTarget(MigrationVersion) instead.
+        <li>Core: Deprecated <code><del>Flyway.setTarget(SchemaVersion)</code>. Use
+            <code>Flyway.setTarget(MigrationVersion)</code> instead.
         </li>
-        <li>Core: <strong>Incompatible change:</strong> MigrationInfoProvider.getVersion() now returns an instance of
-            MigrationVersion.
-        </li>
-        <li>Core: Version has been renamed to MigrationVersion for
-            consistency.
+        <li>Core: <strong>Incompatible change:</strong> <code><del>Version</del></code> has been renamed to <code>MigrationVersion</code> for consistency.</li>
+        <li>Core: <strong>Incompatible change:</strong> <code>MigrationInfoProvider.getVersion()</code> now returns an instance of
+            <code>MigrationVersion</code>.
         </li>
         <li>Command-line: Distribution without Spring no longer contains logging jars</li>
         <li>Ant: Distribution without Spring no longer contains logging jars</li>
-        <li>HsqlDb: Flyway is now tested against HsqlDb 2.2.6 (was 1.8.0.10). Still compatible with HsqlDb 1.8.
-        </li>
-        <li>HsqlDb: Concurrent migration support for HsqlDb 2.0 and newer.
-        </li>
+        <li>HsqlDb: Flyway is now tested against HsqlDb 2.2.6 (was 1.8.0.10). Still compatible with HsqlDb 1.8.</li>
+        <li>HsqlDb: Concurrent migration support for HsqlDb 2.0 and newer.</li>
         <li>Oracle: To be compatible with SqlPlus, Flyway now always expects /
             to terminate a create type statement.
         </li>
@@ -369,7 +365,7 @@ subtitle: Release Notes
             cleanup sequences
         </li>
     </ul>
-    <p>Thanks to Seb Brousse, Christoph Giess, Jeremy Musicsmith, Jon Roler, cowwoc, donald87, Timo Meinen, Octavian,
+    <p>Thanks to Seb Brousse, Christoph Giess, Jeremy Smith, Jon Roler, cowwoc, donald87, Timo Meinen, Octavian,
         Dileep Hareendran, Kris Mulica, Ulf Bamberg, Luc Degraef and casibbald for contributing patches and reporting
         these issues.</p>
 </div>
