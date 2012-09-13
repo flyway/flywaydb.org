@@ -1,0 +1,64 @@
+---
+layout: getStarted
+menu: existingDatabaseSetup
+subtitle: Existing Database Setup
+---
+<div id="databaseSetupExisting">
+    <h1><a name="Existing_database_setup"></a>Existing database setup<a href="#Existing_database_setup"
+                                                                        class="section_anchor"></a></h1>
+
+    <p>These are the steps to follow to successfully integrate Flyway in a project with an existing database. </p>
+
+    <h3><a name="Take_a_DDL_and_reference_data_extract_from_production"></a>Take a DDL and reference data extract from
+        production<a href="#Take_a_DDL_and_reference_data_extract_from_production" class="section_anchor"></a></h3>
+
+    <p>First start by taking a snapshot of your most important database: production. This will be the starting point for
+        migrations. </p>
+
+    <p>Generate a sql script that includes the entire DDL (including indexes, triggers, procedures, ...) of the
+        production database. To do this you will need to add insert statements for all the reference data present in the
+        database. </p>
+
+    <p>This script will form your base migration. Save it on the classpath in the directory you configured with baseDir.
+        Give it a relevant version number and description such as V1__Base_version.sql.
+    </p>
+
+    <h3><a name="Clean_all_other_databases_containing_data_you_don&#x27;t_mind_lo"></a>Clean all other databases
+        containing data you don&#x27;t mind losing<a
+                href="#Clean_all_other_databases_containing_data_you_don&#x27;t_mind_lo" class="section_anchor"></a>
+    </h3>
+
+    <p>Now comes the point where we have to make sure that the migrations meant for production will work
+        everywhere. </p>
+
+    <p>For all databases with unimportant data you don&#x27;t mind losing, perform </p>
+    <pre class="prettyprint">mvn flyway:clean</pre>
+    <p>to completely remove their contents. </p>
+
+    <h3><a name="Align_the_remaining_databases_with_production"></a>Align the remaining databases with production<a
+            href="#Align_the_remaining_databases_with_production" class="section_anchor"></a></h3>
+
+    <p>Check all remaining databases. You must make sure that their structure (DDL) and reference data matches
+        production exactly. This step is important, as all scripts destined for production will be applied here first.
+        For the scripts to succeed, the objects they migrate must be identical to what is present in production. </p>
+
+    <h3><a name="Give_production_and_the_remaining_databases_with_data_a_version"></a>Give production and the remaining
+        databases with data a version<a href="#Give_production_and_the_remaining_databases_with_data_a_version"
+                                        class="section_anchor"></a></h3>
+
+    <p>Now comes the time to initializes the databases that contain data (including production) with an initial version
+        number. Use the same version number and description you used for the production extract script created
+        above. </p>
+
+    <p>You can accomplish it like this: </p>
+    <pre class="prettyprint">mvn flyway:init -Dflyway.initialVersion=1 -Dflyway.initialDescription=&quot;Base version&quot;</pre>
+    <p>You must perform this step for each database that hasn&#x27;t been cleaned. </p>
+
+    <h3><a name="Done_!"></a>Done !<a href="#Done_!" class="section_anchor"></a></h3>
+
+    <p>Congratulations ! You are now ready. </p>
+
+    <p>If you execute your application with <a href="/documentation/api.html">Flyway integrated</a>, the
+        empty databases will be migrated to the state of production and the others will be left as is.<br/> As soon
+        as you add a new migration, it will be applied identically to all databases. </p>
+</div>

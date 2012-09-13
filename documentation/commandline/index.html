@@ -1,0 +1,89 @@
+---
+layout: commandLine
+pill: overview
+subtitle: Command Line
+---
+<div id="commandLine">
+    <h1><a name="Command-line_tool"></a>Command-line tool<a href="#Command-line_tool" class="section_anchor"></a></h1>
+
+    <p>The Flyway command-line tool is meant for users who
+    <ul>
+        <li>do not run their applications on the JVM</li>
+        <li>wish to migration their database from the command-line without having to install Maven or Ant</li>
+    </ul>
+    </p><p><br/></p>
+
+    <h2><a name="Usage"></a>Usage<a href="#Usage" class="section_anchor"></a></h2>
+
+    <p><strong>Windows</strong></p>
+    <pre class="prettyprint">flyway.cmd [options] command</pre>
+    <p><strong>Linux / OSX</strong></p>
+    <pre class="prettyprint">flyway.sh [options] command</pre>
+    <p><br/></p>
+
+    <h2><a name="Commands"></a>Commands<a href="#Commands" class="section_anchor"></a></h2>
+
+    <p>
+    <table class="wikitable">
+        <tr>
+            <td style="border: 1px solid #ccc; padding: 5px;"><strong>Name</strong></td>
+            <td style="border: 1px solid #ccc; padding: 5px;"><strong>Description</strong></td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ccc; padding: 5px;"><a href="/documentation/commandLine/commandLineClean.html">clean</a></td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> Drops all objects in the schema without dropping the
+                schema itself
+            </td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ccc; padding: 5px;"><a href="/documentation/commandLine/commandLineInit.html">init</a></td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> Creates and initializes the metadata table in the
+                schema
+            </td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ccc; padding: 5px;"><a href="/documentation/commandLine/commandLineMigrate.html">migrate</a>
+            </td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> Migrates the schema to the latest version</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ccc; padding: 5px;"><a href="/documentation/commandLine/commandLineValidate.html">validate</a>
+            </td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> Validates the applied migrations against the ones
+                available on the classpath
+            </td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ccc; padding: 5px;"><a href="/documentation/commandLine/commandLineStatus.html">status</a></td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> Prints the current version of the schema</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ccc; padding: 5px;"><a href="/documentation/commandLine/commandLineHistory.html">history</a>
+            </td>
+            <td style="border: 1px solid #ccc; padding: 5px;"> Prints the full migration history of the schema</td>
+        </tr>
+    </table>
+    </p><p><br/></p>
+
+    <h2><a name="Options_and_configuration_file"></a>Options and configuration file<a
+            href="#Options_and_configuration_file" class="section_anchor"></a></h2>
+
+    <p>By default, the configuration will be read from conf/flyway.properties. Options passed from the command-line
+        override the configuration. </p>
+
+    <p>
+    <table class="wikitable">
+        <tr>
+            <td style="border: 1px solid #ccc; padding: 5px;"><strong>Tip:</strong><br/>To use an alternative
+                configuration file use -configFile=myAlternativeConfig.properties<br/>To use an alternative
+                configuration file encoding (default: UTF-8) use -configFileEncoding=ISO-8859-1
+            </td>
+        </tr>
+    </table>
+    </p><p><br/></p>
+
+    <h2><a name="Directory_structure"></a>Directory structure<a href="#Directory_structure" class="section_anchor"></a>
+    </h2>
+
+    <p><img src="/assets/balsamiq/CommandLineDirectoryStructure.png"/></p>
+</div>
