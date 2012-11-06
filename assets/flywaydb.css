@@ -194,3 +194,7 @@ a.stackoverflow-tag:hover {
     border-right: 1px solid #37607D;
     text-decoration: none;
 }
+
+h2 {
+    font-size: 24px;
+}

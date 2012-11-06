@@ -4,18 +4,16 @@ pill: sql
 subtitle: SQL Migrations
 ---
 <div id="sqlMigrations">
-    <h1><a name="Sql-based_migrations"></a>Sql-based migrations<a href="#Sql-based_migrations"
-                                                                  class="section_anchor"></a></h1>
+    <h1>Sql-based migrations</h1>
 
-    <h2><a name="Typical_usage"></a>Typical usage<a href="#Typical_usage" class="section_anchor"></a></h2>
+    <h2>Typical usage</h2>
     <ul>
         <li>DDL changes (CREATE/ALTER/DROP statements for TABLES,VIEWS,TRIGGERS,SEQUENCES,...)</li>
         <li>Simple reference data changes (CRUD in reference data tables)</li>
         <li>Simple bulk data changes (CRUD in regular data tables)</li>
     </ul>
-    <h2><a name="Location_and_discovery"></a>Location and discovery<a href="#Location_and_discovery"
-                                                                      class="section_anchor"></a></h2>
 
+    <h2>Location and discovery</h2>
     <p>Sql migrations reside on the classpath in one or more directories referenced by the <strong><a
             href="/documentation/javadoc/com/googlecode/flyway/core/Flyway.html#setLocations(java.lang.String...)"
            >locations</a></strong> property.<br/></p>
@@ -25,7 +23,7 @@ subtitle: SQL Migrations
     <p>New sql migrations are <strong>discovered automatically</strong> through classpath scanning at runtime. This
         scanning is recursive. All migrations in directories below the specified ones are also picked up. </p>
 
-    <h2><a name="Naming"></a>Naming<a href="#Naming" class="section_anchor"></a></h2>
+    <h2>Naming</h2>
 
     <p>In order to be picked by the classpath scanner, the sql migrations must follow a naming pattern: </p>
 
@@ -40,16 +38,18 @@ subtitle: SQL Migrations
         <li><strong>description</strong> (Optional, underscores or spaces separate the words)</li>
         <li><strong>suffix</strong> (Configurable, default: .sql)</li>
     </ul>
-    </p><h2><a name="Sql_Script_syntax"></a>Sql Script syntax<a href="#Sql_Script_syntax" class="section_anchor"></a>
-</h2>
+    </p>
+
+    <h2>Sql Script syntax</h2>
     <ul>
         <li>Single- or multi-line statements</li>
         <li>Flexible placeholder replacement</li>
         <li>Single- (--) or Multi-line (/<tt>*</tt> <tt>*</tt>/) comments spanning complete lines</li>
         <li><a href="/documentation/database/index.html">Database-specific SQL syntax extensions</a></li>
     </ul>
-    <h2><a name="Sample_Script"></a>Sample Script<a href="#Sample_Script" class="section_anchor"></a></h2><pre
-        class="prettyprint">/* Single line comment */
+
+    <h2>Sample Script</h2>
+    <pre class="prettyprint">/* Single line comment */
     CREATE TABLE test_user (
       name VARCHAR(25) NOT NULL,
       PRIMARY KEY(name)
