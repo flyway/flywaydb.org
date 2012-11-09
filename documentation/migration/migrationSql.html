@@ -14,9 +14,10 @@ subtitle: SQL Migrations
     </ul>
 
     <h2>Location and discovery</h2>
+
     <p>Sql migrations reside on the classpath in one or more directories referenced by the <strong><a
             href="/documentation/javadoc/com/googlecode/flyway/core/Flyway.html#setLocations(java.lang.String...)"
-           >locations</a></strong> property.<br/></p>
+            >locations</a></strong> property.<br/></p>
 
     <p><img src="/assets/balsamiq/SqlMigrationBaseDir.png"/></p>
 
@@ -50,16 +51,16 @@ subtitle: SQL Migrations
 
     <h2>Sample Script</h2>
     <pre class="prettyprint">/* Single line comment */
-    CREATE TABLE test_user (
-      name VARCHAR(25) NOT NULL,
-      PRIMARY KEY(name)
-    );
+CREATE TABLE test_user (
+  name VARCHAR(25) NOT NULL,
+  PRIMARY KEY(name)
+);
 
-    /*
-    Multi-line
-    comment
-    */
+/*
+Multi-line
+comment
+*/
 
-    -- Placeholder
-    INSERT INTO ${tableName} (name) VALUES (&#x27;Mr. T&#x27;);</pre>
+-- Placeholder
+INSERT INTO ${tableName} (name) VALUES ('Mr. T');</pre>
 </div>
