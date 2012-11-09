@@ -81,8 +81,20 @@ subtitle: Release Notes
     </ul>
     <h4>Bug fixes</h4>
     <ul>
+        <li>
+            <a href="http://code.google.com/p/flyway/issues/detail?id=145">Issue 145</a>
+            SQL Scripts with wrong description separator fail due to DB constraints
+        </li>
+        <li>
+            <a href="http://code.google.com/p/flyway/issues/detail?id=183">Issue 183</a>
+            Calculation of checksum is platform encoding dependent.
+        </li>
         <li><a href="http://code.google.com/p/flyway/issues/detail?id=199">Issue 199</a> Trimming of
             whitespaces in SQL migrations breaks stored procedures formatting.
+        </li>
+        <li>
+            <a href="http://code.google.com/p/flyway/issues/detail?id=218">Issue 218</a>
+            createMetaDataTable.sql doesn't escape schema, table and field names
         </li>
         <li><a href="http://code.google.com/p/flyway/issues/detail?id=228">Issue 228</a> Oracle - SQL
             hints
@@ -92,6 +104,10 @@ subtitle: Release Notes
         </li>
         <li><a href="http://code.google.com/p/flyway/issues/detail?id=240">Issue 240</a> Empty lines are
             stripped from multi-line string inserts
+        </li>
+        <li>
+            <a href="http://code.google.com/p/flyway/issues/detail?id=276">Issue 276</a>
+            Older DB2 versions limit the length of constraint names causing schema_version creation to fail
         </li>
         <li><a href="http://code.google.com/p/flyway/issues/detail?id=285">Issue 285</a>
             OracleSqlScript does not support delimiter for TYPE(s) in
@@ -144,15 +160,20 @@ subtitle: Release Notes
             Oracle clean schema fails to drop SYS_IOT_OVER tables
         </li>
         <li>
+            <a href="http://code.google.com/p/flyway/issues/detail?id=348">Issue 348</a>
+            ORA-00933 in case of schema name containing a dot symbol
+        </li>
+        <li>
             <a href="http://code.google.com/p/flyway/issues/detail?id=355">Issue 355</a>
             Flyway clean fails with Oracle nested tables
         </li>
         <li>Added JBoss VFS v2 support to enable deployment inside JBoss 5.</li>
     </ul>
     <p>
-        Thanks to Adam Peresztegi, Adriano Machado, alehby, Alix Warnke, Daniel Kan, Dmitry Bedrin, donald87, Emmanuel
-        Potvin, Geir Nerboe, Greg Bujak, Haam Tham, Jochen Munz, Kris Mulica, Luc Degraef, saran600101, Stefan Röck,
-        Stephen Friedrich, Steve Tarka, Tomek Kaczanowski and Vikram Hullukunte for reporting these issues.
+        Thanks to Adam Peresztegi, Adriano Machado, alehby, Alix Warnke, Brian Troutwine, Cornelius Buschka, Daniel Kan,
+        Dmitry Bedrin, donald87, Emmanuel Potvin, Geir Nerboe, Greg Bujak, Haam Tham, Jochen Munz, Klaus Etkar,
+        Kris Mulica, kwbrockhoff, Luc Degraef, Patrick van Dissel, saran600101, Stefan Röck, Stephen Friedrich,
+        Steve Tarka, Tomek Kaczanowski and Vikram Hullukunte for reporting these issues.
     </p>
 </div>
 
