@@ -50,13 +50,18 @@ subtitle: Release Notes
             <del>disableInitCheck</del>
         </code>. Use <code>initOnMigrate</code> instead.
         </li>
+        <li><strong>Incompatible change:</strong> Migrations now always require a description.</li>
+        <li><strong>Incompatible change:</strong> <code>schemas</code> is now case-sensitive.</li>
+        <li><strong>Incompatible change:</strong> When <code>schemas</code> is set, the first schema in the list is
+            automatically set as the default one. This was not the case previously.
+        </li>
         <li>Core: Deprecated <code>
-            <del>Flyway.setInitialVersion(SchemaVersion)
+            <del>Flyway.setInitialVersion(SchemaVersion)</del>
         </code>. Use
             <code>Flyway.setInitialVersion(MigrationVersion)</code> instead.
         </li>
         <li>Core: Deprecated <code>
-            <del>Flyway.setTarget(SchemaVersion)
+            <del>Flyway.setTarget(SchemaVersion)</del>
         </code>. Use
             <code>Flyway.setTarget(MigrationVersion)</code> instead.
         </li>
