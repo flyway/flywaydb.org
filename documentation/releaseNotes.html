@@ -25,16 +25,29 @@ subtitle: Release Notes
             DB.
         </li>
     </ul>
+    <h4>Incompatible Changes</h4>
+    <ul>
+        <li>Migrations now always require a description.</li>
+        <li>The name of the schemas specified with <code>schemas</code> are now case-sensitive.</li>
+        <li><a href="http://code.google.com/p/flyway/issues/detail?id=273">Issue 273</a> When <code>schemas</code> is
+            set, the first schema in the list is now automatically set as the default one.
+        </li>
+        <li>Core: <code>
+            <del>Version</del>
+        </code> has been renamed to <code>MigrationVersion</code> for consistency.
+        </li>
+        <li>Core: <code>Flyway.getInitialVersion()</code> now returns an instance of <code>MigrationVersion</code> (was <code>SchemaVersion</code>).</li>
+        <li>Core: <code>Flyway.getTarget()</code> now returns an instance of <code>MigrationVersion</code> (was <code>SchemaVersion</code>).</li>
+        <li>Core: <code>MigrationInfoProvider.getVersion()</code> now returns an
+            instance of
+            <code>MigrationVersion</code>.
+        </li>
+
+    </ul>
     <h4>Changes</h4>
     <ul>
         <li><a href="http://code.google.com/p/flyway/issues/detail?id=290">Issue 290</a> Commons-Logging
             Dependency is now optional.
-        </li>
-        <li><strong>Incompatible change:</strong> Migrations now always require a description.</li>
-        <li><strong>Incompatible change:</strong> <code>schemas</code> is now case-sensitive.</li>
-        <li><a href="http://code.google.com/p/flyway/issues/detail?id=273">Issue 273</a> <strong>Incompatible
-            change:</strong> When <code>schemas</code> is set, the first schema in the list is
-            automatically set as the default one. This was not the case previously.
         </li>
         <li>Deprecated <code>
             <del>Flyway.status()</del>
@@ -55,14 +68,6 @@ subtitle: Release Notes
         <li>Deprecated <code>
             <del>disableInitCheck</del>
         </code>. Use <code>initOnMigrate</code> instead.
-        </li>
-        <li>Core: <strong>Incompatible change:</strong> <code>
-            <del>Version</del>
-        </code> has been renamed to <code>MigrationVersion</code> for consistency.
-        </li>
-        <li>Core: <strong>Incompatible change:</strong> <code>MigrationInfoProvider.getVersion()</code> now returns an
-            instance of
-            <code>MigrationVersion</code>.
         </li>
         <li>Core: Deprecated <code>
             <del>com.googlecode.flyway.core.exception.FlywayException</del>
