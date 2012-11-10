@@ -14,87 +14,95 @@ subtitle: 'mvn flyway:status'
     <h2><a name="Configuration"></a>Configuration<a href="#Configuration" class="section_anchor"></a></h2>
 
     <p>
-    <table class="wikitable">
+    <table class="table table-bordered table-hover">
+        <thead>
         <tr>
-            <td style="border: 1px solid #ccc; padding: 5px;"><strong>Parameter</strong></td>
-            <td style="border: 1px solid #ccc; padding: 5px;"><strong>Maven / System Property</strong></td>
-            <td style="border: 1px solid #ccc; padding: 5px;"><strong>Required</strong></td>
-            <td style="border: 1px solid #ccc; padding: 5px;"><strong>Default Value</strong></td>
-            <td style="border: 1px solid #ccc; padding: 5px;"><strong>Description</strong></td>
+            <th>Parameter</th>
+            <th>Maven/System Property</th>
+            <th>Required</th>
+            <th>Default Value</th>
+            <th>Description</th>
         </tr>
+        </thead>
+        <tbody>
         <tr>
-            <td style="border: 1px solid #ccc; padding: 5px;"> driver</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> flyway.driver</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> YES</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"></td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> The fully qualified classname of the jdbc driver to use
+            <td>driver</td>
+            <td>flyway.driver</td>
+            <td>YES</td>
+            <td></td>
+            <td>The fully qualified classname of the jdbc driver to use
                 to connect to the database
             </td>
         </tr>
         <tr>
-            <td style="border: 1px solid #ccc; padding: 5px;"> url</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> flyway.url</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> YES</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"></td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> The jdbc url to use to connect to the database</td>
+            <td>url</td>
+            <td>flyway.url</td>
+            <td>YES</td>
+            <td></td>
+            <td>The jdbc url to use to connect to the database</td>
         </tr>
         <tr>
-            <td style="border: 1px solid #ccc; padding: 5px;"> serverId</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> flyway.serverId</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> NO</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> flyway-db</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> The id of the server in the Maven settings.xml file to
+            <td>serverId</td>
+            <td>flyway.serverId</td>
+            <td>NO</td>
+            <td>flyway-db</td>
+            <td>The id of the server in the Maven settings.xml file to
                 load the credentials from.<br/><br/>This is an alternative to passing the credentials in
                 directly through properties.
             </td>
         </tr>
         <tr>
-            <td style="border: 1px solid #ccc; padding: 5px;"> user</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> flyway.user</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> NO</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"></td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> The user to use to connect to the
+            <td>user</td>
+            <td>flyway.user</td>
+            <td>NO</td>
+            <td></td>
+            <td>The user to use to connect to the
                 database.<br/><br/>Required if the credentials are not loaded through the serverId from the
                 Maven settings.xml
             </td>
         </tr>
         <tr>
-            <td style="border: 1px solid #ccc; padding: 5px;"> password</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> flyway.password</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> NO</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"><i>blank</i></td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> The password to use to connect to the database</td>
+            <td>password</td>
+            <td>flyway.password</td>
+            <td>NO</td>
+            <td><i>blank</i></td>
+            <td>The password to use to connect to the database</td>
         </tr>
         <tr>
-            <td style="border: 1px solid #ccc; padding: 5px;"> schemas</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> flyway.schemas</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> NO</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"><i>default schema of the connection</i></td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> Comma-separated list of schemas managed by Flyway. The
+            <td>schemas</td>
+            <td>flyway.schemas</td>
+            <td>NO</td>
+            <td><i>default schema of the connection</i></td>
+            <td>Comma-separated list of schemas managed by Flyway. The
                 first schema in the list will be the one containing the metadata table
             </td>
         </tr>
         <tr>
-            <td style="border: 1px solid #ccc; padding: 5px;"> table</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> flyway.table</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> NO</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> schema_version</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> The name of Flyway&#x27;s metadata table.<br/>By
+            <td>table</td>
+            <td>flyway.table</td>
+            <td>NO</td>
+            <td>schema_version</td>
+            <td>The name of Flyway&#x27;s metadata table.<br/>By
                 default (single-schema mode) the metadata table is placed in the default schema for the connection
                 provided by the datasource.<br/>When the <i>flyway.schemas</i> property is set (multi-schema mode),
                 the metadata table is placed in the first schema of the list.
             </td>
         </tr>
+        </tbody>
     </table>
     </p><h2><a name="Sample_configuration"></a>Sample configuration<a href="#Sample_configuration"
                                                                       class="section_anchor"></a></h2><pre
         class="prettyprint">&lt;configuration&gt;
-   &lt;driver&gt;org.hsqldb.jdbcDriver&lt;/driver&gt;
-   &lt;url&gt;jdbc:hsqldb:file:${project.build.directory}/db/flyway_sample;shutdown=true&lt;/url&gt;
-   &lt;user&gt;SA&lt;/user&gt;
-   &lt;password&gt;mySecretPwd&lt;/password&gt;
-   &lt;schemas&gt;schema1,schema2,schema3&lt;/schemas&gt;
-   &lt;table&gt;schema_history&lt;/table&gt;
+    &lt;driver&gt;org.hsqldb.jdbcDriver&lt;/driver&gt;
+    &lt;url&gt;jdbc:hsqldb:file:${project.build.directory}/db/flyway_sample;shutdown=true&lt;/url&gt;
+    &lt;user&gt;SA&lt;/user&gt;
+    &lt;password&gt;mySecretPwd&lt;/password&gt;
+    &lt;schemas&gt;
+        &lt;schema&gt;schema1&lt;/schema&gt;
+        &lt;schema&gt;schema2&lt;/schema&gt;
+        &lt;schema&gt;schema3&lt;/schema&gt;
+    &lt;/schemas&gt;
+    &lt;table&gt;schema_history&lt;/table&gt;
 &lt;/configuration&gt;</pre>
     <h2><a name="Sample_output"></a>Sample output<a href="#Sample_output" class="section_anchor"></a></h2>
 
