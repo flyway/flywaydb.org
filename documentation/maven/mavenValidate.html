@@ -75,13 +75,15 @@ subtitle: 'mvn flyway:validate'
         </tr>
         <tr>
             <td>schemas</td>
-            <td>flyway.schemas</td>
+            <td>flyway.schemas<br/><i>(comma-separated)</i></td>
             <td>NO</td>
             <td><i>default schema of the connection</i></td>
-            <td>Comma-separated list of schemas managed by Flyway. The
-                first schema in the list will be the one containing the metadata table
+            <td>List of schemas managed by Flyway. The first schema in
+                the list will be automatically set as the default one during
+                the migration. It will also be the one containing the metadata table. These schema names are
+                case-sensitive.
             </td>
-        </tr>
+         </tr>
         <tr>
             <td>table</td>
             <td>flyway.table</td>

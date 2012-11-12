@@ -17,8 +17,13 @@ subtitle: Release Notes
             without DDL
             transaction support.
         </li>
-        <li><a href="http://code.google.com/p/flyway/issues/detail?id=105">Issue 105</a> <code>initOnMigrate</code>
-            flag to automatically initialize a non-empty schema to initialVersion.
+        <li>
+            <a href="http://code.google.com/p/flyway/issues/detail?id=105">Issue 105</a>
+            <code>initOnMigrate</code> flag to automatically initialize a non-empty schema to initialVersion.
+        </li>
+        <li>
+            <a href="http://code.google.com/p/flyway/issues/detail?id=138">Issue 138</a>
+            <code>outOfOrder</code> flag for applying migrations with older version numbers that haven't been applied yet
         </li>
         <li><a href="http://code.google.com/p/flyway/issues/detail?id=248">Issue 248</a> New
             <code>Flyway.info()</code> call for info about both applied and pending migrations and current status of the
@@ -36,13 +41,17 @@ subtitle: Release Notes
             <del>Version</del>
         </code> has been renamed to <code>MigrationVersion</code> for consistency.
         </li>
-        <li>Core: <code>Flyway.getInitialVersion()</code> now returns an instance of <code>MigrationVersion</code> (was <code>SchemaVersion</code>).</li>
-        <li>Core: <code>Flyway.getTarget()</code> now returns an instance of <code>MigrationVersion</code> (was <code>SchemaVersion</code>).</li>
+        <li>Core: <code>Flyway.getInitialVersion()</code> now returns an instance of <code>MigrationVersion</code> (was
+            <code>SchemaVersion</code>).
+        </li>
+        <li>Core: <code>Flyway.getTarget()</code> now returns an instance of <code>MigrationVersion</code> (was <code>SchemaVersion</code>).
+        </li>
         <li>Core: <code>MigrationInfoProvider.getVersion()</code> now returns an
             instance of
             <code>MigrationVersion</code>.
         </li>
-        <li>Maven: <code>schemas</code> is now a nested configuration element instead of a simply configuration property</li>
+        <li>Maven: <code>schemas</code> is now a nested configuration element instead of a simply configuration property
+        </li>
     </ul>
     <h4>Changes</h4>
     <ul>
@@ -187,8 +196,8 @@ subtitle: Release Notes
     </ul>
     <p>
         Thanks to Adam Peresztegi, Adriano Machado, alehby, Alix Warnke, Anssi Huusko, Brian Troutwine, Cornelius
-        Buschka, Daniel Kan, Dmitry Bedrin, donald87, Emmanuel Potvin, Geir Nerboe, Greg Bujak, Haam Tham, Jochen Munz,
-        Klaus Etkar, Kris Mulica, kwbrockhoff, Luc Degraef, Patrick van Dissel, saran600101, Stefan Röck,
+        Buschka, Daniel Kan, Dmitry Bedrin, donald87, Emmanuel Potvin, Geir Nerboe, Gilman Tolle, Greg Bujak, Haam Tham,
+        Jochen Munz, Klaus Etkar, Kris Mulica, kwbrockhoff, Luc Degraef, Patrick van Dissel, saran600101, Stefan Röck,
         Stephen Friedrich, Steve Tarka, Tomek Kaczanowski and Vikram Hullukunte for reporting these issues.
     </p>
 </div>
