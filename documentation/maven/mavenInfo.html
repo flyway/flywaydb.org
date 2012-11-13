@@ -1,21 +1,14 @@
 ---
 layout: maven
-pill: validate
-subtitle: 'mvn flyway:validate'
+pill: info
+subtitle: 'mvn flyway:info'
 ---
-<div id="mavenGoalValidate">
-    <h1>Maven Goal: Validate</h1>
+<div id="mavenGoalInfo">
+    <h1>Maven Goal: Info</h1>
+    <p>Prints the details and status information about all the migrations.</p>
 
-    <p>Validates the applied migrations against the ones available on the classpath.<br/>
-        The build fails if differences in
-        migration descriptions, types or checksums are found. </p>
-
-    <h2>Default Phase</h2>
-    <ul>
-        <li>pre-integration-test</li>
-    </ul>
     <h2>Usage</h2>
-    <pre class="prettyprint">mvn flyway:validate</pre>
+    <pre class="prettyprint">mvn flyway:info</pre>
 
     <h2>Configuration</h2>
     <table class="table table-bordered table-hover">
@@ -111,19 +104,43 @@ subtitle: 'mvn flyway:validate'
             <td>The encoding of Sql migrations</td>
         </tr>
         <tr>
-            <td>cleanOnValidationError</td>
+            <td>placeholders</td>
+            <td>NO</td>
+            <td></td>
+            <td>Placeholders to replace in Sql migrations</td>
+        </tr>
+        <tr>
+            <td>placeholderPrefix</td>
+            <td>NO</td>
+            <td>${</td>
+            <td>The prefix of every placeholder </td>
+        </tr>
+        <tr>
+            <td>placeholderSuffix</td>
+            <td>NO</td>
+            <td>}</td>
+            <td>The suffix of every placeholder</td>
+        </tr>
+        <tr>
+            <td>target</td>
+            <td>NO</td>
+            <td><i>latest version</i></td>
+            <td>The target version up to which Flyway should run
+                migrations. Migrations with a higher version number will not be applied.
+            </td>
+        </tr>
+        <tr>
+            <td>outOfOrder</td>
             <td>NO</td>
             <td>false</td>
-            <td>Whether to automatically call clean or not when a validation error occurs.<br/><br/>
-                This is exclusively intended as a convenience for development. Even tough we
-                strongly recommend not to change migration scripts once they have been checked into SCM and run, this
-                provides a way of dealing with this case in a smooth manner. The database will be wiped clean
-                automatically, ensuring that the next migration will bring you back to the state checked into
-                SCM.<br/><br/><strong>Warning ! Do not enable in production !</strong>
+            <td>Allows migrations to be run "out of order".
+                <p>If you already have versions 1 and 3 applied, and now a version 2 is found,
+                    it will be applied too instead of being ignored.</p>
             </td>
         </tr>
         </tbody>
     </table>
+
     <h2>Sample configuration</h2>
     <pre class="prettyprint">&lt;configuration&gt;
     &lt;driver&gt;org.hsqldb.jdbcDriver&lt;/driver&gt;
@@ -137,18 +154,32 @@ subtitle: 'mvn flyway:validate'
     &lt;/schemas&gt;
     &lt;table&gt;schema_history&lt;/table&gt;
     &lt;locations&gt;
-        &lt;location&gt;com.mycompany.project.migration&lt;/location&gt;
-        &lt;location&gt;database/migrations&lt;/location&gt;
+        &lt;location&gt;migrations1&lt;/location&gt;
+        &lt;location&gt;migrations2&lt;/location&gt;
     &lt;/locations&gt;
     &lt;sqlMigrationPrefix&gt;Migration-&lt;/sqlMigrationPrefix&gt;
     &lt;sqlMigrationSuffix&gt;-OK.sql&lt;/sqlMigrationSuffix&gt;
     &lt;encoding&gt;ISO-8859-1&lt;/encoding&gt;
-    &lt;cleanOnValidationError&gt;false&lt;/cleanOnValidationError&gt;
+    &lt;placeholders&gt;
+        &lt;aplaceholder&gt;value&lt;/aplaceholder&gt;
+        &lt;otherplaceholder&gt;value123&lt;/otherplaceholder&gt;
+    &lt;/placeholders&gt;
+    &lt;placeholderPrefix&gt;#[&lt;/placeholderPrefix&gt;
+    &lt;placeholderSuffix&gt;]&lt;/placeholderSuffix&gt;
+    &lt;target&gt;1.1&lt;/target&gt;
+    &lt;outOfOrder&gt;false&lt;/outOfOrder&gt;
 &lt;/configuration&gt;</pre>
 
     <h2>Sample output</h2>
-    <pre class="console">mvn flyway:validate
+    <pre class="console">mvn flyway:info
 
-[INFO] [flyway:validate {execution: default-cli}]
-[INFO] Validated 5 migrations (execution time 00:00.030s)</pre>
+[INFO] [flyway:info {execution: default-cli}]
+[INFO] +-------------+------------------------+---------------------+---------+
+[INFO] | Version     | Description            | Installed on        | State   |
+[INFO] +-------------+------------------------+---------------------+---------+
+[INFO] | 1           | Initial structure      | 2012-11-13 15:37:41 | Success |
+[INFO] | 1.1         | Populate table         | 2012-11-13 15:37:41 | Success |
+[INFO] | 1.2         | Another user           |                     | Pending |
+[INFO] | 1.3         | And his brother        |                     | Pending |
+[INFO] +-------------+------------------------+---------------------+---------+</pre>
 </div>

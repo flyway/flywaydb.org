@@ -4,33 +4,31 @@ pill: clean
 subtitle: 'mvn flyway:clean'
 ---
 <div id="mavenGoalClean">
-    <h1><a name="Maven_Goal:_Clean"></a>Maven Goal: Clean<a href="#Maven_Goal:_Clean" class="section_anchor"></a></h1>
+    <h1>Maven Goal: Clean</h1>
 
     <p>Drops all objects in the schema without dropping the schema itself. </p>
 
-    <h2><a name="Default_Phase"></a>Default Phase<a href="#Default_Phase" class="section_anchor"></a></h2>
+    <h2>Default Phase</h2>
     <ul>
         <li>pre-integration-test</li>
     </ul>
-    <h2><a name="Usage"></a>Usage<a href="#Usage" class="section_anchor"></a></h2>
-    <pre class="prettyprint">mvn flyway:clean</pre>
-    <h2><a name="Configuration"></a>Configuration<a href="#Configuration" class="section_anchor"></a></h2>
 
-    <p>
+    <h2>Usage</h2>
+    <pre class="prettyprint">mvn flyway:clean</pre>
+
+    <h2>Configuration</h2>
     <table class="table table-bordered table-hover">
         <thead>
         <tr>
-            <th><strong>Parameter</strong></th>
-            <th><strong>Maven/System Property</strong></th>
-            <th><strong>Required</strong></th>
-            <th><strong>Default Value</strong></th>
-            <th><strong>Description</strong></th>
+            <th>Parameter</th>
+            <th>Required</th>
+            <th>Default</th>
+            <th>Description</th>
         </tr>
         </thead>
         <tbody>
         <tr>
             <td>driver</td>
-            <td>flyway.driver</td>
             <td>YES</td>
             <td></td>
             <td>The fully qualified classname of the jdbc driver to use
@@ -39,14 +37,12 @@ subtitle: 'mvn flyway:clean'
         </tr>
         <tr>
             <td>url</td>
-            <td>flyway.url</td>
             <td>YES</td>
             <td></td>
             <td>The jdbc url to use to connect to the database</td>
         </tr>
         <tr>
             <td>serverId</td>
-            <td>flyway.serverId</td>
             <td>NO</td>
             <td>flyway-db</td>
             <td>The id of the server in the Maven settings.xml file to
@@ -56,48 +52,46 @@ subtitle: 'mvn flyway:clean'
         </tr>
         <tr>
             <td>user</td>
-            <td>flyway.user</td>
             <td>NO</td>
             <td></td>
-            <td>The user to use to connect to the
-                database.<br/><br/>Required if the credentials are not loaded through the serverId from the
-                Maven settings.xml
-            </td>
+            <td>The user to use to connect to the database</td>
         </tr>
         <tr>
             <td>password</td>
-            <td>flyway.password</td>
             <td>NO</td>
-            <td><i>blank</i></td>
+            <td></td>
             <td>The password to use to connect to the database</td>
         </tr>
         <tr>
             <td>schemas</td>
-            <td>flyway.schemas<br/><i>(comma-separated)</i></td>
             <td>NO</td>
             <td><i>default schema of the connection</i></td>
-            <td>List of schemas managed by Flyway. The first schema in
-                the list will be automatically set as the default one during
-                the migration. It will also be the one containing the metadata table. These schema names are
-                case-sensitive.
+            <td>List of schemas managed by Flyway.<br/>
+                The first schema in the list will be automatically set as the default one during
+                the migration. It will also be the one containing the metadata table.<br/>
+                These schema names are case-sensitive.
             </td>
         </tr>
         </tbody>
     </table>
-    </p><h2><a name="Sample_configuration"></a>Sample configuration<a href="#Sample_configuration"
-                                                                      class="section_anchor"></a></h2><pre
-        class="prettyprint">&lt;configuration&gt;
-   &lt;driver&gt;org.hsqldb.jdbcDriver&lt;/driver&gt;
-   &lt;url&gt;jdbc:hsqldb:file:${project.build.directory}/db/flyway_sample;shutdown=true&lt;/url&gt;
-   &lt;user&gt;SA&lt;/user&gt;
-   &lt;password&gt;mySecretPwd&lt;/password&gt;
+
+    <h2>Sample configuration</h2>
+    <pre class="prettyprint">&lt;configuration&gt;
+    &lt;driver&gt;org.hsqldb.jdbcDriver&lt;/driver&gt;
+    &lt;url&gt;jdbc:hsqldb:file:${project.build.directory}/db/flyway_sample;shutdown=true&lt;/url&gt;
+    &lt;user&gt;SA&lt;/user&gt;
+    &lt;password&gt;mySecretPwd&lt;/password&gt;
     &lt;schemas&gt;
         &lt;schema&gt;schema1&lt;/schema&gt;
         &lt;schema&gt;schema2&lt;/schema&gt;
         &lt;schema&gt;schema3&lt;/schema&gt;
     &lt;/schemas&gt;
 &lt;/configuration&gt;</pre>
-    <h2><a name="Sample_output"></a>Sample output<a href="#Sample_output" class="section_anchor"></a></h2>
 
-    <p><img src="/assets/balsamiq/MavenCleanOutput.png"/></p>
+    <h2>Sample output</h2>
+
+    <pre class="console">mvn flyway:clean
+
+[INFO] [flyway:clean {execution: default-cli}]
+[INFO] Cleaned database schema 'PUBLIC' (execution time 00:00.016s)</pre>
 </div>

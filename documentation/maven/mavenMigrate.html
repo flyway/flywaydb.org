@@ -4,42 +4,40 @@ pill: migrate
 subtitle: 'mvn flyway:migrate'
 ---
 <div id="mavenGoalMigrate">
-<h1><a name="Maven_Goal:_Migrate"></a>Maven Goal: Migrate<a href="#Maven_Goal:_Migrate" class="section_anchor"></a>
-</h1>
+<h1>Maven Goal: Migrate</h1>
 
-<p>Migrates the schema to the latest version. Flyway will create the metadata table automatically if it doesn't exist.</p>
+<p>Migrates the schema to the latest version. Flyway will create the metadata table automatically if it doesn't
+    exist.</p>
 
-<p>
 <table class="table table-bordered">
     <tr>
         <td><strong>Important:</strong> To make sure new migrations
             are taken into account, <strong>mvn compile</strong> must be invoked first!
-            </td>
+        </td>
     </tr>
 </table>
-</p><h2><a name="Default_Phase"></a>Default Phase<a href="#Default_Phase" class="section_anchor"></a></h2>
+
+<h2>Default Phase</h2>
 <ul>
     <li>pre-integration-test</li>
 </ul>
-<h2><a name="Usage"></a>Usage<a href="#Usage" class="section_anchor"></a></h2>
-<pre class="prettyprint">mvn flyway:migrate</pre>
-<h2><a name="Configuration"></a>Configuration<a href="#Configuration" class="section_anchor"></a></h2>
 
-<p>
+<h2>Usage</h2>
+<pre class="prettyprint">mvn flyway:migrate</pre>
+
+<h2>Configuration</h2>
 <table class="table table-bordered table-hover">
     <thead>
     <tr>
         <th>Parameter</th>
-        <th>Maven/System Property</th>
         <th>Required</th>
-        <th>Default Value</th>
+        <th>Default</th>
         <th>Description</th>
     </tr>
     </thead>
     <tbody>
     <tr>
         <td>driver</td>
-        <td>flyway.driver</td>
         <td>YES</td>
         <td></td>
         <td>The fully qualified classname of the jdbc driver to use
@@ -48,14 +46,12 @@ subtitle: 'mvn flyway:migrate'
     </tr>
     <tr>
         <td>url</td>
-        <td>flyway.url</td>
         <td>YES</td>
         <td></td>
         <td>The jdbc url to use to connect to the database</td>
     </tr>
     <tr>
         <td>serverId</td>
-        <td>flyway.serverId</td>
         <td>NO</td>
         <td>flyway-db</td>
         <td>The id of the server in the Maven settings.xml file to
@@ -65,35 +61,28 @@ subtitle: 'mvn flyway:migrate'
     </tr>
     <tr>
         <td>user</td>
-        <td>flyway.user</td>
         <td>NO</td>
         <td></td>
-        <td>The user to use to connect to the
-            database.<br/><br/>Required if the credentials are not loaded through the serverId from the
-            Maven settings.xml
-        </td>
+        <td>The user to use to connect to the database</td>
     </tr>
     <tr>
         <td>password</td>
-        <td>flyway.password</td>
         <td>NO</td>
-        <td><i>blank</i></td>
+        <td></td>
         <td>The password to use to connect to the database</td>
     </tr>
     <tr>
         <td>schemas</td>
-        <td>flyway.schemas<br/><i>(comma-separated)</i></td>
         <td>NO</td>
         <td><i>default schema of the connection</i></td>
-        <td>List of schemas managed by Flyway. The first schema in
-            the list will be automatically set as the default one during
-            the migration. It will also be the one containing the metadata table. These schema names are
-            case-sensitive.
+        <td>List of schemas managed by Flyway.<br/>
+            The first schema in the list will be automatically set as the default one during
+            the migration. It will also be the one containing the metadata table.<br/>
+            These schema names are case-sensitive.
         </td>
-     </tr>
+    </tr>
     <tr>
         <td>table</td>
-        <td>flyway.table</td>
         <td>NO</td>
         <td>schema_version</td>
         <td>The name of Flyway&#x27;s metadata table.<br/>By
@@ -104,7 +93,6 @@ subtitle: 'mvn flyway:migrate'
     </tr>
     <tr>
         <td>locations</td>
-        <td>flyway.locations</td>
         <td>NO</td>
         <td>db/migration</td>
         <td>Locations on the classpath to scan recursively for
@@ -114,44 +102,42 @@ subtitle: 'mvn flyway:migrate'
     </tr>
     <tr>
         <td>sqlMigrationPrefix</td>
-        <td>flyway.sqlMigrationPrefix</td>
         <td>NO</td>
         <td>V</td>
         <td>The file name prefix for Sql migrations</td>
     </tr>
     <tr>
         <td>sqlMigrationSuffix</td>
-        <td>flyway.sqlMigrationSuffix</td>
         <td>NO</td>
         <td>.sql</td>
         <td>The file name suffix for Sql migrations</td>
     </tr>
     <tr>
         <td>encoding</td>
-        <td>flyway.encoding</td>
         <td>NO</td>
         <td>UTF-8</td>
         <td>The encoding of Sql migrations</td>
     </tr>
     <tr>
         <td>placeholders</td>
-        <td>flyway.placeholders.<i>xyz</i></td>
         <td>NO</td>
         <td></td>
         <td>Placeholders to replace in Sql migrations</td>
     </tr>
     <tr>
         <td>placeholderPrefix</td>
-        <td>flyway.placeholderPrefix</td>
         <td>NO</td>
-        <td>
-            ${ </td><td>The prefix of every placeholder </td></tr> <tr><td>placeholderSuffix </td><td>flyway.placeholderSuffix </td><td>NO </td><td>}
-        </td>
+        <td>${</td>
+        <td>The prefix of every placeholder </td>
+    </tr>
+    <tr>
+        <td>placeholderSuffix</td>
+        <td>NO</td>
+        <td>}</td>
         <td>The suffix of every placeholder</td>
     </tr>
     <tr>
         <td>target</td>
-        <td>flyway.target</td>
         <td>NO</td>
         <td><i>latest version</i></td>
         <td>The target version up to which Flyway should run
@@ -159,46 +145,55 @@ subtitle: 'mvn flyway:migrate'
         </td>
     </tr>
     <tr>
-        <td>validationMode</td>
-        <td>flyway.validationMode</td>
+        <td>validateOnMigrate</td>
         <td>NO</td>
-        <td>NONE</td>
-        <td>The type of validation to be performed before
-            migrating.<br/><br/>Possible values are:<br/><br/> <b>NONE</b><br/> No validation is
-            performed<br/><br/> <b>ALL</b><br/> For each sql migration a CRC32 checksum is calculated
-            when the sql script is executed. The validate mechanism checks if the sql migrations in the classpath
+        <td>false</td>
+        <td>Whether to automatically call validate or not when running migrate.<br/>
+            For each sql migration a CRC32 checksum is calculated
+            when the sql script is executed. The validate mechanism checks if the sql migration in the classpath
             still has the same checksum as the sql migration already executed in the database.<br/></td>
     </tr>
     <tr>
-        <td>validationErrorMode</td>
-        <td>flyway.validationErrorMode</td>
+        <td>cleanOnValidationError</td>
         <td>NO</td>
-        <td>FAIL</td>
-        <td>The action to take when validation
-            fails.<br/><br/>Possible values are:<br/><br/> <b>FAIL</b><br/> Throw an exception
-            and fail<br/><br/> <b>CLEAN (Warning ! Do not use in production !)</b><br/> Cleans the
-            database<br/><br/>This is exclusively intended as a convenience for development. Even tough we
+        <td>false</td>
+        <td>Whether to automatically call clean or not when a validation error occurs.<br/><br/>
+            This is exclusively intended as a convenience for development. Even tough we
             strongly recommend not to change migration scripts once they have been checked into SCM and run, this
             provides a way of dealing with this case in a smooth manner. The database will be wiped clean
             automatically, ensuring that the next migration will bring you back to the state checked into
-            SCM.<br/><br/>This property has no effect when <i>validationMode</i> is set to <i>NONE</i>.
+            SCM.<br/><br/><strong>Warning ! Do not enable in production !</strong>
         </td>
     </tr>
     <tr>
-        <td>disableInitCheck</td>
-        <td>flyway.disableInitCheck</td>
+        <td>initOnMigrate</td>
         <td>NO</td>
         <td>false</td>
-        <td>Flag to disable the check that a non-empty schema has
-            been properly initialized with init. This check ensures Flyway does not migrate or clean the wrong
-            database in case of a configuration mistake. Be careful when disabling this!
+        <td>Whether to automatically call init when migrate is executed against a non-empty schema with no metadata
+            table.
+            This schema will then be initialized with the <code>initialVersion</code> before executing the migrations.
+            Only migrations above <code>initialVersion</code> will then be applied.<br/>
+
+            <p>This is useful for initial Flyway production deployments on projects with an existing DB.</p>
+
+            <p>Be careful when enabling this as it removes the safety net that ensures Flyway does not migrate the wrong
+                database in case of a configuration mistake!</p>
+        </td>
+    </tr>
+    <tr>
+        <td>outOfOrder</td>
+        <td>NO</td>
+        <td>false</td>
+        <td>Allows migrations to be run "out of order".
+            <p>If you already have versions 1 and 3 applied, and now a version 2 is found,
+                it will be applied too instead of being ignored.</p>
         </td>
     </tr>
     </tbody>
 </table>
-</p><h2><a name="Sample_configuration"></a>Sample configuration<a href="#Sample_configuration"
-                                                                  class="section_anchor"></a></h2><pre
-        class="prettyprint">&lt;configuration&gt;
+
+<h2>Sample configuration</h2>
+<pre class="prettyprint">&lt;configuration&gt;
     &lt;driver&gt;org.hsqldb.jdbcDriver&lt;/driver&gt;
     &lt;url&gt;jdbc:hsqldb:file:${project.build.directory}/db/flyway_sample;shutdown=true&lt;/url&gt;
     &lt;user&gt;SA&lt;/user&gt;
@@ -217,17 +212,27 @@ subtitle: 'mvn flyway:migrate'
     &lt;sqlMigrationSuffix&gt;-OK.sql&lt;/sqlMigrationSuffix&gt;
     &lt;encoding&gt;ISO-8859-1&lt;/encoding&gt;
     &lt;placeholders&gt;
-       &lt;aplaceholder&gt;value&lt;/aplaceholder&gt;
-       &lt;otherplaceholder&gt;value123&lt;/otherplaceholder&gt;
+        &lt;aplaceholder&gt;value&lt;/aplaceholder&gt;
+        &lt;otherplaceholder&gt;value123&lt;/otherplaceholder&gt;
     &lt;/placeholders&gt;
     &lt;placeholderPrefix&gt;#[&lt;/placeholderPrefix&gt;
     &lt;placeholderSuffix&gt;]&lt;/placeholderSuffix&gt;
     &lt;target&gt;1.1&lt;/target&gt;
-    &lt;validationMode&gt;ALL&lt;/validationMode&gt;
-    &lt;validationErrorMode&gt;FAIL&lt;/validationErrorMode&gt;
-    &lt;disableInitCheck&gt;false&lt;/disableInitCheck&gt;
+    &lt;validateOnMigrate&gt;true&lt;/validateOnMigrate&gt;
+    &lt;cleanOnValidationError&gt;false&lt;/cleanOnValidationError&gt;
+    &lt;outOfOrder&gt;false&lt;/outOfOrder&gt;
 &lt;/configuration&gt;</pre>
-<h2><a name="Sample_output"></a>Sample output<a href="#Sample_output" class="section_anchor"></a></h2>
 
-<p><img src="/assets/balsamiq/MavenMigrateOutput.png"/></p>
+<h2>Sample output</h2>
+<pre class="console">mvn compile flyway:migrate
+
+[INFO] [compiler:compile {execution: default-compile}]
+[INFO] Nothing to compile - all classes are up to date
+[INFO] [flyway:migrate {execution: default-cli}]
+[INFO] Current schema version: 0
+[INFO] Migrating to version 1
+[INFO] Migrating to version 1.1
+[INFO] Migrating to version 1.2
+[INFO] Migrating to version 1.3
+[INFO] Successfully applied 4 migrations (execution time 00:00.091s).</pre>
 </div>

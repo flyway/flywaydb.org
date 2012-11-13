@@ -1,14 +1,14 @@
-<mockup version="1.0" skin="sketch" measuredW="1527" measuredH="445" mockupW="1048" mockupH="128">
+<mockup version="1.0" skin="sketch" measuredW="1512" measuredH="432" mockupW="1043" mockupH="125">
   <controls>
-    <control controlID="0" controlTypeID="com.balsamiq.mockups::DataGrid" x="469" y="347" w="-1" h="-1" measuredW="1048" measuredH="88" zOrder="0" locked="false" isInGroup="-1">
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::DataGrid" x="469" y="347" w="-1" h="-1" measuredW="1043" measuredH="85" zOrder="0" locked="false" isInGroup="-1">
       <controlProperties>
-        <text>Version%2C%20Description%2C%20Type%2C%20Script%2C%20Checksum%2C%20Installed_By%2C%20Installed_On%2C%20Execution_Time%2C%20State%2C%20Current_Version%0A1%2C%20Initial%20Setup%2C%20SQL%2C%20V1__Initial_Setup.sql%2C%201996767037%2C%20axel%2C%202010-05-04%2022%3A23%3A00.0%2C%20546%2C%20SUCCESS%2C%200%0A2%2C%20First%20Changes%2C%20SQL%2C%20V2__First_Changes.sql%2C%201279644856%2C%20axel%2C%202010-05-06%2009%3A18%3A00.0%2C%20127%2C%20SUCCESS%2C%201</text>
+        <text>version_rank%2C%20installed_rank%2C%20version%2C%20description%2C%20type%2C%20script%2C%20checksum%2C%20installed_by%2C%20installed_on%2C%20execution_time%2C%20success%0A1%2C1%2C1%2C%20Initial%20Setup%2C%20SQL%2C%20V1__Initial_Setup.sql%2C%201996767037%2C%20axel%2C%202010-05-04%2022%3A23%3A00.0%2C%20546%2C%20true%0A2%2C2%2C2%2C%20First%20Changes%2C%20SQL%2C%20V2__First_Changes.sql%2C%201279644856%2C%20axel%2C%202010-05-06%2009%3A18%3A00.0%2C%20127%2C%20true</text>
       </controlProperties>
     </control>
-    <control controlID="1" controlTypeID="com.balsamiq.mockups::Title" x="469" y="307" w="-1" h="-1" measuredW="239" measuredH="40" zOrder="1" locked="false" isInGroup="-1">
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::Title" x="469" y="307" w="-1" h="-1" measuredW="179" measuredH="33" zOrder="1" locked="false" isInGroup="-1">
       <controlProperties>
         <size>24</size>
-        <text>SCHEMA_VERSION</text>
+        <text>schema_version</text>
       </controlProperties>
     </control>
   </controls>

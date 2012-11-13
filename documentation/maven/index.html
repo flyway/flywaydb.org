@@ -4,10 +4,9 @@ pill: overview
 subtitle: Maven Plugin
 ---
 <div id="mavenPlugin">
-    <h1><a name="Flyway_Maven_Plugin"></a>Flyway Maven Plugin<a href="#Flyway_Maven_Plugin" class="section_anchor"></a>
-    </h1>
+    <h1>Maven Plugin</h1>
 
-    <h2><a name="Installation"></a>Installation<a href="#Installation" class="section_anchor"></a></h2>
+    <h2>Installation</h2>
 
     <pre class="prettyprint">&lt;plugin&gt;
     &lt;groupId&gt;com.googlecode.flyway&lt;/groupId&gt;
@@ -18,9 +17,7 @@ subtitle: Maven Plugin
     &lt;/configuration&gt;
 &lt;/plugin&gt;</pre>
 
-    <h2><a name="Goals"></a>Goals<a href="#Goals" class="section_anchor"></a></h2>
-
-    <p>
+    <h2>Goals</h2>
     <table class="table table-bordered table-hover">
         <thead>
         <tr>
@@ -53,35 +50,71 @@ subtitle: Maven Plugin
             </td>
         </tr>
         <tr>
-            <td><a href="/documentation/maven/mavenStatus.html">status</a></td>
-            <td>Prints the current version of the schema</td>
+            <td><a href="/documentation/maven/mavenInfo.html">info</a></td>
+            <td>Prints the details and status information about all the migrations</td>
         </tr>
         <tr>
-            <td><a href="/documentation/maven/mavenHistory.html">history</a></td>
-            <td>Prints the full migration history of the schema</td>
+            <td><a href="/documentation/maven/mavenRepair.html">repair</a></td>
+            <td>Repairs the metadata table after a failed migration</td>
         </tr>
         </tbody>
     </table>
-    </p><p><br/></p>
 
-    <h2><a name="Authentication"></a>Authentication<a href="#Authentication" class="section_anchor"></a></h2>
+    <h2>Configuration</h2>
+    <p>The Flyway Maven plugin can be configured in the following ways:</p>
 
-    <p>Credentials can be passed in any of the following ways: </p><h4><a
-        name="Directly_in_the_configuration_of_the_plugin"></a>Directly in the configuration of the plugin<a
-        href="#Directly_in_the_configuration_of_the_plugin" class="section_anchor"></a></h4><pre class="prettyprint">...
-&lt;configuration&gt;
-    &lt;user&gt;myUser&lt;/user&gt;
-    &lt;password&gt;mySecretPwd&lt;/password&gt;
+    <h3>Directly in the configuration of the plugin</h3>
+    <pre class="prettyprint">&lt;plugin&gt;
     ...
-&lt;/configuration&gt;
-...</pre>
-    <h4><a name="As_system_properties"></a>As system properties<a href="#As_system_properties"
-                                                                  class="section_anchor"></a></h4>
-    <pre class="prettyprint">-Dflyway.user=myUser -Dflyway.password=mySecretPwd</pre>
-    <h4><a name="Loaded_from_the_Maven_settings.xml_file"></a>Loaded from the Maven settings.xml file<a
-            href="#Loaded_from_the_Maven_settings.xml_file" class="section_anchor"></a></h4><pre class="prettyprint">&lt;settings&gt;
+    &lt;configuration&gt;
+        &lt;user&gt;myUser&lt;/user&gt;
+        &lt;password&gt;mySecretPwd&lt;/password&gt;
+        &lt;schemas&gt;
+            &lt;schema&gt;schema1&lt;/schema&gt;
+            &lt;schema&gt;schema2&lt;/schema&gt;
+            &lt;schema&gt;schema3&lt;/schema&gt;
+        &lt;/schemas&gt;
+        &lt;placeholders&gt;
+            &lt;keyABC&gt;valueXYZ&lt;/keyABC&gt;
+            &lt;otherplaceholder&gt;value123&lt;/otherplaceholder&gt;
+        &lt;/placeholders&gt;
+    &lt;/configuration&gt;
+&lt;/plugin&gt;</pre>
+
+    <h3>Through Maven properties</h3>
+    <pre class="prettyprint">&lt;project&gt;
+    ...
+    &lt;properties&gt;
+        &lt;!-- Properties are prefixed with flyway. --&gt;
+        &lt;flyway.user&gt;myUser&lt;/flyway.user&gt;
+        &lt;flyway.password&gt;mySecretPwd&lt;/flyway.password&gt;
+
+        &lt;!-- List are defined as comma-separated values --&gt;
+        &lt;flyway.schemas&gt;schema1,schema2,schema3&lt;/schema&gt;
+
+        &lt;!-- Individual placeholders are prefixed by flyway.placeholders. --&gt;
+        &lt;flyway.placeholders.keyABC&gt;valueXYZ&lt;/flyway.placeholders.keyABC&gt;
+        &lt;flyway.placeholders.otherplaceholder&gt;value123&lt;/flyway.placeholders.otherplaceholder&gt;
+    &lt;/properties&gt;
+    ...
+&lt;/project&gt;</pre>
+
+    <h3>Through System properties</h3>
+    <pre class="prettyprint">mvn -Dflyway.user=myUser -Dflyway.schemas=schema1,schema2 -Dflyway.placeholders.keyABC=valueXYZ</pre>
+
+    <h3>Overriding order</h3>
+    <p>System properties &gt; Maven properties &gt; Plugin configuration</p>
+
+    <h2>Authentication</h2>
+
+    <p>Besides configuring credentials through one of the 3 ways described above, it is also possible to externalize
+        them in the Maven <strong>settings.xml</strong> file:</p>
+
+    <pre class="prettyprint">&lt;settings&gt;
     &lt;servers&gt;
         &lt;server&gt;
+            &lt;!-- By default Flyway will look for the server with the id 'flyway-db' --&gt;
+            &lt;!-- This can be customized by configuring the 'serverId' property --&gt;
             &lt;id&gt;flyway-db&lt;/id&gt;
             &lt;username&gt;myUser&lt;/username&gt;
             &lt;password&gt;mySecretPwd&lt;/password&gt;

@@ -1,33 +1,29 @@
 ---
 layout: maven
-pill: status
-subtitle: 'mvn flyway:status'
+pill: repair
+subtitle: 'mvn flyway:repair'
 ---
-<div id="mavenGoalStatus">
-    <h1><a name="Maven_Goal:_Status"></a>Maven Goal: Status<a href="#Maven_Goal:_Status" class="section_anchor"></a>
-    </h1>
+<div id="mavenGoalRepair" xmlns="http://www.w3.org/1999/html">
+    <h1>Maven Goal: Repair</h1>
 
-    <p>Prints the current version of the schema. </p>
+    <p><strong>Not necessary for databases with DDL transaction support</strong></p>
 
-    <h2><a name="Usage"></a>Usage<a href="#Usage" class="section_anchor"></a></h2>
-    <pre class="prettyprint">mvn flyway:status</pre>
-    <h2><a name="Configuration"></a>Configuration<a href="#Configuration" class="section_anchor"></a></h2>
+    <p>Repairs the Flyway metadata table after a failed migration.<br/>
+        User objects left behind must still be cleaned up manually.</p>
 
-    <p>
+    <h2>Usage</h2>
+    <pre class="prettyprint">mvn flyway:repair</pre>
+    <h2>Configuration</h2>
+
     <table class="table table-bordered table-hover">
-        <thead>
         <tr>
             <th>Parameter</th>
-            <th>Maven/System Property</th>
             <th>Required</th>
-            <th>Default Value</th>
+            <th>Default</th>
             <th>Description</th>
         </tr>
-        </thead>
-        <tbody>
         <tr>
             <td>driver</td>
-            <td>flyway.driver</td>
             <td>YES</td>
             <td></td>
             <td>The fully qualified classname of the jdbc driver to use
@@ -36,14 +32,12 @@ subtitle: 'mvn flyway:status'
         </tr>
         <tr>
             <td>url</td>
-            <td>flyway.url</td>
             <td>YES</td>
             <td></td>
             <td>The jdbc url to use to connect to the database</td>
         </tr>
         <tr>
             <td>serverId</td>
-            <td>flyway.serverId</td>
             <td>NO</td>
             <td>flyway-db</td>
             <td>The id of the server in the Maven settings.xml file to
@@ -53,35 +47,28 @@ subtitle: 'mvn flyway:status'
         </tr>
         <tr>
             <td>user</td>
-            <td>flyway.user</td>
             <td>NO</td>
             <td></td>
-            <td>The user to use to connect to the
-                database.<br/><br/>Required if the credentials are not loaded through the serverId from the
-                Maven settings.xml
-            </td>
+            <td>The user to use to connect to the database</td>
         </tr>
         <tr>
             <td>password</td>
-            <td>flyway.password</td>
             <td>NO</td>
-            <td><i>blank</i></td>
+            <td></td>
             <td>The password to use to connect to the database</td>
         </tr>
         <tr>
             <td>schemas</td>
-            <td>flyway.schemas<br/><i>(comma-separated)</i></td>
             <td>NO</td>
             <td><i>default schema of the connection</i></td>
-            <td>List of schemas managed by Flyway. The first schema in
-                the list will be automatically set as the default one during
-                the migration. It will also be the one containing the metadata table. These schema names are
-                case-sensitive.
+            <td>List of schemas managed by Flyway.<br/>
+                The first schema in the list will be automatically set as the default one during
+                the migration. It will also be the one containing the metadata table.<br/>
+                These schema names are case-sensitive.
             </td>
-         </tr>
+        </tr>
         <tr>
             <td>table</td>
-            <td>flyway.table</td>
             <td>NO</td>
             <td>schema_version</td>
             <td>The name of Flyway&#x27;s metadata table.<br/>By
@@ -90,11 +77,10 @@ subtitle: 'mvn flyway:status'
                 the metadata table is placed in the first schema of the list.
             </td>
         </tr>
-        </tbody>
     </table>
-    </p><h2><a name="Sample_configuration"></a>Sample configuration<a href="#Sample_configuration"
-                                                                      class="section_anchor"></a></h2><pre
-        class="prettyprint">&lt;configuration&gt;
+
+    <h2>Sample configuration</h2>
+    <pre class="prettyprint">&lt;configuration&gt;
     &lt;driver&gt;org.hsqldb.jdbcDriver&lt;/driver&gt;
     &lt;url&gt;jdbc:hsqldb:file:${project.build.directory}/db/flyway_sample;shutdown=true&lt;/url&gt;
     &lt;user&gt;SA&lt;/user&gt;
@@ -106,7 +92,10 @@ subtitle: 'mvn flyway:status'
     &lt;/schemas&gt;
     &lt;table&gt;schema_history&lt;/table&gt;
 &lt;/configuration&gt;</pre>
-    <h2><a name="Sample_output"></a>Sample output<a href="#Sample_output" class="section_anchor"></a></h2>
+    <h2>Sample output</h2>
 
-    <p><img src="/assets/balsamiq/MavenStatusOutput.png"/></p>
+    <pre class="console">mvn flyway:repair
+
+[INFO] [flyway:repair {execution: default-cli}]
+[INFO] Repair not necessary. No failed migration detected.</pre>
 </div>

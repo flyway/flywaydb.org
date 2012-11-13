@@ -41,6 +41,13 @@
     margin-right: 10px;
 }
 
+#big-sell a#links {
+    font-size: 12px;
+    color: #DDDDDD;
+    line-height: 100%;
+    display: block;
+}
+
 .btn-jumbo {
     font-size: 20px;
     padding: 14px 24px;
@@ -197,4 +204,14 @@ a.stackoverflow-tag:hover {
 
 h2 {
     font-size: 24px;
+    margin-top: 40px;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+pre.console {
+    background: #000000;
+    color: white;
 }
