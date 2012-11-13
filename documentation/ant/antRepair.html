@@ -1,10 +1,10 @@
 ---
-layout: maven
+layout: ant
 pill: repair
-subtitle: 'mvn flyway:repair'
+subtitle: 'Ant Task: Repair'
 ---
-<div id="mavenGoalRepair" xmlns="http://www.w3.org/1999/html">
-    <h1>Maven Goal: Repair</h1>
+<div id="antTaskRepair">
+    <h1>Ant Task: Repair</h1>
 
     <p><strong>Not necessary for databases with DDL transaction support</strong></p>
 
@@ -12,16 +12,19 @@ subtitle: 'mvn flyway:repair'
         User objects left behind must still be cleaned up manually.</p>
 
     <h2>Usage</h2>
-    <pre class="prettyprint">mvn flyway:repair</pre>
+    <pre class="prettyprint">&lt;flyway:repair /&gt;</pre>
 
     <h2>Configuration</h2>
     <table class="table table-bordered table-hover">
+        <thead>
         <tr>
-            <th>Parameter</th>
+            <th>Attribute</th>
             <th>Required</th>
             <th>Default</th>
             <th>Description</th>
         </tr>
+        </thead>
+        <tbody>
         <tr>
             <td>driver</td>
             <td>YES</td>
@@ -37,17 +40,8 @@ subtitle: 'mvn flyway:repair'
             <td>The jdbc url to use to connect to the database</td>
         </tr>
         <tr>
-            <td>serverId</td>
-            <td>NO</td>
-            <td>flyway-db</td>
-            <td>The id of the server in the Maven settings.xml file to
-                load the credentials from.<br/><br/>This is an alternative to passing the credentials in
-                directly through properties.
-            </td>
-        </tr>
-        <tr>
             <td>user</td>
-            <td>NO</td>
+            <td>YES</td>
             <td></td>
             <td>The user to use to connect to the database</td>
         </tr>
@@ -61,7 +55,7 @@ subtitle: 'mvn flyway:repair'
             <td>schemas</td>
             <td>NO</td>
             <td><i>default schema of the connection</i></td>
-            <td>List of schemas managed by Flyway.<br/>
+            <td>Schemas managed by Flyway.<br/>
                 The first schema in the list will be automatically set as the default one during
                 the migration. It will also be the one containing the metadata table.<br/>
                 These schema names are case-sensitive.
@@ -77,25 +71,33 @@ subtitle: 'mvn flyway:repair'
                 the metadata table is placed in the first schema of the list.
             </td>
         </tr>
+        <tr>
+            <td>classpath</td>
+            <td>NO</td>
+            <td></td>
+            <td>The Ant classpath used to load the JDBC driver and the
+                migrations
+            </td>
+        </tr>
+        <tr>
+            <td>classpathref</td>
+            <td>NO</td>
+            <td></td>
+            <td>The Ant classpath reference used to load the JDBC driver
+                and the migrations
+            </td>
+        </tr>
+        </tbody>
     </table>
 
-    <h2>Sample configuration</h2>
-    <pre class="prettyprint">&lt;configuration&gt;
-    &lt;driver&gt;org.hsqldb.jdbcDriver&lt;/driver&gt;
-    &lt;url&gt;jdbc:hsqldb:file:${project.build.directory}/db/flyway_sample;shutdown=true&lt;/url&gt;
-    &lt;user&gt;SA&lt;/user&gt;
-    &lt;password&gt;mySecretPwd&lt;/password&gt;
-    &lt;schemas&gt;
-        &lt;schema&gt;schema1&lt;/schema&gt;
-        &lt;schema&gt;schema2&lt;/schema&gt;
-        &lt;schema&gt;schema3&lt;/schema&gt;
-    &lt;/schemas&gt;
-    &lt;table&gt;schema_history&lt;/table&gt;
-&lt;/configuration&gt;</pre>
+    <h2>Sample configuration</h2><pre
+        class="prettyprint">&lt;property name=&quot;flyway.driver&quot; value=&quot;org.hsqldb.jdbcDriver&quot;/&gt;
+&lt;property name=&quot;flyway.url&quot; value=&quot;jdbc:hsqldb:file:/db/flyway_sample&quot;/&gt;
+&lt;property name=&quot;flyway.user&quot; value=&quot;SA&quot;/&gt;
+&lt;property name=&quot;flyway.password&quot; value=&quot;mySecretPwd&quot;/&gt;
+&lt;property name=&quot;flyway.schemas&quot; value=&quot;schema1,schema2,schema3&quot;/&gt;
+&lt;property name=&quot;flyway.table&quot; value=&quot;schema_history&quot;/&gt;</pre>
+
     <h2>Sample output</h2>
-
-    <pre class="console">&gt; mvn flyway:repair
-
-[INFO] [flyway:repair {execution: default-cli}]
-[INFO] Repair not necessary. No failed migration detected.</pre>
+    <pre class="console">[flyway:repair] Repair not necessary. No failed migration detected.</pre>
 </div>

@@ -4,82 +4,79 @@ pill: clean
 subtitle: 'Command Line : Clean'
 ---
 <div id="commandLineClean">
-    <h1><a name="Command_Line:_Clean"></a>Command Line: Clean<a href="#Command_Line:_Clean" class="section_anchor"></a>
-    </h1>
+    <h1>Command Line: Clean</h1>
 
-    <p>Drops all objects in the schema without dropping the schema itself. <br/></p>
+    <p>Drops all objects in the schema without dropping the schema itself.</p>
 
-    <h2><a name="Usage"></a>Usage<a href="#Usage" class="section_anchor"></a></h2>
+    <h2>Usage</h2>
 
     <p><strong>Windows</strong></p>
     <pre class="prettyprint">flyway.cmd [options] clean</pre>
     <p><strong>Linux / OSX</strong></p>
     <pre class="prettyprint">flyway.sh [options] clean</pre>
-    <p><br/></p>
 
-    <h2><a name="Options"></a>Options<a href="#Options" class="section_anchor"></a></h2>
+    <h2>Options</h2>
 
-    <p>
-    <table class="wikitable">
+    <table class="table table-bordered table-hover">
+        <thead>
         <tr>
-            <td style="border: 1px solid #ccc; padding: 5px;"><strong>Option</strong></td>
-            <td style="border: 1px solid #ccc; padding: 5px;"><strong>Configuration Property</strong></td>
-            <td style="border: 1px solid #ccc; padding: 5px;"><strong>Required</strong></td>
-            <td style="border: 1px solid #ccc; padding: 5px;"><strong>Default Value</strong></td>
-            <td style="border: 1px solid #ccc; padding: 5px;"><strong>Description</strong></td>
+            <th>Option</th>
+            <th>Required</th>
+            <th>Default</th>
+            <th>Description</th>
         </tr>
+        </thead>
+        <tbody>
         <tr>
-            <td style="border: 1px solid #ccc; padding: 5px;"> driver</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> flyway.driver</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> YES</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"></td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> The fully qualified classname of the jdbc driver to use
+            <td>driver</td>
+            <td>YES</td>
+            <td></td>
+            <td>The fully qualified classname of the jdbc driver to use
                 to connect to the database
             </td>
         </tr>
         <tr>
-            <td style="border: 1px solid #ccc; padding: 5px;"> url</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> flyway.url</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> YES</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"></td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> The jdbc url to use to connect to the database</td>
+            <td>url</td>
+            <td>YES</td>
+            <td></td>
+            <td>The jdbc url to use to connect to the database</td>
         </tr>
         <tr>
-            <td style="border: 1px solid #ccc; padding: 5px;"> user</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> flyway.user</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> YES</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"></td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> The user to use to connect to the database</td>
+            <td>user</td>
+            <td>NO</td>
+            <td></td>
+            <td>The user to use to connect to the database</td>
         </tr>
         <tr>
-            <td style="border: 1px solid #ccc; padding: 5px;"> password</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> flyway.password</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> NO</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"><i>blank</i></td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> The password to use to connect to the database</td>
+            <td>password</td>
+            <td>NO</td>
+            <td></td>
+            <td>The password to use to connect to the database</td>
         </tr>
         <tr>
-            <td style="border: 1px solid #ccc; padding: 5px;"> schemas</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> flyway.schemas</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> NO</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"><i>default schema of the connection</i></td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> Comma-separated list of schemas managed by Flyway. The
-                first schema in the list will be the one containing the metadata table
+            <td>schemas</td>
+            <td>NO</td>
+            <td><i>default schema of the connection</i></td>
+            <td>Comma-separated list of schemas managed by Flyway.<br/>
+                The first schema in the list will be automatically set as the default one during
+                the migration. It will also be the one containing the metadata table.<br/>
+                These schema names are case-sensitive.
             </td>
         </tr>
+        </tbody>
     </table>
-    </p><p><br/></p>
 
-    <h2><a name="Sample_configuration"></a>Sample configuration<a href="#Sample_configuration"
-                                                                  class="section_anchor"></a></h2><pre
-        class="prettyprint">flyway.driver=org.hsqldb.jdbcDriver
+    <h2>Sample configuration</h2>
+    <pre class="prettyprint">flyway.driver=org.hsqldb.jdbcDriver
 flyway.url=jdbc:hsqldb:file:/db/flyway_sample
 flyway.user=SA
 flyway.password=mySecretPwd
 flyway.schemas=schema1,schema2,schema3</pre>
-    <p><br/></p>
 
-    <h2><a name="Sample_output"></a>Sample output<a href="#Sample_output" class="section_anchor"></a></h2>
+    <h2>Sample output</h2>
+    <pre class="console">&gt; flyway.cmd clean
 
-    <p><img src="/assets/balsamiq/CommandLineCleanOutput.png"/></p>
+Flyway (Command-line Tool) v.{{ site.flywayVersion }}
+
+Cleaned database schema 'PUBLIC' (execution time 00:00.014s)</pre>
 </div>

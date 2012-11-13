@@ -4,13 +4,13 @@ pill: init
 subtitle: 'mvn flyway:init'
 ---
 <div id="mavenGoalInit">
-    <h1><a name="Maven_Goal:_Init"></a>Maven Goal: Init<a href="#Maven_Goal:_Init" class="section_anchor"></a></h1>
+    <h1>Maven Goal: Init</h1>
 
     <p>Creates and initializes the metadata table in the schema. </p>
 
-    <h2><a name="Usage"></a>Usage<a href="#Usage" class="section_anchor"></a></h2>
+    <h2>Usage</h2>
     <pre class="prettyprint">mvn flyway:init</pre>
-    <h2><a name="Configuration"></a>Configuration<a href="#Configuration" class="section_anchor"></a></h2>
+    <h2>Configuration</h2>
 
     <p>
     <table class="table table-bordered table-hover">
@@ -87,13 +87,15 @@ subtitle: 'mvn flyway:init'
         <tr>
             <td>initialDescription</td>
             <td>NO</td>
-            <td><nobr>&lt;&lt; Flyway Init &gt;&gt;</nobr></td>
+            <td>
+                <nobr>&lt;&lt; Flyway Init &gt;&gt;</nobr>
+            </td>
             <td>The description of the initial version</td>
         </tr>
         </tbody>
     </table>
-    </p><h2><a name="Sample_configuration"></a>Sample configuration<a href="#Sample_configuration"
-                                                                      class="section_anchor"></a></h2><pre
+    </p><h2>Sample configuration<a href="#Sample_configuration"
+                                   class="section_anchor"></a></h2><pre
         class="prettyprint">&lt;configuration&gt;
     &lt;driver&gt;org.hsqldb.jdbcDriver&lt;/driver&gt;
     &lt;url&gt;jdbc:hsqldb:file:${project.build.directory}/db/flyway_sample;shutdown=true&lt;/url&gt;
@@ -109,7 +111,8 @@ subtitle: 'mvn flyway:init'
     &lt;initialDescription&gt;Base Migration&lt;/initialDescription&gt;
 &lt;/configuration&gt;</pre>
     <h2>Sample output</h2>
-    <pre class="console">mvn flyway:init
+    <pre class="console">&gt; mvn flyway:init
+
 [INFO] [flyway:init {execution: default-cli}]
 [INFO] Creating Metadata table: "PUBLIC"."schema_version"
 [INFO] Schema initialized with version: 0</pre>

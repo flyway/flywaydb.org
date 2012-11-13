@@ -1,202 +1,202 @@
 ---
 layout: ant
 pill: migrate
-subtitle: Ant Task Migrate
+subtitle: 'Ant Task: Migrate'
 ---
 <div id="antTaskMigrate">
-    <h1><a name="Ant_Task:_Migrate"></a>Ant Task: Migrate<a href="#Ant_Task:_Migrate" class="section_anchor"></a></h1>
+<h1>Ant Task: Migrate</h1>
 
-    <p>Migrates the schema to the latest version. The metadata table automatically gets created if it doesn&#x27;t
-        already exist. <br/></p>
+<p>Migrates the schema to the latest version. Flyway will create the metadata table automatically if it doesn't
+    exist.</p>
 
-    <h2><a name="Usage"></a>Usage<a href="#Usage" class="section_anchor"></a></h2><pre class="prettyprint">&lt;flyway:migrate&gt;
-       &lt;locations&gt;
-           &lt;location path=&quot;com.mycompany.project.migration&quot;/&gt;
-           &lt;location path=&quot;database/migrations&quot;/&gt;
-       &lt;/locations&gt;
-       &lt;placeholders&gt;
-           &lt;placeholder name=&quot;myplaceholder&quot; value=&quot;my replacement value&quot;/&gt;
-           &lt;placeholder name=&quot;otherplaceholder&quot; value=&quot;otherValue&quot;/&gt;
-       &lt;/placeholders&gt;
-   &lt;/flyway:migrate&gt;</pre>
-    <p><br/></p>
+<h2>Usage</h2>
+    <pre class="prettyprint">&lt;flyway:migrate&gt;
+    &lt;locations&gt;
+        &lt;location path=&quot;com.mycompany.project.migration&quot;/&gt;
+        &lt;location path=&quot;database/migrations&quot;/&gt;
+    &lt;/locations&gt;
+    &lt;placeholders&gt;
+        &lt;placeholder name=&quot;myplaceholder&quot; value=&quot;my replacement value&quot;/&gt;
+        &lt;placeholder name=&quot;otherplaceholder&quot; value=&quot;otherValue&quot;/&gt;
+    &lt;/placeholders&gt;
+&lt;/flyway:migrate&gt;</pre>
 
-    <h2><a name="Configuration"></a>Configuration<a href="#Configuration" class="section_anchor"></a></h2>
+<h2>Configuration</h2>
 
-    <p>
-    <table class="wikitable">
-        <tr>
-            <td style="border: 1px solid #ccc; padding: 5px;"><strong>Attribute</strong></td>
-            <td style="border: 1px solid #ccc; padding: 5px;"><strong>Ant / System Property</strong></td>
-            <td style="border: 1px solid #ccc; padding: 5px;"><strong>Required</strong></td>
-            <td style="border: 1px solid #ccc; padding: 5px;"><strong>Default Value</strong></td>
-            <td style="border: 1px solid #ccc; padding: 5px;"><strong>Description</strong></td>
-        </tr>
-        <tr>
-            <td style="border: 1px solid #ccc; padding: 5px;"> driver</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> flyway.driver</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> YES</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"></td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> The fully qualified classname of the jdbc driver to use
-                to connect to the database
-            </td>
-        </tr>
-        <tr>
-            <td style="border: 1px solid #ccc; padding: 5px;"> url</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> flyway.url</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> YES</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"></td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> The jdbc url to use to connect to the database</td>
-        </tr>
-        <tr>
-            <td style="border: 1px solid #ccc; padding: 5px;"> user</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> flyway.user</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> YES</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"></td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> The user to use to connect to the database</td>
-        </tr>
-        <tr>
-            <td style="border: 1px solid #ccc; padding: 5px;"> password</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> flyway.password</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> NO</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"><i>blank</i></td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> The password to use to connect to the database</td>
-        </tr>
-        <tr>
-            <td style="border: 1px solid #ccc; padding: 5px;"> schemas</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> flyway.schemas</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> NO</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"><i>default schema of the connection</i></td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> Comma-separated list of schemas managed by Flyway. The
-                first schema in the list will be the one containing the metadata table
-            </td>
-        </tr>
-        <tr>
-            <td style="border: 1px solid #ccc; padding: 5px;"> table</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> flyway.table</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> NO</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> schema_version</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> The name of Flyway&#x27;s metadata table.<br/>By
-                default (single-schema mode) the metadata table is placed in the default schema for the connection
-                provided by the datasource.<br/>When the <i>flyway.schemas</i> property is set (multi-schema mode),
-                the metadata table is placed in the first schema of the list.
-            </td>
-        </tr>
-        <tr>
-            <td style="border: 1px solid #ccc; padding: 5px;"> locations</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> flyway.locations</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> NO</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> db/migration</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> Locations on the classpath to scan recursively for
-                migrations. Locations may contain both sql and java-based migrations.<br/>Ant/System Property takes
-                a comma-separated list.
-            </td>
-        </tr>
-        <tr>
-            <td style="border: 1px solid #ccc; padding: 5px;"> sqlMigrationPrefix</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> flyway.sqlMigrationPrefix</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> NO</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> V</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> The file name prefix for Sql migrations</td>
-        </tr>
-        <tr>
-            <td style="border: 1px solid #ccc; padding: 5px;"> sqlMigrationSuffix</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> flyway.sqlMigrationSuffix</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> NO</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> .sql</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> The file name suffix for Sql migrations</td>
-        </tr>
-        <tr>
-            <td style="border: 1px solid #ccc; padding: 5px;"> encoding</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> flyway.encoding</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> NO</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> UTF-8</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> The encoding of Sql migrations</td>
-        </tr>
-        <tr>
-            <td style="border: 1px solid #ccc; padding: 5px;"> placeholders</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> flyway.placeholders.<i>placeholdername</i></td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> NO</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"></td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> Placeholders to replace in Sql migrations</td>
-        </tr>
-        <tr>
-            <td style="border: 1px solid #ccc; padding: 5px;"> placeholderPrefix</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> flyway.placeholderPrefix</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> NO</td>
-            <td style="border: 1px solid #ccc; padding: 5px;">
-                ${ </td><td style="border: 1px solid #ccc; padding: 5px;"> The prefix of every placeholder </td></tr> <tr><td style="border: 1px solid #ccc; padding: 5px;"> placeholderSuffix </td><td style="border: 1px solid #ccc; padding: 5px;"> flyway.placeholderSuffix </td><td style="border: 1px solid #ccc; padding: 5px;"> NO </td><td style="border: 1px solid #ccc; padding: 5px;"> }
-            </td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> The suffix of every placeholder</td>
-        </tr>
-        <tr>
-            <td style="border: 1px solid #ccc; padding: 5px;"> target</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> flyway.target</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> NO</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"><i>latest version</i></td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> The target version up to which Flyway should run
-                migrations. Migrations with a higher version number will not be applied.
-            </td>
-        </tr>
-        <tr>
-            <td style="border: 1px solid #ccc; padding: 5px;"> validationMode</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> flyway.validationMode</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> NO</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> NONE</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> The type of validation to be performed before
-                migrating.<br/><br/>Possible values are:<br/><br/> <b>NONE</b><br/> No validation is
-                performed<br/><br/> <b>ALL</b><br/> For each sql migration a CRC32 checksum is calculated
-                when the sql script is executed. The validate mechanism checks if the sql migrations in the classpath
-                still has the same checksum as the sql migration already executed in the database.<br/></td>
-        </tr>
-        <tr>
-            <td style="border: 1px solid #ccc; padding: 5px;"> validationErrorMode</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> flyway.validationErrorMode</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> NO</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> FAIL</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> The action to take when validation
-                fails.<br/><br/>Possible values are:<br/><br/> <b>FAIL</b><br/> Throw an exception
-                and fail<br/><br/> <b>CLEAN (Warning ! Do not use in production !)</b><br/> Cleans the
-                database<br/><br/>This is exclusively intended as a convenience for development. Even tough we
-                strongly recommend not to change migration scripts once they have been checked into SCM and run, this
-                provides a way of dealing with this case in a smooth manner. The database will be wiped clean
-                automatically, ensuring that the next migration will bring you back to the state checked into
-                SCM.<br/><br/>This property has no effect when <i>validationMode</i> is set to <i>NONE</i>.
-            </td>
-        </tr>
-        <tr>
-            <td style="border: 1px solid #ccc; padding: 5px;"> disableInitCheck</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> flyway.disableInitCheck</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> NO</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> false</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> Flag to disable the check that a non-empty schema has
-                been properly initialized with init. This check ensures Flyway does not migrate or clean the wrong
-                database in case of a configuration mistake. Be careful when disabling this!
-            </td>
-        </tr>
-        <tr>
-            <td style="border: 1px solid #ccc; padding: 5px;"> classpath</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> flyway.classpath</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> NO</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"></td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> The Ant classpath used to load the JDBC driver and the
-                migrations
-            </td>
-        </tr>
-        <tr>
-            <td style="border: 1px solid #ccc; padding: 5px;"> classpathref</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> flyway.classpathref</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> NO</td>
-            <td style="border: 1px solid #ccc; padding: 5px;"></td>
-            <td style="border: 1px solid #ccc; padding: 5px;"> The Ant classpath reference used to load the JDBC driver
-                and the migrations
-            </td>
-        </tr>
-    </table>
-    </p><p><br/></p>
+<table class="table table-bordered table-hover">
+    <thead>
+    <tr>
+        <th>Attribute</th>
+        <th>Required</th>
+        <th>Default</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>driver</td>
+        <td>YES</td>
+        <td></td>
+        <td>The fully qualified classname of the jdbc driver to use
+            to connect to the database
+        </td>
+    </tr>
+    <tr>
+        <td>url</td>
+        <td>YES</td>
+        <td></td>
+        <td>The jdbc url to use to connect to the database</td>
+    </tr>
+    <tr>
+        <td>user</td>
+        <td>YES</td>
+        <td></td>
+        <td>The user to use to connect to the database</td>
+    </tr>
+    <tr>
+        <td>password</td>
+        <td>NO</td>
+        <td></td>
+        <td>The password to use to connect to the database</td>
+    </tr>
+    <tr>
+        <td>schemas</td>
+        <td>NO</td>
+        <td><i>default schema of the connection</i></td>
+        <td>Schemas managed by Flyway.<br/>
+            The first schema in the list will be automatically set as the default one during
+            the migration. It will also be the one containing the metadata table.<br/>
+            These schema names are case-sensitive.
+        </td>
+    </tr>
+    <tr>
+        <td>table</td>
+        <td>NO</td>
+        <td>schema_version</td>
+        <td>The name of Flyway&#x27;s metadata table.<br/>By
+            default (single-schema mode) the metadata table is placed in the default schema for the connection
+            provided by the datasource.<br/>When the <i>flyway.schemas</i> property is set (multi-schema mode),
+            the metadata table is placed in the first schema of the list.
+        </td>
+    </tr>
+    <tr>
+        <td>locations</td>
+        <td>NO</td>
+        <td>db/migration</td>
+        <td>Locations on the classpath to scan recursively for
+            migrations. Locations may contain both sql and java-based migrations.<br/>Ant/System Property takes
+            a comma-separated list.
+        </td>
+    </tr>
+    <tr>
+        <td>sqlMigrationPrefix</td>
+        <td>NO</td>
+        <td>V</td>
+        <td>The file name prefix for Sql migrations</td>
+    </tr>
+    <tr>
+        <td>sqlMigrationSuffix</td>
+        <td>NO</td>
+        <td>.sql</td>
+        <td>The file name suffix for Sql migrations</td>
+    </tr>
+    <tr>
+        <td>encoding</td>
+        <td>NO</td>
+        <td>UTF-8</td>
+        <td>The encoding of Sql migrations</td>
+    </tr>
+    <tr>
+        <td>placeholders</td>
+        <td>NO</td>
+        <td></td>
+        <td>Placeholders to replace in Sql migrations</td>
+    </tr>
+    <tr>
+        <td>placeholderPrefix</td>
+        <td>NO</td>
+        <td>${</td>
+        <td>The prefix of every placeholder</td>
+    </tr>
+    <tr>
+        <td>placeholderSuffix</td>
+        <td>NO</td>
+        <td>}</td>
+        <td>The suffix of every placeholder</td>
+    </tr>
+    <tr>
+        <td>target</td>
+        <td>NO</td>
+        <td><i>latest version</i></td>
+        <td>The target version up to which Flyway should run
+            migrations. Migrations with a higher version number will not be applied.
+        </td>
+    </tr>
+    <tr>
+        <td>outOfOrder</td>
+        <td>NO</td>
+        <td>false</td>
+        <td>Allows migrations to be run "out of order".
+            <p>If you already have versions 1 and 3 applied, and now a version 2 is found,
+                it will be applied too instead of being ignored.</p>
+        </td>
+    </tr>
+    <tr>
+        <td>validateOnMigrate</td>
+        <td>NO</td>
+        <td>false</td>
+        <td>Whether to automatically call validate or not when running migrate.<br/>
+            For each sql migration a CRC32 checksum is calculated
+            when the sql script is executed. The validate mechanism checks if the sql migration in the classpath
+            still has the same checksum as the sql migration already executed in the database.<br/></td>
+    </tr>
+    <tr>
+        <td>cleanOnValidationError</td>
+        <td>NO</td>
+        <td>false</td>
+        <td>Whether to automatically call clean or not when a validation error occurs.<br/><br/>
+            This is exclusively intended as a convenience for development. Even tough we
+            strongly recommend not to change migration scripts once they have been checked into SCM and run, this
+            provides a way of dealing with this case in a smooth manner. The database will be wiped clean
+            automatically, ensuring that the next migration will bring you back to the state checked into
+            SCM.<br/><br/><strong>Warning ! Do not enable in production !</strong>
+        </td>
+    </tr>
+    <tr>
+        <td>initOnMigrate</td>
+        <td>NO</td>
+        <td>false</td>
+        <td>Whether to automatically call init when migrate is executed against a non-empty schema with no metadata
+            table.
+            This schema will then be initialized with the <code>initialVersion</code> before executing the migrations.
+            Only migrations above <code>initialVersion</code> will then be applied.<br/>
 
-    <h2><a name="Sample_configuration"></a>Sample configuration<a href="#Sample_configuration"
-                                                                  class="section_anchor"></a></h2><pre
+            <p>This is useful for initial Flyway production deployments on projects with an existing DB.</p>
+
+            <p>Be careful when enabling this as it removes the safety net that ensures Flyway does not migrate the wrong
+                database in case of a configuration mistake!</p>
+        </td>
+    </tr>
+    <tr>
+        <td>classpath</td>
+        <td>NO</td>
+        <td></td>
+        <td>The Ant classpath used to load the JDBC driver and the
+            migrations
+        </td>
+    </tr>
+    <tr>
+        <td>classpathref</td>
+        <td>NO</td>
+        <td></td>
+        <td>The Ant classpath reference used to load the JDBC driver
+            and the migrations
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<h2>Sample configuration</h2><pre
         class="prettyprint">&lt;property name=&quot;flyway.driver&quot; value=&quot;org.hsqldb.jdbcDriver&quot;/&gt;
 &lt;property name=&quot;flyway.url&quot; value=&quot;jdbc:hsqldb:file:/db/flyway_sample&quot;/&gt;
 &lt;property name=&quot;flyway.user&quot; value=&quot;SA&quot;/&gt;
@@ -212,12 +212,17 @@ subtitle: Ant Task Migrate
 &lt;property name=&quot;flyway.placeholderPrefix&quot; value=&quot;#[&quot;/&gt;
 &lt;property name=&quot;flyway.placeholderSuffix&quot; value=&quot;]&quot;/&gt;
 &lt;property name=&quot;flyway.target&quot; value=&quot;1.1&quot;/&gt;
-&lt;property name=&quot;flyway.validationMode&quot; value=&quot;ALL&quot;/&gt;
-&lt;property name=&quot;flyway.validationErrorMode&quot; value=&quot;FAIL&quot;/&gt;
-&lt;property name=&quot;flyway.disableInitCheck&quot; value=&quot;false&quot;/&gt;</pre>
-    <p><br/></p>
+&lt;property name=&quot;flyway.outOfOrder&quot; value=&quot;false&quot;/&gt;
+&lt;property name=&quot;flyway.validateOnMigrate&quot; value=&quot;true&quot;/&gt;
+&lt;property name=&quot;flyway.cleanOnValidationError&quot; value=&quot;false&quot;/&gt;
+&lt;property name=&quot;flyway.initOnMigrate&quot; value=&quot;false&quot;/&gt;</pre>
 
-    <h2><a name="Sample_output"></a>Sample output<a href="#Sample_output" class="section_anchor"></a></h2>
-
-    <p><img src="/assets/balsamiq/AntMigrateOutput.png"/></p>
+<h2>Sample output</h2>
+<pre class="console">[flyway:migrate] Creating Metadata table: schema_version (Schema: PUBLIC)
+[flyway:migrate] Current schema version: null
+[flyway:migrate] Migrating to version 1
+[flyway:migrate] Migrating to version 1.1
+[flyway:migrate] Migrating to version 1.2
+[flyway:migrate] Migrating to version 1.3
+[flyway:migrate] Successfully applied 4 migrations (execution time 00:00.083s).</pre>
 </div>
