@@ -95,7 +95,7 @@ subtitle: FAQ
 
     <p>Wenn recreating the database, everything with be cleanly installed in order: version 7, 7.1 and 8. </p>
 
-    <p>To make a long story short: <strong>there is no special construct, as there is no need for it.</strong><br/>
+    <p><strong>If this isn't an option</strong> you can activate the outOfOrder property to allow Flyway to run the migrations out of order and fill the gaps.<br/>
         <br/></p>
 
     <h2><a name="Can_multiple_nodes_migrate_in_parallel?"></a>Can multiple nodes migrate in parallel?<a
@@ -151,7 +151,7 @@ table = schema_version</pre>
     <h2><a name="Does_Flyway_depend_on_Spring?"></a>Does Flyway depend on Spring?<a
             href="#Does_Flyway_depend_on_Spring?" class="section_anchor"></a></h2>
 
-    <p>No. As of Flyway 1.7, the Spring dependency is now completely optional. </p>
+    <p>No. Flyway has zero required dependences.</p>
 
     <p>If you have Spring Jdbc on the classpath, Flyway will be able to load Java migrations making use of Spring&#x27;s
         convenient JdbcTemplate class.<br/> <br/></p>
@@ -174,16 +174,10 @@ table = schema_version</pre>
     <p>You have to follow the following steps: </p>
     <ol>
         <li>Manually undo the changes of the migration</li>
-        <li>Remove the row of the failed migration from Flyway&#x27;s metadata table</li>
-        <li>Set the previous migration as the current one in the metadata table</li>
+        <li>Invoke the repair command</li>
         <li>Fix the failed migration</li>
         <li>Try again</li>
     </ol>
-    <p>In the future steps 2 &amp; 3 will be replaced by a new command called <i>repair</i>, removing the need to
-        manually fiddle with the metadata table. </p>
-
-    <p>More info: <a href="http://code.google.com/p/flyway/issues/detail?id=99">Issue 99</a><br/>
-        <br/></p>
 
     <h2><a name="Why_does_clean_drop_individual_data_objects_instead_of_the_schem"></a>Why does clean drop individual
         data objects instead of the schema itself?<a
