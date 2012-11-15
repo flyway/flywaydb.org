@@ -9,8 +9,8 @@ subtitle: Release Notes
 <p>Thank you all for reporting all these issues and fixes!</p>
 
 <div class="release">
-    <h3>Unreleased version</h3>
-    <h4>Bug fixes</h4>
+    <h2>Unreleased version</h2>
+    <h3>Bug fixes</h3>
     <ul>
         <li>
             <a href="http://code.google.com/p/flyway/issues/detail?id=360">Issue 360</a>
@@ -19,9 +19,9 @@ subtitle: Release Notes
     </ul>
 </div>
 <div class="release">
-    <h3>Flyway 2.0 (2012-11-14)</h3>
+    <h2>Flyway 2.0 (2012-11-14)</h2>
     <p>This version comes with a <strong>new metadata table format</strong>. Migration is transparent and automatic on first run.</p>
-    <h4>New Features</h4>
+    <h3>New Features</h3>
     <ul>
         <li><a href="http://code.google.com/p/flyway/issues/detail?id=99">Issue 99</a> New
             <code>Flyway.repair()</code> call for repairing the metadata table after a failed migration on a database
@@ -41,7 +41,7 @@ subtitle: Release Notes
             DB.
         </li>
     </ul>
-    <h4>Incompatible Changes</h4>
+    <h3>Incompatible Changes</h3>
     <ul>
         <li>Migrations now always require a description.</li>
         <li>The name of the schemas specified with <code>schemas</code> are now case-sensitive.</li>
@@ -64,7 +64,7 @@ subtitle: Release Notes
         <li>Maven: <code>schemas</code> is now a nested configuration element instead of a simply configuration property
         </li>
     </ul>
-    <h4>Changes</h4>
+    <h3>Changes</h3>
     <ul>
         <li><a href="http://code.google.com/p/flyway/issues/detail?id=290">Issue 290</a> Commons-Logging
             Dependency is now optional.
@@ -115,7 +115,7 @@ subtitle: Release Notes
             calling REORG from JDBC.
         </li>
     </ul>
-    <h4>Bug fixes</h4>
+    <h3>Bug fixes</h3>
     <ul>
         <li>
             <a href="http://code.google.com/p/flyway/issues/detail?id=145">Issue 145</a>
@@ -223,14 +223,14 @@ subtitle: Release Notes
 </div>
 
 <div class="release">
-    <h3>Flyway 1.7 (2012-07-10)</h3>
-    <h4>New Features</h4>
+    <h2>Flyway 1.7 (2012-07-10)</h2>
+    <h3>New Features</h3>
     <ul>
         <li><a href="http://code.google.com/p/flyway/issues/detail?id=174">Issue 174</a> Multiple
             differently named base dirs for SQL Migrations
         </li>
     </ul>
-    <h4>Changes</h4>
+    <h3>Changes</h3>
     <ul>
         <li><a href="http://code.google.com/p/flyway/issues/detail?id=59">Issue 59</a> Spring Dependency
             is now optional.
@@ -254,7 +254,7 @@ subtitle: Release Notes
             container.
         </li>
     </ul>
-    <h4>Bug Fixes</h4>
+    <h3>Bug Fixes</h3>
     <ul>
         <li><a href="http://code.google.com/p/flyway/issues/detail?id=156">Issue 156</a> OSGI: Incorrect
             Unable to find path for sql migrations
@@ -311,8 +311,8 @@ subtitle: Release Notes
 </div>
 
 <div class="release">
-    <h3>Flyway 1.6.1 (2012-04-21)</h3>
-    <h4>Bug Fixes</h4>
+    <h2>Flyway 1.6.1 (2012-04-21)</h2>
+    <h3>Bug Fixes</h3>
     <ul>
         <li><a href="http://code.google.com/p/flyway/issues/detail?id=239">Issue 239</a> Flyway 1.6
             classpath scanner does not find files unless baseDir has trailing &#x27;/&#x27; </li>
@@ -327,22 +327,22 @@ subtitle: Release Notes
 </div>
 
 <div class="release">
-    <h3>Flyway 1.6 (2012-04-09)</h3>
-    <h4>New Features</h4>
+    <h2>Flyway 1.6 (2012-04-09)</h2>
+    <h3>New Features</h3>
     <ul>
         <li><a href="http://code.google.com/p/flyway/issues/detail?id=42">Issue 42</a> Derby support</li>
         <li><a href="http://code.google.com/p/flyway/issues/detail?id=197">Issue 197</a> Google Cloud SQL
             support
         </li>
     </ul>
-    <h4>Changes</h4>
+    <h3>Changes</h3>
     <ul>
         <li>Flyway is now built with JDK 6, but still compatible with JDK 5.</li>
         <li>Flyway is now tested against the SQL Server sqljdbc4 driver (was sqljdbc).</li>
         <li>Flyway.get/setTransactionManager are now deprecated and have no effect anymore. <a
                 href="http://code.google.com/p/flyway/issues/detail?id=203">More info</a></li>
     </ul>
-    <h4>Bug Fixes</h4>
+    <h3>Bug Fixes</h3>
     <ul>
         <li><a href="http://code.google.com/p/flyway/issues/detail?id=79">Issue 79</a> Migrations don&#x27;t
             support semicolons within quotes
@@ -392,8 +392,8 @@ subtitle: Release Notes
 </div>
 
 <div class="release">
-    <h3>Flyway 1.5 (2011-11-09)</h3>
-    <h4>New Features</h4>
+    <h2>Flyway 1.5 (2011-11-09)</h2>
+    <h3>New Features</h3>
     <ul>
         <li><a href="http://code.google.com/p/flyway/issues/detail?id=39">Issue 39</a> Ant Tasks for
             Flyway
@@ -402,7 +402,7 @@ subtitle: Release Notes
             server credentials from settings.xml (Maven plugin)
         </li>
     </ul>
-    <h4>Changes</h4>
+    <h3>Changes</h3>
     <ul>
         <li>Calling validate either through the API, the Maven plugin, the Command-Line client or the Ant Tasks now
             automatically sets the validationMode to ALL
@@ -414,7 +414,7 @@ subtitle: Release Notes
             if you haven't already done so)
         </li>
     </ul>
-    <h4>Bug Fixes</h4>
+    <h3>Bug Fixes</h3>
     <ul>
         <li><a href="http://code.google.com/p/flyway/issues/detail?id=135">Issue 135</a> Include URL of
             offending migrations in case of conflict
@@ -471,8 +471,8 @@ subtitle: Release Notes
 </div>
 
 <div class="release">
-    <h3>Flyway 1.4.2 (2011-06-29)</h3>
-    <h4>Bug Fixes</h4>
+    <h2>Flyway 1.4.2 (2011-06-29)</h2>
+    <h3>Bug Fixes</h3>
     <ul>
         <li><a href="http://code.google.com/p/flyway/issues/detail?id=119">Issue 119</a> Support Oracle
             connection users
@@ -482,14 +482,14 @@ subtitle: Release Notes
 </div>
 
 <div class="release">
-    <h3>Flyway 1.4.1 (2011-05-27)</h3>
-    <h4>New Features</h4>
+    <h2>Flyway 1.4.1 (2011-05-27)</h2>
+    <h3>New Features</h3>
     <ul>
         <li><a href="http://code.google.com/p/flyway/issues/detail?id=129">Issue 129</a> Use user
             supplied TransactionManager
         </li>
     </ul>
-    <h4>Bug Fixes</h4>
+    <h3>Bug Fixes</h3>
     <ul>
         <li><a href="http://code.google.com/p/flyway/issues/detail?id=121">Issue 121</a> Maven 3 plugin
             print logs
@@ -499,19 +499,19 @@ subtitle: Release Notes
 </div>
 
 <div class="release">
-    <h3>Flyway 1.4 (2011-05-13)</h3>
-    <h4>New Features</h4>
+    <h2>Flyway 1.4 (2011-05-13)</h2>
+    <h3>New Features</h3>
     <ul>
         <li><a href="http://code.google.com/p/flyway/issues/detail?id=116">Issue 116</a> Java 5 support
         </li>
     </ul>
-    <h4>Changes</h4>
+    <h3>Changes</h3>
     <ul>
         <li>Flyway is now tested with the DB2 Db2jcc driver (was Db2jcc4)</li>
         <li>Flyway is now tested with the Oracle Ojdbc5 driver (was Ojdbc6)</li>
         <li>Flyway is now tested with the PostgreSQL Jdbc3 driver (was Jdbc4)</li>
     </ul>
-    <h4>Bug Fixes</h4>
+    <h3>Bug Fixes</h3>
     <ul>
         <li><a href="http://code.google.com/p/flyway/issues/detail?id=93">Issue 93</a> Include paths of
             offenders in migration conflict error message
@@ -540,8 +540,8 @@ subtitle: Release Notes
 </div>
 
 <div class="release">
-    <h3>Flyway 1.3.1 (2011-04-06)</h3>
-    <h4>New Features</h4>
+    <h2>Flyway 1.3.1 (2011-04-06)</h2>
+    <h3>New Features</h3>
     <ul>
         <li><a href="http://code.google.com/p/flyway/issues/detail?id=106">Issue 106</a> Multiple schema
             support
@@ -550,7 +550,7 @@ subtitle: Release Notes
             entries
         </li>
     </ul>
-    <h4>Bug Fixes</h4>
+    <h3>Bug Fixes</h3>
     <ul>
         <li><a href="http://code.google.com/p/flyway/issues/detail?id=102">Issue 102</a> Oracle: Flyway
             now throws an exception when a clean is attempted on the SYSTEM schema
@@ -580,12 +580,12 @@ subtitle: Release Notes
 </div>
 
 <div class="release">
-    <h3>Flyway 1.3 (2011-03-18)</h3>
-    <h4>New Features</h4>
+    <h2>Flyway 1.3 (2011-03-18)</h2>
+    <h3>New Features</h3>
     <ul>
         <li><a href="http://code.google.com/p/flyway/issues/detail?id=40">Issue 40</a> DB2 support</li>
     </ul>
-    <h4>Bug Fixes</h4>
+    <h3>Bug Fixes</h3>
     <ul>
         <li><a href="http://code.google.com/p/flyway/issues/detail?id=103">Issue 103</a> Flyway can now
             clean sequences, constants and domains on H2
@@ -599,18 +599,18 @@ subtitle: Release Notes
 </div>
 
 <div class="release">
-    <h3>Flyway 1.2 (2011-02-27)</h3>
-    <h4>New Features</h4>
+    <h2>Flyway 1.2 (2011-02-27)</h2>
+    <h3>New Features</h3>
     <ul>
         <li><a href="http://code.google.com/p/flyway/issues/detail?id=19">Issue 19</a> SQL Server support
         </li>
     </ul>
-    <h4>Changes</h4>
+    <h3>Changes</h3>
     <ul>
         <li>Flyway is now tested with MySQL version 5.1 (up from 5.0)</li>
         <li>Flyway is now tested with the Oracle OJDBC6 JDBC driver (up from OJDBC14)</li>
     </ul>
-    <h4>Bug Fixes</h4>
+    <h3>Bug Fixes</h3>
     <ul>
         <li><a href="http://code.google.com/p/flyway/issues/detail?id=92">Issue 92</a> Flyway might be
             leaking database connections
@@ -635,8 +635,8 @@ subtitle: Release Notes
 </div>
 
 <div class="release">
-    <h3>Flyway 1.1 (2011-02-03)</h3>
-    <h4>New Features</h4>
+    <h2>Flyway 1.1 (2011-02-03)</h2>
+    <h3>New Features</h3>
     <ul>
         <li><a href="http://code.google.com/p/flyway/issues/detail?id=43">Issue 43</a> Standalone tool to
             run Flyway directly from the command-line
@@ -648,7 +648,7 @@ subtitle: Release Notes
             or validate() on a non-empty schema without a metadata table with at least one applied migration.
         </li>
     </ul>
-    <h4>Bug Fixes</h4>
+    <h3>Bug Fixes</h3>
     <ul>
         <li><a href="http://code.google.com/p/flyway/issues/detail?id=78">Issue 78</a> Spring JDBC
             dependency missing from POM.
@@ -662,8 +662,8 @@ subtitle: Release Notes
 </div>
 
 <div class="release">
-    <h3>Flyway 1.0.1 (2010-12-27)</h3>
-    <h4>Bug Fixes</h4>
+    <h2>Flyway 1.0.1 (2010-12-27)</h2>
+    <h3>Bug Fixes</h3>
     <ul>
         <li><a href="http://code.google.com/p/flyway/issues/detail?id=75">Issue 75</a> Wrong detection of
             Spatial Extensions on Oracle 10g (but works on XE)
@@ -672,12 +672,12 @@ subtitle: Release Notes
 </div>
 
 <div class="release">
-    <h3>Flyway 1.0 (2010-12-26)</h3>
-    <h4>New Features</h4>
+    <h2>Flyway 1.0 (2010-12-26)</h2>
+    <h3>New Features</h3>
     <ul>
         <li>Clean now purges the Oracle recycle bin</li>
     </ul>
-    <h4>Bug Fixes</h4>
+    <h3>Bug Fixes</h3>
     <ul>
         <li><a href="http://code.google.com/p/flyway/issues/detail?id=72">Issue 72</a>
             Flyway.configure(Properties) also works when the DataSource is
@@ -688,8 +688,8 @@ subtitle: Release Notes
 </div>
 
 <div class="release">
-    <h3>Flyway 0.9.5 (2010-12-12)</h3>
-    <h4>New Features</h4>
+    <h2>Flyway 0.9.5 (2010-12-12)</h2>
+    <h3>New Features</h3>
     <ul>
         <li><a href="http://code.google.com/p/flyway/issues/detail?id=36">Issue 36</a> Added support for
             specifying a target version up to which Flyway should run migrations.
@@ -705,7 +705,7 @@ subtitle: Release Notes
             find SQL migrations even if they are in subfolders of baseDir.
         </li>
     </ul>
-    <h4>Changes</h4>
+    <h3>Changes</h3>
     <ul>
         <li>Removed support for upgrading from pre 0.9 versions. If you need to upgrade from 0.8.5 and earlier, you must
             migrate to 0.9.4 first before migrating to this version.
@@ -721,21 +721,21 @@ subtitle: Release Notes
             this new model.
         </li>
     </ul>
-    <h4>Bug Fixes</h4>
+    <h3>Bug Fixes</h3>
     <ul>
         <li>Fixed an issue with Oracle Spatial Index tables causing a failure when attempting to clean.</li>
     </ul>
 </div>
 
 <div class="release">
-    <h3>Flyway 0.9.4 (2010-11-24)</h3>
-    <h4>Changes</h4>
+    <h2>Flyway 0.9.4 (2010-11-24)</h2>
+    <h3>Changes</h3>
     <ul>
         <li><a href="http://code.google.com/p/flyway/issues/detail?id=61">Issue 61</a> Reduced the info
             logging to a single line per migration
         </li>
     </ul>
-    <h4>Bug Fixes</h4>
+    <h3>Bug Fixes</h3>
     <ul>
         <li>Fixed a bug in the Oracle Sql Parser which caused it to trip over column names starting with 'begin'</li>
         <li>Fixed custom version table name handling. Setting the datasource before the table name was causing an error.
@@ -750,8 +750,8 @@ subtitle: Release Notes
 </div>
 
 <div class="release">
-    <h3>Flyway 0.9.3 (2010-11-09)</h3>
-    <h4>New Features</h4>
+    <h2>Flyway 0.9.3 (2010-11-09)</h2>
+    <h3>New Features</h3>
     <ul>
         <li><a href="http://code.google.com/p/flyway/issues/detail?id=62">Issue 62</a> Added support for
             MySQL comment directives (/*!...*/;) so MySQL dumps can be used as migrations
@@ -761,8 +761,8 @@ subtitle: Release Notes
 </div>
 
 <div class="release">
-    <h3>Flyway 0.9.2 (2010-11-05)</h3>
-    <h4>New Features</h4>
+    <h2>Flyway 0.9.2 (2010-11-05)</h2>
+    <h3>New Features</h3>
     <ul>
         <li><a href="http://code.google.com/p/flyway/issues/detail?id=51">Issue 51</a> The Flyway class
             can now be configured using a Properties object
@@ -771,7 +771,7 @@ subtitle: Release Notes
             PostgreSQL, including stored procedures (CREATE FUNCTION with $$ escapes)
         </li>
     </ul>
-    <h4>Changes</h4>
+    <h3>Changes</h3>
     <ul>
         <li><a href="http://code.google.com/p/flyway/issues/detail?id=38">Issue 38</a> The
             SchemaVersion class doesn't contain the description
@@ -791,8 +791,8 @@ subtitle: Release Notes
 </div>
 
 <div class="release">
-    <h3>Flyway 0.9.1 (2010-09-14)</h3>
-    <h4>Bug fixes</h4>
+    <h2>Flyway 0.9.1 (2010-09-14)</h2>
+    <h3>Bug fixes</h3>
     <ul>
         <li>Fixed parsing of CREATE FUNCTION and CREATE PROCEDURE statements in PL/SQL</li>
     </ul>
@@ -800,8 +800,8 @@ subtitle: Release Notes
 </div>
 
 <div class="release">
-    <h3>Flyway 0.9 (2010-08-25)</h3>
-    <h4>New Features</h4>
+    <h2>Flyway 0.9 (2010-08-25)</h2>
+    <h3>New Features</h3>
     <ul>
         <li>Support for migration checksums (CRC-32 for SQL Migrations, optional custom implementation for Java
             migrations)
@@ -813,7 +813,7 @@ subtitle: Release Notes
         <li>Sql migrations file names can now have a configurable prefix (Default: V) and suffix (Default: .sql)
         </li>
     </ul>
-    <h4>Changes</h4>
+    <h3>Changes</h3>
     <ul>
         <li>The metadata table format has been extended with new columns (type, checksum, installed_by). Existing
             metadata tables will be upgraded automatically on the first run, no manual intervention is required.
@@ -825,7 +825,7 @@ subtitle: Release Notes
             by the plugin
         </li>
     </ul>
-    <h4>Bug Fixes</h4>
+    <h3>Bug Fixes</h3>
     <ul>
         <li>Fixed a problem where Flyway could not clean an Oracle database when the spatial extensions where
             missing
@@ -834,7 +834,7 @@ subtitle: Release Notes
 </div>
 
 <div class="release">
-    <h3>Flyway 0.8.5 (2010-07-26)</h3>
+    <h2>Flyway 0.8.5 (2010-07-26)</h2>
     <ul>
         <li>Added mvn flyway:history goal to display the complete migration history of the schema</li>
         <li>The encoding of the Sql migration files is now configurable</li>
@@ -849,7 +849,7 @@ subtitle: Release Notes
 </div>
 
 <div class="release">
-    <h3>Flyway 0.8 (2010-07-15)</h3>
+    <h2>Flyway 0.8 (2010-07-15)</h2>
     <ul>
         <li>Added mvn flyway:status goal to display the current version of the schema</li>
         <li>Fixed logging in Maven Plugin</li>
@@ -860,7 +860,7 @@ subtitle: Release Notes
 </div>
 
 <div class="release">
-    <h3>Flyway 0.7 (2010-06-29)</h3>
+    <h2>Flyway 0.7 (2010-06-29)</h2>
     <ul>
         <li>Added support for parallel migrations. Flyway is now safe to deploy in a cluster.</li>
         <li>[<em>Alpha</em>] Added initial mvn flyway:clean goal to remove all objects from the
@@ -870,7 +870,7 @@ subtitle: Release Notes
 </div>
 
 <div class="release">
-    <h3>Flyway 0.6 (2010-06-13)</h3>
+    <h2>Flyway 0.6 (2010-06-13)</h2>
     <ul>
         <li>Updated maven groupId to <strong>com.googlecode.flyway</strong></li>
         <li>Added HsqlDb support</li>
@@ -883,7 +883,7 @@ subtitle: Release Notes
 </div>
 
 <div class="release">
-    <h3>Flyway 0.0.5 (2010-05-13)</h3>
+    <h2>Flyway 0.0.5 (2010-05-13)</h2>
     <ul>
         <li>Fixed connection leaks</li>
         <li>Improved support for PL/SQL blocks having a declare section</li>
@@ -891,7 +891,7 @@ subtitle: Release Notes
 </div>
 
 <div class="release">
-    <h3>Flyway 0.0.4 (2010-05-09)</h3>
+    <h2>Flyway 0.0.4 (2010-05-09)</h2>
     <ul>
         <li>Display exact script name and line number when a statement could not be executed</li>
         <li>Added support for multi-line comments /* */ in sql scripts</li>
@@ -899,7 +899,7 @@ subtitle: Release Notes
 </div>
 
 <div class="release">
-    <h3>Flyway 0.0.3 (2010-04-26)</h3>
+    <h2>Flyway 0.0.3 (2010-04-26)</h2>
     <ul>
         <li>Added support for Ant-style ${placeholder} replacement in sql migrations</li>
         <li>Added support for oracle pl/sql blocks in sql migrations</li>
@@ -907,14 +907,14 @@ subtitle: Release Notes
 </div>
 
 <div class="release">
-    <h3>Flyway 0.0.2 (2010-04-23)</h3>
+    <h2>Flyway 0.0.2 (2010-04-23)</h2>
     <ul>
         <li>Fixed current version index on Oracle</li>
     </ul>
 </div>
 
 <div class="release">
-    <h3>Flyway 0.0.1 (2010-04-20)</h3>
+    <h2>Flyway 0.0.1 (2010-04-20)</h2>
     <ul>
         <li>Initial Release</li>
     </ul>
