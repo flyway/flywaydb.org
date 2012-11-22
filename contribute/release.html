@@ -46,6 +46,11 @@ subtitle: Releasing Flyway
     &lt;profiles&gt;
         &lt;profile&gt;
             &lt;id&gt;flyway-release&lt;/id&gt;
+            &lt;activation&gt;
+                &lt;property&gt;
+                    &lt;name&gt;releaseVersion&lt;/name&gt;
+                &lt;/property&gt;
+            &lt;/activation&gt;
             &lt;properties&gt;
                 &lt;flyway.releaserepo&gt;/path/to/flyway-release/repo&lt;/flyway.releaserepo&gt;
                 &lt;gpg.passphrase&gt;XXX&lt;/gpg.passphrase&gt;
@@ -58,13 +63,12 @@ subtitle: Releasing Flyway
 
     <h2><a name="Required_Steps"></a>Required Steps<a href="#Required_Steps" class="section_anchor"></a></h2>
     <ol>
-        <li>First, we make sure <i>/flyway</i> is up to date by running <strong>hg pull -u</strong></li>
-        <li>Now under <i>/flyway</i>, we can start the release with <strong>mvn release:prepare release:perform
-            -Pflyway-release</strong></li>
-        <li>We now have to provide the version number for the new release, say <i>1.3.1</i> for example</li>
-        <li>We can use the defaults for the release tag and the new development version</li>
-        <li>Then, we the release is done, we can push the changes to the POMs by running <strong>hg push</strong> in <i>/flyway</i>
-        </li>
+        <li>In Jenkins, we choose the job <strong>Flyway RELEASE</strong></li>
+        <li>In the list of actions left, we choose <strong>Perform Maven Release</strong></li>
+        <li>We set the new Release Version, say <i>2.0.2</i>, and the new Development Version, say <i>2.0.3-SNAPSHOT</i>,
+            and make sure <strong>all checkboxes are unticked</strong></li>
+        <li>Now we can start the release by clicking <strong>Schedule Maven Build</strong></li>
+        <li>Then, we the release is done, we can push the changes to the POMs by running <strong>hg push</strong> in <i>/Workspaces/flyway-release</i> on the Jenkins machine</li>
         <li>The old downloads must now be deprecated. We go to <a href="http://code.google.com/p/flyway/downloads/list"
                                                                  >http://code.google.com/p/flyway/downloads/list</a>.
         </li>
