@@ -17,7 +17,9 @@ subtitle: Ant Tasks
    &lt;/path&gt;
 
    &lt;path id=&quot;flyway.classpath&quot;&gt;
-       &lt;!-- include all jars and directories containing jdbc drivers and migrations --&gt;
+       &lt;!-- include all jars containing jdbc drivers --&gt;
+       &lt;!-- include all jars and directories containing sql migrations --&gt;
+       &lt;!-- include all jars and directories containing compiled java migrations --&gt;
    &lt;/path&gt;
 
    &lt;taskdef uri=&quot;antlib:com.googlecode.flyway.ant&quot;
