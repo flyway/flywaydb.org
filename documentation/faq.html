@@ -4,38 +4,36 @@ menu: faq
 subtitle: FAQ
 ---
 <div id="faq">
-    <p>
-
-    <h1>Frequently Asked Questions</h1> </p><p>
+    <h1>Frequently Asked Questions</h1>
     <ul>
-        <ul>
-            <li><a href="#I_found_a_defect._Where_should_I_report_it?">I found a defect. Where should I report it?</a>
-            </li>
-            <li><a href="#I_have_a_feature_request._Where_should_I_submit_it?">I have a feature request. Where should I
-                submit it?</a></li>
-            <li><a href="#I_have_a_question._Where_can_I_ask_it?">I have a question. Where can I ask it?</a></li>
-            <li><a href="#What_about_downgrade_scripts/downward_migrations?">What about downgrade scripts/downward
-                migrations?</a></li>
-            <li><a href="#What_is_the_best_strategy_for_dealing_with_hot_fixes?">What is the best strategy for dealing
-                with hot fixes?</a></li>
-            <li><a href="#Can_multiple_nodes_migrate_in_parallel?">Can multiple nodes migrate in parallel?</a></li>
-            <li><a href="#Why_does_a_failed_migration_not_get_rolled_back?">Why does a failed migration not get rolled
-                back?</a></li>
-            <li><a href="#Does_Flyway_support_multiple_schemas?">Does Flyway support multiple schemas?</a></li>
-            <li><a href="#Does_Flyway_work_with_OSGI?">Does Flyway work with OSGI?</a></li>
-            <li><a href="#Does_Flyway_support_placeholder_replacement?">Does Flyway support placeholder replacement?</a>
-            </li>
-            <li><a href="#Does_Flyway_depend_on_Spring?">Does Flyway depend on Spring?</a></li>
-            <li><a href="#Can_I_make_changes_to_the_structure_of_the_DB_outside_of_Flyway?">Can I make changes to the
-                structure of the DB outside of Flyway?</a></li>
-            <li><a href="#How_do_you_repair_the_database_after_a_failed_migration?">How do you repair the database after
-                a failed migration?</a></li>
-            <li><a href="#Why_does_clean_drop_individual_data_objects_instead_of_the_schem">Why does clean drop
-                individual data objects instead of the schema itself?</a></li>
-        </ul>
+        <li><a href="#I_found_a_defect._Where_should_I_report_it?">I found a defect. Where should I report it?</a>
+        </li>
+        <li><a href="#I_have_a_feature_request._Where_should_I_submit_it?">I have a feature request. Where should I
+            submit it?</a></li>
+        <li><a href="#I_have_a_question._Where_can_I_ask_it?">I have a question. Where can I ask it?</a></li>
+        <li><a href="#What_about_downgrade_scripts/downward_migrations?">What about downgrade scripts/downward
+            migrations?</a></li>
+        <li><a href="#What_is_the_best_strategy_for_dealing_with_hot_fixes?">What is the best strategy for dealing
+            with hot fixes?</a></li>
+        <li><a href="#Can_multiple_nodes_migrate_in_parallel?">Can multiple nodes migrate in parallel?</a></li>
+        <li><a href="#Why_does_a_failed_migration_not_get_rolled_back?">Why does a failed migration not get rolled
+            back?</a></li>
+        <li><a href="#Does_Flyway_support_multiple_schemas?">Does Flyway support multiple schemas?</a></li>
+        <li><a href="#Does_Flyway_work_with_OSGI?">Does Flyway work with OSGI?</a></li>
+        <li><a href="#Does_Flyway_support_placeholder_replacement?">Does Flyway support placeholder replacement?</a>
+        </li>
+        <li><a href="#Does_Flyway_depend_on_Spring?">Does Flyway depend on Spring?</a></li>
+        <li><a href="#Can_I_make_changes_to_the_structure_of_the_DB_outside_of_Flyway?">Can I make changes to the
+            structure of the DB outside of Flyway?</a></li>
+        <li><a href="#How_do_you_repair_the_database_after_a_failed_migration?">How do you repair the database after
+            a failed migration?</a></li>
+        <li><a href="#Why_does_clean_drop_individual_data_objects_instead_of_the_schem">Why does clean drop
+            individual data objects instead of the schema itself?</a></li>
+        <li><a href="#db-specific-sql">What is the best strategy for handling database-specific sql?</a></li>
     </ul>
-    <br/> </p><h2><a name="I_found_a_defect._Where_should_I_report_it?"></a>I found a defect. Where should I report
-    it?<a href="#I_found_a_defect._Where_should_I_report_it?" class="section_anchor"></a></h2>
+
+    <h2><a name="I_found_a_defect._Where_should_I_report_it?"></a>I found a defect. Where should I report
+        it?<a href="#I_found_a_defect._Where_should_I_report_it?" class="section_anchor"></a></h2>
 
     <p>Check the <a href="http://code.google.com/p/flyway/issues/list">issue tracker</a> if someone else
         already reported it. If not, <a href="http://code.google.com/p/flyway/issues/entry">raise a new
@@ -95,7 +93,8 @@ subtitle: FAQ
 
     <p>Wenn recreating the database, everything with be cleanly installed in order: version 7, 7.1 and 8. </p>
 
-    <p><strong>If this isn't an option</strong> you can activate the outOfOrder property to allow Flyway to run the migrations out of order and fill the gaps.<br/>
+    <p><strong>If this isn't an option</strong> you can activate the outOfOrder property to allow Flyway to run the
+        migrations out of order and fill the gaps.<br/>
         <br/></p>
 
     <h2><a name="Can_multiple_nodes_migrate_in_parallel?"></a>Can multiple nodes migrate in parallel?<a
@@ -191,4 +190,20 @@ table = schema_version</pre>
     <p>This might be revisited in the future to include DROP SCHEMA capabilities, to keep step with CREATE SCHEMA
         capabilities outlined in <a href="http://code.google.com/p/flyway/issues/detail?id=74">Issue
             74</a><br/> <br/></p>
+
+    <h2 id="db-specific-sql">What is the best strategy for handling database-specific sql?</h2>
+
+    <p>Assuming you use Derby in TEST and Oracle in PROD.</p>
+
+    <p>You can use the <code>flyway.locations</code> property. It would look like this:</p>
+
+    <p>TEST (Derby): <code>flyway.locations=sql/common,sql/derby</code></p>
+    <p>PROD (Oracle): <code>flyway.locations=sql/common,sql/oracle</code></p>
+
+    <p>You could then have the common statements (V1__Create_table.sql) in common and different copies of the
+        DB-specific statements (V2__Alter_table.sql) in the db-specific locations.</p>
+
+    <p>An even better solution, in my opinion, is to have the same DB in prod and test. Yes, you do lose a bit of
+        performance, but on the other hand you also eliminate another difference (and potential source of errors)
+        between the environments.</p>
 </div>
