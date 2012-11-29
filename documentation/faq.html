@@ -4,206 +4,210 @@ menu: faq
 subtitle: FAQ
 ---
 <div id="faq">
-    <h1>Frequently Asked Questions</h1>
-    <ul>
-        <li><a href="#I_found_a_defect._Where_should_I_report_it?">I found a defect. Where should I report it?</a>
-        </li>
-        <li><a href="#I_have_a_feature_request._Where_should_I_submit_it?">I have a feature request. Where should I
-            submit it?</a></li>
-        <li><a href="#I_have_a_question._Where_can_I_ask_it?">I have a question. Where can I ask it?</a></li>
-        <li><a href="#What_about_downgrade_scripts/downward_migrations?">What about downgrade scripts/downward
-            migrations?</a></li>
-        <li><a href="#What_is_the_best_strategy_for_dealing_with_hot_fixes?">What is the best strategy for dealing
-            with hot fixes?</a></li>
-        <li><a href="#Can_multiple_nodes_migrate_in_parallel?">Can multiple nodes migrate in parallel?</a></li>
-        <li><a href="#Why_does_a_failed_migration_not_get_rolled_back?">Why does a failed migration not get rolled
-            back?</a></li>
-        <li><a href="#Does_Flyway_support_multiple_schemas?">Does Flyway support multiple schemas?</a></li>
-        <li><a href="#Does_Flyway_work_with_OSGI?">Does Flyway work with OSGI?</a></li>
-        <li><a href="#Does_Flyway_support_placeholder_replacement?">Does Flyway support placeholder replacement?</a>
-        </li>
-        <li><a href="#Does_Flyway_depend_on_Spring?">Does Flyway depend on Spring?</a></li>
-        <li><a href="#Can_I_make_changes_to_the_structure_of_the_DB_outside_of_Flyway?">Can I make changes to the
-            structure of the DB outside of Flyway?</a></li>
-        <li><a href="#How_do_you_repair_the_database_after_a_failed_migration?">How do you repair the database after
-            a failed migration?</a></li>
-        <li><a href="#Why_does_clean_drop_individual_data_objects_instead_of_the_schem">Why does clean drop
-            individual data objects instead of the schema itself?</a></li>
-        <li><a href="#db-specific-sql">What is the best strategy for handling database-specific sql?</a></li>
-    </ul>
+<h1>Frequently Asked Questions</h1>
+<ul>
+    <li><a href="#I_found_a_defect._Where_should_I_report_it?">I found a defect. Where should I report it?</a>
+    </li>
+    <li><a href="#I_have_a_feature_request._Where_should_I_submit_it?">I have a feature request. Where should I
+        submit it?</a></li>
+    <li><a href="#I_have_a_question._Where_can_I_ask_it?">I have a question. Where can I ask it?</a></li>
+    <li><a href="#What_about_downgrade_scripts/downward_migrations?">What about downgrade scripts/downward
+        migrations?</a></li>
+    <li><a href="#What_is_the_best_strategy_for_dealing_with_hot_fixes?">What is the best strategy for dealing
+        with hot fixes?</a></li>
+    <li><a href="#Can_multiple_nodes_migrate_in_parallel?">Can multiple nodes migrate in parallel?</a></li>
+    <li><a href="#Why_does_a_failed_migration_not_get_rolled_back?">Why does a failed migration not get rolled
+        back?</a></li>
+    <li><a href="#Does_Flyway_support_multiple_schemas?">Does Flyway support multiple schemas?</a></li>
+    <li><a href="#Does_Flyway_work_with_OSGI?">Does Flyway work with OSGI?</a></li>
+    <li><a href="#Does_Flyway_support_placeholder_replacement?">Does Flyway support placeholder replacement?</a>
+    </li>
+    <li><a href="#Does_Flyway_depend_on_Spring?">Does Flyway depend on Spring?</a></li>
+    <li><a href="#Can_I_make_changes_to_the_structure_of_the_DB_outside_of_Flyway?">Can I make changes to the
+        structure of the DB outside of Flyway?</a></li>
+    <li><a href="#How_do_you_repair_the_database_after_a_failed_migration?">How do you repair the database after
+        a failed migration?</a></li>
+    <li><a href="#Why_does_clean_drop_individual_data_objects_instead_of_the_schem">Why does clean drop
+        individual data objects instead of the schema itself?</a></li>
+    <li><a href="#db-specific-sql">What is the best strategy for handling database-specific sql?</a></li>
+</ul>
 
-    <h2><a name="I_found_a_defect._Where_should_I_report_it?"></a>I found a defect. Where should I report
-        it?<a href="#I_found_a_defect._Where_should_I_report_it?" class="section_anchor"></a></h2>
+<h2><a name="I_found_a_defect._Where_should_I_report_it?"></a>I found a defect. Where should I report
+    it?<a href="#I_found_a_defect._Where_should_I_report_it?" class="section_anchor"></a></h2>
 
-    <p>Check the <a href="http://code.google.com/p/flyway/issues/list">issue tracker</a> if someone else
-        already reported it. If not, <a href="http://code.google.com/p/flyway/issues/entry">raise a new
-            issue</a>. <br/> <br/></p>
+<p>Check the <a href="http://code.google.com/p/flyway/issues/list">issue tracker</a> if someone else
+    already reported it. If not, <a href="http://code.google.com/p/flyway/issues/entry">raise a new
+        issue</a>. <br/> <br/></p>
 
-    <h2><a name="I_have_a_feature_request._Where_should_I_submit_it?"></a>I have a feature request. Where should I
-        submit it?<a href="#I_have_a_feature_request._Where_should_I_submit_it?" class="section_anchor"></a></h2>
+<h2><a name="I_have_a_feature_request._Where_should_I_submit_it?"></a>I have a feature request. Where should I
+    submit it?<a href="#I_have_a_feature_request._Where_should_I_submit_it?" class="section_anchor"></a></h2>
 
-    <p>Check the <a href="http://code.google.com/p/flyway/issues/list">issue tracker</a> if someone else
-        already suggested it. If not, <a href="http://code.google.com/p/flyway/issues/entry">raise a new
-            issue</a>. <br/> <br/></p>
+<p>Check the <a href="http://code.google.com/p/flyway/issues/list">issue tracker</a> if someone else
+    already suggested it. If not, <a href="http://code.google.com/p/flyway/issues/entry">raise a new
+        issue</a>. <br/> <br/></p>
 
-    <h2><a name="I_have_a_question._Where_can_I_ask_it?"></a>I have a question. Where can I ask it?<a
-            href="#I_have_a_question._Where_can_I_ask_it?" class="section_anchor"></a></h2>
+<h2><a name="I_have_a_question._Where_can_I_ask_it?"></a>I have a question. Where can I ask it?<a
+        href="#I_have_a_question._Where_can_I_ask_it?" class="section_anchor"></a></h2>
 
-    <p>Post your question on <a href="http://stackoverflow.com">StackOverflow</a> under the <a
-            href="http://stackoverflow.com/questions/tagged/flyway">Flyway tag</a>. <br/> <br/>
-    </p>
+<p>Post your question on <a href="http://stackoverflow.com">StackOverflow</a> under the <a
+        href="http://stackoverflow.com/questions/tagged/flyway">Flyway tag</a>. <br/> <br/>
+</p>
 
-    <h2><a name="What_about_downgrade_scripts/downward_migrations?"></a>What about downgrade scripts/downward
-        migrations?<a href="#What_about_downgrade_scripts/downward_migrations?" class="section_anchor"></a></h2>
+<h2><a name="What_about_downgrade_scripts/downward_migrations?"></a>What about downgrade scripts/downward
+    migrations?<a href="#What_about_downgrade_scripts/downward_migrations?" class="section_anchor"></a></h2>
 
-    <p><strong>Flyway does NOT support downgrade scripts</strong>.<br/> While the idea of downgrade scripts
-        (popularized by Rails Migrations) is a nice one in theory, unfortunately it breaks down in practice. As soon as
-        you have destructive changes (drop, delete, truncate, ...), you start getting into trouble. And even if you don&#x27;t,
-        you end up creating home-made alternatives for restoring backups, which need to be properly tested as well.
-        <br/> <strong>Downgrade scripts assume the whole migration failed</strong>.<br/> A migration can fail at
-        any point. If you have 10 statements, it is possible for the 1st, the 5th, the 7th or the 10th to fail. There is
-        simply no way to know in advance. Downgrade scripts are written to roll back an entire migration. This renders
-        them effectively useless, even for non-destructive changes. <br/> <strong>Maintain backwards compatibility
-            between the DB and all versions of the code currently deployed in production</strong>.<br/> This way a
-        failed migration is not a disaster. The old version of the application is still compatible with the DB, so you
-        can simply roll back the application code, investigate, and take corrective measures. <br/> <strong>A much
-            better solution is a proper, well tested, backup and restore strategy</strong>.<br/> It is independent
-        of the database structure, and once it is tested and proven to work, no migration script can break it. For
-        optimal performance, and if your infrastructure supports this, we recommend using the <strong>snapshot
-            technology of your underlying storage solution</strong>. Especially for larger data volumes, this can be
-        <strong>several orders of magnitude faster</strong> than traditional backups and restores!<br/> <br/>
-    </p>
+<p><strong>Flyway does NOT support downgrade scripts</strong>.<br/> While the idea of downgrade scripts
+    (popularized by Rails Migrations) is a nice one in theory, unfortunately it breaks down in practice. As soon as
+    you have destructive changes (drop, delete, truncate, ...), you start getting into trouble. And even if you don&#x27;t,
+    you end up creating home-made alternatives for restoring backups, which need to be properly tested as well.
+    <br/> <strong>Downgrade scripts assume the whole migration failed</strong>.<br/> A migration can fail at
+    any point. If you have 10 statements, it is possible for the 1st, the 5th, the 7th or the 10th to fail. There is
+    simply no way to know in advance. Downgrade scripts are written to roll back an entire migration. This renders
+    them effectively useless, even for non-destructive changes. <br/> <strong>Maintain backwards compatibility
+        between the DB and all versions of the code currently deployed in production</strong>.<br/> This way a
+    failed migration is not a disaster. The old version of the application is still compatible with the DB, so you
+    can simply roll back the application code, investigate, and take corrective measures. <br/> <strong>A much
+        better solution is a proper, well tested, backup and restore strategy</strong>.<br/> It is independent
+    of the database structure, and once it is tested and proven to work, no migration script can break it. For
+    optimal performance, and if your infrastructure supports this, we recommend using the <strong>snapshot
+        technology of your underlying storage solution</strong>. Especially for larger data volumes, this can be
+    <strong>several orders of magnitude faster</strong> than traditional backups and restores!<br/> <br/>
+</p>
 
-    <h2><a name="What_is_the_best_strategy_for_dealing_with_hot_fixes?"></a>What is the best strategy for dealing with
-        hot fixes?<a href="#What_is_the_best_strategy_for_dealing_with_hot_fixes?" class="section_anchor"></a></h2>
+<h2><a name="What_is_the_best_strategy_for_dealing_with_hot_fixes?"></a>What is the best strategy for dealing with
+    hot fixes?<a href="#What_is_the_best_strategy_for_dealing_with_hot_fixes?" class="section_anchor"></a></h2>
 
-    <p>You have a regular release schedule, say once per sprint. Version 7 is live and you are developing version 8.
-        Version 8 contains DB Schema Changes. Suddenly hot fix is required for version 7, and it also needs a schema
-        change. </p>
+<p>You have a regular release schedule, say once per sprint. Version 7 is live and you are developing version 8.
+    Version 8 contains DB Schema Changes. Suddenly hot fix is required for version 7, and it also needs a schema
+    change. </p>
 
-    <p><strong>How can you deal with this?</strong></p>
+<p><strong>How can you deal with this?</strong></p>
 
-    <p>Even the though the code may be branched, the database schema won&#x27;t. It will have a linear evolution. </p>
+<p>Even the though the code may be branched, the database schema won&#x27;t. It will have a linear evolution. </p>
 
-    <p>This means that the emergency fix, say version 7.1 needs to be deployed as part of the hot fix AND the new
-        version 8. </p>
+<p>This means that the emergency fix, say version 7.1 needs to be deployed as part of the hot fix AND the new
+    version 8. </p>
 
-    <p>By the time version 8 will be deployed, Flyway will recognize that the migration version 7.1 has already be
-        applied. It will ignore it and migrate to version 8. </p>
+<p>By the time version 8 will be deployed, Flyway will recognize that the migration version 7.1 has already be
+    applied. It will ignore it and migrate to version 8. </p>
 
-    <p>Wenn recreating the database, everything with be cleanly installed in order: version 7, 7.1 and 8. </p>
+<p>Wenn recreating the database, everything with be cleanly installed in order: version 7, 7.1 and 8. </p>
 
-    <p><strong>If this isn't an option</strong> you can activate the outOfOrder property to allow Flyway to run the
-        migrations out of order and fill the gaps.<br/>
-        <br/></p>
+<p><strong>If this isn't an option</strong> you can activate the outOfOrder property to allow Flyway to run the
+    migrations out of order and fill the gaps.<br/>
+    <br/></p>
 
-    <h2><a name="Can_multiple_nodes_migrate_in_parallel?"></a>Can multiple nodes migrate in parallel?<a
-            href="#Can_multiple_nodes_migrate_in_parallel?" class="section_anchor"></a></h2>
+<h2><a name="Can_multiple_nodes_migrate_in_parallel?"></a>Can multiple nodes migrate in parallel?<a
+        href="#Can_multiple_nodes_migrate_in_parallel?" class="section_anchor"></a></h2>
 
-    <p>Yes! Flyway uses the locking technology of your database to coordinate multiple nodes. This ensures that even if
-        even multiple instances of your application attempt to migrate the database at the same time, it still works.
-        Cluster configurations are fully supported.<br/> <br/></p>
+<p>Yes! Flyway uses the locking technology of your database to coordinate multiple nodes. This ensures that even if
+    even multiple instances of your application attempt to migrate the database at the same time, it still works.
+    Cluster configurations are fully supported.<br/> <br/></p>
 
-    <h2><a name="Why_does_a_failed_migration_not_get_rolled_back?"></a>Why does a failed migration not get rolled
-        back?<a href="#Why_does_a_failed_migration_not_get_rolled_back?" class="section_anchor"></a></h2>
+<h2><a name="Why_does_a_failed_migration_not_get_rolled_back?"></a>Why does a failed migration not get rolled
+    back?<a href="#Why_does_a_failed_migration_not_get_rolled_back?" class="section_anchor"></a></h2>
 
-    <p>Flyway runs each migration in a separate transaction. In case of failure this transaction is rolled back.
-        Unfortunately, today only DB2, PostgreSQL and to a certain extent SQL Server support DDL statements inside a
-        transaction. Other databases such as Oracle will implicitly sneak in a commit before and after each DDL
-        statement, drastically reducing the effectiveness of this roll back. One alternative if you want to work around
-        this, is to include only a single DDL statement per migration. This solution however has the drawback of being
-        quite cumbersome.<br/> <br/></p>
+<p>Flyway runs each migration in a separate transaction. In case of failure this transaction is rolled back.
+    Unfortunately, today only DB2, PostgreSQL and to a certain extent SQL Server support DDL statements inside a
+    transaction. Other databases such as Oracle will implicitly sneak in a commit before and after each DDL
+    statement, drastically reducing the effectiveness of this roll back. One alternative if you want to work around
+    this, is to include only a single DDL statement per migration. This solution however has the drawback of being
+    quite cumbersome.<br/> <br/></p>
 
-    <h2><a name="Does_Flyway_support_multiple_schemas?"></a>Does Flyway support multiple schemas?<a
-            href="#Does_Flyway_support_multiple_schemas?" class="section_anchor"></a></h2>
+<h2 id="Does_Flyway_support_multiple_schemas?">Does Flyway support multiple schemas?</h2>
 
-    <p>Yes! These are the recommended strategies for dealing with them:<br/> <strong>The schemas have the same
-        life-cycle:</strong><br/> Use a single Flyway instance. Flyway has support for this built-in. Fill the
-        <strong>flyway.schemas</strong> property with the comma-separated list of schemas you wish to manage. All
-        schemas will be tracked using a single metadata table that will be placed in the first schema of the list. Make
-        sure the user of the datasource has the necessary grants for all schemas, and prefix the objects (tables, views,
-        ...) you reference.<br/></p>
+<p>Yes! These are the recommended strategies for dealing with them:<br/>
 
-    <p><strong>The schemas have a distinct life-cycle or must be autonomous and cleanly separated:</strong><br/> Use
-        multiple Flyway instances. Each instance manages its own schema and references its own metadata table. Place
-        migrations for each schema in a distinct location. </p>
+<h3>The schemas have the same life-cycle:</h3>
 
-    <p>Schema foo: </p><pre class="prettyprint">baseDir = /db/migrations/foo
+<p>Use a single Flyway instance. Flyway has support for this built-in. Fill the
+    <code>flyway.schemas</code> property with the comma-separated list of schemas you wish to manage. All
+    schemas will be tracked using a single metadata table that will be placed in the first schema of the list. Make
+    sure the user of the datasource has the necessary grants for all schemas, and prefix the objects (tables, views,
+    ...) you reference.</p>
+
+<h3>The schemas have a distinct life-cycle or must be autonomous and cleanly separated:</h3>
+
+<p>Use multiple Flyway instances. Each instance manages its own schema and references its own metadata table. Place
+    migrations for each schema in a distinct location.</p>
+
+<p>Schema foo: </p><pre class="prettyprint">locations = /sql/foo
 schemas = foo
 table = schema_version</pre>
-    <p>Schema bar: </p><pre class="prettyprint">baseDir = /db/migrations/bar
+<p>Schema bar: </p><pre class="prettyprint">locations = /sql/bar
 schemas = bar
 table = schema_version</pre>
-    <p><br/></p>
+<p><br/></p>
 
-    <h2><a name="Does_Flyway_work_with_OSGI?"></a>Does Flyway work with OSGI?<a href="#Does_Flyway_work_with_OSGI?"
-                                                                                class="section_anchor"></a></h2>
+<h2><a name="Does_Flyway_work_with_OSGI?"></a>Does Flyway work with OSGI?<a href="#Does_Flyway_work_with_OSGI?"
+                                                                            class="section_anchor"></a></h2>
 
-    <p>Yes! Flyway runs on Equinox and is well suited for OSGi and Eclipse RCP applications.<br/> <br/></p>
+<p>Yes! Flyway runs on Equinox and is well suited for OSGi and Eclipse RCP applications.<br/> <br/></p>
 
-    <h2><a name="Does_Flyway_support_placeholder_replacement?"></a>Does Flyway support placeholder replacement?<a
-            href="#Does_Flyway_support_placeholder_replacement?" class="section_anchor"></a></h2>
+<h2><a name="Does_Flyway_support_placeholder_replacement?"></a>Does Flyway support placeholder replacement?<a
+        href="#Does_Flyway_support_placeholder_replacement?" class="section_anchor"></a></h2>
 
-    <p>Yes! Flyway can replace placeholders in Sql migrations. The default pattern is ${placeholder}. This can be
-        configured using the placeholderPrefix and placeholderSuffix properties.<br/> <br/></p>
+<p>Yes! Flyway can replace placeholders in Sql migrations. The default pattern is ${placeholder}. This can be
+    configured using the placeholderPrefix and placeholderSuffix properties.<br/> <br/></p>
 
-    <h2><a name="Does_Flyway_depend_on_Spring?"></a>Does Flyway depend on Spring?<a
-            href="#Does_Flyway_depend_on_Spring?" class="section_anchor"></a></h2>
+<h2><a name="Does_Flyway_depend_on_Spring?"></a>Does Flyway depend on Spring?<a
+        href="#Does_Flyway_depend_on_Spring?" class="section_anchor"></a></h2>
 
-    <p>No. Flyway has zero required dependences.</p>
+<p>No. Flyway has zero required dependences.</p>
 
-    <p>If you have Spring Jdbc on the classpath, Flyway will be able to load Java migrations making use of Spring&#x27;s
-        convenient JdbcTemplate class.<br/> <br/></p>
+<p>If you have Spring Jdbc on the classpath, Flyway will be able to load Java migrations making use of Spring&#x27;s
+    convenient JdbcTemplate class.<br/> <br/></p>
 
-    <h2><a name="Can_I_make_changes_to_the_structure_of_the_DB_outside_of_Flyway?"></a>Can I make changes to the
-        structure of the DB outside of Flyway?<a
-                href="#Can_I_make_changes_to_the_structure_of_the_DB_outside_of_Flyway?" class="section_anchor"></a>
-    </h2>
+<h2><a name="Can_I_make_changes_to_the_structure_of_the_DB_outside_of_Flyway?"></a>Can I make changes to the
+    structure of the DB outside of Flyway?<a
+            href="#Can_I_make_changes_to_the_structure_of_the_DB_outside_of_Flyway?" class="section_anchor"></a>
+</h2>
 
-    <p>No. One of the prerequisites for being able to rely on the metadata in the database and having reliable
-        migrations is that ALL database changes are made by Flyway. No exceptions. The price for this reliability is
-        discipline. Ad hoc changes have no room here as they will literally sabotage your confidence. Even simple things
-        like adding an index can trip over a migration if it has already been added manually before.<br/> <br/>
-    </p>
+<p>No. One of the prerequisites for being able to rely on the metadata in the database and having reliable
+    migrations is that ALL database changes are made by Flyway. No exceptions. The price for this reliability is
+    discipline. Ad hoc changes have no room here as they will literally sabotage your confidence. Even simple things
+    like adding an index can trip over a migration if it has already been added manually before.<br/> <br/>
+</p>
 
-    <h2><a name="How_do_you_repair_the_database_after_a_failed_migration?"></a>How do you repair the database after a
-        failed migration?<a href="#How_do_you_repair_the_database_after_a_failed_migration?" class="section_anchor"></a>
-    </h2>
+<h2><a name="How_do_you_repair_the_database_after_a_failed_migration?"></a>How do you repair the database after a
+    failed migration?<a href="#How_do_you_repair_the_database_after_a_failed_migration?" class="section_anchor"></a>
+</h2>
 
-    <p>You have to follow the following steps: </p>
-    <ol>
-        <li>Manually undo the changes of the migration</li>
-        <li>Invoke the repair command</li>
-        <li>Fix the failed migration</li>
-        <li>Try again</li>
-    </ol>
+<p>You have to follow the following steps: </p>
+<ol>
+    <li>Manually undo the changes of the migration</li>
+    <li>Invoke the repair command</li>
+    <li>Fix the failed migration</li>
+    <li>Try again</li>
+</ol>
 
-    <h2><a name="Why_does_clean_drop_individual_data_objects_instead_of_the_schem"></a>Why does clean drop individual
-        data objects instead of the schema itself?<a
-                href="#Why_does_clean_drop_individual_data_objects_instead_of_the_schem" class="section_anchor"></a>
-    </h2>
+<h2><a name="Why_does_clean_drop_individual_data_objects_instead_of_the_schem"></a>Why does clean drop individual
+    data objects instead of the schema itself?<a
+            href="#Why_does_clean_drop_individual_data_objects_instead_of_the_schem" class="section_anchor"></a>
+</h2>
 
-    <p>Many environments have central databases where developers are assigned a schema they can use. They do have all
-        the rights within the schema, but don&#x27;t have the rights to create or drop schemas themselves. The current
-        implementation of clean is fully compatible with this scenario. </p>
+<p>Many environments have central databases where developers are assigned a schema they can use. They do have all
+    the rights within the schema, but don&#x27;t have the rights to create or drop schemas themselves. The current
+    implementation of clean is fully compatible with this scenario. </p>
 
-    <p>This might be revisited in the future to include DROP SCHEMA capabilities, to keep step with CREATE SCHEMA
-        capabilities outlined in <a href="http://code.google.com/p/flyway/issues/detail?id=74">Issue
-            74</a><br/> <br/></p>
+<p>This might be revisited in the future to include DROP SCHEMA capabilities, to keep step with CREATE SCHEMA
+    capabilities outlined in <a href="http://code.google.com/p/flyway/issues/detail?id=74">Issue
+        74</a><br/> <br/></p>
 
-    <h2 id="db-specific-sql">What is the best strategy for handling database-specific sql?</h2>
+<h2 id="db-specific-sql">What is the best strategy for handling database-specific sql?</h2>
 
-    <p>Assuming you use Derby in TEST and Oracle in PROD.</p>
+<p>Assuming you use Derby in TEST and Oracle in PROD.</p>
 
-    <p>You can use the <code>flyway.locations</code> property. It would look like this:</p>
+<p>You can use the <code>flyway.locations</code> property. It would look like this:</p>
 
-    <p>TEST (Derby): <code>flyway.locations=sql/common,sql/derby</code></p>
-    <p>PROD (Oracle): <code>flyway.locations=sql/common,sql/oracle</code></p>
+<p>TEST (Derby): <code>flyway.locations=sql/common,sql/derby</code></p>
 
-    <p>You could then have the common statements (V1__Create_table.sql) in common and different copies of the
-        DB-specific statements (V2__Alter_table.sql) in the db-specific locations.</p>
+<p>PROD (Oracle): <code>flyway.locations=sql/common,sql/oracle</code></p>
 
-    <p>An even better solution, in my opinion, is to have the same DB in prod and test. Yes, you do lose a bit of
-        performance, but on the other hand you also eliminate another difference (and potential source of errors)
-        between the environments.</p>
+<p>You could then have the common statements (V1__Create_table.sql) in common and different copies of the
+    DB-specific statements (V2__Alter_table.sql) in the db-specific locations.</p>
+
+<p>An even better solution, in my opinion, is to have the same DB in prod and test. Yes, you do lose a bit of
+    performance, but on the other hand you also eliminate another difference (and potential source of errors)
+    between the environments.</p>
 </div>
