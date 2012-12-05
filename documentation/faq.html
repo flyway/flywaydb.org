@@ -23,8 +23,7 @@ subtitle: FAQ
     <li><a href="#Does_Flyway_support_placeholder_replacement?">Does Flyway support placeholder replacement?</a>
     </li>
     <li><a href="#Does_Flyway_depend_on_Spring?">Does Flyway depend on Spring?</a></li>
-    <li><a href="#Can_I_make_changes_to_the_structure_of_the_DB_outside_of_Flyway?">Can I make changes to the
-        structure of the DB outside of Flyway?</a></li>
+    <li><a href="#outside-changes">Can I make structure changes to the DB outside of Flyway?</a></li>
     <li><a href="#How_do_you_repair_the_database_after_a_failed_migration?">How do you repair the database after
         a failed migration?</a></li>
     <li><a href="#Why_does_clean_drop_individual_data_objects_instead_of_the_schem">Why does clean drop
@@ -158,10 +157,7 @@ table = schema_version</pre>
 <p>If you have Spring Jdbc on the classpath, Flyway will be able to load Java migrations making use of Spring&#x27;s
     convenient JdbcTemplate class.<br/> <br/></p>
 
-<h2><a name="Can_I_make_changes_to_the_structure_of_the_DB_outside_of_Flyway?"></a>Can I make changes to the
-    structure of the DB outside of Flyway?<a
-            href="#Can_I_make_changes_to_the_structure_of_the_DB_outside_of_Flyway?" class="section_anchor"></a>
-</h2>
+<h2 id="outside-changes">Can I make structure changes to the DB outside of Flyway?</h2>
 
 <p>No. One of the prerequisites for being able to rely on the metadata in the database and having reliable
     migrations is that ALL database changes are made by Flyway. No exceptions. The price for this reliability is
