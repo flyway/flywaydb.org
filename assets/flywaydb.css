@@ -10,7 +10,7 @@
 }
 
 #tabs i {
-    background-image: url("/assets/bootstrap-2.1.0/img/glyphicons-halflings.png") !important;
+    background-image: url("/assets/bootstrap-2.2.2/img/glyphicons-halflings.png") !important;
 }
 
 #big-sell {
@@ -41,11 +41,14 @@
     margin-right: 10px;
 }
 
-#big-sell a#links {
+#big-sell p#links {
     font-size: 12px;
-    color: #DDDDDD;
     line-height: 100%;
     display: block;
+}
+
+#big-sell p#links a {
+    color: #DDDDDD;
 }
 
 .btn-jumbo {
@@ -163,14 +166,14 @@ hr.soften {
     font-size: 10px;
 }
 
-.well {
+#menu.well {
     padding-left: 0;
     padding-right: 0;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
-.well ul.nav {
+#menu.well ul.nav {
     float: none;
     margin-top: 0;
 }

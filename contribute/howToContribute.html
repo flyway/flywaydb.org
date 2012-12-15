@@ -6,72 +6,54 @@ subtitle: How to Contribute
 <div id="howToContribute">
     <h1><a name="How_to_Contribute"></a>How to Contribute<a href="#How_to_Contribute" class="section_anchor"></a></h1>
 
-    <p>This guide is primarily aimed at people wishing to contribute code to Flyway. If you want to report an issue
-        instead have a look at the <a href="http://code.google.com/p/flyway/issues/list">Issue
-            Tracker.</a><br/> <br/></p>
+    <p>This guide is for people wishing to <strong>contribute code</strong> to Flyway.</p>
 
-    <h2><a name="Set_up_your_Dev_Environment"></a>Set up your Dev Environment<a href="#Set_up_your_Dev_Environment"
-                                                                                class="section_anchor"></a></h2>
+    <p>If you want to report an issue have a look at the <a href="http://code.google.com/p/flyway/issues/list">Issue
+            Tracker</a> instead.</p>
+
+    <h2>Set up your Dev Environment</h2>
 
     <p><a href="devEnvironmentSetup.html">Dev Environment Setup</a>
-    <table class="wikitable">
-        <tr>
-            <td><strong>Tip:</strong> If your feature/bug fix doesn&#x27;t
+    <div class="well well-small">
+            <strong>Tip:</strong> If your feature/bug fix doesn&#x27;t
                 impact the DB-specific code and you do not wish to set up all the databases, Flyway can be built using
                 <strong>mvn clean install -P-MediumTests</strong>. This will
                 disable all tests against the DBs.
-            </td>
-        </tr>
-    </table>
-    </p><p><br/></p>
+    </div>
 
-    <h2><a name="Your_feature/patch/fix/extension"></a>Your feature/patch/fix/extension<a
-            href="#Your_feature/patch/fix/extension" class="section_anchor"></a></h2>
+    <p>Congratulations! You now have a fully functional dev environment for Flyway. You can start contributing!</p>
 
-    <p>Congratulations ! You now have a fully functional development environment for Flyway. You can now start
-        contributing ! </p>
-
-    <p><br/></p>
-
-    <h3><a name="Raise_an_issue"></a>Raise an issue<a href="#Raise_an_issue" class="section_anchor"></a></h3>
+    <h2>Raise an issue</h2>
 
     <p>The first step is to raise an issue in the <a href="http://code.google.com/p/flyway/issues/list">Issue
         Tracker</a>. This issue will be the place where you will be able to communicate with Flyway&#x27;s committers
         and other users. You can use it to present your ideas and gather feedback. </p>
 
-    <p><br/></p>
 
-    <h3><a name="Clone_the_repository"></a>Clone the repository<a href="#Clone_the_repository"
-                                                                  class="section_anchor"></a></h3>
+    <h2>Fork the repository</h2>
 
-    <p>The next step is to create a server-side clone the default repository. Log in with your Google account and press
-        the <i>Create Clone</i> button on the <a href="http://code.google.com/p/flyway/source/checkout">Source
-            Tab</a>. Fill in the details and follow the instructions from there. </p>
+    <p>The next step is to fork the <a href="https://github.com/flyway/flyway">GitHub repository</a>:<p>
 
-    <p>If you have any problem with Google Code and Mercurial, don&#x27;t forget to have a look at the <a
-            href="http://code.google.com/p/support/wiki/MercurialFAQ">Google Code Mercurial FAQ</a>. </p>
+    <img src="/assets/img/fork.png" alt="fork">
 
-    <p><br/></p>
+    <h2>Write awesome code</h2>
 
-    <h3><a name="Write_awesome_code"></a>Write awesome code<a href="#Write_awesome_code" class="section_anchor"></a>
-    </h3>
-
-    <p>Now is the time to implement your stuff. Commit your changes to your clone and don&#x27;t forget to pull and
-        merge the changes from the main repo as they happen. </p>
+    <p>Now is the time to work your magic and implement stuff! Commit your changes to your fork and don't forget to pull and
+        merge the changes from the main repo as they happen.</p>
 
     <p>We use IntelliJ to develop Flyway. The <a href="http://www.jetbrains.com/idea/free_java_ide.html">free
         community edition</a> fits the bill perfectly. </p>
 
     <p>All source code is formatted using the default IntelliJ settings. </p>
 
-    <p><br/></p>
+    <h2>Publish your changes</h2>
 
-    <h3><a name="Publish_your_changes"></a>Publish your changes<a href="#Publish_your_changes"
-                                                                  class="section_anchor"></a></h3>
+    <p>Satisfied with your work? Great! Show the world! Create a <strong>pull request</strong> and briefly describe your changes:</p>
 
-    <p>Satisfied with your work? Great! Now is the time to show the world! Post a link to your repo in the issue you
-        created, and briefly describe your changes. We&#x27;ll have a look at them and if they&#x27;re fine we&#x27;ll
-        merge them in the mainline and include them in the next release! </p>
+    <img src="/assets/img/pull-request.png" alt="Pull Request">
 
-    <p><br/> <strong>Happy coding !</strong><br/> <br/></p>
+    <p>We'll have a look at them and provide you feedback until they're
+        ready to be merged. If they are approved, we'll merge them in the mainline and include them in the next release!</p>
+
+    <p><br/><br/><strong>Happy coding!</strong></p>
 </div>
