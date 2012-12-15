@@ -6,10 +6,41 @@ subtitle: Release Notes
 <div id="releaseNotes">
 <h1>Release Notes</h1>
 
-<p>Thank you all for reporting all these issues and fixes!</p>
+<p>Thank you all for reporting all these issues and contributing fixes!</p>
 
 <div class="release">
     <h2>Unreleased version</h2>
+    <h3>New Features</h3>
+    <ul>
+        <li>
+            <a href="http://code.google.com/p/flyway/issues/detail?id=324">Issue 324</a>
+            <code>flyway.driver</code> is now optional. It is auto-detected based on <code>flyway.url</code> when omitted
+        </li>
+    </ul>
+    <h3>Incompatible Changes</h3>
+    <ul>
+        <li>The deprecated <code>flyway.baseDir</code> property has been removed.</li>
+        <li>The deprecated <code>flyway.basePackage</code> property has been removed.</li>
+    </ul>
+    <h3>Bug fixes</h3>
+    <ul>
+        <li>
+            <a href="http://code.google.com/p/flyway/issues/detail?id=377">Issue 377</a>
+            db/migration-test not recognized as location
+        </li>
+        <li>
+            <a href="http://code.google.com/p/flyway/issues/detail?id=381">Issue 381</a>
+            setLocations does not override deprecated baseDir or basePackage
+        </li>
+        <li>
+            <a href="http://code.google.com/p/flyway/issues/detail?id=384">Issue 384</a>
+            Special umlauts create IndexOutOfBoundsExceptions
+        </li>
+    </ul>
+    <p>
+        Thanks to Gerd Behrmann, Gerrit Brehmer and Viktoras Makauskas
+        for reporting these issues.
+    </p>
 </div>
 
 <div class="release">
