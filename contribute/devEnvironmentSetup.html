@@ -4,219 +4,196 @@ menu: devEnvironmentSetup
 subtitle: Dev Environment Setup
 ---
 <div id="devEnvironmentSetup">
-<h1><a name="Dev_Environment_Setup"></a>Dev Environment Setup<a href="#Dev_Environment_Setup"
-                                                                class="section_anchor"></a></h1>
+    <h1><a name="Dev_Environment_Setup"></a>Dev Environment Setup<a href="#Dev_Environment_Setup"
+                                                                    class="section_anchor"></a></h1>
 
-<p>To contribute to Flyway you will need to set up your development environment so that you can compile Flyway and
-    run its test suite. </p>
+    <p>To contribute to Flyway you will need to set up your development environment so that you can compile Flyway and
+        run its test suite. </p>
 
-<p>For this you will need to set up the various DBMS Flyway supports as well as Mercurial, JDK 6, Maven, Ant and your
-    IDE.<br/> <br/></p>
+    <p>For this you will need to set up the various databases Flyway supports as well as Git, JDK 6, Maven, Ant and
+        your IDE.</p>
 
-<h2><a name="Mercurial"></a>Mercurial<a href="#Mercurial" class="section_anchor"></a></h2>
+    <h2>Git</h2>
 
-<p>Flyway uses Mercurial for version control. Download the latest version here: <a
-        href="http://mercurial.selenic.com/wiki/Download"
-        >http://mercurial.selenic.com/wiki/Download</a></p>
+    <p>Flyway uses Git for version control. Download the latest version here: <a
+            href="http://msysgit.github.com/"
+            >http://msysgit.github.com/</a></p>
 
-<p>Alternatively Windows users can use <a href="http://tortoisehg.bitbucket.org/">TortoiseHg</a>
-    (which comes bundled with the command-line client) </p>
+    <p>Make sure the directory containing the binaries has been added the PATH. If you downloaded an installer this
+        should have been taken care of for you.</p>
 
-<p>Make sure the directory containing the binaries has been added the PATH. If you downloaded an installer this
-    should have been taken care of for you.<br/> <br/></p>
+    <h2><a name="JDK"></a>JDK<a href="#JDK" class="section_anchor"></a></h2>
 
-<h2><a name="JDK"></a>JDK<a href="#JDK" class="section_anchor"></a></h2>
+    <p>Flyway depends on JDK 6. So grab the latest version here: <a
+            href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a>
+    </p>
 
-<p>Flyway depends on JDK 6. So grab the latest version here: <a
-        href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a>
-</p>
+    <p>After the installation is complete</p>
+    <ul>
+        <li>set up an environment variable called JAVA_HOME that points to your JDK installation directory</li>
+        <li>add the bin directory under JAVA_HOME to the PATH</li>
+    </ul>
 
-<p>After the installation is complete
-<ul>
-    <li>set up an environment variable called JAVA_HOME that points to your JDK installation directory</li>
-    <li>add the bin directory under JAVA_HOME to the PATH</li>
-</ul>
-<br/> </p><h2><a name="Maven"></a>Maven<a href="#Maven" class="section_anchor"></a></h2>
+    <h2>Maven</h2>
 
-<p>Flyway depends on Maven 2. So grab the latest version here: <a href="http://maven.apache.org/download.html"
-        >http://maven.apache.org/download.html</a>
-</p>
+    <p>Flyway depends on Maven 2. So grab the latest version here: <a href="http://maven.apache.org/download.html"
+            >http://maven.apache.org/download.html</a>
+    </p>
 
-<p>After the installation is complete
-<ul>
-    <li>set up an environment variable called M2_HOME that points to your Maven installation directory</li>
-    <li>add the bin directory under M2_HOME to the PATH</li>
-</ul>
-<br/> </p><h2><a name="Ant"></a>Ant<a href="#Ant" class="section_anchor"></a></h2>
+    <p>After the installation is complete</p>
+    <ul>
+        <li>set up an environment variable called M2_HOME that points to your Maven installation directory</li>
+        <li>add the bin directory under M2_HOME to the PATH</li>
+    </ul>
 
-<p>Flyway depends on Ant 1.8.4 and later. So grab the latest version here: <a
-        href="http://ant.apache.org/bindownload.cgi">http://ant.apache.org/bindownload.cgi</a></p>
+    <h2>Ant</h2>
 
-<p>After the installation is complete
-<ul>
-    <li>set up an environment variable called ANT_HOME that points to your Ant installation directory</li>
-    <li>add the bin directory under ANT_HOME to the PATH</li>
-</ul>
-<br/> </p><h2><a name="IDE"></a>IDE<a href="#IDE" class="section_anchor"></a></h2>
+    <p>Flyway depends on Ant 1.8.4 and later. So grab the latest version here: <a
+            href="http://ant.apache.org/bindownload.cgi">http://ant.apache.org/bindownload.cgi</a></p>
 
-<p>We use IntelliJ 11.1 for development. Eclipse should be fine too. Just keep in mind that Eclipse has different
-    defaults for code formatting and import reordering. Keep this in mind so merge conflicts can be reduced to a
-    minimum.<br/> <br/></p>
+    <p>After the installation is complete</p>
+    <ul>
+        <li>set up an environment variable called ANT_HOME that points to your Ant installation directory</li>
+        <li>add the bin directory under ANT_HOME to the PATH</li>
+    </ul>
 
-<h2><a name="Oracle"></a>Oracle<a href="#Oracle" class="section_anchor"></a></h2>
+    <h2>IDE</h2>
 
-<p>The best Oracle edition for development is the free XE. Grab your copy here: <a
-        href="http://www.oracle.com/technetwork/database/express-edition/downloads/index.html">http://www.oracle.com/technetwork/database/express-edition/downloads/index.html</a>
-</p>
+    <p>We use IntelliJ 11.1 for development. Eclipse should be fine too. Just keep in mind that Eclipse has different
+        defaults for code formatting and import reordering. Keep this in mind so merge conflicts can be reduced to a
+        minimum.<br/> <br/></p>
 
-<p>Install it with all the default settings and use <i>flyway</i> as the password for the system user. </p>
+    <h2><a name="Oracle"></a>Oracle<a href="#Oracle" class="section_anchor"></a></h2>
 
-<p>After the installation is complete, execute sqlplus SYSTEM/flyway@XE. Commands:
+    <p>The best Oracle edition for development is the free XE. Grab your copy here: <a
+            href="http://www.oracle.com/technetwork/database/express-edition/downloads/index.html">http://www.oracle.com/technetwork/database/express-edition/downloads/index.html</a>
+    </p>
+
+    <p>Install it with all the default settings and use <code>flyway</code> as the password for the system user. </p>
+
+    <p>After the installation is complete, execute sqlplus SYSTEM/flyway@XE. Commands:</p>
 <pre class="prettyprint">
 alter system set sessions=250 scope=spfile;
 alter system set processes=250 scope=spfile;
 </pre>
-</p>
-<p>Optionally you can also use these commands to disable Oracle XDB's http port (default: 8080) to avoid collisions with
-    other tools:
+    <p>Optionally you can also use these commands to disable Oracle XDB's http port (default: 8080) to avoid collisions
+        with
+        other tools:</p>
 <pre class="prettyprint">
 begin
     dbms_xdb.sethttpport('0');
 end;
 /
 </pre>
-</p>
-<p>Now, <strong>restart</strong> the database. </p>
+    <p>Now, <strong>restart</strong> the database. </p>
 
-<p>The Oracle Jdbc drivers aren&#x27;t available from Maven Central. You need to download your copy of
-    <i>ojdbc5.jar</i> here: <a
-            href="http://www.oracle.com/technetwork/database/enterprise-edition/jdbc-112010-090769.html"
-            >http://www.oracle.com/technetwork/database/enterprise-edition/jdbc-112010-090769.html</a>
-</p>
+    <p>The Oracle Jdbc drivers aren&#x27;t available from Maven Central. You need to download your copy of
+        <code>ojdbc5.jar</code> here: <a
+                href="http://www.oracle.com/technetwork/database/enterprise-edition/jdbc-112010-090769.html"
+                >http://www.oracle.com/technetwork/database/enterprise-edition/jdbc-112010-090769.html</a>
+    </p>
 
-<p>Now rename the jar as <i>ojdbc5-11.2.0.2.0.jar</i> and add it to your local Maven repository under <i>com/oracle/ojdbc5/11.2.0.2.0</i>.<br/>
-    <br/></p>
+    <p>Now rename the jar as <code>ojdbc5-11.2.0.2.0.jar</code> and add it to your local Maven repository under <code>com/oracle/ojdbc5/11.2.0.2.0</code>.</p>
 
-<h2><a name="MySQL"></a>MySQL<a href="#MySQL" class="section_anchor"></a></h2>
+    <h2><a name="MySQL"></a>MySQL<a href="#MySQL" class="section_anchor"></a></h2>
 
-<p>Flyway supports MySQL 5.1 and later. You can grab the latest 5.1 version here: <a
-        href="http://dev.mysql.com/downloads/mysql/5.1.html#downloads">http://dev.mysql.com/downloads/mysql/5.1.html#downloads</a>
-</p>
+    <p>Flyway supports MySQL 5.1 and later. You can grab the latest 5.1 version here: <a
+            href="http://dev.mysql.com/downloads/mysql/5.1.html#downloads">http://dev.mysql.com/downloads/mysql/5.1.html#downloads</a>
+    </p>
 
-<p>Install it with the defaults, except for the following settings:
-<ul>
-    <li>Online Transaction Processing</li>
-    <li>Include Bin Directory in PATH</li>
-</ul>
-</p><p>Use <i>flyway</i> as the password for the root user. </p>
+    <p>Install it with the defaults, except for the following settings:</p>
+    <ul>
+        <li>Online Transaction Processing</li>
+        <li>Include Bin Directory in PATH</li>
+    </ul>
+    <p>Use <code>flyway</code> as the password for the root user.</p>
 
-<p>If the configuration hangs, try again after turning off User Account Control.<br/> <br/></p>
+    <p>If the configuration hangs, try again after turning off User Account Control.</p>
 
-<h2><a name="PostgreSQL"></a>PostgreSQL<a href="#PostgreSQL" class="section_anchor"></a></h2>
+    <h2><a name="PostgreSQL"></a>PostgreSQL<a href="#PostgreSQL" class="section_anchor"></a></h2>
 
-<p>Flyway supports PostgreSQL 9.0 and later. You can grab the latest 9.0 version here: <a
-        href="http://www.postgresql.org/download/">http://www.postgresql.org/download/</a></p>
+    <p>Flyway supports PostgreSQL 9.0 and later. You can grab the latest 9.0 version here: <a
+            href="http://www.postgresql.org/download/">http://www.postgresql.org/download/</a></p>
 
-<p>Install it with all the default settings and use <i>flyway</i> as the password for the postgres user. </p>
+    <p>Install it with all the default settings and use <code>flyway</code> as the password for the postgres user. </p>
 
-<p>After the installation is complete, add <i>POSTGRESQL-INSTALL-DIR</i>/bin to the PATH </p>
+    <p>After the installation is complete, add <code>POSTGRESQL-INSTALL-DIR</code>/bin to the PATH </p>
 
-<p>If you have PostgreSQL on a different machine/VM you&#x27;ll have to edit the pg_hba.conf file to allow
-    connections from other machines than localhost: </p>
+    <p>If you have PostgreSQL on a different machine/VM you&#x27;ll have to edit the pg_hba.conf file to allow
+        connections from other machines than localhost: </p>
 
-<p>E.g. edit C:\Programme\PostgreSQL\9.0\data\pg_hba.conf: </p><pre class="prettyprint">  # TYPE  DATABASE        USER            CIDR-ADDRESS            METHOD
+    <p>E.g. edit C:\Programme\PostgreSQL\9.0\data\pg_hba.conf: </p><pre class="prettyprint">  # TYPE  DATABASE        USER            CIDR-ADDRESS            METHOD
      host    all             all             127.0.0.1/0		     md5</pre>
-<blockquote>see <a href="http://developer.postgresql.org/pgdocs/postgres/auth-pg-hba-conf.html">http://developer.postgresql.org/pgdocs/postgres/auth-pg-hba-conf.html</a><br/>
-</blockquote>
-<p><br/></p>
+    <blockquote>see <a href="http://developer.postgresql.org/pgdocs/postgres/auth-pg-hba-conf.html">http://developer.postgresql.org/pgdocs/postgres/auth-pg-hba-conf.html</a><br/>
+    </blockquote>
 
-<h2><a name="SQL_Server"></a>SQL Server<a href="#SQL_Server" class="section_anchor"></a></h2>
+    <h2><a name="SQL_Server"></a>SQL Server<a href="#SQL_Server" class="section_anchor"></a></h2>
 
-<p>Flyway supports SQL Server 2008 and later. You can grab the latest free Express version with Management Tools
-    here: <a href="http://www.microsoft.com/en-us/download/details.aspx?id=22973">http://www.microsoft.com/en-us/download/details.aspx?id=22973</a>
-</p>
+    <p>Flyway supports SQL Server 2008 and later. You can grab the latest free Express version with Management Tools
+        here: <a href="http://www.microsoft.com/en-us/download/details.aspx?id=22973">http://www.microsoft.com/en-us/download/details.aspx?id=22973</a>
+    </p>
 
-<p>Install it with the defaults, except for the following settings:
-<ul>
-    <li>Authentication Mode: Mixed Mode</li>
-    <li>sa password: <i>flyway</i></li>
-</ul>
-</p><p>
-<table class="wikitable">
-    <tr>
-        <td><strong>Hint for Windows XP installation</strong> If you
-            install SQLServer under Windows XP, use the Network Service Account during installation for starting the
-            SQL Engine, if you use Local Service the engine might not start
-        </td>
-    </tr>
-</table>
-</p><p>After the installation is complete, enable TCP/IP:
-<ul>
-    <li>Launch the Sql Server Configuration Manager</li>
-    <li>Go to SQL Server Network Configuration -&gt; Protocols for SQLEXPRESS</li>
-    <li>Enable TCP/IP</li>
-    <li>TCP/IP Properties -&gt; IP Addresses -&gt; IPAll</li>
-    <li>TCP Dynamic Ports: <i>blank</i></li>
-    <li>TCP Port: 1433</li>
-</ul>
-</p><p>Then enable remote access:
-<ul>
-    <li>Launch the Sql Server Configuration Manager</li>
-    <li>SQL Server Services -&gt; SQL Server Browser -&gt; Properties -&gt; Service Tab</li>
-    <li>Start Mode: Automatic</li>
-    <li>OK</li>
-    <li>SQL Server Browser -&gt; Start</li>
-    <li>SQL Server -&gt; Restart</li>
-</ul>
-</p><p>The Microsoft SQL Server Jdbc drivers aren&#x27;t available from Maven Central. So you&#x27;ll need to add
-    your copy of <i>sqljdbc4.jar</i> to your local Maven repository yourself. </p>
+    <p>Install it with the defaults, except for the following settings:</p>
+    <ul>
+        <li>Authentication Mode: Mixed Mode</li>
+        <li>sa password: <code>flyway</code></li>
+    </ul>
+    <div class="well well-small">
+        <strong>Tip for Windows XP installation:</strong><br/> If you
+                install SQLServer under Windows XP, use the <code>Network Service</code> Account during installation for starting the
+                SQL Engine, if you use Local Service the engine might not start
+    </div>
+    <p>After the installation is complete, enable TCP/IP:</p>
+    <ul>
+        <li>Launch the Sql Server Configuration Manager</li>
+        <li>Go to SQL Server Network Configuration -&gt; Protocols for SQLEXPRESS</li>
+        <li>Enable TCP/IP</li>
+        <li>TCP/IP Properties -&gt; IP Addresses -&gt; IPAll</li>
+        <li>TCP Dynamic Ports: <em>blank</em></li>
+        <li>TCP Port: 1433</li>
+    </ul>
+    <p>Then enable remote access:</p>
+    <ul>
+        <li>Launch the Sql Server Configuration Manager</li>
+        <li>SQL Server Services -&gt; SQL Server Browser -&gt; Properties -&gt; Service Tab</li>
+        <li>Start Mode: Automatic</li>
+        <li>OK</li>
+        <li>SQL Server Browser -&gt; Start</li>
+        <li>SQL Server -&gt; Restart</li>
+    </ul>
+    <p>The Microsoft SQL Server Jdbc drivers aren&#x27;t available from Maven Central. So you&#x27;ll need to add
+    your copy of <code>sqljdbc4.jar</code> to your local Maven repository yourself.</p>
 
-<p>Download the 3.0.1301.101 driver from here: <a
-        href="http://www.microsoft.com/download/en/details.aspx?displaylang=en&amp;id=21599">http://www.microsoft.com/download/en/details.aspx?displaylang=en&amp;id=21599</a>
-</p>
+    <p>Download the 3.0.1301.101 driver from here: <a
+            href="http://www.microsoft.com/download/en/details.aspx?displaylang=en&amp;id=21599">http://www.microsoft.com/download/en/details.aspx?displaylang=en&amp;id=21599</a>
+    </p>
 
-<p>Extract the archive, go to <i>sqljdbc_3.0/enu</i> and rename <i>sqljdbc4.jar</i> into
-    <i>sqljdbc4-3.0.1301.101.jar</i>.
-    Copy <i>sqljdbc4-3.0.1301.101.jar</i> to <i>com/microsoft/sqlserver/sqljdbc4/3.0.1301.101</i> in your local
-    Maven repository.<br/> <br/></p>
+    <p>Extract the archive, go to <code>sqljdbc_3.0/enu</code> and rename <code>sqljdbc4.jar</code> into
+        <code>sqljdbc4-3.0.1301.101.jar</code>.
+        Copy <code>sqljdbc4-3.0.1301.101.jar</code> to <code>com/microsoft/sqlserver/sqljdbc4/3.0.1301.101</code> in your local
+        Maven repository.</p>
 
-<h2><a name="DB2"></a>DB2<a href="#DB2" class="section_anchor"></a></h2>
+    <h2><a name="DB2"></a>DB2<a href="#DB2" class="section_anchor"></a></h2>
 
-<p>Flyway supports DB2 9.7.0.7 and later. You can grab the free Express edition here: <a
-        href="http://www.ibm.com/software/data/db2/express/download.html">http://www.ibm.com/software/data/db2/express/download.html</a>
-</p>
+    <p>Flyway supports DB2 9.7.0.7 and later. You can grab the free Express edition here: <a
+            href="http://www.ibm.com/software/data/db2/express/download.html">http://www.ibm.com/software/data/db2/express/download.html</a>
+    </p>
 
-<p>Install it with the defaults, except for the following settings:
-<ul>
-    <li>Installation Type: Compact</li>
-    <li>Installation without saving a response file</li>
-</ul>
-</p><p>Use <i>flyway</i> as the password for the db2admin user. </p>
+    <p>Install it with the defaults, except for the following settings:</p>
+    <ul>
+        <li>Installation Type: Compact</li>
+        <li>Installation without saving a response file</li>
+    </ul>
+    <p>Use <code>flyway</code> as the password for the db2admin user. </p>
 
-<p>The DB2 Jdbc drivers aren&#x27;t available from Maven Central. So you&#x27;ll need to add your copy of
-    <i>db2jcc.jar</i>
-    to your local Maven repository yourself. </p>
+    <p>The DB2 Jdbc drivers aren&#x27;t available from Maven Central. So you&#x27;ll need to add your copy of
+        <code>db2jcc.jar</code>
+        to your local Maven repository yourself. </p>
 
-<p>Download the 3.62.56 driver from here: <a href="https://www-304.ibm.com/support/docview.wss?uid=swg21363866"
-        >https://www-304.ibm.com/support/docview.wss?uid=swg21363866</a>
-</p>
+    <p>Download the 3.62.56 driver from here: <a href="https://www-304.ibm.com/support/docview.wss?uid=swg21363866"
+            >https://www-304.ibm.com/support/docview.wss?uid=swg21363866</a>
+    </p>
 
-<p>Extract the archive and then rename <i>db2jcc.jar</i> into <i>db2jcc-3.62.56.jar</i>. Copy
-    <i>db2jcc-3.62.56.jar</i> to <i>com/ibm/db2/db2jcc/3.62.56</i> in your local Maven repository.<br/>
-    <br/></p>
-
-<h2><a name="Create_the_test_DBs"></a>Create the test DBs<a href="#Create_the_test_DBs" class="section_anchor"></a>
-</h2>
-
-<p>Execute <i>createDBs.cmd</i> to create all local test DBs. </p>
-
-<p>
-<table class="wikitable">
-    <tr>
-        <td><strong>Tip:</strong> If you wish to install the DBs on
-            different hosts or ports, or use different usernames and passwords, you can override the default setting
-            in <strong>${user.home}/flyway-mediumtests.properties</strong></td>
-    </tr>
-</table>
-</p><p><br/></p>
+    <p>Extract the archive and then rename <code>db2jcc.jar</code> into <code>db2jcc-3.62.56.jar</code>. Copy
+        <code>db2jcc-3.62.56.jar</code> to <code>com/ibm/db2/db2jcc/3.62.56</code> in your local Maven repository.</p>
 </div>
