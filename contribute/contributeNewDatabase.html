@@ -7,17 +7,6 @@ subtitle: New Database
     <h1><a name="Adding_support_for_a_new_Database"></a>Adding support for a new Database<a
             href="#Adding_support_for_a_new_Database" class="section_anchor"></a></h1>
 
-    <p>These are the steps to follow to add support for a new database to Flyway. </p><h4><a name="Prerequisites"></a>Prerequisites<a
-        href="#Prerequisites" class="section_anchor"></a></h4>
-    <ul>
-        <li>Enhancement Issue created in Issue Tracker to explain your intent and centralize the discussion (make sure
-            to mention the exact DBMS you which to support, which versions of the DBMS will be supported, if there is a
-            free edition, where can it be downloaded)
-        </li>
-        <li>Dev Environment Setup</li>
-        <li>Flyway building successfully locally</li>
-        <li>Mercurial Clone Repository created on Google Code</li>
-    </ul>
     <h4><a name="Code_Changes"></a>Code Changes<a href="#Code_Changes" class="section_anchor"></a></h4>
     <ul>
         <li>Extend DbSupport</li>
@@ -28,13 +17,4 @@ subtitle: New Database
         <li>Extend MigrationTestCase and make sure all tests are green</li>
         <li>Extend ConcurrentMigrationTestCase and make sure test is green</li>
     </ul>
-    <h4><a name="Finishing_Touches"></a>Finishing Touches<a href="#Finishing_Touches" class="section_anchor"></a></h4>
-    <ul>
-        <li>Make sure your Mercurial repo includes all the latest changes from mainline</li>
-        <li>Push your changes to your mercurial repo</li>
-        <li>Link to your repo from your issue</li>
-        <li>Ask for feedback and rework as necessary</li>
-    </ul>
-    <p>Once this is complete, and the quality meets our standards (in everyone&#x27;s best interest we can be very
-        picky), it will then become a candidate for inclusion in the next release. </p>
 </div>
