@@ -73,8 +73,12 @@ subtitle: Dev Environment Setup
 
     <p>After the installation is complete, execute sqlplus SYSTEM/flyway@XE. Commands:</p>
 <pre class="prettyprint">
+-- Increase the number of concurrent connections
 alter system set sessions=250 scope=spfile;
 alter system set processes=250 scope=spfile;
+
+-- Disable password expiry in Oracle 11g
+ALTER PROFILE DEFAULT LIMIT FAILED_LOGIN_ATTEMPTS UNLIMITED PASSWORD_LIFE_TIME UNLIMITED;
 </pre>
     <p>Optionally you can also use these commands to disable Oracle XDB's http port (default: 8080) to avoid collisions
         with
