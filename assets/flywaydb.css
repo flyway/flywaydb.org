@@ -166,6 +166,12 @@ hr.soften {
     font-size: 10px;
 }
 
+#footer #intellij {
+    left: 50%;
+    position: relative;
+    margin-left: -64px;
+}
+
 #menu.well {
     padding-left: 0;
     padding-right: 0;
