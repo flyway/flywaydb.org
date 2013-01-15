@@ -6,15 +6,45 @@ subtitle: Migrations
 <div id="migrations">
     <h1>Migrations</h1>
 
-    <p>Flyway updates the database from one version to the next using <strong>migrations</strong>.<br/> <br/>
-        Each migration must have a <strong>unique version</strong> and optionally a description. </p>
+    <p>Flyway updates the database from one version to the next using <strong>migrations</strong>.</p>
+
+    <p>Each migration must have a <strong>unique version</strong> and a description.</p>
 
     <p>Not all migrations are equally complex, therefore Flyway support both <a
             href="/documentation/migration/sql.html">Sql</a> and <a href="/documentation/migration/java.html">Java</a> migrations.
     </p>
 
     <p><a href="/documentation/migration/sql.html">Sql Migrations</a> are the most common and should fit the vast majority of
-        the cases.<br/><br/> <a href="/documentation/migration/java.html">Java Migrations</a> are for advanced changes
+        the cases.</p>
+
+    <p><a href="/documentation/migration/java.html">Java Migrations</a> are for advanced changes
         that are difficult or impossible to accomplish using Sql.<br/> This includes dealing with LOBs and advanced
-        bulk data loads and transformations. </p>
+        bulk data loads and transformations.</p>
+
+    <p>Flyway <strong>sorts</strong> all migrations <strong>by version</strong> and executes them in order.</p>
+
+    <h2>Versions</h2>
+
+    <p>A version must have the following structure:</p>
+
+    <ul>
+        <li>One or more numeric parts</li>
+        <li>Separated by a dot (.) or an underscore (_)</li>
+        <li>Underscores are replaced by dots at runtime</li>
+        <li>Leading zeroes are ignored in each part</li>
+    </ul>
+
+    <p>Examples of valid versions:</p>
+
+    <ul>
+        <li>1</li>
+        <li>001</li>
+        <li>5.2</li>
+        <li>5_2 (5.2 at runtime)</li>
+        <li>1.2.3.4.5.6.7.8.9</li>
+        <li>205.68</li>
+        <li>20130115113556</li>
+        <li>2013.1.15.11.35.56</li>
+        <li>2013.01.15.11.35.56</li>
+    </ul>
 </div>
