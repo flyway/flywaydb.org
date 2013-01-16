@@ -29,6 +29,7 @@ subtitle: FAQ
     <li><a href="#Why_does_clean_drop_individual_data_objects_instead_of_the_schem">Why does clean drop
         individual data objects instead of the schema itself?</a></li>
     <li><a href="#db-specific-sql">What is the best strategy for handling database-specific sql?</a></li>
+    <li><a href="#case-sensitive">Why is the schema_version table case-sensitive?</a></li>
 </ul>
 
 <h2><a name="I_found_a_defect._Where_should_I_report_it?"></a>I found a defect. Where should I report
@@ -206,4 +207,12 @@ table = schema_version</pre>
 <p>An even better solution, in my opinion, is to have the same DB in prod and test. Yes, you do lose a bit of
     performance, but on the other hand you also eliminate another difference (and potential source of errors)
     between the environments.</p>
+
+<h2 id="case-sensitive">Why is the schema_version table case-sensitive?</h2>
+
+<p>The schema_version case-sensitive due to the quotes used in its creation script. This allows for characters not supported in identifiers otherwise.</p>
+
+<p>The name (and case) can be configured through the <code>flyway.table</code> property.</p>
+
+<p>The table is an internal Flyway implementation detail and not part of the a public API. It can therefore can change from time to time.</p>
 </div>
