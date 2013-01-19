@@ -151,7 +151,9 @@ table = schema_version</pre>
 
 <h2 id="repair">How do you repair the database after a failed migration?</h2>
 
-<p>You have to follow the following steps: </p>
+<p>If your database supports DDL transactions, Flyway does the work for you.</p>
+
+<p>If your database doesn't, these are the steps to follow:</p>
 <ol>
     <li>Manually undo the changes of the migration</li>
     <li>Invoke the repair command</li>
