@@ -167,9 +167,10 @@ hr.soften {
 }
 
 #footer #intellij {
-    left: 50%;
     position: relative;
-    margin-left: -64px;
+    left: auto;
+    right: auto;
+    display: inline-block;
 }
 
 #menu.well {
