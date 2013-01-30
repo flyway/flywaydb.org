@@ -34,6 +34,8 @@ subtitle: Release Notes
         <li>The deprecated <code>flyway.baseDir</code> property has been removed.</li>
         <li>The deprecated <code>flyway.basePackage</code> property has been removed.</li>
         <li>The default for <code>flyway.initVersion</code> has been changed to 1 (was 0).</li>
+        <li>Invalid locations in <code>flyway.locations</code> now result in an exception instead of being silently ignored.</li>
+        <li>Command-line: The default for <code>flyway.locations</code> has been changed to <code>filesystem:&lt;&lt;INSTALL-DIR&gt;&gt;/sql</code></li>
     </ul>
     <h3>Changes</h3>
     <ul>
@@ -77,6 +79,7 @@ subtitle: Release Notes
             Uninstantiatable JdbcMigration tests should throw exception
         </li>
         <li>
+            <a href="https://github.com/flyway/flyway/pull/9">Pull Request 9</a>
             Command-line Unix: Resolve symlinks in flyway.sh
         </li>
     </ul>
