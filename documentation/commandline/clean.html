@@ -6,7 +6,8 @@ subtitle: 'Command Line : Clean'
 <div id="commandLineClean">
     <h1>Command Line: Clean</h1>
 
-    <p>Drops all objects in the schema without dropping the schema itself.</p>
+    <p>Drops all objects (tables, views, procedures, triggers, ...) in the configured schemas.<br/>
+        The schemas are cleaned in the order specified by the <code>schemas</code> property.</p>
 
     <h2>Usage</h2>
 
@@ -57,10 +58,8 @@ subtitle: 'Command Line : Clean'
             <td>schemas</td>
             <td>NO</td>
             <td><i>default schema of the connection</i></td>
-            <td>Comma-separated list of schemas managed by Flyway.<br/>
-                The first schema in the list will be automatically set as the default one during
-                the migration. It will also be the one containing the metadata table.<br/>
-                These schema names are case-sensitive.
+            <td>Comma-separated case-sensitive list of schemas managed by Flyway.<br/>
+                The schemas will be cleaned in the order of this list.
             </td>
         </tr>
         </tbody>

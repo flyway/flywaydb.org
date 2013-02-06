@@ -6,7 +6,8 @@ subtitle: 'mvn flyway:clean'
 <div id="mavenGoalClean">
     <h1>Maven Goal: Clean</h1>
 
-    <p>Drops all objects in the schema without dropping the schema itself. </p>
+    <p>Drops all objects (tables, views, procedures, triggers, ...) in the configured schemas.<br/>
+        The schemas are cleaned in the order specified by the <code>schemas</code> property.</p>
 
     <h2>Default Phase</h2>
     <ul>
@@ -66,10 +67,8 @@ subtitle: 'mvn flyway:clean'
             <td>schemas</td>
             <td>NO</td>
             <td><i>default schema of the connection</i></td>
-            <td>List of schemas managed by Flyway.<br/>
-                The first schema in the list will be automatically set as the default one during
-                the migration. It will also be the one containing the metadata table.<br/>
-                These schema names are case-sensitive.
+            <td>Case-sensitive list of schemas managed by Flyway.<br/>
+                The schemas will be cleaned in the order of this list.
             </td>
         </tr>
         </tbody>

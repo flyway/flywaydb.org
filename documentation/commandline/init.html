@@ -57,10 +57,8 @@ subtitle: 'Command Line : Init'
             <td>schemas</td>
             <td>NO</td>
             <td><i>default schema of the connection</i></td>
-            <td>Comma-separated list of schemas managed by Flyway.<br/>
-                The first schema in the list will be automatically set as the default one during
-                the migration. It will also be the one containing the metadata table.<br/>
-                These schema names are case-sensitive.
+            <td>Comma-separated case-sensitive list of schemas managed by Flyway.<br/>
+                The first schema will be the one containing the metadata table.
             </td>
         </tr>
         <tr>
