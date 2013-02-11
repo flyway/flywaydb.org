@@ -53,6 +53,7 @@ subtitle: Release Notes
         <li>Deprecated <code><del>flyway.initialDescription</del></code>. Use <code>flyway.initDescription</code> instead.</li>
         <li>Flyway now enforces the <a href="/documentation/migration#versions">rules for what constitutes a valid version</a>.</li>
         <li>SqlServer: Flyway is now tested with Jtds 1.2.7 (was 1.2.4).</li>
+        <li>H2: Flyway is now tested with H2 1.3.170 (still compatible with 1.2.137 and above).</li>
         <li>
             <a href="http://code.google.com/p/flyway/issues/detail?id=244">Issue 244</a>
             Flyway can now also be built with JDK 7 and above. (Minimum is still JDK 6)
@@ -99,6 +100,10 @@ subtitle: Release Notes
         <li>
             <a href="http://code.google.com/p/flyway/issues/detail?id=427">Issue 427</a>
             Support for anonymous blocks in postgresql
+        </li>
+        <li>
+            <a href="http://code.google.com/p/flyway/issues/detail?id=430">Issue 430</a>
+            H2 breaks when DATABASE_TO_UPPER=FALSE
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/pull/9">Pull Request 9</a>
