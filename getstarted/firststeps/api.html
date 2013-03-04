@@ -28,7 +28,7 @@ subtitle: API - First Steps
 
     <h2>Adding the dependencies</h2>
 
-    <p>Let's Flyway and H2 to our new <code>pom.xml</code>:</p>
+    <p>Let's add Flyway and H2 to our new <code>pom.xml</code>:</p>
     <pre class="prettyprint">&lt;project ...&gt;
     ...
     &lt;dependencies&gt;
@@ -47,11 +47,10 @@ subtitle: API - First Steps
     ...
 &lt;/project&gt;</pre>
 
-    <p>In order to be able to execute our program, we also add the</p>
-
     <h2>Integrating Flyway</h2>
 
-    <p>Let's integrate Flyway into <code>src/main/java/foobar/App.java</code> and point it to our database:</p>
+    <p>Now it's time to integrate Flyway into <code>src/main/java/foobar/App.java</code> and point it to our database:
+    </p>
 
     <pre class="prettyprint">package foobar;
 
@@ -72,11 +71,8 @@ public class App {
 
     <h2>Creating the first migration</h2>
 
-    <p>First, let's create the directory which will hold the actual migrations files:</p>
-    <pre class="console">bar&gt; mkdir "src/main/resources/db/migration"</pre>
-
-    <p>Now we can create a first migration called
-        <code>src/main/resources/db/migration/V1__Create_person_table.sql</code>:</p>
+    <p>We create the migration directory <code>src/main/resources/db/migration</code>.<br/>
+        Followed by a first migration called <code>src/main/resources/db/migration/V1__Create_person_table.sql</code>:</p>
     <pre class="prettyprint">create table PERSON (
     ID int not null,
     NAME varchar(100) not null
@@ -110,17 +106,18 @@ INFO: Successfully applied 1 migration to schema "PUBLIC" (execution time 00:00.
 
     <h2>Summary</h2>
 
-    <p>In this brief tutorial we saw</p>
+    <p>In this brief tutorial we saw how to</p>
     <ul>
-        <li>how to integrate Flyway into a project</li>
+        <li>integrate Flyway into a project</li>
         <li>configure it so it can talk to our database</li>
         <li>write our first couple of migrations</li>
     </ul>
     <p>These migrations were then successfully found and executed.</p>
 
     <h2>Next steps</h2>
-    <p>
-    <a class="btn btn-large btn-primary" href="/documentation/api.html">Read the documentation</a>
-    <a class="btn btn-large" href="/documentation/javadoc">Browse the Javadoc</a>
+
+    <p class="next-steps">
+        <a class="btn btn-large btn-primary" href="/documentation/api.html">Read the documentation</a>
+        <a class="btn btn-large" href="/documentation/javadoc">Browse the Javadoc</a>
     </p>
 </div>
