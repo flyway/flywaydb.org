@@ -57,8 +57,8 @@ subtitle: Release Notes
     </ul>
     <h3>Changes</h3>
     <ul>
-        <li>Deprecated <code><del>flyway.initialVersion</del></code>. Use <code>flyway.initVersion</code> instead.</li>
-        <li>Deprecated <code><del>flyway.initialDescription</del></code>. Use <code>flyway.initDescription</code> instead.</li>
+        <li>Deprecated <code><del>flyway.initVersion</del></code>. Use <code>flyway.initVersion</code> instead.</li>
+        <li>Deprecated <code><del>flyway.initDescription</del></code>. Use <code>flyway.initDescription</code> instead.</li>
         <li>Flyway now enforces the <a href="/documentation/migration#versions">rules for what constitutes a valid version</a>.</li>
         <li>SqlServer: Flyway is now tested with Jtds 1.2.7 (was 1.2.4).</li>
         <li>H2: Flyway is now tested with H2 1.3.170 (still compatible with 1.2.137 and above).</li>
@@ -179,7 +179,7 @@ subtitle: Release Notes
         </li>
         <li>
             <a href="http://code.google.com/p/flyway/issues/detail?id=379">Issue 379</a>
-            maven flyway:migrate initOnMigrate and initialVersion
+            maven flyway:migrate initOnMigrate and initVersion
         </li>
         <li>
             <a href="http://code.google.com/p/flyway/issues/detail?id=380">Issue 380</a>
@@ -264,7 +264,7 @@ subtitle: Release Notes
     </li>
     <li>
         <a href="http://code.google.com/p/flyway/issues/detail?id=105">Issue 105</a>
-        <code>initOnMigrate</code> flag to automatically initialize a non-empty schema to initialVersion.
+        <code>initOnMigrate</code> flag to automatically initialize a non-empty schema to initVersion.
     </li>
     <li>
         <a href="http://code.google.com/p/flyway/issues/detail?id=138">Issue 138</a>
@@ -286,7 +286,7 @@ subtitle: Release Notes
         <del>Version</del>
     </code> has been renamed to <code>MigrationVersion</code> for consistency.
     </li>
-    <li>Core: <code>Flyway.getInitialVersion()</code> now returns an instance of <code>MigrationVersion</code> (was
+    <li>Core: <code>Flyway.getInitVersion()</code> now returns an instance of <code>MigrationVersion</code> (was
         <code>SchemaVersion</code>).
     </li>
     <li>Core: <code>Flyway.getTarget()</code> now returns an instance of <code>MigrationVersion</code> (was <code>SchemaVersion</code>).
@@ -329,9 +329,9 @@ subtitle: Release Notes
         <code>com.googlecode.flyway.core.api.FlywayException</code> instead.
     </li>
     <li>Core: Deprecated <code>
-        <del>Flyway.setInitialVersion(SchemaVersion)</del>
+        <del>Flyway.setinitVersion(SchemaVersion)</del>
     </code>. Use
-        <code>Flyway.setInitialVersion(MigrationVersion)</code> instead.
+        <code>Flyway.setinitVersion(MigrationVersion)</code> instead.
     </li>
     <li>Core: Deprecated <code>
         <del>Flyway.setTarget(SchemaVersion)</del>

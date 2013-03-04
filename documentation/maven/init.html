@@ -77,13 +77,13 @@ subtitle: 'mvn flyway:init'
             </td>
         </tr>
         <tr>
-            <td>initialVersion</td>
+            <td>initVersion</td>
             <td>NO</td>
-            <td>0</td>
+            <td>1</td>
             <td>The initial version to put in the database</td>
         </tr>
         <tr>
-            <td>initialDescription</td>
+            <td>initDescription</td>
             <td>NO</td>
             <td>
                 <nobr>&lt;&lt; Flyway Init &gt;&gt;</nobr>
@@ -105,8 +105,8 @@ subtitle: 'mvn flyway:init'
         &lt;schema&gt;schema3&lt;/schema&gt;
     &lt;/schemas&gt;
     &lt;table&gt;schema_history&lt;/table&gt;
-    &lt;initialVersion&gt;1.0&lt;/initialVersion&gt;
-    &lt;initialDescription&gt;Base Migration&lt;/initialDescription&gt;
+    &lt;initVersion&gt;1.0&lt;/initVersion&gt;
+    &lt;initDescription&gt;Base Migration&lt;/initDescription&gt;
 &lt;/configuration&gt;</pre>
     <h2>Sample output</h2>
     <pre class="console">&gt; mvn flyway:init

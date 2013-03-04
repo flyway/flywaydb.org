@@ -17,16 +17,16 @@ subtitle: 'Command Line : Init'
 
     <h2>Options</h2>
 
-     <table class="table table-bordered table-hover">
-         <thead>
-         <tr>
-             <th>Option</th>
-             <th>Required</th>
-             <th>Default</th>
-             <th>Description</th>
-         </tr>
-         </thead>
-         <tbody>
+    <table class="table table-bordered table-hover">
+        <thead>
+        <tr>
+            <th>Option</th>
+            <th>Required</th>
+            <th>Default</th>
+            <th>Description</th>
+        </tr>
+        </thead>
+        <tbody>
         <tr>
             <td>driver</td>
             <td>YES</td>
@@ -72,19 +72,21 @@ subtitle: 'Command Line : Init'
             </td>
         </tr>
         <tr>
-            <td>initialVersion</td>
+            <td>initVersion</td>
             <td>NO</td>
-            <td>0</td>
+            <td>1</td>
             <td>The initial version to put in the database</td>
         </tr>
         <tr>
-            <td>initialDescription</td>
+            <td>initDescription</td>
             <td>NO</td>
-            <td><nobr>&lt;&lt; Flyway Init &gt;&gt;</nobr></td>
+            <td>
+                <nobr>&lt;&lt; Flyway Init &gt;&gt;</nobr>
+            </td>
             <td>The description of the initial version</td>
         </tr>
-         </tbody>
-     </table>
+        </tbody>
+    </table>
 
     <h2>Sample configuration</h2><pre
         class="prettyprint">flyway.driver=org.hsqldb.jdbcDriver
@@ -93,8 +95,8 @@ flyway.user=SA
 flyway.password=mySecretPwd
 flyway.schemas=schema1,schema2,schema3
 flyway.table=schema_history
-flyway.initialVersion=1.0
-flyway.initialDescription=Base Migration</pre>
+flyway.initVersion=1.0
+flyway.initDescription=Base Migration</pre>
 
     <h2>Sample output</h2>
     <pre class="console">&gt; flyway.cmd init
