@@ -37,18 +37,18 @@ subtitle: 'mvn flyway:migrate'
     </thead>
     <tbody>
     <tr>
-        <td>driver</td>
-        <td>YES</td>
-        <td></td>
-        <td>The fully qualified classname of the jdbc driver to use
-            to connect to the database
-        </td>
-    </tr>
-    <tr>
         <td>url</td>
         <td>YES</td>
         <td></td>
         <td>The jdbc url to use to connect to the database</td>
+    </tr>
+    <tr>
+        <td>driver</td>
+        <td>NO</td>
+        <td><i>Auto-detected based on url</i></td>
+        <td>The fully qualified classname of the jdbc driver to use
+            to connect to the database
+        </td>
     </tr>
     <tr>
         <td>serverId</td>
@@ -134,7 +134,8 @@ subtitle: 'mvn flyway:migrate'
     <tr>
         <td>placeholderSuffix</td>
         <td>NO</td>
-        <td>}</td>
+        <td>}
+        </td>
         <td>The suffix of every placeholder</td>
     </tr>
     <tr>
@@ -204,6 +205,12 @@ subtitle: 'mvn flyway:migrate'
         </td>
         <td>The description of the initial version</td>
     </tr>
+    <tr>
+        <td>skip</td>
+        <td>NO</td>
+        <td>false</td>
+        <td>Skips the execution of the plugin for this module</td>
+    </tr>
     </tbody>
 </table>
 
@@ -238,6 +245,7 @@ subtitle: 'mvn flyway:migrate'
     &lt;validateOnMigrate&gt;true&lt;/validateOnMigrate&gt;
     &lt;cleanOnValidationError&gt;false&lt;/cleanOnValidationError&gt;
     &lt;initOnMigrate&gt;false&lt;/initOnMigrate&gt;
+    &lt;skip&gt;false&lt;/skip&gt;
 &lt;/configuration&gt;</pre>
 
 <h2>Sample output</h2>

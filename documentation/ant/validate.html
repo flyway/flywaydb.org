@@ -18,7 +18,7 @@ subtitle: 'Ant Task: Validate'
 
     <h2>Configuration</h2>
 
-     <table class="table table-bordered table-hover">
+    <table class="table table-bordered table-hover">
         <thead>
         <tr>
             <th>Attribute</th>
@@ -27,15 +27,7 @@ subtitle: 'Ant Task: Validate'
             <th>Description</th>
         </tr>
         </thead>
-         <tbody>
-        <tr>
-            <td>driver</td>
-            <td>YES</td>
-            <td></td>
-            <td>The fully qualified classname of the jdbc driver to use
-                to connect to the database
-            </td>
-        </tr>
+        <tbody>
         <tr>
             <td>url</td>
             <td>YES</td>
@@ -43,8 +35,16 @@ subtitle: 'Ant Task: Validate'
             <td>The jdbc url to use to connect to the database</td>
         </tr>
         <tr>
+            <td>driver</td>
+            <td>NO</td>
+            <td><i>Auto-detected based on url</i></td>
+            <td>The fully qualified classname of the jdbc driver to use
+                to connect to the database
+            </td>
+        </tr>
+        <tr>
             <td>user</td>
-            <td>YES</td>
+            <td>NO</td>
             <td></td>
             <td>The user to use to connect to the database</td>
         </tr>
@@ -129,7 +129,7 @@ subtitle: 'Ant Task: Validate'
                 and the migrations
             </td>
         </tr>
-         </tbody>
+        </tbody>
     </table>
 
     <h2>Sample configuration</h2><pre

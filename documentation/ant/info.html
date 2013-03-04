@@ -23,22 +23,22 @@ subtitle: 'Ant Task: Info'
         </thead>
         <tbody>
         <tr>
-            <td>driver</td>
-            <td>YES</td>
-            <td></td>
-            <td>The fully qualified classname of the jdbc driver to use
-                to connect to the database
-            </td>
-        </tr>
-        <tr>
             <td>url</td>
             <td>YES</td>
             <td></td>
             <td>The jdbc url to use to connect to the database</td>
         </tr>
         <tr>
+            <td>driver</td>
+            <td>NO</td>
+            <td><i>Auto-detected based on url</i></td>
+            <td>The fully qualified classname of the jdbc driver to use
+                to connect to the database
+            </td>
+        </tr>
+        <tr>
             <td>user</td>
-            <td>YES</td>
+            <td>NO</td>
             <td></td>
             <td>The user to use to connect to the database</td>
         </tr>

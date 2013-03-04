@@ -22,18 +22,18 @@ subtitle: 'mvn flyway:info'
         </thead>
         <tbody>
         <tr>
-            <td>driver</td>
-            <td>YES</td>
-            <td></td>
-            <td>The fully qualified classname of the jdbc driver to use
-                to connect to the database
-            </td>
-        </tr>
-        <tr>
             <td>url</td>
             <td>YES</td>
             <td></td>
             <td>The jdbc url to use to connect to the database</td>
+        </tr>
+        <tr>
+            <td>driver</td>
+            <td>NO</td>
+            <td><i>Auto-detected based on url</i></td>
+            <td>The fully qualified classname of the jdbc driver to use
+                to connect to the database
+            </td>
         </tr>
         <tr>
             <td>serverId</td>
@@ -138,6 +138,12 @@ subtitle: 'mvn flyway:info'
                     it will be applied too instead of being ignored.</p>
             </td>
         </tr>
+        <tr>
+            <td>skip</td>
+            <td>NO</td>
+            <td>false</td>
+            <td>Skips the execution of the plugin for this module</td>
+        </tr>
         </tbody>
     </table>
 
@@ -169,6 +175,7 @@ subtitle: 'mvn flyway:info'
     &lt;placeholderSuffix&gt;]&lt;/placeholderSuffix&gt;
     &lt;target&gt;1.1&lt;/target&gt;
     &lt;outOfOrder&gt;false&lt;/outOfOrder&gt;
+    &lt;skip&gt;false&lt;/skip&gt;
 &lt;/configuration&gt;</pre>
 
     <h2>Sample output</h2>

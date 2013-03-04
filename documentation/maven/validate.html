@@ -29,18 +29,18 @@ subtitle: 'mvn flyway:validate'
         </thead>
         <tbody>
         <tr>
-            <td>driver</td>
-            <td>YES</td>
-            <td></td>
-            <td>The fully qualified classname of the jdbc driver to use
-                to connect to the database
-            </td>
-        </tr>
-        <tr>
             <td>url</td>
             <td>YES</td>
             <td></td>
             <td>The jdbc url to use to connect to the database</td>
+        </tr>
+        <tr>
+            <td>driver</td>
+            <td>NO</td>
+            <td><i>Auto-detected based on url</i></td>
+            <td>The fully qualified classname of the jdbc driver to use
+                to connect to the database
+            </td>
         </tr>
         <tr>
             <td>serverId</td>
@@ -122,6 +122,12 @@ subtitle: 'mvn flyway:validate'
                 SCM.<br/><br/><strong>Warning ! Do not enable in production !</strong>
             </td>
         </tr>
+        <tr>
+            <td>skip</td>
+            <td>NO</td>
+            <td>false</td>
+            <td>Skips the execution of the plugin for this module</td>
+        </tr>
         </tbody>
     </table>
     <h2>Sample configuration</h2>
@@ -145,6 +151,7 @@ subtitle: 'mvn flyway:validate'
     &lt;sqlMigrationSuffix&gt;-OK.sql&lt;/sqlMigrationSuffix&gt;
     &lt;encoding&gt;ISO-8859-1&lt;/encoding&gt;
     &lt;cleanOnValidationError&gt;false&lt;/cleanOnValidationError&gt;
+    &lt;skip&gt;false&lt;/skip&gt;
 &lt;/configuration&gt;</pre>
 
     <h2>Sample output</h2>
