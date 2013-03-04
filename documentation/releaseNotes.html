@@ -10,6 +10,10 @@ subtitle: Release Notes
 
 <div class="release">
     <h2>Unreleased version</h2>
+
+    <p>This version performs <strong>minor fixes on the metadata table</strong>. Migration is transparent and automatic on first
+        run.</p>
+
     <h3>New Features</h3>
     <ul>
         <li>
@@ -78,8 +82,16 @@ subtitle: Release Notes
             setLocations does not override deprecated baseDir or basePackage
         </li>
         <li>
+            <a href="http://code.google.com/p/flyway/issues/detail?id=383">Issue 383</a>
+            Support longer usernames
+        </li>
+        <li>
             <a href="http://code.google.com/p/flyway/issues/detail?id=384">Issue 384</a>
             Special umlauts create IndexOutOfBoundsExceptions
+        </li>
+        <li>
+            <a href="http://code.google.com/p/flyway/issues/detail?id=387">Issue 387</a>
+            schema_version table could have a primary key
         </li>
         <li>
             <a href="http://code.google.com/p/flyway/issues/detail?id=394">Issue 394</a>
@@ -141,8 +153,8 @@ subtitle: Release Notes
     <p>
         Thanks to agattiker, Benoit Cantin, Christian Haelg, Constantine Linnick, Daniel Wilmer,
         Dmitry Bitman, dyou08, Gerd Behrmann, Gerrit Brehmer,
-        Giorgio Gallo, Herve Martin, István Nagy, Jonathan Tougas, Judith Aigner, Kamil Szymański, Klas Klassen,
-        Marcin Jancewicz, Martin Baillie, Michael Meyer,
+        Giorgio Gallo, Herve Martin, István Nagy, Joe McCall, Jonathan Tougas, Judith Aigner, Kamil Szymański,
+        Klas Klassen, Marcin Jancewicz, Marcin Z., Martin Baillie, Michael Meyer,
         rbrueske, Tero Keski-Valkama, Tom Stordy-Allison, Tomek Kaczanowski and Viktoras Makauskas
         for reporting these issues and contributing fixes.
     </p>
