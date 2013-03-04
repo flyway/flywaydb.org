@@ -85,8 +85,11 @@ subtitle: 'mvn flyway:validate'
             <td>locations</td>
             <td>NO</td>
             <td>db/migration</td>
-            <td>Locations on the classpath to scan recursively for
-                migrations. Locations may contain both sql and java-based migrations.
+            <td>Locations to scan recursively for migrations. The location type is determined by its prefix.<br/>
+                Unprefixed locations or locations starting with <code>classpath:</code> point to a package on the
+                classpath and may contain both sql and java-based migrations.<br/>
+                Locations starting with <code>filesystem:</code> point to a directory on the filesystem and may only
+                contain sql migrations.
             </td>
         </tr>
         <tr>
@@ -134,8 +137,9 @@ subtitle: 'mvn flyway:validate'
     &lt;/schemas&gt;
     &lt;table&gt;schema_history&lt;/table&gt;
     &lt;locations&gt;
-        &lt;location&gt;com.mycompany.project.migration&lt;/location&gt;
-        &lt;location&gt;database/migrations&lt;/location&gt;
+        &lt;location&gt;classpath:migrations1&lt;/location&gt;
+        &lt;location&gt;migrations2&lt;/location&gt;
+        &lt;location&gt;filesystem:/sql-migrations&lt;/location&gt;
     &lt;/locations&gt;
     &lt;sqlMigrationPrefix&gt;Migration-&lt;/sqlMigrationPrefix&gt;
     &lt;sqlMigrationSuffix&gt;-OK.sql&lt;/sqlMigrationSuffix&gt;
