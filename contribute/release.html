@@ -4,23 +4,23 @@ menu: release
 subtitle: Releasing Flyway
 ---
 <div id="release">
-    <h1><a name="Releasing_Flyway_(Committers_only)"></a>Releasing Flyway (Committers only)<a
-            href="#Releasing_Flyway_(Committers_only)" class="section_anchor"></a></h1>
+    <h1>Releasing Flyway (Committers only)</h1>
 
-    <h2><a name="Prequesites"></a>Prequesites<a href="#Prequesites" class="section_anchor"></a></h2>
+    <h2>Prequesites</h2>
     <ol>
-        <li>GPG installed, available on the PATH and a key generated (see <a
+        <li>GPG installed, available on the PATH and a key generated<br/> (see <a
                 href="https://docs.sonatype.org/display/Repository/Sonatype+OSS+Maven+Repository+Usage+Guide#SonatypeOSSMavenRepositoryUsageGuide-5.Prerequisites"
-               >https://docs.sonatype.org/display/Repository/Sonatype+OSS+Maven+Repository+Usage+Guide#SonatypeOSSMavenRepositoryUsageGuide-5.Prerequisites</a>)
+               >the Sonatype OSS Maven Repository Usage Guide</a>)
         </li>
-        <li>A checkout of Flyway in two locations: <i>/flyway</i> and <i>/flyway-release</i></li>
+        <li>A checkout of Flyway HEAD</li>
         <li>Maven settings.xml contains</li>
         <ul>
             <li>credentials for Sonatype OSS Repo Hosting</li>
-            <li>credentials for Google Code</li>
             <li>credentials for Google App Engine</li>
-            <li>the path to the local flyway-release repo checkout</li>
-            <li>the GPG passphrase key:</li><pre class="prettyprint">&lt;settings&gt;
+            <li>the GPG passphrase key:</li>
+        </ul>
+    </ol>
+    <pre class="prettyprint">&lt;settings&gt;
     &lt;servers&gt;
         &lt;server&gt;
             &lt;id&gt;sonatype-nexus-snapshots&lt;/id&gt;
@@ -29,11 +29,6 @@ subtitle: Releasing Flyway
         &lt;/server&gt;
         &lt;server&gt;
             &lt;id&gt;sonatype-nexus-staging&lt;/id&gt;
-            &lt;username&gt;myuser&lt;/username&gt;
-            &lt;password&gt;XXX&lt;/password&gt;
-        &lt;/server&gt;
-        &lt;server&gt;
-            &lt;id&gt;googlecode&lt;/id&gt;
             &lt;username&gt;myuser&lt;/username&gt;
             &lt;password&gt;XXX&lt;/password&gt;
         &lt;/server&gt;
@@ -52,28 +47,21 @@ subtitle: Releasing Flyway
                 &lt;/property&gt;
             &lt;/activation&gt;
             &lt;properties&gt;
-                &lt;flyway.releaserepo&gt;/path/to/flyway-release/repo&lt;/flyway.releaserepo&gt;
                 &lt;gpg.passphrase&gt;XXX&lt;/gpg.passphrase&gt;
             &lt;/properties&gt;
         &lt;/profile&gt;
     &lt;/profiles&gt;
 &lt;/settings&gt;</pre>
-        </ul>
-    </ol>
+
 
     <h2><a name="Required_Steps"></a>Required Steps<a href="#Required_Steps" class="section_anchor"></a></h2>
     <ol>
         <li>In Jenkins, we choose the job <strong>Flyway RELEASE</strong></li>
         <li>In the list of actions left, we choose <strong>Perform Maven Release</strong></li>
         <li>We set the new Release Version, say <i>2.0.2</i>, and the new Development Version, say <i>2.0.3-SNAPSHOT</i>,
-            and make sure <strong>all checkboxes are unticked</strong></li>
-        <li>Now we can start the release by clicking <strong>Schedule Maven Build</strong></li>
-        <li>The old downloads must now be deprecated. We go to <a href="http://code.google.com/p/flyway/downloads/list"
-                                                                 >http://code.google.com/p/flyway/downloads/list</a>.
-        </li>
-        <li>We mark each download for the old version as deprecated by removing the <strong>Featured</strong> tag and
-            adding the <strong>Deprecated</strong> tag
-        </li>
+            and provide the GitHub username and password for release</li>
+        <li>Now we can start the release by clicking <strong>Schedule Maven Release Build</strong></li>
+        <li>Once the release completes, create a pull request on GitHub for the <i>flyway-release</i> branch, merge it and delete the branch</li>
         <li>Now the artifacts, must be promoted to Maven Central by logging in to <a href="https://oss.sonatype.org/"
                                                                                     >https://oss.sonatype.org/</a>
         </li>
@@ -81,7 +69,7 @@ subtitle: Releasing Flyway
             <strong>com.googlecode.flyway</strong> repository
         </li>
         <li>We then close it (without message) and release it (without message)</li>
-        <li>The site must be now be updated by putting the new version number in _config.yml</li>
+        <li>The site must be now be updated by putting the new version number in <strong>_config.yml</strong> of flywaydb.org</li>
         <li>We also update the <a href="/documentation/releaseNotes.html">Release Notes</a>
             by changing the Unreleased Version in the new version with the date of today
         </li>

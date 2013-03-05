@@ -155,9 +155,8 @@ hr.soften {
     text-align: center;
 }
 
-#get-started a {
-    margin-left: 10px;
-    margin-right: 10px;
+.next-steps a {
+    margin-right: 20px;
 }
 
 #footer {

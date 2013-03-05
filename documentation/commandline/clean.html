@@ -29,18 +29,18 @@ subtitle: 'Command Line : Clean'
         </thead>
         <tbody>
         <tr>
-            <td>driver</td>
-            <td>YES</td>
-            <td></td>
-            <td>The fully qualified classname of the jdbc driver to use
-                to connect to the database
-            </td>
-        </tr>
-        <tr>
             <td>url</td>
             <td>YES</td>
             <td></td>
             <td>The jdbc url to use to connect to the database</td>
+        </tr>
+        <tr>
+            <td>driver</td>
+            <td>NO</td>
+            <td><i>Auto-detected based on url</i></td>
+            <td>The fully qualified classname of the jdbc driver to use
+                to connect to the database
+            </td>
         </tr>
         <tr>
             <td>user</td>
@@ -61,6 +61,12 @@ subtitle: 'Command Line : Clean'
             <td>Comma-separated case-sensitive list of schemas managed by Flyway.<br/>
                 The schemas will be cleaned in the order of this list.
             </td>
+        </tr>
+        <tr>
+            <td>jarDir</td>
+            <td>NO</td>
+            <td><nobr><i>&lt;install-dir&gt;</i>/jars</td>
+            <td>The directory containing the JDBC driver</td>
         </tr>
         </tbody>
     </table>
