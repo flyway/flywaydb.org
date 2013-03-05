@@ -29,18 +29,18 @@ subtitle: 'Command Line : Migrate'
         </thead>
         <tbody>
         <tr>
-            <td>driver</td>
-            <td>YES</td>
-            <td></td>
-            <td>The fully qualified classname of the jdbc driver to use
-                to connect to the database
-            </td>
-        </tr>
-        <tr>
             <td>url</td>
             <td>YES</td>
             <td></td>
             <td>The jdbc url to use to connect to the database</td>
+        </tr>
+        <tr>
+            <td>driver</td>
+            <td>NO</td>
+            <td><i>Auto-detected based on url</i></td>
+            <td>The fully qualified classname of the jdbc driver to use
+                to connect to the database
+            </td>
         </tr>
         <tr>
             <td>user</td>
@@ -76,10 +76,17 @@ subtitle: 'Command Line : Migrate'
         <tr>
             <td>locations</td>
             <td>NO</td>
-            <td>db/migration</td>
-            <td>Comma-separated list of locations on the classpath to
-                scan recursively for migrations. Locations may contain both sql and java-based migrations.
+            <td><nobr>filesystem:<i>&lt;install-dir&gt;</i>/sql</nobr></td>
+            <td>Comma-separated list of locations to scan recursively for migrations. The location type is determined by its prefix.<br/>
+                Unprefixed locations or locations starting with <code>classpath:</code> point to a package on the classpath and may contain both sql and java-based migrations.<br/>
+                Locations starting with <code>filesystem:</code> point to a directory on the filesystem and may only contain sql migrations.
             </td>
+        </tr>
+        <tr>
+            <td>jarDir</td>
+            <td>NO</td>
+            <td><nobr><i>&lt;install-dir&gt;</i>/jars</td>
+            <td>The directory containing the JDBC driver and the Java-based migrations</td>
         </tr>
         <tr>
             <td>sqlMigrationPrefix</td>
@@ -161,14 +168,28 @@ subtitle: 'Command Line : Migrate'
             <td>false</td>
             <td>Whether to automatically call init when migrate is executed against a non-empty schema with no metadata
                 table.
-                This schema will then be initialized with the <code>initialVersion</code> before executing the migrations.
-                Only migrations above <code>initialVersion</code> will then be applied.<br/>
+                This schema will then be initialized with the <code>initVersion</code> before executing the migrations.
+                Only migrations above <code>initVersion</code> will then be applied.<br/>
 
                 <p>This is useful for initial Flyway production deployments on projects with an existing DB.</p>
 
                 <p>Be careful when enabling this as it removes the safety net that ensures Flyway does not migrate the wrong
                     database in case of a configuration mistake!</p>
             </td>
+        </tr>
+        <tr>
+            <td>initVersion</td>
+            <td>NO</td>
+            <td>1</td>
+            <td>The initial version to put in the database</td>
+        </tr>
+        <tr>
+            <td>initDescription</td>
+            <td>NO</td>
+            <td>
+                <nobr>&lt;&lt; Flyway Init &gt;&gt;</nobr>
+            </td>
+            <td>The description of the initial version</td>
         </tr>
         </tbody>
     </table>
@@ -180,7 +201,7 @@ flyway.user=SA
 flyway.password=mySecretPwd
 flyway.schemas=schema1,schema2,schema3
 flyway.table=schema_history
-flyway.locations=com.mycompany.project.migration,database/migrations
+flyway.locations=classpath:com.mycompany.project.migration,database/migrations,filesystem:/sql-migrations
 flyway.sqlMigrationPrefix=Migration-
 flyway.sqlMigrationSuffix=-OK.sql
 flyway.encoding=ISO-8859-1

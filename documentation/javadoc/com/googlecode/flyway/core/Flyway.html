@@ -187,7 +187,7 @@ This is the centre point of Flyway, and for most users, the only class they will
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;<A HREF="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../com/googlecode/flyway/core/Flyway.html#getInitialDescription()">getInitialDescription</A></B>()</CODE>
+<TD><CODE><B><A HREF="../../../../com/googlecode/flyway/core/Flyway.html#getinitDescription()">getinitDescription</A></B>()</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Retrieves the description of the initial version.</TD>
@@ -195,7 +195,7 @@ This is the centre point of Flyway, and for most users, the only class they will
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;<A HREF="../../../../com/googlecode/flyway/core/api/MigrationVersion.html" title="class in com.googlecode.flyway.core.api">MigrationVersion</A></CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../com/googlecode/flyway/core/Flyway.html#getInitialVersion()">getInitialVersion</A></B>()</CODE>
+<TD><CODE><B><A HREF="../../../../com/googlecode/flyway/core/Flyway.html#getInitVersion()">getInitVersion</A></B>()</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Retrieves the initial version to put in the database.</TD>
@@ -437,7 +437,7 @@ This is the centre point of Flyway, and for most users, the only class they will
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../com/googlecode/flyway/core/Flyway.html#setInitialDescription(java.lang.String)">setInitialDescription</A></B>(<A HREF="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;initialDescription)</CODE>
+<TD><CODE><B><A HREF="../../../../com/googlecode/flyway/core/Flyway.html#setinitDescription(java.lang.String)">setinitDescription</A></B>(<A HREF="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;initDescription)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The description of the initial version.</TD>
@@ -445,7 +445,7 @@ This is the centre point of Flyway, and for most users, the only class they will
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../com/googlecode/flyway/core/Flyway.html#setInitialVersion(com.googlecode.flyway.core.api.MigrationVersion)">setInitialVersion</A></B>(<A HREF="../../../../com/googlecode/flyway/core/api/MigrationVersion.html" title="class in com.googlecode.flyway.core.api">MigrationVersion</A>&nbsp;initialVersion)</CODE>
+<TD><CODE><B><A HREF="../../../../com/googlecode/flyway/core/Flyway.html#setinitVersion(com.googlecode.flyway.core.api.MigrationVersion)">setinitVersion</A></B>(<A HREF="../../../../com/googlecode/flyway/core/api/MigrationVersion.html" title="class in com.googlecode.flyway.core.api">MigrationVersion</A>&nbsp;initVersion)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The initial version to put in the database.</TD>
@@ -453,15 +453,15 @@ This is the centre point of Flyway, and for most users, the only class they will
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../com/googlecode/flyway/core/Flyway.html#setInitialVersion(com.googlecode.flyway.core.migration.SchemaVersion)">setInitialVersion</A></B>(com.googlecode.flyway.core.migration.SchemaVersion&nbsp;initialVersion)</CODE>
+<TD><CODE><B><A HREF="../../../../com/googlecode/flyway/core/Flyway.html#setinitVersion(com.googlecode.flyway.core.migration.SchemaVersion)">setinitVersion</A></B>(com.googlecode.flyway.core.migration.SchemaVersion&nbsp;initVersion)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>Use setInitialVersion(MigrationVersion) instead. Will be removed in Flyway 3.0.</I></TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>Use setinitVersion(MigrationVersion) instead. Will be removed in Flyway 3.0.</I></TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../com/googlecode/flyway/core/Flyway.html#setInitialVersion(java.lang.String)">setInitialVersion</A></B>(<A HREF="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;initialVersion)</CODE>
+<TD><CODE><B><A HREF="../../../../com/googlecode/flyway/core/Flyway.html#setinitVersion(java.lang.String)">setinitVersion</A></B>(<A HREF="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;initVersion)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The initial version to put in the database.</TD>
@@ -923,10 +923,10 @@ public boolean <B>isCleanOnValidationError</B>()</PRE>
 </DL>
 <HR>
 
-<A NAME="getInitialVersion()"><!-- --></A><H3>
-getInitialVersion</H3>
+<A NAME="getInitVersion()"><!-- --></A><H3>
+getInitVersion</H3>
 <PRE>
-public <A HREF="../../../../com/googlecode/flyway/core/api/MigrationVersion.html" title="class in com.googlecode.flyway.core.api">MigrationVersion</A> <B>getInitialVersion</B>()</PRE>
+public <A HREF="../../../../com/googlecode/flyway/core/api/MigrationVersion.html" title="class in com.googlecode.flyway.core.api">MigrationVersion</A> <B>getInitVersion</B>()</PRE>
 <DL>
 <DD>Retrieves the initial version to put in the database. Only used for init.
 <P>
@@ -937,10 +937,10 @@ public <A HREF="../../../../com/googlecode/flyway/core/api/MigrationVersion.html
 </DL>
 <HR>
 
-<A NAME="getInitialDescription()"><!-- --></A><H3>
-getInitialDescription</H3>
+<A NAME="getinitDescription()"><!-- --></A><H3>
+getinitDescription</H3>
 <PRE>
-public <A HREF="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getInitialDescription</B>()</PRE>
+public <A HREF="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getinitDescription</B>()</PRE>
 <DL>
 <DD>Retrieves the description of the initial version. Only used for init.
 <P>
@@ -977,8 +977,8 @@ public boolean <B>isInitOnMigrate</B>()</PRE>
 <DL>
 <DD><p>
  Whether to automatically call init when migrate is executed against a non-empty schema with no metadata table.
- This schema will then be initialized with the <code>initialVersion</code> before executing the migrations.
- Only migrations above <code>initialVersion</code> will then be applied.
+ This schema will then be initialized with the <code>initVersion</code> before executing the migrations.
+ Only migrations above <code>initVersion</code> will then be applied.
  </p>
  <p>
  This is useful for initial Flyway production deployments on projects with an existing DB.
@@ -1324,57 +1324,57 @@ public void <B>setDataSource</B>(<A HREF="http://docs.oracle.com/javase/1.5.0/do
 </DL>
 <HR>
 
-<A NAME="setInitialVersion(com.googlecode.flyway.core.migration.SchemaVersion)"><!-- --></A><H3>
-setInitialVersion</H3>
+<A NAME="setinitVersion(com.googlecode.flyway.core.migration.SchemaVersion)"><!-- --></A><H3>
+setinitVersion</H3>
 <PRE>
 <FONT SIZE="-1"><A HREF="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</A>
-</FONT>public void <B>setInitialVersion</B>(com.googlecode.flyway.core.migration.SchemaVersion&nbsp;initialVersion)</PRE>
+</FONT>public void <B>setinitVersion</B>(com.googlecode.flyway.core.migration.SchemaVersion&nbsp;initVersion)</PRE>
 <DL>
-<DD><B>Deprecated.</B>&nbsp;<I>Use setInitialVersion(MigrationVersion) instead. Will be removed in Flyway 3.0.</I>
+<DD><B>Deprecated.</B>&nbsp;<I>Use setinitVersion(MigrationVersion) instead. Will be removed in Flyway 3.0.</I>
 <P>
 <DD>The initial version to put in the database. Only used for init.
 <P>
 <DD><DL>
-<DT><B>Parameters:</B><DD><CODE>initialVersion</CODE> - The initial version to put in the database. (default: 0)</DL>
+<DT><B>Parameters:</B><DD><CODE>initVersion</CODE> - The initial version to put in the database. (default: 0)</DL>
 </DD>
 </DL>
 <HR>
 
-<A NAME="setInitialVersion(com.googlecode.flyway.core.api.MigrationVersion)"><!-- --></A><H3>
-setInitialVersion</H3>
+<A NAME="setinitVersion(com.googlecode.flyway.core.api.MigrationVersion)"><!-- --></A><H3>
+setinitVersion</H3>
 <PRE>
-public void <B>setInitialVersion</B>(<A HREF="../../../../com/googlecode/flyway/core/api/MigrationVersion.html" title="class in com.googlecode.flyway.core.api">MigrationVersion</A>&nbsp;initialVersion)</PRE>
+public void <B>setinitVersion</B>(<A HREF="../../../../com/googlecode/flyway/core/api/MigrationVersion.html" title="class in com.googlecode.flyway.core.api">MigrationVersion</A>&nbsp;initVersion)</PRE>
 <DL>
 <DD>The initial version to put in the database. Only used for init.
 <P>
 <DD><DL>
-<DT><B>Parameters:</B><DD><CODE>initialVersion</CODE> - The initial version to put in the database. (default: 0)</DL>
+<DT><B>Parameters:</B><DD><CODE>initVersion</CODE> - The initial version to put in the database. (default: 0)</DL>
 </DD>
 </DL>
 <HR>
 
-<A NAME="setInitialVersion(java.lang.String)"><!-- --></A><H3>
-setInitialVersion</H3>
+<A NAME="setinitVersion(java.lang.String)"><!-- --></A><H3>
+setinitVersion</H3>
 <PRE>
-public void <B>setInitialVersion</B>(<A HREF="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;initialVersion)</PRE>
+public void <B>setinitVersion</B>(<A HREF="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;initVersion)</PRE>
 <DL>
 <DD>The initial version to put in the database. Only used for init.
 <P>
 <DD><DL>
-<DT><B>Parameters:</B><DD><CODE>initialVersion</CODE> - The initial version to put in the database. (default: 0)</DL>
+<DT><B>Parameters:</B><DD><CODE>initVersion</CODE> - The initial version to put in the database. (default: 0)</DL>
 </DD>
 </DL>
 <HR>
 
-<A NAME="setInitialDescription(java.lang.String)"><!-- --></A><H3>
-setInitialDescription</H3>
+<A NAME="setinitDescription(java.lang.String)"><!-- --></A><H3>
+setinitDescription</H3>
 <PRE>
-public void <B>setInitialDescription</B>(<A HREF="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;initialDescription)</PRE>
+public void <B>setinitDescription</B>(<A HREF="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;initDescription)</PRE>
 <DL>
 <DD>The description of the initial version. Only used for init.
 <P>
 <DD><DL>
-<DT><B>Parameters:</B><DD><CODE>initialDescription</CODE> - The description of the initial version. (default: << Flyway Init >>)</DL>
+<DT><B>Parameters:</B><DD><CODE>initDescription</CODE> - The description of the initial version. (default: << Flyway Init >>)</DL>
 </DD>
 </DL>
 <HR>
@@ -1404,8 +1404,8 @@ public void <B>setInitOnMigrate</B>(boolean&nbsp;initOnMigrate)</PRE>
 <DL>
 <DD><p>
  Whether to automatically call init when migrate is executed against a non-empty schema with no metadata table.
- This schema will then be initialized with the <code>initialVersion</code> before executing the migrations.
- Only migrations above <code>initialVersion</code> will then be applied.
+ This schema will then be initialized with the <code>initVersion</code> before executing the migrations.
+ Only migrations above <code>initVersion</code> will then be applied.
  </p>
  <p>
  This is useful for initial Flyway production deployments on projects with an existing DB.

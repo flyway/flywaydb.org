@@ -29,18 +29,18 @@ subtitle: 'Command Line : Validate'
         </thead>
         <tbody>
         <tr>
-            <td>driver</td>
-            <td>YES</td>
-            <td></td>
-            <td>The fully qualified classname of the jdbc driver to use
-                to connect to the database
-            </td>
-        </tr>
-        <tr>
             <td>url</td>
             <td>YES</td>
             <td></td>
             <td>The jdbc url to use to connect to the database</td>
+        </tr>
+        <tr>
+            <td>driver</td>
+            <td>NO</td>
+            <td><i>Auto-detected based on url</i></td>
+            <td>The fully qualified classname of the jdbc driver to use
+                to connect to the database
+            </td>
         </tr>
         <tr>
             <td>user</td>
@@ -75,10 +75,17 @@ subtitle: 'Command Line : Validate'
         <tr>
             <td>locations</td>
             <td>NO</td>
-            <td>db/migration</td>
-            <td>Comma-separated list of locations on the classpath to
-                scan recursively for migrations. Locations may contain both sql and java-based migrations.
+            <td><nobr>filesystem:<i>&lt;install-dir&gt;</i>/sql</nobr></td>
+            <td>Comma-separated list of locations to scan recursively for migrations. The location type is determined by its prefix.<br/>
+                Unprefixed locations or locations starting with <code>classpath:</code> point to a package on the classpath and may contain both sql and java-based migrations.<br/>
+                Locations starting with <code>filesystem:</code> point to a directory on the filesystem and may only contain sql migrations.
             </td>
+        </tr>
+        <tr>
+            <td>jarDir</td>
+            <td>NO</td>
+            <td><nobr><i>&lt;install-dir&gt;</i>/jars</td>
+            <td>The directory containing the JDBC driver and the Java-based migrations</td>
         </tr>
         <tr>
             <td>sqlMigrationPrefix</td>
@@ -120,7 +127,7 @@ flyway.user=SA
 flyway.password=mySecretPwd
 flyway.schemas=schema1,schema2,schema3
 flyway.table=schema_history
-flyway.locations=com.mycompany.project.migration,database/migrations
+flyway.locations=classpath:com.mycompany.project.migration,database/migrations,filesystem:/sql-migrations
 flyway.sqlMigrationPrefix=Migration-
 flyway.sqlMigrationSuffix=-OK.sql
 flyway.encoding=ISO-8859-1

@@ -18,7 +18,7 @@ subtitle: 'Ant Task: Validate'
 
     <h2>Configuration</h2>
 
-     <table class="table table-bordered table-hover">
+    <table class="table table-bordered table-hover">
         <thead>
         <tr>
             <th>Attribute</th>
@@ -27,15 +27,7 @@ subtitle: 'Ant Task: Validate'
             <th>Description</th>
         </tr>
         </thead>
-         <tbody>
-        <tr>
-            <td>driver</td>
-            <td>YES</td>
-            <td></td>
-            <td>The fully qualified classname of the jdbc driver to use
-                to connect to the database
-            </td>
-        </tr>
+        <tbody>
         <tr>
             <td>url</td>
             <td>YES</td>
@@ -43,8 +35,16 @@ subtitle: 'Ant Task: Validate'
             <td>The jdbc url to use to connect to the database</td>
         </tr>
         <tr>
+            <td>driver</td>
+            <td>NO</td>
+            <td><i>Auto-detected based on url</i></td>
+            <td>The fully qualified classname of the jdbc driver to use
+                to connect to the database
+            </td>
+        </tr>
+        <tr>
             <td>user</td>
-            <td>YES</td>
+            <td>NO</td>
             <td></td>
             <td>The user to use to connect to the database</td>
         </tr>
@@ -76,9 +76,11 @@ subtitle: 'Ant Task: Validate'
             <td>locations</td>
             <td>NO</td>
             <td>db/migration</td>
-            <td>Locations on the classpath to scan recursively for
-                migrations. Locations may contain both sql and java-based migrations.<br/>Ant/System Property takes
-                a comma-separated list.
+            <td>Locations to scan recursively for migrations. The location type is determined by its prefix.<br/>
+                Unprefixed locations or locations starting with <code>classpath:</code> point to a package on the
+                classpath and may contain both sql and java-based migrations.<br/>
+                Locations starting with <code>filesystem:</code> point to a directory on the filesystem and may only
+                contain sql migrations.
             </td>
         </tr>
         <tr>
@@ -127,7 +129,7 @@ subtitle: 'Ant Task: Validate'
                 and the migrations
             </td>
         </tr>
-         </tbody>
+        </tbody>
     </table>
 
     <h2>Sample configuration</h2><pre
@@ -137,7 +139,7 @@ subtitle: 'Ant Task: Validate'
 &lt;property name=&quot;flyway.password&quot; value=&quot;mySecretPwd&quot;/&gt;
 &lt;property name=&quot;flyway.schemas&quot; value=&quot;schema1,schema2,schema3&quot;/&gt;
 &lt;property name=&quot;flyway.table&quot; value=&quot;schema_history&quot;/&gt;
-&lt;property name=&quot;flyway.locations&quot; value=&quot;com.mycompany.project.migration,database/migrations&quot;/&gt;
+&lt;property name=&quot;flyway.locations&quot; value=&quot;classpath:com.mycompany.project.migration,database/migrations,filesystem:/sql-migrations&quot;/&gt;
 &lt;property name=&quot;flyway.sqlMigrationPrefix&quot; value=&quot;Migration-&quot;/&gt;
 &lt;property name=&quot;flyway.sqlMigrationSuffix&quot; value=&quot;-OK.sql&quot;/&gt;
 &lt;property name=&quot;flyway.encoding&quot; value=&quot;ISO-8859-1&quot;/&gt;
