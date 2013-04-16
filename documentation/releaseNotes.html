@@ -13,7 +13,12 @@ subtitle: Release Notes
 
     <h3>Incompatible Changes</h3>
     <ul>
-        <li>Command-line: On Linux and OSX the script is now simply called <code>flyway</code> (dropped the .sh)</li>
+        <li>Ant: Dropped support for the separate Spring distribution.<br/>Spring is still supported by adding the Spring jars yourself on Flyway's classpath</li>
+        <li>Ant: The distribution is now called flyway-ant-2.2.[zip|tar.gz] (dropped the -dist part)</li>
+        <li>Command-line: Dropped support for the Spring distribution.<br/>Spring is still supported by adding the Spring jars yourself in the /jars directory</li>
+        <li>Command-line: The distribution is now called flyway-commandline-2.2.[zip|tar.gz] (dropped the -dist part)</li>
+        <li>Command-line: The root directory is now called flyway-2.2 (dropped the -commandline part)</li>
+        <li>Command-line: On Linux and OSX the script is now called <code>flyway</code> (dropped the .sh)</li>
     </ul>
 
     <h3>Bug fixes</h3>
