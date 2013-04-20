@@ -224,3 +224,33 @@ pre.console {
     background: #000000;
     color: white;
 }
+
+.blog-post-date {
+    color: #808080;
+    font-weight: bold;
+}
+
+.blog-post-title {
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 36px;
+    margin-bottom: 50px;
+}
+
+.blog-post-image {
+    text-align: center;
+    font-size: 8px;
+}
+
+#blog-post-nav {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+#blog-post-previous {
+    float: left;
+}
+
+#blog-post-next {
+    float: right;
+}

@@ -1,0 +1,30 @@
+---
+layout: nil
+---
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title>Flyway</title>
+  <link href="http://flywaydb.org/blog/"/>
+  <link type="application/atom+xml" rel="self" href="/blog/atom.xml"/>
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <id>http://flywaydb.org/blog/</id>
+  <author>
+    <name>Axel Fontaine</name>
+  </author>
+
+  {% for post in site.posts %}
+  <entry>
+    <id>http://flywaydb.org{{ post.permalink }}</id>
+    <link type="text/html" rel="alternate" href="{{ post.permalink }}"/>
+    <title>{{ post.title | xml_escape }}</title>
+    <published>{{ post.date | date_to_xmlschema }}</published>
+    <updated>{{ post.date | date_to_xmlschema }}</updated>
+    <author>
+      <name>Axel Fontaine</name>
+    </author>
+    <content type="html">{{ post.content | xml_escape }}</content>
+  </entry>
+  {% endfor %}
+
+</feed>

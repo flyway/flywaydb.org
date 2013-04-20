@@ -1,0 +1,3 @@
+Sitemap: http://axelfontaine.com/sitemap.xml
+User-agent: *
+Disallow:

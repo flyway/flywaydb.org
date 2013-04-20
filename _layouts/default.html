@@ -5,6 +5,7 @@
         {% if page.subtitle %} {{ page.subtitle }} -{% endif %}{% if page.title %} {{ page.title }} -{% endif %}
         Flyway: the agile database migration framework for
         Java</title>
+    <link rel="alternate" type="application/atom+xml" title="Flyway" href="/blog/atom.xml" />
     <link href="/assets/bootstrap-2.2.2/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     <link href="/assets/prettify-20110601/prettify.css" rel="stylesheet" type="text/css"/>
     <link href="/assets/flywaydb.css" rel="stylesheet" type="text/css"/>
@@ -51,6 +52,9 @@
                 <li
                 {% if page.tab == 'contribute' %} class="active" {% endif %}>
                 <a href="/contribute/howToContribute.html"><i class="icon-leaf"></i> CONTRIBUTE</a></li>
+                <li
+                {% if page.tab == 'blog' %} class="active" {% endif %}>
+                <a href="/blog"><i class="icon-bullhorn"></i> BLOG</a></li>
                 <li
                 {% if page.tab == 'support' %} class="active" {% endif %}>
                 <a href="/support"><i class="icon-question-sign"></i> SUPPORT</a></li>
