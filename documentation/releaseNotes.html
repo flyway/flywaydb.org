@@ -13,6 +13,7 @@ subtitle: Release Notes
 
     <h3>Incompatible Changes</h3>
     <ul>
+        <li><code>init</code> is now idempotent. Calling <code>init</code> multiple times with the same values no longer throws an exception.</li>
         <li>Ant: Dropped support for the separate Spring distribution.<br/>Spring is still supported by adding the Spring jars yourself on Flyway's classpath</li>
         <li>Ant: The distribution is now called flyway-ant-2.2.[zip|tar.gz] (dropped the -dist part)</li>
         <li>Command-line: Dropped support for the Spring distribution.<br/>Spring is still supported by adding the Spring jars yourself in the /jars directory</li>
@@ -69,8 +70,8 @@ subtitle: Release Notes
     </ul>
 
     <p>
-        Thanks to Alex Zuroff, Florian Eska, Geoff, Leandro de Oliveira, Mark Garrison, Michael Hirsch, Oliver Welter,
-        Roger Brechbühl and Tim Andersen
+        Thanks to Alex Zuroff, Florian Eska, Geoff, Leandro de Oliveira, Mark Garrison, Michael Hirsch, Roger Brechbühl
+        and Tim Andersen
         for reporting these issues and contributing fixes.
     </p>
 </div>
