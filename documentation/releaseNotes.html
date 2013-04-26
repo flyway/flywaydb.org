@@ -13,6 +13,7 @@ subtitle: Release Notes
 
     <h3>Incompatible Changes</h3>
     <ul>
+        <li><code>init</code> is now idempotent. Calling <code>init</code> multiple times with the same values no longer throws an exception.</li>
         <li>Ant: Dropped support for the separate Spring distribution.<br/>Spring is still supported by adding the Spring jars yourself on Flyway's classpath</li>
         <li>Ant: The distribution is now called flyway-ant-2.2.[zip|tar.gz] (dropped the -dist part)</li>
         <li>Command-line: Dropped support for the Spring distribution.<br/>Spring is still supported by adding the Spring jars yourself in the /jars directory</li>
@@ -25,6 +26,10 @@ subtitle: Release Notes
     <ul>
         <li>
             Small Bug in Flyway.getLocations() -&gt; flyway-test-extension crash
+        </li>
+        <li>
+            <a href="http://code.google.com/p/flyway/issues/detail?id=453">Issue 453</a>
+            flyway.cmd cannot determine console width on windows 7
         </li>
         <li>
             <a href="http://code.google.com/p/flyway/issues/detail?id=456">Issue 456</a>
@@ -1262,7 +1267,7 @@ subtitle: Release Notes
     </ul>
 </div>
 
-<div class="release">
+<div id="0.0.1" class="release">
     <h2>Flyway 0.0.1 (2010-04-20)</h2>
     <ul>
         <li>Initial Release</li>
