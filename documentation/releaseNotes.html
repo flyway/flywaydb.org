@@ -13,6 +13,7 @@ subtitle: Release Notes
 
     <h3>Incompatible Changes</h3>
     <ul>
+        <li>Flyway now throws an exception if a placeholder is missing a replacement value</li>
         <li><code>init</code> is now idempotent. Calling <code>init</code> multiple times with the same values no longer throws an exception.</li>
         <li>Ant: Dropped support for the separate Spring distribution.<br/>Spring is still supported by adding the Spring jars yourself on Flyway's classpath</li>
         <li>Ant: The distribution is now called flyway-ant-2.2.[zip|tar.gz] (dropped the -dist part)</li>
@@ -72,13 +73,17 @@ subtitle: Release Notes
             MySql - Cannot create table or query data from tables in migration steps because meta data table is locked
         </li>
         <li>
+            <a href="http://code.google.com/p/flyway/issues/detail?id=477">Issue 477</a>
+            Fail fast for missing placeholders
+        </li>
+        <li>
             <a href="https://github.com/flyway/flyway/pull/25">Pull Request 25</a>
             Version in child projects is redundant, since it is inherited from the parent
         </li>
     </ul>
 
     <p>
-        Thanks to Alex Zuroff, Florian Eska, Geoff, Jens Berke, Leandro de Oliveira, Mark Garrison, Michael Hirsch,
+        Thanks to Alex Zuroff, Brian Hartin, Florian Eska, Geoff, Jens Berke, Leandro de Oliveira, Mark Garrison, Michael Hirsch,
         Nayan Hajratwala, Roger Brechbühl and Tim Andersen for reporting these issues and contributing fixes.
     </p>
 
