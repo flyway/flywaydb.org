@@ -14,11 +14,18 @@ subtitle: Release Notes
     <h3>Incompatible Changes</h3>
     <ul>
         <li>Flyway now throws an exception if a placeholder is missing a replacement value</li>
-        <li><code>init</code> is now idempotent. Calling <code>init</code> multiple times with the same values no longer throws an exception.</li>
-        <li>Ant: Dropped support for the separate Spring distribution.<br/>Spring is still supported by adding the Spring jars yourself on Flyway's classpath</li>
+        <li><code>init</code> is now idempotent. Calling <code>init</code> multiple times with the same values no longer
+            throws an exception.
+        </li>
+        <li>Ant: Dropped support for the separate Spring distribution.<br/>Spring is still supported by adding the
+            Spring jars yourself on Flyway's classpath
+        </li>
         <li>Ant: The distribution is now called flyway-ant-2.2.[zip|tar.gz] (dropped the -dist part)</li>
-        <li>Command-line: Dropped support for the Spring distribution.<br/>Spring is still supported by adding the Spring jars yourself in the /jars directory</li>
-        <li>Command-line: The distribution is now called flyway-commandline-2.2.[zip|tar.gz] (dropped the -dist part)</li>
+        <li>Command-line: Dropped support for the Spring distribution.<br/>Spring is still supported by adding the
+            Spring jars yourself in the /jars directory
+        </li>
+        <li>Command-line: The distribution is now called flyway-commandline-2.2.[zip|tar.gz] (dropped the -dist part)
+        </li>
         <li>Command-line: The root directory is now called flyway-2.2 (dropped the -commandline part)</li>
         <li>Command-line: On Linux and OSX the script is now called <code>flyway</code> (dropped the .sh)</li>
     </ul>
@@ -77,17 +84,24 @@ subtitle: Release Notes
             Fail fast for missing placeholders
         </li>
         <li>
+            <a href="https://github.com/flyway/flyway/pull/23">Pull Request 23</a>
+            Consider colons as a token separator
+        </li>
+        <li>
             <a href="https://github.com/flyway/flyway/pull/25">Pull Request 25</a>
             Version in child projects is redundant, since it is inherited from the parent
         </li>
     </ul>
 
     <p>
-        Thanks to Alex Zuroff, Brian Hartin, Florian Eska, Geoff, Jens Berke, Leandro de Oliveira, Mark Garrison, Michael Hirsch,
-        Nayan Hajratwala, Roger Brechbühl and Tim Andersen for reporting these issues and contributing fixes.
+        Thanks to Alex Zuroff, Brian Hartin, Florian Eska, Geoff, Jens Berke, Leandro de Oliveira, Mark Garrison,
+        Michael Hirsch,
+        Nayan Hajratwala, Patrick Malouin, Roger Brechbühl and Tim Andersen
+        for reporting these issues and contributing fixes.
     </p>
 
-    <p>Special thanks to David Harrigan for <a href="/support/payForFeature.html">sponsoring the fix</a> for issue 462!</p>
+    <p>Special thanks to David Harrigan for <a href="/support/payForFeature.html">sponsoring the fix</a> for issue 462!
+    </p>
 </div>
 
 <div class="release">
@@ -126,7 +140,8 @@ subtitle: Release Notes
 <div class="release">
     <h2>Flyway 2.1 (2013-03-05)</h2>
 
-    <p>This version <strong>fixes minor issues with the metadata table</strong>. Migration is transparent and automatic on first
+    <p>This version <strong>fixes minor issues with the metadata table</strong>. Migration is transparent and automatic
+        on first
         run.</p>
 
     <h3>New Features</h3>
@@ -156,7 +171,8 @@ subtitle: Release Notes
         </li>
         <li>
             <a href="http://code.google.com/p/flyway/issues/detail?id=324">Issue 324</a>
-            <code>flyway.driver</code> is now optional. It is auto-detected based on <code>flyway.url</code> when omitted
+            <code>flyway.driver</code> is now optional. It is auto-detected based on <code>flyway.url</code> when
+            omitted
         </li>
     </ul>
     <h3>Incompatible Changes</h3>
@@ -168,13 +184,22 @@ subtitle: Release Notes
             <a href="http://code.google.com/p/flyway/issues/detail?id=340">Issue 340</a>
             Invalid locations now result in an exception being thrown instead of being silently ignored.
         </li>
-        <li>Command-line: The default for <code>flyway.locations</code> has been changed to <code>filesystem:&lt;&lt;INSTALL-DIR&gt;&gt;/sql</code></li>
+        <li>Command-line: The default for <code>flyway.locations</code> has been changed to <code>filesystem:&lt;&lt;INSTALL-DIR&gt;&gt;/sql</code>
+        </li>
     </ul>
     <h3>Changes</h3>
     <ul>
-        <li>Deprecated <code><del>flyway.initialVersion</del></code>. Use <code>flyway.initVersion</code> instead.</li>
-        <li>Deprecated <code><del>flyway.initialDescription</del></code>. Use <code>flyway.initDescription</code> instead.</li>
-        <li>Flyway now enforces the <a href="/documentation/migration#versions">rules for what constitutes a valid version</a>.</li>
+        <li>Deprecated <code>
+            <del>flyway.initialVersion</del>
+        </code>. Use <code>flyway.initVersion</code> instead.
+        </li>
+        <li>Deprecated <code>
+            <del>flyway.initialDescription</del>
+        </code>. Use <code>flyway.initDescription</code> instead.
+        </li>
+        <li>Flyway now enforces the <a href="/documentation/migration#versions">rules for what constitutes a valid
+            version</a>.
+        </li>
         <li>SqlServer: Flyway is now tested with Jtds 1.2.7 (was 1.2.4).</li>
         <li>H2: Flyway is now tested with H2 1.3.170 (still compatible with 1.2.137 and above).</li>
         <li>
@@ -309,7 +334,8 @@ subtitle: Release Notes
 <div class="release">
     <h2>Flyway 2.0.2 (2012-11-22)</h2>
 
-    <p>This version performs <strong>minor fixes on the metadata table</strong>. Migration is transparent and automatic on first
+    <p>This version performs <strong>minor fixes on the metadata table</strong>. Migration is transparent and automatic
+        on first
         run.</p>
 
     <h3>Bug fixes</h3>
