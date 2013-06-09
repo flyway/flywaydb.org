@@ -9,10 +9,6 @@
     margin-top: 30px;
 }
 
-#tabs i {
-    background-image: url("/assets/bootstrap-2.2.2/img/glyphicons-halflings.png") !important;
-}
-
 #big-sell {
     min-height: 400px;
     text-align: center;
@@ -221,8 +217,17 @@ h3 {
 }
 
 pre.console {
-    background: #000000;
+    background: #555;
     color: white;
+    margin-bottom: 20px;
+}
+
+pre.prettyprint {
+    padding: 9.5px;
+}
+
+i {
+    color: #555;
 }
 
 .blog-post-date {
