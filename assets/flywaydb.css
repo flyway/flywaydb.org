@@ -230,6 +230,11 @@ i {
     color: #555;
 }
 
+.btn i {
+    color: #ffffff;
+    padding-left: 10px;
+}
+
 .blog-post-date {
     color: #808080;
     font-weight: bold;
