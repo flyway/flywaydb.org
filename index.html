@@ -10,7 +10,8 @@ tab: home
             </p>
 
             <p>
-                <a class="btn btn-primary btn-large btn-jumbo" href="/getstarted">Get Started with Flyway {{site.flywayVersion}}</a><br/>
+                <a class="btn btn-primary btn-large btn-jumbo" href="/getstarted">Get Started with Flyway
+                    {{site.flywayVersion}}</a><br/>
             </p>
 
             <p id="links">
@@ -176,34 +177,47 @@ tab: home
                 dropping the schema itself</p>
         </div>
     </div>
-    <div id="clients" class="row">
-        <div class="span3">
-            <img src="/assets/glyphicons/glyphicons_294_coffe_cup.png"/>
-
-            <div class="marketing-item"><a href="/documentation/api.html">Java API</a></div>
-
-            <p>Migrate directly from within your application</p>
-        </div>
-        <div class="span3">
-            <img src="/assets/glyphicons/glyphicons_023_cogwheels.png"/>
-
-            <div class="marketing-item"><a href="/documentation/maven/index.html">Maven Plugin</a></div>
-
-            <p>Seamless integration with Maven 2/3 builds</p>
-        </div>
-        <div class="span3">
-            <img src="assets/glyphicons/glyphicons_150_check.png"/>
-
-            <div class="marketing-item"><a href="/documentation/ant/index.html">Ant Tasks</a></div>
-
-            <p>Antlib with tasks for Ant 1.8 and above</p>
-        </div>
-        <div class="span3">
-            <img src="assets/glyphicons/glyphicons_160_imac.png"/>
-
-            <div class="marketing-item"><a href="/documentation/commandline/index.html">Command-line Tool</a></div>
-
-            <p>For non-JVM users and environments without Maven or Ant</p>
+</div>
+<hr class="soften"/>
+<div id="first-steps">
+    <div class="tabbable">
+        <ul class="nav nav-tabs">
+            <li class="active marketing-item"><a href="#tab-api" data-toggle="tab"><i class="icon-coffee"></i> Java API</a>
+            </li>
+            <li class="marketing-item"><a href="#tab-commandline" data-toggle="tab"><i class="icon-desktop"></i>
+                Command-line Tool</a></li>
+            <li class="marketing-item"><a href="#tab-maven" data-toggle="tab"><i class="icon-cogs"></i> Maven Plugin</a>
+            </li>
+            <li class="marketing-item"><a href="#tab-ant" data-toggle="tab"><i class="icon-wrench"></i> Ant Tasks</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active" id="tab-api">
+                <p>Migrate directly from within your application</p>
+                <pre class="prettyprint">Flyway flyway = new Flyway();
+flyway.setDataSource(url, user, password);
+flyway.migrate();</pre>
+                <a href="/getstarted/firststeps/api.html" class="btn btn-primary">Get Started with the Java API <i
+                        class="icon-arrow-right"></i></a>
+            </div>
+            <div class="tab-pane" id="tab-commandline">
+                <p>For non-JVM users and environments without Maven or Ant</p>
+                <pre class="console">&gt; flyway migrate -url=... -user=... -password=...</pre>
+                <a href="/getstarted/firststeps/commandline.html" class="btn btn-primary">Get Started with the
+                    Command-line Tool <i class="icon-arrow-right"></i></a>
+            </div>
+            <div class="tab-pane" id="tab-maven">
+                <p>Seamless integration with Maven 2/3 builds</p>
+                <pre class="console">&gt; mvn flyway:migrate -Dflyway.url=... -Dflyway.user=... -Dflyway.password=...</pre>
+                <a href="/getstarted/firststeps/maven.html" class="btn btn-primary">Get Started with the Maven
+                    Plugin <i class="icon-arrow-right"></i></a>
+            </div>
+            <div class="tab-pane" id="tab-ant">
+                <p>Antlib with tasks for Ant 1.8 and above</p>
+                <pre class="prettyprint">&lt;flyway:migrate url="..." user="..." password="..."/&gt;</pre>
+                <a href="/getstarted/firststeps/ant.html" class="btn btn-primary">Get Started with the Ant Tasks <i
+                        class="icon-arrow-right"></i></a>
+            </div>
         </div>
     </div>
 </div>
@@ -706,7 +720,7 @@ tab: home
     <td>Apache v2</td>
     <td>Apache v2</td>
     <td>Apache v2</td>
-    <td>BSD</td>
+    <td>LGPL</td>
     <td>Apache v2</td>
     <td>BSD</td>
     <td>LGPL v3</td>
