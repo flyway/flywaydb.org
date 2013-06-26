@@ -11,6 +11,14 @@ subtitle: Release Notes
 <div class="release">
     <h2>Unreleased version</h2>
 
+    <h3>New Features</h3>
+    <ul>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/182">Issue 182</a>
+            SQL Azure support
+        </li>
+    </ul>
+
     <h3>Incompatible Changes</h3>
     <ul>
         <li>Flyway now throws an exception if a placeholder is missing a replacement value</li>
@@ -28,6 +36,11 @@ subtitle: Release Notes
         </li>
         <li>Command-line: The root directory is now called flyway-2.2 (dropped the -commandline part)</li>
         <li>Command-line: On Linux and OSX the script is now called <code>flyway</code> (dropped the .sh)</li>
+    </ul>
+
+    <h3>Changes</h3>
+    <ul>
+        <li>Flyway is now tested with the Microsoft JDBC Driver 4.0.2206.100 (was 3.0.1301.101)</li>
     </ul>
 
     <h3>Bug fixes</h3>
@@ -112,8 +125,8 @@ subtitle: Release Notes
     <p>
         Thanks to Alex Zuroff, Brian Hartin, David Bellem, Florian Eska, Geoff, Jason Januzelli, Jens Berke,
         Leandro de Oliveira, Mark Garrison, Michael Hirsch,
-        Nayan Hajratwala, Patrick Malouin, Pekka Mannisto, Radek Mensik, Roger Brechbühl, service (figel.it)
-        and Tim Andersen
+        Nayan Hajratwala, Patrick Malouin, Pekka Mannisto, Radek Mensik, Roger Brechbühl, Ryan Williams,
+        service (figel.it) and Tim Andersen
         for reporting these issues and contributing fixes.
     </p>
 
@@ -214,7 +227,8 @@ subtitle: Release Notes
             <del>flyway.initialDescription</del>
         </code>. Use <code>flyway.initDescription</code> instead.
         </li>
-        <li>Flyway now enforces the <a href="/documentation/migration/index.html#versions">rules for what constitutes a valid
+        <li>Flyway now enforces the <a href="/documentation/migration/index.html#versions">rules for what constitutes a
+            valid
             version</a>.
         </li>
         <li>SqlServer: Flyway is now tested with Jtds 1.2.7 (was 1.2.4).</li>
