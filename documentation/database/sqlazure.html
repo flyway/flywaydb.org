@@ -1,27 +1,21 @@
 ---
 layout: documentation
-menu: sqlServer
-subtitle: SQL Server
+menu: sqlAzure
+subtitle: SQL Azure
 ---
-<div id="databaseSqlServer">
-    <h1>SQL Server</h1>
-
-    <h2>Versions</h2>
-    <ul>
-        <li>2008 or later</li>
-    </ul>
+<div id="databaseSqlAzure">
+    <h1>SQL Azure</h1>
 
     <h2>Default Driver</h2>
     <ul>
-        <li>sqlserver: com.microsoft.sqlserver.jdbc.SQLServerDriver</li>
-        <li>jtds: net.sourceforge.jtds.jdbc.Driver</li>
+        <li>com.microsoft.sqlserver.jdbc.SQLServerDriver</li>
     </ul>
 
     <h2>Jdbc Drivers</h2>
     <ul>
-        <li>Microsoft JDBC Driver 3.0 or later</li>
-        <li>Jtds 1.2.7 or later</li>
+        <li>Microsoft JDBC Driver 4.0 or later</li>
     </ul>
+
     <h2>Sql Script Syntax</h2>
     <ul>
         <li><a href="/documentation/migration/sql.html#syntax">Standard Sql
@@ -30,9 +24,9 @@ subtitle: SQL Server
     </ul>
     <h3>Compatibility</h3>
     <ul>
-        <li>DDL exported by SQL Server can be used unchanged in a Flyway migration.</li>
-        <li>Any SQL Server sql script executed by Flyway, can be executed by Sqlcmd, SQL Server Management Studio and
-            other SQL Server-compatible tools (after the placeholders have been replaced).
+        <li>DDL exported by SQL Azure can be used unchanged in a Flyway migration.</li>
+        <li>Any SQL Azure sql script executed by Flyway, can be executed by Sqlcmd, SQL Server Management Studio and
+            other SQL Azure-compatible tools (after the placeholders have been replaced).
         </li>
     </ul>
     <h3>Example</h3>
@@ -92,6 +86,6 @@ INSERT INTO ${tableName} (name) VALUES (&#x27;Mr. T&#x27;);</pre>
 
     <h2>Limitations</h2>
     <ul>
-        <li>When setting <code>schemas</code>, the first schema is not set as the default due to <a href="http://connect.microsoft.com/SQLServer/feedback/details/390528/t-sql-statement-for-changing-default-schema-context">SQL Server limitations</a>.</li>
+        <li>When setting <code>schemas</code>, the first schema is not set as the default due to <a href="http://connect.microsoft.com/SQLServer/feedback/details/390528/t-sql-statement-for-changing-default-schema-context">SQL Azure limitations</a>.</li>
     </ul>
 </div>
