@@ -180,6 +180,10 @@ hr.soften {
     margin-top: 0;
 }
 
+#menu .date {
+    font-size: 10px;
+}
+
 .nav-pills > li > a {
     padding-left: 10px;
     padding-right: 10px;
@@ -250,6 +254,8 @@ i {
 .blog-post-image {
     text-align: center;
     font-size: 8px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 #blog-post-nav {

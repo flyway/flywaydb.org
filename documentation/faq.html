@@ -27,14 +27,14 @@ subtitle: FAQ
 
     <h2 id="defect">I found a defect. Where should I report it?</h2>
 
-    <p>Check the <a href="http://code.google.com/p/flyway/issues/list">issue tracker</a> if someone else
-        already reported it. If not, <a href="http://code.google.com/p/flyway/issues/entry">raise a new
+    <p>Check the <a href="https://github.com/flyway/flyway/issues?state=open">issue tracker</a> if someone else
+        already reported it. If not, <a href="https://github.com/flyway/flyway/issues?state=open">raise a new
             issue</a>. <br/> <br/></p>
 
     <h2 id="feature-request">I have a feature request. Where should I submit it?</h2>
 
-    <p>Check the <a href="http://code.google.com/p/flyway/issues/list">issue tracker</a> if someone else
-        already suggested it. If not, <a href="http://code.google.com/p/flyway/issues/entry">raise a new
+    <p>Check the <a href="https://github.com/flyway/flyway/issues?state=open">issue tracker</a> if someone else
+        already suggested it. If not, <a href="https://github.com/flyway/flyway/issues?state=open">raise a new
             issue</a>. <br/> <br/></p>
 
     <h2 id="question">I have a question. Where can I ask it?</h2>
@@ -168,13 +168,8 @@ table = schema_version</pre>
 
     <h2 id="clean-objects">Why does clean drop individual objects instead of the schema itself?</h2>
 
-    <p>Many environments have central databases where developers are assigned a schema they can use. They do have all
-        the rights within the schema, but don&#x27;t have the rights to create or drop schemas themselves. The current
-        implementation of clean is fully compatible with this scenario. </p>
-
-    <p>This might be revisited in the future to include DROP SCHEMA capabilities, to keep step with CREATE SCHEMA
-        capabilities outlined in <a href="http://code.google.com/p/flyway/issues/detail?id=74">Issue
-            74</a></p>
+    <p>clean will remove what Flyway created. If Flyway also created the schema itself, clean will drop it. Otherwise it
+        will only drop the objects within the schema.</p>
 
     <h2 id="db-specific-sql">What is the best strategy for handling database-specific sql?</h2>
 
@@ -205,6 +200,7 @@ table = schema_version</pre>
 
     <h2 id="hibernate-cdi">How can I integrate Flyway with Hibernate in a CDI environment?</h2>
 
-    <p>This is explained with code in this <a href="http://stackoverflow.com/questions/11071821/cdi-extension-for-flyway">StackOverflow answer</a>.</p>
+    <p>This is explained with code in this <a
+            href="http://stackoverflow.com/questions/11071821/cdi-extension-for-flyway">StackOverflow answer</a>.</p>
 
 </div>

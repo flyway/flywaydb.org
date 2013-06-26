@@ -1,0 +1,98 @@
+---
+layout: blog
+subtitle: Issues migrated to GitHub
+permalink: /blog/issues-to-github.html
+---
+<div>
+    <p>As I wrote in the <a href="">anniversary post</a>, Flyway's humble beginnings started on <strong>Google
+        Code</strong> in 2010. It
+        was the perfect fit. Within a few minutes we had:</p>
+    <ul>
+        <li>a Mercurial repository</li>
+        <li>a Wiki</li>
+        <li>an Issue Tracker</li>
+        <li>binary downloads</li>
+    </ul>
+
+    <p>It was looking great! Work could begin!</p>
+
+    <div class="blog-post-image">
+        <img src="/assets/posts/issues-to-github/googlecode-to-github.png"
+             alt="GoogleCode-to-Github">
+    </div>
+
+    <p>Over time, the project grew and grew and surely more and more pressure started to mount on the Google
+        Code solution. We were starting to outgrow it in a number of areas. The first one where my pain limit
+        was reached was the <strong>wiki</strong>. It really had two fundamental problems: it lacked both the
+        <strong>layout flexibility</strong> I wanted and the <strong>offline editing</strong> capabilities I needed. It
+        was time for a replacement.</p>
+
+    <p>With these requirements in mind, I then turned to one of my core values: keeping things simple. These would be
+        the three pillars of the solution. I stumbled upon <strong>GitHub Pages</strong> and it was the perfect fit.
+        Powered
+        by both Git and <a href="http://jekyllrb.com/">Jekyll</a>, it solved all my problems at once. It was simple, I
+        could develop offline and I had all the layout flexibility I needed. We were in business! I registered the
+        <a href="http://flywaydb.org">flywaydb.org</a> domain and the <a href="https://github.com/flyway">flyway</a>
+        GitHub account. I then created the repository to back the website: <a
+                href="https://github.com/flyway/flywaydb.org">https://github.com/flyway/flywaydb.org</a>.
+    </p>
+
+    <p>The Google Code exodus had begun!</p>
+
+    <p>And sure enough, by December last year the siren's song of a <strong>Git repository for the code</strong>
+        had become too strong to resist. I created a second repository (<a
+                href="https://github.com/flyway/flywaydb">https://github.com/flyway/flyway</a>) and ran the migration
+        script. Goodbye Mercurial, hello Git!</p>
+
+    <div class="blog-post-image">
+        <img class="img-polaroid img-rounded" src="/assets/posts/issues-to-github/code-to-github.png"
+             alt="Code-to-Github">
+    </div>
+
+    <p>By now the Google Code heritage was feeling more of drag than anything else. GitHub had just ditched
+        downloads, so that wasn't an option anymore. So I decided to simplify and move all <strong>binary
+            downloads</strong> to
+        <a href="http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.googlecode.flyway%22">Maven Central</a>. Check.
+        Done!
+    </p>
+
+    <p>All that was left now was the <strong>issue tracker</strong>. This was a though decision however, as the win
+        isn't as
+        clear.<br/>Google Code has some real advantages:</p>
+    <ul>
+        <li>Sign in with Google Accounts (everyone and their brother has one)</li>
+        <li>Issue Starring (makes it very easy to rank demands and pain points)</li>
+    </ul>
+
+    <p>So what do you gain in return at GitHub?</p>
+
+    <ul>
+        <li>Nicer UI (more responsive, better tagging, better milestones, ...)</li>
+        <li>Better integration with Pull Requests and the code (now that it has been migrated)</li>
+    </ul>
+
+    <p>So today, I decided to bite the bullet and sever the last tie to the old Google Code project. I figured this
+        wouldn't be a big deal, as the code repository migration had been a breeze. I downloaded what seemed like the
+        best maintained
+        <a href="https://github.com/arthur-debert/google-code-issues-migrator">migration script</a> and started it in
+        dry-run mode.</p>
+
+    <p>Within two seconds I felt like this:</p>
+
+    <div class="blog-post-image">
+        <img class="img-polaroid img-rounded" src="/assets/posts/issues-to-github/fail.jpg" alt="Fail">
+    </div>
+
+    <p>The script had happily ignored my dry-run setting and was creating issues all over the place!! All
+        my hope for a quick and smooth migration vanished! And there was no turning back either! :-/</p>
+
+    <p>I have since been fixing things left and right. I believe things should be ok now. I apologise for the
+        inconvenience as I am sure this will have caused some notification spam for some of you.</p>
+
+    <p>But the good thing is: this was a one-time action. So I can happily say:</p>
+
+    <p><strong>Let's have a great time together on GitHub!</strong></p>
+
+    <p>P.S.: And yes, 2.2 is just around the corner :-)</p>
+
+</div>
