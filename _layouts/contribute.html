@@ -9,6 +9,9 @@ title: Contribute
             <div id="menu" class="well">
                 <ul class="nav nav-list">
                     <li
+                    {% if page.menu == 'overview' %} class="active" {% endif %}>
+                    <a href="/contribute">Overview</a></li>
+                    <li
                     {% if page.menu == 'howTo' %} class="active" {% endif %}>
                     <a href="/contribute/howToContribute.html">How To Contribute</a></li>
                     <li
