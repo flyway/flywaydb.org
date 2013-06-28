@@ -1,58 +1,22 @@
 ---
 layout: contribute
-menu: devEnvironmentSetup
-subtitle: Dev Environment Setup
+menu: codeDatabase
+subtitle: Database Setup - Code
 ---
-<div id="devEnvironmentSetup">
-    <h1>Dev Environment Setup</h1>
+<div id="codeDatabase">
+    <h1>Code: Database Setup</h1>
 
-    <p>To contribute to Flyway you will need to set up your development environment so that you can compile Flyway and
-        run its test suite. </p>
+    <p>To run Flyway's entire test suite, you need to set up the databases Flyway supports.</p>
 
-    <p>For this you will need to set up the various databases Flyway supports as well as Git, a JDK, Maven, Ant and
-        your IDE.</p>
+    <p>For this you will need Oracle, MySQL, PostgreSQL, SQL Server and DB2.</p>
 
-    <h2>Git</h2>
-
-    <p>Flyway uses Git for version control. Download the latest version here: <a
-            href="http://msysgit.github.com/"
-            >http://msysgit.github.com/</a></p>
-
-    <p>Make sure the directory containing the binaries has been added the PATH. If you downloaded an installer this
-        should have been taken care of for you.</p>
-
-    <h2>JDK</h2>
-
-    <p>Flyway depends on JDK 6 or later. So grab the latest version here: <a
-            href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a>
-    </p>
-
-    <p>After the installation is complete</p>
-    <ul>
-        <li>set up an environment variable called JAVA_HOME that points to your JDK installation directory</li>
-        <li>add the bin directory under JAVA_HOME to the PATH</li>
-    </ul>
-
-    <h2>Maven</h2>
-
-    <p>Flyway can be built with Maven 2 or 3. So grab the latest version here: <a href="http://maven.apache.org/download.html"
-            >http://maven.apache.org/download.html</a>
-    </p>
-
-    <p>After the installation is complete</p>
-    <ul>
-        <li>set up an environment variable called M2_HOME that points to your Maven installation directory</li>
-        <li>add the bin directory under M2_HOME to the PATH</li>
-    </ul>
-
-    <h2>IDE</h2>
-
-    <p>We use IntelliJ 12.1 for development. So grab the latest version here: <a
-                href="http://www.jetbrains.com/idea/">http://www.jetbrains.com/idea/</a></p>
-
-    <p>Eclipse should be fine too. However Eclipse has different
-        defaults for code formatting and import reordering. Keep this in mind so merge conflicts can be reduced to a
-        minimum.</p>
+    <div class="well well-small">
+        <strong>Tip:</strong> If your feature/bug fix doesn&#x27;t
+        impact the DB-specific code and you do not wish to set up all the databases, Flyway can be built using
+        <strong>mvn clean install -P-MediumTests</strong>. This will
+        disable all tests against the DBs. You can then safely skip this step and continue to <a href="submit.html">Submit
+        your Changes</a>.
+    </div>
 
     <h2>Oracle</h2>
 
@@ -88,7 +52,8 @@ end;
                 >http://www.oracle.com/technetwork/database/enterprise-edition/jdbc-112010-090769.html</a>
     </p>
 
-    <p>Now rename the jar as <code>ojdbc5-11.2.0.2.0.jar</code> and add it to your local Maven repository under <code>com/oracle/ojdbc5/11.2.0.2.0</code>.</p>
+    <p>Now rename the jar as <code>ojdbc5-11.2.0.2.0.jar</code> and add it to your local Maven repository under <code>com/oracle/ojdbc5/11.2.0.2.0</code>.
+    </p>
 
     <h2>MySQL</h2>
 
@@ -135,8 +100,9 @@ end;
     </ul>
     <div class="well well-small">
         <strong>Tip for Windows XP installation:</strong><br/> If you
-                install SQLServer under Windows XP, use the <code>Network Service</code> Account during installation for starting the
-                SQL Engine, if you use Local Service the engine might not start
+        install SQLServer under Windows XP, use the <code>Network Service</code> Account during installation for
+        starting the
+        SQL Engine, if you use Local Service the engine might not start
     </div>
     <p>After the installation is complete, enable TCP/IP:</p>
     <ul>
@@ -157,7 +123,7 @@ end;
         <li>SQL Server -&gt; Restart</li>
     </ul>
     <p>The Microsoft SQL Server Jdbc drivers aren&#x27;t available from Maven Central. So you&#x27;ll need to add
-    your copy of <code>sqljdbc4.jar</code> to your local Maven repository yourself.</p>
+        your copy of <code>sqljdbc4.jar</code> to your local Maven repository yourself.</p>
 
     <p>Download the 4.0.2206.100 driver from here: <a
             href="http://www.microsoft.com/en-us/download/details.aspx?id=11774">http://www.microsoft.com/en-us/download/details.aspx?id=11774</a>
@@ -165,7 +131,8 @@ end;
 
     <p>Extract the archive, go to <code>sqljdbc_4.0/enu</code> and rename <code>sqljdbc4.jar</code> into
         <code>sqljdbc4-4.0.2206.100.jar</code>.
-        Copy <code>sqljdbc4-4.0.2206.100.jar</code> to <code>com/microsoft/sqlserver/sqljdbc4/4.0.2206.100</code> in your local
+        Copy <code>sqljdbc4-4.0.2206.100.jar</code> to <code>com/microsoft/sqlserver/sqljdbc4/4.0.2206.100</code> in
+        your local
         Maven repository.</p>
 
     <h2>DB2</h2>
@@ -191,4 +158,10 @@ end;
 
     <p>Extract the archive and then rename <code>db2jcc.jar</code> into <code>db2jcc-3.62.56.jar</code>. Copy
         <code>db2jcc-3.62.56.jar</code> to <code>com/ibm/db2/db2jcc/3.62.56</code> in your local Maven repository.</p>
+
+    <h2>Next Step</h2>
+
+    <p class="next-steps">
+        <a class="btn btn-primary btn-large" href="/contribute/code/submit.html">Submit your Changes</a>
+    </p>
 </div>
