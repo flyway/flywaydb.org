@@ -270,3 +270,11 @@ i {
 #blog-post-next {
     float: right;
 }
+
+.label a {
+    color: #ffffff;
+}
+
+.label a:hover {
+    text-decoration: none;
+}
