@@ -274,3 +274,11 @@ i {
 .center {
     text-align: center;
 }
+
+.label a {
+    color: #ffffff;
+}
+
+.label a:hover {
+    text-decoration: none;
+}
