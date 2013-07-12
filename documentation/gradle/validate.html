@@ -1,24 +1,23 @@
 ---
-layout: commandLine
+layout: gradle
 pill: validate
-subtitle: 'Command Line : Validate'
+subtitle: 'gradle flywayValidate'
 ---
-<div id="commandLineValidate">
-    <h1>Command Line: Validate</h1>
+<div id="gradleValidate">
+    <h1>Gradle Task: flywayValidate</h1>
 
-    <p>Validates the applied migrations against the ones available on the classpath. The build fails if differences in
-        migration names, types or checksums are found. <br/></p>
+    <p>Validates the applied migrations against the ones available on the classpath.<br/>
+        The build fails if differences in
+        migration descriptions, types or checksums are found. </p>
 
     <h2>Usage</h2>
+    <pre class="console">&gt; gradle flywayValidate</pre>
 
-    <pre class="console">&gt; flyway [options] validate</pre>
-
-    <h2>Options</h2>
-
+    <h2>Configuration</h2>
     <table class="table table-bordered table-hover">
         <thead>
         <tr>
-            <th>Option</th>
+            <th>Parameter</th>
             <th>Required</th>
             <th>Default</th>
             <th>Description</th>
@@ -55,7 +54,7 @@ subtitle: 'Command Line : Validate'
             <td>schemas</td>
             <td>NO</td>
             <td><i>default schema of the connection</i></td>
-            <td>Comma-separated case-sensitive list of schemas managed by Flyway.<br/>
+            <td>Case-sensitive list of schemas managed by Flyway.<br/>
                 The first schema will be the one containing the metadata table.
             </td>
         </tr>
@@ -72,17 +71,13 @@ subtitle: 'Command Line : Validate'
         <tr>
             <td>locations</td>
             <td>NO</td>
-            <td><nobr>filesystem:<i>&lt;install-dir&gt;</i>/sql</nobr></td>
-            <td>Comma-separated list of locations to scan recursively for migrations. The location type is determined by its prefix.<br/>
-                Unprefixed locations or locations starting with <code>classpath:</code> point to a package on the classpath and may contain both sql and java-based migrations.<br/>
-                Locations starting with <code>filesystem:</code> point to a directory on the filesystem and may only contain sql migrations.
+            <td>db/migration</td>
+            <td>Locations to scan recursively for migrations. The location type is determined by its prefix.<br/>
+                Unprefixed locations or locations starting with <code>classpath:</code> point to a package on the
+                classpath and may contain both sql and java-based migrations.<br/>
+                Locations starting with <code>filesystem:</code> point to a directory on the filesystem and may only
+                contain sql migrations.
             </td>
-        </tr>
-        <tr>
-            <td>jarDir</td>
-            <td>NO</td>
-            <td><nobr><i>&lt;install-dir&gt;</i>/jars</nobr></td>
-            <td>The directory containing the JDBC driver and the Java-based migrations</td>
         </tr>
         <tr>
             <td>sqlMigrationPrefix</td>
@@ -103,7 +98,7 @@ subtitle: 'Command Line : Validate'
             <td>The encoding of Sql migrations</td>
         </tr>
         <tr>
-            <td>placeholders.<i>name</i></td>
+            <td>placeholders</td>
             <td>NO</td>
             <td></td>
             <td>Placeholders to replace in Sql migrations</td>
@@ -112,12 +107,13 @@ subtitle: 'Command Line : Validate'
             <td>placeholderPrefix</td>
             <td>NO</td>
             <td>${</td>
-            <td>The prefix of every placeholder</td>
-        </tr>
-        <tr>
-            <td>placeholderSuffix</td>
-            <td>NO</td>
-            <td>}</td>
+        <td>The prefix of every placeholder</td>
+    </tr>
+    <tr>
+        <td>placeholderSuffix</td>
+        <td>NO</td>
+        <td>}
+            </td>
             <td>The suffix of every placeholder</td>
         </tr>
         <tr>
@@ -151,30 +147,31 @@ subtitle: 'Command Line : Validate'
         </tr>
         </tbody>
     </table>
-
-    <h2>Sample configuration</h2><pre
-        class="prettyprint">flyway.driver=org.hsqldb.jdbcDriver
-flyway.url=jdbc:hsqldb:file:/db/flyway_sample
-flyway.user=SA
-flyway.password=mySecretPwd
-flyway.schemas=schema1,schema2,schema3
-flyway.table=schema_history
-flyway.locations=classpath:com.mycompany.project.migration,database/migrations,filesystem:/sql-migrations
-flyway.sqlMigrationPrefix=Migration-
-flyway.sqlMigrationSuffix=-OK.sql
-flyway.encoding=ISO-8859-1
-flyway.placeholders.aplaceholder=value
-flyway.placeholders.otherplaceholder=value123
-flyway.placeholderPrefix=#[
-flyway.placeholderSuffix=]
-flyway.target=5.1
-flyway.outOfOrder=false
-flyway.cleanOnValidationError=false</pre>
+    <h2>Sample configuration</h2>
+    <pre class="prettyprint">flyway {
+    driver = 'org.hsqldb.jdbcDriver'
+    url = 'jdbc:hsqldb:file:${project.build.directory}/db/flyway_sample;shutdown=true'
+    user = 'SA'
+    password = 'mySecretPwd'
+    schemas = ['schema1', 'schema2', 'schema3']
+    table = 'schema_history'
+    locations = ['classpath:migrations1', 'migrations2', 'filesystem:/sql-migrations']
+    sqlMigrationPrefix = 'Migration-'
+    sqlMigrationSuffix = '-OK.sql'
+    encoding = 'ISO-8859-1'
+    placeholders = [
+        'aplaceholder' : 'value'
+        'otherplaceholder' : 'value123'
+    ]
+    placeholderPrefix = '#['
+    placeholderSuffix = ']'
+    target = '1.1'
+    outOfOrder = false
+    cleanOnValidationError = false
+}</pre>
 
     <h2>Sample output</h2>
-    <pre class="console">&gt; flyway validate
+    <pre class="console">&gt; gradle flywayValidate -i
 
-Flyway (Command-line Tool) v.{{ site.flywayVersion }}
-
-No migrations applied yet. No validation necessary.</pre>
+Validated 5 migrations (execution time 00:00.030s)</pre>
 </div>

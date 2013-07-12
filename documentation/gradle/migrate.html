@@ -1,29 +1,16 @@
 ---
-layout: maven
+layout: gradle
 pill: migrate
-subtitle: 'mvn flyway:migrate'
+subtitle: 'gradle flywayMigrate'
 ---
-<div id="mavenGoalMigrate">
-<h1>Maven Goal: Migrate</h1>
+<div id="gradleMigrate">
+<h1>Gradle Task: flywayMigrate</h1>
 
 <p>Migrates the schema to the latest version. Flyway will create the metadata table automatically if it doesn't
     exist.</p>
 
-<table class="table table-bordered">
-    <tr>
-        <td><strong>Important:</strong> To make sure new migrations
-            are taken into account, <strong>mvn compile</strong> must be invoked first!
-        </td>
-    </tr>
-</table>
-
-<h2>Default Phase</h2>
-<ul>
-    <li>pre-integration-test</li>
-</ul>
-
 <h2>Usage</h2>
-<pre class="console">&gt; mvn flyway:migrate</pre>
+<pre class="console">&gt; gradle flywayMigrate</pre>
 
 <h2>Configuration</h2>
 <table class="table table-bordered table-hover">
@@ -48,15 +35,6 @@ subtitle: 'mvn flyway:migrate'
         <td><i>Auto-detected based on url</i></td>
         <td>The fully qualified classname of the jdbc driver to use
             to connect to the database
-        </td>
-    </tr>
-    <tr>
-        <td>serverId</td>
-        <td>NO</td>
-        <td>flyway-db</td>
-        <td>The id of the server in the Maven settings.xml file to
-            load the credentials from.<br/><br/>This is an alternative to passing the credentials in
-            directly through properties.
         </td>
     </tr>
     <tr>
@@ -129,7 +107,7 @@ subtitle: 'mvn flyway:migrate'
         <td>placeholderPrefix</td>
         <td>NO</td>
         <td>${</td>
-        <td>The prefix of every placeholder </td>
+        <td>The prefix of every placeholder</td>
     </tr>
     <tr>
         <td>placeholderSuffix</td>
@@ -205,61 +183,43 @@ subtitle: 'mvn flyway:migrate'
         </td>
         <td>The description of the initial version</td>
     </tr>
-    <tr>
-        <td>skip</td>
-        <td>NO</td>
-        <td>false</td>
-        <td>Skips the execution of the plugin for this module</td>
-    </tr>
     </tbody>
 </table>
 
 <h2>Sample configuration</h2>
-<pre class="prettyprint">&lt;configuration&gt;
-    &lt;driver&gt;org.hsqldb.jdbcDriver&lt;/driver&gt;
-    &lt;url&gt;jdbc:hsqldb:file:${project.build.directory}/db/flyway_sample;shutdown=true&lt;/url&gt;
-    &lt;user&gt;SA&lt;/user&gt;
-    &lt;password&gt;mySecretPwd&lt;/password&gt;
-    &lt;schemas&gt;
-        &lt;schema&gt;schema1&lt;/schema&gt;
-        &lt;schema&gt;schema2&lt;/schema&gt;
-        &lt;schema&gt;schema3&lt;/schema&gt;
-    &lt;/schemas&gt;
-    &lt;table&gt;schema_history&lt;/table&gt;
-    &lt;locations&gt;
-        &lt;location&gt;classpath:migrations1&lt;/location&gt;
-        &lt;location&gt;migrations2&lt;/location&gt;
-        &lt;location&gt;filesystem:/sql-migrations&lt;/location&gt;
-    &lt;/locations&gt;
-    &lt;sqlMigrationPrefix&gt;Migration-&lt;/sqlMigrationPrefix&gt;
-    &lt;sqlMigrationSuffix&gt;-OK.sql&lt;/sqlMigrationSuffix&gt;
-    &lt;encoding&gt;ISO-8859-1&lt;/encoding&gt;
-    &lt;placeholders&gt;
-        &lt;aplaceholder&gt;value&lt;/aplaceholder&gt;
-        &lt;otherplaceholder&gt;value123&lt;/otherplaceholder&gt;
-    &lt;/placeholders&gt;
-    &lt;placeholderPrefix&gt;#[&lt;/placeholderPrefix&gt;
-    &lt;placeholderSuffix&gt;]&lt;/placeholderSuffix&gt;
-    &lt;target&gt;1.1&lt;/target&gt;
-    &lt;outOfOrder&gt;false&lt;/outOfOrder&gt;
-    &lt;validateOnMigrate&gt;true&lt;/validateOnMigrate&gt;
-    &lt;cleanOnValidationError&gt;false&lt;/cleanOnValidationError&gt;
-    &lt;initOnMigrate&gt;false&lt;/initOnMigrate&gt;
-    &lt;initVersion&gt;5&lt;/initVersion&gt;
-    &lt;initDescription&gt;Let's go!&lt;/initDescription&gt;
-    &lt;skip&gt;false&lt;/skip&gt;
-&lt;/configuration&gt;</pre>
+<pre class="prettyprint">flyway {
+    driver = 'org.hsqldb.jdbcDriver'
+    url = 'jdbc:hsqldb:file:${project.build.directory}/db/flyway_sample;shutdown=true'
+    user = 'SA'
+    password = 'mySecretPwd'
+    schemas = ['schema1', 'schema2', 'schema3']
+    table = 'schema_history'
+    locations = ['classpath:migrations1', 'migrations2', 'filesystem:/sql-migrations']
+    sqlMigrationPrefix = 'Migration-'
+    sqlMigrationSuffix = '-OK.sql'
+    encoding = 'ISO-8859-1'
+    placeholders = [
+        'aplaceholder' : 'value'
+        'otherplaceholder' : 'value123'
+    ]
+    placeholderPrefix = '#['
+    placeholderSuffix = ']'
+    target = '1.1'
+    outOfOrder = false
+    validateOnMigrate = true
+    cleanOnValidationError = false
+    initOnMigrate = false
+    initVersion = 5
+    initDescription = "Let's go!"
+}</pre>
 
 <h2>Sample output</h2>
-<pre class="console">&gt; mvn compile flyway:migrate
+<pre class="console">&gt; gradle flywayMigrate -i
 
-[INFO] [compiler:compile {execution: default-compile}]
-[INFO] Nothing to compile - all classes are up to date
-[INFO] [flyway:migrate {execution: default-cli}]
-[INFO] Current schema version: 0
-[INFO] Migrating to version 1
-[INFO] Migrating to version 1.1
-[INFO] Migrating to version 1.2
-[INFO] Migrating to version 1.3
-[INFO] Successfully applied 4 migrations (execution time 00:00.091s).</pre>
+Current schema version: 0
+Migrating to version 1
+Migrating to version 1.1
+Migrating to version 1.2
+Migrating to version 1.3
+Successfully applied 4 migrations (execution time 00:00.091s).</pre>
 </div>
