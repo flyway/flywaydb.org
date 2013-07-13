@@ -65,6 +65,11 @@
     width: 180px;
 }
 
+#news {
+    font-size: 12px;
+    margin-top: 20px;
+}
+
 hr.soften {
     height: 1px;
     margin: 54px 0;
@@ -281,4 +286,8 @@ i {
 
 .label a:hover {
     text-decoration: none;
+}
+
+#getStarted #first-steps .marketing-item {
+    font-size: 14px;
 }
