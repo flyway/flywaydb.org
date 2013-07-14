@@ -1,0 +1,87 @@
+---
+layout: blog
+subtitle: Flyway 2.2 Released
+permalink: /blog/flyway-2.2.html
+---
+<div>
+    <p>After almost exactly 4 months, I am proud to announce the release of Flyway 2.2!</p>
+
+    <p>The highlights of this release are:</p>
+    <ul>
+        <li>Gradle Support</li>
+        <li>SQL Azure Support</li>
+        <li>Commercial Support Plans</li>
+    </ul>
+
+    <h2>Gradle Support</h2>
+
+    <p>
+        This was the most requested feature by far. And here it is! Flyway now officially ships with a Gradle
+        plugin!<br/>
+        &nbsp;
+    </p>
+    <img src="/assets/posts/flyway-2.2/gradle_logo.gif" alt="Gradle Logo"/>
+
+    <p>
+        &nbsp;<br/>
+        We've gone to great lengths to ensure the plugin is very intuitive and very well integrated in the Gradle way
+        of doing things. This is all you need in your <code>build.gradle</code> to get started:
+    </p>
+    <pre class="prettyprint">buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "com.googlecode.flyway:flyway-gradle-plugin:2.2"
+    }
+}
+
+apply plugin: 'flyway'
+apply plugin: 'java'
+
+flyway {
+    url = 'jdbc:...'
+    user = '...'
+}
+</pre>
+    <p>Make sure to check out the brand new <a href="/getstarted/firststeps/gradle.html">first steps tutorial</a>. It'll
+        take 5 minutes to get started. It's that easy!</p>
+
+    <h2>SQL Azure Support</h2>
+
+    <p>Flyway added supported App Engine and Google Cloud SQL all the way back in version 1.6. As more and more users
+        move turn the cloud, it is important for Flyway to properly support these platforms. Starting today with 2.2
+        Flyway
+        now fully supports SQL Azure on the Windows Azure cloud!</p>
+    <img src="/assets/posts/flyway-2.2/windowsazure.png" alt="SQL Azure"/>
+
+    <h2>Commercial Support Plans</h2>
+
+    <p>Flyway is growing fast. In fact we have already passed the 35,000 download mark for this year alone! And there is
+        no stopping in sight!</p>
+
+    <p>This means that Flyway is now deployed at an increasingly large number of companies. Lately more and more of
+        these
+        companies have been asking for professional support, to make sure someone is there when there is a problem.</p>
+
+    <p>To address this, we are launching a <a href="/support">commercial support offering</a> today:</p>
+
+    <a href="/support"><img src="/assets/posts/flyway-2.2/support.png" alt="support" class="img-polaroid img-rounded"/></a>
+
+    <p>&nbsp;<br/>This is purely optional and on top of the existing Stack Overflow and GitHub forums.</p>
+
+    <h2>Get it while it's hot!</h2>
+
+    <p>On top of the features above, this release packs a ton of bug fixes and documentation improvements. All the
+        details are in the <a href="/documentation/releaseNotes.html">release notes</a>.</p>
+
+    <p>It wouldn't have been possible without the awesome work of the many contributors. I would like extend special
+        thanks to two people in particular:</p>
+
+    <ul>
+        <li>Ben Manes for his great work on the Gradle Plugin</li>
+        <li>David Harrigan for <a href="/support/sponsor.html">sponsoring a fix</a></li>
+    </ul>
+
+    <p>Enjoy the release and <a href="/getstarted/download.html">get it while it's hot!</a></p>
+</div>

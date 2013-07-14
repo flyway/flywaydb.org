@@ -291,3 +291,15 @@ i {
 #getStarted #first-steps .marketing-item {
     font-size: 14px;
 }
+
+#support td {
+    vertical-align: middle;
+}
+
+#support td:not(:first-child), #support th:not(:first-child) {
+    text-align: center;
+}
+
+#support span {
+    font-size: 10px;
+}

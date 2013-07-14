@@ -9,11 +9,11 @@ title: Support
             <div id="menu" class="well">
                 <ul class="nav nav-list">
                     <li
-                    {% if page.menu == 'overview' %} class="active" {% endif %}>
-                    <a href="/support">Overview</a></li>
+                    {% if page.menu == 'commercialSupport' %} class="active" {% endif %}>
+                    <a href="/support">Commercial Support</a></li>
                     <li
-                    {% if page.menu == 'payForFeature' %} class="active" {% endif %}>
-                    <a href="/support/payForFeature.html">Pay for a Feature</a></li>
+                    {% if page.menu == 'sponsor' %} class="active" {% endif %}>
+                    <a href="/support/sponsor.html">Sponsor a Feature</a></li>
                     <li
                     {% if page.menu == 'training' %} class="active" {% endif %}>
                     <a href="/support/training.html">Training</a></li>
@@ -27,3 +27,4 @@ title: Support
         </div>
     </div>
 </div>
+{% include contactpopup.html %}
