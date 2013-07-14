@@ -102,6 +102,41 @@ subtitle: 'Ant Task: Validate'
             <td>The encoding of Sql migrations</td>
         </tr>
         <tr>
+            <td>placeholders</td>
+            <td>NO</td>
+            <td></td>
+            <td>Placeholders to replace in Sql migrations</td>
+        </tr>
+        <tr>
+            <td>placeholderPrefix</td>
+            <td>NO</td>
+            <td>${</td>
+        <td>The prefix of every placeholder</td>
+    </tr>
+    <tr>
+        <td>placeholderSuffix</td>
+        <td>NO</td>
+        <td>}</td>
+            <td>The suffix of every placeholder</td>
+        </tr>
+        <tr>
+            <td>target</td>
+            <td>NO</td>
+            <td><i>latest version</i></td>
+            <td>The target version up to which Flyway should run
+                migrations. Migrations with a higher version number will not be applied.
+            </td>
+        </tr>
+        <tr>
+            <td>outOfOrder</td>
+            <td>NO</td>
+            <td>false</td>
+            <td>Allows migrations to be run "out of order".
+                <p>If you already have versions 1 and 3 applied, and now a version 2 is found,
+                    it will be applied too instead of being ignored.</p>
+            </td>
+        </tr>
+        <tr>
             <td>cleanOnValidationError</td>
             <td>NO</td>
             <td>false</td>
@@ -143,6 +178,12 @@ subtitle: 'Ant Task: Validate'
 &lt;property name=&quot;flyway.sqlMigrationPrefix&quot; value=&quot;Migration-&quot;/&gt;
 &lt;property name=&quot;flyway.sqlMigrationSuffix&quot; value=&quot;-OK.sql&quot;/&gt;
 &lt;property name=&quot;flyway.encoding&quot; value=&quot;ISO-8859-1&quot;/&gt;
+&lt;property name=&quot;flyway.placeholders.aplaceholder&quot; value=&quot;value&quot;/&gt;
+&lt;property name=&quot;flyway.placeholders.otherplaceholder&quot; value=&quot;value123&quot;/&gt;
+&lt;property name=&quot;flyway.placeholderPrefix&quot; value=&quot;#[&quot;/&gt;
+&lt;property name=&quot;flyway.placeholderSuffix&quot; value=&quot;]&quot;/&gt;
+&lt;property name=&quot;flyway.target&quot; value=&quot;1.1&quot;/&gt;
+&lt;property name=&quot;flyway.outOfOrder&quot; value=&quot;false&quot;/&gt;
 &lt;property name=&quot;flyway.validationErrorMode&quot; value=&quot;FAIL&quot;/&gt;</pre>
 
     <h2>Sample output</h2>

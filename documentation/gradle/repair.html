@@ -1,0 +1,85 @@
+---
+layout: gradle
+pill: repair
+subtitle: 'gradle flywayRepair'
+---
+<div id="gradleRepair">
+    <h1>Gradle Task: flywayRepair</h1>
+
+    <p><strong>Not necessary for databases with DDL transaction support</strong></p>
+
+    <p>Repairs the Flyway metadata table after a failed migration.<br/>
+        User objects left behind must still be cleaned up manually.</p>
+
+    <h2>Usage</h2>
+    <pre class="console">&gt; gradle flywayRepair</pre>
+
+    <h2>Configuration</h2>
+    <table class="table table-bordered table-hover">
+        <tr>
+            <th>Parameter</th>
+            <th>Required</th>
+            <th>Default</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>url</td>
+            <td>YES</td>
+            <td></td>
+            <td>The jdbc url to use to connect to the database</td>
+        </tr>
+        <tr>
+            <td>driver</td>
+            <td>NO</td>
+            <td><i>Auto-detected based on url</i></td>
+            <td>The fully qualified classname of the jdbc driver to use
+                to connect to the database
+            </td>
+        </tr>
+        <tr>
+            <td>user</td>
+            <td>NO</td>
+            <td></td>
+            <td>The user to use to connect to the database</td>
+        </tr>
+        <tr>
+            <td>password</td>
+            <td>NO</td>
+            <td></td>
+            <td>The password to use to connect to the database</td>
+        </tr>
+        <tr>
+            <td>schemas</td>
+            <td>NO</td>
+            <td><i>default schema of the connection</i></td>
+            <td>Case-sensitive list of schemas managed by Flyway.<br/>
+                The first schema will be the one containing the metadata table.
+            </td>
+        </tr>
+        <tr>
+            <td>table</td>
+            <td>NO</td>
+            <td>schema_version</td>
+            <td>The name of Flyway&#x27;s metadata table.<br/>By
+                default (single-schema mode) the metadata table is placed in the default schema for the connection
+                provided by the datasource.<br/>When the <i>flyway.schemas</i> property is set (multi-schema mode),
+                the metadata table is placed in the first schema of the list.
+            </td>
+        </tr>
+    </table>
+
+    <h2>Sample configuration</h2>
+    <pre class="prettyprint">flyway {
+    driver = 'org.hsqldb.jdbcDriver'
+    url = 'jdbc:hsqldb:file:${project.build.directory}/db/flyway_sample;shutdown=true'
+    user = 'SA'
+    password = 'mySecretPwd'
+    schemas = ['schema1', 'schema2', 'schema3']
+    table = 'schema_history'
+}</pre>
+    <h2>Sample output</h2>
+
+    <pre class="console">&gt; gradle flywayRepair -i
+
+Repair not necessary. No failed migration detected.</pre>
+</div>

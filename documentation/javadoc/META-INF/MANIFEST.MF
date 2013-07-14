@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Built-By: Axel
-Build-Jdk: 1.7.0_11
+Build-Jdk: 1.7.0_25
 Created-By: Apache Maven
 Archiver-Version: Plexus Archiver
 

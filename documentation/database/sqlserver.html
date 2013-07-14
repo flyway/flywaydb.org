@@ -1,12 +1,12 @@
 ---
-layout: database
-pill: sqlServer
+layout: documentation
+menu: sqlServer
 subtitle: SQL Server
 ---
 <div id="databaseSqlServer">
-    <h1><a name="SQL_Server"></a>SQL Server<a href="#SQL_Server" class="section_anchor"></a></h1>
+    <h1>SQL Server</h1>
 
-    <h2><a name="Versions"></a>Versions<a href="#Versions" class="section_anchor"></a></h2>
+    <h2>Versions</h2>
     <ul>
         <li>2008 or later</li>
     </ul>
@@ -17,25 +17,26 @@ subtitle: SQL Server
         <li>jtds: net.sourceforge.jtds.jdbc.Driver</li>
     </ul>
 
-    <h2><a name="Jdbc_Drivers"></a>Jdbc Drivers<a href="#Jdbc_Drivers" class="section_anchor"></a></h2>
+    <h2>Jdbc Drivers</h2>
     <ul>
-        <li>Microsoft 3.0 or later</li>
+        <li>Microsoft JDBC Driver 3.0 or later</li>
         <li>Jtds 1.2.7 or later</li>
     </ul>
-    <h2><a name="Sql_Script_Syntax"></a>Sql Script Syntax<a href="#Sql_Script_Syntax" class="section_anchor"></a></h2>
+    <h2>Sql Script Syntax</h2>
     <ul>
         <li><a href="/documentation/migration/sql.html#syntax">Standard Sql
             syntax</a> with statement delimiter <strong>GO</strong></li>
         <li>T-SQL</li>
     </ul>
-    <h3><a name="Compatibility"></a>Compatibility<a href="#Compatibility" class="section_anchor"></a></h3>
+    <h3>Compatibility</h3>
     <ul>
         <li>DDL exported by SQL Server can be used unchanged in a Flyway migration.</li>
         <li>Any SQL Server sql script executed by Flyway, can be executed by Sqlcmd, SQL Server Management Studio and
             other SQL Server-compatible tools (after the placeholders have been replaced).
         </li>
     </ul>
-    <h3><a name="Example"></a>Example<a href="#Example" class="section_anchor"></a></h3><pre class="prettyprint">/* Single line comment */
+    <h3>Example</h3>
+    <pre class="prettyprint">/* Single line comment */
 CREATE TABLE Customers (
 CustomerId smallint identity(1,1),
 Name nvarchar(255),
@@ -89,7 +90,7 @@ GO
 -- Placeholder
 INSERT INTO ${tableName} (name) VALUES (&#x27;Mr. T&#x27;);</pre>
 
-    <h2><a name="Limitations"></a>Limitations<a href="#Limitations" class="section_anchor"></a></h2>
+    <h2>Limitations</h2>
     <ul>
         <li>When setting <code>schemas</code>, the first schema is not set as the default due to <a href="http://connect.microsoft.com/SQLServer/feedback/details/390528/t-sql-statement-for-changing-default-schema-context">SQL Server limitations</a>.</li>
     </ul>

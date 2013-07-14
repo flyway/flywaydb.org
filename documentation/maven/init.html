@@ -9,10 +9,9 @@ subtitle: 'mvn flyway:init'
     <p>Creates and initializes the metadata table in the schema. </p>
 
     <h2>Usage</h2>
-    <pre class="prettyprint">mvn flyway:init</pre>
-    <h2>Configuration</h2>
+    <pre class="console">&gt; mvn flyway:init</pre>
 
-    <p>
+    <h2>Configuration</h2>
     <table class="table table-bordered table-hover">
         <thead>
         <tr>
@@ -98,9 +97,8 @@ subtitle: 'mvn flyway:init'
         </tr>
         </tbody>
     </table>
-    </p><h2>Sample configuration<a href="#Sample_configuration"
-                                   class="section_anchor"></a></h2><pre
-        class="prettyprint">&lt;configuration&gt;
+    <h2>Sample configuration</h2>
+    <pre class="prettyprint">&lt;configuration&gt;
     &lt;driver&gt;org.hsqldb.jdbcDriver&lt;/driver&gt;
     &lt;url&gt;jdbc:hsqldb:file:${project.build.directory}/db/flyway_sample;shutdown=true&lt;/url&gt;
     &lt;user&gt;SA&lt;/user&gt;
