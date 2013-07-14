@@ -11,10 +11,7 @@ subtitle: 'Command Line : Migrate'
 
     <h2>Usage</h2>
 
-    <p><strong>Windows</strong></p>
-    <pre class="prettyprint">flyway.cmd [options] migrate</pre>
-    <p><strong>Linux / OSX</strong></p>
-    <pre class="prettyprint">flyway.sh [options] migrate</pre>
+    <pre class="console">&gt; flyway [options] migrate</pre>
 
     <h2>Options</h2>
 
@@ -85,7 +82,7 @@ subtitle: 'Command Line : Migrate'
         <tr>
             <td>jarDir</td>
             <td>NO</td>
-            <td><nobr><i>&lt;install-dir&gt;</i>/jars</td>
+            <td><nobr><i>&lt;install-dir&gt;</i>/jars</nobr></td>
             <td>The directory containing the JDBC driver and the Java-based migrations</td>
         </tr>
         <tr>
@@ -216,7 +213,7 @@ flyway.cleanOnValidationError=false
 flyway.initOnMigrate=false</pre>
 
     <h2>Sample output</h2>
-    <pre class="console">&gt; flyway.cmd migrate
+    <pre class="console">&gt; flyway migrate
 
 Flyway (Command-line Tool) v.{{ site.flywayVersion }}
 
