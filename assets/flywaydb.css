@@ -280,7 +280,7 @@ i {
     text-align: center;
 }
 
-.label a {
+.label a, .label i {
     color: #ffffff;
 }
 
