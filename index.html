@@ -97,10 +97,6 @@ tab: home
 <div id="news">
     {% assign post = site.posts | first %}
     <div class="well well-small"><strong>Latest News:</strong> <a href="{{ post.permalink }}">{{ post.subtitle | xml_escape }} ({{ post.date | date: "%Y-%m-%d" }})</a></div>
-    <div class="well well-small">
-        <strong>Conference Talks:</strong>
-        <a href="http://www.devoxx.be/dv13-axel-fontaine.html?presId=3516">Devoxx (Antwerp, 2013-11-11)</a>
-    </div>
 </div>
 <hr class="soften"/>
 {% include getstarted.html %}
