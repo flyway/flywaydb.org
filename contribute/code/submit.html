@@ -26,10 +26,14 @@ subtitle: Submit your Changes - Code
     <h2>Create the test DBs</h2>
 
     <div class="well well-small">
-        <strong>Tip:</strong> If your feature/bug fix doesn&#x27;t
-        impact the DB-specific code and you do not wish to set up all the databases, Flyway can be built using
-        <strong>mvn clean install -P-MediumTests</strong>. This will
-        disable all tests against the DBs.
+        <strong>Tip:</strong>
+        If your feature/bug fix doesn't impact the DB-specific code<br/> and you do not wish to set up all the databases, Flyway can be built using either:
+        <ul>
+            <li><strong>mvn install -PNoCommercialDBTest -P-CommercialDBJars</strong> (skip Oracle, DB2 & SQL Server)</li>
+            <li><strong>mvn install -PNoInstallableDBTest -P-CommercialDBJars</strong> (skip all DBs, except in-memory ones)</li>
+        </ul>
+        <p>This will disable all tests against the skipped DBs.</p>
+        You can then omit installing them and continue to <a href="submit.html">Submit your Changes</a>.
     </div>
 
     <p>Execute <code>createDBs.cmd</code> to create all local test DBs. </p>
