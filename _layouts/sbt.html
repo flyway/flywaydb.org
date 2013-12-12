@@ -1,0 +1,32 @@
+---
+layout: documentation
+menu: sbt
+---
+<div>
+    <ul class="nav nav-pills">
+        <li
+        {% if page.pill == 'overview' %} class="active" {% endif %}>
+        <a href="/documentation/sbt">Overview</a></li>
+        <li
+        {% if page.pill == 'clean' %} class="active" {% endif %}>
+        <a href="/documentation/sbt/clean.html">clean</a></li>
+        <li
+        {% if page.pill == 'init' %} class="active" {% endif %}>
+        <a href="/documentation/sbt/init.html">init</a></li>
+        <li
+        {% if page.pill == 'migrate' %} class="active" {% endif %}>
+        <a href="/documentation/sbt/migrate.html">migrate</a></li>
+        <li
+        {% if page.pill == 'validate' %} class="active" {% endif %}>
+        <a href="/documentation/sbt/validate.html">validate</a></li>
+        <li
+        {% if page.pill == 'info' %} class="active" {% endif %}>
+        <a href="/documentation/sbt/info.html">info</a></li>
+        <li
+        {% if page.pill == 'repair' %} class="active" {% endif %}>
+        <a href="/documentation/sbt/repair.html">repair</a></li>
+    </ul>
+    
+    {{ content }}
+
+</div>
