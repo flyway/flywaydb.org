@@ -1,0 +1,244 @@
+---
+layout: sbt
+pill: migrate
+subtitle: 'sbt flywayMigrate'
+---
+<div id="sbtMigrate">
+<h1>SBT Task: flywayMigrate</h1>
+
+<p>Migrates the schema to the latest version. Flyway will create the metadata table automatically if it doesn't
+    exist.</p>
+
+<h2>Usage</h2>
+<pre class="console">&gt; sbt flywayMigrate</pre>
+
+<h2>Configuration</h2>
+<table class="table table-bordered table-hover">
+    <thead>
+    <tr>
+        <th>Parameter</th>
+        <th>Required</th>
+        <th>Default</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>flywayUrl</td>
+        <td>YES</td>
+        <td></td>
+        <td>The jdbc url to use to connect to the database</td>
+    </tr>
+    <tr>
+        <td>flywayDriver</td>
+        <td>NO</td>
+        <td><i>Auto-detected based on url</i></td>
+        <td>The fully qualified classname of the jdbc driver to use
+            to connect to the database
+        </td>
+    </tr>
+    <tr>
+        <td>flywayUser</td>
+        <td>NO</td>
+        <td></td>
+        <td>The user to use to connect to the database</td>
+    </tr>
+    <tr>
+        <td>flywayPassword</td>
+        <td>NO</td>
+        <td></td>
+        <td>The password to use to connect to the database</td>
+    </tr>
+    <tr>
+        <td>flywaySchemas</td>
+        <td>NO</td>
+        <td><i>default schema of the connection</i></td>
+        <td>Case-sensitive list of schemas managed by Flyway.<br/>
+            The first schema in the list will be automatically set as the default one during
+            the migration. It will also be the one containing the metadata table.
+        </td>
+    </tr>
+    <tr>
+        <td>flywayTable</td>
+        <td>NO</td>
+        <td>schema_version</td>
+        <td>The name of Flyway&#x27;s metadata table.<br/>By
+            default (single-schema mode) the metadata table is placed in the default schema for the connection
+            provided by the datasource.<br/>When the <i>flyway.schemas</i> property is set (multi-schema mode),
+            the metadata table is placed in the first schema of the list.
+        </td>
+    </tr>
+    <tr>
+        <td>flywayLocations</td>
+        <td>NO</td>
+        <td>db/migration</td>
+        <td>Locations to scan recursively for migrations. The location type is determined by its prefix.<br/>
+            Unprefixed locations or locations starting with <code>classpath:</code> point to a package on the
+            classpath and may contain both sql and java-based migrations.<br/>
+            Locations starting with <code>filesystem:</code> point to a directory on the filesystem and may only
+            contain sql migrations.
+        </td>
+    </tr>
+    <tr>
+        <td>flywaySqlMigrationPrefix</td>
+        <td>NO</td>
+        <td>V</td>
+        <td>The file name prefix for Sql migrations</td>
+    </tr>
+    <tr>
+        <td>flywaySqlMigrationSuffix</td>
+        <td>NO</td>
+        <td>.sql</td>
+        <td>The file name suffix for Sql migrations</td>
+    </tr>
+    <tr>
+        <td>flywayEncoding</td>
+        <td>NO</td>
+        <td>UTF-8</td>
+        <td>The encoding of Sql migrations</td>
+    </tr>
+    <tr>
+        <td>flywayPlaceholders</td>
+        <td>NO</td>
+        <td></td>
+        <td>Placeholders to replace in Sql migrations</td>
+    </tr>
+    <tr>
+        <td>flywayPlaceholderPrefix</td>
+        <td>NO</td>
+        <td>${</td>
+        <td>The prefix of every placeholder</td>
+    </tr>
+    <tr>
+        <td>flywayPlaceholderSuffix</td>
+        <td>NO</td>
+        <td>}
+        </td>
+        <td>The suffix of every placeholder</td>
+    </tr>
+    <tr>
+        <td>flywayTarget</td>
+        <td>NO</td>
+        <td><i>latest version</i></td>
+        <td>The target version up to which Flyway should run
+            migrations. Migrations with a higher version number will not be applied.
+        </td>
+    </tr>
+    <tr>
+        <td>flywayOutOfOrder</td>
+        <td>NO</td>
+        <td>false</td>
+        <td>Allows migrations to be run "out of order".
+            <p>If you already have versions 1 and 3 applied, and now a version 2 is found,
+                it will be applied too instead of being ignored.</p>
+        </td>
+    </tr>
+    <tr>
+        <td>flywayValidateOnMigrate</td>
+        <td>NO</td>
+        <td>false</td>
+        <td>Whether to automatically call validate or not when running migrate.<br/>
+            For each sql migration a CRC32 checksum is calculated
+            when the sql script is executed. The validate mechanism checks if the sql migration in the classpath
+            still has the same checksum as the sql migration already executed in the database.<br/></td>
+    </tr>
+    <tr>
+        <td>flywayCleanOnValidationError</td>
+        <td>NO</td>
+        <td>false</td>
+        <td>Whether to automatically call clean or not when a validation error occurs.<br/><br/>
+            This is exclusively intended as a convenience for development. Even tough we
+            strongly recommend not to change migration scripts once they have been checked into SCM and run, this
+            provides a way of dealing with this case in a smooth manner. The database will be wiped clean
+            automatically, ensuring that the next migration will bring you back to the state checked into
+            SCM.<br/><br/><strong>Warning ! Do not enable in production !</strong>
+        </td>
+    </tr>
+    <tr>
+        <td>flywayInitOnMigrate</td>
+        <td>NO</td>
+        <td>false</td>
+        <td>Whether to automatically call init when migrate is executed against a non-empty schema with no metadata
+            table.
+            This schema will then be initialized with the <code>initVersion</code> before executing the migrations.
+            Only migrations above <code>initVersion</code> will then be applied.<br/>
+
+            <p>This is useful for initial Flyway production deployments on projects with an existing DB.</p>
+
+            <p>Be careful when enabling this as it removes the safety net that ensures Flyway does not migrate the wrong
+                database in case of a configuration mistake!</p>
+        </td>
+    </tr>
+    <tr>
+        <td>flywayInitVersion</td>
+        <td>NO</td>
+        <td>1</td>
+        <td>The initial version to put in the database</td>
+    </tr>
+    <tr>
+        <td>flywayInitDescription</td>
+        <td>NO</td>
+        <td>
+            <nobr>&lt;&lt; Flyway Init &gt;&gt;</nobr>
+        </td>
+        <td>The description of the initial version</td>
+    </tr>
+    </tbody>
+</table>
+
+<h2>Sample configuration</h2>
+<pre class="prettyprint">seq(flywaySettings: _*)
+
+flywayDriver := "org.hsqldb.jdbcDriver"
+
+flywayUrl := "jdbc:hsqldb:file:target/flyway_sample;shutdown=true"
+
+flywayUser := "SA"
+
+flywayPassword := "mySecretPwd"
+
+flywaySchemas := Seq("schema1", "schema2", "schema3")
+
+flywayTable := "schema_history"
+
+flywayLocations := Seq("classpath:migrations1", "migrations2", "filesystem:/sql-migrations")
+
+flywaySqlMigrationPrefix := "Migration-"
+
+flywaySqlMigrationSuffix := "-OK.sql"
+
+flywayEncoding := "ISO-8859-1"
+
+flywayPlaceholders := Map(
+  "aplaceholder" -> "value",
+  "otherplaceholder" -> "value123"
+)
+
+flywayPlaceholderPrefix := "#["
+
+flywayPlaceholderSuffix := "]"
+
+flywayTarget := "1.1"
+
+flywayOutOfOrder := false
+
+flywayValidateOnMigrate := true
+
+flywayCleanOnValidationError := false
+
+flywayInitOnMigrate := false
+
+flywayInitVersion := 5
+
+flywayInitDescription := "Let's go!"</pre>
+
+<h2>Sample output</h2>
+<pre class="console">&gt; sbt flywayMigrate
+
+[info] Current schema version: 0
+[info] Migrating to version 1
+[info] Migrating to version 1.1
+[info] Migrating to version 1.2
+[info] Migrating to version 1.3
+[info] Successfully applied 4 migrations (execution time 00:00.091s).</pre>
+</div>
