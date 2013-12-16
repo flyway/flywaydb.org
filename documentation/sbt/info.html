@@ -133,26 +133,40 @@ subtitle: 'sbt flywayInfo'
     </table>
 
     <h2>Sample configuration</h2>
-    <pre class="prettyprint">flyway {
-    driver = 'org.hsqldb.jdbcDriver'
-    url = 'jdbc:hsqldb:file:${project.build.directory}/db/flyway_sample;shutdown=true'
-    user = 'SA'
-    password = 'mySecretPwd'
-    schemas = ['schema1', 'schema2', 'schema3']
-    table = 'schema_history'
-    locations = ['classpath:migrations1', 'migrations2', 'filesystem:/sql-migrations']
-    sqlMigrationPrefix = 'Migration-'
-    sqlMigrationSuffix = '-OK.sql'
-    encoding = 'ISO-8859-1'
-    placeholders = [
-        'aplaceholder' : 'value'
-        'otherplaceholder' : 'value123'
-    ]
-    placeholderPrefix = '#['
-    placeholderSuffix = ']'
-    target = '1.1'
-    outOfOrder = false
-}</pre>
+    <pre class="prettyprint">seq(flywaySettings: _*)
+
+flywayDriver := "org.hsqldb.jdbcDriver"
+
+flywayUrl := "jdbc:hsqldb:file:target/flyway_sample;shutdown=true"
+
+flywayUser := "SA"
+
+flywayPassword := "mySecretPwd"
+
+flywaySchemas := Seq("schema1", "schema2", "schema3")
+
+flywayTable := "schema_history"
+
+flywayLocations := Seq("classpath:migrations1", "migrations2", "filesystem:/sql-migrations")
+
+flywaySqlMigrationPrefix := "Migration-"
+
+flywaySqlMigrationSuffix := "-OK.sql"
+
+flywayEncoding := "ISO-8859-1"
+
+flywayPlaceholders := Map(
+  "aplaceholder" -> "value",
+  "otherplaceholder" -> "value123"
+)
+
+flywayPlaceholderPrefix := "#["
+
+flywayPlaceholderSuffix := "]"
+
+flywayTarget := "1.1"
+
+flywayOutOfOrder := false</pre>
 
     <h2>Sample output</h2>
     <pre class="console">&gt; sbt flywayInfo
