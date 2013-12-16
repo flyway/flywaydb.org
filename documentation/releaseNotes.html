@@ -14,6 +14,10 @@ subtitle: Release Notes
     <h3>New Features</h3>
     <ul>
         <li>
+            <a href="https://github.com/flyway/flyway/issues/85">Issue 85</a>
+            SBT Plugin <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/662"><i class="icon-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
             <a href="https://github.com/flyway/flyway/issues/562">Issue 562</a>
             Cygwin support <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/616"><i class="icon-mail-reply"></i> Pull Request</a></span>
         </li>
@@ -22,6 +26,7 @@ subtitle: Release Notes
     <h3>Changes</h3>
     <ul>
         <li>Flyway is now tested with Ant 1.8.4 (was 1.8.2)</li>
+        <li>Deprecated the <code>MigrationVersion()</code> constructor. Use <code>MigrationVersion.fromVersion(String)</code> instead.</li>
     </ul>
 
     <h3>Bug fixes</h3>
@@ -89,7 +94,7 @@ subtitle: Release Notes
     </ul>
 
     <p>
-        Thanks to Adam Green, Baptiste Gaillard, Christoffer Eide, Dave O'Flynn, garichner, Kevin Sheedy,
+        Thanks to Adam Green, Baptiste Gaillard, Christian Dedié, Christoffer Eide, Dave O'Flynn, garichner, Kevin Sheedy,
         Lukasz Rozek, Matt (boothen), migore, pimlottc, Pavel Boldyrev, Piotr Wielgolaski,
         Rajnish Srivastava, Robert Handschmann, Thomas Queste, Tom Eicher and Ulf Bamberg
         for reporting these issues and providing fixes.
