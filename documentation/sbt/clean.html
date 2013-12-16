@@ -23,13 +23,13 @@ subtitle: 'sbt flywayClean'
         </thead>
         <tbody>
         <tr>
-            <td>url</td>
+            <td>flywayUrl</td>
             <td>YES</td>
             <td></td>
             <td>The jdbc url to use to connect to the database</td>
         </tr>
         <tr>
-            <td>driver</td>
+            <td>flywayDriver</td>
             <td>NO</td>
             <td><i>Auto-detected based on url</i></td>
             <td>The fully qualified classname of the jdbc driver to use
@@ -37,19 +37,19 @@ subtitle: 'sbt flywayClean'
             </td>
         </tr>
         <tr>
-            <td>user</td>
+            <td>flywayUser</td>
             <td>NO</td>
             <td></td>
             <td>The user to use to connect to the database</td>
         </tr>
         <tr>
-            <td>password</td>
+            <td>flywayPassword</td>
             <td>NO</td>
             <td></td>
             <td>The password to use to connect to the database</td>
         </tr>
         <tr>
-            <td>schemas</td>
+            <td>flywaySchemas</td>
             <td>NO</td>
             <td><i>default schema of the connection</i></td>
             <td>Case-sensitive list of schemas managed by Flyway.<br/>
@@ -72,5 +72,5 @@ subtitle: 'sbt flywayClean'
 
     <pre class="console">&gt; sbt flywayClean
 
-Cleaned database schema 'PUBLIC' (execution time 00:00.016s)</pre>
+[info] Cleaned database schema 'PUBLIC' (execution time 00:00.016s)</pre>
 </div>

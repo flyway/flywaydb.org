@@ -52,16 +52,21 @@ subtitle: SBT Plugin
     <h2>Configuration</h2>
     <p>The Flyway SBT plugin can be configured in the following ways:</p>
 
-    <h3>Directly in the build script</h3>
-    <pre class="prettyprint">flyway {
-    user = 'myUser'
-    password = 'mySecretPwd'
-    schemas = ['schema1', 'schema2', 'schema3']
-    placeholders = [
-        'keyABC': 'valueXYZ'
-        'otherplaceholder': 'value123'
-    ]
-}</pre>
+    <h3>Directly in build.sbt</h3>
+    <pre class="prettyprint">seq(flywaySettings: _*)
+
+flywayUrl := "jdbc:hsqldb:file:target/flyway_sample;shutdown=true"
+
+flywayUser := "SA"
+
+flywayLocations += "com.googlecode.flyway.sample.migration"
+
+flywaySchemas := Seq("schema1", "schema2", "schema3")
+
+flywayPlaceholders := Map(
+    "keyABC" -> "valueXYZ",
+    "otherplaceholder" -> "value123"
+)</pre>
 
     <h3>Through System properties</h3>
     <pre class="prettyprint">sbt -Dflyway.user=myUser -Dflyway.schemas=schema1,schema2 -Dflyway.placeholders.keyABC=valXYZ</pre>
