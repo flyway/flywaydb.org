@@ -23,7 +23,9 @@ subtitle: SBT - First Steps
     <h2>Setting up the plugins file</h2>
     <p>Let's start by creating <code>project/plugins.sbt</code> that integrates the Flyway plugin into our project:</p>
 
-    <pre class="prettyprint">addSbtPlugin("com.googlecode.flyway" % "flyway-sbt" % "{{ site.flywayVersion }}")</pre>
+    <pre class="prettyprint">addSbtPlugin("com.googlecode.flyway" % "flyway-sbt" % "{{ site.flywayVersion }}")
+
+resolvers += "Flyway" at "http://flywaydb.org/repo"</pre>
 
     <h2>Setting up the build file</h2>
     <p>Now we can create <code>build.sbt</code> that configures Flyway to connect to H2:</p>
