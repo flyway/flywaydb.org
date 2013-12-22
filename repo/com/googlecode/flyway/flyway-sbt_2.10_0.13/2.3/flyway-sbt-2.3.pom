@@ -9,6 +9,10 @@
     <version>2.3</version>
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
+    <properties>
+        <sbtVersion>0.13</sbtVersion>
+        <scalaVersion>2.10</scalaVersion>
+    </properties>
     <dependencies>
         <!-- Add dependency to force correct module build order -->
         <dependency>
