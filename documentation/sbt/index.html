@@ -8,7 +8,9 @@ subtitle: SBT Plugin
 
     <h2>Installation</h2>
 
-    <pre class="prettyprint">addSbtPlugin("com.googlecode.flyway" % "flyway-sbt" % "{{ site.flywayVersion }}")</pre>
+    <pre class="prettyprint">addSbtPlugin("com.googlecode.flyway" % "flyway-sbt" % "{{ site.flywayVersion }}")
+
+resolvers += "Flyway" at "http://flywaydb.org/repo"</pre>
 
     <h2>Tasks</h2>
     <table class="table table-bordered table-hover">
