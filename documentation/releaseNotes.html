@@ -10,11 +10,24 @@ subtitle: Release Notes
 
 <div class="release">
     <h2>Unreleased version</h2>
+
+    <h3>Incompatible Changes</h3>
+    <ul>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/536">Issue 536</a>
+            Drop Java 5 support & remove deprecated API
+        </li>
+    </ul>
+
     <h3>Bug fixes</h3>
     <ul>
         <li>
             <a href="https://github.com/flyway/flyway/issues/673">Issue 673</a>
             Some Unicode characters can still lead to StringIndexOutOfBoundsException <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/674"><i class="icon-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/681">Issue 681</a>
+            Maven site complains that repository url 'http://flywaydb.org/repo' is invalid
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/682">Issue 682</a>
@@ -43,7 +56,7 @@ subtitle: Release Notes
     </ul>
 
     <p>
-        Thanks to Andriy Binetskyy, Antti Virtanen, awal11, Eugen Pyanov, Michal Lisiecki, Prismapanda and Regis Leray
+        Thanks to Andriy Binetskyy, Antti Virtanen, awal11, Eugen Pyanov, Gerald Quintana, Michal Lisiecki, Prismapanda and Regis Leray
         for reporting these issues and providing fixes.
     </p>
 </div>
