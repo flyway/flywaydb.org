@@ -8,17 +8,9 @@ subtitle: Gradle - First Steps
 
     <h2>Prerequisites</h2>
     <ul>
-        <li>Java 5+</li>
+        <li>Java 6+</li>
         <li>A working Gradle install</li>
     </ul>
-
-    <h2>Creating the project</h2>
-
-    <p>We're going to create the directory structure for our project by issuing the following commands:</p>
-    <pre class="console">&gt; mkdir "foobar/src/main/resources/db/migration"</pre>
-
-    <p>We are now ready to get started. Let's jump into our project:</p>
-    <pre class="console">&gt; cd foobar</pre>
 
     <h2>Setting up the build file</h2>
     <p>Let's start by creating <code>build.gradle</code> that integrates and configures Flyway to connect to H2:</p>
@@ -53,7 +45,7 @@ flyway {
     <h2>Migrating the database</h2>
 
     <p>It's now time to execute Flyway to migrate our database:</p>
-    <pre class="console">foobar&gt; gradle flywayMigrate -i</pre>
+    <pre class="console">gradle flywayMigrate -i</pre>
 
     <p>If all went well, you should see the following output:</p>
     <pre class="console">Creating Metadata table: "PUBLIC"."schema_version"
@@ -69,7 +61,7 @@ insert into PERSON (ID, NAME) values (2, 'Mr. Foo');
 insert into PERSON (ID, NAME) values (3, 'Ms. Bar');</pre>
 
     <p>and execute it by issuing:</p>
-    <pre class="console">foobar&gt; gradle flywayMigrate -i</pre>
+    <pre class="console">gradle flywayMigrate -i</pre>
 
     <p>We now get:</p>
     <pre class="console">Current version of schema "PUBLIC": 1
@@ -86,9 +78,7 @@ Successfully applied 1 migration to schema "PUBLIC" (execution time 00:00.090s).
     </ul>
     <p>These migrations were then successfully found and executed.</p>
 
-    <h2>Next step</h2>
-
     <p>
-        <a class="btn btn-large btn-primary" href="/documentation/gradle">Read the documentation</a>
+        <a class="btn btn-primary" href="/documentation/gradle">Read the documentation <i class="icon-arrow-right"></i></a>
     </p>
 </div>
