@@ -44,7 +44,7 @@ tab: home
             <td>
                 <a href="https://twitter.com/share" class="twitter-share-button"
                    data-url="http://flywaydb.org"
-                   data-text="Check out #Flyway, the agile #database migration framework for #Java"></a>
+                   data-text="Check out @flywaydb, the agile #database migration framework for #Java"></a>
                 <script>!function (d, s, id) {
                     var js, fjs = d.getElementsByTagName(s)[0];
                     if (!d.getElementById(id)) {
@@ -155,8 +155,8 @@ tab: home
             <div class="marketing-item">Cloud support</div>
 
             <p>Full support for <a
-                    href="/documentation/database/sqlazure.html">Microsoft SQL Azure</a> and <a
-                    href="/documentation/database/googleCloudSql.html">Google Cloud SQL</a>. Runs on App Engine.</p>
+                    href="/documentation/database/sqlazure.html">Microsoft SQL Azure</a>, <a
+                    href="/documentation/database/googleCloudSql.html">Google Cloud SQL</a> &amp; App Engine, Heroku Postgres and Amazon RDS.</p>
         </div>
     </div>
     <div class="row">
@@ -374,39 +374,63 @@ tab: home
     <td><i class="icon-ok" title="yes"></i></td>
 </tr>
 <tr>
-    <td><a href="/documentation/maven/index.html">Maven plugin</a></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ok" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-</tr>
-<tr>
-    <td><a href="/documentation/ant/index.html">Ant tasks</a></td>
+    <td><a href="/documentation/commandline/index.html">Command-line</a></td>
     <td><i class="icon-ok" title="yes"></i></td>
     <td><i class="icon-ok" title="yes"></i></td>
     <td><i class="icon-ban-circle" title="no"></i></td>
     <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
+    <td><i class="icon-ok" title="yes"></i></td>
     <td><i class="icon-ok" title="yes"></i></td>
     <td><i class="icon-ok" title="yes"></i></td>
     <td><i class="icon-ok" title="yes"></i></td>
     <td><i class="icon-ban-circle" title="no"></i></td>
 </tr>
 <tr>
-    <td><a href="/documentation/commandline/index.html">Command-line tool</a></td>
+    <td><a href="/documentation/maven/index.html">Maven</a></td>
     <td><i class="icon-ok" title="yes"></i></td>
+    <td><i class="icon-ok" title="yes"></i></td>
+    <td><i class="icon-ok" title="yes"></i></td>
+    <td><i class="icon-ban-circle" title="no"></i></td>
+    <td><i class="icon-ok" title="yes"></i></td>
+    <td><i class="icon-ban-circle" title="no"></i></td>
+    <td><i class="icon-ban-circle" title="no"></i></td>
+    <td><i class="icon-ok" title="yes"></i></td>
+    <td><i class="icon-ban-circle" title="no"></i></td>
+</tr>
+<tr>
+    <td><a href="/documentation/gradle/index.html">Gradle</a></td>
+    <td><i class="icon-ok" title="yes"></i></td>
+    <td><i class="icon-ok" title="yes"></i><sup>2</sup></td>
+    <td><i class="icon-ban-circle" title="no"></i></td>
+    <td><i class="icon-ok" title="yes"></i><sup>2</sup></td>
+    <td><i class="icon-ok" title="yes"></i><sup>2</sup></td>
+    <td><i class="icon-ban-circle" title="no"></i></td>
+    <td><i class="icon-ban-circle" title="no"></i></td>
+    <td><i class="icon-ban-circle" title="no"></i></td>
+    <td><i class="icon-ban-circle" title="no"></i></td>
+</tr>
+<tr>
+    <td><a href="/documentation/ant/index.html">Ant</a></td>
+    <td><i class="icon-ok" title="yes"></i></td>
+    <td><i class="icon-ok" title="yes"></i></td>
+    <td><i class="icon-ban-circle" title="no"></i></td>
     <td><i class="icon-ok" title="yes"></i></td>
     <td><i class="icon-ban-circle" title="no"></i></td>
     <td><i class="icon-ok" title="yes"></i></td>
     <td><i class="icon-ok" title="yes"></i></td>
     <td><i class="icon-ok" title="yes"></i></td>
+    <td><i class="icon-ban-circle" title="no"></i></td>
+</tr>
+<tr>
+    <td><a href="/documentation/sbt/index.html">SBT</a></td>
     <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
+    <td><i class="icon-ok" title="yes"></i><sup>2</sup></td>
+    <td><i class="icon-ban-circle" title="no"></i></td>
+    <td><i class="icon-ok" title="yes"></i><sup>2</sup></td>
+    <td><i class="icon-ban-circle" title="no"></i></td>
+    <td><i class="icon-ban-circle" title="no"></i></td>
+    <td><i class="icon-ban-circle" title="no"></i></td>
+    <td><i class="icon-ban-circle" title="no"></i></td>
     <td><i class="icon-ban-circle" title="no"></i></td>
 </tr>
 <tr>
@@ -518,7 +542,7 @@ tab: home
 <tr>
     <td><a href="/documentation/database/oracle.html">Oracle PL/SQL</a></td>
     <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i><sup>2</sup></td>
+    <td><i class="icon-ban-circle" title="no"></i><sup>3</sup></td>
     <td><i class="icon-ban-circle" title="no"></i></td>
     <td><i class="icon-ban-circle" title="no"></i></td>
     <td><i class="icon-ban-circle" title="no"></i></td>
@@ -530,7 +554,7 @@ tab: home
 <tr>
     <td><a href="/documentation/database/sqlserver.html">SQL Server T-SQL</a></td>
     <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i><sup>2</sup></td>
+    <td><i class="icon-ban-circle" title="no"></i><sup>3</sup></td>
     <td><i class="icon-ban-circle" title="no"></i></td>
     <td><i class="icon-ban-circle" title="no"></i></td>
     <td><i class="icon-ban-circle" title="no"></i></td>
@@ -542,7 +566,7 @@ tab: home
 <tr>
     <td><a href="/documentation/database/db2.html">DB2 SQL PL</a></td>
     <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i><sup>2</sup></td>
+    <td><i class="icon-ban-circle" title="no"></i><sup>3</sup></td>
     <td><i class="icon-ban-circle" title="no"></i></td>
     <td><i class="icon-ban-circle" title="no"></i></td>
     <td><i class="icon-ban-circle" title="no"></i></td>
@@ -554,19 +578,19 @@ tab: home
 <tr>
     <td><a href="/documentation/database/mysql.html">MySQL stored procedures</a></td>
     <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i><sup>2</sup></td>
+    <td><i class="icon-ban-circle" title="no"></i><sup>3</sup></td>
     <td><i class="icon-ok" title="yes"></i></td>
     <td><i class="icon-ban-circle" title="no"></i></td>
     <td><i class="icon-ban-circle" title="no"></i></td>
     <td><i class="icon-ban-circle" title="no"></i></td>
     <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i><sup>3</sup></td>
+    <td><i class="icon-ban-circle" title="no"></i><sup>4</sup></td>
     <td><i class="icon-ban-circle" title="no"></i></td>
 </tr>
 <tr>
     <td><a href="/documentation/database/postgresql.html">PostgreSQL stored procedures</a></td>
     <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i><sup>2</sup></td>
+    <td><i class="icon-ban-circle" title="no"></i><sup>3</sup></td>
     <td><i class="icon-ok" title="yes"></i></td>
     <td><i class="icon-ban-circle" title="no"></i></td>
     <td><i class="icon-ban-circle" title="no"></i></td>
@@ -703,8 +727,9 @@ tab: home
 </table>
 <br/>
 <sup>1. Sql files and Java classes can be used indirectly through references in xml migrations</sup><br/>
-<sup>2. Only a single statement at a time is supported. No mixed delimiters.</sup><br/>
-<sup>3. Only Oracle-style PL/SQL delimeters. No MySQL standard syntax using the DELIMITER statement.</sup><br/>
+<sup>2. Not out of the box. Available through a 3rd party. May be outdated.</sup><br/>
+<sup>3. Only a single statement at a time is supported. No mixed delimiters.</sup><br/>
+<sup>4. Only Oracle-style PL/SQL delimeters. No MySQL standard syntax using the DELIMITER statement.</sup><br/>
 </div>
 <hr class="soften"/>
 <div id="get-started">
