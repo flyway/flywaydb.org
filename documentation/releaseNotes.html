@@ -39,6 +39,13 @@ subtitle: Release Notes
         </li>
     </ul>
 
+    <h3>Changes</h3>
+    <ul>
+        <li>Oracle Jdbc driver: Flyway is now tested with OJDBC6 12.1.0.1 (was OJDBC5 11.2.0.2.0)</li>
+        <li>PostgreSQL Jdbc driver: Flyway is now tested with 9.0-801.jdbc4 (was 9.0-801.jdbc3)</li>
+        <li>SQL Server Jdbc driver: Flyway is now tested with Jtds 1.3.1 (was 1.2.7)</li>
+    </ul>
+
     <h3>Bug fixes</h3>
     <ul>
         <li>
@@ -100,6 +107,10 @@ subtitle: Release Notes
         <li>
             <a href="https://github.com/flyway/flyway/issues/708">Issue 708</a>
             flyway.repair() doesn't commit when data source is not autocommit
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/716">Issue 716</a>
+            Load and inject configured Custom MigrationResolver implementations
         </li>
     </ul>
 
