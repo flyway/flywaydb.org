@@ -73,7 +73,7 @@ apply plugin: 'flyway'</pre>
 }</pre>
 
     <h3>Through Gradle properties</h3>
-    <pre class="prettyprint">gradle -Pflyway.user=myUser -Pflyway.schemas=schema1,schema2 -Pflyway.placeholders.keyABC=valXYZ</pre>
+    <pre class="console">gradle -Pflyway.user=myUser -Pflyway.schemas=schema1,schema2 -Pflyway.placeholders.keyABC=valXYZ</pre>
 
     <p><code>gradle.properties</code></p>
     <pre class="prettyprint">flyway.user=myUser
@@ -94,7 +94,7 @@ project.ext['flyway.placeholders.keyABC']='valueXYZ'
 project.ext['flyway.placeholders.otherplaceholder']='value123'</pre>
 
     <h3>Through System properties</h3>
-    <pre class="prettyprint">gradle -Dflyway.user=myUser -Dflyway.schemas=schema1,schema2 -Dflyway.placeholders.keyABC=valXYZ</pre>
+    <pre class="console">gradle -Dflyway.user=myUser -Dflyway.schemas=schema1,schema2 -Dflyway.placeholders.keyABC=valXYZ</pre>
 
     <h3>Overriding order</h3>
     <p>System properties &gt; Gradle properties &gt; Plugin configuration</p>

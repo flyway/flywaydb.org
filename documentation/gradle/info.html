@@ -113,6 +113,14 @@ subtitle: 'gradle flywayInfo'
             <td>The suffix of every placeholder</td>
         </tr>
         <tr>
+            <td>resolvers</td>
+            <td>NO</td>
+            <td></td>
+            <td>Fully qualified class names of custom
+                <a href="/documentation/api/javadoc/org/flywaydb/api/resolver/MigrationResolver.html">MigrationResolvers</a> to be
+                used in addition to the built-in ones for resolving Migrations to apply.</td>
+        </tr>
+        <tr>
             <td>target</td>
             <td>NO</td>
             <td><i>latest version</i></td>
@@ -150,6 +158,7 @@ subtitle: 'gradle flywayInfo'
     ]
     placeholderPrefix = '#['
     placeholderSuffix = ']'
+    resolvers = ['com.mycompany.project.CustomResolver', 'com.mycompany.project.AnotherResolver']
     target = '1.1'
     outOfOrder = false
 }</pre>
