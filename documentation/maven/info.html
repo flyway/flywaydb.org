@@ -122,6 +122,14 @@ subtitle: 'mvn flyway:info'
             <td>The suffix of every placeholder</td>
         </tr>
         <tr>
+            <td>resolvers</td>
+            <td>NO</td>
+            <td></td>
+            <td>Fully qualified class names of custom
+                <a href="/documentation/api/javadoc/org/flywaydb/api/resolver/MigrationResolver.html">MigrationResolvers</a> to be
+                used in addition to the built-in ones for resolving Migrations to apply.</td>
+        </tr>
+        <tr>
             <td>target</td>
             <td>NO</td>
             <td><i>latest version</i></td>
@@ -173,6 +181,10 @@ subtitle: 'mvn flyway:info'
     &lt;/placeholders&gt;
     &lt;placeholderPrefix&gt;#[&lt;/placeholderPrefix&gt;
     &lt;placeholderSuffix&gt;]&lt;/placeholderSuffix&gt;
+    &lt;resolvers&gt;
+        &lt;resolver&gt;com.mycompany.project.CustomResolver&lt;/resolver&gt;
+        &lt;resolver&gt;com.mycompany.project.AnotherResolver&lt;/resolver&gt;
+    &lt;/resolvers&gt;
     &lt;target&gt;1.1&lt;/target&gt;
     &lt;outOfOrder&gt;false&lt;/outOfOrder&gt;
     &lt;skip&gt;false&lt;/skip&gt;

@@ -9,9 +9,9 @@ subtitle: Ant Tasks
     <p>The Flyway Ant Tasks are provided as an AntLib. It is available from the
         <a href="/getstarted/download.html">downloads page</a> and from Maven
         central using this Ivy Configuration:</p>
-    <pre class="prettyprint">&lt;dependency org="com.googlecode.flyway" name="flyway-ant" rev="{{ site.flywayVersion }}"/&gt;</pre>
+    <pre class="prettyprint">&lt;dependency org="org.flywaydb" name="flyway-ant" rev="{{ site.flywayVersion }}"/&gt;</pre>
 
-    <h2>Usage</h2><pre class="prettyprint">&lt;project ... xmlns:flyway=&quot;antlib:com.googlecode.flyway.ant&quot;&gt;
+    <h2>Usage</h2><pre class="prettyprint">&lt;project ... xmlns:flyway=&quot;antlib:org.flywaydb.ant&quot;&gt;
    &lt;path id=&quot;flyway.lib.path&quot;&gt;
        &lt;!-- include all jars from the Flyway AntLib distribution --&gt;
    &lt;/path&gt;
@@ -22,8 +22,7 @@ subtitle: Ant Tasks
        &lt;!-- include all jars and directories containing compiled java migrations --&gt;
    &lt;/path&gt;
 
-   &lt;taskdef uri=&quot;antlib:com.googlecode.flyway.ant&quot;
-            resource=&quot;com/googlecode/flyway/ant/antlib.xml&quot;
+   &lt;taskdef uri=&quot;antlib:org.flywaydb.ant&quot; resource=&quot;org/flywaydb/ant/antlib.xml&quot;
             classpathref=&quot;flyway.lib.path&quot;/&gt;
 
 &lt;/project&gt;</pre>
@@ -72,7 +71,7 @@ subtitle: Ant Tasks
     <p>The Flyway Ant tasks can be configured in the following ways:</p>
 
     <h3>Attributes of the task</h3>
-    <pre class="prettyprint">&lt;flyway:migrate driver=&quot;com.myvendor.Driver&quot;&gt;
+    <pre class="prettyprint">&lt;flyway:migrate driver=&quot;com.myvendor.Driver&quot; password=&quot;mySecretPwd&quot;&gt;
     &lt;locations&gt;
         &lt;location path="largetest/migrations1"/&gt;
         &lt;location path="largetest/migrations2"/&gt;
@@ -80,6 +79,12 @@ subtitle: Ant Tasks
     &lt;placeholders&gt;
         &lt;placeholder name="name" value="Mr. T"/&gt;
     &lt;/placeholders&gt;
+    &lt;schemas&gt;
+        &lt;schema name="schema1"/&gt;
+    &lt;/schemas&gt;
+    &lt;resolvers&gt;
+        &lt;resolver name="com.mycompany.MyMigrationResolver"/&gt;
+    &lt;/resolvers&gt;
 &lt;/flyway:migrate&gt;</pre>
 
     <h3>Through Ant properties</h3>
@@ -94,7 +99,7 @@ subtitle: Ant Tasks
 &lt;property name=&quot;flyway.placeholders.otherplaceholder&quot; value=&quot;value123&quot;/&gt;</pre>
 
     <h3>Through System properties</h3>
-    <pre class="prettyprint">ant -Dflyway.user=myUser -Dflyway.schemas=schema1,schema2 -Dflyway.placeholders.keyABC=valueXYZ</pre>
+    <pre class="console">ant -Dflyway.user=myUser -Dflyway.schemas=schema1,schema2 -Dflyway.placeholders.keyABC=valueXYZ</pre>
 
     <h3>Overriding order</h3>
 

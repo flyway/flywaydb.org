@@ -117,6 +117,14 @@ subtitle: 'sbt flywayMigrate'
         <td>The suffix of every placeholder</td>
     </tr>
     <tr>
+        <td>flywayResolvers</td>
+        <td>NO</td>
+        <td></td>
+        <td>Fully qualified class names of custom
+            <a href="/documentation/api/javadoc/org/flywaydb/api/resolver/MigrationResolver.html">MigrationResolvers</a> to be
+            used in addition to the built-in ones for resolving Migrations to apply.</td>
+    </tr>
+    <tr>
         <td>flywayTarget</td>
         <td>NO</td>
         <td><i>latest version</i></td>
@@ -217,6 +225,8 @@ flywayPlaceholders := Map(
 flywayPlaceholderPrefix := "#["
 
 flywayPlaceholderSuffix := "]"
+
+flywayResolvers := Seq("com.mycompany.project.CustomResolver", "com.mycompany.project.AnotherResolver")
 
 flywayTarget := "1.1"
 
