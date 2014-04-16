@@ -152,6 +152,14 @@ subtitle: 'mvn flyway:info'
             <td>false</td>
             <td>Skips the execution of the plugin for this module</td>
         </tr>
+        <tr>
+            <td>configFile</td>
+            <td>NO</td>
+            <td>flyway.properties</td>
+            <td>Properties file from which to load the Flyway configuration. The names of the individual properties match the ones you would
+                use as Maven or System properties. The encoding of the file must be the same as the encoding defined with the
+                flyway.encoding property, which is UTF-8 by default. Relative paths are relative to the POM.</td>
+        </tr>
         </tbody>
     </table>
 
@@ -188,6 +196,7 @@ subtitle: 'mvn flyway:info'
     &lt;target&gt;1.1&lt;/target&gt;
     &lt;outOfOrder&gt;false&lt;/outOfOrder&gt;
     &lt;skip&gt;false&lt;/skip&gt;
+    &lt;configFile&gt;myConfig.properties&lt;/configFile&gt;
 &lt;/configuration&gt;</pre>
 
     <h2>Sample output</h2>

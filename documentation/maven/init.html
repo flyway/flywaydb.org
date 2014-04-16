@@ -95,6 +95,14 @@ subtitle: 'mvn flyway:init'
             <td>false</td>
             <td>Skips the execution of the plugin for this module</td>
         </tr>
+        <tr>
+            <td>configFile</td>
+            <td>NO</td>
+            <td>flyway.properties</td>
+            <td>Properties file from which to load the Flyway configuration. The names of the individual properties match the ones you would
+                use as Maven or System properties. The encoding of the file must be the same as the encoding defined with the
+                flyway.encoding property, which is UTF-8 by default. Relative paths are relative to the POM.</td>
+        </tr>
         </tbody>
     </table>
     <h2>Sample configuration</h2>
@@ -112,6 +120,7 @@ subtitle: 'mvn flyway:init'
     &lt;initVersion&gt;1.0&lt;/initVersion&gt;
     &lt;initDescription&gt;Base Migration&lt;/initDescription&gt;
     &lt;skip&gt;false&lt;/skip&gt;
+    &lt;configFile&gt;myConfig.properties&lt;/configFile&gt;
 &lt;/configuration&gt;</pre>
     <h2>Sample output</h2>
     <pre class="console">&gt; mvn flyway:init
