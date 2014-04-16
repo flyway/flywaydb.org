@@ -73,6 +73,20 @@ end;
 
     <p>If the configuration hangs, try again after turning off User Account Control.</p>
 
+    <h2>MariaDB</h2>
+
+    <p>Flyway supports MariaDB 10.0 and later. You can grab the latest 10.0 version here: <a
+            href="https://downloads.mariadb.org/">https://downloads.mariadb.org/</a>
+    </p>
+
+    <p>Install it with the defaults, except for the following settings:</p>
+    <ul>
+        <li>Root password: flyway</li>
+        <li>Use UTF8 as default server's character set</li>
+        <li>Service Name: MariaDB</li>
+        <li>TCP port: 3333</li>
+    </ul>
+
     <h2>PostgreSQL</h2>
 
     <p>Flyway supports PostgreSQL 9.0 and later. You can grab the latest 9.0 version here: <a
