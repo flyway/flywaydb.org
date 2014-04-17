@@ -1,0 +1,58 @@
+---
+layout: documentation
+menu: sqlite
+subtitle: SQLite
+---
+<div id="databaseSQLite">
+    <h1>SQLite</h1>
+
+    <h2>Versions</h2>
+    <ul>
+        <li>3.7.2 and later</li>
+    </ul>
+
+    <h2>Default Driver</h2>
+    <ul>
+        <li>org.sqlite.JDBC</li>
+    </ul>
+
+    <h2>Sql Script Syntax</h2>
+    <ul>
+        <li><a href="/documentation/migration/sql.html#syntax">Standard Sql syntax</a> with statement delimiter ;</li>
+        <li>Triggers with BEGIN ... END; block</li>
+    </ul>
+    <h3>Compatibility</h3>
+    <ul>
+        <li>DDL exported by SQLite can be used unchanged in a Flyway migration.</li>
+        <li>Any SQLite sql script executed by Flyway, can be executed by the SQLite tools (after the placeholders have been
+            replaced).
+        </li>
+    </ul>
+    <h3>Example</h3>
+
+    <pre class="prettyprint">/* Single line comment */
+CREATE TABLE test_data (
+  value VARCHAR(25) NOT NULL PRIMARY KEY
+);
+
+/*
+Multi-line
+comment
+*/
+
+-- Sql-style comment
+
+-- Placeholder
+INSERT INTO ${tableName} (name) VALUES (&#x27;Mr. T&#x27;);
+
+CREATE TRIGGER update_customer_address UPDATE OF address ON customers
+  BEGIN
+    UPDATE orders SET address = new.address WHERE customer_name = old.name;
+  END;</pre>
+
+    <h2>Limitations</h2>
+    <ul>
+        <li>No concurrent migration as SQLite does not support SELECT ... FOR UPDATE locking</li>
+        <li>No support for multiple schemas or changing the current schema, as SQLite doesn't support schemas</li>
+    </ul>
+</div>
