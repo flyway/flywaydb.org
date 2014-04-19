@@ -3,15 +3,14 @@
 <head>
     <title>
         {% if page.subtitle %} {{ page.subtitle }} -{% endif %}{% if page.title %} {{ page.title }} -{% endif %}
-        Flyway: the agile database migration framework for
-        Java</title>
+        Flyway &bull; Database Migrations Made Easy.</title>
     <link rel="alternate" type="application/atom+xml" title="Flyway" href="/blog/atom.xml" />
     <link href="/assets/bootstrap-2.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-    <link href="/assets/font-awesome-3.1.1/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/font-awesome-4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
     <link href="/assets/prettify-20110601/prettify.css" rel="stylesheet" type="text/css"/>
     <link href="/assets/flywaydb.css" rel="stylesheet" type="text/css"/>
     <meta charset="UTF-8"/>
-    <meta property="og:title" content="Flyway: The agile database migration framework for Java"/>
+    <meta property="og:title" content="Flyway &bull; Database Migrations Made Easy."/>
     <meta property="og:type" content="product"/>
     <meta property="og:url" content="http://flywaydb.org"/>
     <meta property="og:site_name" content="Flyway"/>
@@ -37,36 +36,44 @@
 <div class="container">
     <div id="header" class="row">
         <div class="span2">
-            <a href="/"><img src="/assets/logo/flyway-logo-transparent-100.png" alt="Flyway"></a>
+            {% if page.tab != 'home' %}<a href="/"><img src="/assets/logo/flyway-logo-transparent-100.png" alt="Flyway"></a>{% endif %}
         </div>
         <div class="span10">
             <ul id="tabs" class="nav nav-tabs ">
                 <li
                 {% if page.tab == 'home' %} class="active" {% endif %}>
-                <a href="/"><i class="icon-home"></i> HOME</a>
+                <a href="/"><i class="fa fa-home"></i> HOME</a>
                 </li>
                 <li
                 {% if page.tab == 'getStarted' %} class="active" {% endif %}>
-                <a href="/getstarted"><i class="icon-play"></i> GET STARTED</a></li>
+                <a href="/getstarted"><i class="fa fa-play"></i> GET STARTED</a></li>
                 <li
                 {% if page.tab == 'documentation' %} class="active" {% endif %}>
-                <a href="/documentation/migration"><i class="icon-bookmark"></i> DOCUMENTATION</a></li>
+                <a href="/documentation/migration"><i class="fa fa-bookmark"></i> DOCUMENTATION</a></li>
                 <li
                 {% if page.tab == 'contribute' %} class="active" {% endif %}>
-                <a href="/contribute"><i class="icon-leaf"></i> CONTRIBUTE</a></li>
+                <a href="/contribute"><i class="fa fa-leaf"></i> CONTRIBUTE</a></li>
                 <li
                 {% if page.tab == 'blog' %} class="active" {% endif %}>
-                <a href="/blog"><i class="icon-bullhorn"></i> BLOG</a></li>
+                <a href="/blog"><i class="fa fa-bullhorn"></i> BLOG</a></li>
                 <li
                 {% if page.tab == 'support' %} class="active" {% endif %}>
-                <a href="/support"><i class="icon-question-sign"></i> SUPPORT</a></li>
+                <a href="/support"><i class="fa fa-question-circle"></i> SUPPORT</a></li>
             </ul>
         </div>
     </div>
-    <div id="top-space"></div>
+</div>
+{% if page.tab != 'home' %}
+<div class="container">
+{% endif %}
 
-    {{ content }}
+{{ content }}
 
+{% if page.tab != 'home' %}
+</div>
+{% endif %}
+
+<div class="container">
     <hr class="soften"/>
     <div id="footer">
         <p>

@@ -3,104 +3,89 @@ layout: default
 tab: home
 ---
 <div id="big-sell">
-    <div class="row">
-        <div class="span6">
-            <p>
-                <span>The agile database migration framework for Java</span>
-            </p>
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+                <img src="assets/logo/flyway-logo-transparent-300.png" alt="Flyway"/>
+                <p id="tagline" class="strong-heading">
+                    <span>Database Migrations<br/>Made Easy.</span>
+                </p>
 
-            <p>
-                <a class="btn btn-primary btn-large btn-jumbo" href="/getstarted">Get Started with Flyway
-                    {{site.flywayVersion}} <i class="icon-arrow-right"></i></a><br/>
-            </p>
+                <p>
+                    <a class="btn btn-primary btn-large btn-jumbo" href="/getstarted">Get Started with Flyway
+                        {{site.flywayVersion}} <i class="fa fa-arrow-right"></i></a><br/>
+                </p>
 
-            <p id="links">
-                <a href="/getstarted/download.html">Download</a> -
-                <a href="/documentation/releaseNotes.html">Release Notes</a> -
-                <a href="http://github.com/flyway/flyway">Source</a>
-            </p>
-        </div>
-        <div class="span6">
-            <img src="assets/logo/flyway-logo-transparent-300-clean.png" alt="Flyway"/>
+                <p id="links">
+                    <a href="/getstarted/download.html">Download</a> -
+                    <a href="/documentation/releaseNotes.html">Release Notes</a> -
+                    <a href="http://github.com/flyway/flyway">Source</a>
+                </p>
+
+                <p>
+                    {% assign post = site.posts | first %}
+                    <strong>Latest News:</strong> <a href="{{ post.permalink }}">{{ post.subtitle | xml_escape }} ({{ post.date | date: "%Y-%m-%d" }})</a>
+                </p>
+
+                <p id="social">
+                    <a href="https://twitter.com/flywaydb"><i class="fa fa-twitter"></i></a>
+                    <a href="https://github.com/flyway/flyway"><i class="fa fa-github"></i></a>
+                    <a href="http://stackoverflow.com/questions/tagged/flyway"><i class="fa fa-stack-overflow"></i></a>
+                </p>
+            </div>
         </div>
     </div>
 </div>
-<div id="social-buttons">
-    <table>
-        <tr>
-            <td>
-                <a href="https://twitter.com/flywaydb" class="twitter-follow-button" data-show-count="true"
-                   data-dnt="true"></a>
-                <script>!function (d, s, id) {
-                    var js, fjs = d.getElementsByTagName(s)[0];
-                    if (!d.getElementById(id)) {
-                        js = d.createElement(s);
-                        js.id = id;
-                        js.src = "http://platform.twitter.com/widgets.js";
-                        fjs.parentNode.insertBefore(js, fjs);
-                    }
-                }(document, "script", "twitter-wjs");</script>
-            </td>
-            <td>
-                <a href="https://twitter.com/share" class="twitter-share-button"
-                   data-url="http://flywaydb.org"
-                   data-text="Check out @flywaydb, the agile #database migration framework for #Java"></a>
-                <script>!function (d, s, id) {
-                    var js, fjs = d.getElementsByTagName(s)[0];
-                    if (!d.getElementById(id)) {
-                        js = d.createElement(s);
-                        js.id = id;
-                        js.src = "http://platform.twitter.com/widgets.js";
-                        fjs.parentNode.insertBefore(js, fjs);
-                    }
-                }(document, "script", "twitter-wjs");</script>
-            </td>
-            <td>
-                <iframe width="85" height="20"
-                        src="http://ghbtns.com/github-btn.html?user=flyway&repo=flyway&type=watch&count=true"
-                        frameborder="0" scrolling="0" allowtransparency="true">
-                </iframe>
-            </td>
-            <td>
-                <div id="fb-root"></div>
-                <div class="fb-like" data-href="http://flywaydb.org" data-send="false" data-layout="button_count"
-                     data-width="100" data-show-faces="true"></div>
-                <script>(function (d, s, id) {
-                    var js, fjs = d.getElementsByTagName(s)[0];
-                    if (d.getElementById(id)) return;
-                    js = d.createElement(s);
-                    js.id = id;
-                    js.src = "http://connect.facebook.net/en_US/all.js#xfbml=1&appId=432044496836765";
-                    fjs.parentNode.insertBefore(js, fjs);
-                }(document, 'script', 'facebook-jssdk'));</script>
-            </td>
-            <td>
-                <g:plusone size="medium" href="http://flywaydb.org"></g:plusone>
-                <script type="text/javascript">
-                    (function () {
-                        var po = document.createElement('script');
-                        po.type = 'text/javascript';
-                        po.async = true;
-                        po.src = 'https://apis.google.com/js/plusone.js';
-                        var s = document.getElementsByTagName('script')[0];
-                        s.parentNode.insertBefore(po, s);
-                    })();
-                </script>
-            </td>
-            <td>
-                <script src="http://platform.linkedin.com/in.js" type="text/javascript"></script>
-                <script type="IN/Share" data-url="http://flywaydb.org" data-counter="right"></script>
-            </td>
-        </tr>
-    </table>
+<div class="container">
+<div id="tagline-long"class="strong-heading">
+    Evolve your database schema easily and reliably<br/>across all your instances
 </div>
-<div id="news">
-    {% assign post = site.posts | first %}
-    <div class="well well-small"><strong>Latest News:</strong> <a href="{{ post.permalink }}">{{ post.subtitle | xml_escape }} ({{ post.date | date: "%Y-%m-%d" }})</a></div>
+<div id="top3" class="row">
+    <div class="span4">
+        <i class="fa fa-thumbs-up"></i>
+        <p class="strong-heading">Simple</p>
+    </div>
+    <div class="span4">
+        <i class="fa fa-crosshairs"></i>
+        <p class="strong-heading">Focused</p>
+    </div>
+    <div class="span4">
+        <i class="fa fa-rocket"></i>
+        <p class="strong-heading">Powerful</p>
+    </div>
 </div>
-<hr class="soften"/>
-{% include getstarted.html %}
-<hr class="soften"/>
+<div id="top3details" class="row">
+    <div class="span4">
+        <p>Easy to setup, simple to master. Flyway let's you regain control of your database migrations with pleasure and plain sql.</p>
+    </div>
+    <div class="span4">
+        <p>Solves only one problem and solves it well. Flyway migrates your database, so you don't have to worry about it anymore.</p>
+    </div>
+    <div class="span4">
+        <p>Made for continuous delivery. Let Flyway migrate your database on application startup. Releases have never been this easy.</p>
+    </div>
+</div>
+<div id="top3buttons" class="row">
+    <div class="span4">
+        <a class="btn" href="/getstarted/whyDatabaseMigrations.html">Why database migrations? <i class="fa fa-arrow-right"></i></a>
+    </div>
+    <div class="span4">
+        <a class="btn" href="/getstarted/howFlywayWorks.html">How does Flyway work? <i class="fa fa-arrow-right"></i></a>
+    </div>
+    <div class="span4">
+        <a class="btn" href="/getstarted">Get started <i class="fa fa-arrow-right"></i></a>
+    </div>
+</div>
+</div>
+
+<div id="upAndRunningBg"></div>
+
+<div class="container">
+<div id="upAndRunning" class="row">
+    <div id="upAndRunningLeft" class="strong-heading span4">Get up and running in <span>5</span> minutes</div>
+    <div id="upAndRunningRight" class="span8">{% include getstarted.html %}</div>
+</div>
+
 <div class="marketing">
     <div class="marketing-section-head">It just works. Refreshingly simple.</div>
 
@@ -130,7 +115,7 @@ tab: home
 
             <div class="marketing-item">Zero required dependencies</div>
 
-            <p>All you need is Java 5+ and your Jdbc driver and you're good to go!</p>
+            <p>All you need is Java 6+ and your Jdbc driver and you're good to go!</p>
         </div>
     </div>
     <div class="row">
@@ -769,4 +754,5 @@ tab: home
         <a class="btn btn-large" href="/getstarted/firststeps/api.html">First steps</a>
         <a class="btn btn-large" href="/getstarted/download.html">Download</a>
     </p>
+</div>
 </div>
