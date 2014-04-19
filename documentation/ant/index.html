@@ -83,8 +83,11 @@ subtitle: Ant Tasks
         &lt;schema name="schema1"/&gt;
     &lt;/schemas&gt;
     &lt;resolvers&gt;
-        &lt;resolver name="com.mycompany.MyMigrationResolver"/&gt;
+        &lt;resolver class="com.mycompany.MyMigrationResolver"/&gt;
     &lt;/resolvers&gt;
+    &lt;callbacks&gt;
+        &lt;callback class="com.mycompany.MyCallback"/&gt;
+    &lt;/callbacks&gt;
 &lt;/flyway:migrate&gt;</pre>
 
     <h3>Through Ant properties</h3>

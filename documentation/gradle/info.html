@@ -123,8 +123,16 @@ subtitle: 'gradle flywayInfo'
             <td>NO</td>
             <td></td>
             <td>Fully qualified class names of custom
-                <a href="/documentation/api/javadoc/org/flywaydb/api/resolver/MigrationResolver.html">MigrationResolvers</a> to be
-                used in addition to the built-in ones for resolving Migrations to apply.</td>
+                <a href="/documentation/api/javadoc/org/flywaydb/api/resolver/MigrationResolver.html">MigrationResolver</a>
+                implementations to be used in addition to the built-in ones for resolving Migrations to apply.</td>
+        </tr>
+        <tr>
+            <td>callbacks</td>
+            <td>NO</td>
+            <td></td>
+            <td>Fully qualified class names of
+                <a href="/documentation/api/javadoc/org/flywaydb/api/callback/FlywayCallback.html">FlywayCallback</a>
+                implementations to use to hook into the Flyway lifecycle.</td>
         </tr>
         <tr>
             <td>target</td>
@@ -166,6 +174,7 @@ subtitle: 'gradle flywayInfo'
     placeholderPrefix = '#['
     placeholderSuffix = ']'
     resolvers = ['com.mycompany.project.CustomResolver', 'com.mycompany.project.AnotherResolver']
+    callbacks = ['com.mycompany.project.CustomCallback', 'com.mycompany.project.AnotherCallback']
     target = '1.1'
     outOfOrder = false
 }</pre>

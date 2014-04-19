@@ -127,8 +127,16 @@ subtitle: 'sbt flywayValidate'
             <td>NO</td>
             <td></td>
             <td>Fully qualified class names of custom
-                <a href="/documentation/api/javadoc/org/flywaydb/api/resolver/MigrationResolver.html">MigrationResolvers</a> to be
-                used in addition to the built-in ones for resolving Migrations to apply.</td>
+                <a href="/documentation/api/javadoc/org/flywaydb/api/resolver/MigrationResolver.html">MigrationResolver</a>
+                implementations to be used in addition to the built-in ones for resolving Migrations to apply.</td>
+        </tr>
+        <tr>
+            <td>flywayCallbacks</td>
+            <td>NO</td>
+            <td></td>
+            <td>Fully qualified class names of
+                <a href="/documentation/api/javadoc/org/flywaydb/api/callback/FlywayCallback.html">FlywayCallback</a>
+                implementations to use to hook into the Flyway lifecycle.</td>
         </tr>
         <tr>
             <td>flywayTarget</td>
@@ -195,7 +203,9 @@ flywayPlaceholderPrefix := "#["
 
 flywayPlaceholderSuffix := "]"
 
-flywayResolvers := Seq("com.mycompany.project.CustomResolver", "com.mycompany.project.AnotherResolver")
+flywayResolvers := Seq("com.mycompany.CustomResolver", "com.mycompany.AnotherResolver")
+
+flywayCallbacks := Seq("com.mycompany.CustomCallback", "com.mycompany.AnotherCallback")
 
 flywayTarget := "1.1"
 

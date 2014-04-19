@@ -131,8 +131,16 @@ subtitle: 'Command Line : Validate'
             <td>NO</td>
             <td></td>
             <td>Comma-separated list of fully qualified class names of custom
-                <a href="/documentation/api/javadoc/org/flywaydb/api/resolver/MigrationResolver.html">MigrationResolvers</a> to be
-                used in addition to the built-in ones for resolving Migrations to apply.</td>
+                <a href="/documentation/api/javadoc/org/flywaydb/api/resolver/MigrationResolver.html">MigrationResolver</a>
+                implementations to be used in addition to the built-in ones for resolving Migrations to apply.</td>
+        </tr>
+        <tr>
+            <td>callbacks</td>
+            <td>NO</td>
+            <td></td>
+            <td>Comma-separated list of fully qualified class names of
+                <a href="/documentation/api/javadoc/org/flywaydb/api/callback/FlywayCallback.html">FlywayCallback</a>
+                implementations to use to hook into the Flyway lifecycle.</td>
         </tr>
         <tr>
             <td>target</td>
@@ -183,6 +191,7 @@ flyway.placeholders.otherplaceholder=value123
 flyway.placeholderPrefix=#[
 flyway.placeholderSuffix=]
 flyway.resolvers=com.mycompany.project.CustomResolver,com.mycompany.project.AnotherResolver
+flyway.callbacks=com.mycompany.project.CustomCallback,com.mycompany.project.AnotherCallback
 flyway.target=5.1
 flyway.outOfOrder=false
 flyway.cleanOnValidationError=false</pre>
