@@ -16,14 +16,14 @@ subtitle: API
     <h3>The Flyway Class</h3>
 
     <p>The central piece of Flyway&#x27;s database migration infrastructure is the <strong><a
-            href="/documentation/api/javadoc/com/googlecode/flyway/core/Flyway.html">com.googlecode.flyway.core.Flyway</a></strong>
+            href="/documentation/api/javadoc/org/flywaydb/core/Flyway.html">org.flywaydb.core.Flyway</a></strong>
         class. It is your <strong>one-stop shop</strong> for working with Flyway programmatically. It serves both as a
         <strong>configuration</strong> and a <strong>launching</strong> point for all of Flyway&#x27;s functions. </p>
 
     <h3>Programmatic Configuration</h3>
 
     <p>Flyway is super easy to use programmatically: </p><pre
-        class="prettyprint">import com.googlecode.flyway.core.Flyway;
+        class="prettyprint">import org.flywaydb.core.Flyway;
 
 ...
 
@@ -36,7 +36,8 @@ flyway.migrate();
 
     <h3>Spring Configuration</h3>
 
-    <p>As an alternative to the programmatic configuration, here is how you can configure and start Flyway in a typical Spring application: </p><pre class="prettyprint">&lt;bean id=&quot;flyway&quot; class=&quot;com.googlecode.flyway.core.Flyway&quot; init-method=&quot;migrate&quot;&gt;
+    <p>As an alternative to the programmatic configuration, here is how you can configure and start Flyway in a typical Spring application: </p>
+    <pre class="prettyprint">&lt;bean id=&quot;flyway&quot; class=&quot;org.flywaydb.core.Flyway&quot; init-method=&quot;migrate&quot;&gt;
     &lt;property name=&quot;dataSource&quot; ref=&quot;...&quot;/&gt;
     ...
 &lt;/bean&gt;

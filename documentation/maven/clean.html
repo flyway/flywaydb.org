@@ -72,6 +72,14 @@ subtitle: 'mvn flyway:clean'
             </td>
         </tr>
         <tr>
+            <td>callbacks</td>
+            <td>NO</td>
+            <td></td>
+            <td>Fully qualified class names of
+                <a href="/documentation/api/javadoc/org/flywaydb/api/callback/FlywayCallback.html">FlywayCallback</a>
+                implementations to use to hook into the Flyway lifecycle.</td>
+        </tr>
+        <tr>
             <td>skip</td>
             <td>NO</td>
             <td>false</td>
@@ -99,6 +107,10 @@ subtitle: 'mvn flyway:clean'
         &lt;schema&gt;schema2&lt;/schema&gt;
         &lt;schema&gt;schema3&lt;/schema&gt;
     &lt;/schemas&gt;
+    &lt;callbacks&gt;
+        &lt;callback&gt;com.mycompany.project.CustomCallback&lt;/callback&gt;
+        &lt;callback&gt;com.mycompany.project.AnotherCallback&lt;/callback&gt;
+    &lt;/callbacks&gt;
     &lt;skip&gt;false&lt;/skip&gt;
     &lt;configFile&gt;myConfig.properties&lt;/configFile&gt;
 &lt;/configuration&gt;</pre>

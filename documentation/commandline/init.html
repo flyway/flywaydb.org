@@ -75,6 +75,14 @@ subtitle: 'Command Line : Init'
             <td>The directory containing the JDBC driver</td>
         </tr>
         <tr>
+            <td>callbacks</td>
+            <td>NO</td>
+            <td></td>
+            <td>Comma-separated list of fully qualified class names of
+                <a href="/documentation/api/javadoc/org/flywaydb/api/callback/FlywayCallback.html">FlywayCallback</a>
+                implementations to use to hook into the Flyway lifecycle.</td>
+        </tr>
+        <tr>
             <td>initVersion</td>
             <td>NO</td>
             <td>1</td>
@@ -98,6 +106,7 @@ flyway.user=SA
 flyway.password=mySecretPwd
 flyway.schemas=schema1,schema2,schema3
 flyway.table=schema_history
+flyway.callbacks=com.mycompany.project.CustomCallback,com.mycompany.project.AnotherCallback
 flyway.initVersion=1.0
 flyway.initDescription=Base Migration</pre>
 

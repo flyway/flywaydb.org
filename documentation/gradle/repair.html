@@ -6,10 +6,13 @@ subtitle: 'gradle flywayRepair'
 <div id="gradleRepair">
     <h1>Gradle Task: flywayRepair</h1>
 
-    <p><strong>Not necessary for databases with DDL transaction support</strong></p>
-
-    <p>Repairs the Flyway metadata table after a failed migration.<br/>
-        User objects left behind must still be cleaned up manually.</p>
+    <p>Repairs the Flyway metadata table. This will perform the following actions:</p>
+    <ul>
+        <li>Remove any failed migrations on databases without DDL transactions<br/>
+            (User objects left behind must still be cleaned up manually)
+        </li>
+        <li>Correct wrong checksums</li>
+    </ul>
 
     <h2>Usage</h2>
     <pre class="console">&gt; gradle flywayRepair</pre>
@@ -66,6 +69,76 @@ subtitle: 'gradle flywayRepair'
                 the metadata table is placed in the first schema of the list.
             </td>
         </tr>
+        <tr>
+            <td>locations</td>
+            <td>NO</td>
+            <td>db/migration</td>
+            <td>Locations to scan recursively for migrations. The location type is determined by its prefix.<br/>
+                Unprefixed locations or locations starting with <code>classpath:</code> point to a package on the
+                classpath and may contain both sql and java-based migrations.<br/>
+                Locations starting with <code>filesystem:</code> point to a directory on the filesystem and may only
+                contain sql migrations.
+            </td>
+        </tr>
+        <tr>
+            <td>sqlMigrationPrefix</td>
+            <td>NO</td>
+            <td>V</td>
+            <td>The file name prefix for Sql migrations</td>
+        </tr>
+        <tr>
+            <td>sqlMigrationSeparator</td>
+            <td>NO</td>
+            <td>__</td>
+            <td>The file name separator for Sql migrations</td>
+        </tr>
+        <tr>
+            <td>sqlMigrationSuffix</td>
+            <td>NO</td>
+            <td>.sql</td>
+            <td>The file name suffix for Sql migrations</td>
+        </tr>
+        <tr>
+            <td>encoding</td>
+            <td>NO</td>
+            <td>UTF-8</td>
+            <td>The encoding of Sql migrations</td>
+        </tr>
+        <tr>
+            <td>placeholders</td>
+            <td>NO</td>
+            <td></td>
+            <td>Placeholders to replace in Sql migrations</td>
+        </tr>
+        <tr>
+            <td>placeholderPrefix</td>
+            <td>NO</td>
+            <td>${</td>
+        <td>The prefix of every placeholder</td>
+    </tr>
+    <tr>
+        <td>placeholderSuffix</td>
+        <td>NO</td>
+        <td>}
+            </td>
+            <td>The suffix of every placeholder</td>
+        </tr>
+        <tr>
+            <td>resolvers</td>
+            <td>NO</td>
+            <td></td>
+            <td>Fully qualified class names of custom
+                <a href="/documentation/api/javadoc/org/flywaydb/api/resolver/MigrationResolver.html">MigrationResolver</a>
+                implementations to be used in addition to the built-in ones for resolving Migrations to apply.</td>
+        </tr>
+        <tr>
+            <td>callbacks</td>
+            <td>NO</td>
+            <td></td>
+            <td>Fully qualified class names of
+                <a href="/documentation/api/javadoc/org/flywaydb/api/callback/FlywayCallback.html">FlywayCallback</a>
+                implementations to use to hook into the Flyway lifecycle.</td>
+        </tr>
     </table>
 
     <h2>Sample configuration</h2>
@@ -76,6 +149,19 @@ subtitle: 'gradle flywayRepair'
     password = 'mySecretPwd'
     schemas = ['schema1', 'schema2', 'schema3']
     table = 'schema_history'
+    locations = ['classpath:migrations1', 'migrations2', 'filesystem:/sql-migrations']
+    sqlMigrationPrefix = 'Migration-'
+    sqlMigrationSeparator = '__'
+    sqlMigrationSuffix = '-OK.sql'
+    encoding = 'ISO-8859-1'
+    placeholders = [
+        'aplaceholder' : 'value'
+        'otherplaceholder' : 'value123'
+    ]
+    placeholderPrefix = '#['
+    placeholderSuffix = ']'
+    resolvers = ['com.mycompany.project.CustomResolver', 'com.mycompany.project.AnotherResolver']
+    callbacks = ['com.mycompany.project.CustomCallback', 'com.mycompany.project.AnotherCallback']
 }</pre>
     <h2>Sample output</h2>
 

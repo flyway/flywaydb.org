@@ -56,6 +56,14 @@ subtitle: 'sbt flywayClean'
                 The schemas will be cleaned in the order of this list.
             </td>
         </tr>
+        <tr>
+            <td>flywayCallbacks</td>
+            <td>NO</td>
+            <td></td>
+            <td>Fully qualified class names of
+                <a href="/documentation/api/javadoc/org/flywaydb/api/callback/FlywayCallback.html">FlywayCallback</a>
+                implementations to use to hook into the Flyway lifecycle.</td>
+        </tr>
         </tbody>
     </table>
 
@@ -70,7 +78,9 @@ flywayUser := "SA"
 
 flywayPassword := "mySecretPwd"
 
-flywaySchemas := Seq("schema1", "schema2", "schema3")</pre>
+flywaySchemas := Seq("schema1", "schema2", "schema3")
+
+flywayCallbacks := Seq("com.mycompany.CustomCallback", "com.mycompany.AnotherCallback")</pre>
 
     <h2>Sample output</h2>
 

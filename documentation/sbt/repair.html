@@ -6,10 +6,13 @@ subtitle: 'sbt flywayRepair'
 <div id="sbtRepair">
     <h1>SBT Task: flywayRepair</h1>
 
-    <p><strong>Not necessary for databases with DDL transaction support</strong></p>
-
-    <p>Repairs the Flyway metadata table after a failed migration.<br/>
-        User objects left behind must still be cleaned up manually.</p>
+    <p>Repairs the Flyway metadata table. This will perform the following actions:</p>
+    <ul>
+        <li>Remove any failed migrations on databases without DDL transactions<br/>
+            (User objects left behind must still be cleaned up manually)
+        </li>
+        <li>Correct wrong checksums</li>
+    </ul>
 
     <h2>Usage</h2>
     <pre class="console">&gt; sbt flywayRepair</pre>
@@ -66,6 +69,76 @@ subtitle: 'sbt flywayRepair'
                 the metadata table is placed in the first schema of the list.
             </td>
         </tr>
+        <tr>
+            <td>flywayLocations</td>
+            <td>NO</td>
+            <td>db/migration</td>
+            <td>Locations to scan recursively for migrations. The location type is determined by its prefix.<br/>
+                Unprefixed locations or locations starting with <code>classpath:</code> point to a package on the
+                classpath and may contain both sql and java-based migrations.<br/>
+                Locations starting with <code>filesystem:</code> point to a directory on the filesystem and may only
+                contain sql migrations.
+            </td>
+        </tr>
+        <tr>
+            <td>flywaySqlMigrationPrefix</td>
+            <td>NO</td>
+            <td>V</td>
+            <td>The file name prefix for Sql migrations</td>
+        </tr>
+        <tr>
+            <td>flywaySqlMigrationSeparator</td>
+            <td>NO</td>
+            <td>__</td>
+            <td>The file name separator for Sql migrations</td>
+        </tr>
+        <tr>
+            <td>flywaySqlMigrationSuffix</td>
+            <td>NO</td>
+            <td>.sql</td>
+            <td>The file name suffix for Sql migrations</td>
+        </tr>
+        <tr>
+            <td>flywayEncoding</td>
+            <td>NO</td>
+            <td>UTF-8</td>
+            <td>The encoding of Sql migrations</td>
+        </tr>
+        <tr>
+            <td>flywayPlaceholders</td>
+            <td>NO</td>
+            <td></td>
+            <td>Placeholders to replace in Sql migrations</td>
+        </tr>
+        <tr>
+            <td>flywayPlaceholderPrefix</td>
+            <td>NO</td>
+            <td>${</td>
+        <td>The prefix of every placeholder</td>
+    </tr>
+    <tr>
+        <td>flywayPlaceholderSuffix</td>
+        <td>NO</td>
+        <td>}
+            </td>
+            <td>The suffix of every placeholder</td>
+        </tr>
+        <tr>
+            <td>flywayResolvers</td>
+            <td>NO</td>
+            <td></td>
+            <td>Fully qualified class names of custom
+                <a href="/documentation/api/javadoc/org/flywaydb/api/resolver/MigrationResolver.html">MigrationResolver</a>
+                implementations to be used in addition to the built-in ones for resolving Migrations to apply.</td>
+        </tr>
+        <tr>
+            <td>flywayCallbacks</td>
+            <td>NO</td>
+            <td></td>
+            <td>Fully qualified class names of
+                <a href="/documentation/api/javadoc/org/flywaydb/api/callback/FlywayCallback.html">FlywayCallback</a>
+                implementations to use to hook into the Flyway lifecycle.</td>
+        </tr>
     </table>
 
     <h2>Sample configuration</h2>
@@ -81,7 +154,30 @@ flywayPassword := "mySecretPwd"
 
 flywaySchemas := Seq("schema1", "schema2", "schema3")
 
-flywayTable := "schema_history"</pre>
+flywayTable := "schema_history"
+
+flywayLocations := Seq("classpath:migrations1", "migrations2", "filesystem:/sql-migrations")
+
+flywaySqlMigrationPrefix := "Migration-"
+
+flywaySqlMigrationSeparator := "__"
+
+flywaySqlMigrationSuffix := "-OK.sql"
+
+flywayEncoding := "ISO-8859-1"
+
+flywayPlaceholders := Map(
+  "aplaceholder" -> "value",
+  "otherplaceholder" -> "value123"
+)
+
+flywayPlaceholderPrefix := "#["
+
+flywayPlaceholderSuffix := "]"
+
+flywayResolvers := Seq("com.mycompany.CustomResolver", "com.mycompany.AnotherResolver")
+
+flywayCallbacks := Seq("com.mycompany.CustomCallback", "com.mycompany.AnotherCallback")</pre>
     <h2>Sample output</h2>
 
     <pre class="console">&gt; sbt flywayRepair

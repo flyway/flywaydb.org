@@ -65,6 +65,14 @@ subtitle: 'Command Line : Clean'
             <td><nobr><i>&lt;install-dir&gt;</i>/jars</td>
             <td>The directory containing the JDBC driver</td>
         </tr>
+        <tr>
+            <td>callbacks</td>
+            <td>NO</td>
+            <td></td>
+            <td>Comma-separated list of fully qualified class names of
+                <a href="/documentation/api/javadoc/org/flywaydb/api/callback/FlywayCallback.html">FlywayCallback</a>
+                implementations to use to hook into the Flyway lifecycle.</td>
+        </tr>
         </tbody>
     </table>
 
@@ -73,7 +81,8 @@ subtitle: 'Command Line : Clean'
 flyway.url=jdbc:hsqldb:file:/db/flyway_sample
 flyway.user=SA
 flyway.password=mySecretPwd
-flyway.schemas=schema1,schema2,schema3</pre>
+flyway.schemas=schema1,schema2,schema3
+flyway.callbacks=com.mycompany.project.CustomCallback,com.mycompany.project.AnotherCallback</pre>
 
     <h2>Sample output</h2>
     <pre class="console">&gt; flyway clean

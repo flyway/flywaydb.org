@@ -6,10 +6,13 @@ subtitle: 'Ant Task: Repair'
 <div id="antTaskRepair">
     <h1>Ant Task: Repair</h1>
 
-    <p><strong>Not necessary for databases with DDL transaction support</strong></p>
-
-    <p>Repairs the Flyway metadata table after a failed migration.<br/>
-        User objects left behind must still be cleaned up manually.</p>
+    <p>Repairs the Flyway metadata table. This will perform the following actions:</p>
+    <ul>
+        <li>Remove any failed migrations on databases without DDL transactions<br/>
+            (User objects left behind must still be cleaned up manually)
+        </li>
+        <li>Correct wrong checksums</li>
+    </ul>
 
     <h2>Usage</h2>
     <pre class="prettyprint">&lt;flyway:repair /&gt;</pre>
@@ -70,6 +73,75 @@ subtitle: 'Ant Task: Repair'
             </td>
         </tr>
         <tr>
+            <td>locations</td>
+            <td>NO</td>
+            <td>db/migration</td>
+            <td>Locations to scan recursively for migrations. The location type is determined by its prefix.<br/>
+                Unprefixed locations or locations starting with <code>classpath:</code> point to a package on the
+                classpath and may contain both sql and java-based migrations.<br/>
+                Locations starting with <code>filesystem:</code> point to a directory on the filesystem and may only
+                contain sql migrations.
+            </td>
+        </tr>
+        <tr>
+            <td>sqlMigrationPrefix</td>
+            <td>NO</td>
+            <td>V</td>
+            <td>The file name prefix for Sql migrations</td>
+        </tr>
+        <tr>
+            <td>sqlMigrationSeparator</td>
+            <td>NO</td>
+            <td>__</td>
+            <td>The file name separator for Sql migrations</td>
+        </tr>
+        <tr>
+            <td>sqlMigrationSuffix</td>
+            <td>NO</td>
+            <td>.sql</td>
+            <td>The file name suffix for Sql migrations</td>
+        </tr>
+        <tr>
+            <td>encoding</td>
+            <td>NO</td>
+            <td>UTF-8</td>
+            <td>The encoding of Sql migrations</td>
+        </tr>
+        <tr>
+            <td>placeholders</td>
+            <td>NO</td>
+            <td></td>
+            <td>Placeholders to replace in Sql migrations</td>
+        </tr>
+        <tr>
+            <td>placeholderPrefix</td>
+            <td>NO</td>
+            <td>${</td>
+        <td>The prefix of every placeholder</td>
+    </tr>
+    <tr>
+        <td>placeholderSuffix</td>
+        <td>NO</td>
+        <td>}</td>
+            <td>The suffix of every placeholder</td>
+        </tr>
+        <tr>
+            <td>resolvers</td>
+            <td>NO</td>
+            <td></td>
+            <td>Fully qualified class names of custom
+                <a href="/documentation/api/javadoc/org/flywaydb/api/resolver/MigrationResolver.html">MigrationResolver</a>
+                implementations to be used in addition to the built-in ones for resolving Migrations to apply.</td>
+        </tr>
+        <tr>
+            <td>callbacks</td>
+            <td>NO</td>
+            <td></td>
+            <td>Fully qualified class names of
+                <a href="/documentation/api/javadoc/org/flywaydb/api/callback/FlywayCallback.html">FlywayCallback</a>
+                implementations to use to hook into the Flyway lifecycle.</td>
+        </tr>
+        <tr>
             <td>classpath</td>
             <td>NO</td>
             <td></td>
@@ -94,7 +166,18 @@ subtitle: 'Ant Task: Repair'
 &lt;property name=&quot;flyway.user&quot; value=&quot;SA&quot;/&gt;
 &lt;property name=&quot;flyway.password&quot; value=&quot;mySecretPwd&quot;/&gt;
 &lt;property name=&quot;flyway.schemas&quot; value=&quot;schema1,schema2,schema3&quot;/&gt;
-&lt;property name=&quot;flyway.table&quot; value=&quot;schema_history&quot;/&gt;</pre>
+&lt;property name=&quot;flyway.table&quot; value=&quot;schema_history&quot;/&gt;
+&lt;property name=&quot;flyway.locations&quot; value=&quot;classpath:com.mycompany.db,db/mig,filesystem:/sql-mig&quot;/&gt;
+&lt;property name=&quot;flyway.sqlMigrationPrefix&quot; value=&quot;Migration-&quot;/&gt;
+&lt;property name=&quot;flyway.sqlMigrationSeparator&quot; value=&quot;__&quot;/&gt;
+&lt;property name=&quot;flyway.sqlMigrationSuffix&quot; value=&quot;-OK.sql&quot;/&gt;
+&lt;property name=&quot;flyway.encoding&quot; value=&quot;ISO-8859-1&quot;/&gt;
+&lt;property name=&quot;flyway.placeholders.aplaceholder&quot; value=&quot;value&quot;/&gt;
+&lt;property name=&quot;flyway.placeholders.otherplaceholder&quot; value=&quot;value123&quot;/&gt;
+&lt;property name=&quot;flyway.placeholderPrefix&quot; value=&quot;#[&quot;/&gt;
+&lt;property name=&quot;flyway.placeholderSuffix&quot; value=&quot;]&quot;/&gt;
+&lt;property name=&quot;flyway.resolvers&quot; value=&quot;com.mycompany.MyResolver,com.mycompany.OtherResolver&quot;/&gt;
+&lt;property name=&quot;flyway.callbacks&quot; value=&quot;com.mycompany.MyCallback,com.mycompany.OtherCallback&quot;/&gt;</pre>
 
     <h2>Sample output</h2>
     <pre class="console">[flyway:repair] Repair not necessary. No failed migration detected.</pre>

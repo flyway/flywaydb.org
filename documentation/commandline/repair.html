@@ -6,10 +6,13 @@ subtitle: 'Command Line : Repair'
 <div id="commandLineRepair">
     <h1>Command Line: Repair</h1>
 
-    <p><strong>Not necessary for databases with DDL transaction support</strong></p>
-
-    <p>Repairs the Flyway metadata table after a failed migration.<br/>
-        User objects left behind must still be cleaned up manually.</p>
+    <p>Repairs the Flyway metadata table. This will perform the following actions:</p>
+    <ul>
+        <li>Remove any failed migrations on databases without DDL transactions<br/>
+            (User objects left behind must still be cleaned up manually)
+        </li>
+        <li>Correct wrong checksums</li>
+    </ul>
 
     <h2>Usage</h2>
 
@@ -72,10 +75,77 @@ subtitle: 'Command Line : Repair'
             </td>
         </tr>
         <tr>
+            <td>locations</td>
+            <td>NO</td>
+            <td><nobr>filesystem:<i>&lt;install-dir&gt;</i>/sql</nobr></td>
+            <td>Comma-separated list of locations to scan recursively for migrations. The location type is determined by its prefix.<br/>
+                Unprefixed locations or locations starting with <code>classpath:</code> point to a package on the classpath and may contain both sql and java-based migrations.<br/>
+                Locations starting with <code>filesystem:</code> point to a directory on the filesystem and may only contain sql migrations.
+            </td>
+        </tr>
+        <tr>
             <td>jarDir</td>
             <td>NO</td>
             <td><nobr><i>&lt;install-dir&gt;</i>/jars</nobr></td>
-            <td>The directory containing the JDBC driver</td>
+            <td>The directory containing the JDBC driver and the Java-based migrations</td>
+        </tr>
+        <tr>
+            <td>sqlMigrationPrefix</td>
+            <td>NO</td>
+            <td>V</td>
+            <td>The file name prefix for Sql migrations</td>
+        </tr>
+        <tr>
+            <td>sqlMigrationSeparator</td>
+            <td>NO</td>
+            <td>__</td>
+            <td>The file name separator for Sql migrations</td>
+        </tr>
+        <tr>
+            <td>sqlMigrationSuffix</td>
+            <td>NO</td>
+            <td>.sql</td>
+            <td>The file name suffix for Sql migrations</td>
+        </tr>
+        <tr>
+            <td>encoding</td>
+            <td>NO</td>
+            <td>UTF-8</td>
+            <td>The encoding of Sql migrations</td>
+        </tr>
+        <tr>
+            <td>placeholders.<i>name</i></td>
+            <td>NO</td>
+            <td></td>
+            <td>Placeholders to replace in Sql migrations</td>
+        </tr>
+        <tr>
+            <td>placeholderPrefix</td>
+            <td>NO</td>
+            <td>${</td>
+            <td>The prefix of every placeholder</td>
+        </tr>
+        <tr>
+            <td>placeholderSuffix</td>
+            <td>NO</td>
+            <td>}</td>
+            <td>The suffix of every placeholder</td>
+        </tr>
+        <tr>
+            <td>resolvers</td>
+            <td>NO</td>
+            <td></td>
+            <td>Comma-separated list of fully qualified class names of custom
+                <a href="/documentation/api/javadoc/org/flywaydb/api/resolver/MigrationResolver.html">MigrationResolver</a>
+                implementations to be used in addition to the built-in ones for resolving Migrations to apply.</td>
+        </tr>
+        <tr>
+            <td>callbacks</td>
+            <td>NO</td>
+            <td></td>
+            <td>Comma-separated list of fully qualified class names of
+                <a href="/documentation/api/javadoc/org/flywaydb/api/callback/FlywayCallback.html">FlywayCallback</a>
+                implementations to use to hook into the Flyway lifecycle.</td>
         </tr>
         </tbody>
     </table>
@@ -86,7 +156,18 @@ flyway.url=jdbc:hsqldb:file:/db/flyway_sample
 flyway.user=SA
 flyway.password=mySecretPwd
 flyway.schemas=schema1,schema2,schema3
-flyway.table=schema_history</pre>
+flyway.table=schema_history
+flyway.locations=classpath:com.mycompany.migration,database/migrations,filesystem:/sql-migrations
+flyway.sqlMigrationPrefix=Migration-
+flyway.sqlMigrationSeparator=__
+flyway.sqlMigrationSuffix=-OK.sql
+flyway.encoding=ISO-8859-1
+flyway.placeholders.aplaceholder=value
+flyway.placeholders.otherplaceholder=value123
+flyway.placeholderPrefix=#[
+flyway.placeholderSuffix=]
+flyway.resolvers=com.mycompany.project.CustomResolver,com.mycompany.project.AnotherResolver
+flyway.callbacks=com.mycompany.project.CustomCallback,com.mycompany.project.AnotherCallback</pre>
 
     <h2>Sample output</h2>
     <pre class="console">&gt; flyway repair
