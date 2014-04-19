@@ -90,6 +90,12 @@ subtitle: 'Ant Task: Validate'
             <td>The file name prefix for Sql migrations</td>
         </tr>
         <tr>
+            <td>sqlMigrationSeparator</td>
+            <td>NO</td>
+            <td>__</td>
+            <td>The file name separator for Sql migrations</td>
+        </tr>
+        <tr>
             <td>sqlMigrationSuffix</td>
             <td>NO</td>
             <td>.sql</td>
@@ -184,6 +190,7 @@ subtitle: 'Ant Task: Validate'
 &lt;property name=&quot;flyway.table&quot; value=&quot;schema_history&quot;/&gt;
 &lt;property name=&quot;flyway.locations&quot; value=&quot;classpath:com.mycompany.project.migration,database/migrations,filesystem:/sql-migrations&quot;/&gt;
 &lt;property name=&quot;flyway.sqlMigrationPrefix&quot; value=&quot;Migration-&quot;/&gt;
+&lt;property name=&quot;flyway.sqlMigrationSeparator&quot; value=&quot;__&quot;/&gt;
 &lt;property name=&quot;flyway.sqlMigrationSuffix&quot; value=&quot;-OK.sql&quot;/&gt;
 &lt;property name=&quot;flyway.encoding&quot; value=&quot;ISO-8859-1&quot;/&gt;
 &lt;property name=&quot;flyway.placeholders.aplaceholder&quot; value=&quot;value&quot;/&gt;

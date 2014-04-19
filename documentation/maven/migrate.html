@@ -108,6 +108,12 @@ subtitle: 'mvn flyway:migrate'
         <td>The file name prefix for Sql migrations</td>
     </tr>
     <tr>
+        <td>sqlMigrationSeparator</td>
+        <td>NO</td>
+        <td>__</td>
+        <td>The file name separator for Sql migrations</td>
+    </tr>
+    <tr>
         <td>sqlMigrationSuffix</td>
         <td>NO</td>
         <td>.sql</td>
@@ -248,6 +254,7 @@ subtitle: 'mvn flyway:migrate'
         &lt;location&gt;filesystem:/sql-migrations&lt;/location&gt;
     &lt;/locations&gt;
     &lt;sqlMigrationPrefix&gt;Migration-&lt;/sqlMigrationPrefix&gt;
+    &lt;sqlMigrationSeparator&gt;__&lt;/sqlMigrationSeparator&gt;
     &lt;sqlMigrationSuffix&gt;-OK.sql&lt;/sqlMigrationSuffix&gt;
     &lt;encoding&gt;ISO-8859-1&lt;/encoding&gt;
     &lt;placeholders&gt;

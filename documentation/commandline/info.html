@@ -80,7 +80,7 @@ subtitle: 'Command Line : Info'
         <tr>
             <td>jarDir</td>
             <td>NO</td>
-            <td><nobr><i>&lt;install-dir&gt;</i>/jars</td>
+            <td><nobr><i>&lt;install-dir&gt;</i>/jars</nobr></td>
             <td>The directory containing the JDBC driver and the Java-based migrations</td>
         </tr>
         <tr>
@@ -88,6 +88,12 @@ subtitle: 'Command Line : Info'
             <td>NO</td>
             <td>V</td>
             <td>The file name prefix for Sql migrations</td>
+        </tr>
+        <tr>
+            <td>sqlMigrationSeparator</td>
+            <td>NO</td>
+            <td>__</td>
+            <td>The file name separator for Sql migrations</td>
         </tr>
         <tr>
             <td>sqlMigrationSuffix</td>
@@ -157,6 +163,7 @@ flyway.schemas=schema1,schema2,schema3
 flyway.table=schema_history
 flyway.locations=classpath:com.mycompany.migration,database/migrations,filesystem:/sql-migrations
 flyway.sqlMigrationPrefix=Migration-
+flyway.sqlMigrationSeparator=__
 flyway.sqlMigrationSuffix=-OK.sql
 flyway.encoding=ISO-8859-1
 flyway.placeholders.aplaceholder=value
