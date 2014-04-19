@@ -118,6 +118,7 @@ hr.soften {
 #upAndRunningLeft {
     line-height: 150%;
     padding-top: 30px;
+    margin-left: 10px;
 }
 
 #upAndRunningLeft span {
