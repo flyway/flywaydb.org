@@ -33,7 +33,7 @@ subtitle: API - First Steps
     ...
     &lt;dependencies&gt;
         &lt;dependency&gt;
-            &lt;groupId&gt;com.googlecode.flyway&lt;/groupId&gt;
+            &lt;groupId&gt;org.flywaydb&lt;/groupId&gt;
             &lt;artifactId&gt;flyway-core&lt;/artifactId&gt;
             &lt;version&gt;{{ site.flywayVersion }}&lt;/version&gt;
         &lt;/dependency&gt;
@@ -54,7 +54,7 @@ subtitle: API - First Steps
 
     <pre class="prettyprint">package foobar;
 
-import com.googlecode.flyway.core.Flyway;
+import org.flywaydb.core.Flyway;
 
 public class App {
     public static void main(String[] args) {
@@ -115,6 +115,6 @@ INFO: Successfully applied 1 migration to schema "PUBLIC" (execution time 00:00.
     <p>These migrations were then successfully found and executed.</p>
 
     <p class="next-steps">
-        <a class="btn btn-primary" href="/documentation/api/index.html">Read the documentation <i class="fa fa-arrow-right"></i></a>
+        <a class="btn btn-primary" href="/documentation/api">Read the documentation <i class="fa fa-arrow-right"></i></a>
     </p>
 </div>
