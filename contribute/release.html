@@ -54,28 +54,22 @@ subtitle: Releasing Flyway
 &lt;/settings&gt;</pre>
 
 
-    <h2><a name="Required_Steps"></a>Required Steps<a href="#Required_Steps" class="section_anchor"></a></h2>
+    <h2>Required Steps</h2>
     <ol>
-        <li>In Jenkins, we choose the job <strong>Flyway RELEASE</strong></li>
-        <li>In the list of actions left, we choose <strong>Perform Maven Release</strong></li>
-        <li>We set the new Release Version, say <i>2.0.2</i>, and the new Development Version, say <i>2.0.3-SNAPSHOT</i>,
-            and provide the GitHub username and password for release</li>
-        <li>Now we can start the release by clicking <strong>Schedule Maven Release Build</strong></li>
-        <li>Once the release completes, create a pull request on GitHub for the <i>flyway-release</i> branch, merge it and delete the branch</li>
-        <li>Now the artifacts, must be promoted to Maven Central by logging in to <a href="https://oss.sonatype.org/"
-                                                                                    >https://oss.sonatype.org/</a>
-        </li>
-        <li>We select <strong>Staging Repositories</strong> on the left and tick the checkbox in front of the open
-            <strong>com.googlecode.flyway</strong> repository
-        </li>
+        <li>Checkout the latest version of <strong>flyway/flyway-release</strong></li>
+        <li>Invoke <strong>release.cmd &lt;&lt;version&gt;&gt;</strong></li>
+        <li>Once the release completes, the artifacts must be promoted to Maven Central by logging in to <a href="https://oss.sonatype.org/">https://oss.sonatype.org/</a></li>
+        <li>We select <strong>Staging Repositories</strong> on the left and tick the checkbox in front of the open <strong>org.flywaydb</strong> repository</li>
         <li>We then close it (without message) and release it (without message)</li>
         <li>The site must be now be updated by putting the new version number in <strong>_config.yml</strong> of flywaydb.org</li>
-        <li>We also update the <a href="/documentation/releaseNotes.html">Release Notes</a>
-            by changing the Unreleased Version in the new version with the date of today
-        </li>
+        <li>We also update the <a href="/documentation/releaseNotes.html">Release Notes</a> by changing the Unreleased Version in the new version with the date of today</li>
         <li>The newly released version should also be removed from the <a href="/documentation/roadmap.html">Roadmap</a></li>
-        <li>The javadoc should be updated by downloading the latest jar from Maven Central, unpacking it and committing the changes</li>
+        <li>Remove the old javadoc from the site by deleting everything under /documentation/api/javadoc</li>
+        <li>Copy the new javadoc from flyway-release/flyway/flyway-core/target/apidocs to /documentation/api/javadoc</li>
+        <li>Copy the new sbt plugin from flyway-release/flyway/flyway-sbt/target/scala-2.10/sbt-0.13 to /repo/org/flywaydb/flyway-sbt_2.10_0.13/&lt;&lt;version&gt;&gt;</li>
         <li>Any remaining documentation changes to reflect changes in the code, must now be made to the site</li>
+        <li>Write a release announcement for the blog</li>
         <li>Great, we&#x27;re done ! We can now announce it on Twitter!</li>
+        <li>Update the StackOverflow tag for any new functionality</li>
     </ol>
 </div>
