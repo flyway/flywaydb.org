@@ -4,9 +4,9 @@ menu: derby
 subtitle: Derby
 ---
 <div id="databaseDerby">
-    <h1><a name="Derby"></a>Derby<a href="#Derby" class="section_anchor"></a></h1>
+    <h1>Derby</h1>
 
-    <h2><a name="Versions"></a>Versions<a href="#Versions" class="section_anchor"></a></h2>
+    <h2>Versions</h2>
     <ul>
         <li>10.8.2.2 and later</li>
     </ul>
@@ -16,20 +16,21 @@ subtitle: Derby
         <li>org.apache.derby.jdbc.EmbeddedDriver</li>
     </ul>
 
-    <h2><a name="Sql_Script_Syntax"></a>Sql Script Syntax<a href="#Sql_Script_Syntax" class="section_anchor"></a></h2>
+    <h2>Sql Script Syntax</h2>
     <ul>
         <li><a href="/documentation/migration/sql.html#syntax">Standard Sql
             syntax</a> with statement delimiter ;
         </li>
     </ul>
-    <h3><a name="Compatibility"></a>Compatibility<a href="#Compatibility" class="section_anchor"></a></h3>
+    <h3>Compatibility</h3>
     <ul>
         <li>DDL exported by Derby can be used unchanged in a Flyway migration.</li>
         <li>Any Derby sql script executed by Flyway, can be executed by the Derby tools (after the placeholders have
             been replaced).
         </li>
     </ul>
-    <h3><a name="Example"></a>Example<a href="#Example" class="section_anchor"></a></h3><pre class="prettyprint">/* Single line comment */
+    <h3>Example</h3>
+    <pre class="prettyprint">/* Single line comment */
 CREATE TABLE test_data (
   value VARCHAR(25) NOT NULL PRIMARY KEY
 );
@@ -44,8 +45,12 @@ comment
 -- Placeholder
 INSERT INTO ${tableName} (name) VALUES (&#x27;Mr. T&#x27;);</pre>
 
-    <h2><a name="Limitations"></a>Limitations<a href="#Limitations" class="section_anchor"></a></h2>
+    <h2>Limitations</h2>
     <ul>
         <li><i>None</i></li>
     </ul>
+
+    <p class="next-steps">
+        <a class="btn btn-primary" href="/documentation/database/sqlite.html">SQLite <i class="fa fa-arrow-right"></i></a>
+    </p>
 </div>

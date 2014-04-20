@@ -39,7 +39,7 @@ resolvers += "Flyway" at "http://flywaydb.org/repo"</pre>
         </tr>
         <tr>
             <td><a href="/documentation/sbt/init.html">flywayInit</a></td>
-            <td>Creates and initializes the metadata table</td>
+            <td>Creates and initializes the metadata table (existing database)</td>
         </tr>
         <tr>
             <td><a href="/documentation/sbt/repair.html">flywayRepair</a></td>
@@ -58,7 +58,7 @@ flywayUrl := "jdbc:hsqldb:file:target/flyway_sample;shutdown=true"
 
 flywayUser := "SA"
 
-flywayLocations += "com.googlecode.flyway.sample.migration"
+flywayLocations += "org.flywaydb.sample.migration"
 
 flywaySchemas := Seq("schema1", "schema2", "schema3")
 
@@ -68,8 +68,12 @@ flywayPlaceholders := Map(
 )</pre>
 
     <h3>Through System properties</h3>
-    <pre class="prettyprint">sbt -Dflyway.user=myUser -Dflyway.schemas=schema1,schema2 -Dflyway.placeholders.keyABC=valXYZ</pre>
+    <pre class="console">sbt -Dflyway.user=myUser -Dflyway.schemas=schema1,schema2 -Dflyway.placeholders.keyABC=valXYZ</pre>
 
     <h3>Overriding order</h3>
     <p>System properties &gt; Plugin configuration</p>
+
+    <p class="next-steps">
+        <a class="btn btn-primary" href="/documentation/sbt/migrate.html">SBT: migrate <i class="fa fa-arrow-right"></i></a>
+    </p>
 </div>

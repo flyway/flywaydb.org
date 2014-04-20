@@ -9,6 +9,9 @@ title: Documentation
             <div id="menu" class="well">
                 <ul class="nav nav-list">
                     <li
+                    {% if page.menu == 'overview' %} class="active" {% endif %}>
+                    <a href="/documentation">Overview</a></li>
+                    <li
                     {% if page.menu == 'migration' %} class="active" {% endif %}>
                     <a href="/documentation/migration">Migrations</a></li>
                     <li
@@ -16,11 +19,11 @@ title: Documentation
                     <a href="/documentation/existingDatabaseSetup.html">Existing database setup</a></li>
                     <li class="nav-header">Execution Modes</li>
                     <li
-                    {% if page.menu == 'api' %} class="active" {% endif %}>
-                    <a href="/documentation/api.html">API</a></li>
-                    <li
                     {% if page.menu == 'commandLine' %} class="active" {% endif %}>
-                    <a href="/documentation/commandline">Command-line Tool</a></li>
+                    <a href="/documentation/commandline">Command-line</a></li>
+                    <li
+                    {% if page.menu == 'api' %} class="active" {% endif %}>
+                    <a href="/documentation/api">API</a></li>
                     <li
                     {% if page.menu == 'maven' %} class="active" {% endif %}>
                     <a href="/documentation/maven">Maven</a></li>
@@ -50,6 +53,9 @@ title: Documentation
                     {% if page.menu == 'mySql' %} class="active" {% endif %}>
                     <a href="/documentation/database/mysql.html">MySQL</a></li>
                     <li
+                    {% if page.menu == 'mariadb' %} class="active" {% endif %}>
+                    <a href="/documentation/database/mariadb.html">MariaDB</a></li>
+                    <li
                     {% if page.menu == 'googleCloudSql' %} class="active" {% endif %}>
                     <a href="/documentation/database/googleCloudSql.html">Google Cloud SQL</a></li>
                     <li
@@ -64,6 +70,9 @@ title: Documentation
                     <li
                     {% if page.menu == 'derby' %} class="active" {% endif %}>
                     <a href="/documentation/database/derby.html">Derby</a></li>
+                    <li
+                    {% if page.menu == 'sqlite' %} class="active" {% endif %}>
+                    <a href="/documentation/database/sqlite.html">SQLite</a></li>
                     <li class="nav-header">Extensions</li>
                     <li
                     {% if page.menu == 'thirdParty' %} class="active" {% endif %}>

@@ -83,6 +83,12 @@ subtitle: 'sbt flywayInfo'
             <td>The file name prefix for Sql migrations</td>
         </tr>
         <tr>
+            <td>flywaySqlMigrationSeparator</td>
+            <td>NO</td>
+            <td>__</td>
+            <td>The file name separator for Sql migrations</td>
+        </tr>
+        <tr>
             <td>flywaySqlMigrationSuffix</td>
             <td>NO</td>
             <td>.sql</td>
@@ -111,6 +117,22 @@ subtitle: 'sbt flywayInfo'
             <td>NO</td>
             <td>}</td>
             <td>The suffix of every placeholder</td>
+        </tr>
+        <tr>
+            <td>flywayResolvers</td>
+            <td>NO</td>
+            <td></td>
+            <td>Fully qualified class names of custom
+                <a href="/documentation/api/javadoc/org/flywaydb/api/resolver/MigrationResolver.html">MigrationResolver</a>
+                implementations to be used in addition to the built-in ones for resolving Migrations to apply.</td>
+        </tr>
+        <tr>
+            <td>flywayCallbacks</td>
+            <td>NO</td>
+            <td></td>
+            <td>Fully qualified class names of
+                <a href="/documentation/api/javadoc/org/flywaydb/api/callback/FlywayCallback.html">FlywayCallback</a>
+                implementations to use to hook into the Flyway lifecycle.</td>
         </tr>
         <tr>
             <td>flywayTarget</td>
@@ -151,6 +173,8 @@ flywayLocations := Seq("classpath:migrations1", "migrations2", "filesystem:/sql-
 
 flywaySqlMigrationPrefix := "Migration-"
 
+flywaySqlMigrationSeparator := "__"
+
 flywaySqlMigrationSuffix := "-OK.sql"
 
 flywayEncoding := "ISO-8859-1"
@@ -163,6 +187,10 @@ flywayPlaceholders := Map(
 flywayPlaceholderPrefix := "#["
 
 flywayPlaceholderSuffix := "]"
+
+flywayResolvers := Seq("com.mycompany.CustomResolver", "com.mycompany.AnotherResolver")
+
+flywayCallbacks := Seq("com.mycompany.CustomCallback", "com.mycompany.AnotherCallback")
 
 flywayTarget := "1.1"
 
@@ -179,4 +207,8 @@ flywayOutOfOrder := false</pre>
 | 1.2         | Another user           |                     | Pending |
 | 1.3         | And his brother        |                     | Pending |
 +-------------+------------------------+---------------------+---------+</pre>
+
+    <p class="next-steps">
+        <a class="btn btn-primary" href="/documentation/sbt/validate.html">SBT: validate <i class="fa fa-arrow-right"></i></a>
+    </p>
 </div>

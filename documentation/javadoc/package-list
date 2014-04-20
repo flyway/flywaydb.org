@@ -1,5 +1,0 @@
-com.googlecode.flyway.core
-com.googlecode.flyway.core.api
-com.googlecode.flyway.core.api.migration
-com.googlecode.flyway.core.api.migration.jdbc
-com.googlecode.flyway.core.api.migration.spring

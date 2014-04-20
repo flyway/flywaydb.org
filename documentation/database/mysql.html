@@ -63,6 +63,12 @@ INSERT INTO ${tableName} (name) VALUES (&#x27;Mr. T&#x27;);</pre>
 
     <h2><a name="Limitations"></a>Limitations<a href="#Limitations" class="section_anchor"></a></h2>
     <ul>
-        <li><i>None</i></li>
+        <li><a href="https://github.com/flyway/flyway/issues/558">Issue 558</a>
+            The parser currently doesn't support multiple comment directives on a single line.<br/>
+            Example: /*!50003 CREATE*/ /*!50017 DEFINER=`...`*/ /*!50003 TRIGGER EntityBeforeInsert ...</li>
     </ul>
+
+    <p class="next-steps">
+        <a class="btn btn-primary" href="/documentation/database/mariadb.html">MariaDB <i class="fa fa-arrow-right"></i></a>
+    </p>
 </div>

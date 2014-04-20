@@ -58,6 +58,14 @@ subtitle: 'Ant Task: Clean'
             </td>
         </tr>
         <tr>
+            <td>callbacks</td>
+            <td>NO</td>
+            <td></td>
+            <td>Fully qualified class names of
+                <a href="/documentation/api/javadoc/org/flywaydb/api/callback/FlywayCallback.html">FlywayCallback</a>
+                implementations to use to hook into the Flyway lifecycle.</td>
+        </tr>
+        <tr>
             <td>classpath</td>
             <td>NO</td>
             <td></td>
@@ -81,8 +89,13 @@ subtitle: 'Ant Task: Clean'
 &lt;property name=&quot;flyway.url&quot; value=&quot;jdbc:hsqldb:file:/db/flyway_sample&quot;/&gt;
 &lt;property name=&quot;flyway.user&quot; value=&quot;SA&quot;/&gt;
 &lt;property name=&quot;flyway.password&quot; value=&quot;mySecretPwd&quot;/&gt;
-&lt;property name=&quot;flyway.schemas&quot; value=&quot;schema1,schema2,schema3&quot;/&gt;</pre>
+&lt;property name=&quot;flyway.schemas&quot; value=&quot;schema1,schema2,schema3&quot;/&gt;
+&lt;property name=&quot;flyway.callbacks&quot; value=&quot;com.mycompany.MyCallback,com.mycompany.OtherCallback&quot;/&gt;</pre>
 
     <h2>Sample output</h2>
     <pre class="console">[flyway:clean] Cleaned database schema 'PUBLIC' (execution time 00:00.013s)</pre>
+
+    <p class="next-steps">
+        <a class="btn btn-primary" href="/documentation/ant/info.html">Ant: info <i class="fa fa-arrow-right"></i></a>
+    </p>
 </div>

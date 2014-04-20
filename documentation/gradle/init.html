@@ -67,6 +67,14 @@ subtitle: 'gradle flywayInit'
             </td>
         </tr>
         <tr>
+            <td>callbacks</td>
+            <td>NO</td>
+            <td></td>
+            <td>Fully qualified class names of
+                <a href="/documentation/api/javadoc/org/flywaydb/api/callback/FlywayCallback.html">FlywayCallback</a>
+                implementations to use to hook into the Flyway lifecycle.</td>
+        </tr>
+        <tr>
             <td>initVersion</td>
             <td>NO</td>
             <td>1</td>
@@ -90,6 +98,7 @@ subtitle: 'gradle flywayInit'
     password = 'mySecretPwd'
     schemas = ['schema1', 'schema2', 'schema3']
     table = 'schema_history'
+    callbacks = ['com.mycompany.project.CustomCallback', 'com.mycompany.project.AnotherCallback']
     initVersion = 5
     initDescription = "Let's go!"
 }</pre>
@@ -98,4 +107,8 @@ subtitle: 'gradle flywayInit'
 
 Creating Metadata table: "PUBLIC"."schema_version"
 Schema initialized with version: 0</pre>
+
+    <p class="next-steps">
+        <a class="btn btn-primary" href="/documentation/gradle/repair.html">Gradle: repair <i class="fa fa-arrow-right"></i></a>
+    </p>
 </div>

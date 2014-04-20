@@ -90,6 +90,12 @@ subtitle: 'Ant Task: Validate'
             <td>The file name prefix for Sql migrations</td>
         </tr>
         <tr>
+            <td>sqlMigrationSeparator</td>
+            <td>NO</td>
+            <td>__</td>
+            <td>The file name separator for Sql migrations</td>
+        </tr>
+        <tr>
             <td>sqlMigrationSuffix</td>
             <td>NO</td>
             <td>.sql</td>
@@ -118,6 +124,22 @@ subtitle: 'Ant Task: Validate'
         <td>NO</td>
         <td>}</td>
             <td>The suffix of every placeholder</td>
+        </tr>
+        <tr>
+            <td>resolvers</td>
+            <td>NO</td>
+            <td></td>
+            <td>Fully qualified class names of custom
+                <a href="/documentation/api/javadoc/org/flywaydb/api/resolver/MigrationResolver.html">MigrationResolver</a>
+                implementations to be used in addition to the built-in ones for resolving Migrations to apply.</td>
+        </tr>
+        <tr>
+            <td>callbacks</td>
+            <td>NO</td>
+            <td></td>
+            <td>Fully qualified class names of
+                <a href="/documentation/api/javadoc/org/flywaydb/api/callback/FlywayCallback.html">FlywayCallback</a>
+                implementations to use to hook into the Flyway lifecycle.</td>
         </tr>
         <tr>
             <td>target</td>
@@ -174,18 +196,25 @@ subtitle: 'Ant Task: Validate'
 &lt;property name=&quot;flyway.password&quot; value=&quot;mySecretPwd&quot;/&gt;
 &lt;property name=&quot;flyway.schemas&quot; value=&quot;schema1,schema2,schema3&quot;/&gt;
 &lt;property name=&quot;flyway.table&quot; value=&quot;schema_history&quot;/&gt;
-&lt;property name=&quot;flyway.locations&quot; value=&quot;classpath:com.mycompany.project.migration,database/migrations,filesystem:/sql-migrations&quot;/&gt;
+&lt;property name=&quot;flyway.locations&quot; value=&quot;classpath:com.mycompany.db,db/mig,filesystem:/sql-mig&quot;/&gt;
 &lt;property name=&quot;flyway.sqlMigrationPrefix&quot; value=&quot;Migration-&quot;/&gt;
+&lt;property name=&quot;flyway.sqlMigrationSeparator&quot; value=&quot;__&quot;/&gt;
 &lt;property name=&quot;flyway.sqlMigrationSuffix&quot; value=&quot;-OK.sql&quot;/&gt;
 &lt;property name=&quot;flyway.encoding&quot; value=&quot;ISO-8859-1&quot;/&gt;
 &lt;property name=&quot;flyway.placeholders.aplaceholder&quot; value=&quot;value&quot;/&gt;
 &lt;property name=&quot;flyway.placeholders.otherplaceholder&quot; value=&quot;value123&quot;/&gt;
 &lt;property name=&quot;flyway.placeholderPrefix&quot; value=&quot;#[&quot;/&gt;
 &lt;property name=&quot;flyway.placeholderSuffix&quot; value=&quot;]&quot;/&gt;
+&lt;property name=&quot;flyway.resolvers&quot; value=&quot;com.mycompany.MyResolver,com.mycompany.OtherResolver&quot;/&gt;
+&lt;property name=&quot;flyway.callbacks&quot; value=&quot;com.mycompany.MyCallback,com.mycompany.OtherCallback&quot;/&gt;
 &lt;property name=&quot;flyway.target&quot; value=&quot;1.1&quot;/&gt;
 &lt;property name=&quot;flyway.outOfOrder&quot; value=&quot;false&quot;/&gt;
 &lt;property name=&quot;flyway.validationErrorMode&quot; value=&quot;FAIL&quot;/&gt;</pre>
 
     <h2>Sample output</h2>
     <pre class="console">[flyway:validate] Validated 4 migrations (execution time 00:00.038s)</pre>
+
+    <p class="next-steps">
+        <a class="btn btn-primary" href="/documentation/ant/init.html">Ant: init <i class="fa fa-arrow-right"></i></a>
+    </p>
 </div>

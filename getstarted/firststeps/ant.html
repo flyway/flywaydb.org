@@ -25,17 +25,16 @@ subtitle: Ant - First Steps
     <h2>Downloading and extracting Flyway and H2</h2>
 
     <p>We start by <a href="http://repo1.maven.org/maven2/com/h2database/h2/1.3.170/h2-1.3.170.jar">downloading the H2 jar</a> and we place it in our project as <code>libs/h2.jar</code>.</p>
-    <p>After which we <a href="http://repo1.maven.org/maven2/com/googlecode/flyway/flyway-ant/{{ site.flywayVersion }}/flyway-ant-{{ site.flywayVersion }}-dist.zip">download the Flyway Ant Distribution</a> and also extract its jar files into <code>libs</code>.</p>
+    <p>After which we <a href="http://repo1.maven.org/maven2/org/flywaydb/flyway-ant/{{ site.flywayVersion }}/flyway-ant-{{ site.flywayVersion }}-dist.zip">download the Flyway Ant Distribution</a> and also extract its jar files into <code>libs</code>.</p>
 
     <p>The <code>libs</code> directory should now contain 3 files: <code>h2.jar</code>, <code>flyway-core-{{ site.flywayVersion }}.jar</code> and <code>flyway-ant-{{ site.flywayVersion }}.jar</code>.</p>
 
     <h2>Integrating Flyway</h2>
 
     <p>Let's start by creating a <code>build.xml</code> file that'll correctly load and configure Flyway:</p>
-    <pre class="prettyprint">&lt;project name="foobar" default="migrate-db" xmlns:flyway="antlib:com.googlecode.flyway.ant"&gt;
+    <pre class="prettyprint">&lt;project name="foobar" default="migrate-db" xmlns:flyway="antlib:org.flywaydb.ant"&gt;
     &lt;target name="migrate-db"&gt;
-        &lt;taskdef uri="antlib:com.googlecode.flyway.ant"
-                 resource="com/googlecode/flyway/ant/antlib.xml"&gt;
+        &lt;taskdef uri="antlib:org.flywaydb.ant" resource="org/flywaydb/ant/antlib.xml"&gt;
             &lt;classpath&gt;
                 &lt;pathelement location="libs/flyway-core-{{ site.flywayVersion }}.jar"/&gt;
                 &lt;pathelement location="libs/flyway-ant-{{ site.flywayVersion }}.jar"/&gt;
@@ -96,9 +95,8 @@ insert into PERSON (ID, NAME) values (3, 'Ms. Bar');</pre>
     </ul>
     <p>These migrations were then successfully found and executed.</p>
 
-    <h2>Next step</h2>
 
-    <p>
-        <a class="btn btn-large btn-primary" href="/documentation/ant">Read the documentation</a>
+    <p class="next-steps">
+        <a class="btn btn-primary" href="/documentation/ant">Read the documentation <i class="fa fa-arrow-right"></i></a>
     </p>
 </div>

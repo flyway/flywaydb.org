@@ -46,11 +46,15 @@ subtitle: Existing Database Setup
     <pre class="prettyprint">mvn flyway:init -Dflyway.initVersion=1 -Dflyway.initDescription=&quot;Base version&quot;</pre>
     <p>You must perform this step for each database that hasn&#x27;t been cleaned. </p>
 
-    <h3><a name="Done_!"></a>Done !<a href="#Done_!" class="section_anchor"></a></h3>
+    <h3>Done !</h3>
 
     <p>Congratulations ! You are now ready. </p>
 
-    <p>If you execute your application with <a href="/documentation/api.html">Flyway integrated</a>, the
+    <p>If you execute your application with <a href="/documentation/api">Flyway integrated</a>, the
         empty databases will be migrated to the state of production and the others will be left as is.<br/> As soon
         as you add a new migration, it will be applied identically to all databases. </p>
+
+    <p class="next-steps">
+        <a class="btn btn-primary" href="/documentation/commandline">Command-line <i class="fa fa-arrow-right"></i></a>
+    </p>
 </div>

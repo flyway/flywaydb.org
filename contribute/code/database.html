@@ -50,12 +50,12 @@ end;
     <p>Now, <strong>restart</strong> the database. </p>
 
     <p>The Oracle Jdbc drivers aren&#x27;t available from Maven Central. You need to download your copy of
-        <code>ojdbc5.jar</code> here: <a
-                href="http://www.oracle.com/technetwork/database/enterprise-edition/jdbc-112010-090769.html"
-                >http://www.oracle.com/technetwork/database/enterprise-edition/jdbc-112010-090769.html</a>
+        <code>ojdbc6.jar</code> here: <a
+                href="http://www.oracle.com/technetwork/database/features/jdbc/jdbc-drivers-12c-download-1958347.html"
+                >http://www.oracle.com/technetwork/database/features/jdbc/jdbc-drivers-12c-download-1958347.html</a>
     </p>
 
-    <p>Now rename the jar as <code>ojdbc5-11.2.0.2.0.jar</code> and add it to your local Maven repository under <code>com/oracle/ojdbc5/11.2.0.2.0</code>.
+    <p>Now rename the jar as <code>ojdbc6-12.1.0.1.jar</code> and add it to your local Maven repository under <code>com/oracle/ojdbc6/12.1.0.1</code>.
     </p>
 
     <h2>MySQL</h2>
@@ -72,6 +72,20 @@ end;
     <p>Use <code>flyway</code> as the password for the root user.</p>
 
     <p>If the configuration hangs, try again after turning off User Account Control.</p>
+
+    <h2>MariaDB</h2>
+
+    <p>Flyway supports MariaDB 10.0 and later. You can grab the latest 10.0 version here: <a
+            href="https://downloads.mariadb.org/">https://downloads.mariadb.org/</a>
+    </p>
+
+    <p>Install it with the defaults, except for the following settings:</p>
+    <ul>
+        <li>Root password: flyway</li>
+        <li>Use UTF8 as default server's character set</li>
+        <li>Service Name: MariaDB</li>
+        <li>TCP port: 3333</li>
+    </ul>
 
     <h2>PostgreSQL</h2>
 
@@ -155,12 +169,12 @@ end;
         <code>db2jcc.jar</code>
         to your local Maven repository yourself. </p>
 
-    <p>Download the 3.62.56 driver from here: <a href="https://www-304.ibm.com/support/docview.wss?uid=swg21363866"
+    <p>Download the 4.17.29 driver from here: <a href="https://www-304.ibm.com/support/docview.wss?uid=swg21363866"
             >https://www-304.ibm.com/support/docview.wss?uid=swg21363866</a>
     </p>
 
-    <p>Extract the archive and then rename <code>db2jcc.jar</code> into <code>db2jcc-3.62.56.jar</code>. Copy
-        <code>db2jcc-3.62.56.jar</code> to <code>com/ibm/db2/db2jcc/3.62.56</code> in your local Maven repository.</p>
+    <p>Extract the archive and then rename <code>db2jcc4.jar</code> into <code>db2jcc4-4.17.29.jar</code>. Copy
+        <code>db2jcc4-4.17.29.jar</code> to <code>com/ibm/db2/db2jcc4/4.17.29</code> in your local Maven repository.</p>
 
     <h2>Next Step</h2>
 

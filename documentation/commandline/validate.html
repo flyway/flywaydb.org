@@ -1,10 +1,10 @@
 ---
 layout: commandLine
 pill: validate
-subtitle: 'Command Line : Validate'
+subtitle: 'Command-line: validate'
 ---
 <div id="commandLineValidate">
-    <h1>Command Line: Validate</h1>
+    <h1>Command-line: validate</h1>
 
     <p>Validates the applied migrations against the ones available on the classpath. The build fails if differences in
         migration names, types or checksums are found. <br/></p>
@@ -91,6 +91,12 @@ subtitle: 'Command Line : Validate'
             <td>The file name prefix for Sql migrations</td>
         </tr>
         <tr>
+            <td>sqlMigrationSeparator</td>
+            <td>NO</td>
+            <td>__</td>
+            <td>The file name separator for Sql migrations</td>
+        </tr>
+        <tr>
             <td>sqlMigrationSuffix</td>
             <td>NO</td>
             <td>.sql</td>
@@ -119,6 +125,22 @@ subtitle: 'Command Line : Validate'
             <td>NO</td>
             <td>}</td>
             <td>The suffix of every placeholder</td>
+        </tr>
+        <tr>
+            <td>resolvers</td>
+            <td>NO</td>
+            <td></td>
+            <td>Comma-separated list of fully qualified class names of custom
+                <a href="/documentation/api/javadoc/org/flywaydb/api/resolver/MigrationResolver.html">MigrationResolver</a>
+                implementations to be used in addition to the built-in ones for resolving Migrations to apply.</td>
+        </tr>
+        <tr>
+            <td>callbacks</td>
+            <td>NO</td>
+            <td></td>
+            <td>Comma-separated list of fully qualified class names of
+                <a href="/documentation/api/javadoc/org/flywaydb/api/callback/FlywayCallback.html">FlywayCallback</a>
+                implementations to use to hook into the Flyway lifecycle.</td>
         </tr>
         <tr>
             <td>target</td>
@@ -159,14 +181,17 @@ flyway.user=SA
 flyway.password=mySecretPwd
 flyway.schemas=schema1,schema2,schema3
 flyway.table=schema_history
-flyway.locations=classpath:com.mycompany.project.migration,database/migrations,filesystem:/sql-migrations
+flyway.locations=classpath:com.mycompany.migration,database/migrations,filesystem:/sql-migrations
 flyway.sqlMigrationPrefix=Migration-
+flyway.sqlMigrationSeparator=__
 flyway.sqlMigrationSuffix=-OK.sql
 flyway.encoding=ISO-8859-1
 flyway.placeholders.aplaceholder=value
 flyway.placeholders.otherplaceholder=value123
 flyway.placeholderPrefix=#[
 flyway.placeholderSuffix=]
+flyway.resolvers=com.mycompany.project.CustomResolver,com.mycompany.project.AnotherResolver
+flyway.callbacks=com.mycompany.project.CustomCallback,com.mycompany.project.AnotherCallback
 flyway.target=5.1
 flyway.outOfOrder=false
 flyway.cleanOnValidationError=false</pre>
@@ -177,4 +202,8 @@ flyway.cleanOnValidationError=false</pre>
 Flyway (Command-line Tool) v.{{ site.flywayVersion }}
 
 No migrations applied yet. No validation necessary.</pre>
+
+    <p class="next-steps">
+        <a class="btn btn-primary" href="/documentation/commandline/init.html">Command-line: init <i class="fa fa-arrow-right"></i></a>
+    </p>
 </div>

@@ -72,10 +72,26 @@ subtitle: 'mvn flyway:clean'
             </td>
         </tr>
         <tr>
+            <td>callbacks</td>
+            <td>NO</td>
+            <td></td>
+            <td>Fully qualified class names of
+                <a href="/documentation/api/javadoc/org/flywaydb/api/callback/FlywayCallback.html">FlywayCallback</a>
+                implementations to use to hook into the Flyway lifecycle.</td>
+        </tr>
+        <tr>
             <td>skip</td>
             <td>NO</td>
             <td>false</td>
             <td>Skips the execution of the plugin for this module</td>
+        </tr>
+        <tr>
+            <td>configFile</td>
+            <td>NO</td>
+            <td>flyway.properties</td>
+            <td>Properties file from which to load the Flyway configuration. The names of the individual properties match the ones you would
+                use as Maven or System properties. The encoding of the file must be the same as the encoding defined with the
+                flyway.encoding property, which is UTF-8 by default. Relative paths are relative to the POM.</td>
         </tr>
         </tbody>
     </table>
@@ -91,7 +107,12 @@ subtitle: 'mvn flyway:clean'
         &lt;schema&gt;schema2&lt;/schema&gt;
         &lt;schema&gt;schema3&lt;/schema&gt;
     &lt;/schemas&gt;
+    &lt;callbacks&gt;
+        &lt;callback&gt;com.mycompany.project.CustomCallback&lt;/callback&gt;
+        &lt;callback&gt;com.mycompany.project.AnotherCallback&lt;/callback&gt;
+    &lt;/callbacks&gt;
     &lt;skip&gt;false&lt;/skip&gt;
+    &lt;configFile&gt;myConfig.properties&lt;/configFile&gt;
 &lt;/configuration&gt;</pre>
 
     <h2>Sample output</h2>
@@ -100,4 +121,8 @@ subtitle: 'mvn flyway:clean'
 
 [INFO] [flyway:clean {execution: default-cli}]
 [INFO] Cleaned database schema 'PUBLIC' (execution time 00:00.016s)</pre>
+
+    <p class="next-steps">
+        <a class="btn btn-primary" href="/documentation/maven/info.html">Maven: info <i class="fa fa-arrow-right"></i></a>
+    </p>
 </div>

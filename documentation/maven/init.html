@@ -76,6 +76,14 @@ subtitle: 'mvn flyway:init'
             </td>
         </tr>
         <tr>
+            <td>callbacks</td>
+            <td>NO</td>
+            <td></td>
+            <td>Fully qualified class names of
+                <a href="/documentation/api/javadoc/org/flywaydb/api/callback/FlywayCallback.html">FlywayCallback</a>
+                implementations to use to hook into the Flyway lifecycle.</td>
+        </tr>
+        <tr>
             <td>initVersion</td>
             <td>NO</td>
             <td>1</td>
@@ -95,6 +103,14 @@ subtitle: 'mvn flyway:init'
             <td>false</td>
             <td>Skips the execution of the plugin for this module</td>
         </tr>
+        <tr>
+            <td>configFile</td>
+            <td>NO</td>
+            <td>flyway.properties</td>
+            <td>Properties file from which to load the Flyway configuration. The names of the individual properties match the ones you would
+                use as Maven or System properties. The encoding of the file must be the same as the encoding defined with the
+                flyway.encoding property, which is UTF-8 by default. Relative paths are relative to the POM.</td>
+        </tr>
         </tbody>
     </table>
     <h2>Sample configuration</h2>
@@ -109,9 +125,14 @@ subtitle: 'mvn flyway:init'
         &lt;schema&gt;schema3&lt;/schema&gt;
     &lt;/schemas&gt;
     &lt;table&gt;schema_history&lt;/table&gt;
+    &lt;callbacks&gt;
+        &lt;callback&gt;com.mycompany.project.CustomCallback&lt;/callback&gt;
+        &lt;callback&gt;com.mycompany.project.AnotherCallback&lt;/callback&gt;
+    &lt;/callbacks&gt;
     &lt;initVersion&gt;1.0&lt;/initVersion&gt;
     &lt;initDescription&gt;Base Migration&lt;/initDescription&gt;
     &lt;skip&gt;false&lt;/skip&gt;
+    &lt;configFile&gt;myConfig.properties&lt;/configFile&gt;
 &lt;/configuration&gt;</pre>
     <h2>Sample output</h2>
     <pre class="console">&gt; mvn flyway:init
@@ -119,4 +140,8 @@ subtitle: 'mvn flyway:init'
 [INFO] [flyway:init {execution: default-cli}]
 [INFO] Creating Metadata table: "PUBLIC"."schema_version"
 [INFO] Schema initialized with version: 0</pre>
+
+    <p class="next-steps">
+        <a class="btn btn-primary" href="/documentation/maven/repair.html">Maven: repair <i class="fa fa-arrow-right"></i></a>
+    </p>
 </div>

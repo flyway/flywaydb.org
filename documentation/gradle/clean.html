@@ -56,6 +56,14 @@ subtitle: 'gradle flywayClean'
                 The schemas will be cleaned in the order of this list.
             </td>
         </tr>
+        <tr>
+            <td>callbacks</td>
+            <td>NO</td>
+            <td></td>
+            <td>Fully qualified class names of
+                <a href="/documentation/api/javadoc/org/flywaydb/api/callback/FlywayCallback.html">FlywayCallback</a>
+                implementations to use to hook into the Flyway lifecycle.</td>
+        </tr>
         </tbody>
     </table>
 
@@ -66,6 +74,7 @@ subtitle: 'gradle flywayClean'
     user = 'SA'
     password = 'mySecretPwd'
     schemas = ['schema1', 'schema2', 'schema3']
+    callbacks = ['com.mycompany.project.CustomCallback', 'com.mycompany.project.AnotherCallback']
 }</pre>
 
     <h2>Sample output</h2>
@@ -73,4 +82,8 @@ subtitle: 'gradle flywayClean'
     <pre class="console">&gt; gradle flywayClean -i
 
 Cleaned database schema 'PUBLIC' (execution time 00:00.016s)</pre>
+
+    <p class="next-steps">
+        <a class="btn btn-primary" href="/documentation/gradle/info.html">Gradle: info <i class="fa fa-arrow-right"></i></a>
+    </p>
 </div>

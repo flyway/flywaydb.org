@@ -1,7 +1,7 @@
 ---
 layout: commandLine
 pill: overview
-subtitle: Command Line
+subtitle: Command-line
 ---
 <div id="commandLine">
     <h1>Command-line tool</h1>
@@ -9,11 +9,11 @@ subtitle: Command Line
     <p>The Flyway command-line tool is meant for users who
     <ul>
         <li>do not run their applications on the JVM</li>
-        <li>wish to migration their database from the command-line without having to install Maven or Ant</li>
+        <li>wish to migrate their database from the command-line without having to install a build tool</li>
     </ul>
 
     <h2>Usage</h2>
-    <pre class="prettyprint">flyway [options] command</pre>
+    <pre class="console">flyway [options] command</pre>
 
     <h2>Commands</h2>
     <table class="table table-bordered table-hover">
@@ -25,28 +25,28 @@ subtitle: Command Line
         </thead>
         <tbody>
         <tr>
-            <td><a href="/documentation/commandline/clean.html">clean</a></td>
-            <td>Drops all objects in the configured schemas</td>
-        </tr>
-        <tr>
-            <td><a href="/documentation/commandline/init.html">init</a></td>
-            <td>Creates and initializes the metadata table</td>
-        </tr>
-        <tr>
             <td><a href="/documentation/commandline/migrate.html">migrate</a></td>
             <td>Migrates the database</td>
         </tr>
         <tr>
-            <td><a href="/documentation/commandline/validate.html">validate</a></td>
-            <td>Validates the applied migrations against the ones available on the classpath</td>
+            <td><a href="/documentation/commandline/clean.html">clean</a></td>
+            <td>Drops all objects in the configured schemas</td>
         </tr>
         <tr>
             <td><a href="/documentation/commandline/info.html">info</a></td>
             <td>Prints the details and status information about all the migrations</td>
         </tr>
         <tr>
+            <td><a href="/documentation/commandline/validate.html">validate</a></td>
+            <td>Validates the applied migrations against the ones available on the classpath</td>
+        </tr>
+        <tr>
+            <td><a href="/documentation/commandline/init.html">init</a></td>
+            <td>Creates and initializes the metadata table (existing database)</td>
+        </tr>
+        <tr>
             <td><a href="/documentation/commandline/repair.html">repair</a></td>
-            <td>Repairs the metadata table after a failed migration</td>
+            <td>Repairs the metadata table</td>
         </tr>
         </tbody>
     </table>
@@ -56,10 +56,10 @@ subtitle: Command Line
     <p>The Flyway Command-line tool can be configured in the following ways:</p>
 
     <h3>Configuration file</h3>
+    <p>By default, the configuration will be read from <code>conf/flyway.properties</code></p>
     <pre class="prettyprint">flyway.user=myuser
 flyway.schemas=schema1,schema2
 flyway.placeholders.keyABC=valueXYZ</pre>
-    <p>By default, the configuration will be read from <strong>conf/flyway.properties</strong>.</p>
 
     <p>To use an alternative
         configuration file use -configFile=myAlternativeConfig.properties<br/>To use an alternative
@@ -67,7 +67,7 @@ flyway.placeholders.keyABC=valueXYZ</pre>
     </p>
 
     <h3>Command-line parameters</h3>
-    <pre class="prettyprint">flyway -user=myuser -schemas=schema1,schema2 -placeholders.keyABC=valueXYZ migrate</pre>
+    <pre class="console">flyway -user=myuser -schemas=schema1,schema2 -placeholders.keyABC=valueXYZ migrate</pre>
     <h3>Overriding order</h3>
 
     <p>Command-line parameters &gt; Configuration file</p>
@@ -79,5 +79,9 @@ flyway.placeholders.keyABC=valueXYZ</pre>
     <h2>Directory structure</h2>
 
     <p><img src="/assets/balsamiq/CommandLineDirectoryStructure.png" alt="directory structure"/></p>
+
+    <p class="next-steps">
+        <a class="btn btn-primary" href="/documentation/commandline/migrate.html">Command-line: migrate <i class="fa fa-arrow-right"></i></a>
+    </p>
 </div>
 

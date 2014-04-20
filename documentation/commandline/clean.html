@@ -1,10 +1,10 @@
 ---
 layout: commandLine
 pill: clean
-subtitle: 'Command Line : Clean'
+subtitle: 'Command-line: clean'
 ---
 <div id="commandLineClean">
-    <h1>Command Line: Clean</h1>
+    <h1>Command-line: clean</h1>
 
     <p>Drops all objects (tables, views, procedures, triggers, ...) in the configured schemas.<br/>
         The schemas are cleaned in the order specified by the <code>schemas</code> property.</p>
@@ -65,6 +65,14 @@ subtitle: 'Command Line : Clean'
             <td><nobr><i>&lt;install-dir&gt;</i>/jars</td>
             <td>The directory containing the JDBC driver</td>
         </tr>
+        <tr>
+            <td>callbacks</td>
+            <td>NO</td>
+            <td></td>
+            <td>Comma-separated list of fully qualified class names of
+                <a href="/documentation/api/javadoc/org/flywaydb/api/callback/FlywayCallback.html">FlywayCallback</a>
+                implementations to use to hook into the Flyway lifecycle.</td>
+        </tr>
         </tbody>
     </table>
 
@@ -73,7 +81,8 @@ subtitle: 'Command Line : Clean'
 flyway.url=jdbc:hsqldb:file:/db/flyway_sample
 flyway.user=SA
 flyway.password=mySecretPwd
-flyway.schemas=schema1,schema2,schema3</pre>
+flyway.schemas=schema1,schema2,schema3
+flyway.callbacks=com.mycompany.project.CustomCallback,com.mycompany.project.AnotherCallback</pre>
 
     <h2>Sample output</h2>
     <pre class="console">&gt; flyway clean
@@ -81,4 +90,8 @@ flyway.schemas=schema1,schema2,schema3</pre>
 Flyway (Command-line Tool) v.{{ site.flywayVersion }}
 
 Cleaned database schema 'PUBLIC' (execution time 00:00.014s)</pre>
+
+    <p class="next-steps">
+        <a class="btn btn-primary" href="/documentation/commandline/info.html">Command-line: info <i class="fa fa-arrow-right"></i></a>
+    </p>
 </div>

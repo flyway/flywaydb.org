@@ -10,26 +10,30 @@
 }
 
 #big-sell {
-    min-height: 400px;
+    min-height: 750px;
     text-align: center;
-    background: #7db9e8;
-    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPHJhZGlhbEdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzUlIj4KICAgIDxzdG9wIG9mZnNldD0iMzAlIiBzdG9wLWNvbG9yPSIjN2RiOWU4IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNzIlIiBzdG9wLWNvbG9yPSIjMjA3Y2NhIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFlNTc5OSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9yYWRpYWxHcmFkaWVudD4KICA8cmVjdCB4PSItNTAiIHk9Ii01MCIgd2lkdGg9IjEwMSIgaGVpZ2h0PSIxMDEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
-    background: -moz-radial-gradient(center, ellipse cover, #7db9e8 30%, #207cca 72%, #1e5799 100%);
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(30%, #7db9e8), color-stop(72%, #207cca), color-stop(100%, #1e5799));
-    background: -webkit-radial-gradient(center, ellipse cover, #7db9e8 30%, #207cca 72%, #1e5799 100%);
-    background: -o-radial-gradient(center, ellipse cover, #7db9e8 30%, #207cca 72%, #1e5799 100%);
-    background: -ms-radial-gradient(center, ellipse cover, #7db9e8 30%, #207cca 72%, #1e5799 100%);
-    background: radial-gradient(ellipse at center, #7db9e8 30%, #207cca 72%, #1e5799 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7db9e8', endColorstr='#1e5799', GradientType=1);
-    border-radius: 10px;
+    background: #f0f0f0;
+    width: 100% !important;
+    margin-top: -60px;
+    padding-top: 60px;
+    margin-bottom: 50px;
+    font-size: 12px;
 }
 
 #big-sell div {
-    margin-top: 50px;
-    font-size: 44px;
-    color: white;
+    color: #555555;
+}
+
+.strong-heading {
     font-weight: bold;
+    font-size: 32px;
+    color: #555555;
+    text-align: center;
     line-height: 150%;
+}
+
+#big-sell #tagline {
+    margin-top: 40px;
 }
 
 #big-sell #details a {
@@ -38,13 +42,18 @@
 }
 
 #big-sell p#links {
-    font-size: 12px;
+    padding-top: 30px;
     line-height: 100%;
     display: block;
 }
-
-#big-sell p#links a {
-    color: #DDDDDD;
+#big-sell p#worksOn i {
+    font-size: 16px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+#big-sell p#news {
+    display: block;
+    margin-top: -5px;
 }
 
 .btn-jumbo {
@@ -54,20 +63,46 @@
     border-radius: 6px;
 }
 
-#social-buttons table {
-    margin: auto;
-}
-
-#social-buttons td {
+#social i {
+    font-size: 28px;
+    padding-top: 40px;
     padding-left: 10px;
     padding-right: 10px;
-    padding-top: 20px;
-    width: 180px;
 }
 
-#news {
-    font-size: 12px;
-    margin-top: 20px;
+#social a:hover i {
+    color: #0088cc !important;
+}
+
+#tagline-long {
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+#top3 {
+    text-align: center;
+}
+
+#top3 i {
+    font-size: 120px;
+    margin-bottom: 20px;
+}
+
+#top3 p {
+}
+
+#top3details {
+    line-height: 150%;
+    font-size: 18px;
+}
+
+#top3buttons {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+#top3buttons i {
+    color: #555555;
 }
 
 hr.soften {
@@ -78,6 +113,41 @@ hr.soften {
     background-image: -ms-linear-gradient(left, transparent, rgba(0, 0, 0, .1), transparent);
     background-image: -o-linear-gradient(left, transparent, rgba(0, 0, 0, .1), transparent);
     border: 0;
+}
+
+#upAndRunningBg {
+    margin-top: 100px;
+    height: 130px;
+    width: 100%;
+    background: #f0f0f0;
+}
+
+#upAndRunning {
+    margin-top: -150px;
+    margin-bottom: 150px;
+}
+
+#upAndRunningLeft {
+    line-height: 150%;
+    padding-top: 30px;
+    margin-left: 10px;
+}
+
+#upAndRunningLeft span {
+    font-size: 48px;
+    color: #0088cc;
+    display: inline-block;
+    margin-top: 10px;
+    vertical-align: bottom;
+}
+
+#upAndRunningRight {
+    margin-top: -10px;
+    background: #ffffff;
+    padding: 10px;
+    margin-right: -22px;
+    border: 1px #CCCCCC solid;
+    border-radius: 10px;
 }
 
 .marketing .row {
@@ -114,6 +184,12 @@ hr.soften {
     font-weight: bold;
     line-height: 150%;
     font-size: 16px;
+}
+
+.marketing .marketing-item i {
+    color: #000000;
+    font-size: 28px;
+    vertical-align: bottom;
 }
 
 #databases .row .marketing-item {
@@ -156,6 +232,10 @@ hr.soften {
     text-align: center;
 }
 
+.next-steps {
+    margin-top: 50px;
+}
+
 .next-steps a {
     margin-right: 20px;
 }
@@ -164,6 +244,7 @@ hr.soften {
     text-align: center;
     color: #AAAAAA;
     font-size: 10px;
+    line-height: 120%;
 }
 
 #footer #intellij {
@@ -242,6 +323,10 @@ i {
 .btn i {
     color: #ffffff;
     padding-left: 10px;
+}
+
+#apiJavadoc iframe {
+    width: 100%;
 }
 
 .blog-post-date {

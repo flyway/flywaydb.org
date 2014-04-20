@@ -3,104 +3,97 @@ layout: default
 tab: home
 ---
 <div id="big-sell">
-    <div class="row">
-        <div class="span6">
-            <p>
-                <span>The agile database migration framework for Java</span>
-            </p>
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+                <img src="assets/logo/flyway-logo-transparent-300.png" alt="Flyway"/>
+                <p id="tagline" class="strong-heading">
+                    <span>Database Migrations<br/>Made Easy.</span>
+                </p>
 
-            <p>
-                <a class="btn btn-primary btn-large btn-jumbo" href="/getstarted">Get Started with Flyway
-                    {{site.flywayVersion}} <i class="icon-arrow-right"></i></a><br/>
-            </p>
+                <p>
+                    <a class="btn btn-primary btn-large btn-jumbo" href="/getstarted">Get Started with Flyway
+                        {{site.flywayVersion}} <i class="fa fa-arrow-right"></i></a><br/>
+                </p>
 
-            <p id="links">
-                <a href="/getstarted/download.html">Download</a> -
-                <a href="/documentation/releaseNotes.html">Release Notes</a> -
-                <a href="http://github.com/flyway/flyway">Source</a>
-            </p>
-        </div>
-        <div class="span6">
-            <img src="assets/logo/flyway-logo-transparent-300-clean.png" alt="Flyway"/>
+                <p id="links">
+                    <a href="/getstarted/download.html">Download</a> -
+                    <a href="/documentation/releaseNotes.html">Release Notes</a>
+                </p>
+
+                <p id="worksOn">
+                    Works on:
+                    <i class="fa fa-coffee" title="Java"></i>
+                    <i class="fa fa-android" title="Android"></i>
+                    <i class="fa fa-windows" title="Windows"></i>
+                    <i class="fa fa-apple" title="Mac OSX"></i>
+                    <i class="fa fa-linux" title="Linux"></i>
+                </p>
+
+                <p id="news">
+                    {% assign post = site.posts | first %}
+                    <strong>Latest News:</strong> <a href="{{ post.permalink }}">{{ post.subtitle | xml_escape }} ({{ post.date | date: "%Y-%m-%d" }})</a>
+                </p>
+
+                <p id="social">
+                    <a href="https://twitter.com/flywaydb"><i class="fa fa-twitter"></i></a>
+                    <a href="https://github.com/flyway/flyway"><i class="fa fa-github"></i></a>
+                    <a href="http://stackoverflow.com/questions/tagged/flyway"><i class="fa fa-stack-overflow"></i></a>
+                </p>
+            </div>
         </div>
     </div>
 </div>
-<div id="social-buttons">
-    <table>
-        <tr>
-            <td>
-                <a href="https://twitter.com/flywaydb" class="twitter-follow-button" data-show-count="true"
-                   data-dnt="true"></a>
-                <script>!function (d, s, id) {
-                    var js, fjs = d.getElementsByTagName(s)[0];
-                    if (!d.getElementById(id)) {
-                        js = d.createElement(s);
-                        js.id = id;
-                        js.src = "http://platform.twitter.com/widgets.js";
-                        fjs.parentNode.insertBefore(js, fjs);
-                    }
-                }(document, "script", "twitter-wjs");</script>
-            </td>
-            <td>
-                <a href="https://twitter.com/share" class="twitter-share-button"
-                   data-url="http://flywaydb.org"
-                   data-text="Check out @flywaydb, the agile #database migration framework for #Java"></a>
-                <script>!function (d, s, id) {
-                    var js, fjs = d.getElementsByTagName(s)[0];
-                    if (!d.getElementById(id)) {
-                        js = d.createElement(s);
-                        js.id = id;
-                        js.src = "http://platform.twitter.com/widgets.js";
-                        fjs.parentNode.insertBefore(js, fjs);
-                    }
-                }(document, "script", "twitter-wjs");</script>
-            </td>
-            <td>
-                <iframe width="85" height="20"
-                        src="http://ghbtns.com/github-btn.html?user=flyway&repo=flyway&type=watch&count=true"
-                        frameborder="0" scrolling="0" allowtransparency="true">
-                </iframe>
-            </td>
-            <td>
-                <div id="fb-root"></div>
-                <div class="fb-like" data-href="http://flywaydb.org" data-send="false" data-layout="button_count"
-                     data-width="100" data-show-faces="true"></div>
-                <script>(function (d, s, id) {
-                    var js, fjs = d.getElementsByTagName(s)[0];
-                    if (d.getElementById(id)) return;
-                    js = d.createElement(s);
-                    js.id = id;
-                    js.src = "http://connect.facebook.net/en_US/all.js#xfbml=1&appId=432044496836765";
-                    fjs.parentNode.insertBefore(js, fjs);
-                }(document, 'script', 'facebook-jssdk'));</script>
-            </td>
-            <td>
-                <g:plusone size="medium" href="http://flywaydb.org"></g:plusone>
-                <script type="text/javascript">
-                    (function () {
-                        var po = document.createElement('script');
-                        po.type = 'text/javascript';
-                        po.async = true;
-                        po.src = 'https://apis.google.com/js/plusone.js';
-                        var s = document.getElementsByTagName('script')[0];
-                        s.parentNode.insertBefore(po, s);
-                    })();
-                </script>
-            </td>
-            <td>
-                <script src="http://platform.linkedin.com/in.js" type="text/javascript"></script>
-                <script type="IN/Share" data-url="http://flywaydb.org" data-counter="right"></script>
-            </td>
-        </tr>
-    </table>
+<div class="container">
+<div id="tagline-long"class="strong-heading">
+    Evolve your database schema easily and reliably<br/>across all your instances.
 </div>
-<div id="news">
-    {% assign post = site.posts | first %}
-    <div class="well well-small"><strong>Latest News:</strong> <a href="{{ post.permalink }}">{{ post.subtitle | xml_escape }} ({{ post.date | date: "%Y-%m-%d" }})</a></div>
+<div id="top3" class="row">
+    <div class="span4">
+        <i class="fa fa-thumbs-up"></i>
+        <p class="strong-heading">Simple</p>
+    </div>
+    <div class="span4">
+        <i class="fa fa-crosshairs"></i>
+        <p class="strong-heading">Focused</p>
+    </div>
+    <div class="span4">
+        <i class="fa fa-rocket"></i>
+        <p class="strong-heading">Powerful</p>
+    </div>
 </div>
-<hr class="soften"/>
-{% include getstarted.html %}
-<hr class="soften"/>
+<div id="top3details" class="row">
+    <div class="span4">
+        <p>Easy to setup, simple to master. Flyway let's you regain control of your database migrations with pleasure and plain sql.</p>
+    </div>
+    <div class="span4">
+        <p>Solves only one problem and solves it well. Flyway migrates your database, so you don't have to worry about it anymore.</p>
+    </div>
+    <div class="span4">
+        <p>Made for continuous delivery. Let Flyway migrate your database on application startup. Releases have never been this easy.</p>
+    </div>
+</div>
+<div id="top3buttons" class="row">
+    <div class="span4">
+        <a class="btn" href="/getstarted/whyDatabaseMigrations.html">Why database migrations? <i class="fa fa-arrow-right"></i></a>
+    </div>
+    <div class="span4">
+        <a class="btn" href="/getstarted/howFlywayWorks.html">How does Flyway work? <i class="fa fa-arrow-right"></i></a>
+    </div>
+    <div class="span4">
+        <a class="btn" href="/getstarted">Get started <i class="fa fa-arrow-right"></i></a>
+    </div>
+</div>
+</div>
+
+<div id="upAndRunningBg"></div>
+
+<div class="container">
+<div id="upAndRunning" class="row">
+    <div id="upAndRunningLeft" class="strong-heading span4">Get up and running in <span>5</span> minutes</div>
+    <div id="upAndRunningRight" class="span8">{% include getstarted.html %}</div>
+</div>
+
 <div class="marketing">
     <div class="marketing-section-head">It just works. Refreshingly simple.</div>
 
@@ -110,49 +103,37 @@ tab: home
 
     <div class="row">
         <div class="span4">
-            <img src="assets/glyphicons/glyphicons_036_file.png"/>
-
-            <div class="marketing-item">Plain Old Sql</div>
+            <div class="marketing-item"><i class="fa fa-file"></i> Plain Old Sql</div>
 
             <p><a href="/documentation/migration/sql.html">Plain SQL scripts</a> (incl. placeholder replacement). No
                 proprietary XML formats, no lock-in.</p>
         </div>
         <div class="span4">
-            <img src="assets/glyphicons/glyphicons_074_cup.png"/>
-
-            <div class="marketing-item">No limits</div>
+            <div class="marketing-item"><i class="fa fa-trophy"></i> No limits</div>
 
             <p><a href="/documentation/migration/java.html">Java-based migrations</a> for advanced data
                 transformations and handling with LOBs</p>
         </div>
         <div class="span4">
-            <img src="assets/glyphicons/glyphicons_189_brightness_increase.png" class=""/>
+            <div class="marketing-item"><i class="fa fa-check-circle-o"></i> Zero required dependencies</div>
 
-            <div class="marketing-item">Zero required dependencies</div>
-
-            <p>All you need is Java 5+ and your Jdbc driver and you're good to go!</p>
+            <p>All you need is Java 6+ and your Jdbc driver and you're good to go!</p>
         </div>
     </div>
     <div class="row">
         <div class="span4">
-            <img src="assets/glyphicons/glyphicons_009_magic.png"/>
-
-            <div class="marketing-item">Convention Over Configuration</div>
+            <div class="marketing-item"><i class="fa fa-magic"></i> Convention Over Configuration</div>
 
             <p>Classpath Scanning to automatically discover Sql and Java migrations</p>
         </div>
         <div class="span4">
-            <img src="assets/glyphicons/glyphicons_332_certificate.png"/>
-
-            <div class="marketing-item">Highly reliable</div>
+            <div class="marketing-item"><i class="fa fa-shield"></i> Highly reliable</div>
 
             <p><a href="/documentation/faq.html#parallel">Safe for cluster
                 environments</a> (Multiple machines can migrate in parallel)</p>
         </div>
         <div class="span4">
-            <img src="assets/glyphicons/glyphicons_232_cloud.png" class=""/>
-
-            <div class="marketing-item">Cloud support</div>
+            <div class="marketing-item"><i class="fa fa-cloud"></i> Cloud support</div>
 
             <p>Full support for <a
                     href="/documentation/database/sqlazure.html">Microsoft SQL Azure</a>, <a
@@ -161,17 +142,13 @@ tab: home
     </div>
     <div class="row">
         <div class="span4">
-            <img src="assets/glyphicons/glyphicons_026_road.png"/>
+            <div class="marketing-item"><i class="fa fa-road"></i> Auto-migration on startup</div>
 
-            <div class="marketing-item">Auto-migration on startup</div>
-
-            <p><a href="/documentation/api.html">Ship migrations together with the application</a> and run them
+            <p><a href="/documentation/api/index.html">Ship migrations together with the application</a> and run them
                 automatically on startup using the API</p>
         </div>
         <div class="span4">
-            <img src="assets/glyphicons/glyphicons_078_warning_sign.png"/>
-
-            <div class="marketing-item">Fail fast</div>
+            <div class="marketing-item"><i class="fa fa-warning"></i> Fail fast</div>
 
             <p>Inconsistent database or failed migration prevents app from starting.</p>
         </div>
@@ -218,16 +195,16 @@ tab: home
         <div class="span4">
             <img src="/assets/glyphicons/glyphicons_141_database_plus.png"/>
 
-            <div class="marketing-item"><a href="/documentation/database/db2.html">DB2</a></div>
+            <div class="marketing-item"><a href="/documentation/database/mysql.html">MySQL</a></div>
 
-            <p>9.7 and later</p>
+            <p>5.1 and later (incl. Amazon RDS)</p>
         </div>
         <div class="span4">
             <img src="/assets/glyphicons/glyphicons_141_database_plus.png"/>
 
-            <div class="marketing-item"><a href="/documentation/database/mysql.html">MySQL</a></div>
+            <div class="marketing-item"><a href="/documentation/database/mariadb.html">MariaDB</a></div>
 
-            <p>5.1 and later</p>
+            <p>10.0 and later</p>
         </div>
         <div class="span4">
             <img src="/assets/glyphicons/glyphicons_141_database_plus.png"/>
@@ -244,7 +221,7 @@ tab: home
 
             <div class="marketing-item"><a href="/documentation/database/postgresql.html">PostgreSQL</a></div>
 
-            <p>9.0 and later</p>
+            <p>9.0 and later (incl. Heroku &amp; Amazon RDS)</p>
         </div>
         <div class="span4">
             <img src="/assets/glyphicons/glyphicons_141_database_plus.png"/>
@@ -265,9 +242,23 @@ tab: home
         <div class="span4">
             <img src="/assets/glyphicons/glyphicons_141_database_plus.png"/>
 
+            <div class="marketing-item"><a href="/documentation/database/db2.html">DB2</a></div>
+
+            <p>9.7 and later</p>
+        </div>
+        <div class="span4">
+            <img src="/assets/glyphicons/glyphicons_141_database_plus.png"/>
+
             <div class="marketing-item"><a href="/documentation/database/derby.html">Derby</a></div>
 
             <p>10.8.2.2 and later</p>
+        </div>
+        <div class="span4">
+            <img src="/assets/glyphicons/glyphicons_141_database_plus.png"/>
+
+            <div class="marketing-item"><a href="/documentation/database/sqlite.html">SQLite</a></div>
+
+            <p>3.7.2 and later</p>
         </div>
     </div>
 </div>
@@ -298,63 +289,63 @@ tab: home
 </tr>
 <tr>
     <td><a href="/documentation/migration/sql.html">Plain Old Sql migrations</a></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i><sup>1</sup></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i><sup>1</sup></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
 </tr>
 <tr>
     <td><a href="/documentation/migration/java.html">Java migrations</a></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i><sup>1</sup></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i><sup>1</sup></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
 </tr>
 <tr>
     <td>Groovy migrations</td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
 </tr>
 <tr>
     <td>Xml migrations</td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
 </tr>
 <tr>
     <td>DDL abstraction DSL</td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
 </tr>
 <tr>
     <td><h3>Execution</h3></td>
@@ -362,76 +353,88 @@ tab: home
     <td colspan="8"></td>
 </tr>
 <tr>
-    <td><a href="/documentation/api.html">API</a></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
+    <td><a href="/documentation/commandline/index.html">Command-line</a></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
 </tr>
 <tr>
-    <td><a href="/documentation/commandline/index.html">Command-line</a></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
+    <td><a href="/documentation/api/index.html">API (Java)</a></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+</tr>
+<tr>
+    <td><a href="/documentation/api/index.html">API (Android)</a></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
 </tr>
 <tr>
     <td><a href="/documentation/maven/index.html">Maven</a></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
 </tr>
 <tr>
     <td><a href="/documentation/gradle/index.html">Gradle</a></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i><sup>2</sup></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ok" title="yes"></i><sup>2</sup></td>
-    <td><i class="icon-ok" title="yes"></i><sup>2</sup></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i><sup>2</sup></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-check" title="yes"></i><sup>2</sup></td>
+    <td><i class="fa fa-check" title="yes"></i><sup>2</sup></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
 </tr>
 <tr>
     <td><a href="/documentation/ant/index.html">Ant</a></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
 </tr>
 <tr>
     <td><a href="/documentation/sbt/index.html">SBT</a></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i><sup>2</sup></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ok" title="yes"></i><sup>2</sup></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i><sup>2</sup></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-check" title="yes"></i><sup>2</sup></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
 </tr>
 <tr>
     <td><h3>Databases</h3></td>
@@ -440,99 +443,111 @@ tab: home
 </tr>
 <tr>
     <td><a href="/documentation/database/oracle.html">Oracle</a></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
 </tr>
 <tr>
     <td><a href="/documentation/database/sqlserver.html">SQL Server</a></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
 </tr>
 <tr>
     <td><a href="/documentation/database/db2.html">DB2</a></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
 </tr>
 <tr>
     <td><a href="/documentation/database/mysql.html">MySQL</a></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
 </tr>
 <tr>
     <td><a href="/documentation/database/postgresql.html">PostgreSQL</a></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
 </tr>
 <tr>
     <td><a href="/documentation/database/h2.html">H2</a></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
 </tr>
 <tr>
     <td><a href="/documentation/database/hsql.html">Hsql</a></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
 </tr>
 <tr>
     <td><a href="/documentation/database/derby.html">Derby</a></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+</tr>
+<tr>
+    <td><a href="/documentation/database/sqlite.html">SQLite</a></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
 </tr>
 <tr>
     <td><h3>Sql Parser</h3></td>
@@ -541,63 +556,63 @@ tab: home
 </tr>
 <tr>
     <td><a href="/documentation/database/oracle.html">Oracle PL/SQL</a></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i><sup>3</sup></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i><sup>3</sup></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
 </tr>
 <tr>
     <td><a href="/documentation/database/sqlserver.html">SQL Server T-SQL</a></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i><sup>3</sup></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i><sup>3</sup></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
 </tr>
 <tr>
     <td><a href="/documentation/database/db2.html">DB2 SQL PL</a></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i><sup>3</sup></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i><sup>3</sup></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
 </tr>
 <tr>
     <td><a href="/documentation/database/mysql.html">MySQL stored procedures</a></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i><sup>3</sup></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i><sup>4</sup></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i><sup>3</sup></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i><sup>4</sup></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
 </tr>
 <tr>
     <td><a href="/documentation/database/postgresql.html">PostgreSQL stored procedures</a></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i><sup>3</sup></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i><sup>3</sup></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
 </tr>
 <tr>
     <td><h3>Other</h3></td>
@@ -606,111 +621,111 @@ tab: home
 </tr>
 <tr>
     <td>Auto creation of schema</td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
 </tr>
 <tr>
     <td><a href="/documentation/maven/init.html">Auto creation of metadata table</a></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
 </tr>
 <tr>
     <td><a href="/documentation/faq.html#parallel">Cluster-safe</a></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
 </tr>
 <tr>
     <td><a href="/documentation/maven/validate.html">Checksum validation</a></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
 </tr>
 <tr>
     <td><a href="/documentation/faq.html#placeholders">Placeholder replacement</a></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
 </tr>
 <tr>
     <td><a href="/documentation/faq.html#multiple-schemas">Multiple schema support</a></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
 </tr>
 <tr>
     <td><a href="/documentation/maven/clean.html">Clean existing schema</a></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
 </tr>
 <tr>
     <td>Output to SQL file</td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
 </tr>
 <tr>
     <td><a href="http://repo1.maven.org/maven2/com/googlecode/flyway">Available on Maven Central</a></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
-    <td><i class="icon-ok" title="yes"></i></td>
-    <td><i class="icon-ban-circle" title="no"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
 </tr>
 <tr>
     <td>License</td>
@@ -743,4 +758,5 @@ tab: home
         <a class="btn btn-large" href="/getstarted/firststeps/api.html">First steps</a>
         <a class="btn btn-large" href="/getstarted/download.html">Download</a>
     </p>
+</div>
 </div>

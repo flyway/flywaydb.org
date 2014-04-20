@@ -1,10 +1,10 @@
 ---
 layout: commandLine
 pill: info
-subtitle: 'Command Line : Info'
+subtitle: 'Command-line: info'
 ---
 <div id="commandLineInfo">
-    <h1>Command Line: Info</h1>
+    <h1>Command-line: info</h1>
 
     <p>Prints the details and status information about all the migrations.</p>
 
@@ -80,7 +80,7 @@ subtitle: 'Command Line : Info'
         <tr>
             <td>jarDir</td>
             <td>NO</td>
-            <td><nobr><i>&lt;install-dir&gt;</i>/jars</td>
+            <td><nobr><i>&lt;install-dir&gt;</i>/jars</nobr></td>
             <td>The directory containing the JDBC driver and the Java-based migrations</td>
         </tr>
         <tr>
@@ -88,6 +88,12 @@ subtitle: 'Command Line : Info'
             <td>NO</td>
             <td>V</td>
             <td>The file name prefix for Sql migrations</td>
+        </tr>
+        <tr>
+            <td>sqlMigrationSeparator</td>
+            <td>NO</td>
+            <td>__</td>
+            <td>The file name separator for Sql migrations</td>
         </tr>
         <tr>
             <td>sqlMigrationSuffix</td>
@@ -121,6 +127,22 @@ subtitle: 'Command Line : Info'
             <td>The suffix of every placeholder</td>
         </tr>
         <tr>
+            <td>resolvers</td>
+            <td>NO</td>
+            <td></td>
+            <td>Comma-separated list of fully qualified class names of custom
+                <a href="/documentation/api/javadoc/org/flywaydb/api/resolver/MigrationResolver.html">MigrationResolver</a>
+                implementations to be used in addition to the built-in ones for resolving Migrations to apply.</td>
+        </tr>
+        <tr>
+            <td>callbacks</td>
+            <td>NO</td>
+            <td></td>
+            <td>Comma-separated list of fully qualified class names of
+                <a href="/documentation/api/javadoc/org/flywaydb/api/callback/FlywayCallback.html">FlywayCallback</a>
+                implementations to use to hook into the Flyway lifecycle.</td>
+        </tr>
+        <tr>
             <td>target</td>
             <td>NO</td>
             <td><i>latest version</i></td>
@@ -147,14 +169,17 @@ flyway.user=SA
 flyway.password=mySecretPwd
 flyway.schemas=schema1,schema2,schema3
 flyway.table=schema_history
-flyway.locations=classpath:com.mycompany.project.migration,database/migrations,filesystem:/sql-migrations
+flyway.locations=classpath:com.mycompany.migration,database/migrations,filesystem:/sql-migrations
 flyway.sqlMigrationPrefix=Migration-
+flyway.sqlMigrationSeparator=__
 flyway.sqlMigrationSuffix=-OK.sql
 flyway.encoding=ISO-8859-1
 flyway.placeholders.aplaceholder=value
 flyway.placeholders.otherplaceholder=value123
 flyway.placeholderPrefix=#[
 flyway.placeholderSuffix=]
+flyway.resolvers=com.mycompany.project.CustomResolver,com.mycompany.project.AnotherResolver
+flyway.callbacks=com.mycompany.project.CustomCallback,com.mycompany.project.AnotherCallback
 flyway.target=5.1
 flyway.outOfOrder=false</pre>
 
@@ -170,4 +195,8 @@ Flyway (Command-line Tool) v.{{ site.flywayVersion }}
 | 1.1         | Populate table         |                     | Pending |
 | 1.3         | And his brother        |                     | Pending |
 +-------------+------------------------+---------------------+---------+</pre>
+
+    <p class="next-steps">
+        <a class="btn btn-primary" href="/documentation/commandline/validate.html">Command-line: validate <i class="fa fa-arrow-right"></i></a>
+    </p>
 </div>

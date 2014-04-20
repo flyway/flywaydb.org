@@ -92,6 +92,12 @@ subtitle: 'mvn flyway:info'
             <td>The file name prefix for Sql migrations</td>
         </tr>
         <tr>
+            <td>sqlMigrationSeparator</td>
+            <td>NO</td>
+            <td>__</td>
+            <td>The file name separator for Sql migrations</td>
+        </tr>
+        <tr>
             <td>sqlMigrationSuffix</td>
             <td>NO</td>
             <td>.sql</td>
@@ -122,6 +128,22 @@ subtitle: 'mvn flyway:info'
             <td>The suffix of every placeholder</td>
         </tr>
         <tr>
+            <td>resolvers</td>
+            <td>NO</td>
+            <td></td>
+            <td>Fully qualified class names of custom
+                <a href="/documentation/api/javadoc/org/flywaydb/api/resolver/MigrationResolver.html">MigrationResolver</a>
+                implementations to be used in addition to the built-in ones for resolving Migrations to apply.</td>
+        </tr>
+        <tr>
+            <td>callbacks</td>
+            <td>NO</td>
+            <td></td>
+            <td>Fully qualified class names of
+                <a href="/documentation/api/javadoc/org/flywaydb/api/callback/FlywayCallback.html">FlywayCallback</a>
+                implementations to use to hook into the Flyway lifecycle.</td>
+        </tr>
+        <tr>
             <td>target</td>
             <td>NO</td>
             <td><i>latest version</i></td>
@@ -144,6 +166,14 @@ subtitle: 'mvn flyway:info'
             <td>false</td>
             <td>Skips the execution of the plugin for this module</td>
         </tr>
+        <tr>
+            <td>configFile</td>
+            <td>NO</td>
+            <td>flyway.properties</td>
+            <td>Properties file from which to load the Flyway configuration. The names of the individual properties match the ones you would
+                use as Maven or System properties. The encoding of the file must be the same as the encoding defined with the
+                flyway.encoding property, which is UTF-8 by default. Relative paths are relative to the POM.</td>
+        </tr>
         </tbody>
     </table>
 
@@ -165,6 +195,7 @@ subtitle: 'mvn flyway:info'
         &lt;location&gt;filesystem:/sql-migrations&lt;/location&gt;
     &lt;/locations&gt;
     &lt;sqlMigrationPrefix&gt;Migration-&lt;/sqlMigrationPrefix&gt;
+    &lt;sqlMigrationSeparator&gt;__&lt;/sqlMigrationSeparator&gt;
     &lt;sqlMigrationSuffix&gt;-OK.sql&lt;/sqlMigrationSuffix&gt;
     &lt;encoding&gt;ISO-8859-1&lt;/encoding&gt;
     &lt;placeholders&gt;
@@ -173,9 +204,18 @@ subtitle: 'mvn flyway:info'
     &lt;/placeholders&gt;
     &lt;placeholderPrefix&gt;#[&lt;/placeholderPrefix&gt;
     &lt;placeholderSuffix&gt;]&lt;/placeholderSuffix&gt;
+    &lt;resolvers&gt;
+        &lt;resolver&gt;com.mycompany.project.CustomResolver&lt;/resolver&gt;
+        &lt;resolver&gt;com.mycompany.project.AnotherResolver&lt;/resolver&gt;
+    &lt;/resolvers&gt;
+    &lt;callbacks&gt;
+        &lt;callback&gt;com.mycompany.project.CustomCallback&lt;/callback&gt;
+        &lt;callback&gt;com.mycompany.project.AnotherCallback&lt;/callback&gt;
+    &lt;/callbacks&gt;
     &lt;target&gt;1.1&lt;/target&gt;
     &lt;outOfOrder&gt;false&lt;/outOfOrder&gt;
     &lt;skip&gt;false&lt;/skip&gt;
+    &lt;configFile&gt;myConfig.properties&lt;/configFile&gt;
 &lt;/configuration&gt;</pre>
 
     <h2>Sample output</h2>
@@ -190,4 +230,8 @@ subtitle: 'mvn flyway:info'
 [INFO] | 1.2         | Another user           |                     | Pending |
 [INFO] | 1.3         | And his brother        |                     | Pending |
 [INFO] +-------------+------------------------+---------------------+---------+</pre>
+
+    <p class="next-steps">
+        <a class="btn btn-primary" href="/documentation/maven/validate.html">Maven: validate <i class="fa fa-arrow-right"></i></a>
+    </p>
 </div>

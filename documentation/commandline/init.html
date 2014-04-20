@@ -1,10 +1,10 @@
 ---
 layout: commandLine
 pill: init
-subtitle: 'Command Line : Init'
+subtitle: 'Command-line: init'
 ---
 <div id="commandLineInit">
-    <h1>Command Line: Init</h1>
+    <h1>Command-line: init</h1>
 
     <p>Creates and initializes the metadata table in the schema. </p>
 
@@ -75,6 +75,14 @@ subtitle: 'Command Line : Init'
             <td>The directory containing the JDBC driver</td>
         </tr>
         <tr>
+            <td>callbacks</td>
+            <td>NO</td>
+            <td></td>
+            <td>Comma-separated list of fully qualified class names of
+                <a href="/documentation/api/javadoc/org/flywaydb/api/callback/FlywayCallback.html">FlywayCallback</a>
+                implementations to use to hook into the Flyway lifecycle.</td>
+        </tr>
+        <tr>
             <td>initVersion</td>
             <td>NO</td>
             <td>1</td>
@@ -98,6 +106,7 @@ flyway.user=SA
 flyway.password=mySecretPwd
 flyway.schemas=schema1,schema2,schema3
 flyway.table=schema_history
+flyway.callbacks=com.mycompany.project.CustomCallback,com.mycompany.project.AnotherCallback
 flyway.initVersion=1.0
 flyway.initDescription=Base Migration</pre>
 
@@ -108,4 +117,8 @@ Flyway (Command-line Tool) v.{{ site.flywayVersion }}
 
 Creating Metadata table: "PUBLIC"."schema_version"
 Schema initialized with version: 0</pre>
+
+    <p class="next-steps">
+        <a class="btn btn-primary" href="/documentation/commandline/repair.html">Command-line: repair <i class="fa fa-arrow-right"></i></a>
+    </p>
 </div>

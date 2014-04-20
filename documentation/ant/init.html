@@ -68,6 +68,14 @@ subtitle: 'Ant Task: Init'
             </td>
         </tr>
         <tr>
+            <td>callbacks</td>
+            <td>NO</td>
+            <td></td>
+            <td>Fully qualified class names of
+                <a href="/documentation/api/javadoc/org/flywaydb/api/callback/FlywayCallback.html">FlywayCallback</a>
+                implementations to use to hook into the Flyway lifecycle.</td>
+        </tr>
+        <tr>
             <td>initVersion</td>
             <td>NO</td>
             <td>1</td>
@@ -107,10 +115,15 @@ subtitle: 'Ant Task: Init'
 &lt;property name=&quot;flyway.password&quot; value=&quot;mySecretPwd&quot;/&gt;
 &lt;property name=&quot;flyway.schemas&quot; value=&quot;schema1,schema2,schema3&quot;/&gt;
 &lt;property name=&quot;flyway.table&quot; value=&quot;schema_history&quot;/&gt;
+&lt;property name=&quot;flyway.callbacks&quot; value=&quot;com.mycompany.MyCallback,com.mycompany.OtherCallback&quot;/&gt;
 &lt;property name=&quot;flyway.initVersion&quot; value=&quot;1.0&quot;/&gt;
 &lt;property name=&quot;flyway.initDescription&quot; value=&quot;Base Migration&quot;/&gt;</pre>
 
     <h2>Sample output</h2>
     <pre class="console">[flyway:init] Creating Metadata table: schema_version (Schema: PUBLIC)
 [flyway:init] Schema initialized with version: 0</pre>
+
+    <p class="next-steps">
+        <a class="btn btn-primary" href="/documentation/ant/repair.html">Ant: repair <i class="fa fa-arrow-right"></i></a>
+    </p>
 </div>

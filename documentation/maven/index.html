@@ -9,7 +9,7 @@ subtitle: Maven Plugin
     <h2>Installation</h2>
 
     <pre class="prettyprint">&lt;plugin&gt;
-    &lt;groupId&gt;com.googlecode.flyway&lt;/groupId&gt;
+    &lt;groupId&gt;org.flywaydb&lt;/groupId&gt;
     &lt;artifactId&gt;flyway-maven-plugin&lt;/artifactId&gt;
     &lt;version&gt;{{ site.flywayVersion }}&lt;/version&gt;
     &lt;configuration&gt;
@@ -27,31 +27,28 @@ subtitle: Maven Plugin
         </thead>
         <tbody>
         <tr>
-            <td><a href="/documentation/maven/clean.html">clean</a></td>
-            <td>Drops all objects in the configured schemas</td>
-        </tr>
-        <tr>
-            <td><a href="/documentation/maven/init.html">init</a></td>
-            <td>Creates and initializes the metadata table</td>
-        </tr>
-        <tr>
             <td><a href="/documentation/maven/migrate.html">migrate</a></td>
             <td>Migrates the database</td>
         </tr>
         <tr>
-            <td><a href="/documentation/maven/validate.html">validate</a>
-            </td>
-            <td>Validates the applied migrations against the ones
-                available on the classpath
-            </td>
+            <td><a href="/documentation/maven/clean.html">clean</a></td>
+            <td>Drops all objects in the configured schemas</td>
         </tr>
         <tr>
             <td><a href="/documentation/maven/info.html">info</a></td>
             <td>Prints the details and status information about all the migrations</td>
         </tr>
         <tr>
+            <td><a href="/documentation/maven/validate.html">validate</a></td>
+            <td>Validates the applied migrations against the ones available on the classpath</td>
+        </tr>
+        <tr>
+            <td><a href="/documentation/maven/init.html">init</a></td>
+            <td>Creates and initializes the metadata table (existing database)</td>
+        </tr>
+        <tr>
             <td><a href="/documentation/maven/repair.html">repair</a></td>
-            <td>Repairs the metadata table after a failed migration</td>
+            <td>Repairs the metadata table</td>
         </tr>
         </tbody>
     </table>
@@ -100,11 +97,22 @@ subtitle: Maven Plugin
     ...
 &lt;/project&gt;</pre>
 
+    <h3>Through an external config file</h3>
+    <pre class="console">mvn -Dflyway.configFile=myConfig.properties</pre>
+    <p>Default is <code>flyway.properties</code> in the same directory as the POM.<br/>
+        Encoding is specified by <code>flyway.encoding</code> (Default: UTF-8)</p>
+
+    <pre class="prettyprint">flyway.user=myUser
+flyway.password=mySecretPwd
+flyway.schemas=schema1,schema2,schema3
+flyway.placeholders.keyABC=valueXYZ
+flyway.placeholders.otherplaceholder=value123</pre>
+
     <h3>Through System properties</h3>
-    <pre class="prettyprint">mvn -Dflyway.user=myUser -Dflyway.schemas=schema1,schema2 -Dflyway.placeholders.keyABC=valueXYZ</pre>
+    <pre class="console">mvn -Dflyway.user=myUser -Dflyway.schemas=schema1,schema2 -Dflyway.placeholders.keyABC=valueXYZ</pre>
 
     <h3>Overriding order</h3>
-    <p>System properties &gt; Maven properties &gt; Plugin configuration</p>
+    <p>System properties &gt; External config file &gt; Maven properties &gt; Plugin configuration</p>
 
     <h2>Authentication</h2>
 
@@ -122,4 +130,8 @@ subtitle: Maven Plugin
         &lt;/server&gt;
     &lt;/servers&gt;
 &lt;/settings&gt;</pre>
+
+    <p class="next-steps">
+        <a class="btn btn-primary" href="/documentation/maven/migrate.html">Maven: migrate <i class="fa fa-arrow-right"></i></a>
+    </p>
 </div>

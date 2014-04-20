@@ -1,8 +1,93 @@
 ---
 layout: documentation
 menu: overview
+title: Documentation
 ---
 <div id="documentation">
     <h1>Documentation</h1>
 
+    <p>Welcome to <strong>Flyway</strong>, database migrations made easy.</p>
+
+    <div class="well well-small">
+        <strong>Tip:</strong>
+        If you haven't checked out the <a href="/getstarted">Get Started</a> section yet, do it now. It'll get you up
+        and running in no time.
+    </div>
+
+    <p class="center"><img src="/assets/logo/flyway-logo-transparent-300.png" alt="Logo"/></p>
+
+    <p>Flyway is an open-source database migration tool. It strongly favors simplicity and convention over
+        configuration.</p>
+
+    <p>It has a <a href="/documentation/api">Java API</a> (also works on Android) for migrating the database on
+        application startup.
+        Alternatively, you can also use the <a href="/documentation/maven">Maven plugin</a>,
+        <a href="/documentation/gradle">Gradle plugin</a>,
+        <a href="/documentation/sbt">SBT plugin</a>,
+        <a href="/documentation/ant">Ant tasks</a>
+        or the <a href="/documentation/commandline">Command-line client</a>.</p>
+
+    <p>And if that not enough, there are <a href="/documentation/pluginsThirdParty.html">third party plugins</a>
+        available for Grails, Play, Grunt and more!</p>
+
+    <p>Supported databases are
+        <a href="/documentation/database/oracle.html">Oracle</a>,
+        <a href="/documentation/database/sqlserver.html">SQL Server</a>,
+        <a href="/documentation/database/sqlazure.html">SQL Azure</a>,
+        <a href="/documentation/database/db2.html">DB2</a>,
+        <a href="/documentation/database/mysql.html">MySQL</a> (including Amazon RDS),
+        <a href="/documentation/database/mariadb.html">MariaDB</a>,
+        <a href="/documentation/database/googleCloudSql.html">Google Cloud SQL</a>,
+        <a href="/documentation/database/postgresql.html">PostgreSQL</a> (including Amazon RDS and Heroku),
+        <a href="/documentation/database/h2.html">H2</a>,
+        <a href="/documentation/database/hsql.html">Hsql</a>
+        <a href="/documentation/database/derby.html">Derby</a> and
+        <a href="/documentation/database/sqlite.html">SQLite</a>
+        .</p>
+
+    <p>Migrations can be written in SQL (database-specific syntax (such as PL/SQL, T-SQL, ...) is supported) or Java
+        (for advanced data transformations or dealing with LOBs)</p>
+
+    <h2>Commands</h2>
+
+    <p>Flyway is based around 6 basic commands:</p>
+
+    <table class="table table-bordered table-hover">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><strong>migrate</strong></td>
+            <td>Migrates the database</td>
+        </tr>
+        <tr>
+            <td><strong>clean</strong></td>
+            <td>Drops all objects in the configured schemas</td>
+        </tr>
+        <tr>
+            <td><strong>info</strong></td>
+            <td>Prints the details and status information about all the migrations</td>
+        </tr>
+        <tr>
+            <td><strong>validate</strong></td>
+            <td>Validates the applied migrations against the ones available on the classpath</td>
+        </tr>
+        <tr>
+            <td><strong>init</strong></td>
+            <td>Creates and initializes the metadata table (existing database)</td>
+        </tr>
+        <tr>
+            <td><strong>repair</strong></td>
+            <td>Repairs the metadata table</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <p class="next-steps">
+        <a class="btn btn-primary" href="/documentation/migration">Migrations <i class="fa fa-arrow-right"></i></a>
+    </p>
 </div>

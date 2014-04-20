@@ -15,37 +15,38 @@ subtitle: SQL Migrations
 
     <h2>Location and discovery</h2>
 
-    <p>Sql migrations reside on the classpath in one or more directories referenced by the <strong><a
-            href="/documentation/javadoc/com/googlecode/flyway/core/Flyway.html#setLocations(java.lang.String...)"
-            >locations</a></strong> property.<br/></p>
+    <p>Sql migrations reside on the <strong>classpath</strong> or on the <strong>file system</strong> in one or more directories referenced by the <strong><a
+            href="/documentation/api/javadoc/org/flywaydb/core/Flyway.html#setLocations(java.lang.String...)"
+            >locations</a></strong> property.<br/>
+        Unprefixed locations or locations with the <code>classpath:</code> prefix target the classpath.<br/>
+        Locations with the <code>filesystem:</code> prefix target the file system.
+    </p>
 
     <p><img src="/assets/balsamiq/SqlMigrationBaseDir.png"/></p>
 
-    <p>New sql migrations are <strong>discovered automatically</strong> through classpath scanning at runtime. This
-        scanning is recursive. All migrations in directories below the specified ones are also picked up. </p>
+    <p>New sql migrations are <strong>discovered automatically</strong> through classpath and file system scanning at runtime.<br/>
+        This scanning is recursive. All migrations in directories below the specified ones are also picked up.</p>
 
     <h2>Naming</h2>
 
-    <p>In order to be picked by the classpath scanner, the sql migrations must follow a naming pattern: </p>
+    <p>In order to be picked by the classpath scanner, the sql migrations must follow a naming pattern:</p>
 
     <p><img src="/assets/balsamiq/SqlMigrationNaming.png"/></p>
 
-    <p>The file name consists of:
+    <p>The file name consists of:</p>
     <ul>
-        <li><strong>prefix</strong> (Configurable, default: V)</li>
-        <li><strong>version</strong> (Dots or underscores separate the parts, you can use as many parts as you like)
-        </li>
-        <li><strong>separator</strong> (Two underscores)</li>
-        <li><strong>description</strong> (Underscores or spaces separate the words)</li>
-        <li><strong>suffix</strong> (Configurable, default: .sql)</li>
+        <li><strong>prefix</strong>: Configurable, default: V</li>
+        <li><strong>version</strong>: Dots or underscores separate the parts, you can use as many parts as you like</li>
+        <li><strong>separator</strong>: Configurable, default: __ (two underscores)</li>
+        <li><strong>description</strong>: Underscores or spaces separate the words</li>
+        <li><strong>suffix</strong>: Configurable, default: .sql</li>
     </ul>
-    </p>
 
     <h2 id="syntax">Sql Script syntax</h2>
     <ul>
         <li>Single- or multi-line statements</li>
         <li>Flexible placeholder replacement</li>
-        <li>Single- (--) or Multi-line (/<tt>*</tt> <tt>*</tt>/) comments spanning complete lines</li>
+        <li>Single- (--) or Multi-line (/* */) comments spanning complete lines</li>
         <li>Database-specific SQL syntax extensions (PL/SQL, T-SQL, ...)</li>
     </ul>
 
@@ -63,4 +64,8 @@ comment
 
 -- Placeholder
 INSERT INTO ${tableName} (name) VALUES ('Mr. T');</pre>
+
+    <p class="next-steps">
+        <a class="btn btn-primary" href="/documentation/migration/java.html">Java-based migrations <i class="fa fa-arrow-right"></i></a>
+    </p>
 </div>

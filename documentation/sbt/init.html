@@ -67,6 +67,14 @@ subtitle: 'sbt flywayInit'
             </td>
         </tr>
         <tr>
+            <td>flywayCallbacks</td>
+            <td>NO</td>
+            <td></td>
+            <td>Fully qualified class names of
+                <a href="/documentation/api/javadoc/org/flywaydb/api/callback/FlywayCallback.html">FlywayCallback</a>
+                implementations to use to hook into the Flyway lifecycle.</td>
+        </tr>
+        <tr>
             <td>flywayInitVersion</td>
             <td>NO</td>
             <td>1</td>
@@ -97,6 +105,8 @@ flywaySchemas := Seq("schema1", "schema2", "schema3")
       
 flywayTable := "schema_history"
 
+flywayCallbacks := Seq("com.mycompany.CustomCallback", "com.mycompany.AnotherCallback")
+
 flywayInitVersion := 5
 
 flywayInitDescription := "Let's go!"</pre>
@@ -105,4 +115,8 @@ flywayInitDescription := "Let's go!"</pre>
 
 [info] Creating Metadata table: "PUBLIC"."schema_version"
 [info] Schema initialized with version: 0</pre>
+
+    <p class="next-steps">
+        <a class="btn btn-primary" href="/documentation/sbt/repair.html">SBT: repair <i class="fa fa-arrow-right"></i></a>
+    </p>
 </div>

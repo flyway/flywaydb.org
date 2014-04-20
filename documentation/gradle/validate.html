@@ -86,6 +86,12 @@ subtitle: 'gradle flywayValidate'
             <td>The file name prefix for Sql migrations</td>
         </tr>
         <tr>
+            <td>sqlMigrationSeparator</td>
+            <td>NO</td>
+            <td>__</td>
+            <td>The file name separator for Sql migrations</td>
+        </tr>
+        <tr>
             <td>sqlMigrationSuffix</td>
             <td>NO</td>
             <td>.sql</td>
@@ -115,6 +121,22 @@ subtitle: 'gradle flywayValidate'
         <td>}
             </td>
             <td>The suffix of every placeholder</td>
+        </tr>
+        <tr>
+            <td>resolvers</td>
+            <td>NO</td>
+            <td></td>
+            <td>Fully qualified class names of custom
+                <a href="/documentation/api/javadoc/org/flywaydb/api/resolver/MigrationResolver.html">MigrationResolver</a>
+                implementations to be used in addition to the built-in ones for resolving Migrations to apply.</td>
+        </tr>
+        <tr>
+            <td>callbacks</td>
+            <td>NO</td>
+            <td></td>
+            <td>Fully qualified class names of
+                <a href="/documentation/api/javadoc/org/flywaydb/api/callback/FlywayCallback.html">FlywayCallback</a>
+                implementations to use to hook into the Flyway lifecycle.</td>
         </tr>
         <tr>
             <td>target</td>
@@ -157,6 +179,7 @@ subtitle: 'gradle flywayValidate'
     table = 'schema_history'
     locations = ['classpath:migrations1', 'migrations2', 'filesystem:/sql-migrations']
     sqlMigrationPrefix = 'Migration-'
+    sqlMigrationSeparator = '__'
     sqlMigrationSuffix = '-OK.sql'
     encoding = 'ISO-8859-1'
     placeholders = [
@@ -165,6 +188,8 @@ subtitle: 'gradle flywayValidate'
     ]
     placeholderPrefix = '#['
     placeholderSuffix = ']'
+    resolvers = ['com.mycompany.project.CustomResolver', 'com.mycompany.project.AnotherResolver']
+    callbacks = ['com.mycompany.project.CustomCallback', 'com.mycompany.project.AnotherCallback']
     target = '1.1'
     outOfOrder = false
     cleanOnValidationError = false
@@ -174,4 +199,8 @@ subtitle: 'gradle flywayValidate'
     <pre class="console">&gt; gradle flywayValidate -i
 
 Validated 5 migrations (execution time 00:00.030s)</pre>
+
+    <p class="next-steps">
+        <a class="btn btn-primary" href="/documentation/gradle/init.html">Gradle: init <i class="fa fa-arrow-right"></i></a>
+    </p>
 </div>
