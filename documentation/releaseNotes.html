@@ -9,7 +9,7 @@ subtitle: Release Notes
 <p>Thank you all for reporting all these issues and contributing fixes!</p>
 
 <div class="release">
-    <h2>Unreleased version</h2>
+    <h2>Flyway 3.0</h2>
 
     <h3>New Features</h3>
     <ul>
@@ -35,7 +35,7 @@ subtitle: Release Notes
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/651">Issue 651</a>
-            Pre and post hooks for each operation <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/709"><i class="icon-mail-reply"></i> Pull Request</a></span>
+            Pre and post hooks for each operation <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/709"><i class="fa fa-mail-reply"></i> Pull Request</a></span>
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/655">Issue 655</a>
@@ -57,6 +57,7 @@ subtitle: Release Notes
 
     <h3>Incompatible Changes</h3>
     <ul>
+        <li>Dropped compatibility with the Flyway 1.X metadata table format. If you are upgrading from 1.X, you must upgrade to 2.3 first, before upgrading to 3.0.</li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/97">Issue 97</a>
             Validate should fail if there are migrations in source that have not been run on the database
@@ -139,7 +140,7 @@ subtitle: Release Notes
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/673">Issue 673</a>
-            Some Unicode characters can still lead to StringIndexOutOfBoundsException <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/674"><i class="icon-mail-reply"></i> Pull Request</a></span>
+            Some Unicode characters can still lead to StringIndexOutOfBoundsException <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/674"><i class="fa fa-mail-reply"></i> Pull Request</a></span>
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/678">Issue 678</a>
@@ -151,19 +152,19 @@ subtitle: Release Notes
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/682">Issue 682</a>
-            Maven Plugin - Cannot set boolean system property <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/683"><i class="icon-mail-reply"></i> Pull Request</a></span>
+            Maven Plugin - Cannot set boolean system property <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/683"><i class="fa fa-mail-reply"></i> Pull Request</a></span>
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/684">Issue 684</a>
-            Allow passing custom initialization SQL for database connections <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/685"><i class="icon-mail-reply"></i> Pull Request</a></span>
+            Allow passing custom initialization SQL for database connections <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/685"><i class="fa fa-mail-reply"></i> Pull Request</a></span>
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/687">Issue 687</a>
-            Oracle cleanup - flyway fails on tables that have Flashback enabled <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/689"><i class="icon-mail-reply"></i> Pull Request</a></span>
+            Oracle cleanup - flyway fails on tables that have Flashback enabled <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/689"><i class="fa fa-mail-reply"></i> Pull Request</a></span>
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/688">Issue 688</a>
-            Support for Oracle cluster <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/688"><i class="icon-mail-reply"></i> Pull Request</a></span>
+            Support for Oracle cluster <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/688"><i class="fa fa-mail-reply"></i> Pull Request</a></span>
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/692">Issue 692</a>
@@ -171,11 +172,11 @@ subtitle: Release Notes
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/694">Issue 694</a>
-            sbt: Allow specifying URL through system properties <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/700"><i class="icon-mail-reply"></i> Pull Request</a></span>
+            sbt: Allow specifying URL through system properties <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/700"><i class="fa fa-mail-reply"></i> Pull Request</a></span>
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/697">Issue 697</a>
-            flyway:clean doesn't remove compiled java source <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/698"><i class="icon-mail-reply"></i> Pull Request</a></span>
+            flyway:clean doesn't remove compiled java source <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/698"><i class="fa fa-mail-reply"></i> Pull Request</a></span>
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/706">Issue 706</a>
@@ -191,7 +192,7 @@ subtitle: Release Notes
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/720">Issue 720</a>
-            FlywayException message is not saying anything usefull <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/721"><i class="icon-mail-reply"></i> Pull Request</a></span>
+            FlywayException message is not saying anything usefull <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/721"><i class="fa fa-mail-reply"></i> Pull Request</a></span>
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/725">Issue 725</a>
@@ -221,11 +222,11 @@ subtitle: Release Notes
     <ul>
         <li>
             <a href="https://github.com/flyway/flyway/issues/85">Issue 85</a>
-            SBT Plugin <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/662"><i class="icon-mail-reply"></i> Pull Request</a></span>
+            SBT Plugin <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/662"><i class="fa fa-mail-reply"></i> Pull Request</a></span>
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/562">Issue 562</a>
-            Cygwin support <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/616"><i class="icon-mail-reply"></i> Pull Request</a></span>
+            Cygwin support <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/616"><i class="fa fa-mail-reply"></i> Pull Request</a></span>
         </li>
     </ul>
 
@@ -239,15 +240,15 @@ subtitle: Release Notes
     <ul>
         <li>
             <a href="https://github.com/flyway/flyway/issues/456">Issue 456</a>
-            MySQL CharSet cast support <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/605"><i class="icon-mail-reply"></i> Pull Request</a></span>
+            MySQL CharSet cast support <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/605"><i class="fa fa-mail-reply"></i> Pull Request</a></span>
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/480">Issue 480</a>
-            MySQL SQL Parsing Error <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/613"><i class="icon-mail-reply"></i> Pull Request</a></span>
+            MySQL SQL Parsing Error <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/613"><i class="fa fa-mail-reply"></i> Pull Request</a></span>
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/575">Issue 575</a>
-            Output failed statement <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/649"><i class="icon-mail-reply"></i> Pull Request</a></span>
+            Output failed statement <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/649"><i class="fa fa-mail-reply"></i> Pull Request</a></span>
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/576">Issue 576</a>
@@ -259,19 +260,19 @@ subtitle: Release Notes
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/589">Issue 589</a>
-            flyway:clean doesnt remove check constraint <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/605"><i class="icon-mail-reply"></i> Pull Request</a></span>
+            flyway:clean doesnt remove check constraint <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/605"><i class="fa fa-mail-reply"></i> Pull Request</a></span>
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/593">Issue 593</a>
-            Parse error with mysql string literal that ends in b' or x' <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/600"><i class="icon-mail-reply"></i> Pull Request</a></span>
+            Parse error with mysql string literal that ends in b' or x' <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/600"><i class="fa fa-mail-reply"></i> Pull Request</a></span>
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/594">Issue 594</a>
-            Parse error with mysql string literal that ends in an escaped backslash <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/599"><i class="icon-mail-reply"></i> Pull Request</a></span>
+            Parse error with mysql string literal that ends in an escaped backslash <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/599"><i class="fa fa-mail-reply"></i> Pull Request</a></span>
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/598">Issue 598</a>
-            No "current" schema in flyway.url causes a Flyway exception <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/609"><i class="icon-mail-reply"></i> Pull Request</a></span>
+            No "current" schema in flyway.url causes a Flyway exception <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/609"><i class="fa fa-mail-reply"></i> Pull Request</a></span>
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/604">Issue 604</a>
@@ -279,7 +280,7 @@ subtitle: Release Notes
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/611">Issue 611</a>
-            MySQL : Parse error with a very simple script and mixed simple / double quotes <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/613"><i class="icon-mail-reply"></i> Pull Request</a></span>
+            MySQL : Parse error with a very simple script and mixed simple / double quotes <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/613"><i class="fa fa-mail-reply"></i> Pull Request</a></span>
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/625">Issue 625</a>
@@ -287,7 +288,7 @@ subtitle: Release Notes
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/640">Issue 640</a>
-            MySQL multi-line comment directives not recognised <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/641"><i class="icon-mail-reply"></i> Pull Request</a></span>
+            MySQL multi-line comment directives not recognised <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/641"><i class="fa fa-mail-reply"></i> Pull Request</a></span>
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/656">Issue 656</a>
@@ -295,7 +296,7 @@ subtitle: Release Notes
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/663">Issue 663</a>
-            Clean doesn't handle temporal/versioned tables correctly in DB2 <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/664"><i class="icon-mail-reply"></i> Pull Request</a></span>
+            Clean doesn't handle temporal/versioned tables correctly in DB2 <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/664"><i class="fa fa-mail-reply"></i> Pull Request</a></span>
         </li>
     </ul>
 
@@ -323,7 +324,7 @@ subtitle: Release Notes
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/563">Issue 563</a>
-            MigrationVersion compareTo is very slow <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/564"><i class="icon-mail-reply"></i> Pull Request</a></span>
+            MigrationVersion compareTo is very slow <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/564"><i class="fa fa-mail-reply"></i> Pull Request</a></span>
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/570">Issue 570</a>
@@ -335,11 +336,11 @@ subtitle: Release Notes
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/572">Issue 572</a>
-            NumberFormatException with file names like V1..1__desc.sql <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/573"><i class="icon-mail-reply"></i> Pull Request</a></span>
+            NumberFormatException with file names like V1..1__desc.sql <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/573"><i class="fa fa-mail-reply"></i> Pull Request</a></span>
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/574">Issue 574</a>
-            Passing in target property causes GroovyCastExtention <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/581"><i class="icon-mail-reply"></i> Pull Request</a></span>
+            Passing in target property causes GroovyCastExtention <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/581"><i class="fa fa-mail-reply"></i> Pull Request</a></span>
         </li>
     </ul>
 

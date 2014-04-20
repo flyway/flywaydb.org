@@ -1,0 +1,159 @@
+---
+layout: blog
+subtitle: "Flyway 3.0: Hello Android!"
+permalink: /blog/flyway-3.0-android.html
+---
+<div>
+    <p>Today is birthday time! This blog turns one and Flyway turns 4! And to celebrate we are releasing our next major
+        version: <strong>Flyway 3.0</strong>.</p>
+
+    <p>The <strong>hightlights</strong> of this major release are:</p>
+    <ul>
+        <li>Breaking changes</li>
+        <li>Android and SQLite support</li>
+        <li>MariaDB support</li>
+        <li>Opening up for extension</li>
+    </ul>
+
+    <h2>Breaking changes</h2>
+
+    <p>Flyway tries very hard to stay compatible between versions. But as all major versions go, this one marks a
+        transition.
+        We are leaving old things behind for a brighter future ahead.</p>
+
+    <h3>flywaydb.org transition complete</h3>
+
+    <div class="blog-post-image">
+        <img src="/assets/posts/issues-to-github/googlecode-to-github.png" alt="GoogleCode-to-Github">
+    </div>
+
+    <p>The transition from Google Code to flywaydb.org and Github is now complete.
+        Say goodbye to the old groupId and package name <strong>
+            <del>com.googlecode.flyway</del>
+        </strong>, and welcome <strong>org.flywaydb</strong>!
+    </p>
+
+    <p>Simply update these and you should be good to go!</p>
+
+    <h3>Dropped features</h3>
+
+    <p>It's spring time and we have a major release, so it's time to prune some old cruft. In this release we
+        removed:</p>
+
+    <ul>
+        <li><strong>Java 5 support:</strong> The baseline is now Java 6. Java 5 users must upgrade the JRE or stay with
+            Flyway 2.3.
+        </li>
+        <li><strong>Deprecated API:</strong> All deprecated properties and actions have been removed. The Javadoc in
+            Flyway 2.X documents how to move to modern equivalents.
+        </li>
+        <li><strong>Flyway 1.X metadata table format:</strong> Users upgrading from 1.X must upgrade to 2.3 first, then
+            to 3.0.
+        </li>
+    </ul>
+
+    <h2>Android and SQLite support</h2>
+
+    <div class="blog-post-image">
+        <img src="/assets/posts/flyway-3.0-android/android-sqlite.png" alt="Android and SQLite">
+    </div>
+
+    <p>Flyway 3.0 brings solid database migrations to the Android platform. And it does so in a comprehensive way.</p>
+
+    <p>We started with SQLite support. Flyway now works with SQLite 3.7.2 and newer both on Android (4.0 and up) with
+        the <a href="https://github.com/SQLDroid/SQLDroid">SQLDroid Jdbc driver</a> and all the other platforms with the
+        <a href="https://bitbucket.org/xerial/sqlite-jdbc">Xerial Jdbc driver</a>.</p>
+
+    <p>We then integrated the Android logging system and made sure the classpath scanning works flawlessly too.</p>
+
+    <h3>Making it work</h3>
+
+    <p>Start by adding the <a href="https://github.com/SQLDroid/SQLDroid">SQLDroid</a> driver jar to the
+        <code>libs</code> directory</p>
+
+    <p>Then inside your main activity add this:</p>
+                <pre class="prettyprint">import org.flywaydb.core.Flyway;
+import org.flywaydb.core.api.android.ContextHolder;
+import android.database.sqlite.SQLiteDatabase;
+
+SQLiteDatabase db = openOrCreateDatabase("...", 0, null);
+ContextHolder.setContext(this);
+Flyway flyway = new Flyway();
+flyway.setDataSource("jdbc:sqlite:" + db.getPath(), "", "");
+flyway.migrate();</pre>
+    <p>Now add your migrations to the <code>assests/db/migration</code> directory and you're done!</p>
+
+    <p>P.S.: And yes, we support Java-based migrations too!</p>
+
+    <h2>MariaDB Support</h2>
+
+    <div class="blog-post-image">
+        <img src="/assets/posts/flyway-3.0-android/mariadb.png" alt="MariaDB">
+    </div>
+
+    <p>Flyway has had MySQL support since 2010. We now built onto that foundation and added MariaDB support,
+        including full support for the MariaDB Jdbc driver.</p>
+
+    <h2>Opening up for extension</h2>
+
+    <p>Users have been asking to be able to integrate more deeply with Flyway for a long time. We finally believe
+        the core is now stable enough to open it up for extension in a way we can support for the future.</p>
+
+    <h3>Lifecycle Callbacks</h3>
+
+    <p>The first part we are opening up is lifecycle callbacks. You are now able to hook into all aspects of the
+        Flyway lifecycle. This allows to perform whatever action you what when you want. This could be granting rights
+        to all tables after all migrations complete, recompiling procedures, or whatever you need. You now get handed
+        a connection within a transaction and you can use it to your liking. All you have to do is:</p>
+    <ul>
+        <li>Implement the new <a href="/documentation/api/javadoc/org/flywaydb/core/api/callback/FlywayCallback.html">FlywayCallback</a>
+            interface
+        </li>
+        <li>Register it with <code>Flyway.setCallbacks(...)</code></li>
+    </ul>
+
+    <h3>Custom Migration Resolvers</h3>
+
+    <p>The second part we are opening up is migration resolvers. This is for people who need more than the standard
+        SQL and Java migrations. It allows you to resolve and execute migrations in any way you want. This could be
+        reading test data from csv files, integrating with version control for stored procedures, or simply having
+        the possibility to execute some statement outside of a transaction (very useful when you need it).
+    </p>
+
+    <p>To get started with this:</p>
+    <ul>
+        <li>Implement the new <a
+                href="/documentation/api/javadoc/org/flywaydb/core/api/resolver/MigrationResolver.html">MigrationResolver</a>
+            interface
+        </li>
+        <li>Add a corresponding <a
+                href="/documentation/api/javadoc/org/flywaydb/core/api/resolver/MigrationExecutor.html">MigrationExecutor</a>
+            implementation
+        </li>
+        <li>Register the resolver with <code>Flyway.setResolvers(...)</code></li>
+    </ul>
+    <p>And voilà!</p>
+
+    <h3>The road ahead</h3>
+
+    <p>These two extension points represent the beginning. We are extremely curious as to what extensions the community
+        will come up with. We will keep a close eye on them and integrate some of the best ones in future releases.</p>
+
+    <p>You can also expect stronger build tool integration for these extensions in the future, so that you won't have to
+        write Java code anymore to enjoy them.</p>
+
+    <h2>Grab it!</h2>
+
+    <p>Stability and reliability are always our top priority and this release is no exception. It packs a ton of fixes
+        and small improvements across the board. You can find all the details are in the <a
+                href="/documentation/releaseNotes.html">release notes</a>.</p>
+
+    <p>Thank you to everyone who reported issues and sent in pull requests. Special thanks to Dan Bunker for the
+        lifecycle callbacks.</p>
+
+    <p>Enjoy the release and <a href="/getstarted/download.html">get it while it's hot!</a></p>
+
+    <p><strong>All users are encouraged to upgrade.</strong></p>
+
+    <p>Feel free to share, tweet, post or comment in any way you like.</p>
+</div>

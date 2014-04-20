@@ -18,11 +18,19 @@ tab: home
 
                 <p id="links">
                     <a href="/getstarted/download.html">Download</a> -
-                    <a href="/documentation/releaseNotes.html">Release Notes</a> -
-                    <a href="http://github.com/flyway/flyway">Source</a>
+                    <a href="/documentation/releaseNotes.html">Release Notes</a>
                 </p>
 
-                <p>
+                <p id="worksOn">
+                    Works on:
+                    <i class="fa fa-coffee" title="Java"></i>
+                    <i class="fa fa-android" title="Android"></i>
+                    <i class="fa fa-windows" title="Windows"></i>
+                    <i class="fa fa-apple" title="Mac OSX"></i>
+                    <i class="fa fa-linux" title="Linux"></i>
+                </p>
+
+                <p id="news">
                     {% assign post = site.posts | first %}
                     <strong>Latest News:</strong> <a href="{{ post.permalink }}">{{ post.subtitle | xml_escape }} ({{ post.date | date: "%Y-%m-%d" }})</a>
                 </p>
@@ -38,7 +46,7 @@ tab: home
 </div>
 <div class="container">
 <div id="tagline-long"class="strong-heading">
-    Evolve your database schema easily and reliably<br/>across all your instances
+    Evolve your database schema easily and reliably<br/>across all your instances.
 </div>
 <div id="top3" class="row">
     <div class="span4">
@@ -345,7 +353,19 @@ tab: home
     <td colspan="8"></td>
 </tr>
 <tr>
-    <td><a href="/documentation/api/index.html">API</a></td>
+    <td><a href="/documentation/commandline/index.html">Command-line</a></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+</tr>
+<tr>
+    <td><a href="/documentation/api/index.html">API (Java)</a></td>
     <td><i class="fa fa-check" title="yes"></i></td>
     <td><i class="fa fa-check" title="yes"></i></td>
     <td><i class="fa fa-check" title="yes"></i></td>
@@ -357,15 +377,15 @@ tab: home
     <td><i class="fa fa-check" title="yes"></i></td>
 </tr>
 <tr>
-    <td><a href="/documentation/commandline/index.html">Command-line</a></td>
-    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><a href="/documentation/api/index.html">API (Android)</a></td>
     <td><i class="fa fa-check" title="yes"></i></td>
     <td><i class="fa fa-ban" title="no"></i></td>
-    <td><i class="fa fa-check" title="yes"></i></td>
-    <td><i class="fa fa-check" title="yes"></i></td>
-    <td><i class="fa fa-check" title="yes"></i></td>
-    <td><i class="fa fa-check" title="yes"></i></td>
-    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
     <td><i class="fa fa-ban" title="no"></i></td>
 </tr>
 <tr>
