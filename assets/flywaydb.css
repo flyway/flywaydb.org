@@ -220,6 +220,10 @@ hr.soften {
     text-align: center;
 }
 
+.next-steps {
+    margin-top: 50px;
+}
+
 .next-steps a {
     margin-right: 20px;
 }
@@ -307,6 +311,10 @@ i {
 .btn i {
     color: #ffffff;
     padding-left: 10px;
+}
+
+#apiJavadoc iframe {
+    width: 100%;
 }
 
 .blog-post-date {

@@ -1,11 +1,10 @@
 ---
-layout: documentation
-menu: api
+layout: api
+pill: overview
 subtitle: API
 ---
-<div id="applicationIntegration">
-    <h1><a name="Application_Integration_(API)"></a>Application Integration (API)<a
-            href="#Application_Integration_(API)" class="section_anchor"></a></h1>
+<div id="api">
+    <h1>API</h1>
 
     <p>Flyway brings the largest benefits when <strong>integrated within an application</strong>. By integrating Flyway
         you can ensure that the application and its <strong>database will always be compatible</strong>, with no manual
@@ -13,30 +12,60 @@ subtitle: API
         <strong>before</strong> the rest of the application starts. This is important, because the database must first
         be migrated to a state the rest of the code can work with. </p>
 
-    <h3>The Flyway Class</h3>
+    <h2>The Flyway Class</h2>
 
     <p>The central piece of Flyway&#x27;s database migration infrastructure is the <strong><a
             href="/documentation/api/javadoc/org/flywaydb/core/Flyway.html">org.flywaydb.core.Flyway</a></strong>
         class. It is your <strong>one-stop shop</strong> for working with Flyway programmatically. It serves both as a
         <strong>configuration</strong> and a <strong>launching</strong> point for all of Flyway&#x27;s functions. </p>
 
-    <h3>Programmatic Configuration</h3>
+    <h2>Programmatic Configuration</h2>
 
-    <p>Flyway is super easy to use programmatically: </p><pre
-        class="prettyprint">import org.flywaydb.core.Flyway;
+    <div class="tabbable">
+        <ul class="nav nav-tabs">
+            <li class="active marketing-item"><a href="#tab-java" data-toggle="tab"><i class="fa fa-coffee"></i>
+                Java</a>
+            </li>
+            <li class="marketing-item"><a href="#tab-android" data-toggle="tab"><i class="fa fa-android"></i>
+                Android</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active" id="tab-java">
+                <p>Flyway is super easy to use programmatically: </p><pre
+                    class="prettyprint">import org.flywaydb.core.Flyway;
 
 ...
-
 Flyway flyway = new Flyway();
 flyway.setDataSource(...);
 flyway.migrate();
 
 // Start the rest of the application (incl. Hibernate)
 ...</pre>
+            </div>
+            <div class="tab-pane" id="tab-android">
+                <p>Start by adding the <a href="https://github.com/SQLDroid/SQLDroid">SQLDroid</a> driver jar to the
+                    <code>libs</code> directory</p>
 
-    <h3>Spring Configuration</h3>
+                <p>Then inside your main activity add this:</p>
+                <pre class="prettyprint">import org.flywaydb.core.Flyway;
+import org.flywaydb.core.api.android.ContextHolder;
+import android.database.sqlite.SQLiteDatabase;
 
-    <p>As an alternative to the programmatic configuration, here is how you can configure and start Flyway in a typical Spring application: </p>
+SQLiteDatabase sqLiteDatabase = openOrCreateDatabase("...", 0, null);
+ContextHolder.setContext(this);
+Flyway flyway = new Flyway();
+flyway.setDataSource("jdbc:sqlite:" + sqLiteDatabase.getPath(), "", "");
+flyway.migrate();</pre>
+                <p>Now add your migrations to the <code>assests/db/migration</code> directory and you're done!</p>
+            </div>
+        </div>
+    </div>
+
+    <h2>Spring Configuration</h2>
+
+    <p>As an alternative to the programmatic configuration, here is how you can configure and start Flyway in a typical
+        Spring application: </p>
     <pre class="prettyprint">&lt;bean id=&quot;flyway&quot; class=&quot;org.flywaydb.core.Flyway&quot; init-method=&quot;migrate&quot;&gt;
     &lt;property name=&quot;dataSource&quot; ref=&quot;...&quot;/&gt;
     ...
@@ -47,9 +76,8 @@ flyway.migrate();
 &lt;bean id=&quot;sessionFactory&quot; class=&quot;...&quot; depends-on=&quot;flyway&quot;&gt;
     ...
 &lt;/bean&gt;</pre>
-    <h3><a name="Details"></a>Details<a href="#Details" class="section_anchor"></a></h3>
 
-    <p>
-        <a class="btn btn-primary" href="/documentation/api/javadoc">Browse the Javadoc <i class="fa fa-arrow-right"></i></a>
+    <p class="next-steps">
+        <a class="btn btn-primary" href="/documentation/api/javadoc.html">API: Javadoc <i class="fa fa-arrow-right"></i></a>
     </p>
 </div>

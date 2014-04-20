@@ -9,6 +9,9 @@ title: Documentation
             <div id="menu" class="well">
                 <ul class="nav nav-list">
                     <li
+                    {% if page.menu == 'overview' %} class="active" {% endif %}>
+                    <a href="/documentation">Overview</a></li>
+                    <li
                     {% if page.menu == 'migration' %} class="active" {% endif %}>
                     <a href="/documentation/migration">Migrations</a></li>
                     <li
