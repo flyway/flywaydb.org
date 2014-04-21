@@ -5,3 +5,7 @@
 *.bmml binary
 *.gif binary
 *.jar binary
+*.otf binary
+*.eof binary
+*.ttf binary
+*.woff binary
