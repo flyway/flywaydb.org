@@ -9,210 +9,239 @@ subtitle: Release Notes
 <p>Thank you all for reporting all these issues and contributing fixes!</p>
 
 <div class="release">
-    <h2>Flyway 3.0 (2014-04-20)</h2>
-
-    <h3>New Features</h3>
-    <ul>
-        <li>
-            <a href="https://github.com/flyway/flyway/issues/76">Issue 76</a>
-            SQLite &amp; Android support
-        </li>
-        <li>
-            <a href="https://github.com/flyway/flyway/issues/353">Issue 353</a>
-            Command-line tool: Multiple operations can now be specified at once
-        </li>
-        <li>
-            <a href="https://github.com/flyway/flyway/issues/469">Issue 469</a>
-            Custom MigrationResolver support
-        </li>
-        <li>
-            <a href="https://github.com/flyway/flyway/issues/618">Issue 618</a>
-            Repair: update checksums after migration
-        </li>
-        <li>
-            <a href="https://github.com/flyway/flyway/issues/626">Issue 626</a>
-            Custom ClassLoader support
-        </li>
-        <li>
-            <a href="https://github.com/flyway/flyway/issues/651">Issue 651</a>
-            Pre and post hooks for each operation <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/709"><i class="fa fa-mail-reply"></i> Pull Request</a></span>
-        </li>
-        <li>
-            <a href="https://github.com/flyway/flyway/issues/655">Issue 655</a>
-            Disable transaction for a particular migration
-        </li>
-        <li>
-            <a href="https://github.com/flyway/flyway/issues/667">Issue 667</a>
-            MariaDB support
-        </li>
-        <li>
-            <a href="https://github.com/flyway/flyway/issues/679">Issue 679</a>
-            Allow to configure maven plugin from a property file
-        </li>
-        <li>
-            <a href="https://github.com/flyway/flyway/issues/730">Issue 730</a>
-            Configurable separator between version and description
-        </li>
-    </ul>
-
-    <h3>Incompatible Changes</h3>
-    <ul>
-        <li>Dropped compatibility with the Flyway 1.X metadata table format. If you are upgrading from 1.X, you must upgrade to 2.3 first, before upgrading to 3.0.</li>
-        <li>
-            <a href="https://github.com/flyway/flyway/issues/97">Issue 97</a>
-            Validate should fail if there are migrations in source that have not been run on the database
-        </li>
-        <li>
-            <a href="https://github.com/flyway/flyway/issues/536">Issue 536</a>
-            Drop Java 5 support & remove deprecated API
-        </li>
-        <li>
-            <a href="https://github.com/flyway/flyway/issues/537">Issue 537</a>
-            Move packages & groupId from <strong><del>com.googlecode.flyway</del></strong> to <strong>org.flywaydb</strong>
-        </li>
-        <li>
-            <a href="https://github.com/flyway/flyway/issues/695">Issue 695</a>
-            <code>validateOnMigrate</code> is now true by default
-        </li>
-    </ul>
-
-    <h3>Changes</h3>
-    <ul>
-        <li>DB2 Jdbc driver: Flyway is now tested with db2jcc4 4.17.29 (was db2jcc 3.62.56)</li>
-        <li>Oracle Jdbc driver: Flyway is now tested with OJDBC6 12.1.0.1 (was OJDBC5 11.2.0.2.0)</li>
-        <li>PostgreSQL Jdbc driver: Flyway is now tested with 9.0-801.jdbc4 (was 9.0-801.jdbc3)</li>
-        <li>SQL Server Jdbc driver: Flyway is now tested with Jtds 1.3.1 (was 1.2.7)</li>
-    </ul>
+    <h2>Unreleased version</h2>
 
     <h3>Bug fixes</h3>
     <ul>
         <li>
-            <a href="https://github.com/flyway/flyway/issues/430">Issue 430</a>
-            Display the connection url
-        </li>
-        <li>
-            <a href="https://github.com/flyway/flyway/issues/484">Issue 484</a>
-            IllegalArgument when executing Flyway Ant build script several times in the same JVM
-        </li>
-        <li>
-            <a href="https://github.com/flyway/flyway/issues/489">Issue 489</a>
-            Validate does not report different descriptions for same version
-        </li>
-        <li>
-            <a href="https://github.com/flyway/flyway/issues/496">Issue 496</a>
-            Need sql print statements to be logged in Flyway logs
-        </li>
-        <li>
-            <a href="https://github.com/flyway/flyway/issues/540">Issue 540</a>
-            ORA-00900: invalid SQL statement - bug in the parser
-        </li>
-        <li>
-            <a href="https://github.com/flyway/flyway/issues/543">Issue 543</a>
-            Parser does not properly recognize some multiline string literals
-        </li>
-        <li>
-            <a href="https://github.com/flyway/flyway/issues/557">Issue 557</a>
-            MySQL statement not recognized due to a space character at the end of a comment directive
-        </li>
-        <li>
-            <a href="https://github.com/flyway/flyway/issues/584">Issue 584</a>
-            NumberFormatException thrown when using command line tools
-        </li>
-        <li>
-            <a href="https://github.com/flyway/flyway/issues/606">Issue 606</a>
-            Found more than one migration with version when multiple locations named with the same roots
-        </li>
-        <li>
-            <a href="https://github.com/flyway/flyway/issues/612">Issue 612</a>
-            Inconsistent definition of "locations" parameter
-        </li>
-        <li>
-            <a href="https://github.com/flyway/flyway/issues/621">Issue 621</a>
-            flyway clean does not remove mysql events
-        </li>
-        <li>
-            <a href="https://github.com/flyway/flyway/issues/639">Issue 639</a>
-            Flyway migrates correctly. but in the schema_version table the scriptname is prefixed with a /
-        </li>
-        <li>
-            <a href="https://github.com/flyway/flyway/issues/642">Issue 642</a>
-            Local migration file overwrites database's description
-        </li>
-        <li>
-            <a href="https://github.com/flyway/flyway/issues/673">Issue 673</a>
-            Some Unicode characters can still lead to StringIndexOutOfBoundsException <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/674"><i class="fa fa-mail-reply"></i> Pull Request</a></span>
-        </li>
-        <li>
-            <a href="https://github.com/flyway/flyway/issues/678">Issue 678</a>
-            flyway fails recognizing sql server delimiter while parsing sql migration
-        </li>
-        <li>
-            <a href="https://github.com/flyway/flyway/issues/681">Issue 681</a>
-            Maven site complains that repository url 'http://flywaydb.org/repo' is invalid
-        </li>
-        <li>
-            <a href="https://github.com/flyway/flyway/issues/682">Issue 682</a>
-            Maven Plugin - Cannot set boolean system property <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/683"><i class="fa fa-mail-reply"></i> Pull Request</a></span>
-        </li>
-        <li>
-            <a href="https://github.com/flyway/flyway/issues/684">Issue 684</a>
-            Allow passing custom initialization SQL for database connections <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/685"><i class="fa fa-mail-reply"></i> Pull Request</a></span>
-        </li>
-        <li>
-            <a href="https://github.com/flyway/flyway/issues/687">Issue 687</a>
-            Oracle cleanup - flyway fails on tables that have Flashback enabled <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/689"><i class="fa fa-mail-reply"></i> Pull Request</a></span>
-        </li>
-        <li>
-            <a href="https://github.com/flyway/flyway/issues/688">Issue 688</a>
-            Support for Oracle cluster <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/688"><i class="fa fa-mail-reply"></i> Pull Request</a></span>
-        </li>
-        <li>
-            <a href="https://github.com/flyway/flyway/issues/692">Issue 692</a>
-            Flyway doesn't remove trailing slash in PL/SQL block
-        </li>
-        <li>
-            <a href="https://github.com/flyway/flyway/issues/694">Issue 694</a>
-            sbt: Allow specifying URL through system properties <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/700"><i class="fa fa-mail-reply"></i> Pull Request</a></span>
-        </li>
-        <li>
-            <a href="https://github.com/flyway/flyway/issues/697">Issue 697</a>
-            flyway:clean doesn't remove compiled java source <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/698"><i class="fa fa-mail-reply"></i> Pull Request</a></span>
-        </li>
-        <li>
-            <a href="https://github.com/flyway/flyway/issues/706">Issue 706</a>
-            Info marks schema creation as missing (should be success)
-        </li>
-        <li>
-            <a href="https://github.com/flyway/flyway/issues/708">Issue 708</a>
-            flyway.repair() doesn't commit when data source is not autocommit
-        </li>
-        <li>
-            <a href="https://github.com/flyway/flyway/issues/716">Issue 716</a>
-            Load and inject configured Custom MigrationResolver implementations
-        </li>
-        <li>
-            <a href="https://github.com/flyway/flyway/issues/720">Issue 720</a>
-            FlywayException message is not saying anything usefull <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/721"><i class="fa fa-mail-reply"></i> Pull Request</a></span>
-        </li>
-        <li>
-            <a href="https://github.com/flyway/flyway/issues/725">Issue 725</a>
-            NullPointerException in quoteReplacement
-        </li>
-        <li>
-            <a href="https://github.com/flyway/flyway/pull/727">Issue 727</a>
-            fix placeholders override by property configuration and add sbt large test for placeholders
+            <a href="https://github.com/flyway/flyway/issues/735">Issue 735</a> cygwin classpath problem
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/736"><i class="fa fa-mail-reply"></i> Pull Request</a></span>
         </li>
     </ul>
 
     <p>
-        Thanks to adelinor, adiGadiG, Andriy Binetskyy, Anthony Galea, Antti Virtanen,
-        awal11, Ben Manes, bobwenx, Brian Hartin, Christian Dedie, cowwoc, Craig Forbes,
-        Dan Bunker, Deryl Spielman, Eric Jain,
-        Eugen Pyanov, Fatos Sopjani, Fernando Correia, Gerald Quintana, ggrussenmeyer, gregul, Jon Todd,
-        Jonathan Holloway, kavithaparameswaran, kongslund, Lidija, lrozek, Michal Lisiecki, Mircea Pop,
-        Nicolas Peters, Patrick Kranz, Prismapanda, quiver, rattigan, Regis Leray, Roger Brechbühl, samidha14
-        and vertex-github for reporting these issues and providing fixes.
+        Thanks to Lukasz Rozek for reporting these issues and providing fixes.
     </p>
+</div>
+
+<div class="release">
+<h2>Flyway 3.0 (2014-04-20)</h2>
+
+<h3>New Features</h3>
+<ul>
+    <li>
+        <a href="https://github.com/flyway/flyway/issues/76">Issue 76</a>
+        SQLite &amp; Android support
+    </li>
+    <li>
+        <a href="https://github.com/flyway/flyway/issues/353">Issue 353</a>
+        Command-line tool: Multiple operations can now be specified at once
+    </li>
+    <li>
+        <a href="https://github.com/flyway/flyway/issues/469">Issue 469</a>
+        Custom MigrationResolver support
+    </li>
+    <li>
+        <a href="https://github.com/flyway/flyway/issues/618">Issue 618</a>
+        Repair: update checksums after migration
+    </li>
+    <li>
+        <a href="https://github.com/flyway/flyway/issues/626">Issue 626</a>
+        Custom ClassLoader support
+    </li>
+    <li>
+        <a href="https://github.com/flyway/flyway/issues/651">Issue 651</a>
+        Pre and post hooks for each operation <span class="label label-info"><a
+            href="https://github.com/flyway/flyway/pull/709"><i class="fa fa-mail-reply"></i> Pull Request</a></span>
+    </li>
+    <li>
+        <a href="https://github.com/flyway/flyway/issues/655">Issue 655</a>
+        Disable transaction for a particular migration
+    </li>
+    <li>
+        <a href="https://github.com/flyway/flyway/issues/667">Issue 667</a>
+        MariaDB support
+    </li>
+    <li>
+        <a href="https://github.com/flyway/flyway/issues/679">Issue 679</a>
+        Allow to configure maven plugin from a property file
+    </li>
+    <li>
+        <a href="https://github.com/flyway/flyway/issues/730">Issue 730</a>
+        Configurable separator between version and description
+    </li>
+</ul>
+
+<h3>Incompatible Changes</h3>
+<ul>
+    <li>Dropped compatibility with the Flyway 1.X metadata table format. If you are upgrading from 1.X, you must upgrade
+        to 2.3 first, before upgrading to 3.0.
+    </li>
+    <li>
+        <a href="https://github.com/flyway/flyway/issues/97">Issue 97</a>
+        Validate should fail if there are migrations in source that have not been run on the database
+    </li>
+    <li>
+        <a href="https://github.com/flyway/flyway/issues/536">Issue 536</a>
+        Drop Java 5 support & remove deprecated API
+    </li>
+    <li>
+        <a href="https://github.com/flyway/flyway/issues/537">Issue 537</a>
+        Move packages & groupId from <strong>
+        <del>com.googlecode.flyway</del>
+    </strong> to <strong>org.flywaydb</strong>
+    </li>
+    <li>
+        <a href="https://github.com/flyway/flyway/issues/695">Issue 695</a>
+        <code>validateOnMigrate</code> is now true by default
+    </li>
+</ul>
+
+<h3>Changes</h3>
+<ul>
+    <li>DB2 Jdbc driver: Flyway is now tested with db2jcc4 4.17.29 (was db2jcc 3.62.56)</li>
+    <li>Oracle Jdbc driver: Flyway is now tested with OJDBC6 12.1.0.1 (was OJDBC5 11.2.0.2.0)</li>
+    <li>PostgreSQL Jdbc driver: Flyway is now tested with 9.0-801.jdbc4 (was 9.0-801.jdbc3)</li>
+    <li>SQL Server Jdbc driver: Flyway is now tested with Jtds 1.3.1 (was 1.2.7)</li>
+</ul>
+
+<h3>Bug fixes</h3>
+<ul>
+    <li>
+        <a href="https://github.com/flyway/flyway/issues/430">Issue 430</a>
+        Display the connection url
+    </li>
+    <li>
+        <a href="https://github.com/flyway/flyway/issues/484">Issue 484</a>
+        IllegalArgument when executing Flyway Ant build script several times in the same JVM
+    </li>
+    <li>
+        <a href="https://github.com/flyway/flyway/issues/489">Issue 489</a>
+        Validate does not report different descriptions for same version
+    </li>
+    <li>
+        <a href="https://github.com/flyway/flyway/issues/496">Issue 496</a>
+        Need sql print statements to be logged in Flyway logs
+    </li>
+    <li>
+        <a href="https://github.com/flyway/flyway/issues/540">Issue 540</a>
+        ORA-00900: invalid SQL statement - bug in the parser
+    </li>
+    <li>
+        <a href="https://github.com/flyway/flyway/issues/543">Issue 543</a>
+        Parser does not properly recognize some multiline string literals
+    </li>
+    <li>
+        <a href="https://github.com/flyway/flyway/issues/557">Issue 557</a>
+        MySQL statement not recognized due to a space character at the end of a comment directive
+    </li>
+    <li>
+        <a href="https://github.com/flyway/flyway/issues/584">Issue 584</a>
+        NumberFormatException thrown when using command line tools
+    </li>
+    <li>
+        <a href="https://github.com/flyway/flyway/issues/606">Issue 606</a>
+        Found more than one migration with version when multiple locations named with the same roots
+    </li>
+    <li>
+        <a href="https://github.com/flyway/flyway/issues/612">Issue 612</a>
+        Inconsistent definition of "locations" parameter
+    </li>
+    <li>
+        <a href="https://github.com/flyway/flyway/issues/621">Issue 621</a>
+        flyway clean does not remove mysql events
+    </li>
+    <li>
+        <a href="https://github.com/flyway/flyway/issues/639">Issue 639</a>
+        Flyway migrates correctly. but in the schema_version table the scriptname is prefixed with a /
+    </li>
+    <li>
+        <a href="https://github.com/flyway/flyway/issues/642">Issue 642</a>
+        Local migration file overwrites database's description
+    </li>
+    <li>
+        <a href="https://github.com/flyway/flyway/issues/673">Issue 673</a>
+        Some Unicode characters can still lead to StringIndexOutOfBoundsException <span class="label label-info"><a
+            href="https://github.com/flyway/flyway/pull/674"><i class="fa fa-mail-reply"></i> Pull Request</a></span>
+    </li>
+    <li>
+        <a href="https://github.com/flyway/flyway/issues/678">Issue 678</a>
+        flyway fails recognizing sql server delimiter while parsing sql migration
+    </li>
+    <li>
+        <a href="https://github.com/flyway/flyway/issues/681">Issue 681</a>
+        Maven site complains that repository url 'http://flywaydb.org/repo' is invalid
+    </li>
+    <li>
+        <a href="https://github.com/flyway/flyway/issues/682">Issue 682</a>
+        Maven Plugin - Cannot set boolean system property <span class="label label-info"><a
+            href="https://github.com/flyway/flyway/pull/683"><i class="fa fa-mail-reply"></i> Pull Request</a></span>
+    </li>
+    <li>
+        <a href="https://github.com/flyway/flyway/issues/684">Issue 684</a>
+        Allow passing custom initialization SQL for database connections <span class="label label-info"><a
+            href="https://github.com/flyway/flyway/pull/685"><i class="fa fa-mail-reply"></i> Pull Request</a></span>
+    </li>
+    <li>
+        <a href="https://github.com/flyway/flyway/issues/687">Issue 687</a>
+        Oracle cleanup - flyway fails on tables that have Flashback enabled <span class="label label-info"><a
+            href="https://github.com/flyway/flyway/pull/689"><i class="fa fa-mail-reply"></i> Pull Request</a></span>
+    </li>
+    <li>
+        <a href="https://github.com/flyway/flyway/issues/688">Issue 688</a>
+        Support for Oracle cluster <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/688"><i
+            class="fa fa-mail-reply"></i> Pull Request</a></span>
+    </li>
+    <li>
+        <a href="https://github.com/flyway/flyway/issues/692">Issue 692</a>
+        Flyway doesn't remove trailing slash in PL/SQL block
+    </li>
+    <li>
+        <a href="https://github.com/flyway/flyway/issues/694">Issue 694</a>
+        sbt: Allow specifying URL through system properties <span class="label label-info"><a
+            href="https://github.com/flyway/flyway/pull/700"><i class="fa fa-mail-reply"></i> Pull Request</a></span>
+    </li>
+    <li>
+        <a href="https://github.com/flyway/flyway/issues/697">Issue 697</a>
+        flyway:clean doesn't remove compiled java source <span class="label label-info"><a
+            href="https://github.com/flyway/flyway/pull/698"><i class="fa fa-mail-reply"></i> Pull Request</a></span>
+    </li>
+    <li>
+        <a href="https://github.com/flyway/flyway/issues/706">Issue 706</a>
+        Info marks schema creation as missing (should be success)
+    </li>
+    <li>
+        <a href="https://github.com/flyway/flyway/issues/708">Issue 708</a>
+        flyway.repair() doesn't commit when data source is not autocommit
+    </li>
+    <li>
+        <a href="https://github.com/flyway/flyway/issues/716">Issue 716</a>
+        Load and inject configured Custom MigrationResolver implementations
+    </li>
+    <li>
+        <a href="https://github.com/flyway/flyway/issues/720">Issue 720</a>
+        FlywayException message is not saying anything usefull <span class="label label-info"><a
+            href="https://github.com/flyway/flyway/pull/721"><i class="fa fa-mail-reply"></i> Pull Request</a></span>
+    </li>
+    <li>
+        <a href="https://github.com/flyway/flyway/issues/725">Issue 725</a>
+        NullPointerException in quoteReplacement
+    </li>
+    <li>
+        <a href="https://github.com/flyway/flyway/pull/727">Issue 727</a>
+        fix placeholders override by property configuration and add sbt large test for placeholders
+    </li>
+</ul>
+
+<p>
+    Thanks to adelinor, adiGadiG, Andriy Binetskyy, Anthony Galea, Antti Virtanen,
+    awal11, Ben Manes, bobwenx, Brian Hartin, Christian Dedie, cowwoc, Craig Forbes,
+    Dan Bunker, Deryl Spielman, Eric Jain,
+    Eugen Pyanov, Fatos Sopjani, Fernando Correia, Gerald Quintana, ggrussenmeyer, gregul, Jon Todd,
+    Jonathan Holloway, kavithaparameswaran, kongslund, Lidija, Lukasz Rozek, Michal Lisiecki, Mircea Pop,
+    Nicolas Peters, Patrick Kranz, Prismapanda, quiver, rattigan, Regis Leray, Roger Brechbühl, samidha14
+    and vertex-github for reporting these issues and providing fixes.
+</p>
 </div>
 
 <div class="release">
@@ -222,33 +251,43 @@ subtitle: Release Notes
     <ul>
         <li>
             <a href="https://github.com/flyway/flyway/issues/85">Issue 85</a>
-            SBT Plugin <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/662"><i class="fa fa-mail-reply"></i> Pull Request</a></span>
+            SBT Plugin <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/662"><i
+                class="fa fa-mail-reply"></i> Pull Request</a></span>
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/562">Issue 562</a>
-            Cygwin support <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/616"><i class="fa fa-mail-reply"></i> Pull Request</a></span>
+            Cygwin support <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/616"><i
+                class="fa fa-mail-reply"></i> Pull Request</a></span>
         </li>
     </ul>
 
     <h3>Changes</h3>
     <ul>
         <li>Flyway is now tested with Ant 1.8.4 (was 1.8.2)</li>
-        <li>Deprecated the <code>MigrationVersion()</code> constructor. Use <code>MigrationVersion.fromVersion(String)</code> instead.</li>
+        <li>Deprecated the <code>MigrationVersion()</code> constructor. Use
+            <code>MigrationVersion.fromVersion(String)</code> instead.
+        </li>
     </ul>
 
     <h3>Bug fixes</h3>
     <ul>
         <li>
             <a href="https://github.com/flyway/flyway/issues/456">Issue 456</a>
-            MySQL CharSet cast support <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/605"><i class="fa fa-mail-reply"></i> Pull Request</a></span>
+            MySQL CharSet cast support <span class="label label-info"><a
+                href="https://github.com/flyway/flyway/pull/605"><i class="fa fa-mail-reply"></i> Pull
+            Request</a></span>
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/480">Issue 480</a>
-            MySQL SQL Parsing Error <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/613"><i class="fa fa-mail-reply"></i> Pull Request</a></span>
+            MySQL SQL Parsing Error <span class="label label-info"><a
+                href="https://github.com/flyway/flyway/pull/613"><i class="fa fa-mail-reply"></i> Pull
+            Request</a></span>
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/575">Issue 575</a>
-            Output failed statement <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/649"><i class="fa fa-mail-reply"></i> Pull Request</a></span>
+            Output failed statement <span class="label label-info"><a
+                href="https://github.com/flyway/flyway/pull/649"><i class="fa fa-mail-reply"></i> Pull
+            Request</a></span>
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/576">Issue 576</a>
@@ -260,19 +299,27 @@ subtitle: Release Notes
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/589">Issue 589</a>
-            flyway:clean doesnt remove check constraint <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/605"><i class="fa fa-mail-reply"></i> Pull Request</a></span>
+            flyway:clean doesnt remove check constraint <span class="label label-info"><a
+                href="https://github.com/flyway/flyway/pull/605"><i class="fa fa-mail-reply"></i> Pull
+            Request</a></span>
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/593">Issue 593</a>
-            Parse error with mysql string literal that ends in b' or x' <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/600"><i class="fa fa-mail-reply"></i> Pull Request</a></span>
+            Parse error with mysql string literal that ends in b' or x' <span class="label label-info"><a
+                href="https://github.com/flyway/flyway/pull/600"><i class="fa fa-mail-reply"></i> Pull
+            Request</a></span>
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/594">Issue 594</a>
-            Parse error with mysql string literal that ends in an escaped backslash <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/599"><i class="fa fa-mail-reply"></i> Pull Request</a></span>
+            Parse error with mysql string literal that ends in an escaped backslash <span class="label label-info"><a
+                href="https://github.com/flyway/flyway/pull/599"><i class="fa fa-mail-reply"></i> Pull
+            Request</a></span>
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/598">Issue 598</a>
-            No "current" schema in flyway.url causes a Flyway exception <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/609"><i class="fa fa-mail-reply"></i> Pull Request</a></span>
+            No "current" schema in flyway.url causes a Flyway exception <span class="label label-info"><a
+                href="https://github.com/flyway/flyway/pull/609"><i class="fa fa-mail-reply"></i> Pull
+            Request</a></span>
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/604">Issue 604</a>
@@ -280,7 +327,9 @@ subtitle: Release Notes
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/611">Issue 611</a>
-            MySQL : Parse error with a very simple script and mixed simple / double quotes <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/613"><i class="fa fa-mail-reply"></i> Pull Request</a></span>
+            MySQL : Parse error with a very simple script and mixed simple / double quotes <span
+                class="label label-info"><a href="https://github.com/flyway/flyway/pull/613"><i
+                class="fa fa-mail-reply"></i> Pull Request</a></span>
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/625">Issue 625</a>
@@ -288,7 +337,9 @@ subtitle: Release Notes
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/640">Issue 640</a>
-            MySQL multi-line comment directives not recognised <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/641"><i class="fa fa-mail-reply"></i> Pull Request</a></span>
+            MySQL multi-line comment directives not recognised <span class="label label-info"><a
+                href="https://github.com/flyway/flyway/pull/641"><i class="fa fa-mail-reply"></i> Pull
+            Request</a></span>
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/656">Issue 656</a>
@@ -296,12 +347,15 @@ subtitle: Release Notes
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/663">Issue 663</a>
-            Clean doesn't handle temporal/versioned tables correctly in DB2 <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/664"><i class="fa fa-mail-reply"></i> Pull Request</a></span>
+            Clean doesn't handle temporal/versioned tables correctly in DB2 <span class="label label-info"><a
+                href="https://github.com/flyway/flyway/pull/664"><i class="fa fa-mail-reply"></i> Pull
+            Request</a></span>
         </li>
     </ul>
 
     <p>
-        Thanks to Adam Green, Baptiste Gaillard, Christian Dedié, Christoffer Eide, Dave O'Flynn, garichner, Kevin Sheedy,
+        Thanks to Adam Green, Baptiste Gaillard, Christian Dedié, Christoffer Eide, Dave O'Flynn, garichner, Kevin
+        Sheedy,
         Lukasz Rozek, Matt Garner, migore, pimlottc, Pavel Boldyrev, Piotr Wielgolaski,
         Rajnish Srivastava, Robert Handschmann, Thomas Queste, Tom Eicher and Ulf Bamberg
         for reporting these issues and providing fixes.
@@ -324,7 +378,9 @@ subtitle: Release Notes
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/563">Issue 563</a>
-            MigrationVersion compareTo is very slow <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/564"><i class="fa fa-mail-reply"></i> Pull Request</a></span>
+            MigrationVersion compareTo is very slow <span class="label label-info"><a
+                href="https://github.com/flyway/flyway/pull/564"><i class="fa fa-mail-reply"></i> Pull
+            Request</a></span>
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/570">Issue 570</a>
@@ -336,16 +392,21 @@ subtitle: Release Notes
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/572">Issue 572</a>
-            NumberFormatException with file names like V1..1__desc.sql <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/573"><i class="fa fa-mail-reply"></i> Pull Request</a></span>
+            NumberFormatException with file names like V1..1__desc.sql <span class="label label-info"><a
+                href="https://github.com/flyway/flyway/pull/573"><i class="fa fa-mail-reply"></i> Pull
+            Request</a></span>
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/574">Issue 574</a>
-            Passing in target property causes GroovyCastExtention <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/581"><i class="fa fa-mail-reply"></i> Pull Request</a></span>
+            Passing in target property causes GroovyCastExtention <span class="label label-info"><a
+                href="https://github.com/flyway/flyway/pull/581"><i class="fa fa-mail-reply"></i> Pull
+            Request</a></span>
         </li>
     </ul>
 
     <p>
-        Thanks to Chrissyx, Dario Matonicki, hvvikram, Michael Krotscheck, Piotr Wielgolaski, Thomas Jung and Tom Stordy-Allison
+        Thanks to Chrissyx, Dario Matonicki, hvvikram, Michael Krotscheck, Piotr Wielgolaski, Thomas Jung and Tom
+        Stordy-Allison
         for reporting these issues and contributing fixes.
     </p>
 </div>
@@ -372,17 +433,25 @@ subtitle: Release Notes
         <li><code>init</code> is now idempotent. Calling <code>init</code> multiple times with the same values no longer
             throws an exception.
         </li>
-        <li><strong>Ant:</strong> Dropped support for the separate Spring distribution.<br/>Spring is still supported by adding the
+        <li><strong>Ant:</strong> Dropped support for the separate Spring distribution.<br/>Spring is still supported by
+            adding the
             Spring jars yourself on Flyway's classpath
         </li>
-        <li><strong>Ant:</strong> The distribution is now called <code>flyway-ant-2.2.[zip|tar.gz]</code> (dropped the -dist part)</li>
-        <li><strong>Command-line:</strong> Dropped support for the Spring distribution.<br/>Spring is still supported by adding the
+        <li><strong>Ant:</strong> The distribution is now called <code>flyway-ant-2.2.[zip|tar.gz]</code> (dropped the
+            -dist part)
+        </li>
+        <li><strong>Command-line:</strong> Dropped support for the Spring distribution.<br/>Spring is still supported by
+            adding the
             Spring jars yourself in the /jars directory
         </li>
-        <li><strong>Command-line:</strong> The distribution is now called <code>flyway-commandline-2.2.[zip|tar.gz]</code> (dropped the -dist part)
+        <li><strong>Command-line:</strong> The distribution is now called
+            <code>flyway-commandline-2.2.[zip|tar.gz]</code> (dropped the -dist part)
         </li>
-        <li><strong>Command-line:</strong> The root directory is now called flyway-2.2 (dropped the -commandline part)</li>
-        <li><strong>Command-line:</strong> On Linux and OSX the script is now called <code>flyway</code> (dropped the .sh)</li>
+        <li><strong>Command-line:</strong> The root directory is now called flyway-2.2 (dropped the -commandline part)
+        </li>
+        <li><strong>Command-line:</strong> On Linux and OSX the script is now called <code>flyway</code> (dropped the
+            .sh)
+        </li>
     </ul>
 
     <h3>Changes</h3>
@@ -413,7 +482,8 @@ subtitle: Release Notes
         </li>
         <li>
             <a href="http://code.google.com/p/flyway/issues/detail?id=462">Issue 462</a>
-            Flyway 2.1.1 hangs on ANALYZE command <span class="label label-success"><a href="/support/sponsor.html">€ Sponsored</a></span>
+            Flyway 2.1.1 hangs on ANALYZE command <span class="label label-success"><a href="/support/sponsor.html">€
+            Sponsored</a></span>
         </li>
         <li>
             <a href="http://code.google.com/p/flyway/issues/detail?id=463">Issue 463</a>
