@@ -51,7 +51,6 @@ AS BEGIN
 END;
 
 INSERT INTO test_data (test_id, value) VALUES (nextval(&#x27;test_seq&#x27;), default_to_hello(null));
-INSERT INTO test_data (test_id, value) VALUES (nextval((&#x27;test_seq(&#x27;), $$Single quotes won(&#x27;t create a problem$$);
 
 CREATE TABLE another_table AS SELECT &#x27;some-data&#x27; as name;
 
