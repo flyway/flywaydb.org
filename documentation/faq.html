@@ -190,12 +190,12 @@ table = schema_version</pre>
 
     <h2 id="case-sensitive">Why is the schema_version table case-sensitive?</h2>
 
-    <p>The schema_version case-sensitive due to the quotes used in its creation script. This allows for characters not
+    <p>The schema_version is case-sensitive due to the quotes used in its creation script. This allows for characters not
         supported in identifiers otherwise.</p>
 
     <p>The name (and case) can be configured through the <code>flyway.table</code> property.</p>
 
-    <p>The table is an internal Flyway implementation detail and not part of the a public API. It can therefore can
+    <p>The table is an internal Flyway implementation detail and not part of the a public API. It can therefore
         change from time to time.</p>
 
     <h2 id="hibernate-cdi">How can I integrate Flyway with Hibernate in a CDI environment?</h2>
