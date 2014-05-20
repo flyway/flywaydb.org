@@ -112,7 +112,7 @@ flyway.placeholders.otherplaceholder=value123</pre>
     <pre class="console">mvn -Dflyway.user=myUser -Dflyway.schemas=schema1,schema2 -Dflyway.placeholders.keyABC=valueXYZ</pre>
 
     <h3>Overriding order</h3>
-    <p>System properties &gt; External config file &gt; Maven properties &gt; Plugin configuration</p>
+    <p>System properties <i>override</i> External config file <i>overrides</i> Maven properties <i>override</i> Plugin configuration</p>
 
     <h2>Authentication</h2>
 
