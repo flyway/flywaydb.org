@@ -290,6 +290,9 @@ subtitle: 'mvn flyway:migrate'
     &lt;configFile&gt;myConfig.properties&lt;/configFile&gt;
 &lt;/configuration&gt;</pre>
 
+<h2>Exposed properties</h2>
+<p>The new database version number is exposed in the <code>flyway.current</code> Maven property.</p>
+
 <h2>Sample output</h2>
 <pre class="console">&gt; mvn compile flyway:migrate
 
