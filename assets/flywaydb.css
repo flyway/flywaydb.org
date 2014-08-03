@@ -248,6 +248,10 @@ hr.soften {
     line-height: 120%;
 }
 
+#footer .fa-heart {
+    color: #990000;
+}
+
 #footer #intellij {
     position: relative;
     left: auto;
