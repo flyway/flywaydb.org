@@ -7,6 +7,7 @@ tab: home
         <div class="row">
             <div class="span12">
                 <img src="assets/logo/flyway-logo-transparent-300.png" alt="Flyway"/>
+
                 <p id="tagline" class="strong-heading">
                     <span>Database Migrations<br/>Made Easy.</span>
                 </p>
@@ -32,7 +33,8 @@ tab: home
 
                 <p id="news">
                     {% assign post = site.posts | first %}
-                    <strong>Latest News:</strong> <a href="{{ post.permalink }}">{{ post.subtitle | xml_escape }} ({{ post.date | date: "%Y-%m-%d" }})</a>
+                    <strong>Latest News:</strong> <a href="{{ post.permalink }}">{{ post.subtitle | xml_escape }}
+                    ({{ post.date | date: "%Y-%m-%d" }})</a>
                 </p>
 
                 <p id="social">
@@ -45,45 +47,53 @@ tab: home
     </div>
 </div>
 <div class="container">
-<div id="tagline-long" class="strong-heading">
-    Evolve your database schema easily and reliably<br/>across all your instances.
-</div>
-<div id="top3" class="row">
-    <div class="span4">
-        <i class="fa fa-thumbs-up"></i>
-        <p class="strong-heading">Simple</p>
+    <div id="tagline-long" class="strong-heading">
+        Evolve your database schema easily and reliably<br/>across all your instances.
     </div>
-    <div class="span4">
-        <i class="fa fa-crosshairs"></i>
-        <p class="strong-heading">Focused</p>
+    <div id="top3" class="row">
+        <div class="span4">
+            <i class="fa fa-thumbs-up"></i>
+
+            <p class="strong-heading">Simple</p>
+        </div>
+        <div class="span4">
+            <i class="fa fa-crosshairs"></i>
+
+            <p class="strong-heading">Focused</p>
+        </div>
+        <div class="span4">
+            <i class="fa fa-rocket"></i>
+
+            <p class="strong-heading">Powerful</p>
+        </div>
     </div>
-    <div class="span4">
-        <i class="fa fa-rocket"></i>
-        <p class="strong-heading">Powerful</p>
+    <div id="top3details" class="row">
+        <div class="span4">
+            <p>Easy to setup, simple to master. Flyway lets you regain control of your database migrations with pleasure
+                and plain sql.</p>
+        </div>
+        <div class="span4">
+            <p>Solves only one problem and solves it well. Flyway migrates your database, so you don't have to worry
+                about it anymore.</p>
+        </div>
+        <div class="span4">
+            <p>Made for continuous delivery. Let Flyway migrate your database on application startup. Releases have
+                never been this easy.</p>
+        </div>
     </div>
-</div>
-<div id="top3details" class="row">
-    <div class="span4">
-        <p>Easy to setup, simple to master. Flyway lets you regain control of your database migrations with pleasure and plain sql.</p>
+    <div id="top3buttons" class="row">
+        <div class="span4">
+            <a class="btn" href="/getstarted/whyDatabaseMigrations.html">Why database migrations? <i
+                    class="fa fa-arrow-right"></i></a>
+        </div>
+        <div class="span4">
+            <a class="btn" href="/getstarted/howFlywayWorks.html">How does Flyway work? <i
+                    class="fa fa-arrow-right"></i></a>
+        </div>
+        <div class="span4">
+            <a class="btn" href="/getstarted">Get started <i class="fa fa-arrow-right"></i></a>
+        </div>
     </div>
-    <div class="span4">
-        <p>Solves only one problem and solves it well. Flyway migrates your database, so you don't have to worry about it anymore.</p>
-    </div>
-    <div class="span4">
-        <p>Made for continuous delivery. Let Flyway migrate your database on application startup. Releases have never been this easy.</p>
-    </div>
-</div>
-<div id="top3buttons" class="row">
-    <div class="span4">
-        <a class="btn" href="/getstarted/whyDatabaseMigrations.html">Why database migrations? <i class="fa fa-arrow-right"></i></a>
-    </div>
-    <div class="span4">
-        <a class="btn" href="/getstarted/howFlywayWorks.html">How does Flyway work? <i class="fa fa-arrow-right"></i></a>
-    </div>
-    <div class="span4">
-        <a class="btn" href="/getstarted">Get started <i class="fa fa-arrow-right"></i></a>
-    </div>
-</div>
 </div>
 
 <div id="upAndRunningBg"></div>
@@ -137,7 +147,8 @@ tab: home
 
             <p>Full support for <a
                     href="/documentation/database/sqlazure.html">Microsoft SQL Azure</a>, <a
-                    href="/documentation/database/googleCloudSql.html">Google Cloud SQL</a> &amp; App Engine, Heroku Postgres and Amazon RDS.</p>
+                    href="/documentation/database/googleCloudSql.html">Google Cloud SQL</a> &amp; App Engine, Heroku
+                Postgres and Amazon RDS.</p>
         </div>
     </div>
     <div class="row">
@@ -153,9 +164,7 @@ tab: home
             <p>Inconsistent database or failed migration prevents app from starting.</p>
         </div>
         <div class="span4">
-            <img src="assets/glyphicons/glyphicons_067_cleaning.png"/>
-
-            <div class="marketing-item">Schema Clean</div>
+            <div class="marketing-item"><i class="fa fa-eraser"></i> Schema Clean</div>
 
             <p><a href="/documentation/maven/clean.html">Drop all tables, views, triggers, ...</a> from a schema without
                 dropping the schema itself</p>
@@ -170,46 +179,40 @@ tab: home
 
     <div class="row">
         <div class="span4">
-            <img src="/assets/glyphicons/glyphicons_141_database_plus.png"/>
-
-            <div class="marketing-item"><a href="/documentation/database/oracle.html">Oracle</a></div>
+            <div class="marketing-item"><i class="fa fa-database"></i> <a href="/documentation/database/oracle.html">Oracle</a>
+            </div>
 
             <p>10g and later (all editions, including XE)</p>
         </div>
         <div class="span4">
-            <img src="/assets/glyphicons/glyphicons_141_database_plus.png"/>
-
-            <div class="marketing-item"><a href="/documentation/database/sqlserver.html">SQL Server</a></div>
+            <div class="marketing-item"><i class="fa fa-database"></i> <a href="/documentation/database/sqlserver.html">SQL
+                Server</a></div>
 
             <p>2008 and later</p>
         </div>
         <div class="span4">
-            <img src="/assets/glyphicons/glyphicons_141_database_plus.png"/>
-
-            <div class="marketing-item"><a href="/documentation/database/sqlazure.html">SQL Azure</a></div>
+            <div class="marketing-item"><i class="fa fa-database"></i> <a href="/documentation/database/sqlazure.html">SQL
+                Azure</a></div>
 
             <p>latest</p>
         </div>
     </div>
     <div class="row">
         <div class="span4">
-            <img src="/assets/glyphicons/glyphicons_141_database_plus.png"/>
-
-            <div class="marketing-item"><a href="/documentation/database/mysql.html">MySQL</a></div>
+            <div class="marketing-item"><i class="fa fa-database"></i> <a href="/documentation/database/mysql.html">MySQL</a>
+            </div>
 
             <p>5.1 and later (incl. Amazon RDS)</p>
         </div>
         <div class="span4">
-            <img src="/assets/glyphicons/glyphicons_141_database_plus.png"/>
-
-            <div class="marketing-item"><a href="/documentation/database/mariadb.html">MariaDB</a></div>
+            <div class="marketing-item"><i class="fa fa-database"></i> <a href="/documentation/database/mariadb.html">MariaDB</a>
+            </div>
 
             <p>10.0 and later</p>
         </div>
         <div class="span4">
-            <img src="/assets/glyphicons/glyphicons_141_database_plus.png"/>
-
-            <div class="marketing-item"><a href="/documentation/database/googleCloudSql.html">Google Cloud
+            <div class="marketing-item"><i class="fa fa-database"></i> <a
+                    href="/documentation/database/googleCloudSql.html">Google Cloud
                 SQL</a></div>
 
             <p>latest</p>
@@ -217,54 +220,60 @@ tab: home
     </div>
     <div class="row">
         <div class="span4">
-            <img src="/assets/glyphicons/glyphicons_141_database_plus.png"/>
-
-            <div class="marketing-item"><a href="/documentation/database/postgresql.html">PostgreSQL</a></div>
+            <div class="marketing-item"><i class="fa fa-database"></i> <a
+                    href="/documentation/database/postgresql.html">PostgreSQL</a></div>
 
             <p>9.0 and later (incl. Heroku &amp; Amazon RDS)</p>
         </div>
         <div class="span4">
-            <img src="/assets/glyphicons/glyphicons_141_database_plus.png"/>
+            <div class="marketing-item"><i class="fa fa-database"></i> <a href="/documentation/database/vertica.html">Vertica</a>
+            </div>
 
-            <div class="marketing-item"><a href="/documentation/database/h2.html">H2</a></div>
-
-            <p>1.2.137 and later</p>
+            <p>6.5 and later</p>
         </div>
         <div class="span4">
-            <img src="/assets/glyphicons/glyphicons_141_database_plus.png"/>
+            <div class="marketing-item"><i class="fa fa-database"></i> <a href="/documentation/database/redshift.html">AWS
+                Redshift</a></div>
 
-            <div class="marketing-item"><a href="/documentation/database/hsql.html">Hsql</a></div>
-
-            <p>1.8 and later</p>
+            <p>latest</p>
         </div>
     </div>
     <div class="row">
         <div class="span4">
-            <img src="/assets/glyphicons/glyphicons_141_database_plus.png"/>
-
-            <div class="marketing-item"><a href="/documentation/database/db2.html">DB2</a></div>
+            <div class="marketing-item"><i class="fa fa-database"></i> <a
+                    href="/documentation/database/db2.html">DB2</a></div>
 
             <p>9.7 and later</p>
         </div>
         <div class="span4">
-            <img src="/assets/glyphicons/glyphicons_141_database_plus.png"/>
-
-            <div class="marketing-item"><a href="/documentation/database/db2zos.html">DB2 z/OS</a></div>
+            <div class="marketing-item"><i class="fa fa-database"></i> <a href="/documentation/database/db2zos.html">DB2
+                z/OS</a></div>
 
             <p>9.1 and later</p>
         </div>
-
         <div class="span4">
-            <img src="/assets/glyphicons/glyphicons_141_database_plus.png"/>
-
-            <div class="marketing-item"><a href="/documentation/database/derby.html">Derby</a></div>
+            <div class="marketing-item"><i class="fa fa-database"></i> <a href="/documentation/database/derby.html">Derby</a>
+            </div>
 
             <p>10.8.2.2 and later</p>
         </div>
+    </div>
+    <div class="row">
         <div class="span4">
-            <img src="/assets/glyphicons/glyphicons_141_database_plus.png"/>
+            <div class="marketing-item"><i class="fa fa-database"></i> <a href="/documentation/database/h2.html">H2</a>
+            </div>
 
-            <div class="marketing-item"><a href="/documentation/database/sqlite.html">SQLite</a></div>
+            <p>1.2.137 and later</p>
+        </div>
+        <div class="span4">
+            <div class="marketing-item"><i class="fa fa-database"></i> <a
+                    href="/documentation/database/hsql.html">Hsql</a></div>
+
+            <p>1.8 and later</p>
+        </div>
+        <div class="span4">
+            <div class="marketing-item"><i class="fa fa-database"></i> <a href="/documentation/database/sqlite.html">SQLite</a>
+            </div>
 
             <p>3.7.2 and later</p>
         </div>
