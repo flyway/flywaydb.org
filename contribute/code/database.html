@@ -14,8 +14,8 @@ subtitle: Database Setup - Code
         <strong>Tip:</strong>
         If your feature/bug fix doesn't impact the DB-specific code<br/> and you do not wish to set up all the databases, Flyway can be built using either:
         <ul>
-            <li><strong>mvn install -PNoCommercialDBTest -P-CommercialDBJars</strong> (skip Oracle, DB2 & SQL Server)</li>
-            <li><strong>mvn install -PNoInstallableDBTest -P-CommercialDBJars</strong> (skip all DBs, except in-memory ones)</li>
+            <li><strong>mvn install -P-CommercialDBTest</strong> (skip Oracle, DB2 &amp; SQL Server)</li>
+            <li><strong>mvn install -P-InstallableDBTest -P-CommercialDBTest</strong> (skip all DBs, except in-memory ones)</li>
         </ul>
         <p>This will disable all tests against the skipped DBs.</p>
         You can then omit installing them and continue to <a href="submit.html">Submit your Changes</a>.
@@ -241,9 +241,7 @@ sudo /opt/vertica/sbin/install_vertica --hosts localhost --deb vertica_7.0.1-0_a
     Copy vertica-jdbc-7.0.0-0.jar to your local Maven repository under <code>com/vertica/vertica-jdbc/7.0.0-0</code>.
     </p>
 
-    <h2>Next Step</h2>
-
     <p class="next-steps">
-        <a class="btn btn-primary btn-large" href="/contribute/code/submit.html">Submit your Changes</a>
+        <a class="btn btn-primary" href="/contribute/code/submit.html">Submit your Changes <i class="fa fa-arrow-right"></i></a>
     </p>
 </div>
