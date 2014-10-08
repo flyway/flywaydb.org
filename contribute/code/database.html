@@ -99,8 +99,8 @@ end;
     <p>If you have PostgreSQL on a different machine/VM you&#x27;ll have to edit the pg_hba.conf file to allow
         connections from other machines than localhost: </p>
 
-    <p>E.g. edit C:\Programme\PostgreSQL\9.0\data\pg_hba.conf: </p><pre class="prettyprint">  # TYPE  DATABASE        USER            CIDR-ADDRESS            METHOD
-     host    all             all             127.0.0.1/0		     md5</pre>
+    <p>E.g. edit C:\Programme\PostgreSQL\9.0\data\pg_hba.conf: </p><pre class="prettyprint"># TYPE  DATABASE        USER            CIDR-ADDRESS            METHOD
+host    all             all             127.0.0.1/0		md5</pre>
     <blockquote>see <a href="http://developer.postgresql.org/pgdocs/postgres/auth-pg-hba-conf.html">http://developer.postgresql.org/pgdocs/postgres/auth-pg-hba-conf.html</a><br/>
     </blockquote>
 
