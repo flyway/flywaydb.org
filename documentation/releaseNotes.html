@@ -52,8 +52,40 @@ subtitle: Release Notes
         </li>
     </ul>
 
+    <h3>Incompatible Changes</h3>
+    <ul>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/860">Issue 860</a>
+            The <code>FlywayCallback</code> interface has two new methods: <code>beforeBaseline()</code> and <code>afterBaseline()</code>.
+        </li>
+    </ul>
+
     <h3>Changes</h3>
     <ul>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/860">Issue 860</a>
+            Deprecated <code>init()</code>, use <code>baseline()</code> instead.
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/860">Issue 860</a>
+            Deprecated <code>initVersion</code>, use <code>baselineVersion</code> instead.
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/860">Issue 860</a>
+            Deprecated <code>initDescription</code>, use <code>baselineDescription</code> instead.
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/860">Issue 860</a>
+            Deprecated <code>initOnMigrate</code>, use <code>baselineOnMigrate</code> instead.
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/860">Issue 860</a>
+            Deprecated <code>FlywayCallback.beforeInit()</code>, use <code>FlywayCallback.beforeBaseline()</code> instead.
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/860">Issue 860</a>
+            Deprecated <code>FlywayCallback.afterInit()</code>, use <code>FlywayCallback.afterBaseline()</code> instead.
+        </li>
         <li>Derby Jdbc driver: Flyway is now tested with 10.11.1.1 (was 10.8.2.2)</li>
         <li>Hsql Jdbc driver: Flyway is now tested with 2.3.2 (was 2.2.8)</li>
         <li>PostgreSQL Jdbc driver: Flyway is now tested with 9.3-1102-jdbc4 (was 9.0-801.jdbc4)</li>

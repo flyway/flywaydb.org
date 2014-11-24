@@ -177,13 +177,13 @@ subtitle: 'sbt flywayMigrate'
         </td>
     </tr>
     <tr>
-        <td>flywayInitOnMigrate</td>
+        <td>flywayBaselineOnMigrate</td>
         <td>NO</td>
         <td>false</td>
-        <td>Whether to automatically call init when migrate is executed against a non-empty schema with no metadata
+        <td>Whether to automatically call baseline when migrate is executed against a non-empty schema with no metadata
             table.
-            This schema will then be initialized with the <code>initVersion</code> before executing the migrations.
-            Only migrations above <code>initVersion</code> will then be applied.<br/>
+            This schema will then be baselined with the <code>baselineVersion</code> before executing the migrations.
+            Only migrations above <code>baselineVersion</code> will then be applied.<br/>
 
             <p>This is useful for initial Flyway production deployments on projects with an existing DB.</p>
 
@@ -192,18 +192,18 @@ subtitle: 'sbt flywayMigrate'
         </td>
     </tr>
     <tr>
-        <td>flywayInitVersion</td>
+        <td>flywayBaselineVersion</td>
         <td>NO</td>
         <td>1</td>
-        <td>The initial version to put in the database</td>
+        <td>The version to tag an existing schema with when executing baseline</td>
     </tr>
     <tr>
-        <td>flywayInitDescription</td>
+        <td>flywayBaselineDescription</td>
         <td>NO</td>
         <td>
-            <nobr>&lt;&lt; Flyway Init &gt;&gt;</nobr>
+            <nobr>&lt;&lt; Flyway Baseline &gt;&gt;</nobr>
         </td>
-        <td>The description of the initial version</td>
+        <td>The description to tag an existing schema with when executing baseline</td>
     </tr>
     </tbody>
 </table>
@@ -254,11 +254,11 @@ flywayValidateOnMigrate := true
 
 flywayCleanOnValidationError := false
 
-flywayInitOnMigrate := false
+flywayBaselineOnMigrate := false
 
-flywayInitVersion := "5"
+flywayBaselineVersion := "5"
 
-flywayInitDescription := "Let's go!"</pre>
+flywayBaselineDescription := "Let's go!"</pre>
 
 <h2>Sample output</h2>
 <pre class="console">&gt; sbt flywayMigrate

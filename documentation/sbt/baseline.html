@@ -1,15 +1,15 @@
 ---
 layout: sbt
-pill: init
-subtitle: 'sbt flywayInit'
+pill: baseline
+subtitle: 'sbt flywayBaseline'
 ---
-<div id="sbtInit">
-    <h1>SBT Task: flywayInit</h1>
+<div id="sbtBaseline">
+    <h1>SBT Task: flywayBaseline</h1>
 
-    <p>Creates and initializes the metadata table in the schema. </p>
+    <p>Baselines an existing database, excluding all migrations up to and including baselineVersion.</p>
 
     <h2>Usage</h2>
-    <pre class="console">&gt; sbt flywayInit</pre>
+    <pre class="console">&gt; sbt flywayBaseline</pre>
 
     <h2>Configuration</h2>
     <table class="table table-bordered table-hover">
@@ -75,18 +75,18 @@ subtitle: 'sbt flywayInit'
                 implementations to use to hook into the Flyway lifecycle.</td>
         </tr>
         <tr>
-            <td>flywayInitVersion</td>
+            <td>flywayBaselineVersion</td>
             <td>NO</td>
             <td>1</td>
-            <td>The initial version to put in the database</td>
+            <td>The version to tag an existing schema with when executing baseline</td>
         </tr>
         <tr>
-            <td>flywayInitDescription</td>
+            <td>flywayBaselineDescription</td>
             <td>NO</td>
             <td>
-                <nobr>&lt;&lt; Flyway Init &gt;&gt;</nobr>
+                <nobr>&lt;&lt; Flyway Baseline &gt;&gt;</nobr>
             </td>
-            <td>The description of the initial version</td>
+            <td>The description to tag an existing schema with when executing baseline</td>
         </tr>
         </tbody>
     </table>
@@ -107,14 +107,14 @@ flywayTable := "schema_history"
 
 flywayCallbacks := Seq("com.mycompany.CustomCallback", "com.mycompany.AnotherCallback")
 
-flywayInitVersion := "5"
+flywayBaselineVersion := "5"
 
-flywayInitDescription := "Let's go!"</pre>
+flywayBaselineDescription := "Let's go!"</pre>
     <h2>Sample output</h2>
-    <pre class="console">&gt; sbt flywayInit
+    <pre class="console">&gt; sbt flywayBaseline
 
 [info] Creating Metadata table: "PUBLIC"."schema_version"
-[info] Schema initialized with version: 0</pre>
+[info] Schema baselined with version: 1</pre>
 
     <p class="next-steps">
         <a class="btn btn-primary" href="/documentation/sbt/repair.html">SBT: repair <i class="fa fa-arrow-right"></i></a>

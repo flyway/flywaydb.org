@@ -1,15 +1,15 @@
 ---
 layout: gradle
-pill: init
-subtitle: 'gradle flywayInit'
+pill: baseline
+subtitle: 'gradle flywayBaseline'
 ---
-<div id="gradleInit">
-    <h1>Gradle Task: flywayInit</h1>
+<div id="gradleBaseline">
+    <h1>Gradle Task: flywayBaseline</h1>
 
-    <p>Creates and initializes the metadata table in the schema. </p>
+    <p>Baselines an existing database, excluding all migrations up to and including baselineVersion.</p>
 
     <h2>Usage</h2>
-    <pre class="console">&gt; gradle flywayInit</pre>
+    <pre class="console">&gt; gradle flywayBaseline</pre>
 
     <h2>Configuration</h2>
     <table class="table table-bordered table-hover">
@@ -75,18 +75,18 @@ subtitle: 'gradle flywayInit'
                 implementations to use to hook into the Flyway lifecycle.</td>
         </tr>
         <tr>
-            <td>initVersion</td>
+            <td>baselineVersion</td>
             <td>NO</td>
             <td>1</td>
-            <td>The initial version to put in the database</td>
+            <td>The version to tag an existing schema with when executing baseline</td>
         </tr>
         <tr>
-            <td>initDescription</td>
+            <td>baselineDescription</td>
             <td>NO</td>
             <td>
-                <nobr>&lt;&lt; Flyway Init &gt;&gt;</nobr>
+                <nobr>&lt;&lt; Flyway Baseline &gt;&gt;</nobr>
             </td>
-            <td>The description of the initial version</td>
+            <td>The description to tag an existing schema with when executing baseline</td>
         </tr>
         </tbody>
     </table>
@@ -99,14 +99,14 @@ subtitle: 'gradle flywayInit'
     schemas = ['schema1', 'schema2', 'schema3']
     table = 'schema_history'
     callbacks = ['com.mycompany.project.CustomCallback', 'com.mycompany.project.AnotherCallback']
-    initVersion = 5
-    initDescription = "Let's go!"
+    baselineVersion = 5
+    baselineDescription = "Let's go!"
 }</pre>
     <h2>Sample output</h2>
-    <pre class="console">&gt; gradle flywayInit -i
+    <pre class="console">&gt; gradle flywayBaseline -i
 
 Creating Metadata table: "PUBLIC"."schema_version"
-Schema initialized with version: 0</pre>
+Schema baselined with version: 1</pre>
 
     <p class="next-steps">
         <a class="btn btn-primary" href="/documentation/gradle/repair.html">Gradle: repair <i class="fa fa-arrow-right"></i></a>

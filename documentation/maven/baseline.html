@@ -1,15 +1,15 @@
 ---
 layout: maven
-pill: init
-subtitle: 'mvn flyway:init'
+pill: baseline
+subtitle: 'mvn flyway:baseline'
 ---
-<div id="mavenGoalInit">
-    <h1>Maven Goal: Init</h1>
+<div id="mavenGoalBaseline">
+    <h1>Maven Goal: Baseline</h1>
 
-    <p>Creates and initializes the metadata table in the schema. </p>
+    <p>Baselines an existing database, excluding all migrations up to and including baselineVersion.</p>
 
     <h2>Usage</h2>
-    <pre class="console">&gt; mvn flyway:init</pre>
+    <pre class="console">&gt; mvn flyway:baseline</pre>
 
     <h2>Configuration</h2>
     <table class="table table-bordered table-hover">
@@ -84,18 +84,18 @@ subtitle: 'mvn flyway:init'
                 implementations to use to hook into the Flyway lifecycle.</td>
         </tr>
         <tr>
-            <td>initVersion</td>
+            <td>baselineVersion</td>
             <td>NO</td>
             <td>1</td>
-            <td>The initial version to put in the database</td>
+            <td>The version to tag an existing schema with when executing baseline</td>
         </tr>
         <tr>
-            <td>initDescription</td>
+            <td>baselineDescription</td>
             <td>NO</td>
             <td>
-                <nobr>&lt;&lt; Flyway Init &gt;&gt;</nobr>
+                <nobr>&lt;&lt; Flyway Baseline &gt;&gt;</nobr>
             </td>
-            <td>The description of the initial version</td>
+            <td>The description to tag an existing schema with when executing baseline</td>
         </tr>
         <tr>
             <td>skip</td>
@@ -129,17 +129,17 @@ subtitle: 'mvn flyway:init'
         &lt;callback&gt;com.mycompany.project.CustomCallback&lt;/callback&gt;
         &lt;callback&gt;com.mycompany.project.AnotherCallback&lt;/callback&gt;
     &lt;/callbacks&gt;
-    &lt;initVersion&gt;1.0&lt;/initVersion&gt;
-    &lt;initDescription&gt;Base Migration&lt;/initDescription&gt;
+    &lt;baselineVersion&gt;1.0&lt;/baselineVersion&gt;
+    &lt;baselineDescription&gt;Base Migration&lt;/baselineDescription&gt;
     &lt;skip&gt;false&lt;/skip&gt;
     &lt;configFile&gt;myConfig.properties&lt;/configFile&gt;
 &lt;/configuration&gt;</pre>
     <h2>Sample output</h2>
-    <pre class="console">&gt; mvn flyway:init
+    <pre class="console">&gt; mvn flyway:baseline
 
-[INFO] [flyway:init {execution: default-cli}]
+[INFO] [flyway:baseline {execution: default-cli}]
 [INFO] Creating Metadata table: "PUBLIC"."schema_version"
-[INFO] Schema initialized with version: 0</pre>
+[INFO] Schema baselined with version: 1</pre>
 
     <p class="next-steps">
         <a class="btn btn-primary" href="/documentation/maven/repair.html">Maven: repair <i class="fa fa-arrow-right"></i></a>

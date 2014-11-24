@@ -186,13 +186,13 @@ subtitle: 'Ant Task: Migrate'
         </td>
     </tr>
     <tr>
-        <td>initOnMigrate</td>
+        <td>baselineOnMigrate</td>
         <td>NO</td>
         <td>false</td>
-        <td>Whether to automatically call init when migrate is executed against a non-empty schema with no metadata
+        <td>Whether to automatically call baseline when migrate is executed against a non-empty schema with no metadata
             table.
-            This schema will then be initialized with the <code>initVersion</code> before executing the migrations.
-            Only migrations above <code>initVersion</code> will then be applied.<br/>
+            This schema will then be baselined with the <code>baselineVersion</code> before executing the migrations.
+            Only migrations above <code>baselineVersion</code> will then be applied.<br/>
 
             <p>This is useful for initial Flyway production deployments on projects with an existing DB.</p>
 
@@ -201,16 +201,16 @@ subtitle: 'Ant Task: Migrate'
         </td>
     </tr>
     <tr>
-        <td>initVersion</td>
+        <td>baselineVersion</td>
         <td>NO</td>
         <td>1</td>
-        <td>The initial version to put in the database</td>
+        <td>The version to tag an existing schema with when executing baseline</td>
     </tr>
     <tr>
-        <td>initDescription</td>
+        <td>baselineDescription</td>
         <td>NO</td>
-        <td><nobr>&lt;&lt; Flyway Init &gt;&gt;</nobr></td>
-        <td>The description of the initial version</td>
+        <td><nobr>&lt;&lt; Flyway Baseline &gt;&gt;</nobr></td>
+        <td>The description to tag an existing schema with when executing baseline</td>
     </tr>
     <tr>
         <td>classpath</td>
@@ -253,9 +253,9 @@ subtitle: 'Ant Task: Migrate'
 &lt;property name=&quot;flyway.outOfOrder&quot; value=&quot;false&quot;/&gt;
 &lt;property name=&quot;flyway.validateOnMigrate&quot; value=&quot;true&quot;/&gt;
 &lt;property name=&quot;flyway.cleanOnValidationError&quot; value=&quot;false&quot;/&gt;
-&lt;property name=&quot;flyway.initOnMigrate&quot; value=&quot;false&quot;/&gt;
-&lt;property name=&quot;flyway.initVersion&quot; value=&quot;1.0&quot;/&gt;
-&lt;property name=&quot;flyway.initDescription&quot; value=&quot;Base Migration&quot;/&gt;</pre>
+&lt;property name=&quot;flyway.baselineOnMigrate&quot; value=&quot;false&quot;/&gt;
+&lt;property name=&quot;flyway.baselineVersion&quot; value=&quot;1.0&quot;/&gt;
+&lt;property name=&quot;flyway.baselineDescription&quot; value=&quot;Base Migration&quot;/&gt;</pre>
 
 <h2>Sample output</h2>
 <pre class="console">[flyway:migrate] Creating Metadata table: schema_version (Schema: PUBLIC)
