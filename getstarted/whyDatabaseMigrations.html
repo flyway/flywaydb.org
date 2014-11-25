@@ -6,13 +6,11 @@ title: Why Database Migrations
 <div id="whyDatabaseMigrations">
     <h1>Why database migration tools?</h1>
 
-    <p>First, let&#x27;s start from the beginning. Assuming we have a project called <i>Shiny</i> and it&#x27;s primary
+    <p>First, let's start from the beginning and assume we have a project called <i>Shiny</i> and it's primary
         deliverable is a piece of software called <i>Shiny Soft</i> that connects to a database called <i>Shiny DB</i>.
     </p>
 
     <p>The simplest diagram to represent this could look something like this: </p>
-
-    <p>
 
     <p align="center"><img src="/assets/balsamiq/SimpleView.png"/></p>
     <p>We have our
@@ -20,27 +18,20 @@ title: Why Database Migrations
 
     <p>But on most projects, this simple view of the world very quickly translates into this: </p>
 
-    <p>
-
     <p align="center"><img src="/assets/balsamiq/Environments.png"/></p> <p>We now not
     only have to deal with one copy of our environment, but with several. This presents a number of challenges. </p>
 
     <p><strong>We have been pretty good at solving them on the code side.</strong></p>
 
-    <p>
-
-    <p align="center"><img src="/assets/balsamiq/SoftGreen.png"/></p>
     <ul>
         <li>Version control is now universal with better tools everyday.</li>
-        <li>We have Maven and Hudson for reproducible builds and continuous integration.</li>
-        <li>We have the maven release plugin for tagging and releasing new versions.</li>
-        <li>...</li>
+        <li>We have reproducible builds and continuous integration.</li>
+        <li>We have well defined release and deployment processes.</li>
     </ul>
+    <p><img src="/assets/balsamiq/SoftGreen.png"/></p>
     <p><strong>But what about the database?</strong></p>
 
-    <p>
-
-    <p align="center"><img src="/assets/balsamiq/DbRed.png"/></p> <p>Well unfortunately
+    <p><img src="/assets/balsamiq/DbRed.png"/></p> <p>Well unfortunately
     we have not been doing so well there. Many projects still rely on manually applied sql scripts. And sometimes not
     even that (a quick sql statement here or there to fix a problem). And soon many questions arise:</p>
     <ul>
