@@ -11,12 +11,29 @@ title: Documentation
                     <li
                     {% if page.menu == 'overview' %} class="active" {% endif %}>
                     <a href="/documentation">Overview</a></li>
+                    <li class="nav-header">Commands</li>
+                    <li
+                    {% if page.menu == 'migrate' %} class="active" {% endif %}>
+                    <a href="/documentation/command/migrate.html">Migrate</a></li>
+                    <li
+                    {% if page.menu == 'clean' %} class="active" {% endif %}>
+                    <a href="/documentation/command/clean.html">Clean</a></li>
+                    <li
+                    {% if page.menu == 'info' %} class="active" {% endif %}>
+                    <a href="/documentation/command/info.html">Info</a></li>
+                    <li
+                    {% if page.menu == 'validate' %} class="active" {% endif %}>
+                    <a href="/documentation/command/validate.html">Validate</a></li>
+                    <li
+                    {% if page.menu == 'baseline' %} class="active" {% endif %}>
+                    <a href="/documentation/command/baseline.html">Baseline</a></li>
+                    <li
+                    {% if page.menu == 'repair' %} class="active" {% endif %}>
+                    <a href="/documentation/command/repair.html">Repair</a></li>
+                    <li class="nav-header">Concepts</li>
                     <li
                     {% if page.menu == 'migration' %} class="active" {% endif %}>
                     <a href="/documentation/migration">Migrations</a></li>
-                    <li
-                    {% if page.menu == 'existingDatabaseSetup' %} class="active" {% endif %}>
-                    <a href="/documentation/existingDatabaseSetup.html">Existing database setup</a></li>
                     <li class="nav-header">Execution Modes</li>
                     <li
                     {% if page.menu == 'commandLine' %} class="active" {% endif %}>
@@ -65,6 +82,12 @@ title: Documentation
                     {% if page.menu == 'postgreSql' %} class="active" {% endif %}>
                     <a href="/documentation/database/postgresql.html">PostgreSQL</a></li>
                     <li
+                    {% if page.menu == 'redshift' %} class="active" {% endif %}>
+                    <a href="/documentation/database/redshift.html">Redshift</a></li>
+                    <li
+                    {% if page.menu == 'vertica' %} class="active" {% endif %}>
+                    <a href="/documentation/database/vertica.html">Vertica</a></li>
+                    <li
                     {% if page.menu == 'h2' %} class="active" {% endif %}>
                     <a href="/documentation/database/h2.html">H2</a></li>
                     <li
@@ -76,17 +99,13 @@ title: Documentation
                     <li
                     {% if page.menu == 'sqlite' %} class="active" {% endif %}>
                     <a href="/documentation/database/sqlite.html">SQLite</a></li>
-                    <li
-                    {% if page.menu == 'redshift' %} class="active" {% endif %}>
-                    <a href="/documentation/database/redshift.html">Redshift</a></li>
-                    <li
-                    {% if page.menu == 'vertica' %} class="active" {% endif %}>
-                    <a href="/documentation/database/vertica.html">Vertica</a></li>
-                    <li class="nav-header">Extensions</li>
-                    <li
-                    {% if page.menu == 'thirdParty' %} class="active" {% endif %}>
-                    <a href="/documentation/pluginsThirdParty.html">Third Party plugins</a></li>
                     <li class="nav-header">Learn more</li>
+                    <li
+                    {% if page.menu == 'existing' %} class="active" {% endif %}>
+                    <a href="/documentation/existing.html">Existing database setup</a></li>
+                    <li
+                    {% if page.menu == 'plugins' %} class="active" {% endif %}>
+                    <a href="/documentation/plugins.html">Tool &amp; Framework Plugins</a></li>
                     <li
                     {% if page.menu == 'articles' %} class="active" {% endif %}>
                     <a href="/documentation/articles.html">Articles</a></li>

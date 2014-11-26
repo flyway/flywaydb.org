@@ -1,6 +1,6 @@
 ---
 layout: documentation
-menu: existingDatabaseSetup
+menu: existing
 subtitle: Existing Database Setup
 ---
 <div id="databaseSetupExisting">
@@ -27,7 +27,7 @@ subtitle: Existing Database Setup
         everywhere.</p>
 
     <p>For all databases with unimportant data you don't mind losing, perform</p>
-    <pre class="prettyprint">mvn flyway:clean</pre>
+    <pre class="console">&gt; flyway clean</pre>
     <p>to completely remove their contents. </p>
 
     <h3>Align the remaining databases with production</h3>
@@ -36,25 +36,27 @@ subtitle: Existing Database Setup
         production exactly. This step is important, as all scripts destined for production will be applied here first.
         For the scripts to succeed, the objects they migrate must be identical to what is present in production. </p>
 
-    <h3>Give these databases an initial version</h3>
+    <h3>Give these databases a baseline version</h3>
 
-    <p>Now comes the time to initializes the databases that contain data (including production) with an initial version
-        number. Use the same version number and description you used for the production extract script created
-        above. </p>
+    <p>Now comes the time to baseline the databases that contain data (including production) with a baseline version.
+        Use the same version and description you used for the production extract script created above. </p>
 
     <p>You can accomplish it like this: </p>
-    <pre class="prettyprint">mvn flyway:init -Dflyway.initVersion=1 -Dflyway.initDescription=&quot;Base version&quot;</pre>
-    <p>You must perform this step for each database that hasn&#x27;t been cleaned. </p>
+    <pre class="console">&gt; flyway baseline -Dflyway.baselineVersion=1 -Dflyway.baselineDescription=&quot;Base version&quot;</pre>
+    <p>You must perform this step for each database that hasn't been cleaned. </p>
 
     <h3>Done !</h3>
 
     <p>Congratulations ! You are now ready. </p>
 
-    <p>If you execute your application with <a href="/documentation/api">Flyway integrated</a>, the
-        empty databases will be migrated to the state of production and the others will be left as is.<br/> As soon
-        as you add a new migration, it will be applied identically to all databases. </p>
+    <p>When you execute</p>
+
+    <pre class="console">&gt; flyway migrate</pre>
+
+    <p>the empty databases will be migrated to the state of production and the others will be left as is.<br/> As soon
+        as you add a new migration, it will be applied identically to all databases.</p>
 
     <p class="next-steps">
-        <a class="btn btn-primary" href="/documentation/commandline">Command-line <i class="fa fa-arrow-right"></i></a>
+        <a class="btn btn-primary" href="/documentation/plugins.html">Tool &amp; Framework Plugins <i class="fa fa-arrow-right"></i></a>
     </p>
 </div>
