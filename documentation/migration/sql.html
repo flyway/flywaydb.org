@@ -50,6 +50,12 @@ subtitle: SQL Migrations
         <li>Database-specific SQL syntax extensions (PL/SQL, T-SQL, ...)</li>
     </ul>
 
+    <h2 id="placeholders">Placeholder replacement</h2>
+    <p>Flyway supports placeholder replacement with configurable pre- and suffixes. By default it looks for Ant-style
+    placeholders like ${myplaceholder}.</p>
+
+    <p>This can be very useful to abstract differences between environments.</p>
+
     <h2>Sample Script</h2>
     <pre class="prettyprint">/* Single line comment */
 CREATE TABLE test_user (
