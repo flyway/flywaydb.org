@@ -16,7 +16,8 @@
     width: 100% !important;
     margin-top: -60px;
     padding-top: 60px;
-    margin-bottom: 50px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
     font-size: 12px;
 }
 
@@ -33,7 +34,8 @@
 }
 
 #big-sell #tagline {
-    margin-top: 40px;
+    margin-top: 15px;
+    font-size: 16px;
 }
 
 #big-sell #details a {
@@ -75,8 +77,9 @@
 }
 
 #tagline-long {
+    margin-top: 20px;
     margin-bottom: 30px;
-    font-size: 24px;
+    font-size: 32px;
 }
 
 #top3 {
@@ -192,6 +195,49 @@ hr.soften {
     color: #000000;
     font-size: 28px;
     vertical-align: bottom;
+}
+
+#testimonial blockquote {
+    border-left: 0;
+    margin-top: 20px;
+    padding: 0.5em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+    font-style: italic;
+    font-size: 20px;
+    line-height: 150%;
+    color: #888;
+}
+#testimonial blockquote:before {
+    color: #ccc;
+    width: 28px;
+    content: "\201C";
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+}
+#testimonial blockquote p {
+    display: inline;
+}
+
+.marketing-testimonial,
+.marketing-testimonial-right {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+#testimonial img {
+    margin-top: 75px;
+    width: 120px;
+}
+
+#testimonial p {
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+#testimonial .marketing-testimonial-right {
+    text-align: right;
 }
 
 #databases .row .marketing-item {
@@ -329,6 +375,10 @@ i {
 .btn i {
     color: #ffffff;
     padding-left: 10px;
+}
+
+.btn-primary i {
+    color: #ffffff !important;
 }
 
 #apiJavadoc iframe {
