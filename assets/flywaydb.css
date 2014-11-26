@@ -33,9 +33,8 @@
     line-height: 150%;
 }
 
-#big-sell #tagline {
-    margin-top: 15px;
-    font-size: 16px;
+#tagline {
+    margin-top: 100px;
 }
 
 #big-sell #details a {
