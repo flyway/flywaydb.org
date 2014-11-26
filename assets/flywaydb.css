@@ -417,6 +417,15 @@ i {
     float: right;
 }
 
+#blog-sidebar {
+    color: #888;
+    margin-top: -10px;
+}
+
+#blog-sidebar #mce-EMAIL {
+    margin-top: 10px;
+}
+
 .center {
     text-align: center;
 }
