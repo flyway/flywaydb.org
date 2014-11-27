@@ -1,14 +1,19 @@
 ---
 layout: migration
 pill: overview
-subtitle: Migrations
+subtitle: Migrations & Versions
 ---
 <div id="migrations">
-    <h1>Migrations</h1>
+    <h1>Migrations &amp; Versions</h1>
 
     <p>Flyway updates the database from one version to the next using <strong>migrations</strong>.</p>
 
-    <p>Each migration must have a <strong>unique version</strong> and a description.</p>
+    <h2>Available vs Applied Migrations</h2>
+
+    <p>Migrations are either Available or Applied. Available migrations have been detected by Flyway's filesystem
+        and classpath scanner. Once they are executed against the database, they become Applied.</p>
+
+    <h2>Migration types</h2>
 
     <p>Not all migrations are equally complex, therefore Flyway support both <a
             href="/documentation/migration/sql.html">Sql</a> and <a href="/documentation/migration/java.html">Java</a> migrations.
@@ -24,6 +29,8 @@ subtitle: Migrations
     <p>Flyway <strong>sorts</strong> all migrations <strong>by version</strong> and executes them in order.</p>
 
     <h2 id="versions">Versions</h2>
+
+    <p>Each migration must have a <strong>unique version</strong> and a description.</p>
 
     <p>A version must have the following structure:</p>
 

@@ -1,0 +1,69 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1186" measuredH="466" mockupW="786" mockupH="248">
+  <controls>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::FieldSet" x="400" y="218" w="304" h="248" measuredW="200" measuredH="170" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Database</text>
+      </controlProperties>
+    </control>
+    <control controlID="18" controlTypeID="com.balsamiq.mockups::Icon" x="483" y="342" w="-1" h="-1" measuredW="48" measuredH="48" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>2848996</color>
+        <icon>TableIcon%7Clarge</icon>
+      </controlProperties>
+    </control>
+    <control controlID="19" controlTypeID="com.balsamiq.mockups::Icon" x="641" y="396" w="-1" h="-1" measuredW="48" measuredH="48" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>2848996</color>
+        <icon>TableIcon%7Clarge</icon>
+      </controlProperties>
+    </control>
+    <control controlID="20" controlTypeID="com.balsamiq.mockups::Icon" x="600" y="250" w="-1" h="-1" measuredW="48" measuredH="48" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>2848996</color>
+        <icon>TableIcon%7Clarge</icon>
+      </controlProperties>
+    </control>
+    <control controlID="54" controlTypeID="com.balsamiq.mockups::Icon" x="731" y="277" w="-1" h="-1" measuredW="128" measuredH="128" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>%24ACCOUNT/assets/icon_long-arrow-right.png%7Cxxlarge</icon>
+      </controlProperties>
+    </control>
+    <control controlID="60" controlTypeID="com.balsamiq.mockups::FieldSet" x="882" y="218" w="304" h="248" measuredW="200" measuredH="170" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Database</text>
+      </controlProperties>
+    </control>
+    <control controlID="61" controlTypeID="com.balsamiq.mockups::IconLabel" x="907" y="251" w="-1" h="-1" measuredW="120" measuredH="63" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>3700253</color>
+        <icon>TableIcon%7Clarge</icon>
+        <text>SCHEMA_VERSION</text>
+      </controlProperties>
+    </control>
+    <control controlID="62" controlTypeID="com.balsamiq.mockups::Icon" x="965" y="342" w="-1" h="-1" measuredW="48" measuredH="48" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>2848996</color>
+        <icon>TableIcon%7Clarge</icon>
+      </controlProperties>
+    </control>
+    <control controlID="63" controlTypeID="com.balsamiq.mockups::Icon" x="1123" y="396" w="-1" h="-1" measuredW="48" measuredH="48" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>2848996</color>
+        <icon>TableIcon%7Clarge</icon>
+      </controlProperties>
+    </control>
+    <control controlID="64" controlTypeID="com.balsamiq.mockups::Icon" x="1082" y="250" w="-1" h="-1" measuredW="48" measuredH="48" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>2848996</color>
+        <icon>TableIcon%7Clarge</icon>
+      </controlProperties>
+    </control>
+    <control controlID="65" controlTypeID="com.balsamiq.mockups::IconLabel" x="426" y="243" w="-1" h="-1" measuredW="120" measuredH="63" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>6684672</color>
+        <icon>TableIcon%7Clarge</icon>
+        <text>SCHEMA_VERSION</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

@@ -11,7 +11,7 @@ subtitle: Command-line - First Steps
         <li>Java 6+</li>
     </ul>
 
-    <h2>Downloading and extracting Flyway and H2</h2>
+    <h2>Downloading and extracting Flyway</h2>
 
     <p>We start by <a href="http://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{ site.flywayVersion }}/flyway-commandline-{{ site.flywayVersion }}.zip">downloading the Flyway Command-line Distribution</a> and extracting it.</p>
 
@@ -19,11 +19,9 @@ subtitle: Command-line - First Steps
 
     <pre class="console">&gt; cd flyway-{{ site.flywayVersion }}</pre>
 
-    <p>We then <a href="http://repo1.maven.org/maven2/com/h2database/h2/1.3.170/h2-1.3.170.jar">download the H2 jar</a> and place it in the <code>/jars</code> subdirectory.</p>
-
     <h2>Configuring Flyway</h2>
 
-    <p>We can now configure Flyway by editing <code>/conf/flyway.properties</code> to make it look like this:</p>
+    <p>We can now configure Flyway by editing <code>/conf/flyway.properties</code> like this:</p>
     <pre class="prettyprint">flyway.url=jdbc:h2:file:./foobardb
 flyway.user=SA</pre>
 

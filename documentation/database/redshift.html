@@ -1,0 +1,61 @@
+---
+layout: documentation
+menu: redshift
+subtitle: Redshift
+---
+<div id="databaseRedshift">
+    <h1>AWS Redshift</h1>
+
+    <h2>Default Driver</h2>
+    <ul>
+        <li>org.postgresql.Driver</li>
+    </ul>
+
+    <h2>Sql Script Syntax</h2>
+    <ul>
+        <li><a href="/documentation/migration/sql.html#syntax">Standard Sql
+            syntax</a> with statement delimiter ;
+        </li>
+        <li>Dollar-quoted string constants</li>
+    </ul>
+    <h3>Compatibility</h3>
+    <ul>
+        <li>Although Redshift does not provide its own schema export tool, any DDL exported by pg_dump can be used
+            unchanged in a Flyway migration. Please note that Redshift does not support exporting data using
+            pg_dump, so you must export only the schema, using <code>pg_dump -s</code>.
+        </li>
+        <li>Although Redshift does not provide its own SQL client tool, any Redshift SQL script executed by Flyway,
+            can be executed by the PostgreSQL command-line tool and other PostgreSQL-compatible tools,
+            such as SQL Workbench/J (after the placeholders have been replaced).
+        </li>
+    </ul>
+    <h3>Example</h3>
+    <pre class="prettyprint">/* Single line comment */
+CREATE TABLE test_data (
+  test_id INT IDENTITY NOT NULL PRIMARY KEY,
+  value VARCHAR(25) NOT NULL
+);
+
+/*
+Multi-line
+comment
+*/
+INSERT INTO test_data (value) VALUES (&#x27;Hello&#x27;);
+
+CREATE VIEW value_only AS SELECT value FROM test_data;
+
+
+CREATE TABLE another_table AS SELECT &#x27;some-data&#x27; as name;
+
+-- Placeholder
+INSERT INTO ${tableName} (name) VALUES (&#x27;Mr. T&#x27;);</pre>
+
+    <h2>Limitations</h2>
+    <ul>
+        <li><i>None</i></li>
+    </ul>
+
+    <p class="next-steps">
+        <a class="btn btn-primary" href="/documentation/database/vertica.html">Vertica <i class="fa fa-arrow-right"></i></a>
+    </p>
+</div>

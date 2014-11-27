@@ -182,13 +182,13 @@ subtitle: 'Command-line: migrate'
             </td>
         </tr>
         <tr>
-            <td>initOnMigrate</td>
+            <td>baselineOnMigrate</td>
             <td>NO</td>
             <td>false</td>
-            <td>Whether to automatically call init when migrate is executed against a non-empty schema with no metadata
+            <td>Whether to automatically call baseline when migrate is executed against a non-empty schema with no metadata
                 table.
-                This schema will then be initialized with the <code>initVersion</code> before executing the migrations.
-                Only migrations above <code>initVersion</code> will then be applied.<br/>
+                This schema will then be baselined with the <code>baselineVersion</code> before executing the migrations.
+                Only migrations above <code>baselineVersion</code> will then be applied.<br/>
 
                 <p>This is useful for initial Flyway production deployments on projects with an existing DB.</p>
 
@@ -197,18 +197,18 @@ subtitle: 'Command-line: migrate'
             </td>
         </tr>
         <tr>
-            <td>initVersion</td>
+            <td>baselineVersion</td>
             <td>NO</td>
             <td>1</td>
-            <td>The initial version to put in the database</td>
+            <td>The version to tag an existing schema with when executing baseline</td>
         </tr>
         <tr>
-            <td>initDescription</td>
+            <td>baselineDescription</td>
             <td>NO</td>
             <td>
-                <nobr>&lt;&lt; Flyway Init &gt;&gt;</nobr>
+                <nobr>&lt;&lt; Flyway Baseline &gt;&gt;</nobr>
             </td>
-            <td>The description of the initial version</td>
+            <td>The description to tag an existing schema with when executing baseline</td>
         </tr>
         </tbody>
     </table>
@@ -235,7 +235,7 @@ flyway.target=5.1
 flyway.outOfOrder=false
 flyway.validateOnMigrate=true
 flyway.cleanOnValidationError=false
-flyway.initOnMigrate=false</pre>
+flyway.baselineOnMigrate=false</pre>
 
     <h2>Sample output</h2>
     <pre class="console">&gt; flyway migrate

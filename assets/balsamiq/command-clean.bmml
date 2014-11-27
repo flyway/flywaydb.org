@@ -1,0 +1,44 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1178" measuredH="467" mockupW="778" mockupH="249">
+  <controls>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::FieldSet" x="400" y="218" w="304" h="248" measuredW="200" measuredH="170" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Database</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::IconLabel" x="425" y="251" w="-1" h="-1" measuredW="120" measuredH="63" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>3700253</color>
+        <icon>TableIcon%7Clarge</icon>
+        <text>SCHEMA_VERSION</text>
+      </controlProperties>
+    </control>
+    <control controlID="18" controlTypeID="com.balsamiq.mockups::Icon" x="483" y="342" w="-1" h="-1" measuredW="48" measuredH="48" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>2848996</color>
+        <icon>TableIcon%7Clarge</icon>
+      </controlProperties>
+    </control>
+    <control controlID="19" controlTypeID="com.balsamiq.mockups::Icon" x="641" y="396" w="-1" h="-1" measuredW="48" measuredH="48" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>2848996</color>
+        <icon>TableIcon%7Clarge</icon>
+      </controlProperties>
+    </control>
+    <control controlID="20" controlTypeID="com.balsamiq.mockups::Icon" x="600" y="250" w="-1" h="-1" measuredW="48" measuredH="48" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>2848996</color>
+        <icon>TableIcon%7Clarge</icon>
+      </controlProperties>
+    </control>
+    <control controlID="54" controlTypeID="com.balsamiq.mockups::Icon" x="731" y="277" w="-1" h="-1" measuredW="128" measuredH="128" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>%24ACCOUNT/assets/icon_long-arrow-right.png%7Cxxlarge</icon>
+      </controlProperties>
+    </control>
+    <control controlID="55" controlTypeID="com.balsamiq.mockups::FieldSet" x="874" y="219" w="304" h="248" measuredW="200" measuredH="170" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Database</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

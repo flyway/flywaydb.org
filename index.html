@@ -6,10 +6,12 @@ tab: home
     <div class="container">
         <div class="row">
             <div class="span12">
-                <img src="assets/logo/flyway-logo-transparent-300.png" alt="Flyway"/>
-                <p id="tagline" class="strong-heading">
-                    <span>Database Migrations<br/>Made Easy.</span>
-                </p>
+                <img src="assets/logo/flyway-logo-tm.png" alt="Flyway"/>
+
+                <div id="tagline-long" class="strong-heading">
+                    Evolve your Database Schema easily and <br/> reliably across all your instances
+                </div>
+
 
                 <p>
                     <a class="btn btn-primary btn-large btn-jumbo" href="/getstarted">Get Started with Flyway
@@ -18,21 +20,23 @@ tab: home
 
                 <p id="links">
                     <a href="/getstarted/download.html">Download</a> -
-                    <a href="/documentation/releaseNotes.html">Release Notes</a>
+                    <a href="/documentation/releaseNotes.html">Release Notes</a> -
+                    <a href="https://github.com/flyway/flyway/blob/master/LICENSE">Apache v2 license</a>
                 </p>
 
                 <p id="worksOn">
                     Works on:
-                    <i class="fa fa-coffee" title="Java"></i>
-                    <i class="fa fa-android" title="Android"></i>
                     <i class="fa fa-windows" title="Windows"></i>
                     <i class="fa fa-apple" title="Mac OSX"></i>
                     <i class="fa fa-linux" title="Linux"></i>
+                    <i class="fa fa-coffee" title="Java"></i>
+                    <i class="fa fa-android" title="Android"></i>
                 </p>
 
                 <p id="news">
                     {% assign post = site.posts | first %}
-                    <strong>Latest News:</strong> <a href="{{ post.permalink }}">{{ post.subtitle | xml_escape }} ({{ post.date | date: "%Y-%m-%d" }})</a>
+                    <strong>Latest News:</strong> <a href="{{ post.permalink }}">{{ post.subtitle | xml_escape }}
+                    ({{ post.date | date: "%Y-%m-%d" }})</a>
                 </p>
 
                 <p id="social">
@@ -45,45 +49,54 @@ tab: home
     </div>
 </div>
 <div class="container">
-<div id="tagline-long" class="strong-heading">
-    Evolve your database schema easily and reliably<br/>across all your instances.
-</div>
-<div id="top3" class="row">
-    <div class="span4">
-        <i class="fa fa-thumbs-up"></i>
-        <p class="strong-heading">Simple</p>
+    <div id="tagline" class="marketing-section-head">Database Migrations made Easy.</div>
+
+    <div class="marketing-section-sub">Version control for your database so you can migrate it with ease and confidence</div>
+
+    <div id="top3" class="row">
+        <div class="span4">
+            <i class="fa fa-thumbs-up"></i>
+
+            <p class="strong-heading">Simple</p>
+        </div>
+        <div class="span4">
+            <i class="fa fa-crosshairs"></i>
+
+            <p class="strong-heading">Focused</p>
+        </div>
+        <div class="span4">
+            <i class="fa fa-rocket"></i>
+
+            <p class="strong-heading">Powerful</p>
+        </div>
     </div>
-    <div class="span4">
-        <i class="fa fa-crosshairs"></i>
-        <p class="strong-heading">Focused</p>
+    <div id="top3details" class="row">
+        <div class="span4">
+            <p>Easy to setup, simple to master. Flyway lets you regain control of your database migrations with pleasure
+                and plain sql.</p>
+        </div>
+        <div class="span4">
+            <p>Solves only one problem and solves it well. Flyway migrates your database, so you don't have to worry
+                about it anymore.</p>
+        </div>
+        <div class="span4">
+            <p>Made for continuous delivery. Let Flyway migrate your database on application startup. Releases have
+                never been this easy.</p>
+        </div>
     </div>
-    <div class="span4">
-        <i class="fa fa-rocket"></i>
-        <p class="strong-heading">Powerful</p>
+    <div id="top3buttons" class="row">
+        <div class="span4">
+            <a class="btn btn-primary" href="/getstarted/why.html">Why database migrations? <i
+                    class="fa fa-arrow-right"></i></a>
+        </div>
+        <div class="span4">
+            <a class="btn btn-primary" href="/getstarted/how.html">How does Flyway work? <i
+                    class="fa fa-arrow-right"></i></a>
+        </div>
+        <div class="span4">
+            <a class="btn btn-primary" href="/getstarted">Get started <i class="fa fa-arrow-right"></i></a>
+        </div>
     </div>
-</div>
-<div id="top3details" class="row">
-    <div class="span4">
-        <p>Easy to setup, simple to master. Flyway lets you regain control of your database migrations with pleasure and plain sql.</p>
-    </div>
-    <div class="span4">
-        <p>Solves only one problem and solves it well. Flyway migrates your database, so you don't have to worry about it anymore.</p>
-    </div>
-    <div class="span4">
-        <p>Made for continuous delivery. Let Flyway migrate your database on application startup. Releases have never been this easy.</p>
-    </div>
-</div>
-<div id="top3buttons" class="row">
-    <div class="span4">
-        <a class="btn" href="/getstarted/whyDatabaseMigrations.html">Why database migrations? <i class="fa fa-arrow-right"></i></a>
-    </div>
-    <div class="span4">
-        <a class="btn" href="/getstarted/howFlywayWorks.html">How does Flyway work? <i class="fa fa-arrow-right"></i></a>
-    </div>
-    <div class="span4">
-        <a class="btn" href="/getstarted">Get started <i class="fa fa-arrow-right"></i></a>
-    </div>
-</div>
 </div>
 
 <div id="upAndRunningBg"></div>
@@ -137,7 +150,8 @@ tab: home
 
             <p>Full support for <a
                     href="/documentation/database/sqlazure.html">Microsoft SQL Azure</a>, <a
-                    href="/documentation/database/googleCloudSql.html">Google Cloud SQL</a> &amp; App Engine, Heroku Postgres and Amazon RDS.</p>
+                    href="/documentation/database/googleCloudSql.html">Google Cloud SQL</a> &amp; App Engine, Heroku
+                Postgres and Amazon RDS.</p>
         </div>
     </div>
     <div class="row">
@@ -153,9 +167,7 @@ tab: home
             <p>Inconsistent database or failed migration prevents app from starting.</p>
         </div>
         <div class="span4">
-            <img src="assets/glyphicons/glyphicons_067_cleaning.png"/>
-
-            <div class="marketing-item">Schema Clean</div>
+            <div class="marketing-item"><i class="fa fa-eraser"></i> Schema Clean</div>
 
             <p><a href="/documentation/maven/clean.html">Drop all tables, views, triggers, ...</a> from a schema without
                 dropping the schema itself</p>
@@ -170,46 +182,40 @@ tab: home
 
     <div class="row">
         <div class="span4">
-            <img src="/assets/glyphicons/glyphicons_141_database_plus.png"/>
-
-            <div class="marketing-item"><a href="/documentation/database/oracle.html">Oracle</a></div>
+            <div class="marketing-item"><i class="fa fa-database"></i> <a href="/documentation/database/oracle.html">Oracle</a>
+            </div>
 
             <p>10g and later (all editions, including XE)</p>
         </div>
         <div class="span4">
-            <img src="/assets/glyphicons/glyphicons_141_database_plus.png"/>
-
-            <div class="marketing-item"><a href="/documentation/database/sqlserver.html">SQL Server</a></div>
+            <div class="marketing-item"><i class="fa fa-database"></i> <a href="/documentation/database/sqlserver.html">SQL
+                Server</a></div>
 
             <p>2008 and later</p>
         </div>
         <div class="span4">
-            <img src="/assets/glyphicons/glyphicons_141_database_plus.png"/>
-
-            <div class="marketing-item"><a href="/documentation/database/sqlazure.html">SQL Azure</a></div>
+            <div class="marketing-item"><i class="fa fa-database"></i> <a href="/documentation/database/sqlazure.html">SQL
+                Azure</a></div>
 
             <p>latest</p>
         </div>
     </div>
     <div class="row">
         <div class="span4">
-            <img src="/assets/glyphicons/glyphicons_141_database_plus.png"/>
-
-            <div class="marketing-item"><a href="/documentation/database/mysql.html">MySQL</a></div>
+            <div class="marketing-item"><i class="fa fa-database"></i> <a href="/documentation/database/mysql.html">MySQL</a>
+            </div>
 
             <p>5.1 and later (incl. Amazon RDS)</p>
         </div>
         <div class="span4">
-            <img src="/assets/glyphicons/glyphicons_141_database_plus.png"/>
-
-            <div class="marketing-item"><a href="/documentation/database/mariadb.html">MariaDB</a></div>
+            <div class="marketing-item"><i class="fa fa-database"></i> <a href="/documentation/database/mariadb.html">MariaDB</a>
+            </div>
 
             <p>10.0 and later</p>
         </div>
         <div class="span4">
-            <img src="/assets/glyphicons/glyphicons_141_database_plus.png"/>
-
-            <div class="marketing-item"><a href="/documentation/database/googleCloudSql.html">Google Cloud
+            <div class="marketing-item"><i class="fa fa-database"></i> <a
+                    href="/documentation/database/googleCloudSql.html">Google Cloud
                 SQL</a></div>
 
             <p>latest</p>
@@ -217,48 +223,113 @@ tab: home
     </div>
     <div class="row">
         <div class="span4">
-            <img src="/assets/glyphicons/glyphicons_141_database_plus.png"/>
-
-            <div class="marketing-item"><a href="/documentation/database/postgresql.html">PostgreSQL</a></div>
+            <div class="marketing-item"><i class="fa fa-database"></i> <a
+                    href="/documentation/database/postgresql.html">PostgreSQL</a></div>
 
             <p>9.0 and later (incl. Heroku &amp; Amazon RDS)</p>
         </div>
         <div class="span4">
-            <img src="/assets/glyphicons/glyphicons_141_database_plus.png"/>
+            <div class="marketing-item"><i class="fa fa-database"></i> <a href="/documentation/database/vertica.html">Vertica</a>
+            </div>
 
-            <div class="marketing-item"><a href="/documentation/database/h2.html">H2</a></div>
-
-            <p>1.2.137 and later</p>
+            <p>6.5 and later</p>
         </div>
         <div class="span4">
-            <img src="/assets/glyphicons/glyphicons_141_database_plus.png"/>
+            <div class="marketing-item"><i class="fa fa-database"></i> <a href="/documentation/database/redshift.html">AWS
+                Redshift</a></div>
 
-            <div class="marketing-item"><a href="/documentation/database/hsql.html">Hsql</a></div>
-
-            <p>1.8 and later</p>
+            <p>latest</p>
         </div>
     </div>
     <div class="row">
         <div class="span4">
-            <img src="/assets/glyphicons/glyphicons_141_database_plus.png"/>
-
-            <div class="marketing-item"><a href="/documentation/database/db2.html">DB2</a></div>
+            <div class="marketing-item"><i class="fa fa-database"></i> <a
+                    href="/documentation/database/db2.html">DB2</a></div>
 
             <p>9.7 and later</p>
         </div>
         <div class="span4">
-            <img src="/assets/glyphicons/glyphicons_141_database_plus.png"/>
+            <div class="marketing-item"><i class="fa fa-database"></i> <a href="/documentation/database/db2zos.html">DB2
+                z/OS</a></div>
 
-            <div class="marketing-item"><a href="/documentation/database/derby.html">Derby</a></div>
+            <p>9.1 and later</p>
+        </div>
+        <div class="span4">
+            <div class="marketing-item"><i class="fa fa-database"></i> <a href="/documentation/database/derby.html">Derby</a>
+            </div>
 
             <p>10.8.2.2 and later</p>
         </div>
+    </div>
+    <div class="row">
         <div class="span4">
-            <img src="/assets/glyphicons/glyphicons_141_database_plus.png"/>
+            <div class="marketing-item"><i class="fa fa-database"></i> <a href="/documentation/database/h2.html">H2</a>
+            </div>
 
-            <div class="marketing-item"><a href="/documentation/database/sqlite.html">SQLite</a></div>
+            <p>1.2.137 and later</p>
+        </div>
+        <div class="span4">
+            <div class="marketing-item"><i class="fa fa-database"></i> <a
+                    href="/documentation/database/hsql.html">Hsql</a></div>
+
+            <p>1.8 and later</p>
+        </div>
+        <div class="span4">
+            <div class="marketing-item"><i class="fa fa-database"></i> <a href="/documentation/database/sqlite.html">SQLite</a>
+            </div>
 
             <p>3.7.2 and later</p>
+        </div>
+    </div>
+</div>
+<hr class="soften"/>
+<div id="testimonial">
+    <div class="marketing-section-head">What People are saying</div>
+
+    <div class="marketing-section-sub">Join the 10's of thousands of delighted users.</div>
+
+    <div class="row">
+        <div class="span2">
+            <img src="/assets/photos/davesyer.jpg" class="img-circle">
+        </div>
+        <div class="span10">
+            <div class="marketing-testimonial">
+                <blockquote>Database migrations are something that Java developers struggle with,
+                    and Flyway provides a nice tool that anyone with basic knowledge of SQL can use. For that reason it
+                    has become
+                    the favourite migration tool in the Spring Boot team.
+                </blockquote>
+                <p><strong>Dave Syer</strong>, Senior Consulting Engineer, Pivotal</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="span10">
+            <div class="marketing-testimonial-right">
+                <blockquote>Flyway should be a fundamental part of any Java EE application
+                    devops. It simplifies database migration and seamlessly integrates
+                    with your application lifecycle.
+                </blockquote>
+                <p><strong>Arun Gupta</strong>, Director of Developer Advocacy, Red Hat</p>
+            </div>
+        </div>
+        <div class="span2">
+            <img src="/assets/photos/arungupta.png" class="img-circle">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="span2">
+            <img src="/assets/photos/armingattung.jpg" class="img-circle">
+        </div>
+        <div class="span10">
+            <div class="marketing-testimonial">
+                <blockquote>With Flyway you can combine the full power of SQL with solid versioning. This makes setting up and maintaining database schemas a breeze.
+                    We use it across all environments including production, making it a perfect fit for our Continuous Delivery and Zero Downtime pipeline. I highly recommend it.
+                </blockquote>
+                <p><strong>Armin Gattung</strong>, Freelance Consultant</p>
+            </div>
         </div>
     </div>
 </div>
@@ -478,6 +549,18 @@ tab: home
     <td><i class="fa fa-check" title="yes"></i></td>
 </tr>
 <tr>
+    <td><a href="/documentation/database/db2zos.html">DB2 z/OS</a></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+    <td><i class="fa fa-check" title="yes"></i></td>
+    <td><i class="fa fa-ban" title="no"></i></td>
+</tr>
+<tr>
     <td><a href="/documentation/database/mysql.html">MySQL</a></td>
     <td><i class="fa fa-check" title="yes"></i></td>
     <td><i class="fa fa-check" title="yes"></i></td>
@@ -632,7 +715,7 @@ tab: home
     <td><i class="fa fa-ban" title="no"></i></td>
 </tr>
 <tr>
-    <td><a href="/documentation/maven/init.html">Auto creation of metadata table</a></td>
+    <td><a href="/documentation/maven/baseline.html">Auto creation of metadata table</a></td>
     <td><i class="fa fa-check" title="yes"></i></td>
     <td><i class="fa fa-check" title="yes"></i></td>
     <td><i class="fa fa-check" title="yes"></i></td>
@@ -753,8 +836,8 @@ tab: home
     <div class="marketing-section-sub">Pick any of these to learn more.</div>
 
     <p class="next-steps">
-        <a class="btn btn-primary btn-large" href="/getstarted/whyDatabaseMigrations.html">Why database migrations?</a>
-        <a class="btn btn-large" href="/getstarted/howFlywayWorks.html">How does Flyway work?</a>
+        <a class="btn btn-primary btn-large" href="/getstarted/why.html">Why database migrations?</a>
+        <a class="btn btn-large" href="/getstarted/how.html">How does Flyway work?</a>
         <a class="btn btn-large" href="/getstarted/firststeps/api.html">First steps</a>
         <a class="btn btn-large" href="/getstarted/download.html">Download</a>
     </p>

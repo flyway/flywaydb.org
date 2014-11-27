@@ -9,7 +9,7 @@ subtitle: Release Notes
 <p>Thank you all for reporting all these issues and contributing fixes!</p>
 
 <div class="release">
-    <h2>Unreleased version</h2>
+    <h2>Flyway 3.1 (2014-11-27)</h2>
 
     <h3>New Features</h3>
     <ul>
@@ -20,11 +20,96 @@ subtitle: Release Notes
                     class="fa fa-mail-reply"></i> Pull Request</a></span>
         </li>
         <li>
+            <a href="https://github.com/flyway/flyway/issues/638">Issue 638</a>
+            DB2 on z/OS support
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/713"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
             <a href="https://github.com/flyway/flyway/issues/661">Issue 661</a>
             AWS Redshift support
             <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/743"><i
                     class="fa fa-mail-reply"></i> Pull Request</a></span>
         </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/728">Issue 728</a>
+            SQL-based callbacks
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/731">Issue 731</a>
+            Package JDBC drivers with command-line tool
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/pull/778">Issue 778</a>
+            Maven plugin: Expose new DB version in <code>flyway.current</code> property
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/778"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/834">Issue 834</a>
+            Use Slf4j for logging if available
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/863">Issue 863</a>
+            PostgreSQL COPY ... FROM STDIN support <span class="label label-success"><a href="/support/#sponsor">€
+            Sponsored</a></span> by <a href="https://www.dg-i.net/">Dembach Goo Informatik</a>
+        </li>
+    </ul>
+
+    <h3>Incompatible Changes</h3>
+    <ul>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/860">Issue 860</a>
+            The <code>FlywayCallback</code> interface has two new methods: <code>beforeBaseline()</code> and <code>afterBaseline()</code>.
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/860">Issue 860</a>
+            <code>info()</code> now returns INIT migrations as BASELINE.
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/860">Issue 860</a>
+            <code>info()</code> now returns PREINIT migrations as BELOW_BASELINE.
+        </li>
+    </ul>
+
+    <h3>Changes</h3>
+    <ul>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/860">Issue 860</a>
+            Deprecated <code>init()</code>, use <code>baseline()</code> instead.
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/860">Issue 860</a>
+            Deprecated <code>initVersion</code>, use <code>baselineVersion</code> instead.
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/860">Issue 860</a>
+            Deprecated <code>initDescription</code>, use <code>baselineDescription</code> instead.
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/860">Issue 860</a>
+            Deprecated <code>initOnMigrate</code>, use <code>baselineOnMigrate</code> instead.
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/860">Issue 860</a>
+            Deprecated <code>FlywayCallback.beforeInit()</code>, use <code>FlywayCallback.beforeBaseline()</code> instead.
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/860">Issue 860</a>
+            Deprecated <code>FlywayCallback.afterInit()</code>, use <code>FlywayCallback.afterBaseline()</code> instead.
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/860">Issue 860</a>
+            Deprecated <code>MigrationState.PREINIT</code>, use <code>MigrationState.BELOW_BASELINE</code> instead.
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/860">Issue 860</a>
+            Deprecated <code>MigrationType.INIT</code>, use <code>MigrationType.BASELINE</code> instead.
+        </li>
+        <li>Derby Jdbc driver: Flyway is now tested with 10.11.1.1 (was 10.8.2.2)</li>
+        <li>Hsql Jdbc driver: Flyway is now tested with 2.3.2 (was 2.2.8)</li>
+        <li>PostgreSQL Jdbc driver: Flyway is now tested with 9.3-1102-jdbc4 (was 9.0-801.jdbc4)</li>
+        <li>SQLite Jdbc driver: Flyway is now tested with sqlite-jdbc 3.7.15-M1 (was sqlite-jdbc 3.7.2)</li>
     </ul>
 
     <h3>Bug fixes</h3>
@@ -34,26 +119,147 @@ subtitle: Release Notes
             Clean fix #664 breaks DB2 clean in some cases
         </li>
         <li>
+            <a href="https://github.com/flyway/flyway/issues/718">Issue 718</a>
+            SQLServer: no exception thrown when statement fails
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/780"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
             <a href="https://github.com/flyway/flyway/issues/735">Issue 735</a>
             cygwin classpath problem
             <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/736"><i
                     class="fa fa-mail-reply"></i> Pull Request</a></span>
         </li>
         <li>
+            <a href="https://github.com/flyway/flyway/issues/742">Issue 742</a>
+            flyway info does cuts off or truncates information
+        </li>
+        <li>
             <a href="https://github.com/flyway/flyway/issues/746">Issue 746</a>
             Unhelpful error when forgetting "flyway.driver" with xerial sqlite-jdbc
         </li>
         <li>
-            <a href="https://github.com/flyway/flyway/pull/758">Issue 758</a>
-            Fixed OSGi metadata table create script loading
+            <a href="https://github.com/flyway/flyway/pull/754">Issue 754</a>
+            flyway fails to remove forward slash from a script if it contains a comment
             <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/758"><i
                     class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/pull/758">Issue 758</a>
+            Fixed OSGi metadata table create script loading
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/765"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/761">Issue 761</a>
+            Clean Oracle scheduled jobs
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/799"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/770">Issue 770</a>
+            Improve Oracle error - show the ORA code
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/774">Issue 774</a>
+            Informational message from database logged at WARN level
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/872"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/779">Issue 779</a>
+            Restore JDK6 compatibility for Gradle plugin
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/836"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/783">Issue 783</a>
+            Spring Jdbc not available from command line
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/793">Issue 793</a>
+            MySQL flywayMigrate fails due to user permission
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/pull/800">Issue 800</a>
+            Handle Oracle java source
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/800"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/801">Issue 801</a>
+            ClassPathScanner fails with enum
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/802">Issue 802</a>
+            Clean on DB2 does not clean triggers
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/803"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/806">Issue 806</a>
+            Flyway does not clean sequences on SQL Server 2012
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/816">Issue 816</a>
+            Allow newer migrations to exist and be skipped by validateOnMigrate
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/824">Issue 824</a>
+            Classpath scanner does not detect sql-files in WEB-INF/classes in (non-exploded) war-file
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/825">Issue 825</a>
+            Warn instead of fail when clean cannot find a schema
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/830">Issue 830</a>
+            Allow gradle plugin to create multiple migrate tasks for different schemas
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/831"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/842">Issue 842</a>
+            migrate [initOnMigrate, initVersion] should use initVersion when the schema does not exist
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/843">Issue 843</a>
+            Flyway suppresses warnings silently on SQLException
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/866">Issue 866</a>
+            Classpath Scanner swallows Instantiation Exceptions
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/867">Issue 867</a>
+            DB2 schema clean fails for expression-based index
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/868">Issue 868</a>
+            Update filed for MSSQL scripts containing 'Go'
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/871">Issue 871</a>
+            Please include SQLException message when failing to connect
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/877">Issue 877</a>
+            Exception cause lost in classutils instantiateAll
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/884">Issue 884</a>
+            Flyway incorrectly handles paths with a + in their name
         </li>
     </ul>
 
     <p>
-        Thanks to Hurricane Hamilton, Lukasz Rozek, Nathan Vick, Olivier Adam,
-        Sebastian Vuorinen, Siva Panduranga Rao Sadhu and Yiyu Jia for reporting these issues and providing fixes.
+        Thanks to Adrian Chung, aldas, Armin Gattung, Boris Stumm,
+        Brandon Bremen, Carlo Conserva, Christine Teig, cowwoc, crannym,
+        Dan Nawrocki, Dembach Goo Informatik, Deryl Spielman, everflux, flavor8, Hurricane Hamilton,
+        James Elliott, Jurica Krizanic, larry-s, Lukasz Rozek, Mark Sievers, Michael Yaakoby, Mikhail Chibel,
+        Muni10, Nathan Vick, Nick Golubev, Olivier Adam, orbfish, PeeZu, Ray Holder, rekonvald, Rao Sadhu,
+        Sajan Chandran, Sebastian Vuorinen, Siva Panduranga Stephan Pauxberger, Steve Todd, Tom Eicher, Wilkin Cheung
+        and Yiyu Jia for reporting these issues and providing fixes.
     </p>
 </div>
 
@@ -515,7 +721,7 @@ subtitle: Release Notes
         </li>
         <li>
             <a href="http://code.google.com/p/flyway/issues/detail?id=462">Issue 462</a>
-            Flyway 2.1.1 hangs on ANALYZE command <span class="label label-success"><a href="/support/sponsor.html">€
+            Flyway 2.1.1 hangs on ANALYZE command <span class="label label-success"><a href="/support/#sponsor">€
             Sponsored</a></span>
         </li>
         <li>
@@ -597,7 +803,7 @@ subtitle: Release Notes
         for reporting these issues and contributing fixes.
     </p>
 
-    <p>Special thanks to David Harrigan for <a href="/support/sponsor.html">sponsoring the fix</a> for issue 462!
+    <p>Special thanks to David Harrigan for <a href="/support/#sponsor">sponsoring the fix</a> for issue 462!
     </p>
 
     <p>Special thanks to Ben Manes for contributing the Gradle Plugin!</p>

@@ -99,8 +99,8 @@ end;
     <p>If you have PostgreSQL on a different machine/VM you&#x27;ll have to edit the pg_hba.conf file to allow
         connections from other machines than localhost: </p>
 
-    <p>E.g. edit C:\Programme\PostgreSQL\9.0\data\pg_hba.conf: </p><pre class="prettyprint">  # TYPE  DATABASE        USER            CIDR-ADDRESS            METHOD
-     host    all             all             127.0.0.1/0		     md5</pre>
+    <p>E.g. edit C:\Programme\PostgreSQL\9.0\data\pg_hba.conf: </p><pre class="prettyprint"># TYPE  DATABASE        USER            CIDR-ADDRESS            METHOD
+host    all             all             127.0.0.1/0		md5</pre>
     <blockquote>see <a href="http://developer.postgresql.org/pgdocs/postgres/auth-pg-hba-conf.html">http://developer.postgresql.org/pgdocs/postgres/auth-pg-hba-conf.html</a><br/>
     </blockquote>
 
@@ -175,6 +175,71 @@ end;
 
     <p>Extract the archive and then rename <code>db2jcc4.jar</code> into <code>db2jcc4-4.17.29.jar</code>. Copy
         <code>db2jcc4-4.17.29.jar</code> to <code>com/ibm/db2/db2jcc4/4.17.29</code> in your local Maven repository.</p>
+
+    <h2>Redshift</h2>
+
+    <p>AWS Redshift is only available as a manged data warehouse service. Refer to
+    <a href="https://aws.amazon.com/redshift/">https://aws.amazon.com/redshift/</a>
+    for details. You can create a free AWS account at
+    <a href="http://aws.amazon.com/free/">http://aws.amazon.com/free/</a>, but
+    Redshift itself is not available under the free usage tier. The cheapest Redshift
+    instance currently costs $0.25 per hour (on-demand) or $999 per year (with a
+    three-year reservation).
+    </p>
+
+    <p>Create a new Redshift cluster using your AWS Management Console. Select "Redshift" from the
+    home page in your AWS Management Console and click "Launch Cluster". Accept the defaults,
+    except for the following:
+    </p>
+    <ul>
+        <li>Database Name: flyway</li>
+        <li>Master User Name: flyway</li>
+        <li>Master User Password: Flyway123</li>
+        <li>Node type: dw2.large (or whatever is currently the cheapest -- see <a href="https://aws.amazon.com/redshift/pricing/">https://aws.amazon.com/redshift/pricing/</a>)</li>
+        <li>Cluster Type: Single Node</li>
+    </ul>
+
+    <p>Now, create a tunnel to your Redshift server, so the that the unit tests can access Redshift from a
+    port on your localhost. Following is an example on linux. This example assumes that your Redshift server's IP
+    address is not publicly accessible, but is accessible from a "bastion host" that you have created
+    within the same <a href="http://aws.amazon.com/vpc/">VPC</a>. If your Redshift server is publicly
+    accessible, replace "your-bastion-host" with "localhost" in the following command:
+    </p>
+<pre class="prettyprint">
+ssh -L 5439:your-instance-name.redshift.amazonaws.com:5439 your-bastion-host
+</pre>
+
+    <h2>Vertica</h2>
+
+    <p>HP provides the Vertica community edition for development. Register at
+    <a href="https://my.vertica.com/community/">https://my.vertica.com/community/</a>,
+    then sign in and click the download link at
+    <a href="https://my.vertica.com/download-community-edition/">https://my.vertica.com/download-community-edition/</a>
+    to see the list of available files. Download the appropriate package of
+    "HP Vertica 7.x.x Analytic Database Server Community Edition" for your
+    operating system and also download the JDBC driver.
+    </p>
+
+    <p>Installing the package will just copy files. On linux, the files will
+    be copied to /opt/vertica. To configure Vertica, you also need to run the
+    /opt/vertica/sbin/install_vertica script, as documented in the install guide:
+    <a href="https://my.vertica.com/docs/7.0.x/PDF/HP_Vertica_7.0.x_Install_Guide.pdf">https://my.vertica.com/docs/7.0.x/PDF/HP_Vertica_7.0.x_Install_Guide.pdf</a>.
+    </p>
+
+    <p>Here is an example on linux:</p>
+<pre class="prettyprint">
+sudo /opt/vertica/sbin/install_vertica --hosts localhost --deb vertica_7.0.1-0_amd64.deb --dba-user-password flyway
+</pre>
+
+    <p>The Vertica Jdbc drivers aren&#x27;t available from Maven Central. You need to download
+    <code>vertica-jdbc-7.0.0-0.jar</code> from
+    <a href="https://my.vertica.com/download-community-edition/">https://my.vertica.com/download-community-edition/</a>.
+    Please note that you must be logged in to download the Jdbc driver.
+    </p>
+
+    <p>If you download a newer version, rename the jar as <code>vertica-jdbc-7.0.0-0.jar</code>.
+    Copy vertica-jdbc-7.0.0-0.jar to your local Maven repository under <code>com/vertica/vertica-jdbc/7.0.0-0</code>.
+    </p>
 
     <p class="next-steps">
         <a class="btn btn-primary" href="/contribute/code/submit.html">Submit your Changes <i class="fa fa-arrow-right"></i></a>

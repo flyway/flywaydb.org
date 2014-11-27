@@ -199,13 +199,13 @@ subtitle: 'mvn flyway:migrate'
         </td>
     </tr>
     <tr>
-        <td>initOnMigrate</td>
+        <td>baselineOnMigrate</td>
         <td>NO</td>
         <td>false</td>
-        <td>Whether to automatically call init when migrate is executed against a non-empty schema with no metadata
+        <td>Whether to automatically call baseline when migrate is executed against a non-empty schema with no metadata
             table.
-            This schema will then be initialized with the <code>initVersion</code> before executing the migrations.
-            Only migrations above <code>initVersion</code> will then be applied.<br/>
+            This schema will then be baselined with the <code>baselineVersion</code> before executing the migrations.
+            Only migrations above <code>baselineVersion</code> will then be applied.<br/>
 
             <p>This is useful for initial Flyway production deployments on projects with an existing DB.</p>
 
@@ -214,18 +214,18 @@ subtitle: 'mvn flyway:migrate'
         </td>
     </tr>
     <tr>
-        <td>initVersion</td>
+        <td>baselineVersion</td>
         <td>NO</td>
         <td>1</td>
-        <td>The initial version to put in the database</td>
+        <td>The version to tag an existing schema with when executing baseline</td>
     </tr>
     <tr>
-        <td>initDescription</td>
+        <td>baselineDescription</td>
         <td>NO</td>
         <td>
-            <nobr>&lt;&lt; Flyway Init &gt;&gt;</nobr>
+            <nobr>&lt;&lt; Flyway Baseline &gt;&gt;</nobr>
         </td>
-        <td>The description of the initial version</td>
+        <td>The description to tag an existing schema with when executing baseline</td>
     </tr>
     <tr>
         <td>skip</td>
@@ -283,12 +283,15 @@ subtitle: 'mvn flyway:migrate'
     &lt;outOfOrder&gt;false&lt;/outOfOrder&gt;
     &lt;validateOnMigrate&gt;true&lt;/validateOnMigrate&gt;
     &lt;cleanOnValidationError&gt;false&lt;/cleanOnValidationError&gt;
-    &lt;initOnMigrate&gt;false&lt;/initOnMigrate&gt;
-    &lt;initVersion&gt;5&lt;/initVersion&gt;
-    &lt;initDescription&gt;Let's go!&lt;/initDescription&gt;
+    &lt;baselineOnMigrate&gt;false&lt;/baselineOnMigrate&gt;
+    &lt;baselineVersion&gt;5&lt;/baselineVersion&gt;
+    &lt;baselineDescription&gt;Let's go!&lt;/baselineDescription&gt;
     &lt;skip&gt;false&lt;/skip&gt;
     &lt;configFile&gt;myConfig.properties&lt;/configFile&gt;
 &lt;/configuration&gt;</pre>
+
+<h2>Exposed properties</h2>
+<p>The new database version number is exposed in the <code>flyway.current</code> Maven property.</p>
 
 <h2>Sample output</h2>
 <pre class="console">&gt; mvn compile flyway:migrate

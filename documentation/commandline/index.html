@@ -41,8 +41,8 @@ subtitle: Command-line
             <td>Validates the applied migrations against the ones available on the classpath</td>
         </tr>
         <tr>
-            <td><a href="/documentation/commandline/init.html">init</a></td>
-            <td>Creates and initializes the metadata table (existing database)</td>
+            <td><a href="/documentation/commandline/baseline.html">baseline</a></td>
+            <td>Baselines an existing database, excluding all migrations up to and including baselineVersion</td>
         </tr>
         <tr>
             <td><a href="/documentation/commandline/repair.html">repair</a></td>
@@ -50,6 +50,22 @@ subtitle: Command-line
         </tr>
         </tbody>
     </table>
+
+    <h2>JDBC drivers</h2>
+
+    <p>Flyway ships with JDBC drivers for the following databases by default:</p>
+    <ul>
+        <li>MySQL</li>
+        <li>MariaDB</li>
+        <li>PostgreSQL</li>
+        <li>Redshift</li>
+        <li>H2</li>
+        <li>Hsql</li>
+        <li>Derby</li>
+        <li>SQLite</li>
+    </ul>
+
+    <p>If your database is not listed here, you need to manually place your JDBC driver in the <code>drivers</code> directory.</p>
 
     <h2>Configuration</h2>
 
