@@ -1,0 +1,166 @@
+---
+layout: blog
+subtitle: "Flyway 3.1 Released"
+permalink: /blog/flyway-3.1.html
+---
+<div>
+    <p>Well it looks like this year, Christmas came early! Here is our next version: <strong>Flyway 3.1</strong>.</p>
+
+    <p>The <strong>hightlights</strong> of this release are:</p>
+    <ul>
+        <li>Redshift, Vertica and DB2 z/OS support</li>
+        <li>SQL-based callbacks</li>
+        <li>JDBC drivers shipping with the command-line tool</li>
+        <li>Renamed init into baseline</li>
+        <li>Feature / bug fix sponsoring</li>
+    </ul>
+
+    <h2>Redshift, Vertica and DB2 zOS support</h2>
+
+    <div class="blog-post-image">
+        <img src="/assets/posts/flyway-3.1/dblogos.png" alt="Database logos">
+    </div>
+
+    <p>While <a href="/blog/flyway-3.0-android.html">Flyway 3.0</a> focused on the small with
+        <a href="/documentation/database/sqlite.html">SQLite</a> and <a href="/documentation/api/">Android</a> support,
+        this releases focuses on the big. We are expanding the large list of supported databases to three new ones in
+        the
+        big data and the big iron space:</p>
+
+    <ul>
+        <li>Amazon Redshift</li>
+        <li>HP Vertica</li>
+        <li>DB2 z/OS</li>
+    </ul>
+
+    <p>Special thanks to Nathan Vick and Christine Teig for contributing these integrations.</p>
+
+    <h2>SQL-based callbacks</h2>
+
+    <p>Building upon the <a href="/documentation/callbacks.html">Lifecycle Callback</a> foundation we laid in Flyway
+        3.0,
+        we now expand upon it to make Callbacks even more accessible to a wider audience.</p>
+
+    <p>You now have the option to simply drop a SQL file with the name of the callback in one of the configured
+        locations
+        and it will be executed at the appropriate point in the lifecycle.</p>
+
+    <h3>Example</h3>
+
+    <p>Suppose you are using Oracle and you regularly write migrations that perform DDL operations that invalidate
+        objects
+        in the MYSCHEMA schema.</p>
+
+    <p>
+        With Flyway's default command-line client settings, all you need to automatically trigger a recompile of all
+        objects after a migration run,
+        is add a file called <code>afterMigrate.sql</code> to the <code>/sql</code> directory of your installation:</p>
+
+    <pre class="prettyprint">EXEC DBMS_UTILITY.compile_schema(schema => 'MYSCHEMA');</pre>
+
+    <p>And voila! It will automatically run every time after migrate completes.</p>
+
+    <h2>JDBC drivers shipping with the command-line tool</h2>
+
+    <p>Flyway Command-line client download numbers have been growing very rapidly (chart from Maven Central):</p>
+
+    <div class="blog-post-image">
+        <img src="/assets/posts/flyway-3.1/commandline-downloads.png" alt="Flyway Command-line Downloads">
+    </div>
+
+    <p>In fact, the command-line client has now even surpassed the Java API by number of downloads as the most popular
+        way to use Flyway. This is primarily due to many non-JVM users, looking for a simple, polished and powerful
+        solution to their database migration challenges.</p>
+
+    <p>And so we decided to take a hard look at the adoption barriers. Not surprisingly having to hunt for JDBC drivers
+        and figuring out JDBC URL syntax turned out to be the two biggest hurdles. So we decided to tackle them.</p>
+
+    <p>Effective as of Flyway 3.1, the Flyway Command-line distribution now ships out of the box with JDBC drivers
+        for the following databases:</p>
+    <ul>
+        <li>MySQL</li>
+        <li>MariaDB</li>
+        <li>PostgreSQL</li>
+        <li>Redshift</li>
+        <li>H2</li>
+        <li>Hsql</li>
+        <li>Derby</li>
+        <li>SQLite</li>
+    </ul>
+
+    <p>Additionally the config file now also contains <strong>examples for JDBC URLs</strong> for all supported
+        databases.</p>
+
+    <p>No more hunting and no more guessing. Non-JVM users, welcome to Flyway.</p>
+
+    <h2>Renamed init into baseline</h2>
+
+    <p>We like to pride ourselves with having created the easiest and most intuitive tool to work with databases
+        migrations.
+        Yet sometimes, when users make the same mistakes over and over again, maybe RTFM is not the answer. And this is
+        exactly what happened with our support for baselining existing databases: init.
+    </p>
+
+    <p>Even though the docs clearly described the intended use, the name was simply poorly chosen. Users would
+        intuitively
+        run init against new databases, only to subsequently wonder why the migrations up to the init version would be
+        ignored.</p>
+
+    <div class="blog-post-image">
+        <img src="/assets/posts/flyway-3.1/init.png" alt="init to baseline">
+    </div>
+
+
+    <p>To eliminate this confusion once and for all, we decided admit we made a poor choice and to bite the bullet.
+        <code>init</code> has now be renamed to <code>baseline</code>. We believe this is a more accurate and less
+        misleading name.
+    </p>
+
+    <p>To make the transition as smooth as possible, init and all associated properties have been deprecated for
+        remaining the 3.x timeframe to give you sufficient time to adjust. They will then be removed as part of the next
+        major release.</p>
+
+    <h2>Feature / bug fix sponsoring</h2>
+
+    <p>We strive to make Flyway as rock solid as possible and gradually evolve the feature set in a direction that
+        makes the most sense for the project. But sometimes our schedule doesn't match yours.</p>
+
+    <div class="blog-post-image">
+        <a href="http://dilbert.com" title="Dilbert.com"><img
+                src="http://dilbert.com/dyn/str_strip/000000000/00000000/0000000/000000/20000/1000/100/21164/21164.strip.gif"
+                border="0" alt="Dilbert.com"/></a>
+    </div>
+
+    <p>To give you the opportunity to get the bug fix or feature you need when you need it, we now offer you the
+        possibility to
+        <a href="/support/#sponsor">sponsor its development</a>. Besides avoiding the costs and hassles of doing
+        it yourself, these are the benefits you get:</p>
+
+    <ul>
+        <li>Fast turnaround</li>
+        <li>Immediate access to pre-release binaries upon completion</li>
+        <li>Formal invoice</li>
+        <li>Competitive price based on scope</li>
+        <li>No digging in the framework internals</li>
+        <li>No setting up the complex dev environment</li>
+        <li>No implementation and debug effort</li>
+        <li>No wait/risk of rejection for a merge into the main distribution</li>
+    </ul>
+
+    <p>For Flyway 3.1, we would like to extend special thanks to <a href="https://www.dg-i.net/">Dembach Goo Informatik</a>
+     who sponsored the development of the PostgreSQL COPY ... FROM STDIN support.</p>
+
+    <h2>Grab it!</h2>
+
+    <p>Flyway 3.1 packs a bunch of new features and a ton of fixes
+        and small improvements across the board. You can find all the details are in the <a
+                href="/documentation/releaseNotes.html">release notes</a>.</p>
+
+    <p>Thank you to everyone who reported issues and sent in pull requests.</p>
+
+    <p>Enjoy the release and <a href="/getstarted/download.html">get it while it's hot!</a></p>
+
+    <p><strong>All users are encouraged to upgrade.</strong></p>
+
+    <p>Feel free to share, tweet, post or comment in any way you like.</p>
+</div>
