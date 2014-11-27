@@ -64,7 +64,9 @@ subtitle: Java Migrations
 
 
     <h2>Sample Class</h2>
-    <pre class="prettyprint">import org.flywaydb.core.api.migration.jdbc.JdbcMigration;
+    <pre class="prettyprint">package db.migration;
+
+import org.flywaydb.core.api.migration.jdbc.JdbcMigration;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
@@ -93,7 +95,9 @@ public class V1_2__Another_user implements JdbcMigration {
         JdbcTemplate to work with instead of a plain Jdbc
         Connection.</p>
 
-    <pre class="prettyprint">import org.flywaydb.core.api.migration.spring.SpringJdbcMigration;
+    <pre class="prettyprint">package db.migration;
+
+import org.flywaydb.core.api.migration.spring.SpringJdbcMigration;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 /**
