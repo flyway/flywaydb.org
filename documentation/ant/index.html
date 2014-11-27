@@ -6,9 +6,31 @@ subtitle: Ant Tasks
 <div id="antTasks">
     <h1>Ant Tasks</h1>
 
-    <p>The Flyway Ant Tasks are provided as an AntLib. It is available from the
-        <a href="/getstarted/download.html">downloads page</a> and from Maven
-        central using this Ivy Configuration:</p>
+    <p>The Flyway Ant Tasks are provided as an AntLib.</p>
+
+    <h2>Download</h2>
+
+    <h3>Direct</h3>
+    <table class="table table-bordered table-hover">
+        <thead>
+        <tr>
+            <th><strong>Distributions</strong></th>
+            <th><strong>Source</strong></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>
+                <a href="http://repo1.maven.org/maven2/org/flywaydb/flyway-ant/{{site.flywayVersion}}/flyway-ant-{{site.flywayVersion}}.zip">flyway-ant-{{site.flywayVersion}}.zip</a><br/>
+                <a href="http://repo1.maven.org/maven2/org/flywaydb/flyway-ant/{{site.flywayVersion}}/flyway-ant-{{site.flywayVersion}}.tar.gz">flyway-ant-{{site.flywayVersion}}.tar.gz</a>
+            </td>
+            <td>
+                <a href="http://repo1.maven.org/maven2/org/flywaydb/flyway-ant/{{site.flywayVersion}}/flyway-ant-{{site.flywayVersion}}-sources.jar">flyway-ant-{{site.flywayVersion}}-sources.jar</a>
+            </td>
+        </tr>
+    </table>
+
+    <h3>Ivy</h3>
     <pre class="prettyprint">&lt;dependency org="org.flywaydb" name="flyway-ant" rev="{{ site.flywayVersion }}"/&gt;</pre>
 
     <h2>Usage</h2><pre class="prettyprint">&lt;project ... xmlns:flyway=&quot;antlib:org.flywaydb.ant&quot;&gt;

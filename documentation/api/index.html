@@ -12,6 +12,59 @@ subtitle: API
         <strong>before</strong> the rest of the application starts. This is important, because the database must first
         be migrated to a state the rest of the code can work with. </p>
 
+    <h2>Download</h2>
+
+    <h3>Direct</h3>
+    <table class="table table-bordered table-hover">
+        <thead>
+        <tr>
+            <th><strong>Binary</strong></th>
+            <th><strong>Source</strong></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>
+                <a href="http://repo1.maven.org/maven2/org/flywaydb/flyway-core/{{site.flywayVersion}}/flyway-core-{{site.flywayVersion}}.jar">flyway-core-{{site.flywayVersion}}.jar</a>
+            </td>
+            <td>
+                <a href="http://repo1.maven.org/maven2/org/flywaydb/flyway-core/{{site.flywayVersion}}/flyway-core-{{site.flywayVersion}}-sources.jar">flyway-core-{{site.flywayVersion}}-sources.jar</a>
+            </td>
+        </tr>
+    </table>
+
+    <h3>Build Tools</h3>
+    <div class="tabbable">
+        <ul class="nav nav-tabs">
+            <li class="active marketing-item"><a href="#tab-maven" data-toggle="tab"><i class="fa fa-maxcdn"></i> Maven</a>
+            </li>
+            <li class="marketing-item"><a href="#tab-gradle" data-toggle="tab"><i class="fa fa-cogs"></i> Gradle</a>
+            </li>
+            <li class="marketing-item"><a href="#tab-ant" data-toggle="tab"><i class="fa fa-wrench"></i> Ant + Ivy</a>
+            </li>
+            <li class="marketing-item"><a href="#tab-sbt" data-toggle="tab"><i class="fa fa-angle-right"></i> SBT</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active" id="tab-maven">
+                <pre class="prettyprint">&lt;dependency&gt;
+    &lt;groupId&gt;org.flywaydb&lt;/groupId&gt;
+    &lt;artifactId&gt;flyway-core&lt;/artifactId&gt;
+    &lt;version&gt;{{ site.flywayVersion }}&lt;/version&gt;
+&lt;/dependency&gt;</pre>
+            </div>
+            <div class="tab-pane" id="tab-gradle">
+                <pre class="prettyprint">compile "org.flywaydb:flyway-core:{{ site.flywayVersion }}"</pre>
+            </div>
+            <div class="tab-pane" id="tab-ant">
+                <pre class="prettyprint">&lt;dependency org="org.flywaydb" name="flyway-core" rev="{{ site.flywayVersion }}"/&gt;</pre>
+            </div>
+            <div class="tab-pane" id="tab-sbt">
+                <pre class="prettyprint">"org.flywaydb" % "flyway-core" % "{{ site.flywayVersion }}"</pre>
+            </div>
+        </div>
+    </div>
+
     <h2>The Flyway Class</h2>
 
     <p>The central piece of Flyway&#x27;s database migration infrastructure is the <strong><a
