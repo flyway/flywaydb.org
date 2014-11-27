@@ -56,7 +56,9 @@ permalink: /blog/flyway-3.1.html
         objects after a migration run,
         is add a file called <code>afterMigrate.sql</code> to the <code>/sql</code> directory of your installation:</p>
 
-    <pre class="prettyprint">EXEC DBMS_UTILITY.compile_schema(schema => 'MYSCHEMA');</pre>
+    <pre class="prettyprint">BEGIN
+   DBMS_UTILITY.COMPILE_SCHEMA(SCHEMA => 'MYSCHEMA');
+END;</pre>
 
     <p>And voila! It will automatically run every time after migrate completes.</p>
 
@@ -126,9 +128,7 @@ permalink: /blog/flyway-3.1.html
         makes the most sense for the project. But sometimes our schedule doesn't match yours.</p>
 
     <div class="blog-post-image">
-        <a href="http://dilbert.com" title="Dilbert.com"><img
-                src="http://dilbert.com/dyn/str_strip/000000000/00000000/0000000/000000/20000/1000/100/21164/21164.strip.gif"
-                border="0" alt="Dilbert.com"/></a>
+        <img src="/assets/posts/flyway-3.1/sponsor.png" alt="Sponsor">
     </div>
 
     <p>To give you the opportunity to get the bug fix or feature you need when you need it, we now offer you the
@@ -165,5 +165,5 @@ permalink: /blog/flyway-3.1.html
 
     <p><strong>All users are encouraged to upgrade.</strong></p>
 
-    <p>Feel free to share, tweet or post in any way you like. Comment on Twitter under #flywaydb.</p>
+    <p>Feel free to share, tweet or post in any way you like. Comment on Twitter under <a href="https://twitter.com/search?f=realtime&q=%23flywaydb">#flywaydb</a>.</p>
 </div>
