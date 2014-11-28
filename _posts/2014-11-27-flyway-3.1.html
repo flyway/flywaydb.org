@@ -98,12 +98,11 @@ END;</pre>
     <p>We like to pride ourselves with having created the easiest and most intuitive tool to work with databases
         migrations.
         Yet sometimes, when users make the same mistakes over and over again, maybe RTFM is not the answer. And this is
-        exactly what happened with our support for baselining existing databases: init.
+        exactly what happened with our support for <a href="/documentation/existing.html">baselining existing databases</a>: init.
     </p>
 
     <p>Even though the docs clearly described the intended use, the name was simply poorly chosen. Users would
-        intuitively
-        run init against new databases, only to subsequently wonder why the migrations up to the init version would be
+        intuitively run init against new databases, only to subsequently wonder why the migrations up to the init version would be
         ignored.</p>
 
     <div class="blog-post-image">
@@ -111,7 +110,7 @@ END;</pre>
     </div>
 
 
-    <p>To eliminate this confusion once and for all, we decided admit we made a poor choice and to bite the bullet.
+    <p>To eliminate this confusion once and for all, we decided to admit we made a poor choice and bite the bullet.
         <code>init</code> has now be renamed to <code>baseline</code>. We believe this is a more accurate and less
         misleading name.
     </p>
