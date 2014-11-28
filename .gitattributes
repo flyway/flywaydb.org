@@ -5,6 +5,7 @@
 *.bmml binary
 *.gif binary
 *.jpg binary
+*.pdn binary
 *.jar binary
 *.otf binary
 *.eof binary
