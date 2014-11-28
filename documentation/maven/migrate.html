@@ -9,13 +9,7 @@ subtitle: 'mvn flyway:migrate'
 <p>Migrates the schema to the latest version. Flyway will create the metadata table automatically if it doesn't
     exist.</p>
 
-<table class="table table-bordered">
-    <tr>
-        <td><strong>Important:</strong> To make sure new migrations
-            are taken into account, <strong>mvn compile</strong> must be invoked first!
-        </td>
-    </tr>
-</table>
+<a href="/documentation/command/migrate.html"><img src="/assets/balsamiq/command-migrate.png" alt="migrate"></a>
 
 <h2>Default Phase</h2>
 <ul>
@@ -23,6 +17,14 @@ subtitle: 'mvn flyway:migrate'
 </ul>
 
 <h2>Usage</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <td><strong>Important:</strong> To make sure new migrations
+            are taken into account, <strong>mvn compile</strong> must be invoked first!
+        </td>
+    </tr>
+</table>
 <pre class="console">&gt; mvn flyway:migrate</pre>
 
 <h2>Configuration</h2>
