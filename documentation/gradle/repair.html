@@ -146,7 +146,7 @@ subtitle: 'gradle flywayRepair'
     <h2>Sample configuration</h2>
     <pre class="prettyprint">flyway {
     driver = 'org.hsqldb.jdbcDriver'
-    url = 'jdbc:hsqldb:file:${project.build.directory}/db/flyway_sample;shutdown=true'
+    url = 'jdbc:hsqldb:file:/db/flyway_sample;shutdown=true'
     user = 'SA'
     password = 'mySecretPwd'
     schemas = ['schema1', 'schema2', 'schema3']
@@ -162,8 +162,8 @@ subtitle: 'gradle flywayRepair'
     ]
     placeholderPrefix = '#['
     placeholderSuffix = ']'
-    resolvers = ['com.mycompany.project.CustomResolver', 'com.mycompany.project.AnotherResolver']
-    callbacks = ['com.mycompany.project.CustomCallback', 'com.mycompany.project.AnotherCallback']
+    resolvers = ['com.mycompany.proj.CustomResolver', 'com.mycompany.proj.AnotherResolver']
+    callbacks = ['com.mycompany.proj.CustomCallback', 'com.mycompany.proj.AnotherCallback']
 }</pre>
     <h2>Sample output</h2>
 
