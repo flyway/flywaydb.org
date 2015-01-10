@@ -148,10 +148,7 @@ subtitle: 'Command-line: validate'
             <td>target</td>
             <td>NO</td>
             <td><i>latest version</i></td>
-            <td>The target version up to which Flyway should run
-                migrations. Migrations with a higher version number will not be applied. The string 'current' will be
-                interpreted as MigrationVersion.CURRENT, a placeholder for the latest version that has been applied to the
-                database.
+            <td>The target version up to which Flyway should consider migrations. Migrations with a higher version number will be ignored. The special value <code>current</code> designates the current version of the schema.
             </td>
         </tr>
         <tr>
