@@ -1,0 +1,56 @@
+---
+layout: documentation
+menu: timesten
+subtitle: TimesTen
+---
+<div id="databaseTimesTen">
+    <h1><a name="TimesTen"></a>TimesTen<a href="#TimesTen" class="section_anchor"></a></h1>
+
+    <h2><a name="Versions"></a>Versions<a href="#Versions" class="section_anchor"></a></h2>
+    <ul>
+        <li>11.2.2.7.4 and later</li>
+    </ul>
+
+    <h2>Default Driver</h2>
+    <ul>
+        <li>com.timesten.jdbc.TimesTenDriver</li>
+    </ul>
+
+    <h2><a name="Sql_Script_Syntax"></a>Sql Script Syntax<a href="#Sql_Script_Syntax" class="section_anchor"></a></h2>
+    <ul>
+        <li><a href="/documentation/migration/sql.html#syntax">Standard Sql
+            syntax</a> with statement delimiter ;
+        </li>
+        <li>PL/SQL blocks starting with DECLARE or BEGIN and finishing with END; /</li>
+    </ul>
+    <h3><a name="Compatibility"></a>Compatibility<a href="#Compatibility" class="section_anchor"></a></h3>
+    <ul>
+        <li>DDL exported by TimesTen can be used unchanged in a Flyway migration.</li>
+        <li>Any TimesTen sql script executed by Flyway, can be executed by ttisql
+            and other TimesTen-compatible tools (after the placeholders have been replaced).
+        </li>
+    </ul>
+    <h3><a name="Example"></a>Example<a href="#Example" class="section_anchor"></a></h3><pre class="prettyprint">/* Single line comment */
+CREATE TABLE test_user (
+ name VARCHAR(25) NOT NULL,
+ PRIMARY KEY(name)
+);
+
+/*
+Multi-line
+comment
+*/
+-- PL/SQL block
+CREATE TRIGGER test_trig AFTER insert ON test_user
+BEGIN
+   UPDATE test_user SET name = CONCAT(name, &#x27; triggered&#x27;);
+END;
+/
+
+-- Placeholder
+INSERT INTO ${tableName} (name) VALUES (&#x27;Mr. T&#x27;);</pre>
+
+    <p class="next-steps">
+        <a class="btn btn-primary" href="/documentation/database/sqlserver.html">SQL Server <i class="fa fa-arrow-right"></i></a>
+    </p>
+</div>
