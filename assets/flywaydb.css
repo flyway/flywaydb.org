@@ -299,6 +299,14 @@ hr.soften {
     line-height: 120%;
 }
 
+#footer .mc-field-group {
+    margin-top: 2px;
+}
+
+#footer #mc-embedded-subscribe-footer {
+    margin-top: -10px;
+}
+
 #footer .fa-heart {
     color: #990000;
 }
