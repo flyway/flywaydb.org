@@ -16,7 +16,7 @@
   <entry>
     <id>http://flywaydb.org{{ post.permalink }}</id>
     <link type="text/html" rel="alternate" href="{{ post.permalink }}"/>
-    <title>{{ post.title | xml_escape }}</title>
+    <title>{{ post.subtitle | xml_escape }}</title>
     <published>{{ post.date | date_to_xmlschema }}</published>
     <updated>{{ post.date | date_to_xmlschema }}</updated>
     <author>
