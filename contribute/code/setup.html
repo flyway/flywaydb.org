@@ -22,8 +22,9 @@ subtitle: Dev Environment Setup - Code
 
     <h2>JDK</h2>
 
-    <p>Even though at runtime Flyway depends on JDK 6 or later, it needs JDK 7 for building. So grab the latest version here: <a
-            href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a>
+    <p>Even though at runtime Flyway depends on JDK 6 or later, it needs JDK 7 for building. So grab the latest version
+        here: <a
+                href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a>
     </p>
 
     <p>After the installation is complete</p>
@@ -34,7 +35,8 @@ subtitle: Dev Environment Setup - Code
 
     <h2>Maven</h2>
 
-    <p>Flyway can be built with Maven 2 or 3. So grab the latest version here: <a href="http://maven.apache.org/download.html"
+    <p>Flyway can be built with Maven 2 or 3. So grab the latest version here: <a
+            href="http://maven.apache.org/download.html"
             >http://maven.apache.org/download.html</a>
     </p>
 
@@ -47,13 +49,49 @@ subtitle: Dev Environment Setup - Code
     <h2>IDE</h2>
 
     <p>We use IntelliJ for development. You can grab the latest version here: <a
-                href="http://www.jetbrains.com/idea/">http://www.jetbrains.com/idea/</a></p>
+            href="http://www.jetbrains.com/idea/">http://www.jetbrains.com/idea/</a></p>
 
     <p>Eclipse should be fine too. However Eclipse has different
         defaults for code formatting and import reordering. Keep this in mind so merge conflicts can be reduced to a
         minimum.</p>
 
+    <h2>JREs</h2>
+
+    <p>
+        In order to build the platform-specific packages of the command-line tool, you need the JRE for each platform.
+        Unfortunately these are not available through Maven Central and must be added manually to your local Maven
+        repository.
+
+    </p>
+
+    <div class="well well-small">
+        <strong>Tip:</strong>
+        If your feature/bug fix doesn't impact the OS-specific part of the command-line tool
+        and you do not wish to set up all the JREs, Flyway can be built using -P-CommandlinePlatformAssemblies<br/>
+        This will skip the building of the OS-specific packages.
+    </div>
+
+    <p>
+        Download the following files from the <a
+            href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Oracle website</a>:
+    </p>
+
+    <ul>
+        <li>Windows x64 Server JRE 8u31</li>
+        <li>Linux x64 Server JRE 8u31</li>
+        <li>Mac OSX x64 JRE 8u31</li>
+    </ul>
+
+    <p>and place them in your local maven repository as</p>
+
+    <ul>
+        <li>~/.m2/repository/com/oracle/server-jre/8.31/server-jre-8.31-windows-x64.tar.gz</li>
+        <li>~/.m2/repository/com/oracle/server-jre/8.31/server-jre-8.31-linux-x64.tar.gz</li>
+        <li>~/.m2/repository/com/oracle/jre/8.31/jre-8.31-macosx-x64.tar.gz</li>
+    </ul>
+
     <p class="next-steps">
-        <a class="btn btn-primary" href="/contribute/code/database.html">Database Setup <i class="fa fa-arrow-right"></i></a>
+        <a class="btn btn-primary" href="/contribute/code/database.html">Database Setup <i
+                class="fa fa-arrow-right"></i></a>
     </p>
 </div>
