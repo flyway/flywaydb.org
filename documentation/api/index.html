@@ -105,7 +105,7 @@ flyway.migrate();
 import org.flywaydb.core.api.android.ContextHolder;
 import android.database.sqlite.SQLiteDatabase;
 
-SQLiteDatabase sqLiteDatabase = openOrCreateDatabase("...", 0, null);
+SQLiteDatabase sqLiteDatabase = SQLiteDatabase.openOrCreateDatabase("...", 0, null);
 ContextHolder.setContext(this);
 Flyway flyway = new Flyway();
 flyway.setDataSource("jdbc:sqlite:" + sqLiteDatabase.getPath(), "", "");
