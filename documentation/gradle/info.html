@@ -103,6 +103,12 @@ subtitle: 'gradle flywayInfo'
             <td>The encoding of Sql migrations</td>
         </tr>
         <tr>
+            <td>placeholderReplacement</td>
+            <td>NO</td>
+            <td>true</td>
+            <td>Whether placeholders should be replaced</td>
+        </tr>
+        <tr>
             <td>placeholders</td>
             <td>NO</td>
             <td></td>
@@ -168,6 +174,7 @@ subtitle: 'gradle flywayInfo'
     sqlMigrationSeparator = '__'
     sqlMigrationSuffix = '-OK.sql'
     encoding = 'ISO-8859-1'
+    placeholderReplacement = true
     placeholders = [
         'aplaceholder' : 'value',
         'otherplaceholder' : 'value123'

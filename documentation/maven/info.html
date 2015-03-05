@@ -112,6 +112,12 @@ subtitle: 'mvn flyway:info'
             <td>The encoding of Sql migrations</td>
         </tr>
         <tr>
+            <td>placeholderReplacement</td>
+            <td>NO</td>
+            <td>true</td>
+            <td>Whether placeholders should be replaced</td>
+        </tr>
+        <tr>
             <td>placeholders</td>
             <td>NO</td>
             <td></td>
@@ -199,6 +205,7 @@ subtitle: 'mvn flyway:info'
     &lt;sqlMigrationSeparator&gt;__&lt;/sqlMigrationSeparator&gt;
     &lt;sqlMigrationSuffix&gt;-OK.sql&lt;/sqlMigrationSuffix&gt;
     &lt;encoding&gt;ISO-8859-1&lt;/encoding&gt;
+    &lt;placeholderReplacement&gt;true&lt;/placeholderReplacement&gt;
     &lt;placeholders&gt;
         &lt;aplaceholder&gt;value&lt;/aplaceholder&gt;
         &lt;otherplaceholder&gt;value123&lt;/otherplaceholder&gt;
