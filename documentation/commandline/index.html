@@ -97,21 +97,34 @@ subtitle: Command-line
     <p>The Flyway Command-line tool can be configured in the following ways:</p>
 
     <h3 id="configFile">Configuration file</h3>
-    <p>By default, the configuration will be read from <code>conf/flyway.properties</code></p>
-    <pre class="prettyprint">flyway.user=myuser
-flyway.schemas=schema1,schema2
-flyway.placeholders.keyABC=valueXYZ</pre>
+    <p>Flyway will search for and load configuration files in the following order:<br/>
+        (settings configured in later ones override those configured in earlier ones)</p>
+    <ul>
+        <li><i>&lt;install-dir&gt;</i>/conf/flyway.properties</li>
+        <li><i>&lt;user-home&gt;</i>/flyway.properties</li>
+        <li><i>&lt;current-dir&gt;</i>/flyway.properties</li>
+    </ul>
 
     <p>To use an alternative
         configuration file use -configFile=myAlternativeConfig.properties<br/>To use an alternative
         configuration file encoding (default: UTF-8) use -configFileEncoding=ISO-8859-1
     </p>
 
+    <p>Configuration files have the following syntax:</p>
+    <pre class="prettyprint"># Settings are simple key-value pairs
+flyway.key=value
+# Single line comment start with a hash
+
+# These are some example settings
+flyway.url=jdbc:mydb://mydatabaseurl
+flyway.schemas=schema1,schema2
+flyway.placeholders.keyABC=valueXYZ</pre>
+
     <h3>Command-line parameters</h3>
     <pre class="console">flyway -user=myuser -schemas=schema1,schema2 -placeholders.keyABC=valueXYZ migrate</pre>
     <h3>Overriding order</h3>
 
-    <p>Command-line parameters <i>override</i> Configuration file</p>
+    <p>Command-line parameters <i>override</i> Configuration files</p>
 
     <h2>Debug output</h2>
 
