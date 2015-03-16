@@ -1,0 +1,62 @@
+---
+layout: documentation
+menu: solid
+subtitle: solidDb
+---
+<div id="databaseSolid">
+    <h1>solidDB</h1>
+
+    <h2>Versions</h2>
+    <ul>
+        <li>6.5 and later</li>
+    </ul>
+
+    <h2>Default Driver</h2>
+    <ul>
+        <li>solid.jdbc.SolidDriver</li>
+    </ul>
+
+
+    <h2>Sql Script Syntax</h2>
+    <ul>
+        <li><a href="/documentation/migration/sql.html#syntax">Standard Sql syntax</a> with statement delimiter ;</li>
+        <li>Triggers and procedures are enclosed in double quotation marks like
+            <pre class="prettyprint">&quot;CREATE TRIGGER ... END;&quot;</pre></li>
+    </ul>
+    <h3>Compatibility</h3>
+    <ul>
+        <li>DDL exported by &apos;soldd&apos; command can be used unchanged in a Flyway migration.</li>
+        <li>Any Solid SQL script executed by Flyway, can be executed by the solidDB tools.</li>
+    </ul>
+    <h3>Example</h3>
+
+    <pre class="prettyprint">/* Single line comment */
+CREATE TABLE test_data (
+  value VARCHAR(25) NOT NULL PRIMARY KEY
+);
+
+/*
+Multi-line
+comment
+*/
+
+-- Sql-style comment
+
+-- Placeholder
+INSERT INTO ${tableName} (name) VALUES (&apos;Mr. T&apos;);
+
+&quot;CREATE TRIGGER update_customer_address ON customers
+  BEFORE INSERT REFERENCING NEW street AS new_street
+  BEGIN
+    UPDATE orders SET street = new_street WHERE customer_name = name;
+  END;&quot;</pre>
+
+    <h2>Limitations</h2>
+    <ul>
+        <li>Support for DDL transaction is only partly implemented inside solidDB, therefore best practice is to separate DDL and DML scripts for migration tasks</li>
+    </ul>
+
+    <p class="next-steps">
+        <a class="btn btn-primary" href="/documentation/existing.html">Existing database setup <i class="fa fa-arrow-right"></i></a>
+    </p>
+</div>

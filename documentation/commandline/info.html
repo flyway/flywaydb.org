@@ -79,11 +79,11 @@ subtitle: 'Command-line: info'
                 Locations starting with <code>filesystem:</code> point to a directory on the filesystem and may only contain sql migrations.
             </td>
         </tr>
-        <tr id="jarDir">
-            <td>jarDir</td>
+        <tr id="jarDirs">
+            <td>jarDirs</td>
             <td>NO</td>
             <td><nobr><i>&lt;install-dir&gt;</i>/jars</nobr></td>
-            <td>The directory containing the JDBC driver and the Java-based migrations</td>
+            <td>Comma-separated list of directories containing JDBC drivers and Java-based migrations</td>
         </tr>
         <tr>
             <td>sqlMigrationPrefix</td>
@@ -108,6 +108,12 @@ subtitle: 'Command-line: info'
             <td>NO</td>
             <td>UTF-8</td>
             <td>The encoding of Sql migrations</td>
+        </tr>
+        <tr>
+            <td>placeholderReplacement</td>
+            <td>NO</td>
+            <td>true</td>
+            <td>Whether placeholders should be replaced</td>
         </tr>
         <tr>
             <td>placeholders.<i>name</i></td>
@@ -148,8 +154,7 @@ subtitle: 'Command-line: info'
             <td>target</td>
             <td>NO</td>
             <td><i>latest version</i></td>
-            <td>The target version up to which Flyway should run
-                migrations. Migrations with a higher version number will not be applied.
+            <td>The target version up to which Flyway should consider migrations. Migrations with a higher version number will be ignored. The special value <code>current</code> designates the current version of the schema.
             </td>
         </tr>
         <tr>
@@ -176,6 +181,7 @@ flyway.sqlMigrationPrefix=Migration-
 flyway.sqlMigrationSeparator=__
 flyway.sqlMigrationSuffix=-OK.sql
 flyway.encoding=ISO-8859-1
+flyway.placeholderReplacement=true
 flyway.placeholders.aplaceholder=value
 flyway.placeholders.otherplaceholder=value123
 flyway.placeholderPrefix=#[
@@ -188,7 +194,7 @@ flyway.outOfOrder=false</pre>
     <h2>Sample output</h2>
     <pre class="console">&gt; flyway info
 
-Flyway (Command-line Tool) v.{{ site.flywayVersion }}
+Flyway {{ site.flywayVersion }} by Boxfuse
 
 +-------------+------------------------+---------------------+---------+
 | Version     | Description            | Installed on        | State   |

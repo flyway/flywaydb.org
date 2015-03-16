@@ -1,14 +1,14 @@
-<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1071" measuredH="310" mockupW="572" mockupH="195">
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1067" measuredH="328" mockupW="568" mockupH="213">
   <controls>
-    <control controlID="0" controlTypeID="com.balsamiq.mockups::Tree" x="715" y="115" w="184" h="195" measuredW="300" measuredH="225" zOrder="0" locked="false" isInGroup="-1">
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::Tree" x="715" y="115" w="174" h="213" measuredW="300" measuredH="225" zOrder="0" locked="false" isInGroup="-1">
       <controlProperties>
         <color>16777215</color>
         <selectedIndex>-1</selectedIndex>
         <size>12</size>
-        <text>F%20flyway-commandline%0A%20f%20lib%0A%20F%20conf%0A%20%20-%20flyway.properties%0A%20f%20drivers%0A%20f%20jars%0A%20f%20sql%0A%20-%20flyway.cmd%0A%20-%20flyway</text>
+        <text>F%20flyway%0A%20f%20lib%0A%20F%20conf%0A%20%20-%20flyway.conf%0A%20f%20drivers%0A%20f%20jars%0A%20f%20jre%0A%20f%20sql%0A%20-%20flyway.cmd%0A%20-%20flyway</text>
       </controlProperties>
     </control>
-    <control controlID="3" controlTypeID="com.balsamiq.mockups::Arrow" x="893" y="159" w="73" h="33" measuredW="150" measuredH="100" zOrder="1" locked="false" isInGroup="-1">
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Arrow" x="863" y="157" w="73" h="33" measuredW="150" measuredH="100" zOrder="1" locked="false" isInGroup="-1">
       <controlProperties>
         <backgroundAlpha>0.5</backgroundAlpha>
         <curvature>0</curvature>
@@ -18,13 +18,13 @@
         <text/>
       </controlProperties>
     </control>
-    <control controlID="4" controlTypeID="com.balsamiq.mockups::Title" x="966" y="152" w="-1" h="-1" measuredW="105" measuredH="17" zOrder="2" locked="false" isInGroup="-1">
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Title" x="936" y="150" w="-1" h="-1" measuredW="105" measuredH="17" zOrder="2" locked="false" isInGroup="-1">
       <controlProperties>
         <size>14</size>
         <text>configuration%20file</text>
       </controlProperties>
     </control>
-    <control controlID="8" controlTypeID="com.balsamiq.mockups::Arrow" x="836" y="280" w="150" h="14" measuredW="150" measuredH="100" zOrder="3" locked="false" isInGroup="-1">
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Arrow" x="836" y="299" w="150" h="14" measuredW="150" measuredH="100" zOrder="3" locked="false" isInGroup="-1">
       <controlProperties>
         <backgroundAlpha>0.5</backgroundAlpha>
         <curvature>0</curvature>
@@ -34,7 +34,7 @@
         <text/>
       </controlProperties>
     </control>
-    <control controlID="9" controlTypeID="com.balsamiq.mockups::Arrow" x="836" y="270" w="150" h="14" measuredW="150" measuredH="100" zOrder="4" locked="false" isInGroup="-1">
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::Arrow" x="836" y="289" w="150" h="14" measuredW="150" measuredH="100" zOrder="4" locked="false" isInGroup="-1">
       <controlProperties>
         <backgroundAlpha>0.5</backgroundAlpha>
         <curvature>0</curvature>
@@ -44,28 +44,28 @@
         <text/>
       </controlProperties>
     </control>
-    <control controlID="10" controlTypeID="com.balsamiq.mockups::Title" x="990" y="273" w="-1" h="-1" measuredW="77" measuredH="17" zOrder="5" locked="false" isInGroup="-1">
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::Title" x="990" y="292" w="-1" h="-1" measuredW="77" measuredH="17" zOrder="5" locked="false" isInGroup="-1">
       <controlProperties>
         <size>14</size>
         <text>executables</text>
       </controlProperties>
     </control>
-    <control controlID="11" controlTypeID="com.balsamiq.mockups::Canvas" x="771" y="179" w="122" h="26" measuredW="100" measuredH="70" zOrder="6" locked="false" isInGroup="-1">
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::Canvas" x="771" y="179" w="92" h="26" measuredW="100" measuredH="70" zOrder="6" locked="false" isInGroup="-1">
       <controlProperties>
         <backgroundAlpha>0.25</backgroundAlpha>
         <color>40463</color>
       </controlProperties>
     </control>
-    <control controlID="12" controlTypeID="com.balsamiq.mockups::Canvas" x="745" y="260" w="91" h="45" measuredW="100" measuredH="70" zOrder="7" locked="false" isInGroup="-1">
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::Canvas" x="745" y="279" w="91" h="45" measuredW="100" measuredH="70" zOrder="7" locked="false" isInGroup="-1">
       <controlProperties>
         <backgroundAlpha>0.25</backgroundAlpha>
-        <color>2848996</color>
+        <color>12745632</color>
       </controlProperties>
     </control>
-    <control controlID="14" controlTypeID="com.balsamiq.mockups::Arrow" x="620" y="252" w="125" h="29" measuredW="150" measuredH="100" zOrder="8" locked="false" isInGroup="-1">
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::Arrow" x="620" y="271" w="125" h="29" measuredW="150" measuredH="100" zOrder="8" locked="false" isInGroup="-1">
       <controlProperties>
         <backgroundAlpha>1</backgroundAlpha>
-        <color>13369344</color>
+        <color>545684</color>
         <curvature>1</curvature>
         <direction>bottom</direction>
         <leftArrow>false</leftArrow>
@@ -73,7 +73,7 @@
         <text/>
       </controlProperties>
     </control>
-    <control controlID="15" controlTypeID="com.balsamiq.mockups::Title" x="499" y="184" w="-1" h="-1" measuredW="201" measuredH="17" zOrder="9" locked="false" isInGroup="-1">
+    <control controlID="15" controlTypeID="com.balsamiq.mockups::Title" x="499" y="190" w="-1" h="-1" measuredW="201" measuredH="17" zOrder="9" locked="false" isInGroup="-1">
       <controlProperties>
         <size>14</size>
         <text>Java-based%20migrations%20%28as%20jars%29</text>
@@ -82,7 +82,7 @@
     <control controlID="16" controlTypeID="com.balsamiq.mockups::Arrow" x="620" y="205" w="125" h="30" measuredW="150" measuredH="100" zOrder="10" locked="false" isInGroup="-1">
       <controlProperties>
         <backgroundAlpha>1</backgroundAlpha>
-        <color>13369344</color>
+        <color>545684</color>
         <curvature>-1</curvature>
         <direction>top</direction>
         <leftArrow>false</leftArrow>
@@ -90,13 +90,13 @@
         <text/>
       </controlProperties>
     </control>
-    <control controlID="17" controlTypeID="com.balsamiq.mockups::Title" x="575" y="289" w="-1" h="-1" measuredW="88" measuredH="17" zOrder="11" locked="false" isInGroup="-1">
+    <control controlID="17" controlTypeID="com.balsamiq.mockups::Title" x="532" y="298" w="-1" h="-1" measuredW="88" measuredH="17" zOrder="11" locked="false" isInGroup="-1">
       <controlProperties>
         <size>14</size>
         <text>sql%20migrations</text>
       </controlProperties>
     </control>
-    <control controlID="18" controlTypeID="com.balsamiq.mockups::Title" x="955" y="220" w="-1" h="-1" measuredW="75" measuredH="17" zOrder="12" locked="false" isInGroup="-1">
+    <control controlID="18" controlTypeID="com.balsamiq.mockups::Title" x="950" y="220" w="-1" h="-1" measuredW="75" measuredH="17" zOrder="12" locked="false" isInGroup="-1">
       <controlProperties>
         <size>14</size>
         <text>jdbc%20drivers</text>
@@ -105,7 +105,7 @@
     <control controlID="19" controlTypeID="com.balsamiq.mockups::Arrow" x="821" y="214" w="125" h="14" measuredW="150" measuredH="100" zOrder="13" locked="false" isInGroup="-1">
       <controlProperties>
         <backgroundAlpha>1</backgroundAlpha>
-        <color>13369344</color>
+        <color>545684</color>
         <curvature>-1</curvature>
         <direction>top</direction>
         <leftArrow>true</leftArrow>

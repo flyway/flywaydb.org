@@ -106,6 +106,12 @@ subtitle: 'gradle flywayMigrate'
         <td>The encoding of Sql migrations</td>
     </tr>
     <tr>
+        <td>placeholderReplacement</td>
+        <td>NO</td>
+        <td>true</td>
+        <td>Whether placeholders should be replaced</td>
+    </tr>
+    <tr>
         <td>placeholders</td>
         <td>NO</td>
         <td></td>
@@ -145,7 +151,9 @@ subtitle: 'gradle flywayMigrate'
         <td>NO</td>
         <td><i>latest version</i></td>
         <td>The target version up to which Flyway should run
-            migrations. Migrations with a higher version number will not be applied.
+            migrations. Migrations with a higher version number will not be applied. The string 'current' will be
+            interpreted as MigrationVersion.CURRENT, a placeholder for the latest version that has been applied to the
+            database.
         </td>
     </tr>
     <tr>
@@ -223,6 +231,7 @@ subtitle: 'gradle flywayMigrate'
     sqlMigrationSeparator = '__'
     sqlMigrationSuffix = '-OK.sql'
     encoding = 'ISO-8859-1'
+    placeholderReplacement = true
     placeholders = [
         'aplaceholder' : 'value',
         'otherplaceholder' : 'value123'

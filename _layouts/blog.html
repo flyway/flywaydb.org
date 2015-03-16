@@ -46,13 +46,13 @@ title: Blog
             <div id="blog-post-nav">
                 {% if page.previous %}
                 <div id="blog-post-previous">
-                    <a href="{{page.previous.url}}">« {{ page.previous.title }}</a>
+                    <a href="{{page.previous.url}}">« {{ page.previous.subtitle }}</a>
                 </div>
                 {% endif %}
 
                 {% if page.next %}
                 <div id="blog-post-next">
-                    <a href="{{page.next.url}}">{{ page.next.title }} »</a>
+                    <a href="{{page.next.url}}">{{ page.next.subtitle }} »</a>
                 </div>
                 {% endif %}
             </div>
