@@ -8,6 +8,12 @@ subtitle: Gradle Plugin
 
     <h2>Installation</h2>
 
+    <h3>Gradle 2.1 and newer</h3>
+    <pre class="prettyprint">plugins {
+    id "org.flywaydb.flyway" version "3.2"
+}</pre>
+
+    <h3>All Gradle Versions</h3>
     <pre class="prettyprint">buildscript {
     repositories {
         mavenCentral()
@@ -17,7 +23,7 @@ subtitle: Gradle Plugin
     }
 }
 
-apply plugin: 'flyway'</pre>
+apply plugin: 'org.flywaydb.flyway'</pre>
 
     <h2>Tasks</h2>
     <table class="table table-bordered table-hover">
@@ -64,7 +70,7 @@ apply plugin: 'flyway'</pre>
     password = 'mySecretPwd'
     schemas = ['schema1', 'schema2', 'schema3']
     placeholders = [
-        'keyABC': 'valueXYZ'
+        'keyABC': 'valueXYZ',
         'otherplaceholder': 'value123'
     ]
 }</pre>
