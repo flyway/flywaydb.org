@@ -1,8 +1,1 @@
-org.flywaydb.core
-org.flywaydb.core.api
-org.flywaydb.core.api.android
-org.flywaydb.core.api.callback
-org.flywaydb.core.api.migration
-org.flywaydb.core.api.migration.jdbc
-org.flywaydb.core.api.migration.spring
-org.flywaydb.core.api.resolver
+org.flywaydb.commandline
