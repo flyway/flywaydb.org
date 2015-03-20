@@ -1,0 +1,51 @@
+---
+layout: blog
+subtitle: "Gradle Plugin Portal"
+permalink: /blog/gradle-plugin-portal.html
+---
+<div>
+    <p>Hot on the heels of our <strong><a href="/blog/flyway-3.2.html">Flyway 3.2</a></strong> release, it is time to start leveraging
+        some of the improvements that happened under the hood.
+
+    <h2>Gradle Plugin Portal</h2>
+
+    <p>Lately Gradle been making it easier and easier to both find and use plugins. To find plugins, they now have
+    their own <a href="https://plugins.gradle.org/">dedicated searchable portal</a>.</p>
+
+    <p>We are happy to announce that starting with Flyway 3.2 the <a href="/documentation/gradle">Flyway Gradle Plugin</a>
+        is now available there too:
+    </p>
+
+    <div class="blog-post-image">
+        <img src="/assets/posts/gradle-plugin-portal/portal.png" alt="Gradle Plugin Portal">
+    </div>
+
+    <p>&nbsp;</p>
+
+    <p>And that's is just the beginning. If you are using Gradle 2.1 or newer and you've already switched to our new plugin id
+        <strong>org.flywaydb.flyway</strong> you can now start using the new and improved plugin syntax too:
+    </p>
+
+    <pre class="prettyprint">plugins {
+    id "org.flywaydb.flyway" version "3.2.1"
+}</pre>
+
+    <p>Using Flyway with Gradle has never been easier!</p>
+
+    <h2>Flyway 3.2.1 bug fix release</h2>
+
+    <p>If you are using Oracle, we strongly encourage you to skip Flyway 3.2 and go straight for 3.2.1. The 3.2 release
+        contains an unfortunate regression in the parser, which has now been fixed.
+    </p>
+
+    <p>Find all the details in the <a href="/documentation/releaseNotes.html">release notes</a>.</p>
+
+    <h2>Enjoy!</h2>
+
+    <p>Enjoy the Gradle improvements and this minor release. We have many more exciting changes in store for
+    the next few months!</p>
+
+    <p>If you haven't already, <strong>subscribe to this blog by email</strong> so you'll never miss an update again!</p>
+
+    <p>Spread the word on Twitter and follow <a href="https://twitter.com/flywaydb">@flywaydb</a> to stay in touch.</p>
+</div>
