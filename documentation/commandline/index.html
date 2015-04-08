@@ -100,13 +100,13 @@ subtitle: Command-line
     <p>Flyway will search for and load configuration files in the following order:<br/>
         (settings configured in later ones override those configured in earlier ones)</p>
     <ul>
-        <li><i>&lt;install-dir&gt;</i>/conf/flyway.properties</li>
-        <li><i>&lt;user-home&gt;</i>/flyway.properties</li>
-        <li><i>&lt;current-dir&gt;</i>/flyway.properties</li>
+        <li><i>&lt;install-dir&gt;</i>/conf/flyway.conf</li>
+        <li><i>&lt;user-home&gt;</i>/flyway.conf</li>
+        <li><i>&lt;current-dir&gt;</i>/flyway.conf</li>
     </ul>
 
     <p>To use an alternative
-        configuration file use -configFile=myAlternativeConfig.properties<br/>To use an alternative
+        configuration file use -configFile=path/to/myAlternativeConfig.conf<br/>To use an alternative
         configuration file encoding (default: UTF-8) use -configFileEncoding=ISO-8859-1
     </p>
 
