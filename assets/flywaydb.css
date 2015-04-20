@@ -465,3 +465,10 @@ i {
 #support span {
     font-size: 10px;
 }
+
+.btn-download i {
+    color: black;
+    padding-left: 0;
+    font-size: 16px;
+    margin-top: 4px;
+}
