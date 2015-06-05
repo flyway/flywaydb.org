@@ -110,7 +110,12 @@ subtitle: FAQ
 
     <p>Yes! These are the recommended strategies for dealing with them:<br/>
 
-    <h3>The schemas have the same life-cycle:</h3>
+    <h3>Multiple identical schemas</h3>
+
+    <p>If you have multiple identical schemas, say one per tenant, invoke Flyway in a loop and change
+    <code>flyway.schemas</code> to match the name of the schema of the current tenant.</p>
+
+    <h3>The schemas are distinct, but have the same life-cycle:</h3>
 
     <p>Use a single Flyway instance. Flyway has support for this built-in. Fill the
         <code>flyway.schemas</code> property with the comma-separated list of schemas you wish to manage. All
