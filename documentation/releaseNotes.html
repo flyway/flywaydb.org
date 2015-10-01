@@ -24,6 +24,10 @@ subtitle: Release Notes
     <h3>Incompatible Changes</h3>
     <ul>
         <li>
+            <a href="https://github.com/flyway/flyway/pull/891">Issue 891</a>
+            The Flyway SBT plugin now requires SBT 0.13.7
+        </li>
+        <li>
             <a href="https://github.com/flyway/flyway/pull/935">Issue 935</a>
             Command-line: error messages are now sent to stderr instead of stdout
             <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/935"><i
@@ -38,6 +42,16 @@ subtitle: Release Notes
             Support for reference-partitioned tables (Oracle 11g)
             <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/1006"><i
                     class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/763">Issue 763</a>
+            sbt tasks do not use scope specific settings
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/891"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/917">Issue 917</a>
+            After running flywayMigrate in SBT there is no straightforward way to know current db version
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/999">Issue 999</a>
@@ -58,8 +72,8 @@ subtitle: Release Notes
     </ul>
 
     <p>
-        Thanks to Jens Berke, Karel Rank, Larivact, pingw33n
-        and thelateperseus for reporting these issues and contributing fixes.
+        Thanks to Christian Dedié, Jens Berke, diwa, Karel Rank, Larivact, pingw33n,
+        thelateperseus and Yevgeniy Mordovkin for reporting these issues and contributing fixes.
     </p>
 
     <h2>Flyway 3.2.1 (2015-03-20)</h2>
