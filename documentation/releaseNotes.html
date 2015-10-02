@@ -24,6 +24,10 @@ subtitle: Release Notes
     <h3>Incompatible Changes</h3>
     <ul>
         <li>
+            <a href="https://github.com/flyway/flyway/issues/724">Issue 724</a>
+            When using the command-line tool with no database user or password, you must now pass in an empty value to avoid being prompted
+        </li>
+        <li>
             <a href="https://github.com/flyway/flyway/pull/891">Issue 891</a>
             The Flyway SBT plugin now requires SBT 0.13.7
         </li>
@@ -42,6 +46,10 @@ subtitle: Release Notes
             Support for reference-partitioned tables (Oracle 11g)
             <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/1006"><i
                     class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/724">Issue 724</a>
+            Prompt for userId and password in commandline mode
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/763">Issue 763</a>
@@ -81,7 +89,7 @@ subtitle: Release Notes
 
     <p>
         Thanks to Christian Dedié, Eric Parton, Jens Berke, diwa, Karel Rank, Larivact, Luke Pryor, pingw33n,
-        thelateperseus and Yevgeniy Mordovkin for reporting these issues and contributing fixes.
+        PredatorVI, Sachin Walia, thelateperseus and Yevgeniy Mordovkin for reporting these issues and contributing fixes.
     </p>
 
     <h2>Flyway 3.2.1 (2015-03-20)</h2>
