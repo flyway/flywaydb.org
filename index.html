@@ -6,7 +6,10 @@ tab: home
     <div class="container">
         <div class="row">
             <div class="span12">
-                <img src="assets/logo/flyway-logo-tm.png" alt="Flyway"/>
+                <img src="assets/logo/flyway-logo-tm.png" alt="Flyway" usemap="#logomap"/>
+                <map name="logomap">
+                    <area shape="rect" coords="240,280,385,333" href="https://boxfuse.com" alt="Boxfuse">
+                </map>
 
                 <div id="tagline-long" class="strong-heading">
                     Evolve your Database Schema easily and <br/> reliably across all your instances
@@ -33,10 +36,10 @@ tab: home
                     <i class="fa fa-android" title="Android"></i>
                 </p>
 
-                <p id="news">
-                    {% assign post = site.posts | first %}
-                    <strong>Latest News:</strong> <a href="{{ post.permalink }}">{{ post.subtitle | xml_escape }}
-                    ({{ post.date | date: "%Y-%m-%d" }})</a>
+                <p id="social">
+                    <a href="https://twitter.com/flywaydb"><i class="fa fa-twitter"></i></a>
+                    <a href="https://github.com/flyway/flyway"><i class="fa fa-github-square"></i></a>
+                    <a href="http://stackoverflow.com/questions/tagged/flyway"><i class="fa fa-stack-overflow"></i></a>
                 </p>
 
                 <div>
@@ -49,12 +52,6 @@ tab: home
                     <p><a href="http://axelfontaine.com/training/continuousdelivery.html" target="_blank">Architecting for Continuous Delivery and Zero Downtime</a><br/>
                         Training | <i class="icon-map-marker"></i> London, UK | Sep 24-25, 2015</p>
                 </div>
-
-                <p id="social">
-                    <a href="https://twitter.com/flywaydb"><i class="fa fa-twitter"></i></a>
-                    <a href="https://github.com/flyway/flyway"><i class="fa fa-github"></i></a>
-                    <a href="http://stackoverflow.com/questions/tagged/flyway"><i class="fa fa-stack-overflow"></i></a>
-                </p>
             </div>
         </div>
     </div>
@@ -197,13 +194,13 @@ tab: home
             <div class="marketing-item"><i class="fa fa-database"></i> <a href="/documentation/database/oracle.html">Oracle</a>
             </div>
 
-            <p>10g and later (all editions, including XE)</p>
+            <p>10g and later, all editions<br/>(incl. Amazon RDS)</p>
         </div>
         <div class="span4">
             <div class="marketing-item"><i class="fa fa-database"></i> <a href="/documentation/database/sqlserver.html">SQL
                 Server</a></div>
 
-            <p>2008 and later</p>
+            <p>2008 and later<br>(incl. Amazon RDS)</p>
         </div>
         <div class="span4">
             <div class="marketing-item"><i class="fa fa-database"></i> <a href="/documentation/database/sqlazure.html">SQL
@@ -217,13 +214,13 @@ tab: home
             <div class="marketing-item"><i class="fa fa-database"></i> <a href="/documentation/database/mysql.html">MySQL</a>
             </div>
 
-            <p>5.1 and later (incl. Amazon RDS)</p>
+            <p>5.1 and later<br>(incl. Amazon RDS)</p>
         </div>
         <div class="span4">
             <div class="marketing-item"><i class="fa fa-database"></i> <a href="/documentation/database/mariadb.html">MariaDB</a>
             </div>
 
-            <p>10.0 and later</p>
+            <p>10.0 and later<br>(incl. Amazon RDS)</p>
         </div>
         <div class="span4">
             <div class="marketing-item"><i class="fa fa-database"></i> <a
@@ -238,7 +235,7 @@ tab: home
             <div class="marketing-item"><i class="fa fa-database"></i> <a
                     href="/documentation/database/postgresql.html">PostgreSQL</a></div>
 
-            <p>9.0 and later (incl. Heroku &amp; Amazon RDS)</p>
+            <p>9.0 and later<br>(incl. Heroku &amp; Amazon RDS)</p>
         </div>
         <div class="span4">
             <div class="marketing-item"><i class="fa fa-database"></i> <a href="/documentation/database/vertica.html">Vertica</a>
@@ -300,10 +297,8 @@ tab: home
 
             <p>6.5 and later</p>
         </div>
-    </div>
-    <div class="row">
         <div class="span4">
-            <div class="marketing-item"><i class="fa fa-database"></i> <a href="/documentation/database/sybaseASE.html">Sybase ASE</a>
+            <div class="marketing-item"><i class="fa fa-database"></i> <a href="/documentation/database/sybaseAse.html">Sybase ASE</a>
             </div>
 
             <p>12.5 and later</p>
@@ -390,7 +385,7 @@ tab: home
     <td><a href="http://liquibase.org">Liquibase</a></td>
     <td><a href="http://code.google.com/p/c5-db-migration/">c5-db-migration</a></td>
     <td><a href="http://dbdeploy.com">dbdeploy</a></td>
-    <td><a href="http://code.google.com/p/mybatis/wiki/Migration">mybatis</a></td>
+    <td><a href="http://mybatis.github.io/migrations/">MyBatis</a></td>
     <td><a href="http://migratedb.sourceforge.net">MIGRATEdb</a></td>
     <td><a href="http://migrate4j.sourceforge.net">migrate4j</a></td>
     <td><a href="http://www.dbmaintain.org">dbmaintain</a></td>
@@ -689,7 +684,7 @@ tab: home
     <td><i class="fa fa-ban" title="no"></i></td>
 </tr>
 <tr>
-    <td><a href="/documentation/database/sybaseASE.html">Sybase ASE</a></td>
+    <td><a href="/documentation/database/sybaseAse.html">Sybase ASE</a></td>
     <td><i class="fa fa-check" title="yes"></i></td>
     <td><i class="fa fa-check" title="yes"></i></td>
     <td><i class="fa fa-ban" title="no"></i></td>

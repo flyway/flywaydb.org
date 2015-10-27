@@ -3,3 +3,4 @@
 *.ipr
 .idea
 /_site
+.jekyll-metadata
