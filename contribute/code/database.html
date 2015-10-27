@@ -253,6 +253,18 @@ sudo /opt/vertica/sbin/install_vertica --hosts localhost --deb vertica_7.0.1-0_a
     for windows based installations. Install it in your local maven repository under
     <code>com/ibm/SolidDriver/6.5.0.14_IF21</code> as <code>SolidDriver-6.5.0.14_IF21.jar</code>.</p>
 
+    <h2>Sybase ASE</h2>
+    
+    <p>A developer version of Sybase ASE can be obtained at 
+    	<a href="http://scn.sap.com/community/developer-center/oltp-db">http://scn.sap.com/community/developer-center/oltp-db</a>. You need to provide
+    	registration information in order to download it.
+    </p>
+    
+    <p>The current version supports both Windows and Linux 64-bit. For other operation systems please contact SAP.</p>
+    
+    <p>To run Sybase tests, no special driver is needed as JTDS supports Sybase connection. Please amend <code>flyway-mediumtests.properties</code>
+    	to supply the username and password to connect to the testing database by using key <code>sybase.user</code> and <code>sybase.password</code>
+    </p>
     <p class="next-steps">
         <a class="btn btn-primary" href="/contribute/code/submit.html">Submit your Changes <i class="fa fa-arrow-right"></i></a>
     </p>
