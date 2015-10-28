@@ -6,24 +6,17 @@ subtitle: Gradle Plugin
 <div id="gradlePlugin">
     <h1>Gradle Plugin</h1>
 
+    <h2>Supported Gradle Versions</h2>
+
+    <ul>
+        <li>Gradle 2.1 and newer</li>
+    </ul>
+
     <h2>Installation</h2>
 
-    <h3>Gradle 2.1 and newer</h3>
     <pre class="prettyprint">plugins {
     id "org.flywaydb.flyway" version "{{ site.flywayVersion }}"
 }</pre>
-
-    <h3>All Gradle Versions</h3>
-    <pre class="prettyprint">buildscript {
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath "org.flywaydb:flyway-gradle-plugin:{{ site.flywayVersion }}"
-    }
-}
-
-apply plugin: 'org.flywaydb.flyway'</pre>
 
     <h2>Tasks</h2>
     <table class="table table-bordered table-hover">
