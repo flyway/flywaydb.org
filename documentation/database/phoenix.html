@@ -1,0 +1,59 @@
+---
+layout: documentation
+menu: phoenix
+subtitle: Phoenix
+---
+<div id="databasePhoenix">
+    <h1>Phoenix</h1>
+
+    <h2>Versions</h2>
+    <ul>
+        <li>4.2.2 and later</li>
+    </ul>
+
+    <h2>Default Driver</h2>
+    <ul>
+        <li>org.apache.phoenix.jdbc.PhoenixDriver</li>
+    </ul>
+
+    <h2>Sql Script Syntax</h2>
+    <ul>
+        <li><a href="/documentation/migration/sql.html#syntax">Standard Sql
+            syntax</a> with statement delimiter ;
+        </li>
+    </ul>
+    <h3>Compatibility</h3>
+    <ul>
+        <li>Any Phoenix sql script executed by Flyway, can be executed by the sqlline.py command-line tool and other
+            Phoenix-compatible tools (after the placeholders have been replaced).
+        </li>
+    </ul>
+    <h3>Example</h3>
+    <pre class="prettyprint">/* Single line comment */
+CREATE SEQUENCE test_seq;
+
+CREATE TABLE test_data (
+  test_id BIGINT NOT NULL PRIMARY KEY,
+  value VARCHAR(25) NOT NULL
+);
+
+/*
+Multi-line
+comment
+*/
+
+CREATE VIEW a_view (a_value) AS SELECT &#x34;value&#x34; FROM test_data;
+
+-- Placeholder
+UPSERT INTO test_data (test_id, value) VALUES (1, &#x27;'someval'&#x27;);</pre>
+
+    <h2>Limitations</h2>
+    <ul>
+        <li>Phoenix doesn't explicitly support setting a <code>schema</code>, however the plugin does a best-effort to support operations on a per-schema basis.</li>
+        <li>No concurrent migration support (to make Flyway cluster-safe) as Phoenix has no transaction support yet</li>
+    </ul>
+
+    <p class="next-steps">
+        <a class="btn btn-primary" href="/documentation/existing.html">Existing database setup <i class="fa fa-arrow-right"></i></a>
+    </p>
+</div>
