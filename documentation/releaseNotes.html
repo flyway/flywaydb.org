@@ -51,11 +51,15 @@ subtitle: Release Notes
     <h3>Incompatible Changes</h3>
     <ul>
         <li>
+            <a href="https://github.com/flyway/flyway/issues/477">Issue 477</a>
+            When a location is not found a warning is now emitted instead of an exception
+        </li>
+        <li>
             <a href="https://github.com/flyway/flyway/issues/724">Issue 724</a>
             When using the command-line tool with no database user or password, you must now pass in an empty value to avoid being prompted
         </li>
         <li>
-            <a href="https://github.com/flyway/flyway/issues/767">Issue 891</a>
+            <a href="https://github.com/flyway/flyway/issues/767">Issue 767</a>
             mvn flyway:clean is now executed in the clean phase by default
         </li>
         <li>
