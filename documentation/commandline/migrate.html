@@ -189,6 +189,12 @@ subtitle: 'Command-line: migrate'
             </td>
         </tr>
         <tr>
+            <td>cleanDisabled</td>
+            <td>NO</td>
+            <td>false</td>
+            <td>Whether to disable clean. This is especially useful for production environments where running clean can be quite a career limiting move.</td>
+        </tr>
+        <tr>
             <td>baselineOnMigrate</td>
             <td>NO</td>
             <td>false</td>
@@ -243,6 +249,7 @@ flyway.target=5.1
 flyway.outOfOrder=false
 flyway.validateOnMigrate=true
 flyway.cleanOnValidationError=false
+flyway.cleanDisabled=false
 flyway.baselineOnMigrate=false</pre>
 
     <h2>Sample output</h2>

@@ -209,6 +209,12 @@ subtitle: 'mvn flyway:migrate'
         </td>
     </tr>
     <tr>
+        <td>cleanDisabled</td>
+        <td>NO</td>
+        <td>false</td>
+        <td>Whether to disable clean. This is especially useful for production environments where running clean can be quite a career limiting move.</td>
+    </tr>
+    <tr>
         <td>baselineOnMigrate</td>
         <td>NO</td>
         <td>false</td>
@@ -294,6 +300,7 @@ subtitle: 'mvn flyway:migrate'
     &lt;outOfOrder&gt;false&lt;/outOfOrder&gt;
     &lt;validateOnMigrate&gt;true&lt;/validateOnMigrate&gt;
     &lt;cleanOnValidationError&gt;false&lt;/cleanOnValidationError&gt;
+    &lt;cleanDisabled&gt;false&lt;/cleanDisabled&gt;
     &lt;baselineOnMigrate&gt;false&lt;/baselineOnMigrate&gt;
     &lt;baselineVersion&gt;5&lt;/baselineVersion&gt;
     &lt;baselineDescription&gt;Let's go!&lt;/baselineDescription&gt;
