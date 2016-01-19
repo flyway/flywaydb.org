@@ -187,6 +187,12 @@ subtitle: 'sbt flywayMigrate'
         </td>
     </tr>
     <tr>
+        <td>flywayCleanDisabled</td>
+        <td>NO</td>
+        <td>false</td>
+        <td>Whether to disable clean. This is especially useful for production environments where running clean can be quite a career limiting move.</td>
+    </tr>
+    <tr>
         <td>flywayBaselineOnMigrate</td>
         <td>NO</td>
         <td>false</td>
@@ -265,6 +271,8 @@ flywayOutOfOrder := false
 flywayValidateOnMigrate := true
 
 flywayCleanOnValidationError := false
+
+flywayDisabled := false
 
 flywayBaselineOnMigrate := false
 

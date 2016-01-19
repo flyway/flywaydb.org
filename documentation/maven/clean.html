@@ -82,6 +82,12 @@ subtitle: 'mvn flyway:clean'
                 implementations to use to hook into the Flyway lifecycle.</td>
         </tr>
         <tr>
+            <td>cleanDisabled</td>
+            <td>NO</td>
+            <td>false</td>
+            <td>Whether to disable clean. This is especially useful for production environments where running clean can be quite a career limiting move.</td>
+        </tr>
+        <tr>
             <td>skip</td>
             <td>NO</td>
             <td>false</td>
@@ -113,6 +119,7 @@ subtitle: 'mvn flyway:clean'
         &lt;callback&gt;com.mycompany.project.CustomCallback&lt;/callback&gt;
         &lt;callback&gt;com.mycompany.project.AnotherCallback&lt;/callback&gt;
     &lt;/callbacks&gt;
+    &lt;cleanDisabled&gt;false&lt;/cleanDisabled&gt;
     &lt;skip&gt;false&lt;/skip&gt;
     &lt;configFile&gt;myConfig.properties&lt;/configFile&gt;
 &lt;/configuration&gt;</pre>
