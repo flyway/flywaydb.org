@@ -28,6 +28,12 @@ subtitle: API hooks
             href="/documentation/api/javadoc/org/flywaydb/core/api/migration/MigrationChecksumProvider"
             >MigrationChecksumProvider</a></strong> interfaces.</p>
 
+    <p>To access the Flyway configuration your migration can implement <strong><a
+            href="/documentation/api/javadoc/org/flywaydb/core/api/configuration/ConfigurationAware"
+            >ConfigurationAware</a></strong> and Flyway will automatically inject an instance of <strong><a
+            href="/documentation/api/javadoc/org/flywaydb/core/api/configuration/FlywayConfiguration"
+            >FlywayConfiguration</a></strong>.</p>
+
     <h2 id="callbacks">Java-based Callbacks</h2>
 
     <p>Building upon that are the <a href="/documentation/callbacks">Java-based Callbacks</a>
@@ -40,6 +46,12 @@ subtitle: API hooks
     which already contains no-op implementations of all the methods of the <code>org.flywaydb.core.api.callback.<strong>FlywayCallback</strong></code>
     interface.</p>
 
+    <p>To access the Flyway configuration your callback can implement <strong><a
+            href="/documentation/api/javadoc/org/flywaydb/core/api/configuration/ConfigurationAware"
+    >ConfigurationAware</a></strong> and Flyway will automatically inject an instance of <strong><a
+            href="/documentation/api/javadoc/org/flywaydb/core/api/configuration/FlywayConfiguration"
+    >FlywayConfiguration</a></strong>.</p>
+
     <h2>Custom Migration resolvers &amp; executors</h2>
 
     <p>For those that need more than what the SQL and Java-based migrations offer, you also have the possibility to
@@ -48,6 +60,12 @@ subtitle: API hooks
     </p>
 
     <p>These can then be used for loading things like CSV-based migrations or other custom formats.</p>
+
+    <p>To access the Flyway configuration your resolver can implement <strong><a
+            href="/documentation/api/javadoc/org/flywaydb/core/api/configuration/ConfigurationAware"
+    >ConfigurationAware</a></strong> and Flyway will automatically inject an instance of <strong><a
+            href="/documentation/api/javadoc/org/flywaydb/core/api/configuration/FlywayConfiguration"
+    >FlywayConfiguration</a></strong>.</p>
 
     <p class="next-steps">
         <a class="btn btn-primary" href="/documentation/api/javadoc">API: Javadoc <i class="fa fa-arrow-right"></i></a>
