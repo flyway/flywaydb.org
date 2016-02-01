@@ -35,11 +35,11 @@ subtitle: SQL Migrations
 
     <p>The file name consists of:</p>
     <ul>
-        <li><strong>prefix</strong>: Configurable, default: V</li>
-        <li><strong>version</strong>: Dots or underscores separate the parts, you can use as many parts as you like</li>
-        <li><strong>separator</strong>: Configurable, default: __ (two underscores)</li>
+        <li><strong>prefix</strong>: Configurable, default: <code>V</code> for versioned migrations, <code>R</code> for repeatable migrations</li>
+        <li><strong>version</strong>: (Versioned migrations only) Dots or underscores separate as many parts as you like</li>
+        <li><strong>separator</strong>: Configurable, default: <code>__</code> (two underscores)</li>
         <li><strong>description</strong>: Underscores or spaces separate the words</li>
-        <li><strong>suffix</strong>: Configurable, default: .sql</li>
+        <li><strong>suffix</strong>: Configurable, default: <code>.sql</code></li>
     </ul>
 
     <h2 id="syntax">Sql Script syntax</h2>

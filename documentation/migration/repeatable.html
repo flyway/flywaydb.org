@@ -1,0 +1,32 @@
+---
+layout: migration
+pill: repeatable
+subtitle: Repeatable migrations
+---
+<div id="repeatable">
+    <h1>Repeatable migrations</h1>
+
+    <p>Repeatable migrations do not have a version. Instead they are (re-)applied every time their checksum changes.</p>
+
+    <p>This is very useful for managing database objects whose definition can then simply be maintained in a single file in version control.</p>
+
+    <p>It is your responsibility to ensure the same repeatable migration can be applied multiple times. This usually
+        involves making use of <code>CREATE OR REPLACE</code> clauses in your DDL statements.</p>
+
+    <h2>Usages</h2>
+
+    <ul>
+        <li>(Re-)creating views/procedures/functions/packages/...</li>
+        <li>Bulk reference data reinserts</li>
+    </ul>
+
+    <h2>Example</h2>
+
+    <p><code>R__Blue_cars.sql</code></p>
+
+    <pre class="prettyprint">CREATE OR REPLACE VIEW blue_cars AS SELECT id, license_plate FROM cars WHERE color='blue';</pre>
+
+    <p class="next-steps">
+        <a class="btn btn-primary" href="/documentation/migration/sql">SQL-based migrations <i class="fa fa-arrow-right"></i></a>
+    </p>
+</div>

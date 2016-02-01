@@ -3,6 +3,7 @@
 *.ico binary
 *.png binary
 *.bmml binary
+*.bmpr binary
 *.gif binary
 *.jpg binary
 *.pdn binary

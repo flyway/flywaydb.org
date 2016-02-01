@@ -4,58 +4,59 @@ pill: overview
 subtitle: Migrations & Versions
 ---
 <div id="migrations">
-    <h1>Migrations &amp; Versions</h1>
+    <h1>Migrations</h1>
 
     <p>Flyway updates the database from one version to the next using <strong>migrations</strong>.</p>
 
-    <h2>Available vs Applied Migrations</h2>
+    <p>Migrations can either be <strong>versioned</strong> or <strong>repeatable</strong>. Versioned migrations have
+        a unique version and are applied exactly once. Repeatable migrations do not have a version. Instead they are
+        (re-)applied
+        every time their checksum changes.</p>
 
-    <p>Migrations are either Resolved or Applied. Resolved migrations have been detected by Flyway's filesystem
-        and classpath scanner. Once they are executed against the database, they become Applied.</p>
+    <p>Both versioned and repeatable migrations can be written either in <strong><a href="/documentation/migration/sql">sql</a></strong>
+        or in <strong><a href="/documentation/migration/java">java</a></strong> and can consist of multiple statements.</p>
 
-    <h2>Migration types</h2>
+    <p>Within a single migration, all statements are run within a single transaction.</p>
 
-    <p>Not all migrations are equally complex, therefore Flyway support both <a
-            href="/documentation/migration/sql">Sql</a> and <a href="/documentation/migration/java">Java</a> migrations.
+    <h2>Metadata table</h2>
+
+    <p>To keep track of which migrations have already been applied when and by whom, Flyway add a special bookkeeping
+        table to your schema. This <strong>metadata table</strong> also tracks migration checksums and whether or not
+        the migrations were successful.</p>
+
+    <p>Read more about this in our getting started guide on <a href="/getstarted/how">how Flyway works</a>.</p>
+
+    <h2>Migration States</h2>
+
+    <p>
+        Migrations are either <em>resolved</em> or <em>applied</em>. Resolved migrations have been detected by Flyway's
+        filesystem
+        and classpath scanner. Initially they are <strong>pending</strong>. Once they are executed against the database,
+        they become applied.
     </p>
 
-    <p><a href="/documentation/migration/sql">Sql Migrations</a> are the most common and should fit the vast majority of
-        the cases.</p>
-
-    <p><a href="/documentation/migration/java">Java Migrations</a> are for advanced changes
-        that are difficult or impossible to accomplish using Sql.<br/> This includes dealing with LOBs and advanced
-        bulk data loads and transformations.</p>
-
-    <p>Flyway <strong>sorts</strong> all migrations <strong>by version</strong> and executes them in order.</p>
-
-    <h2 id="versions">Versions</h2>
-
-    <p>Each migration must have a <strong>unique version</strong> and a description.</p>
-
-    <p>A version must have the following structure:</p>
-
+    <p>All statements of a migration are run within a single transaction.</p>
     <ul>
-        <li>One or more numeric parts</li>
-        <li>Separated by a dot (.) or an underscore (_)</li>
-        <li>Underscores are replaced by dots at runtime</li>
-        <li>Leading zeroes are ignored in each part</li>
+        <li>When the migration <em>succeeds</em> it is marked as <strong>success</strong> in Flyway's <em>metadata
+            table</em>.
+        </li>
+        <li>When the migration <em>fails</em> and the database supports <em>DDL transactions</em>, the migration is <em>rolled
+            back</em> and nothing is recorded in the metadata table.
+        </li>
+        <li>When the migration <em>fails</em> and the database doesn't supports <em>DDL transactions</em>, the migration
+            is marked as <strong>failed</strong> in the metadata table, indicating manual database cleanup may be
+            required.
+        </li>
     </ul>
 
-    <p>Examples of valid versions:</p>
+    <p>Repeatable migrations whose checksum has changed since they are last applied are <strong>outdated</strong> until
+        they are executed again.</p>
 
-    <ul>
-        <li>1</li>
-        <li>001</li>
-        <li>5.2</li>
-        <li>5_2 (5.2 at runtime)</li>
-        <li>1.2.3.4.5.6.7.8.9</li>
-        <li>205.68</li>
-        <li>20130115113556</li>
-        <li>2013.1.15.11.35.56</li>
-        <li>2013.01.15.11.35.56</li>
-    </ul>
+    <p>When Flyway discovers an applied versioned migration with a version that is higher than the highest known version
+        (this happens typically when a newer version of the software has migrated that schema), that migration is marked as <strong>future</strong>.</p>
 
     <p class="next-steps">
-        <a class="btn btn-primary" href="/documentation/migration/sql">SQL-based migrations <i class="fa fa-arrow-right"></i></a>
+        <a class="btn btn-primary" href="/documentation/migration/versioned">Versioned migrations <i
+                class="fa fa-arrow-right"></i></a>
     </p>
 </div>

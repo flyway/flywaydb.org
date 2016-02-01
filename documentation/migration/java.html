@@ -29,24 +29,25 @@ subtitle: Java Migrations
             href="/documentation/api/javadoc/org/flywaydb/core/api/migration/jdbc/JdbcMigration"
             >JdbcMigration</a></strong>.<br/></p>
 
-    <p>A Java Migration automatically
+    <p>A Java Migration automatically</p>
     <ul>
         <li>wraps the migration in a transaction</li>
         <li>extracts the version and the description from the class name</li>
     </ul>
-    </p><p><img src="/assets/balsamiq/JavaMigrationNaming.png"/></p>
+    <p><img src="/assets/balsamiq/JavaMigrationNaming.png"/></p>
 
     <p>The class name consists of:
     <ul>
-        <li><strong>prefix</strong> (Always V)</li>
-        <li><strong>version</strong> (Underscores separate the parts, you can use as many parts as you like)</li>
-        <li><strong>separator</strong> (Two underscores)</li>
-        <li><strong>description</strong> (Underscores separate the words)</li>
+        <li><strong>prefix</strong>: Always <code>V</code> for versioned migrations, <code>R</code> for repeatable migrations</li>
+        <li><strong>version</strong>: (Versioned migrations only) Underscores separate as many parts as you like</li>
+        <li><strong>separator</strong>: Always <code>__</code> (Two underscores)</li>
+        <li><strong>description</strong>: Underscores separate the words</li>
     </ul>
-    <br/> </p><p>If you need more control over the class name, you can override the default convention by
-    implementing <strong><a
-            href="/documentation/api/javadoc/org/flywaydb/core/api/migration/MigrationInfoProvider"
-            >MigrationInfoProvider</a></strong>. </p>
+    <br/>
+    <p>If you need more control over the class name, you can override the default convention by implementing
+        <strong><a href="/documentation/api/javadoc/org/flywaydb/core/api/migration/MigrationInfoProvider"
+            >MigrationInfoProvider</a></strong>.
+    </p>
 
     <p>This will allow you to name your class as you wish. Version and description are provided by implement the
         respective methods.<br/></p>
