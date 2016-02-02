@@ -101,6 +101,12 @@ subtitle: 'mvn flyway:validate'
             <td>The file name prefix for Sql migrations</td>
         </tr>
         <tr>
+            <td>repeatableSqlMigrationPrefix</td>
+            <td>NO</td>
+            <td>R</td>
+            <td>The file name prefix for repeatable Sql migrations</td>
+        </tr>
+        <tr>
             <td>sqlMigrationSeparator</td>
             <td>NO</td>
             <td>__</td>
@@ -227,6 +233,7 @@ subtitle: 'mvn flyway:validate'
         &lt;location&gt;filesystem:/sql-migrations&lt;/location&gt;
     &lt;/locations&gt;
     &lt;sqlMigrationPrefix&gt;Migration-&lt;/sqlMigrationPrefix&gt;
+    &lt;repeatableSqlMigrationPrefix&gt;RRR&lt;/repeatableSqlMigrationPrefix&gt;
     &lt;sqlMigrationSeparator&gt;__&lt;/sqlMigrationSeparator&gt;
     &lt;sqlMigrationSuffix&gt;-OK.sql&lt;/sqlMigrationSuffix&gt;
     &lt;encoding&gt;ISO-8859-1&lt;/encoding&gt;

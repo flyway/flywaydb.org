@@ -85,6 +85,12 @@ subtitle: 'sbt flywayInfo'
             <td>The file name prefix for Sql migrations</td>
         </tr>
         <tr>
+            <td>flywayRepeatableSqlMigrationPrefix</td>
+            <td>NO</td>
+            <td>R</td>
+            <td>The file name prefix for repeatable Sql migrations</td>
+        </tr>
+        <tr>
             <td>flywaySqlMigrationSeparator</td>
             <td>NO</td>
             <td>__</td>
@@ -185,6 +191,8 @@ flywayTable := "schema_history"
 flywayLocations := Seq("classpath:migrations1", "migrations2", "filesystem:/sql-migrations")
 
 flywaySqlMigrationPrefix := "Migration-"
+
+flywayRepeatableSqlMigrationPrefix := "RRR"
 
 flywaySqlMigrationSeparator := "__"
 

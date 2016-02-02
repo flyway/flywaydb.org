@@ -85,6 +85,12 @@ subtitle: 'gradle flywayInfo'
             <td>The file name prefix for Sql migrations</td>
         </tr>
         <tr>
+            <td>repeatableSqlMigrationPrefix</td>
+            <td>NO</td>
+            <td>R</td>
+            <td>The file name prefix for repeatable Sql migrations</td>
+        </tr>
+        <tr>
             <td>sqlMigrationSeparator</td>
             <td>NO</td>
             <td>__</td>
@@ -177,6 +183,7 @@ subtitle: 'gradle flywayInfo'
     table = 'schema_history'
     locations = ['classpath:migrations1', 'migrations2', 'filesystem:/sql-migrations']
     sqlMigrationPrefix = 'Migration-'
+    repeatableSqlMigrationPrefix = 'RRR'
     sqlMigrationSeparator = '__'
     sqlMigrationSuffix = '-OK.sql'
     encoding = 'ISO-8859-1'

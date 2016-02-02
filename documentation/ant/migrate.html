@@ -98,6 +98,12 @@ subtitle: 'Ant Task: Migrate'
         <td>The file name prefix for Sql migrations</td>
     </tr>
     <tr>
+        <td>repeatableSqlMigrationPrefix</td>
+        <td>NO</td>
+        <td>R</td>
+        <td>The file name prefix for repeatable Sql migrations</td>
+    </tr>
+    <tr>
         <td>sqlMigrationSeparator</td>
         <td>NO</td>
         <td>__</td>
@@ -262,6 +268,7 @@ subtitle: 'Ant Task: Migrate'
 &lt;property name=&quot;flyway.table&quot; value=&quot;schema_history&quot;/&gt;
 &lt;property name=&quot;flyway.locations&quot; value=&quot;classpath:com.mycomp.db,db/mig,filesystem:/sql-mig&quot;/&gt;
 &lt;property name=&quot;flyway.sqlMigrationPrefix&quot; value=&quot;Migration-&quot;/&gt;
+&lt;property name=&quot;flyway.repeatableSqlMigrationPrefix&quot; value=&quot;RRR&quot;/&gt;
 &lt;property name=&quot;flyway.sqlMigrationSeparator&quot; value=&quot;__&quot;/&gt;
 &lt;property name=&quot;flyway.sqlMigrationSuffix&quot; value=&quot;-OK.sql&quot;/&gt;
 &lt;property name=&quot;flyway.encoding&quot; value=&quot;ISO-8859-1&quot;/&gt;
