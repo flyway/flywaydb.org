@@ -67,6 +67,12 @@ subtitle: 'sbt flywayClean'
                 implementations to use to hook into the Flyway lifecycle.</td>
         </tr>
         <tr>
+            <td>flywaySkipDefaultCallbacks</td>
+            <td>NO</td>
+            <td>false</td>
+            <td>Whether default built-in callbacks (sql) should be skipped. If true, only custom callbacks are used.</td>
+        </tr>
+        <tr>
             <td>flywayCleanDisabled</td>
             <td>NO</td>
             <td>false</td>
@@ -89,6 +95,8 @@ flywayPassword := "mySecretPwd"
 flywaySchemas := Seq("schema1", "schema2", "schema3")
 
 flywayCallbacks := Seq("com.mycompany.CustomCallback", "com.mycompany.AnotherCallback")
+
+flywaySkipDefaultCallbacks := false
 
 flywayDisabled := false</pre>
 

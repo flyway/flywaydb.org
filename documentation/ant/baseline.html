@@ -78,6 +78,12 @@ subtitle: 'Ant Task: Baseline'
                 implementations to use to hook into the Flyway lifecycle.</td>
         </tr>
         <tr>
+            <td>skipDefaultCallbacks</td>
+            <td>NO</td>
+            <td>false</td>
+            <td>Whether default built-in callbacks (sql) should be skipped. If true, only custom callbacks are used.</td>
+        </tr>
+        <tr>
             <td>baselineVersion</td>
             <td>NO</td>
             <td>1</td>
@@ -118,6 +124,7 @@ subtitle: 'Ant Task: Baseline'
 &lt;property name=&quot;flyway.schemas&quot; value=&quot;schema1,schema2,schema3&quot;/&gt;
 &lt;property name=&quot;flyway.table&quot; value=&quot;schema_history&quot;/&gt;
 &lt;property name=&quot;flyway.callbacks&quot; value=&quot;com.mycomp.MyCallback,com.mycomp.OtherCallback&quot;/&gt;
+&lt;property name=&quot;flyway.skipDefaultCallbacks&quot; value=&quot;false&quot;/&gt;
 &lt;property name=&quot;flyway.baselineVersion&quot; value=&quot;1.0&quot;/&gt;
 &lt;property name=&quot;flyway.baselineDescription&quot; value=&quot;Base Migration&quot;/&gt;</pre>
 

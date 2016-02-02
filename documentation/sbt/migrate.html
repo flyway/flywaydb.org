@@ -147,6 +147,12 @@ subtitle: 'sbt flywayMigrate'
             implementations to use to hook into the Flyway lifecycle.</td>
     </tr>
     <tr>
+        <td>flywaySkipDefaultCallbacks</td>
+        <td>NO</td>
+        <td>false</td>
+        <td>Whether default built-in callbacks (sql) should be skipped. If true, only custom callbacks are used.</td>
+    </tr>
+    <tr>
         <td>flywayTarget</td>
         <td>NO</td>
         <td><i>latest version</i></td>
@@ -263,6 +269,8 @@ flywayPlaceholderSuffix := "]"
 flywayResolvers := Seq("com.mycompany.CustomResolver", "com.mycompany.AnotherResolver")
 
 flywayCallbacks := Seq("com.mycompany.CustomCallback", "com.mycompany.AnotherCallback")
+
+flywaySkipDefaultCallbacks := false
 
 flywayTarget := "1.1"
 

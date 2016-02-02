@@ -169,6 +169,12 @@ subtitle: 'mvn flyway:migrate'
             implementations to use to hook into the Flyway lifecycle.</td>
     </tr>
     <tr>
+        <td>skipDefaultCallbacks</td>
+        <td>NO</td>
+        <td>false</td>
+        <td>Whether default built-in callbacks (sql) should be skipped. If true, only custom callbacks are used.</td>
+    </tr>
+    <tr>
         <td>target</td>
         <td>NO</td>
         <td><i>latest version</i></td>
@@ -296,6 +302,7 @@ subtitle: 'mvn flyway:migrate'
         &lt;callback&gt;com.mycompany.project.CustomCallback&lt;/callback&gt;
         &lt;callback&gt;com.mycompany.project.AnotherCallback&lt;/callback&gt;
     &lt;/callbacks&gt;
+    &lt;skipDefaultCallbacks&gt;false&lt;/skipDefaultCallbacks&gt;
     &lt;target&gt;1.1&lt;/target&gt;
     &lt;outOfOrder&gt;false&lt;/outOfOrder&gt;
     &lt;validateOnMigrate&gt;true&lt;/validateOnMigrate&gt;

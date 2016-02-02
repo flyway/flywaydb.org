@@ -68,6 +68,12 @@ subtitle: 'Ant Task: Clean'
                 implementations to use to hook into the Flyway lifecycle.</td>
         </tr>
         <tr>
+            <td>skipDefaultCallbacks</td>
+            <td>NO</td>
+            <td>false</td>
+            <td>Whether default built-in callbacks (sql) should be skipped. If true, only custom callbacks are used.</td>
+        </tr>
+        <tr>
             <td>cleanDisabled</td>
             <td>NO</td>
             <td>false</td>
@@ -99,6 +105,7 @@ subtitle: 'Ant Task: Clean'
 &lt;property name=&quot;flyway.password&quot; value=&quot;mySecretPwd&quot;/&gt;
 &lt;property name=&quot;flyway.schemas&quot; value=&quot;schema1,schema2,schema3&quot;/&gt;
 &lt;property name=&quot;flyway.callbacks&quot; value=&quot;com.mycomp.MyCallback,com.mycomp.OtherCallback&quot;/&gt;
+&lt;property name=&quot;flyway.skipDefaultCallbacks&quot; value=&quot;false&quot;/&gt;
 &lt;property name=&quot;flyway.cleanDisabled&quot; value=&quot;false&quot;/&gt;</pre>
 
     <h2>Sample output</h2>

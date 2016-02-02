@@ -151,6 +151,12 @@ subtitle: 'Command-line: info'
                 implementations to use to hook into the Flyway lifecycle.</td>
         </tr>
         <tr>
+            <td>skipDefaultCallbacks</td>
+            <td>NO</td>
+            <td>false</td>
+            <td>Whether default built-in callbacks (sql) should be skipped. If true, only custom callbacks are used.</td>
+        </tr>
+        <tr>
             <td>target</td>
             <td>NO</td>
             <td><i>latest version</i></td>
@@ -188,6 +194,7 @@ flyway.placeholderPrefix=#[
 flyway.placeholderSuffix=]
 flyway.resolvers=com.mycomp.project.CustomResolver,com.mycomp.project.AnotherResolver
 flyway.callbacks=com.mycomp.project.CustomCallback,com.mycomp.project.AnotherCallback
+flyway.skipDefaultCallbacks=false
 flyway.target=5.1
 flyway.outOfOrder=false</pre>
 

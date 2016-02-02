@@ -147,6 +147,12 @@ subtitle: 'sbt flywayRepair'
                 <a href="/documentation/api/javadoc/org/flywaydb/core/api/callback/FlywayCallback">FlywayCallback</a>
                 implementations to use to hook into the Flyway lifecycle.</td>
         </tr>
+        <tr>
+            <td>flywaySkipDefaultCallbacks</td>
+            <td>NO</td>
+            <td>false</td>
+            <td>Whether default built-in callbacks (sql) should be skipped. If true, only custom callbacks are used.</td>
+        </tr>
     </table>
 
     <h2>Sample configuration</h2>
@@ -187,7 +193,9 @@ flywayPlaceholderSuffix := "]"
 
 flywayResolvers := Seq("com.mycompany.CustomResolver", "com.mycompany.AnotherResolver")
 
-flywayCallbacks := Seq("com.mycompany.CustomCallback", "com.mycompany.AnotherCallback")</pre>
+flywayCallbacks := Seq("com.mycompany.CustomCallback", "com.mycompany.AnotherCallback")
+
+flywaySkipDefaultCallbacks := false</pre>
     <h2>Sample output</h2>
 
     <pre class="console">&gt; sbt flywayRepair

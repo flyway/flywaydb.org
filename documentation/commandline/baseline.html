@@ -85,6 +85,12 @@ subtitle: 'Command-line: baseline'
                 implementations to use to hook into the Flyway lifecycle.</td>
         </tr>
         <tr>
+            <td>skipDefaultCallbacks</td>
+            <td>NO</td>
+            <td>false</td>
+            <td>Whether default built-in callbacks (sql) should be skipped. If true, only custom callbacks are used.</td>
+        </tr>
+        <tr>
             <td>baselineVersion</td>
             <td>NO</td>
             <td>1</td>
@@ -109,6 +115,7 @@ flyway.password=mySecretPwd
 flyway.schemas=schema1,schema2,schema3
 flyway.table=schema_history
 flyway.callbacks=com.mycomp.project.CustomCallback,com.mycomp.project.AnotherCallback
+flyway.skipDefaultCallbacks=false
 flyway.baselineVersion=1.0
 flyway.baselineDescription=Base Migration</pre>
 

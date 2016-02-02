@@ -157,6 +157,12 @@ subtitle: 'mvn flyway:repair'
                 implementations to use to hook into the Flyway lifecycle.</td>
         </tr>
         <tr>
+            <td>skipDefaultCallbacks</td>
+            <td>NO</td>
+            <td>false</td>
+            <td>Whether default built-in callbacks (sql) should be skipped. If true, only custom callbacks are used.</td>
+        </tr>
+        <tr>
             <td>skip</td>
             <td>NO</td>
             <td>false</td>
@@ -208,6 +214,7 @@ subtitle: 'mvn flyway:repair'
         &lt;callback&gt;com.mycompany.project.CustomCallback&lt;/callback&gt;
         &lt;callback&gt;com.mycompany.project.AnotherCallback&lt;/callback&gt;
     &lt;/callbacks&gt;
+    &lt;skipDefaultCallbacks&gt;false&lt;/skipDefaultCallbacks&gt;
     &lt;skip&gt;false&lt;/skip&gt;
     &lt;configFile&gt;myConfig.properties&lt;/configFile&gt;
 &lt;/configuration&gt;</pre>

@@ -150,6 +150,12 @@ subtitle: 'Ant Task: Validate'
                 implementations to use to hook into the Flyway lifecycle.</td>
         </tr>
         <tr>
+            <td>skipDefaultCallbacks</td>
+            <td>NO</td>
+            <td>false</td>
+            <td>Whether default built-in callbacks (sql) should be skipped. If true, only custom callbacks are used.</td>
+        </tr>
+        <tr>
             <td>target</td>
             <td>NO</td>
             <td><i>latest version</i></td>
@@ -215,6 +221,7 @@ subtitle: 'Ant Task: Validate'
 &lt;property name=&quot;flyway.placeholderSuffix&quot; value=&quot;]&quot;/&gt;
 &lt;property name=&quot;flyway.resolvers&quot; value=&quot;com.mycomp.MyResolver,com.mycomp.OtherResolver&quot;/&gt;
 &lt;property name=&quot;flyway.callbacks&quot; value=&quot;com.mycomp.MyCallback,com.mycomp.OtherCallback&quot;/&gt;
+&lt;property name=&quot;flyway.skipDefaultCallbacks&quot; value=&quot;false&quot;/&gt;
 &lt;property name=&quot;flyway.target&quot; value=&quot;1.1&quot;/&gt;
 &lt;property name=&quot;flyway.outOfOrder&quot; value=&quot;false&quot;/&gt;
 &lt;property name=&quot;flyway.validationErrorMode&quot; value=&quot;FAIL&quot;/&gt;</pre>

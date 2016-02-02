@@ -77,6 +77,12 @@ subtitle: 'gradle flywayBaseline'
                 implementations to use to hook into the Flyway lifecycle.</td>
         </tr>
         <tr>
+            <td>skipDefaultCallbacks</td>
+            <td>NO</td>
+            <td>false</td>
+            <td>Whether default built-in callbacks (sql) should be skipped. If true, only custom callbacks are used.</td>
+        </tr>
+        <tr>
             <td>baselineVersion</td>
             <td>NO</td>
             <td>1</td>
@@ -101,6 +107,7 @@ subtitle: 'gradle flywayBaseline'
     schemas = ['schema1', 'schema2', 'schema3']
     table = 'schema_history'
     callbacks = ['com.mycompany.proj.CustomCallback', 'com.mycompany.proj.AnotherCallback']
+    skipDefaultCallbacks = false
     baselineVersion = 5
     baselineDescription = "Let's go!"
 }</pre>

@@ -155,6 +155,12 @@ subtitle: 'Command-line: repair'
                 <a href="/documentation/api/javadoc/org/flywaydb/core/api/callback/FlywayCallback">FlywayCallback</a>
                 implementations to use to hook into the Flyway lifecycle.</td>
         </tr>
+        <tr>
+            <td>skipDefaultCallbacks</td>
+            <td>NO</td>
+            <td>false</td>
+            <td>Whether default built-in callbacks (sql) should be skipped. If true, only custom callbacks are used.</td>
+        </tr>
         </tbody>
     </table>
 
@@ -176,7 +182,8 @@ flyway.placeholders.otherplaceholder=value123
 flyway.placeholderPrefix=#[
 flyway.placeholderSuffix=]
 flyway.resolvers=com.mycomp.project.CustomResolver,com.mycomp.project.AnotherResolver
-flyway.callbacks=com.mycomp.project.CustomCallback,com.mycomp.project.AnotherCallback</pre>
+flyway.callbacks=com.mycomp.project.CustomCallback,com.mycomp.project.AnotherCallback
+flyway.skipDefaultCallbacks=false</pre>
 
     <h2>Sample output</h2>
     <pre class="console">&gt; flyway repair

@@ -150,6 +150,12 @@ subtitle: 'Ant Task: Repair'
                 implementations to use to hook into the Flyway lifecycle.</td>
         </tr>
         <tr>
+            <td>skipDefaultCallbacks</td>
+            <td>NO</td>
+            <td>false</td>
+            <td>Whether default built-in callbacks (sql) should be skipped. If true, only custom callbacks are used.</td>
+        </tr>
+        <tr>
             <td>classpath</td>
             <td>NO</td>
             <td></td>
@@ -186,7 +192,8 @@ subtitle: 'Ant Task: Repair'
 &lt;property name=&quot;flyway.placeholderPrefix&quot; value=&quot;#[&quot;/&gt;
 &lt;property name=&quot;flyway.placeholderSuffix&quot; value=&quot;]&quot;/&gt;
 &lt;property name=&quot;flyway.resolvers&quot; value=&quot;com.mycomp.MyResolver,com.mycomp.OtherResolver&quot;/&gt;
-&lt;property name=&quot;flyway.callbacks&quot; value=&quot;com.mycomp.MyCallback,com.mycomp.OtherCallback&quot;/&gt;</pre>
+&lt;property name=&quot;flyway.callbacks&quot; value=&quot;com.mycomp.MyCallback,com.mycomp.OtherCallback&quot;/&gt;
+&lt;property name=&quot;flyway.skipDefaultCallbacks&quot; value=&quot;false&quot;/&gt;</pre>
 
     <h2>Sample output</h2>
     <pre class="console">[flyway:repair] Repair not necessary. No failed migration detected.</pre>

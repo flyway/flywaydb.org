@@ -147,6 +147,12 @@ subtitle: 'gradle flywayValidate'
                 implementations to use to hook into the Flyway lifecycle.</td>
         </tr>
         <tr>
+            <td>skipDefaultCallbacks</td>
+            <td>NO</td>
+            <td>false</td>
+            <td>Whether default built-in callbacks (sql) should be skipped. If true, only custom callbacks are used.</td>
+        </tr>
+        <tr>
             <td>target</td>
             <td>NO</td>
             <td><i>latest version</i></td>
@@ -198,6 +204,7 @@ subtitle: 'gradle flywayValidate'
     placeholderSuffix = ']'
     resolvers = ['com.mycompany.proj.CustomResolver', 'com.mycompany.proj.AnotherResolver']
     callbacks = ['com.mycompany.proj.CustomCallback', 'com.mycompany.proj.AnotherCallback']
+    skipDefaultCallbacks = false
     target = '1.1'
     outOfOrder = false
     cleanOnValidationError = false
