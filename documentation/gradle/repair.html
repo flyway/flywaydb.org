@@ -146,6 +146,12 @@ subtitle: 'gradle flywayRepair'
                 implementations to be used in addition to the built-in ones for resolving Migrations to apply.</td>
         </tr>
         <tr>
+            <td>skipDefaultResolvers</td>
+            <td>NO</td>
+            <td>false</td>
+            <td>Whether default built-in resolvers (sql, jdbc and spring-jdbc) should be skipped. If true, only custom resolvers are used.</td>
+        </tr>
+        <tr>
             <td>callbacks</td>
             <td>NO</td>
             <td></td>
@@ -183,6 +189,7 @@ subtitle: 'gradle flywayRepair'
     placeholderPrefix = '#['
     placeholderSuffix = ']'
     resolvers = ['com.mycompany.proj.CustomResolver', 'com.mycompany.proj.AnotherResolver']
+    skipDefaultResolvers = false
     callbacks = ['com.mycompany.proj.CustomCallback', 'com.mycompany.proj.AnotherCallback']
     skipDefaultCallbacks = false
 }</pre>
