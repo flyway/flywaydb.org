@@ -150,6 +150,12 @@ subtitle: 'mvn flyway:info'
                 implementations to be used in addition to the built-in ones for resolving Migrations to apply.</td>
         </tr>
         <tr>
+            <td>skipDefaultResolvers</td>
+            <td>NO</td>
+            <td>false</td>
+            <td>Whether default built-in resolvers (sql, jdbc and spring-jdbc) should be skipped. If true, only custom resolvers are used.</td>
+        </tr>
+        <tr>
             <td>callbacks</td>
             <td>NO</td>
             <td></td>
@@ -229,6 +235,7 @@ subtitle: 'mvn flyway:info'
         &lt;resolver&gt;com.mycompany.project.CustomResolver&lt;/resolver&gt;
         &lt;resolver&gt;com.mycompany.project.AnotherResolver&lt;/resolver&gt;
     &lt;/resolvers&gt;
+    &lt;skipDefaultResolvers&gt;false&lt;/skipDefaultResolvers&gt;
     &lt;callbacks&gt;
         &lt;callback&gt;com.mycompany.project.CustomCallback&lt;/callback&gt;
         &lt;callback&gt;com.mycompany.project.AnotherCallback&lt;/callback&gt;

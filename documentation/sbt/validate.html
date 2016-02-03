@@ -145,6 +145,12 @@ subtitle: 'sbt flywayValidate'
                 implementations to be used in addition to the built-in ones for resolving Migrations to apply.</td>
         </tr>
         <tr>
+            <td>flywaySkipDefaultResolvers</td>
+            <td>NO</td>
+            <td>false</td>
+            <td>Whether default built-in resolvers (sql, jdbc and spring-jdbc) should be skipped. If true, only custom resolvers are used.</td>
+        </tr>
+        <tr>
             <td>flywayCallbacks</td>
             <td>NO</td>
             <td></td>
@@ -227,6 +233,8 @@ flywayPlaceholderPrefix := "#["
 flywayPlaceholderSuffix := "]"
 
 flywayResolvers := Seq("com.mycompany.CustomResolver", "com.mycompany.AnotherResolver")
+
+flywaySkipDefaultResolvers := false
 
 flywayCallbacks := Seq("com.mycompany.CustomCallback", "com.mycompany.AnotherCallback")
 

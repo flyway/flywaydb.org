@@ -154,6 +154,12 @@ subtitle: 'Ant Task: Migrate'
             implementations to be used in addition to the built-in ones for resolving Migrations to apply.</td>
     </tr>
     <tr>
+        <td>skipDefaultResolvers</td>
+        <td>NO</td>
+        <td>false</td>
+        <td>Whether default built-in resolvers (sql, jdbc and spring-jdbc) should be skipped. If true, only custom resolvers are used.</td>
+    </tr>
+    <tr>
         <td>callbacks</td>
         <td>NO</td>
         <td></td>
@@ -278,6 +284,7 @@ subtitle: 'Ant Task: Migrate'
 &lt;property name=&quot;flyway.placeholderPrefix&quot; value=&quot;#[&quot;/&gt;
 &lt;property name=&quot;flyway.placeholderSuffix&quot; value=&quot;]&quot;/&gt;
 &lt;property name=&quot;flyway.resolvers&quot; value=&quot;com.mycomp.MyResolver,com.mycomp.OtherResolver&quot;/&gt;
+&lt;property name=&quot;flyway.skipDefaultResolvers&quot; value=&quot;false&quot;/&gt;
 &lt;property name=&quot;flyway.callbacks&quot; value=&quot;com.mycomp.MyCallback,com.mycomp.OtherCallback&quot;/&gt;
 &lt;property name=&quot;flyway.skipDefaultCallbacks&quot; value=&quot;false&quot;/&gt;
 &lt;property name=&quot;flyway.target&quot; value=&quot;1.1&quot;/&gt;

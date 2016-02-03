@@ -154,6 +154,12 @@ subtitle: 'Command-line: repair'
                 implementations to be used in addition to the built-in ones for resolving Migrations to apply.</td>
         </tr>
         <tr>
+            <td>skipDefaultResolvers</td>
+            <td>NO</td>
+            <td>false</td>
+            <td>Whether default built-in resolvers (sql, jdbc and spring-jdbc) should be skipped. If true, only custom resolvers are used.</td>
+        </tr>
+        <tr>
             <td>callbacks</td>
             <td>NO</td>
             <td></td>
@@ -189,6 +195,7 @@ flyway.placeholders.otherplaceholder=value123
 flyway.placeholderPrefix=#[
 flyway.placeholderSuffix=]
 flyway.resolvers=com.mycomp.project.CustomResolver,com.mycomp.project.AnotherResolver
+flyway.skipDefaultCallResolvers=false
 flyway.callbacks=com.mycomp.project.CustomCallback,com.mycomp.project.AnotherCallback
 flyway.skipDefaultCallbacks=false</pre>
 
