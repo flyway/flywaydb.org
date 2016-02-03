@@ -206,6 +206,17 @@ subtitle: 'mvn flyway:validate'
             </td>
         </tr>
         <tr>
+            <td>ignoreFutureMigrations</td>
+            <td>NO</td>
+            <td>true</td>
+            <td>Ignore future migrations when reading the metadata table. These are migrations that were performed by a
+                newer deployment of the application that are not yet available in this version. For example: we have migrations
+                available on the classpath up to version 3.0. The metadata table indicates that a migration to version 4.0
+                (unknown to us) has already been applied. Instead of bombing out (fail fast) with an exception, a
+                warning is logged and Flyway continues normally. This is useful for situations where one must be able to redeploy
+                an older version of the application after the database has been migrated by a newer one.</td>
+        </tr>
+        <tr>
             <td>skip</td>
             <td>NO</td>
             <td>false</td>
@@ -263,6 +274,7 @@ subtitle: 'mvn flyway:validate'
     &lt;target&gt;1.1&lt;/target&gt;
     &lt;outOfOrder&gt;false&lt;/outOfOrder&gt;
     &lt;cleanOnValidationError&gt;false&lt;/cleanOnValidationError&gt;
+    &lt;ignoreFutureMigrations&gt;false&lt;/ignoreFutureMigrations&gt;
     &lt;skip&gt;false&lt;/skip&gt;
     &lt;configFile&gt;myConfig.properties&lt;/configFile&gt;
 &lt;/configuration&gt;</pre>
