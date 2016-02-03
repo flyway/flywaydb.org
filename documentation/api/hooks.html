@@ -14,13 +14,13 @@ subtitle: API hooks
     when you need more power than SQL can offer you. This is great to for dealing with LOBs or performing advanced
     data transformations.</p>
 
-    <p>This can be achieved by implementing the <strong><a
-            href="/documentation/api/javadoc/org/flywaydb/core/api/migration/jdbc/JdbcMigration"
-            >JdbcMigration</a></strong> interface.</p>
+    <p>This can be achieved by subclassing <strong><a
+            href="/documentation/api/javadoc/org/flywaydb/core/api/migration/jdbc/BaseJdbcMigration"
+            >BaseJdbcMigration</a></strong> interface.</p>
 
-    <p>Alternatively Spring users may prefer to implement the <strong><a
-            href="/documentation/api/javadoc/org/flywaydb/core/api/migration/spring/SpringJdbcMigration"
-            >SpringJdbcMigration</a></strong> interface to gain access to a Spring JdbcTemplate instead of a plain JDBC connection.</p>
+    <p>Alternatively Spring users may prefer to subclass <strong><a
+            href="/documentation/api/javadoc/org/flywaydb/core/api/migration/spring/BaseSpringJdbcMigration"
+            >BaseSpringJdbcMigration</a></strong> interface to gain access to a Spring JdbcTemplate instead of a plain JDBC connection.</p>
 
     <p>For even more flexibility with regard to naming and checksums you can additionally implement the <strong><a
             href="/documentation/api/javadoc/org/flywaydb/core/api/migration/MigrationInfoProvider"
@@ -28,11 +28,13 @@ subtitle: API hooks
             href="/documentation/api/javadoc/org/flywaydb/core/api/migration/MigrationChecksumProvider"
             >MigrationChecksumProvider</a></strong> interfaces.</p>
 
-    <p>To access the Flyway configuration your migration can implement <strong><a
+    <p>If you decide to no use the provided base implementations, you can also implement the corresponding interfaces
+        directly. In that case, to access the Flyway configuration your migration can implement <strong><a
             href="/documentation/api/javadoc/org/flywaydb/core/api/configuration/ConfigurationAware"
             >ConfigurationAware</a></strong> and Flyway will automatically inject an instance of <strong><a
             href="/documentation/api/javadoc/org/flywaydb/core/api/configuration/FlywayConfiguration"
-            >FlywayConfiguration</a></strong>.</p>
+            >FlywayConfiguration</a></strong>. The Base* implementations already provide this configuration
+    using the <strong>flywayConfiguration</strong>-field.</p>
 
     <h2 id="callbacks">Java-based Callbacks</h2>
 
@@ -42,11 +44,13 @@ subtitle: API hooks
     <p>This can be achieved by implementing the <strong><a href="/documentation/api/javadoc/org/flywaydb/core/api/callback/FlywayCallback">FlywayCallback</a></strong>
         interface.</p>
 
-    <p>For your convenience, you can also subclass <code>org.flywaydb.core.api.callback.<strong>BaseFlywayCallback</strong></code>
+    <p>This can be achieved by subclassing <code>org.flywaydb.core.api.callback.<strong>BaseFlywayCallback</strong></code>
     which already contains no-op implementations of all the methods of the <code>org.flywaydb.core.api.callback.<strong>FlywayCallback</strong></code>
-    interface.</p>
+    interface as well as access to a <strong>FlywayConfiguration</strong> class in the <strong>flywayConfiguration</strong>-field.</p>
 
-    <p>To access the Flyway configuration your callback can implement <strong><a
+    <p>If you decide to no use the provided base implementation, you can also implement the <strong><a
+            href="/documentation/api/javadoc/org/flywaydb/core/api/callback/FlywayCallback">FlywayCallback</a></strong>
+        interface directly. In that case, to access the Flyway configuration your callback can implement <strong><a
             href="/documentation/api/javadoc/org/flywaydb/core/api/configuration/ConfigurationAware"
     >ConfigurationAware</a></strong> and Flyway will automatically inject an instance of <strong><a
             href="/documentation/api/javadoc/org/flywaydb/core/api/configuration/FlywayConfiguration"
@@ -61,7 +65,12 @@ subtitle: API hooks
 
     <p>These can then be used for loading things like CSV-based migrations or other custom formats.</p>
 
-    <p>To access the Flyway configuration your resolver can implement <strong><a
+    <p>It is advised to subclass the provided <strong><a href="/documentation/api/javadoc/org/flywaydb/core/api/resolver/BaseMigrationResolver">
+        BaseMigrationResolver</a></strong> instead of implementing the interface directly, as this will allow amending
+        the interface without breaking implementations.
+    </p>
+
+    <p>If you decide to no use the provided base implementation, you can also implement <strong><a
             href="/documentation/api/javadoc/org/flywaydb/core/api/configuration/ConfigurationAware"
     >ConfigurationAware</a></strong> and Flyway will automatically inject an instance of <strong><a
             href="/documentation/api/javadoc/org/flywaydb/core/api/configuration/FlywayConfiguration"

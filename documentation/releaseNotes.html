@@ -89,6 +89,11 @@ subtitle: Release Notes
     <h3>Incompatible Changes</h3>
     <ul>
         <li>
+            <a href="https://github.com/flyway/flyway/pull/1198">PR 1198</a>
+            Implementations of FlywayCallback, *JdbcMigration and MigrationResolver are encouraged to subclass the
+            respective Base* implementations instead.
+        </li>
+        <li>
             <a href="https://github.com/flyway/flyway/issues/477">Issue 477</a>
             When a location is not found a warning is now emitted instead of an exception
         </li>
