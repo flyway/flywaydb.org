@@ -72,21 +72,9 @@ subtitle: API
         class. It is your <strong>one-stop shop</strong> for working with Flyway programmatically. It serves both as a
         <strong>configuration</strong> and a <strong>launching</strong> point for all of Flyway&#x27;s functions. </p>
 
-    <h2>Programmatic Configuration</h2>
+    <h2>Programmatic Configuration (Java)</h2>
 
-    <div class="tabbable">
-        <ul class="nav nav-tabs">
-            <li class="active marketing-item"><a href="#tab-java" data-toggle="tab"><i class="fa fa-coffee"></i>
-                Java</a>
-            </li>
-            <li class="marketing-item"><a href="#tab-android" data-toggle="tab"><i class="fa fa-android"></i>
-                Android</a>
-            </li>
-        </ul>
-        <div class="tab-content">
-            <div class="tab-pane active" id="tab-java">
-                <p>Flyway is super easy to use programmatically: </p><pre
-                    class="prettyprint">import org.flywaydb.core.Flyway;
+    <p>Flyway is super easy to use programmatically: </p><pre class="prettyprint">import org.flywaydb.core.Flyway;
 
 ...
 Flyway flyway = new Flyway();
@@ -95,8 +83,13 @@ flyway.migrate();
 
 // Start the rest of the application (incl. Hibernate)
 ...</pre>
-            </div>
-            <div class="tab-pane" id="tab-android">
+
+    <div class="well"><strong>Tip:</strong> When running inside a <a href="https://boxfuse.com">Boxfuse</a>
+        instance (both locally and on AWS), Flyway will automatically use the JDBC url, user and password
+        <a href="https://boxfuse.com/docs/databases#envvars">provided by Boxfuse</a>.</div>
+
+    <h2>Programmatic Configuration (Android)</h2>
+
                 <p>Start by adding the <a href="https://github.com/SQLDroid/SQLDroid">SQLDroid</a> driver jar to the
                     <code>libs</code> directory</p>
 
@@ -111,13 +104,6 @@ Flyway flyway = new Flyway();
 flyway.setDataSource("jdbc:sqlite:" + sqLiteDatabase.getPath(), "", "");
 flyway.migrate();</pre>
                 <p>Now add your migrations to the <code>assests/db/migration</code> directory and you're done!</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="well"><strong>Tip:</strong> When running inside a <a href="https://boxfuse.com">Boxfuse</a>
-    instance (both locally and on AWS), Flyway will automatically use the JDBC url, user and password
-        <a href="https://boxfuse.com/docs/databases#envvars">provided by Boxfuse</a>.</div>
 
     <h2 id="spring">Spring Configuration</h2>
 
