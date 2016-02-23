@@ -15,7 +15,7 @@ subtitle: API - First Steps
     <h2>Creating the project</h2>
 
     <p>We're going to create our project using the Maven Archetype Plugin by issuing the following command:</p>
-    <pre class="console">&gt; mvn archetype:generate -B
+    <pre class="console"><span>&gt;</span> mvn archetype:generate -B
         -DarchetypeGroupId=org.apache.maven.archetypes
         -DarchetypeArtifactId=maven-archetype-quickstart
         -DarchetypeVersion=1.1
@@ -24,7 +24,7 @@ subtitle: API - First Steps
         -Dversion=1.0-SNAPSHOT
         -Dpackage=foobar</pre>
     <p>We are now ready to get started. Let's jump into our project:</p>
-    <pre class="console">&gt; cd bar</pre>
+    <pre class="console"><span>&gt;</span> cd bar</pre>
 
     <h2>Adding the dependencies</h2>
 
@@ -81,7 +81,7 @@ public class App {
     <h2>Executing our program</h2>
 
     <p>It's now time to execute our program by issuing this command:</p>
-    <pre class="console">bar&gt; mvn package exec:java -Dexec.mainClass=foobar.App</pre>
+    <pre class="console"><span>bar&gt;</span> mvn package exec:java -Dexec.mainClass=foobar.App</pre>
 
     <p>If all went well, you should see the following output (timestamps omitted):</p>
     <pre class="console">INFO: Creating Metadata table: "PUBLIC"."schema_version"
@@ -97,7 +97,7 @@ insert into PERSON (ID, NAME) values (2, 'Mr. Foo');
 insert into PERSON (ID, NAME) values (3, 'Ms. Bar');</pre>
 
     <p>and execute it by issuing:</p>
-    <pre class="console">bar&gt; mvn package exec:java -Dexec.mainClass=foobar.App</pre>
+    <pre class="console"><span>bar&gt;</span> mvn package exec:java -Dexec.mainClass=foobar.App</pre>
 
     <p>We now get:</p>
     <pre class="console">INFO: Current version of schema "PUBLIC": 1

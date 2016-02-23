@@ -376,6 +376,14 @@ pre.console {
     margin-bottom: 20px;
 }
 
+pre.console span {
+    color: #aaa;
+}
+
+pre.console strong {
+    color: yellow;
+}
+
 pre.prettyprint {
     padding: 9.5px;
 }

@@ -14,6 +14,8 @@ subtitle: Release Notes
     <p>This version comes with a <strong>new metadata table format</strong>. Migration is transparent and automatic on first
         run.</p>
 
+    <p><strong>Note:</strong> DB 2 z/OS, Redshift, Vertica, and solidDB users may have to manually upgrade the metadata table or drop it and baseline the schema again.</p>
+
     <h3>New features</h3>
     <ul>
         <li>
@@ -139,7 +141,11 @@ subtitle: Release Notes
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/1152">Issue 1152</a>
-            Upgrade Command-line tool bundled JRE to 8u66
+            Upgrade Command-line tool bundled JRE to 8u74
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1214">Issue 1214</a>
+            Upgrade Command-line tool bundled JDBC drivers to latest versions
         </li>
     </ul>
 
