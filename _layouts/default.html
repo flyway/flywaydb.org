@@ -134,6 +134,18 @@
     $(function () {
         prettyPrint();
     });
+
+    if (navigator.platform.indexOf('Win') == -1) {
+        // Not windows
+        // Fix line continuation marks
+        $("pre.console").html(function () {
+            return $(this).html().replace(/\^\n/g, "\\\n");
+        });
+        // And prompt char
+        $("pre.console span").html(function () {
+            return $(this).html().replace("&gt;", "$");
+        });
+    }
 </script>
 </body>
 </html>

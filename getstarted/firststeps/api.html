@@ -15,13 +15,13 @@ subtitle: API - First Steps
     <h2>Creating the project</h2>
 
     <p>We're going to create our project using the Maven Archetype Plugin by issuing the following command:</p>
-    <pre class="console"><span>&gt;</span> mvn archetype:generate -B
-        -DarchetypeGroupId=org.apache.maven.archetypes
-        -DarchetypeArtifactId=maven-archetype-quickstart
-        -DarchetypeVersion=1.1
-        -DgroupId=foo
-        -DartifactId=bar
-        -Dversion=1.0-SNAPSHOT
+    <pre class="console"><span>&gt;</span> mvn archetype:generate -B ^
+        -DarchetypeGroupId=org.apache.maven.archetypes ^
+        -DarchetypeArtifactId=maven-archetype-quickstart ^
+        -DarchetypeVersion=1.1 ^
+        -DgroupId=foo ^
+        -DartifactId=bar ^
+        -Dversion=1.0-SNAPSHOT ^
         -Dpackage=foobar</pre>
     <p>We are now ready to get started. Let's jump into our project:</p>
     <pre class="console"><span>&gt;</span> cd bar</pre>
@@ -62,7 +62,7 @@ public class App {
         Flyway flyway = new Flyway();
 
         // Point it to the database
-        flyway.setDataSource("jdbc:h2:file:target/foobar", "sa", null);
+        flyway.setDataSource("jdbc:h2:file:./target/foobar", "sa", null);
 
         // Start the migration
         flyway.migrate();
@@ -86,7 +86,7 @@ public class App {
     <p>If all went well, you should see the following output (timestamps omitted):</p>
     <pre class="console">INFO: Creating Metadata table: "PUBLIC"."schema_version"
 INFO: Current version of schema "PUBLIC": &lt;&lt; Empty Schema &gt;&gt;
-INFO: Migrating schema "PUBLIC" to version 1
+INFO: Migrating schema "PUBLIC" to version 1 - Create person table
 INFO: Successfully applied 1 migration to schema "PUBLIC" (execution time 00:00.062s).</pre>
 
     <h2>Adding a second migration</h2>
@@ -101,7 +101,7 @@ insert into PERSON (ID, NAME) values (3, 'Ms. Bar');</pre>
 
     <p>We now get:</p>
     <pre class="console">INFO: Current version of schema "PUBLIC": 1
-INFO: Migrating schema "PUBLIC" to version 2
+INFO: Migrating schema "PUBLIC" to version 2 - Add people
 INFO: Successfully applied 1 migration to schema "PUBLIC" (execution time 00:00.090s).</pre>
 
     <h2>Summary</h2>
