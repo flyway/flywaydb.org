@@ -50,20 +50,20 @@
         <div class="span10">
             <ul id="tabs" class="nav nav-tabs ">
                 <li
-                {% if page.tab == 'getStarted' %} class="active" {% endif %}>
+                {% if layout.tab == 'getStarted' and page.tab == null %} class="active" {% endif %}>
                 <a href="/getstarted"><i class="fa fa-play"></i> GET STARTED</a></li>
                 <li
-                {% if page.tab == 'documentation' %} class="active" {% endif %}>
-                <a href="/documentation"><i class="fa fa-bookmark"></i> DOCUMENTATION</a></li>
+                {% if layout.tab == 'documentation' and page.tab == null %} class="active" {% endif %}>
+                <a href="/documentation"><i class="fa fa-book"></i> DOCUMENTATION</a></li>
                 <li
-                {% if page.tab == 'contribute' %} class="active" {% endif %}>
-                <a href="/contribute"><i class="fa fa-leaf"></i> CONTRIBUTE</a></li>
-                <li
-                {% if page.tab == 'blog' %} class="active" {% endif %}>
-                <a href="/blog"><i class="fa fa-bullhorn"></i> BLOG</a></li>
+                {% if layout.tab == 'blog' and page.tab == null %} class="active" {% endif %}>
+                <a href="/blog"><i class="fa fa-comment"></i> BLOG</a></li>
                 <li
                 {% if page.tab == 'support' %} class="active" {% endif %}>
-                <a href="/support"><i class="fa fa-question-circle"></i> SUPPORT</a></li>
+                <a href="/support"><i class="fa fa-life-ring"></i> SUPPORT</a></li>
+                <li
+                {% if page.tab == 'about' %} class="active" {% endif %}>
+                <a href="/about"><i class="fa fa-question-circle"></i> ABOUT</a></li>
             </ul>
         </div>
     </div>
@@ -109,10 +109,10 @@
         <p>&nbsp;</p>
 
         <p>
-            &copy; 2010-2015 <a href="http://axelfontaine.com">Axel Fontaine</a>. Made with <i class="fa fa-heart"></i> in M&uuml;nchen.
+            &copy; 2010-2016 <a href="http://axelfontaine.com">Axel Fontaine</a>. Made with <i class="fa fa-heart"></i> in M&uuml;nchen.
         </p>
         <p>
-            Maintained with help of the <a href="/contribute/hallOfFame">many contributors</a><br/>
+            Maintained with help of the <a href="/documentation/contribute/hallOfFame">many contributors</a><br/>
         </p>
         <p>
             Code licensed under <a href="https://raw.githubusercontent.com/flyway/flyway/master/LICENSE.txt">Apache License, Version 2</a><br/>
