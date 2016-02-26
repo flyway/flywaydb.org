@@ -17,12 +17,10 @@
 #big-sell {
     min-height: 750px;
     text-align: center;
-    background: #f0f0f0;
     width: 100% !important;
     margin-top: -60px;
     padding-top: 60px;
-    padding-bottom: 30px;
-    margin-bottom: 30px;
+    padding-bottom: 100px;
     font-size: 12px;
 }
 
@@ -127,7 +125,7 @@ hr.soften {
     margin-top: 100px;
     height: 130px;
     width: 100%;
-    background: #f0f0f0;
+    background: #0166AE;
 }
 
 #upAndRunning {
@@ -139,17 +137,52 @@ hr.soften {
     line-height: 150%;
     padding-top: 30px;
     margin-left: 10px;
+    color: #cccccc;
 }
 
 #upAndRunningLeft span {
     font-size: 48px;
-    color: #0088cc;
+    color: white;
     display: inline-block;
     margin-top: 10px;
     vertical-align: bottom;
 }
 
 #upAndRunningRight {
+    margin-top: -10px;
+    background: #ffffff;
+    padding: 10px;
+    margin-left: 5px;
+    margin-right: -22px;
+    border: 1px #CCCCCC solid;
+    border-radius: 10px;
+}
+
+#downloadStatsBg {
+    height: 130px;
+    width: 100%;
+    background: #f0f0f0;
+}
+
+#downloadStats {
+    margin-top: -150px;
+}
+
+#downloadStatsLeft {
+    line-height: 150%;
+    padding-top: 30px;
+    margin-left: 10px;
+}
+
+#downloadStatsLeft span {
+    font-size: 48px;
+    color: #0166AE;
+    display: inline-block;
+    margin-top: 10px;
+    vertical-align: bottom;
+}
+
+#downloadStatsRight {
     margin-top: -10px;
     background: #ffffff;
     padding: 10px;
