@@ -45,7 +45,10 @@
 <div class="container">
     <div id="header" class="row">
         <div class="span2">
-            {% if page.tab != 'home' %}<a href="/"><img src="/assets/logo/flyway-logo-tm-sm.png" alt="Flyway"></a>{% endif %}
+            {% if page.tab != 'home' %}<a href="/"><img src="/assets/logo/flyway-logo-tm-sm.png" alt="Flyway" usemap="#logosmmap"/>
+            <map name="logosmmap">
+                <area shape="rect" coords="45,90,120,106" href="https://boxfuse.com" alt="Boxfuse">
+            </map></a>{% endif %}
         </div>
         <div class="span10">
             <ul id="tabs" class="nav nav-tabs ">
