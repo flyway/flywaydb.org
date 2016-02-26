@@ -341,11 +341,9 @@ hr.soften {
 }
 
 a.stackoverflow-tag {
-    color: #3E6D8E;
-    background-color: #E0EAF1;
-    border-bottom: 1px solid #3E6D8E;
-    border-right: 1px solid #7F9FB6;
-    padding: 3px 4px 3px 4px;
+    color: #39739d;
+    background-color: #E1ECF4;
+    padding: .4em .5em;
     margin: 2px 2px 2px 0;
     text-decoration: none;
     font-size: 90%;
@@ -354,10 +352,7 @@ a.stackoverflow-tag {
 }
 
 a.stackoverflow-tag:hover {
-    background-color: #3E6D8E;
-    color: #E0EAF1;
-    border-bottom: 1px solid #37607D;
-    border-right: 1px solid #37607D;
+    background-color: #dae7f1;
     text-decoration: none;
 }
 
