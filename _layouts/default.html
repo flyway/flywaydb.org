@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>
-        {% if page.subtitle %} {{ page.subtitle }} -{% endif %}{% if page.title %} {{ page.title }} -{% endif %}
-        Flyway by Boxfuse &bull; Database Migrations Made Easy.</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.subtitle %} {{ page.subtitle }} -{% endif %}{% if page.title %} {{ page.title }} -{% endif %} Flyway by Boxfuse &bull; Database Migrations Made Easy.</title>
     <link rel="alternate" type="application/atom+xml" title="Flyway" href="/blog/atom.xml" />
-    <link href="/assets/bootstrap-2.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     <link href="/assets/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
     <link href="/assets/prettify-20110601/prettify.css" rel="stylesheet" type="text/css"/>
     <link href="/assets/flywaydb.css" rel="stylesheet" type="text/css"/>
@@ -30,7 +31,6 @@
             s.parentNode.insertBefore(ga, s);
         })();
     </script>
-    <script src="/assets/jquery-1.8.0/jquery-1.8.0.min.js" type="text/javascript"></script>
     <script type="text/javascript">
         if (self !== top) {
             top.location = self.location;
@@ -40,13 +40,13 @@
 <body>
 <div class="container">
     <div id="header" class="row">
-        <div class="span2">
+        <div class="col-md-2">
             {% if page.tab != 'aa' %}<a href="/"><img src="/assets/logo/flyway-logo-tm-sm.png" alt="Flyway" usemap="#logosmmap"/>
             <map name="logosmmap">
                 <area shape="rect" coords="45,90,120,106" href="https://boxfuse.com" alt="Boxfuse">
             </map></a>{% endif %}
         </div>
-        <div class="span10">
+        <div class="col-md-10">
             <ul id="tabs" class="nav nav-tabs ">
                 <li
                 {% if page.tab == 'getStarted' %} class="active" {% endif %}>
@@ -80,27 +80,26 @@
 <div class="container">
     <hr class="soften"/>
     <div id="footer">
-        <p>
-            <!-- Begin MailChimp Signup Form -->
-            <form action="//boxfuse.us9.list-manage.com/subscribe/post?u=0e72f61962b6b47f78568d56c&amp;id=e1046edb96" method="post" id="mc-embedded-subscribe-form-footer" name="mc-embedded-subscribe-form-footer" class="validate" target="_blank" novalidate>
-                <div id="mc_embed_signup_scroll-footer">
-                    <h2>Follow the Flyway blog</h2>
-                    <div>Enter your email address to receive new blog posts by email.</div>
-                    <div class="mc-field-group">
-                        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL-footer" placeholder="Your email address">
-                        <input type="submit" value="Follow" name="subscribe" id="mc-embedded-subscribe-footer" class="btn btn-primary">
-                    </div>
-                    <div id="mce-responses-footer" class="clear">
-                        <div class="response" id="mce-error-response" style="display:none"></div>
-                        <div class="response" id="mce-success-response" style="display:none"></div>
-                    </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                    <div style="position: absolute; left: -5000px;"><input type="text" name="b_0e72f61962b6b47f78568d56c_e1046edb96" tabindex="-1" value=""></div>
+        <!-- Begin MailChimp Signup Form -->
+        <h3 style="color: #888">Stay updated with our monthly newsletter</h3>
+        <form action="//boxfuse.us9.list-manage.com/subscribe/post?u=0e72f61962b6b47f78568d56c&amp;id=e1046edb96" method="post" id="mc-embedded-subscribe-form-footer" name="mc-embedded-subscribe-form-footer" class="validate form-inline" target="_blank" novalidate>
+            <div>
+                <div class="input-group">
+                    <input type="email" value="" name="EMAIL" required="required" class="form-control" id="mce-EMAIL-footer" placeholder="Your email address">
+                    <span class="input-group-btn">
+                        <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe-footer" class="btn btn-primary">
+                        </span>
                 </div>
-            </form>
-            <!--End mc_embed_signup-->
-        </p>
+                <div id="mce-responses-footer" class="clear form-control-feedback">
+                    <div class="response" id="mce-error-response" style="display:none"></div>
+                    <div class="response" id="mce-success-response" style="display:none"></div>
+                </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;"><input type="text" name="b_0e72f61962b6b47f78568d56c_e1046edb96" tabindex="-1" value=""></div>
+            </div>
+        </form>
+        <!--End mc_embed_signup-->
 
-        <p>
+        <p style="margin-top: 30px">
             <a href="https://twitter.com/flywaydb" class="twitter-follow-button" data-show-count="false">Follow @flywaydb</a>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
         </p>
@@ -108,7 +107,7 @@
         <p>&nbsp;</p>
 
         <p>
-            &copy; 2010-2016 <a href="http://axelfontaine.com">Axel Fontaine</a>. Made with <i class="fa fa-heart"></i> in M&uuml;nchen.
+            &copy; 2010-2016 <a href="https://boxfuse.com">Boxfuse GmbH</a>. Made with <i class="fa fa-heart"></i> in M&uuml;nchen.
         </p>
         <p>
             Maintained with help of the <a href="/documentation/contribute/hallOfFame">many contributors</a><br/>
@@ -127,7 +126,8 @@
             <p>This site collects anonymous usage information through Google Analytics.</p>
     </div>
 </div>
-<script src="/assets/bootstrap-2.3.2/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="/assets/jquery-1.12.1/jquery-1.12.1.min.js" type="text/javascript"></script>
+<script src="/assets/bootstrap-3.3.6-dist/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="/assets/prettify-20110601/prettify.js" type="text/javascript"></script>
 <script type="text/javascript">
     $(function () {

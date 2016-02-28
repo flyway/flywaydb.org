@@ -4,9 +4,9 @@ tab: getStarted
 ---
 <div>
     <div class="row">
-        <div class="span3">
-            <div id="menu" class="well">
-                <ul class="nav nav-list">
+        <div class="col-md-3">
+            <div id="menu">
+                <ul class="nav nav-stacked nav-pills">
                     <li
                     {% if page.menu == 'overview' %} class="active" {% endif %}>
                     <a href="/getstarted">Overview</a></li>
@@ -42,7 +42,7 @@ tab: getStarted
                 </ul>
             </div>
         </div>
-        <div class="span9">
+        <div class="col-md-9">
 
             {{ content }}
 

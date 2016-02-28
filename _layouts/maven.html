@@ -3,7 +3,8 @@ layout: documentation
 menu: maven
 ---
 <div>
-    <ul class="nav nav-pills">
+    <div id="pills">
+        <ul class="nav nav-pills">
         <li
         {% if page.pill == 'overview' %} class="active" {% endif %}>
         <a href="/documentation/maven">Overview</a></li>
@@ -26,6 +27,7 @@ menu: maven
         {% if page.pill == 'repair' %} class="active" {% endif %}>
         <a href="/documentation/maven/repair">repair</a></li>
     </ul>
+        </div>
     
     {{ content }}
 

@@ -3,7 +3,8 @@ layout: documentation
 menu: code
 ---
 <div>
-    <ul class="nav nav-pills">
+    <div id="pills">
+        <ul class="nav nav-pills">
         <li {% if page.pill == 'overview' %} class="active" {% endif %}>
         <a href="/documentation/contribute/code">How to Contribute</a></li>
         <li
@@ -19,6 +20,7 @@ menu: code
                 {% if page.pill == 'newDatabase' %} class="active" {% endif %}>
         <a href="/documentation/contribute/code/contributeNewDatabase">New Database</a></li>
     </ul>
+        </div>
     
     {{ content }}
 

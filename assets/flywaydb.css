@@ -60,6 +60,32 @@
     margin-top: -5px;
 }
 
+a {
+    color: #0166AE;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+.btn-primary {
+    background-color: #0166AE;
+}
+
+.btn-info {
+    background-color: #aaa;
+    border-color: #999;
+}
+
+.btn-info:hover {
+    background-color: #999;
+    border-color: #888;
+}
+
 .btn-jumbo {
     font-size: 20px;
     padding: 14px 24px;
@@ -72,6 +98,40 @@
     padding-top: 40px;
     padding-left: 10px;
     padding-right: 10px;
+}
+
+.nav-pills li a:hover {
+    background-color: #ccc;
+    color: white;
+}
+
+.nav-pills>li.active>a,.nav-pills>li.active>a:hover,.nav-pills>li.active>a:focus {
+    background-color: #0166AE;
+}
+
+#pills .nav-pills li a {
+    font-size: 12px;
+    padding: 7px 10px;
+    margin-bottom: 20px;
+}
+
+#menu .nav-pills li {
+    font-size: 16px;
+}
+
+#menu .nav-pills li a {
+    border-radius: 0 !important;
+}
+
+#menu .nav-pills .nav-header {
+    cursor: default;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    background-color: #f0f0f0;
+    margin-top: 30px;
+    color: #333;
 }
 
 #social a:hover i {
@@ -89,26 +149,13 @@
     text-align: center;
 }
 
-#top3 i {
+#top3 .top3-icon {
     font-size: 120px;
     margin-bottom: 20px;
 }
 
-#top3 p {
-}
-
-#top3details {
-    line-height: 150%;
-    font-size: 18px;
-}
-
-#top3buttons {
-    text-align: center;
-    margin-bottom: 100px;
-}
-
-#top3buttons i {
-    color: #555555;
+#top3 .col-md-4 {
+    margin-bottom: 50px;
 }
 
 hr.soften {
@@ -125,7 +172,7 @@ hr.soften {
     margin-top: 100px;
     height: 130px;
     width: 100%;
-    background: #0166AE;
+    background: #f0f0f0;
 }
 
 #upAndRunning {
@@ -136,13 +183,11 @@ hr.soften {
 #upAndRunningLeft {
     line-height: 150%;
     padding-top: 30px;
-    margin-left: 10px;
-    color: #cccccc;
 }
 
 #upAndRunningLeft span {
     font-size: 48px;
-    color: white;
+    color: #0166AE;
     display: inline-block;
     margin-top: 10px;
     vertical-align: bottom;
@@ -152,8 +197,6 @@ hr.soften {
     margin-top: -10px;
     background: #ffffff;
     padding: 10px;
-    margin-left: 5px;
-    margin-right: -22px;
     border: 1px #CCCCCC solid;
     border-radius: 10px;
 }
@@ -171,7 +214,6 @@ hr.soften {
 #downloadStatsLeft {
     line-height: 150%;
     padding-top: 30px;
-    margin-left: 10px;
 }
 
 #downloadStatsLeft span {
@@ -186,10 +228,9 @@ hr.soften {
     margin-top: -10px;
     background: #ffffff;
     padding: 10px;
-    margin-left: 5px;
-    margin-right: -22px;
     border: 1px #CCCCCC solid;
     border-radius: 10px;
+    max-width: 100%;
 }
 
 .marketing .row {
@@ -323,6 +364,7 @@ hr.soften {
 
 .next-steps a {
     margin-right: 20px;
+    margin-bottom: 20px;
 }
 
 #footer {
@@ -336,10 +378,6 @@ hr.soften {
     margin-top: 2px;
 }
 
-#footer #mc-embedded-subscribe-footer {
-    margin-top: -10px;
-}
-
 .fa-heart {
     color: #990000;
 }
@@ -351,26 +389,8 @@ hr.soften {
     display: inline-block;
 }
 
-#menu.well {
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-#menu.well ul.nav {
-    float: none;
-    margin-top: 0;
-}
-
 #menu .date {
     font-size: 10px;
-}
-
-.nav-pills > li > a {
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: 12px;
 }
 
 a.stackoverflow-tag {
@@ -434,14 +454,11 @@ i {
 }
 
 .blog-post-date {
-    color: #808080;
+    color: #ccc;
     font-weight: bold;
 }
 
 .blog-post-title {
-    font-size: 32px;
-    font-weight: bold;
-    line-height: 36px;
     margin-bottom: 50px;
 }
 
@@ -507,4 +524,40 @@ i {
     padding-left: 0;
     font-size: 16px;
     margin-top: 4px;
+}
+
+@media screen and (max-width: 1024px) {
+    #downloadStatsRight, #upAndRunningRight {
+        margin-top: 0;
+    }
+
+    #header .col-md-2 {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #downloadStatsBg {
+        height: 180px;
+    }
+
+    #downloadStats {
+        margin-top: -170px;
+    }
+
+    #upAndRunning {
+        margin-top: -120px;
+    }
+
+    #downloadStatsLeft, #upAndRunningLeft {
+        padding-top: 0;
+    }
+
+    #testimonial img {
+        margin-top: 20px;
+    }
+
+    .marketing-testimonial {
+        margin-top: 0;
+    }
 }

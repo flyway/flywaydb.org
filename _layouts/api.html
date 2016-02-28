@@ -3,7 +3,8 @@ layout: documentation
 menu: api
 ---
 <div>
-    <ul class="nav nav-pills">
+    <div id="pills">
+        <ul class="nav nav-pills">
         <li
         {% if page.pill == 'overview' %} class="active" {% endif %}>
         <a href="/documentation/api">Overview</a></li>
@@ -14,6 +15,7 @@ menu: api
         {% if page.pill == 'javadoc' %} class="active" {% endif %}>
         <a href="/documentation/api/javadoc.html">Javadoc</a></li>
     </ul>
+        </div>
     
     {{ content }}
 

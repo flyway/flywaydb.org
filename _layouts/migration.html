@@ -3,6 +3,7 @@ layout: documentation
 menu: migration
 ---
 <div>
+    <div id="pills">
     <ul class="nav nav-pills">
         <li
         {% if page.pill == 'overview' %} class="active" {% endif %}>
@@ -20,6 +21,7 @@ menu: migration
         {% if page.pill == 'java' %} class="active" {% endif %}>
         <a href="/documentation/migration/java">Java-based migrations</a></li>
     </ul>
+    </div>
     
     {{ content }}
 

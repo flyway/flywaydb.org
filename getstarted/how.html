@@ -8,14 +8,14 @@ subtitle: How Flyway works
 
     <p>The easiest scenario is when you point <strong>Flyway</strong> to an <strong>empty database</strong>. </p>
 
-    <p align="center"><img src="/assets/balsamiq/EmptyDb.png"/></p>
+    <p align="center"><img src="/assets/balsamiq/EmptyDb.png" style="max-width: 100%"/></p>
 
     <p>It will try to
         locate its <strong>metadata table</strong>. As the database is empty, Flyway won&#x27;t find it and will
         <strong>create</strong> it instead.<br/> <br/> You now have a database with a single empty table called <i>SCHEMA_VERSION</i>
         by default: </p>
 
-    <p align="center"><img src="/assets/balsamiq/EmptySchemaVersion.png"/></p>
+    <p align="center"><img src="/assets/balsamiq/EmptySchemaVersion.png" style="max-width: 100%"/></p>
 
     <p>This table will be used to track the state of the database. </p>
 
@@ -26,7 +26,7 @@ subtitle: How Flyway works
     <p>The migrations are then <strong>sorted</strong> based on their <strong>version number</strong> and applied in
         order: </p>
 
-    <p align="center"><img src="/assets/balsamiq/Migration-1-2.png"/></p>
+    <p align="center"><img src="/assets/balsamiq/Migration-1-2.png" style="max-width: 100%"/></p>
 
     <p>As each
         migration gets applied, the metadata table is updated accordingly: </p>
@@ -81,11 +81,11 @@ subtitle: How Flyway works
         are ignored.<br/> <br/> The remaining migrations are the <strong>pending migrations</strong>: available,
         but not applied. </p>
 
-    <p align="center"><img src="/assets/balsamiq/PendingMigration.png"/></p>
+    <p align="center"><img src="/assets/balsamiq/PendingMigration.png" style="max-width: 100%"/></p>
 
     <p>They are then <strong>sorted by version number</strong> and <strong>executed in order</strong>: </p>
 
-    <p align="center"><img src="/assets/balsamiq/Migration21.png"/></p>
+    <p align="center"><img src="/assets/balsamiq/Migration21.png" style="max-width: 100%"/></p>
 
     <p>The <strong>metadata table</strong> is <strong>updated</strong> accordingly: </p>
 

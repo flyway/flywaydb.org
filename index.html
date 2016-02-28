@@ -5,8 +5,8 @@ tab: home
 <div id="big-sell">
     <div class="container">
         <div class="row">
-            <div class="span12">
-                <img src="assets/logo/flyway-logo-tm.png" alt="Flyway" usemap="#logomap" style="padding-bottom: 10px"/>
+            <div class="col-md-12">
+                <img src="assets/logo/flyway-logo-tm.png" alt="Flyway" usemap="#logomap" style="padding-bottom: 10px; max-width: 100%"/>
                 <map name="logomap">
                     <area shape="rect" coords="130,260,370,330" href="https://boxfuse.com" alt="Boxfuse">
                 </map>
@@ -59,8 +59,8 @@ tab: home
 
 <div class="container">
     <div id="downloadStats" class="row">
-        <div id="downloadStatsLeft" class="strong-heading span6">Over <span>850,000</span> downloads in 2015 alone</div>
-        <div id="downloadStatsRight" class="span6"><img src="/assets/downloads-2015.png"></div>
+        <div id="downloadStatsLeft" class="strong-heading col-md-6">Over <span>850,000</span> downloads<br>in 2015 alone</div>
+        <div class="col-md-6 center"><img id="downloadStatsRight" src="/assets/downloads-2015.png"></div>
     </div>
 </div>
 
@@ -70,46 +70,30 @@ tab: home
     <div class="marketing-section-sub">Version control for your database so you can migrate it with ease and confidence</div>
 
     <div id="top3" class="row">
-        <div class="span4">
-            <i class="fa fa-thumbs-up"></i>
+        <div class="col-md-4">
+            <i class="top3-icon fa fa-thumbs-up"></i>
 
             <p class="strong-heading">Simple</p>
-        </div>
-        <div class="span4">
-            <i class="fa fa-crosshairs"></i>
-
-            <p class="strong-heading">Focused</p>
-        </div>
-        <div class="span4">
-            <i class="fa fa-rocket"></i>
-
-            <p class="strong-heading">Powerful</p>
-        </div>
-    </div>
-    <div id="top3details" class="row">
-        <div class="span4">
             <p>Easy to setup, simple to master. Flyway lets you regain control of your database migrations with pleasure
                 and plain sql.</p>
-        </div>
-        <div class="span4">
-            <p>Solves only one problem and solves it well. Flyway migrates your database, so you don't have to worry
-                about it anymore.</p>
-        </div>
-        <div class="span4">
-            <p>Made for continuous delivery. Let Flyway migrate your database on application startup. Releases have
-                never been this easy.</p>
-        </div>
-    </div>
-    <div id="top3buttons" class="row">
-        <div class="span4">
             <a class="btn btn-primary" href="/getstarted/why">Why database migrations? <i
                     class="fa fa-arrow-right"></i></a>
         </div>
-        <div class="span4">
+        <div class="col-md-4">
+            <i class="top3-icon fa fa-crosshairs"></i>
+
+            <p class="strong-heading">Focused</p>
+            <p>Solves only one problem and solves it well. Flyway migrates your database, so you don't have to worry
+                about it anymore.</p>
             <a class="btn btn-primary" href="/getstarted/how">How does Flyway work? <i
                     class="fa fa-arrow-right"></i></a>
         </div>
-        <div class="span4">
+        <div class="col-md-4">
+            <i class="top3-icon fa fa-rocket"></i>
+
+            <p class="strong-heading">Powerful</p>
+            <p>Made for continuous delivery. Let Flyway migrate your database on application startup. Releases have
+                never been this easy.</p>
             <a class="btn btn-primary" href="/getstarted">Get started <i class="fa fa-arrow-right"></i></a>
         </div>
     </div>
@@ -119,8 +103,8 @@ tab: home
 
 <div class="container">
 <div id="upAndRunning" class="row">
-    <div id="upAndRunningLeft" class="strong-heading span4">Get up and running in <span>5</span> minutes</div>
-    <div id="upAndRunningRight" class="span8">{% include getstarted.html %}</div>
+    <div id="upAndRunningLeft" class="strong-heading col-md-4">Get up and running<br>in <span>5</span> minutes</div>
+    <div class="col-md-8"><div id="upAndRunningRight">{% include getstarted.html %}</div></div>
 </div>
 
 <div class="marketing">
@@ -131,37 +115,37 @@ tab: home
     </div>
 
     <div class="row">
-        <div class="span4">
+        <div class="col-md-4">
             <div class="marketing-item"><i class="fa fa-file"></i> Plain Old Sql</div>
 
             <p><a href="/documentation/migration/sql">Plain SQL scripts</a> (incl. placeholder replacement). No
                 proprietary XML formats, no lock-in.</p>
         </div>
-        <div class="span4">
+        <div class="col-md-4">
             <div class="marketing-item"><i class="fa fa-trophy"></i> No limits</div>
 
             <p><a href="/documentation/migration/java">Java-based migrations</a> for advanced data
                 transformations and handling with LOBs</p>
         </div>
-        <div class="span4">
+        <div class="col-md-4">
             <div class="marketing-item"><i class="fa fa-check-circle-o"></i> Zero required dependencies</div>
 
             <p>All you need is Java 6+ and your Jdbc driver and you're good to go!</p>
         </div>
     </div>
     <div class="row">
-        <div class="span4">
+        <div class="col-md-4">
             <div class="marketing-item"><i class="fa fa-magic"></i> Convention Over Configuration</div>
 
             <p>Filesystem and Classpath Scanning to automatically discover Sql and Java migrations</p>
         </div>
-        <div class="span4">
+        <div class="col-md-4">
             <div class="marketing-item"><i class="fa fa-shield"></i> Highly reliable</div>
 
             <p><a href="/documentation/faq#parallel">Safe for cluster
                 environments</a> (Multiple machines can migrate in parallel)</p>
         </div>
-        <div class="span4">
+        <div class="col-md-4">
             <div class="marketing-item"><i class="fa fa-cloud"></i> Cloud support</div>
 
             <p>Full support for <a
@@ -171,18 +155,18 @@ tab: home
         </div>
     </div>
     <div class="row">
-        <div class="span4">
+        <div class="col-md-4">
             <div class="marketing-item"><i class="fa fa-road"></i> Auto-migration on startup</div>
 
             <p><a href="/documentation/api/">Ship migrations together with the application</a> and run them
                 automatically on startup using the API</p>
         </div>
-        <div class="span4">
+        <div class="col-md-4">
             <div class="marketing-item"><i class="fa fa-warning"></i> Fail fast</div>
 
             <p>Inconsistent database or failed migration prevents app from starting.</p>
         </div>
-        <div class="span4">
+        <div class="col-md-4">
             <div class="marketing-item"><i class="fa fa-eraser"></i> Schema Clean</div>
 
             <p><a href="/documentation/maven/clean">Drop all tables, views, triggers, ...</a> from a schema without
@@ -197,19 +181,19 @@ tab: home
     <div class="marketing-section-sub">Choose from the wide range of supported databases</div>
 
     <div class="row">
-        <div class="span4">
+        <div class="col-md-4">
             <div class="marketing-item"><i class="fa fa-database"></i> <a href="/documentation/database/oracle">Oracle</a>
             </div>
 
             <p>10g and later, all editions<br/>(incl. Amazon RDS)</p>
         </div>
-        <div class="span4">
+        <div class="col-md-4">
             <div class="marketing-item"><i class="fa fa-database"></i> <a href="/documentation/database/sqlserver">SQL
                 Server</a></div>
 
             <p>2008 and later<br>(incl. Amazon RDS)</p>
         </div>
-        <div class="span4">
+        <div class="col-md-4">
             <div class="marketing-item"><i class="fa fa-database"></i> <a href="/documentation/database/sqlazure">SQL
                 Azure</a></div>
 
@@ -217,19 +201,19 @@ tab: home
         </div>
     </div>
     <div class="row">
-        <div class="span4">
+        <div class="col-md-4">
             <div class="marketing-item"><i class="fa fa-database"></i> <a href="/documentation/database/mysql">MySQL</a>
             </div>
 
             <p>5.1 and later<br>(incl. Amazon RDS)</p>
         </div>
-        <div class="span4">
+        <div class="col-md-4">
             <div class="marketing-item"><i class="fa fa-database"></i> <a href="/documentation/database/mariadb">MariaDB</a>
             </div>
 
             <p>10.0 and later<br>(incl. Amazon RDS)</p>
         </div>
-        <div class="span4">
+        <div class="col-md-4">
             <div class="marketing-item"><i class="fa fa-database"></i> <a
                     href="/documentation/database/googleCloudSql">Google Cloud
                 SQL</a></div>
@@ -238,19 +222,19 @@ tab: home
         </div>
     </div>
     <div class="row">
-        <div class="span4">
+        <div class="col-md-4">
             <div class="marketing-item"><i class="fa fa-database"></i> <a
                     href="/documentation/database/postgresql">PostgreSQL</a></div>
 
             <p>9.0 and later<br>(incl. Heroku &amp; Amazon RDS)</p>
         </div>
-        <div class="span4">
+        <div class="col-md-4">
             <div class="marketing-item"><i class="fa fa-database"></i> <a href="/documentation/database/vertica">Vertica</a>
             </div>
 
             <p>6.5 and later</p>
         </div>
-        <div class="span4">
+        <div class="col-md-4">
             <div class="marketing-item"><i class="fa fa-database"></i> <a href="/documentation/database/redshift">AWS
                 Redshift</a></div>
 
@@ -258,19 +242,19 @@ tab: home
         </div>
     </div>
     <div class="row">
-        <div class="span4">
+        <div class="col-md-4">
             <div class="marketing-item"><i class="fa fa-database"></i> <a
                     href="/documentation/database/db2">DB2</a></div>
 
             <p>9.7 and later</p>
         </div>
-        <div class="span4">
+        <div class="col-md-4">
             <div class="marketing-item"><i class="fa fa-database"></i> <a href="/documentation/database/db2zos">DB2
                 z/OS</a></div>
 
             <p>9.1 and later</p>
         </div>
-        <div class="span4">
+        <div class="col-md-4">
             <div class="marketing-item"><i class="fa fa-database"></i> <a href="/documentation/database/derby">Derby</a>
             </div>
 
@@ -278,19 +262,19 @@ tab: home
         </div>
     </div>
     <div class="row">
-        <div class="span4">
+        <div class="col-md-4">
             <div class="marketing-item"><i class="fa fa-database"></i> <a href="/documentation/database/h2">H2</a>
             </div>
 
             <p>1.2.137 and later</p>
         </div>
-        <div class="span4">
+        <div class="col-md-4">
             <div class="marketing-item"><i class="fa fa-database"></i> <a
                     href="/documentation/database/hsql">Hsql</a></div>
 
             <p>1.8 and later</p>
         </div>
-        <div class="span4">
+        <div class="col-md-4">
             <div class="marketing-item"><i class="fa fa-database"></i> <a href="/documentation/database/sqlite">SQLite</a>
             </div>
 
@@ -298,19 +282,19 @@ tab: home
         </div>
     </div>
     <div class="row">
-        <div class="span4">
+        <div class="col-md-4">
             <div class="marketing-item"><i class="fa fa-database"></i> <a href="/documentation/database/saphana">SAP HANA</a>
             </div>
 
             <p>latest</p>
         </div>
-        <div class="span4">
+        <div class="col-md-4">
             <div class="marketing-item"><i class="fa fa-database"></i> <a href="/documentation/database/solid">solidDB</a>
             </div>
 
             <p>6.5 and later</p>
         </div>
-        <div class="span4">
+        <div class="col-md-4">
             <div class="marketing-item"><i class="fa fa-database"></i> <a href="/documentation/database/sybaseAse">Sybase ASE</a>
             </div>
 
@@ -318,7 +302,7 @@ tab: home
         </div>
     </div>
     <div class="row">
-        <div class="span4">
+        <div class="col-md-4">
             <div class="marketing-item"><i class="fa fa-database"></i> <a href="/documentation/database/phoenix">Phoenix</a>
             </div>
 
@@ -333,10 +317,10 @@ tab: home
     <div class="marketing-section-sub">Join the hundreds of thousands of delighted users.</div>
 
     <div class="row">
-        <div class="span2">
+        <div class="col-md-2 center">
             <img src="/assets/photos/davesyer.jpg" class="img-circle">
         </div>
-        <div class="span10">
+        <div class="col-md-10">
             <div class="marketing-testimonial">
                 <blockquote>Database migrations are something that Java developers struggle with,
                     and Flyway provides a nice tool that anyone with basic knowledge of SQL can use. For that reason it
@@ -349,8 +333,11 @@ tab: home
     </div>
 
     <div class="row">
-        <div class="span10">
-            <div class="marketing-testimonial-right">
+        <div class="col-md-2 center">
+            <img src="/assets/photos/arungupta.png" class="img-circle">
+        </div>
+        <div class="col-md-10">
+            <div class="marketing-testimonial">
                 <blockquote>Flyway should be a fundamental part of any Java EE application
                     devops. It simplifies database migration and seamlessly integrates
                     with your application lifecycle.
@@ -358,16 +345,13 @@ tab: home
                 <p><strong>Arun Gupta</strong>, Director of Developer Advocacy, Red Hat</p>
             </div>
         </div>
-        <div class="span2">
-            <img src="/assets/photos/arungupta.png" class="img-circle">
-        </div>
     </div>
 
     <div class="row">
-        <div class="span2">
+        <div class="col-md-2 center">
             <img src="/assets/photos/erikdoernenburg.jpg" class="img-circle">
         </div>
-        <div class="span10">
+        <div class="col-md-10">
             <div class="marketing-testimonial">
                 <blockquote>With techniques such as Continuous Delivery becoming more mainstream,
                     automated database migrations are a baseline capability for many
@@ -380,16 +364,16 @@ tab: home
     </div>
 
     <div class="row">
-        <div class="span10">
-            <div class="marketing-testimonial-right">
+        <div class="col-md-2 center">
+            <img src="/assets/photos/armingattung.jpg" class="img-circle">
+        </div>
+        <div class="col-md-10">
+            <div class="marketing-testimonial">
                 <blockquote>With Flyway you can combine the full power of SQL with solid versioning. This makes setting up and maintaining database schemas a breeze.
                     We use it across all environments including production, making it a perfect fit for our Continuous Delivery and Zero Downtime pipeline. I highly recommend it.
                 </blockquote>
                 <p><strong>Armin Gattung</strong>, Freelance Consultant</p>
             </div>
-        </div>
-        <div class="span2">
-            <img src="/assets/photos/armingattung.jpg" class="img-circle">
         </div>
     </div>
 </div>
@@ -402,7 +386,7 @@ tab: home
 <thead>
 <tr>
     <td></td>
-    <td><img src="/assets/logo/flyway-logo-transparent-55.png" alt="Flyway" title="Flyway"></td>
+    <td><img src="/assets/logo/flyway-logo-tm-sm.png" alt="Flyway" title="Flyway" style="width: 85px"></td>
     <td style="vertical-align: middle"><a href="http://liquibase.org">Liquibase</a></td>
     <td style="vertical-align: middle"><a href="http://mybatis.github.io/migrations/">MyBatis</a></td>
 </tr>
@@ -679,10 +663,10 @@ tab: home
     <div class="marketing-section-sub">Pick any of these to learn more.</div>
 
     <p class="next-steps">
-        <a class="btn btn-primary btn-large" href="/getstarted/why">Why database migrations?</a>
-        <a class="btn btn-large" href="/getstarted/how">How does Flyway work?</a>
-        <a class="btn btn-large" href="/getstarted/firststeps/api">First steps</a>
-        <a class="btn btn-large" href="/getstarted/download">Download</a>
+        <a class="btn btn-primary btn-large" href="/getstarted/why">Why database migrations? <i class="fa fa-arrow-right"></i></a>
+        <a class="btn btn-info btn-large" href="/getstarted/how">How does Flyway work? <i class="fa fa-arrow-right"></i></a>
+        <a class="btn btn-info btn-large" href="/getstarted/firststeps/api">First steps <i class="fa fa-arrow-right"></i></a>
+        <a class="btn btn-info btn-large" href="/getstarted/download">Download <i class="fa fa-arrow-right"></i></a>
     </p>
 </div>
 </div>

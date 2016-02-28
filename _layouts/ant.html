@@ -3,7 +3,8 @@ layout: documentation
 menu: ant
 ---
 <div>
-    <ul class="nav nav-pills">
+    <div id="pills">
+        <ul class="nav nav-pills">
         <li
         {% if page.pill == 'overview' %} class="active" {% endif %}>
         <a href="/documentation/ant">Overview</a></li>
@@ -26,6 +27,7 @@ menu: ant
         {% if page.pill == 'repair' %} class="active" {% endif %}>
         <a href="/documentation/ant/repair">repair</a></li>
     </ul>
+        </div>
     
     {{ content }}
 

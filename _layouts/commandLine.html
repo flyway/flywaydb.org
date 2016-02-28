@@ -3,6 +3,7 @@ layout: documentation
 menu: commandLine
 ---
 <div>
+    <div id="pills">
     <ul class="nav nav-pills">
         <li
         {% if page.pill == 'overview' %} class="active" {% endif %}>
@@ -26,6 +27,7 @@ menu: commandLine
         {% if page.pill == 'repair' %} class="active" {% endif %}>
         <a href="/documentation/commandline/repair">repair</a></li>
     </ul>
+    </div>
     
     {{ content }}
 
