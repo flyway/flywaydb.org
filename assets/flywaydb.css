@@ -1,3 +1,7 @@
+body {
+
+}
+
 #header {
     padding-bottom: 10px;
     margin-bottom: 30px;
@@ -5,7 +9,7 @@
 }
 
 #header img {
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: -20px;
 }
 
@@ -100,13 +104,19 @@ img {
     padding-right: 10px;
 }
 
+.tabbable>.nav-tabs>li>a {
+    font-size: 12px !important;
+    padding: 7px 10px;
+}
+
 .nav-pills li a:hover {
     background-color: #ccc;
     color: white;
 }
 
-.nav-pills>li.active>a,.nav-pills>li.active>a:hover,.nav-pills>li.active>a:focus {
+.nav-pills>li.active>a,.nav-pills>li.active>a:hover,.nav-pills>li.active>a:focus, .nav-pills>li.active>a>i {
     background-color: #0166AE;
+    color: white;
 }
 
 #pills .nav-pills li a {
@@ -194,7 +204,7 @@ hr.soften {
 }
 
 #upAndRunningRight {
-    margin-top: -10px;
+    margin-top: -5px;
     background: #ffffff;
     padding: 10px;
     border: 1px #CCCCCC solid;
@@ -225,7 +235,7 @@ hr.soften {
 }
 
 #downloadStatsRight {
-    margin-top: -10px;
+    margin-top: -5px;
     background: #ffffff;
     padding: 10px;
     border: 1px #CCCCCC solid;
@@ -410,12 +420,10 @@ a.stackoverflow-tag:hover {
 }
 
 h2 {
-    font-size: 24px;
     margin-top: 40px;
 }
 
 h3 {
-    font-size: 16px;
 }
 
 pre.console {
