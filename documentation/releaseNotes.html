@@ -14,7 +14,7 @@ subtitle: Release Notes
     <p>This version comes with a <strong>new metadata table format</strong>. Migration is transparent and automatic on first
         run.</p>
 
-    <p><strong>Note:</strong> DB 2 z/OS, Redshift, Vertica, and solidDB users may have to manually upgrade the metadata table or drop it and baseline the schema again.</p>
+    <p><strong>Note:</strong> DB 2 z/OS, Vertica, and solidDB users may have to manually upgrade the metadata table or drop it and baseline the schema again.</p>
 
     <h3>New features</h3>
     <ul>
@@ -357,6 +357,12 @@ subtitle: Release Notes
             <a href="https://github.com/flyway/flyway/pull/1197">Issue 1197</a>
             Improved JavaDoc for callbacks, resolvers and migrations
             <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/1197"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/pull/1217">Issue 1217</a>
+            Fixed flyway 4.0 upgrade for Redshift (it does not support alter column)
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/1217"><i
                     class="fa fa-mail-reply"></i> Pull Request</a></span>
         </li>
     </ul>

@@ -1,5 +1,23 @@
-body {
+#top-cta {
+    width: 100%;
+    background-color: #0166AE;
+    text-align: center;
+}
 
+#top-cta a {
+    font-size: 16px;
+    display: block;
+    padding: 10px;
+    color: #EFF7FB;
+    line-height: 24px;
+}
+
+#top-cta a:hover {
+    text-decoration: none;
+}
+
+#top-cta a img {
+    margin-top: -5px;
 }
 
 #header {
