@@ -22,6 +22,8 @@ permalink: /blog/flyway-4.0
     <ul>
         <li>Repeatable Migrations support</li>
         <li>Sybase ASE, SAP HANA and Apache Phoenix support</li>
+        <li>Java-based migration and callback enhancements</li>
+        <li>Disabling clean</li>
         <li>Datasource auto-configuration when running in Boxfuse instances</li>
         <li>Commercial support plans</li>
     </ul>
@@ -88,6 +90,41 @@ permalink: /blog/flyway-4.0
 
     <p>Special thanks to <a href="https://github.com/super132">Jason Wong</a> for contributing SAP ASE support and <a href="https://github.com/jmahonin">Josh Mahonin</a> for contributing Apache Phoenix support.</p>
     <p>Special thanks to <a href="http://www.softronic.cz/">SOFTRONIC</a> for <a href="https://flywaydb.org/support/#sponsor">sponsoring</a> SAP HANA support.</p>
+
+    <h2>Java-based migration and callback enhancements</h2>
+
+    <p>During the Flyway 3.x series we introduced a number of configuration options and lifecycle hooks including callbacks.
+        Just like migrations, callbacks can be written either in SQL or in Java. When writing them in Java unfortunately
+    there was no easy way to access Flyway's configuration. We decided to remedy this with Flyway 4.0. Both Java-based migrations
+    and Java-based callbacks can now implement the <code>ConfigurationAware</code> interface (or inherit from either
+        <code>BaseJdbcMigration</code> or <code>BaseFlywayCallback</code>) and gain access to the Flyway configuration
+    which will be automatically injected at runtime:</p>
+
+    <pre class="prettyprint">public class V2__MyJdbcBasedMigration implements JdbcMigration, ConfigurationAware {
+    private FlywayConfiguration flywayConfiguration;
+
+    @Override
+    public void setFlywayConfiguration(FlywayConfiguration flywayConfiguration) {
+        this.flywayConfiguration = flywayConfiguration;
+    }
+
+    public void migrate(Connection connection) throws Exception {
+        // Migrate using configuration stored in the flywayConfiguration field
+    }
+}</pre>
+
+    <h2>Disabling clean</h2>
+
+    <p>Clean is an incredibly useful operation in development. With a single command you can wipe your database schema
+        completely clean of all its objects. This is a fantastic way to be able to experiment and quickly start over if
+    things don't work out.</p>
+
+    <p>In production however, running clean is usually something you ever do once as it is severely career-limiting.</p>
+
+    <p>To prevent such disasters we are introducing an additional safety measure. By setting:</p>
+    <pre class="prettyprint">flyway.cleanDisabled=true</pre>
+
+    <p>Flyway will now refuse to clean your schema until <code>cleanDisabled</code> is set to <code>false</code> again. We recommend all Flyway users to active this on their production environments immediately.</p>
 
     <h2>Datasource auto-configuration when running in Boxfuse instances</h2>
 
@@ -193,7 +230,8 @@ permalink: /blog/flyway-4.0
 
     <p>Flyway 4.0 is out and it is a big one. Flyway now expands beyond versioned migrations and offers
         <a href="/documentation/migration/repeatable">Repeatable Migrations</a> as well as
-    SAP ASE (previousls known as Sybase ASE), SAP HANA and Apache Phoenix support. Additionally, when running within <a href="https://boxfuse.com">Boxfuse</a> instances Flyway now auto-configures its datasource.</p>
+    SAP ASE (previousls known as Sybase ASE), SAP HANA and Apache Phoenix support. Additionally, Java-based migrations
+        and callbacks now have an easy way to access the Flyway configuration, clean can be disabled and when running within <a href="https://boxfuse.com">Boxfuse</a> instances Flyway now auto-configures its datasource.</p>
 
     <p>Companies that require guaranteed response times now have access to our <a href="/support#commercial">professional support subscription plans</a>.</p>
 
