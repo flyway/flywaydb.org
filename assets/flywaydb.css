@@ -1,6 +1,6 @@
 #top-cta {
     width: 100%;
-    background-color: #0166AE;
+    background-color: #008BC0;
     text-align: center;
 }
 
@@ -18,6 +18,28 @@
 
 #top-cta a img {
     margin-top: -5px;
+}
+
+.inline-cta {
+    display: block;
+    padding: 10px;
+    margin-top: 20px;
+    border: 1px dashed #DFE7EB;
+    background-color: #EFF7FB;
+    color: #008BC0;
+}
+
+.inline-cta i {
+    color: #008BC0;
+}
+
+.inline-cta:hover {
+    text-decoration: none;
+    color: #008BC0;
+}
+
+.inline-cta img {
+    margin-top: -3px;
 }
 
 #header {
