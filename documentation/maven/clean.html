@@ -9,7 +9,7 @@ subtitle: 'mvn flyway:clean'
     <p>Drops all objects (tables, views, procedures, triggers, ...) in the configured schemas.<br/>
         The schemas are cleaned in the order specified by the <code>schemas</code> property.</p>
 
-    <a href="/documentation/command/clean.html"><img src="/assets/balsamiq/command-clean.png" alt="clean"></a>
+    <a href="/documentation/command/clean"><img src="/assets/balsamiq/command-clean.png" alt="clean"></a>
 
     <h2>Default Phase</h2>
     <ul>
@@ -17,7 +17,7 @@ subtitle: 'mvn flyway:clean'
     </ul>
 
     <h2>Usage</h2>
-    <pre class="console">&gt; mvn flyway:clean</pre>
+    <pre class="console"><span>&gt;</span> mvn flyway:clean</pre>
 
     <h2>Configuration</h2>
     <table class="table table-bordered table-hover">
@@ -78,8 +78,20 @@ subtitle: 'mvn flyway:clean'
             <td>NO</td>
             <td></td>
             <td>Fully qualified class names of
-                <a href="/documentation/api/javadoc/org/flywaydb/core/api/callback/FlywayCallback.html">FlywayCallback</a>
+                <a href="/documentation/api/javadoc/org/flywaydb/core/api/callback/FlywayCallback">FlywayCallback</a>
                 implementations to use to hook into the Flyway lifecycle.</td>
+        </tr>
+        <tr>
+            <td>skipDefaultCallbacks</td>
+            <td>NO</td>
+            <td>false</td>
+            <td>Whether default built-in callbacks (sql) should be skipped. If true, only custom callbacks are used.</td>
+        </tr>
+        <tr>
+            <td>cleanDisabled</td>
+            <td>NO</td>
+            <td>false</td>
+            <td>Whether to disable clean. This is especially useful for production environments where running clean can be quite a career limiting move.</td>
         </tr>
         <tr>
             <td>skip</td>
@@ -113,6 +125,8 @@ subtitle: 'mvn flyway:clean'
         &lt;callback&gt;com.mycompany.project.CustomCallback&lt;/callback&gt;
         &lt;callback&gt;com.mycompany.project.AnotherCallback&lt;/callback&gt;
     &lt;/callbacks&gt;
+    &lt;skipDefaultCallbacks&gt;false&lt;/skipDefaultCallbacks&gt;
+    &lt;cleanDisabled&gt;false&lt;/cleanDisabled&gt;
     &lt;skip&gt;false&lt;/skip&gt;
     &lt;configFile&gt;myConfig.properties&lt;/configFile&gt;
 &lt;/configuration&gt;</pre>
@@ -125,6 +139,6 @@ subtitle: 'mvn flyway:clean'
 [INFO] Cleaned database schema 'PUBLIC' (execution time 00:00.016s)</pre>
 
     <p class="next-steps">
-        <a class="btn btn-primary" href="/documentation/maven/info.html">Maven: info <i class="fa fa-arrow-right"></i></a>
+        <a class="btn btn-primary" href="/documentation/maven/info">Maven: info <i class="fa fa-arrow-right"></i></a>
     </p>
 </div>

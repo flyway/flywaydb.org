@@ -1,3 +1,47 @@
+#top-cta {
+    width: 100%;
+    background-color: #008BC0;
+    text-align: center;
+}
+
+#top-cta a {
+    font-size: 16px;
+    display: block;
+    padding: 10px;
+    color: #EFF7FB;
+    line-height: 24px;
+}
+
+#top-cta a:hover {
+    text-decoration: none;
+}
+
+#top-cta a img {
+    margin-top: -5px;
+}
+
+.inline-cta {
+    display: block;
+    padding: 10px;
+    margin-top: 20px;
+    border: 1px dashed #DFE7EB;
+    background-color: #EFF7FB;
+    color: #008BC0;
+}
+
+.inline-cta i {
+    color: #008BC0;
+}
+
+.inline-cta:hover {
+    text-decoration: none;
+    color: #008BC0;
+}
+
+.inline-cta img {
+    margin-top: -3px;
+}
+
 #header {
     padding-bottom: 10px;
     margin-bottom: 30px;
@@ -5,7 +49,7 @@
 }
 
 #header img {
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: -20px;
 }
 
@@ -17,12 +61,10 @@
 #big-sell {
     min-height: 750px;
     text-align: center;
-    background: #f0f0f0;
     width: 100% !important;
     margin-top: -60px;
     padding-top: 60px;
-    padding-bottom: 30px;
-    margin-bottom: 30px;
+    padding-bottom: 100px;
     font-size: 12px;
 }
 
@@ -62,6 +104,32 @@
     margin-top: -5px;
 }
 
+a {
+    color: #0166AE;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+.btn-primary {
+    background-color: #0166AE;
+}
+
+.btn-info {
+    background-color: #aaa;
+    border-color: #999;
+}
+
+.btn-info:hover {
+    background-color: #999;
+    border-color: #888;
+}
+
 .btn-jumbo {
     font-size: 20px;
     padding: 14px 24px;
@@ -74,6 +142,46 @@
     padding-top: 40px;
     padding-left: 10px;
     padding-right: 10px;
+}
+
+.tabbable>.nav-tabs>li>a {
+    font-size: 12px !important;
+    padding: 7px 10px;
+}
+
+.nav-pills li a:hover {
+    background-color: #ccc;
+    color: white;
+}
+
+.nav-pills>li.active>a,.nav-pills>li.active>a:hover,.nav-pills>li.active>a:focus, .nav-pills>li.active>a>i {
+    background-color: #0166AE;
+    color: white;
+}
+
+#pills .nav-pills li a {
+    font-size: 12px;
+    padding: 7px 10px;
+    margin-bottom: 20px;
+}
+
+#menu .nav-pills li {
+    font-size: 16px;
+}
+
+#menu .nav-pills li a {
+    border-radius: 0 !important;
+}
+
+#menu .nav-pills .nav-header {
+    cursor: default;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    background-color: #f0f0f0;
+    margin-top: 30px;
+    color: #333;
 }
 
 #social a:hover i {
@@ -91,26 +199,13 @@
     text-align: center;
 }
 
-#top3 i {
+#top3 .top3-icon {
     font-size: 120px;
     margin-bottom: 20px;
 }
 
-#top3 p {
-}
-
-#top3details {
-    line-height: 150%;
-    font-size: 18px;
-}
-
-#top3buttons {
-    text-align: center;
-    margin-bottom: 100px;
-}
-
-#top3buttons i {
-    color: #555555;
+#top3 .col-md-4 {
+    margin-bottom: 50px;
 }
 
 hr.soften {
@@ -138,25 +233,54 @@ hr.soften {
 #upAndRunningLeft {
     line-height: 150%;
     padding-top: 30px;
-    margin-left: 10px;
 }
 
 #upAndRunningLeft span {
     font-size: 48px;
-    color: #0088cc;
+    color: #0166AE;
     display: inline-block;
     margin-top: 10px;
     vertical-align: bottom;
 }
 
 #upAndRunningRight {
-    margin-top: -10px;
+    margin-top: -5px;
     background: #ffffff;
     padding: 10px;
-    margin-left: 5px;
-    margin-right: -22px;
     border: 1px #CCCCCC solid;
     border-radius: 10px;
+}
+
+#downloadStatsBg {
+    height: 130px;
+    width: 100%;
+    background: #f0f0f0;
+}
+
+#downloadStats {
+    margin-top: -150px;
+}
+
+#downloadStatsLeft {
+    line-height: 150%;
+    padding-top: 30px;
+}
+
+#downloadStatsLeft span {
+    font-size: 48px;
+    color: #0166AE;
+    display: inline-block;
+    margin-top: 10px;
+    vertical-align: bottom;
+}
+
+#downloadStatsRight {
+    margin-top: -5px;
+    background: #ffffff;
+    padding: 10px;
+    border: 1px #CCCCCC solid;
+    border-radius: 10px;
+    max-width: 100%;
 }
 
 .marketing .row {
@@ -290,6 +414,7 @@ hr.soften {
 
 .next-steps a {
     margin-right: 20px;
+    margin-bottom: 20px;
 }
 
 #footer {
@@ -303,11 +428,7 @@ hr.soften {
     margin-top: 2px;
 }
 
-#footer #mc-embedded-subscribe-footer {
-    margin-top: -10px;
-}
-
-#footer .fa-heart {
+.fa-heart {
     color: #990000;
 }
 
@@ -318,34 +439,14 @@ hr.soften {
     display: inline-block;
 }
 
-#menu.well {
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-#menu.well ul.nav {
-    float: none;
-    margin-top: 0;
-}
-
 #menu .date {
     font-size: 10px;
 }
 
-.nav-pills > li > a {
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: 12px;
-}
-
 a.stackoverflow-tag {
-    color: #3E6D8E;
-    background-color: #E0EAF1;
-    border-bottom: 1px solid #3E6D8E;
-    border-right: 1px solid #7F9FB6;
-    padding: 3px 4px 3px 4px;
+    color: #39739d;
+    background-color: #E1ECF4;
+    padding: .4em .5em;
     margin: 2px 2px 2px 0;
     text-decoration: none;
     font-size: 90%;
@@ -354,26 +455,29 @@ a.stackoverflow-tag {
 }
 
 a.stackoverflow-tag:hover {
-    background-color: #3E6D8E;
-    color: #E0EAF1;
-    border-bottom: 1px solid #37607D;
-    border-right: 1px solid #37607D;
+    background-color: #dae7f1;
     text-decoration: none;
 }
 
 h2 {
-    font-size: 24px;
     margin-top: 40px;
 }
 
 h3 {
-    font-size: 16px;
 }
 
 pre.console {
     background: #555;
     color: white;
     margin-bottom: 20px;
+}
+
+pre.console span {
+    color: #aaa;
+}
+
+pre.console strong {
+    color: yellow;
 }
 
 pre.prettyprint {
@@ -398,14 +502,11 @@ i {
 }
 
 .blog-post-date {
-    color: #808080;
+    color: #ccc;
     font-weight: bold;
 }
 
 .blog-post-title {
-    font-size: 32px;
-    font-weight: bold;
-    line-height: 36px;
     margin-bottom: 50px;
 }
 
@@ -471,4 +572,40 @@ i {
     padding-left: 0;
     font-size: 16px;
     margin-top: 4px;
+}
+
+@media screen and (max-width: 1024px) {
+    #downloadStatsRight, #upAndRunningRight {
+        margin-top: 0;
+    }
+
+    #header .col-md-2 {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #downloadStatsBg {
+        height: 180px;
+    }
+
+    #downloadStats {
+        margin-top: -170px;
+    }
+
+    #upAndRunning {
+        margin-top: -120px;
+    }
+
+    #downloadStatsLeft, #upAndRunningLeft {
+        padding-top: 0;
+    }
+
+    #testimonial img {
+        margin-top: 20px;
+    }
+
+    .marketing-testimonial {
+        margin-top: 0;
+    }
 }

@@ -9,11 +9,11 @@ subtitle: 'Command-line: migrate'
     <p>Migrates the schema to the latest version. Flyway will create the metadata table automatically if it doesn't
         exist.</p>
 
-    <a href="/documentation/command/migrate.html"><img src="/assets/balsamiq/command-migrate.png" alt="migrate"></a>
+    <a href="/documentation/command/migrate"><img src="/assets/balsamiq/command-migrate.png" alt="migrate"></a>
 
     <h2>Usage</h2>
 
-    <pre class="console">&gt; flyway [options] migrate</pre>
+    <pre class="console"><span>&gt;</span> flyway [options] migrate</pre>
 
     <h2>Options</h2>
 
@@ -94,6 +94,12 @@ subtitle: 'Command-line: migrate'
             <td>The file name prefix for Sql migrations</td>
         </tr>
         <tr>
+            <td>repeatableSqlMigrationPrefix</td>
+            <td>NO</td>
+            <td>R</td>
+            <td>The file name prefix for repeatable Sql migrations</td>
+        </tr>
+        <tr>
             <td>sqlMigrationSeparator</td>
             <td>NO</td>
             <td>__</td>
@@ -140,16 +146,28 @@ subtitle: 'Command-line: migrate'
             <td>NO</td>
             <td></td>
             <td>Comma-separated list of fully qualified class names of custom
-                <a href="/documentation/api/javadoc/org/flywaydb/core/api/resolver/MigrationResolver.html">MigrationResolver</a>
+                <a href="/documentation/api/javadoc/org/flywaydb/core/api/resolver/MigrationResolver">MigrationResolver</a>
                 implementations to be used in addition to the built-in ones for resolving Migrations to apply.</td>
+        </tr>
+        <tr>
+            <td>skipDefaultResolvers</td>
+            <td>NO</td>
+            <td>false</td>
+            <td>Whether default built-in resolvers (sql, jdbc and spring-jdbc) should be skipped. If true, only custom resolvers are used.</td>
         </tr>
         <tr>
             <td>callbacks</td>
             <td>NO</td>
             <td></td>
             <td>Comma-separated list of fully qualified class names of
-                <a href="/documentation/api/javadoc/org/flywaydb/core/api/callback/FlywayCallback.html">FlywayCallback</a>
+                <a href="/documentation/api/javadoc/org/flywaydb/core/api/callback/FlywayCallback">FlywayCallback</a>
                 implementations to use to hook into the Flyway lifecycle.</td>
+        </tr>
+        <tr>
+            <td>skipDefaultCallbacks</td>
+            <td>NO</td>
+            <td>false</td>
+            <td>Whether default built-in callbacks (sql) should be skipped. If true, only custom callbacks are used.</td>
         </tr>
         <tr>
             <td>target</td>
@@ -187,6 +205,23 @@ subtitle: 'Command-line: migrate'
                 automatically, ensuring that the next migration will bring you back to the state checked into
                 SCM.<br/><br/><strong>Warning ! Do not enable in production !</strong>
             </td>
+        </tr>
+        <tr>
+            <td>ignoreFutureMigrations</td>
+            <td>NO</td>
+            <td>true</td>
+            <td>Ignore future migrations when reading the metadata table. These are migrations that were performed by a
+                newer deployment of the application that are not yet available in this version. For example: we have migrations
+                available on the classpath up to version 3.0. The metadata table indicates that a migration to version 4.0
+                (unknown to us) has already been applied. Instead of bombing out (fail fast) with an exception, a
+                warning is logged and Flyway continues normally. This is useful for situations where one must be able to redeploy
+                an older version of the application after the database has been migrated by a newer one.</td>
+        </tr>
+        <tr>
+            <td>cleanDisabled</td>
+            <td>NO</td>
+            <td>false</td>
+            <td>Whether to disable clean. This is especially useful for production environments where running clean can be quite a career limiting move.</td>
         </tr>
         <tr>
             <td>baselineOnMigrate</td>
@@ -229,6 +264,7 @@ flyway.schemas=schema1,schema2,schema3
 flyway.table=schema_history
 flyway.locations=classpath:com.mycomp.migration,database/migrations,filesystem:/sql-migrations
 flyway.sqlMigrationPrefix=Migration-
+flyway.repeatableSqlMigrationPrefix=RRR
 flyway.sqlMigrationSeparator=__
 flyway.sqlMigrationSuffix=-OK.sql
 flyway.encoding=ISO-8859-1
@@ -238,11 +274,15 @@ flyway.placeholders.otherplaceholder=value123
 flyway.placeholderPrefix=#[
 flyway.placeholderSuffix=]
 flyway.resolvers=com.mycomp.project.CustomResolver,com.mycomp.project.AnotherResolver
+flyway.skipDefaultCallResolvers=false
 flyway.callbacks=com.mycomp.project.CustomCallback,com.mycomp.project.AnotherCallback
+flyway.skipDefaultCallbacks=false
 flyway.target=5.1
 flyway.outOfOrder=false
 flyway.validateOnMigrate=true
 flyway.cleanOnValidationError=false
+flyway.ignoreFutureMigrations=false
+flyway.cleanDisabled=false
 flyway.baselineOnMigrate=false</pre>
 
     <h2>Sample output</h2>
@@ -258,6 +298,6 @@ Migrating to version 1.3
 Successfully applied 3 migrations (execution time 00:00.049s).</pre>
 
     <p class="next-steps">
-        <a class="btn btn-primary" href="/documentation/commandline/clean.html">Command-line: clean <i class="fa fa-arrow-right"></i></a>
+        <a class="btn btn-primary" href="/documentation/commandline/clean">Command-line: clean <i class="fa fa-arrow-right"></i></a>
     </p>
 </div>

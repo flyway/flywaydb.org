@@ -1,0 +1,247 @@
+---
+layout: blog
+subtitle: "Flyway 4.0 Released"
+permalink: /blog/flyway-4.0
+---
+<div>
+    <p>2015 is behind us and what an amazing year this has been for Flyway! Now that Continuous Delivery and
+        database migrations are entering the mainstream, Flyway is seeing even more adoption and recognition than ever before. As a testimony of this, last year Flyway
+        was honored with the highest distinction <a href="https://www.thoughtworks.com/radar/tools/flyway">"Adopt"</a> on the <a href="https://www.thoughtworks.com/radar/tools/flyway">ThoughtWorks Technology Radar</a>.</p>
+
+    <p>And it's really been quite a ride since the project's humble beginnings on
+        Google Code (yes, that used to be a thing) in 2010. Every single year has come with tremendous growth, and
+    last year was no exception. In fact Flyway passed <strong>850,000 downloads</strong> in 2015 alone!</p>
+
+    <div class="blog-post-image">
+        <img src="/assets/posts/flyway-4.0/downloads.png" alt="Flyway Yearly Downloads">
+    </div>
+
+    <p>So let's kick off 2016 with a bang! Please welcome <strong>Flyway 4.0</strong>!</p>
+
+    <p>The <strong>highlights</strong> of this release are:</p>
+    <ul>
+        <li>Repeatable Migrations support</li>
+        <li>Sybase ASE, SAP HANA and Apache Phoenix support</li>
+        <li>Java-based migration and callback enhancements</li>
+        <li>Disabling clean</li>
+        <li>Datasource auto-configuration when running in Boxfuse instances</li>
+        <li>Commercial support plans</li>
+    </ul>
+
+    <h2>Repeatable Migrations support</h2>
+
+    <p>Versioned migrations are a great way to evolve your relational database schema. You can think of them as
+        transformation functions you apply to your schema. They let you reliably evolve the structure
+    of your database by creating, altering or dropping objects like tables and indexes. Versioned migrations are also a
+    great way to evolve reference data or perform bulk corrections of user data.</p>
+
+    <p>There are however a few areas where they tend to create some friction. This usually occurs when you either
+    manage code (think stored procedures, functions, packages, ...) or manipulate objects, like views, that don't physically hold data
+    themselves. In those cases, it's easy to end up over time with many almost identical copies of the definition
+    of the same objects scattered over many different migration files. This feels wrong and simply doesn't make sense when you
+    could just as well be keeping the history within your version control system.</p>
+
+    <p>To better support these scenarios we are today expanding Flyway beyond versioned migrations and introducing a new type of migrations: <strong>repeatable migrations</strong>.</p>
+
+    <p>Here is a brief example:</p>
+
+    <code>R__My_view.sql</code>
+    <pre class="prettyprint">CREATE OR REPLACE VIEW my_view AS SELECT * FROM my_table WHERE name LIKE 'My%';</pre>
+
+    <p>As you can see we have a number of differences compared to versioned migrations:</p>
+    <ul>
+        <li>It has a different prefix (configurable of course): <code>R</code> instead of <code>V</code></li>
+        <li>It has no version number and no order compared to other migrations</li>
+        <li>It can be run multiple times (thanks to the <code>CREATE OR REPLACE</code> clause)</li>
+    </ul>
+
+    <p>You can now evolve the definition of this view within the same file. History will be kept in your version control system
+        and Flyway will <strong>reapply this migration every time the checksum changes</strong> and previous runs will be marked as superseded.</p>
+
+    <p>The same migration will therefore appear multiple times in your history:</p>
+
+    <pre>+---------+--------------------+---------------------+---------+
+| Version | Description        | Installed on        | State   |
++---------+--------------------+---------------------+---------+
+| 1       | Create first table | 2016-02-29 13:40:00 | Success |
+| 1.1     | Adjust structure   | 2016-02-29 13:40:05 | Success |
+<strong>|         | My View            | 2016-02-29 13:42:00 | Superse |</strong>
+|         | Other Repeatable   | 2016-02-29 13:42:05 | Success |
+| 1.2     | Populate table     | 2016-02-29 13:45:26 | Success |
+| 2.0     | Add foreign key    | 2016-02-29 13:45:27 | Success |
+<strong>|         | My View            | 2016-02-29 13:48:00 | Success |</strong>
++---------+--------------------+---------------------+---------+</pre>
+
+    <p>You can start using this today with both SQL and Java-based migrations.</p>
+
+    <h2>SAP ASE, SAP HANA and Apache Phoenix support</h2>
+
+    <p>As Flyway increasingly becomes our industry's de-facto standard for database migrations, the
+        <a href="/#databases">ever growing list</a> of supported databases keeps on expanding. With Flyway 4.0, we are
+        adding support for not one, but three new databases: SAP ASE (previously known as Sybase ASE), SAP HANA and Apache Phoenix:</p>
+
+    <div class="blog-post-image" style="margin-bottom: 20px">
+        <img src="/assets/posts/flyway-4.0/sapase.png" alt="SAP ASE" style="height: 50px; margin-right: 50px">
+        <img src="/assets/posts/flyway-4.0/saphana.png" alt="SAP HANA" style="height: 50px; margin-right: 50px">
+        <img src="/assets/posts/flyway-4.0/phoenix.png" alt="Apache Phoenix" style="height: 50px">
+    </div>
+
+    <p>Flyway now supports a total of <strong>19 different RDBMS</strong>.</p>
+
+    <p>Special thanks to <a href="https://github.com/super132">Jason Wong</a> for contributing SAP ASE support and <a href="https://github.com/jmahonin">Josh Mahonin</a> for contributing Apache Phoenix support.</p>
+    <p>Special thanks to <a href="http://www.softronic.cz/">SOFTRONIC</a> for <a href="https://flywaydb.org/support/#sponsor">sponsoring</a> SAP HANA support.</p>
+
+    <h2>Java-based migration and callback enhancements</h2>
+
+    <p>During the Flyway 3.x series we introduced a number of configuration options and lifecycle hooks including callbacks.
+        Just like migrations, callbacks can be written either in SQL or in Java. When writing them in Java unfortunately
+    there was no easy way to access Flyway's configuration. We decided to remedy this with Flyway 4.0. Both Java-based migrations
+    and Java-based callbacks can now implement the <code>ConfigurationAware</code> interface (or inherit from either
+        <code>BaseJdbcMigration</code> or <code>BaseFlywayCallback</code>) and gain access to the Flyway configuration
+    which will be automatically injected at runtime:</p>
+
+    <pre class="prettyprint">public class V2__MyJdbcBasedMigration implements JdbcMigration, ConfigurationAware {
+    private FlywayConfiguration flywayConfiguration;
+
+    @Override
+    public void setFlywayConfiguration(FlywayConfiguration flywayConfiguration) {
+        this.flywayConfiguration = flywayConfiguration;
+    }
+
+    public void migrate(Connection connection) throws Exception {
+        // Migrate using configuration stored in the flywayConfiguration field
+    }
+}</pre>
+
+    <h2>Disabling clean</h2>
+
+    <p>Clean is an incredibly useful operation in development. With a single command you can wipe your database schema
+        completely clean of all its objects. This is a fantastic way to be able to experiment and quickly start over if
+    things don't work out.</p>
+
+    <p>In production however, running clean is usually something you ever do once as it is severely career-limiting.</p>
+
+    <p>To prevent such disasters we are introducing an additional safety measure. By setting:</p>
+    <pre class="prettyprint">flyway.cleanDisabled=true</pre>
+
+    <p>Flyway will now refuse to clean your schema until <code>cleanDisabled</code> is set to <code>false</code> again. We recommend all Flyway users to active this on their production environments immediately.</p>
+
+    <h2>Datasource auto-configuration when running in Boxfuse instances</h2>
+
+    <div class="blog-post-image">
+        <a href="https://boxfuse.com"><img src="/assets/posts/flyway-4.0/boxfuse.png" alt="Boxfuse"></a>
+    </div>
+
+    <p>Last year has been a very busy year for us as next to Flyway, we also launched <strong><a href="https://boxfuse.com">Boxfuse</a></strong>.</p>
+
+    <p>Boxfuse is the easiest, most reliable and secure way to <strong>run your JVM-based apps on AWS</strong>. It is based on three core principles:</p>
+
+    <ul>
+        <li><strong>Immutable Infrastructure</strong>: Creating servers and never modifying them again by treating a server as one immutable unit that is regenerated after every change and promoted unchanged from environment to environment to eliminate drift and increase reliability by ensuring you run the exact same code in production as the one you tested in test.</li>
+        <li><strong>Minimal Images</strong>: Analysing your application and generating minimal tailor-made Linux-based images on the fly that are 100x smaller than a typical Linux system and take just seconds to produce.</li>
+        <li><strong>Blue/Green Deployments</strong>: Deploying a new version of an app in parallel to the existing one and only making the switch at the elastic IP or elastic load balancer level once the configured health checks of the new version have passed. Deployments are fully automated and effectively transactional, providing you with zero-downtime updates.</li>
+    </ul>
+
+    <p><a href="https://boxfuse.com">Boxfuse</a> has been designed from the ground up for Continuous Delivery and integrates naturally with Flyway.
+        Boxfuse comes with special support for
+        Spring Boot, Grails, Play, Dropwizard, Tomcat and TomEE as well as regular executable jar applications.
+        It can use your framework's native configuration file to detect port and healthcheck information, based on which
+        Boxfuse will provision AMIs, Security Groups,
+        Elastic Load Balancers and Auto-Scaling Groups for you, with zero additional configuration required.</p>
+
+    <p>Boxfuse also detects whether your application uses MySQL or PostgreSQL and will automatically provision the necessary
+        AWS RDS instances as well as configure your framework of choice to use the correct JDBC URL, user and password.</p>
+
+    <p>And if you choose to use Flyway directly to migrate your database on application startup, it is now as simple as:</p>
+
+    <pre class="prettyprint">new Flyway().migrate();</pre>
+
+    <p>as Flyway automatically picks up the database configuration exposed by Boxfuse.</p>
+
+    <p>We took the same principles you love about Flyway (simplicity, focus, power), and applied them to deploying applications on AWS.</p>
+
+    <p>Find out more on the <strong><a href="https://boxfuse.com">Boxfuse website</a></strong>.</p>
+
+    <h2>Commercial support plans</h2>
+
+    <p>If you have questions or need help, Flyway you can get answers via the <a class="stackoverflow-tag"
+                                                                                                            href="http://stackoverflow.com/questions/tagged/flyway">flyway</a>
+        tag on StackOverflow as well as the issue tracker.</p>
+    <p>Over the last few years we seen increased demand to go further and also offer professional dedicated support to organisations
+        who need guaranteed response times as well as the piece of mind knowing someone will be there when they need
+        assistance.
+    </p>
+
+    <p>Today we are opening up our <a href="/support#commercial">professional support subscription program</a>
+        which we have offered to a selected number of clients in the past to
+    all companies using Flyway. These are the three support tiers we are offering:</p>
+
+    <table class="table table-striped">
+        <tr>
+            <th></th>
+            <th>Light</th>
+            <th>Business</th>
+            <th>Enterprise</th>
+        </tr>
+        <tr>
+            <td><strong>Response Time</strong></td>
+            <td>3 business days</td>
+            <td><strong>2 business days</strong></td>
+            <td><strong>2 business days</strong></td>
+        </tr>
+        <tr>
+            <td><strong>Pre-release access</strong></td>
+            <td><strong>Yes</strong></td>
+            <td><strong>Yes</strong></td>
+            <td><strong>Yes</strong></td>
+        </tr>
+        <tr>
+            <td><strong>Contact</strong></td>
+            <td>Email</td>
+            <td>Email</td>
+            <td><strong>Email / Skype / Phone</strong></td>
+        </tr>
+        <tr>
+            <td><strong>Scope</strong></td>
+            <td>Defects</td>
+            <td><strong>Defects + Consultancy</strong></td>
+            <td><strong>Defects + Consultancy</strong></td>
+        </tr>
+        <tr>
+            <td><strong>Remote Consultancy</strong></td>
+            <td>Not included</td>
+            <td>8 hours (4 x 2 hours)</td>
+            <td><strong>24 hours (12 x 2 hours)</strong></td>
+        </tr>
+    </table>
+
+    <p>For more information about our professional support subscriptions, contact us at <a href="mailto:support@flywaydb.org">support@flywaydb.org</a></p>
+
+    <h2>Special thanks</h2>
+
+    <p>We would like to extend special thanks to <a href="http://www.softronic.cz/">SOFTRONIC</a> for <a href="https://flywaydb.org/support/#sponsor">sponsoring</a> SAP HANA support and <a href="https://www.codelutin.com/">Code Lutin</a> for making a donation to the Flyway project.</p>
+
+    <div class="blog-post-image" style="margin-bottom: 20px">
+        <a href="http://www.softronic.cz/"><img src="/assets/posts/flyway-4.0/softronic.png" alt="Softronic" style="height: 50px; margin-right: 50px"></a>
+        <a href="https://www.codelutin.com/"><img src="/assets/posts/flyway-4.0/codeLutin.png" alt="Code Lutin" style="height: 75px; margin-right: 50px"></a>
+    </div>
+
+    <h2>Grab it while it's hot!</h2>
+
+    <p>Flyway 4.0 is out and it is a big one. Flyway now expands beyond versioned migrations and offers
+        <a href="/documentation/migration/repeatable">Repeatable Migrations</a> as well as
+    SAP ASE (previousls known as Sybase ASE), SAP HANA and Apache Phoenix support. Additionally, Java-based migrations
+        and callbacks now have an easy way to access the Flyway configuration, clean can be disabled and when running within <a href="https://boxfuse.com">Boxfuse</a> instances Flyway now auto-configures its datasource.</p>
+
+    <p>Companies that require guaranteed response times now have access to our <a href="/support#commercial">professional support subscription plans</a>.</p>
+
+    <p>This release packs in even more with a <a href="/documentation/releaseNotes">huge list improvements and bug fixes</a> across the board.</p>
+
+    <p>Enjoy Flyway 4.0 and <a href="/getstarted/download">grab it while it's hot!</a></p>
+
+    <p><strong>All users are encouraged to upgrade.</strong></p>
+
+    <p>Flyway is brought to you with <i class="fa fa-heart"></i> by <a href="https://twitter.com/axelfontaine">Axel Fontaine</a>, <a href="https://boxfuse.com">Boxfuse</a> and the <a href="/documentation/contribute/hallOfFame">many contributors</a>.</p>
+
+    <p>P.S.: Spread the word and don't forget to subscribe to our monthly newsletter below or follow <a href="https://twitter.com/flywaydb">@flywaydb</a> to stay in touch.</p>
+</div>

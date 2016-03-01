@@ -7,7 +7,7 @@ subtitle: 'gradle flywayInfo'
     <h1>Gradle Task: flywayInfo</h1>
     <p>Prints the details and status information about all the migrations.</p>
 
-    <a href="/documentation/command/info.html"><img src="/assets/balsamiq/command-info.png" alt="info"></a>
+    <a href="/documentation/command/info"><img src="/assets/balsamiq/command-info.png" alt="info"></a>
 
     <h2>Usage</h2>
     <pre class="console">&gt; gradle flywayInfo</pre>
@@ -70,7 +70,7 @@ subtitle: 'gradle flywayInfo'
         <tr>
             <td>locations</td>
             <td>NO</td>
-            <td>db/migration</td>
+            <td>filesystem:src/main/resources/db/migration</td>
             <td>Locations to scan recursively for migrations. The location type is determined by its prefix.<br/>
                 Unprefixed locations or locations starting with <code>classpath:</code> point to a package on the
                 classpath and may contain both sql and java-based migrations.<br/>
@@ -83,6 +83,12 @@ subtitle: 'gradle flywayInfo'
             <td>NO</td>
             <td>V</td>
             <td>The file name prefix for Sql migrations</td>
+        </tr>
+        <tr>
+            <td>repeatableSqlMigrationPrefix</td>
+            <td>NO</td>
+            <td>R</td>
+            <td>The file name prefix for repeatable Sql migrations</td>
         </tr>
         <tr>
             <td>sqlMigrationSeparator</td>
@@ -131,16 +137,28 @@ subtitle: 'gradle flywayInfo'
             <td>NO</td>
             <td></td>
             <td>Fully qualified class names of custom
-                <a href="/documentation/api/javadoc/org/flywaydb/core/api/resolver/MigrationResolver.html">MigrationResolver</a>
+                <a href="/documentation/api/javadoc/org/flywaydb/core/api/resolver/MigrationResolver">MigrationResolver</a>
                 implementations to be used in addition to the built-in ones for resolving Migrations to apply.</td>
+        </tr>
+        <tr>
+            <td>skipDefaultResolvers</td>
+            <td>NO</td>
+            <td>false</td>
+            <td>Whether default built-in resolvers (sql, jdbc and spring-jdbc) should be skipped. If true, only custom resolvers are used.</td>
         </tr>
         <tr>
             <td>callbacks</td>
             <td>NO</td>
             <td></td>
             <td>Fully qualified class names of
-                <a href="/documentation/api/javadoc/org/flywaydb/core/api/callback/FlywayCallback.html">FlywayCallback</a>
+                <a href="/documentation/api/javadoc/org/flywaydb/core/api/callback/FlywayCallback">FlywayCallback</a>
                 implementations to use to hook into the Flyway lifecycle.</td>
+        </tr>
+        <tr>
+            <td>skipDefaultCallbacks</td>
+            <td>NO</td>
+            <td>false</td>
+            <td>Whether default built-in callbacks (sql) should be skipped. If true, only custom callbacks are used.</td>
         </tr>
         <tr>
             <td>target</td>
@@ -171,6 +189,7 @@ subtitle: 'gradle flywayInfo'
     table = 'schema_history'
     locations = ['classpath:migrations1', 'migrations2', 'filesystem:/sql-migrations']
     sqlMigrationPrefix = 'Migration-'
+    repeatableSqlMigrationPrefix = 'RRR'
     sqlMigrationSeparator = '__'
     sqlMigrationSuffix = '-OK.sql'
     encoding = 'ISO-8859-1'
@@ -182,7 +201,9 @@ subtitle: 'gradle flywayInfo'
     placeholderPrefix = '#['
     placeholderSuffix = ']'
     resolvers = ['com.mycompany.proj.CustomResolver', 'com.mycompany.proj.AnotherResolver']
+    skipDefaultResolvers = false
     callbacks = ['com.mycompany.proj.CustomCallback', 'com.mycompany.proj.AnotherCallback']
+    skipDefaultCallbacks = false
     target = '1.1'
     outOfOrder = false
 }</pre>
@@ -200,6 +221,6 @@ subtitle: 'gradle flywayInfo'
 +-------------+------------------------+---------------------+---------+</pre>
 
     <p class="next-steps">
-        <a class="btn btn-primary" href="/documentation/gradle/validate.html">Gradle: validate <i class="fa fa-arrow-right"></i></a>
+        <a class="btn btn-primary" href="/documentation/gradle/validate">Gradle: validate <i class="fa fa-arrow-right"></i></a>
     </p>
 </div>

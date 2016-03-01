@@ -1,0 +1,61 @@
+---
+layout: migration
+pill: versioned
+subtitle: Versioned migrations
+---
+<div id="versioned">
+    <h1>Versioned migrations</h1>
+
+    <p>The most common type of migration is a versioned migration. Each versioned migration has a unique version and is
+        applied exactly once.</p>
+
+    <h2>Usages</h2>
+
+    <ul>
+        <li>Creating/altering/dropping tables/indexes/foreign keys/enums/UDTs/...</li>
+        <li>Reference data updates</li>
+        <li>User data corrections</li>
+    </ul>
+
+    <h2 id="versions">Versions</h2>
+
+    <p>Each versioned migration must have a <strong>unique version</strong> and a description.</p>
+
+    <p>A version must have the following structure:</p>
+
+    <ul>
+        <li>One or more numeric parts</li>
+        <li>Separated by a dot (.) or an underscore (_)</li>
+        <li>Underscores are replaced by dots at runtime</li>
+        <li>Leading zeroes are ignored in each part</li>
+    </ul>
+
+    <p>Examples of valid versions:</p>
+
+    <ul>
+        <li>1</li>
+        <li>001</li>
+        <li>5.2</li>
+        <li>5_2 (5.2 at runtime)</li>
+        <li>1.2.3.4.5.6.7.8.9</li>
+        <li>205.68</li>
+        <li>20130115113556</li>
+        <li>2013.1.15.11.35.56</li>
+        <li>2013.01.15.11.35.56</li>
+    </ul>
+
+    <h2>Example</h2>
+
+    <p><code>V1__Cars.sql</code></p>
+
+    <pre class="prettyprint">CREATE TABLE cars (
+    id INT NOT NULL PRIMARY KEY,
+    license_plate VARCHAR NOT NULL,
+    color VARCHAR NOT NULL
+);</pre>
+
+    <p class="next-steps">
+        <a class="btn btn-primary" href="/documentation/migration/repeatable">Repeatable migrations <i
+                class="fa fa-arrow-right"></i></a>
+    </p>
+</div>

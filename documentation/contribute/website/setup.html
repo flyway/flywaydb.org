@@ -1,0 +1,65 @@
+---
+layout: website
+pill: websiteSetup
+subtitle: Dev Environment Setup - Website
+---
+<div id="websiteSetup">
+    <h1>Website: Dev Environment Setup</h1>
+
+    <p>To contribute to the Flyway website you will need to set up your development environment so that you run the
+        website locally and submit changes. </p>
+
+    <p>For this you will need to set up Git, Ruby, the Ruby Dev Kit, Jekyll and an editor.</p>
+
+    <h2>Git</h2>
+
+    <p>The Flyway website is developed using Git for version control, just like Flyway itself. Download the latest
+        version here: <a
+                href="http://msysgit.github.com/"
+                >http://msysgit.github.com/</a></p>
+
+    <p>Make sure the directory containing the binaries has been added the PATH. If you downloaded an installer this
+        should have been taken care of for you.</p>
+
+    <h2>Ruby</h2>
+
+    <p>In order to install and run Jekyll you need a working Ruby installation.</p>
+
+    <p>You can find the latest version of the RubyInstaller here:
+        <a href="http://rubyinstaller.org/downloads/">http://rubyinstaller.org/downloads/</a>.</p>
+
+    <p>Make sure the directory containing the binaries has been added the PATH. If you downloaded the installer this
+        should have been taken care of for you.</p>
+
+    <h2>Ruby Dev Kit</h2>
+
+    <p>In order to install and run Jekyll you also need a Ruby Development Kit installation.</p>
+
+    <p>Make sure to pick the version matching the Ruby version you just installed. You can find it here:
+        <a href="http://rubyinstaller.org/downloads/">http://rubyinstaller.org/downloads/</a>.</p>
+
+    <p>Unzip in a folder and then open a command-line prompt there to execute:</p>
+    <pre class="console">&gt; ruby dk.rb init</pre>
+    <p>followed by</p>
+    <pre class="console">&gt; ruby dk.rb install</pre>
+
+    <h2>Jekyll</h2>
+
+    <p>To generate the static website from the Git repository we use Jekyll. You can install the latest version like
+        this:</p>
+    <pre class="console">&gt; gem install jekyll</pre>
+
+    <h2>Editor</h2>
+
+    <p>The website uses html files with Liquid headers for Jekyll. We personally use IntelliJ, which works quite well,
+        but feel free to use any editor that suits you.</p>
+
+    <h2>Done!</h2>
+
+    <p>Congratulations! You now have a fully functional dev environment for the Flyway website. You can start
+        contributing!</p>
+
+    <p class="next-steps">
+        <a class="btn btn-primary" href="/documentation/contribute/website/submit">Submit your Changes <i class="fa fa-arrow-right"></i></a>
+    </p>
+</div>

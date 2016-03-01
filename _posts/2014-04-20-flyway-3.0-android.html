@@ -1,7 +1,7 @@
 ---
 layout: blog
 subtitle: "Flyway 3.0: Hello Android!"
-permalink: /blog/flyway-3.0-android.html
+permalink: /blog/flyway-3.0-android
 ---
 <div>
     <p>Today is birthday time! This blog turns one and Flyway turns 4! And to celebrate we are releasing our next major
@@ -106,7 +106,7 @@ flyway.migrate();</pre>
         to all tables after all migrations complete, recompiling procedures, or whatever you need. You now get handed
         a connection within a transaction and you can use it to your liking. All you have to do is:</p>
     <ul>
-        <li>Implement the new <a href="/documentation/api/javadoc/org/flywaydb/core/api/callback/FlywayCallback.html">FlywayCallback</a>
+        <li>Implement the new <a href="/documentation/api/javadoc/org/flywaydb/core/api/callback/FlywayCallback">FlywayCallback</a>
             interface
         </li>
         <li>Register it with <code>Flyway.setCallbacks(...)</code></li>
@@ -123,11 +123,11 @@ flyway.migrate();</pre>
     <p>To get started with this:</p>
     <ul>
         <li>Implement the new <a
-                href="/documentation/api/javadoc/org/flywaydb/core/api/resolver/MigrationResolver.html">MigrationResolver</a>
+                href="/documentation/api/javadoc/org/flywaydb/core/api/resolver/MigrationResolver">MigrationResolver</a>
             interface
         </li>
         <li>Add a corresponding <a
-                href="/documentation/api/javadoc/org/flywaydb/core/api/resolver/MigrationExecutor.html">MigrationExecutor</a>
+                href="/documentation/api/javadoc/org/flywaydb/core/api/resolver/MigrationExecutor">MigrationExecutor</a>
             implementation
         </li>
         <li>Register the resolver with <code>Flyway.setResolvers(...)</code></li>
@@ -146,12 +146,12 @@ flyway.migrate();</pre>
 
     <p>Stability and reliability are always our top priority and this release is no exception. It packs a ton of fixes
         and small improvements across the board. You can find all the details are in the <a
-                href="/documentation/releaseNotes.html">release notes</a>.</p>
+                href="/documentation/releaseNotes">release notes</a>.</p>
 
     <p>Thank you to everyone who reported issues and sent in pull requests. Special thanks to Dan Bunker for the
         lifecycle callbacks.</p>
 
-    <p>Enjoy the release and <a href="/getstarted/download.html">get it while it's hot!</a></p>
+    <p>Enjoy the release and <a href="/getstarted/download">get it while it's hot!</a></p>
 
     <p><strong>All users are encouraged to upgrade.</strong></p>
 

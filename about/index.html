@@ -1,0 +1,101 @@
+---
+layout: default
+tab: about
+title: About Flyway
+---
+<div id="about">
+    <h1 class="center">About</h1>
+    <p class="center" style="margin-bottom: 20px"><img src="/assets/logo/flyway-logo-tm.png" alt="Flyway" usemap="#logomap" style="padding-top: 10px; padding-bottom: 20px"/>
+        <map name="logomap">
+            <area shape="rect" coords="130,260,370,330" href="https://boxfuse.com" target="_blank" alt="Boxfuse">
+        </map>
+    </p>
+
+    <p><a href="/"><strong>Flyway</strong></a> is the <a href="https://github.com/flyway/flyway/blob/master/LICENSE" target="_blank">Apache v2 licensed</a> open-source tool that makes <strong>database migrations</strong> easy.</p>
+        <p>You can think of Flyway as version control for your database. It lets you evolve your database schema easily and
+        reliably across all your instances. Flyway has been designed from day one to be easy to setup and simple to master.
+        It strongly favors simplicity and convention over configuration. It achieves this by focusing on one problem only
+        and solving it well.</p>
+
+    <p>Flyway has been built from the ground up for continuous delivery. We highly recommend you let
+        Flyway migrate your database on application startup and you'll see that releases will never have been this easy.</p>
+
+    <p>It is based around just 6 basic commands:
+        <a href="/documentation/command/migrate">Migrate</a>,
+        <a href="/documentation/command/clean">Clean</a>,
+        <a href="/documentation/command/info">Info</a>,
+        <a href="/documentation/command/validate">Validate</a>,
+        <a href="/documentation/command/baseline">Baseline</a> and
+        <a href="/documentation/command/repair">Repair</a>.
+    </p>
+
+    <p>Migrations can be written in <a href="/documentation/migration/sql">SQL</a>
+        (database-specific syntax (such as PL/SQL, T-SQL, ...) is supported)
+        or <a href="/documentation/migration/java">Java</a>
+        (for advanced data transformations or dealing with LOBs).</p>
+
+    <p>It has a <a href="/documentation/commandline">Command-line client</a>.
+        If you are on the JVM, we recommend using the <a href="/documentation/api">Java API</a> (also works on Android)
+        for migrating the database on application startup.
+        Alternatively, you can also use the <a href="/documentation/maven">Maven plugin</a>,
+        <a href="/documentation/gradle">Gradle plugin</a>,
+        <a href="/documentation/sbt">SBT plugin</a> or the
+        <a href="/documentation/ant">Ant tasks</a>.</p>
+
+    <p>And if that not enough, there are <a href="/documentation/plugins">plugins</a>
+        available for Spring Boot, Dropwizard, Grails, Play, Griffon, Grunt, Ninja and more!</p>
+
+    <p>Supported databases are
+        <a href="/documentation/database/oracle">Oracle</a>,
+        <a href="/documentation/database/sqlserver">SQL Server</a>,
+        <a href="/documentation/database/sqlazure">SQL Azure</a>,
+        <a href="/documentation/database/db2">DB2</a>,
+        <a href="/documentation/database/db2zos">DB2 z/OS</a>,
+        <a href="/documentation/database/mysql">MySQL</a> (including Amazon RDS),
+        <a href="/documentation/database/mariadb">MariaDB</a>,
+        <a href="/documentation/database/googleCloudSql">Google Cloud SQL</a>,
+        <a href="/documentation/database/postgresql">PostgreSQL</a> (including Amazon RDS and Heroku),
+        <a href="/documentation/database/redshift">Redshift</a>,
+        <a href="/documentation/database/vertica">Vertica</a>,
+        <a href="/documentation/database/h2">H2</a>,
+        <a href="/documentation/database/hsql">Hsql</a>,
+        <a href="/documentation/database/derby">Derby</a>,
+        <a href="/documentation/database/sqlite">SQLite</a>,
+        <a href="/documentation/database/saphana">SAP HANA</a>,
+        <a href="/documentation/database/solid">solidDB</a>,
+        <a href="/documentation/database/sybaseAse">Sybase ASE</a> and
+        <a href="/documentation/database/phoenix">Phoenix</a>.</p>
+
+    <p>Flyway received the highest distinction on the <a href="https://www.thoughtworks.com/radar/tools/flyway" target="_blank">Thoughtworks Technology Radar</a>
+        by being placed in the adopt category. Adoption has grown exponentially to reach <strong>850,000+ downloads</strong> in 2015 alone:</p>
+
+    <p class="center">
+        <strong>Flyway Downloads</strong><br/>
+        <img src="/assets/downloads-2015.png">
+    </p>
+
+    <p>Enjoy migrating your databases with ease and pleasure!</p>
+
+    <p>Flyway is made with <i class="fa fa-heart"></i> in München and is brought to you by <a target="_blank" href="https://boxfuse.com">Boxfuse</a>, <a target="_blank" href="https://twitter.com/axelfontaine">Axel Fontaine</a> and the <a href="/documentation/contribute/hallOfFame">many contributors</a>.</p>
+
+    <h2 class="center" style="margin-top: 100px; margin-bottom: 30px">Flyway is brought to you by Boxfuse</h2>
+
+    <p class="center"><a href="https://boxfuse.com" target="_blank"><img src="/assets/logo/boxfuse-logo.png" alt="Boxfuse" style="height: 250px; margin-bottom: 30px"/></a></p>
+
+    <p><a href="https://boxfuse.com" target="_blank"><strong>Boxfuse</strong></a> is the easiest, most reliable and secure way to <strong>run your JVM-based apps on AWS</strong>.</p>
+
+    <p>Just like Flyway, Boxfuse has been designed from day one to be easy to setup and simple to master.
+        It strongly favors simplicity and convention over configuration and it has also been built from the ground up for continuous delivery.</p>
+
+        <p>Boxfuse is based on three core principles:</p>
+
+    <ol>
+        <li><strong>Immutable Infrastructure</strong>: Creating servers and never modifying them again by treating a server as one immutable unit that is regenerated after every change and promoted unchanged from environment to environment to eliminate drift and increase reliability by ensuring you run the exact same code in production as the one you tested in test.</li>
+        <li><strong>Minimal Images</strong>: Analysing your application and generating minimal tailor-made Linux-based images on the fly that are 100x smaller than a typical Linux system and take just seconds to produce.</li>
+        <li><strong>Blue/Green Deployments</strong>: Deploying a new version of an app in parallel to the existing one and only making the switch at the elastic IP or elastic load balancer level once the configured health checks of the new version have passed. Deployments are fully automated and effectively transactional, providing you with zero-downtime updates.</li>
+    </ol>
+
+    <p>Boxfuse comes with powerful integration for Spring Boot, Grails, Dropwizard, Play, Tomcat, TomEE and executable jar applications. Deployment options include a command-line tool for Windows/Mac OSX/Linux as well as Maven and Gradle plugin for direct integration in your CI/CD process.</p>
+
+    <p>More info at <a href="https://boxfuse.com" target="_blank">boxfuse.com</a></p>
+</div>

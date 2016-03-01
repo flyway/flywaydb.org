@@ -3,29 +3,31 @@ layout: documentation
 menu: maven
 ---
 <div>
-    <ul class="nav nav-pills">
+    <div id="pills">
+        <ul class="nav nav-pills">
         <li
         {% if page.pill == 'overview' %} class="active" {% endif %}>
         <a href="/documentation/maven">Overview</a></li>
         <li
         {% if page.pill == 'migrate' %} class="active" {% endif %}>
-        <a href="/documentation/maven/migrate.html">migrate</a></li>
+        <a href="/documentation/maven/migrate">migrate</a></li>
         <li
         {% if page.pill == 'clean' %} class="active" {% endif %}>
-        <a href="/documentation/maven/clean.html">clean</a></li>
+        <a href="/documentation/maven/clean">clean</a></li>
         <li
         {% if page.pill == 'info' %} class="active" {% endif %}>
-        <a href="/documentation/maven/info.html">info</a></li>
+        <a href="/documentation/maven/info">info</a></li>
         <li
         {% if page.pill == 'validate' %} class="active" {% endif %}>
-        <a href="/documentation/maven/validate.html">validate</a></li>
+        <a href="/documentation/maven/validate">validate</a></li>
         <li
         {% if page.pill == 'baseline' %} class="active" {% endif %}>
-        <a href="/documentation/maven/baseline.html">baseline</a></li>
+        <a href="/documentation/maven/baseline">baseline</a></li>
         <li
         {% if page.pill == 'repair' %} class="active" {% endif %}>
-        <a href="/documentation/maven/repair.html">repair</a></li>
+        <a href="/documentation/maven/repair">repair</a></li>
     </ul>
+        </div>
     
     {{ content }}
 

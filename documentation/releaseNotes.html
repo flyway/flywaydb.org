@@ -9,6 +9,398 @@ subtitle: Release Notes
 <p>Thank you all for reporting all these issues and contributing fixes!</p>
 
 <div class="release">
+    <h2>Flyway 4.0 (2016-02-29)</h2>
+
+    <p>This version comes with a <strong>new metadata table format</strong>. Migration is transparent and automatic on first
+        run.</p>
+
+    <p><strong>Note:</strong> DB 2 z/OS, Vertica, and solidDB users may have to manually upgrade the metadata table or drop it and baseline the schema again.</p>
+
+    <h3>New features</h3>
+    <ul>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/102">Issue 102</a>
+            Sybase ASE support
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/880"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/128">Issue 128</a>
+            Repeatable Migrations support
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/458">Issue 458</a>
+            Allow disabling clean
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/724">Issue 724</a>
+            Prompt for userId and password in commandline mode
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/805">Issue 805</a>
+            JdbcMigrations and new FlywayCallback should have access to core configuration
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/811"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/929">Issue 929</a>
+            Apache Phoenix Support
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/1012"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/935">Issue 935</a>
+            SAP HANA support <span class="label label-success"><a href="/support/#sponsor">€
+            Sponsored</a></span> by <a href="http://www.softronic.cz/">Softronic</a>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/pull/985">Issue 985</a>
+            Log the update count with DEBUG priority after running a SQL script
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/985"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1047">Issue 1047</a>
+            Using both custom and SQL callbacks
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1078">Issue 1078</a>
+            Allow default migration resolvers to be overriden
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/1191"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1117">Issue 1117</a>
+            Transparently upgrade metadata table from 3.x to 4.x format
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issue/1058">Issue 1119</a>
+            Redshift-specific JDBC driver support
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/1119"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1114">Issue 1114</a>
+            Command-line tool: Add -v to print version and exit
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1188">Issue 1188</a>
+            Datasource auto-configuration when running in a Boxfuse instance
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/pull/1198">Issue 1198</a>
+            Included abstract base classes for resolvers and migrations
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/1198"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+    </ul>
+
+    <h3>Incompatible Changes</h3>
+    <ul>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/477">Issue 477</a>
+            When a location is not found a warning is now emitted instead of an exception
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/724">Issue 724</a>
+            When using the command-line tool with no database user or password, you must now pass in an empty value to avoid being prompted
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/767">Issue 767</a>
+            mvn flyway:clean is now executed in the clean phase by default
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/pull/891">Issue 891</a>
+            The Flyway SBT plugin now requires SBT 0.13.7
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/pull/935">Issue 935</a>
+            Command-line: error messages are now sent to stderr instead of stdout
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/935"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/979">Issue 979</a>
+            The default location for the Flyway Maven, Gradle and SBT plugins is now <code>filesystem:src/main/resources/db/migration</code>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/989">Issue 989</a>
+            To ignore failed future migrations, you must now also set <code>ignoreFutureMigrations</code> to <code>false</code>.
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/pull/1116">Issue 1116</a>
+            Removed all deprecated API from Flyway 3.x
+        </li>
+    </ul>
+
+    <h3>Changes</h3>
+    <ul>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/977">Issue 977</a>
+            Flyway now warns on invalid command-line options
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1152">Issue 1152</a>
+            Upgrade Command-line tool bundled JRE to 8u74
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1214">Issue 1214</a>
+            Upgrade Command-line tool bundled JDBC drivers to latest versions
+        </li>
+    </ul>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/178">Issue 178</a>
+            Support for reference-partitioned tables (Oracle 11g)
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/1006"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/253">Issue 253</a>
+            Ignore line endings when calculating checksums
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/669">Issue 669</a>
+            Ignore sqlplus set define off command
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/737">Issue 737</a>
+            search_path is not restored after migration
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/763">Issue 763</a>
+            sbt tasks do not use scope specific settings
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/891"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/788">Issue 788</a>
+            Provide default implementation for FlywayCallback
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/905">Issue 905</a>
+            NullPointerException at org.flywaydb.maven.MigrateMojo.doExecute(MigrateMojo.java:35)
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/917">Issue 917</a>
+            After running flywayMigrate in SBT there is no straightforward way to know current db version
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/983">Issue 983</a>
+            Redshift COPY not working
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/988">Issue 988</a>
+            Fail validate if an already applied migration couldn't be found
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/995">Issue 995</a>
+            Error setting current schema to "public"
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/999">Issue 999</a>
+            ClassCastException in PostgreSQLDbSupport.executePgCopy when using BasicDataSource
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/1003"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1000">Issue 1000</a>
+            SQL exception in COPY statement when the DELIMITER is set to a semicolon
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1001">Issue 1001</a>
+            Gradle plugin can not set placeholderReplacement property
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1023">Issue 1023</a>
+            Flyway should not expect "org/flywaydb/core/internal/version.txt" to be on the custom classpath
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1025">Issue 1025</a>
+            afterEachMigrate fails, migration succeeds, but migration not written to schema_version
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1033">Issue 1033</a>
+            Missing Import-package MANIFEST.MF headers for postgresql
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1036">Issue 1036</a>
+            ORA-00911: invalid character
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1042">Issue 1042</a>
+            Single connection in DriverDataSource can never be closed
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1043">Issue 1043</a>
+            Migration with Flyway.setPlaceholderReplacement(false) fails with "org.flywaydb.core.api.FlywayException: No value provided for placeholder expressions"
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1049">Issue 1049</a>
+            ORA-32794 in Oracle 12c using identity columns
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1075">Issue 1075</a>
+            Support option to use Slf4j/Commons Logging/JUL when using the command line tool
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1077">Issue 1077</a>
+            Oracle JDBC issue on Linux - IO Error: Connection reset
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1080">Issue 1080</a>
+            ORA-00911: Invalid character on 'From'
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/1097"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1081">Issue 1081</a>
+            Change of Delimiter does not work correct for SQLite
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1085">Issue 1085</a>
+            Clean on embedded derby database does not clean triggers
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1089">Issue 1089</a>
+            SQL cannot be parsed when using binary type "char (16) for bit data": X'0123'
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/1090"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1093">Issue 1093</a>
+            ORA-01950 on schema baseline/init in Oracle 12.1
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1099">Issue 1099</a>
+            Flyway fails to connect with the database if the OS user name is longer than 30 characters
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1106">Issue 1106</a>
+            A tableName """t""" cause error on PostgreSQLSchema.doAllTables()
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1108">Issue 1108</a>
+            Flyway does not reset the current schema between migrations
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1109">Issue 1109</a>
+            ORA-65040 error when trying to clean different schema with system user
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1111">Issue 1111</a>
+            Support for Vertica (or replace) Function
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/1112"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/pull/1124">Issue 1124</a>
+            Fix flyway script on Git Bash for Windows
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/1124"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1129">Issue 1129</a>
+            Fails to clean materialized view that has dependent view on postgres
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1136">Issue 1136</a>
+            Multi Line comments are not handled correctly
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/1140"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1142">Issue 1142</a>
+            OsgiClassPathLocationScanner supports only current bundle
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/1143"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1154">Issue 1154</a>
+            Drop functions with length attributes in DB2
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/1155"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/pull/1164">Issue 1164</a>
+            Use nanoTime() for StopWatch
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/1164"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1165">Issue 1165</a>
+            Sql file callbacks does not work with empty sqlMigrationPrefix
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1171">Issue 1171</a>
+            GAE uses different Driver: Unable to obtain Jdbc connection from DataSource
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/1172"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/pull/1190">Issue 1190</a>
+            PostgreSQL: Filter functions and views from extensions during clean
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/1190"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1193">Issue 1193</a>
+            Unable to clean schema that contain a Computed Column Defined with a User-Defined Function
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/pull/1196">Issue 1196</a>
+            PostgreSQL: trim schema name
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/pull/1197">Issue 1197</a>
+            Improved JavaDoc for callbacks, resolvers and migrations
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/1197"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/pull/1217">Issue 1217</a>
+            Fixed flyway 4.0 upgrade for Redshift (it does not support alter column)
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/1217"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+    </ul>
+
+    <h3>Documentation fixes</h3>
+    <ul>
+        <li>
+            <a href="https://github.com/flyway/flywaydb.org/pull/49">Issue 49</a>
+            Sentence was missing a word
+            <span class="label label-info"><a href="https://github.com/flyway/flywaydb.org/pull/49"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flywaydb.org/issues/53">Issue 53</a>
+            Minor wording change in documentation around Java class naming
+            <span class="label label-info"><a href="https://github.com/flyway/flywaydb.org/pull/54"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/607">Issue 607</a>
+            Doc enhancement: More features for the feature comparison matrix
+        </li>
+    </ul>
+
+    <p>
+        Thanks to aegyed, Aurélien Mino, axaluss, Barry O'Neill,
+        cajnoj, Christian Dedié, crump32, David Phillips, diwa, dukeyin, dzharikhin,
+        Dzmitry Lazerka, Eduardo Piaro,
+        Eric Parton, Fabio Lisboa, Gili Tzabari, gnomff,
+        hamiller, Jason Wong, Jens Berke, Jens Doose, JGMM, Josh Mahonin, Karel Rank, Kevin Sheedy, khelsen, Kristopher Landon,
+        Larivact, Lukas Eder, Luke Pryor, Marc-André Poulin, Mark Petrovic, Markus Umefjord,
+        martin-grofcik, mdaquel, Michael Verrilli,
+        MingoDynasty, mojoo, Nathan Vick, Neo Wu, Nitin Gautam, Pascal Gruen, pentavalle, pingw33n,
+        PredatorVI, Ringerl, Sachin Walia, Salman Haq, sastorsl, Sebastian Tacke, Stephan Pauxberger, stkuehnl, Sylvain Guillopé,
+        thelateperseus, Tim Büthe,
+        Tom Eicher, Yevgeniy Mordovkin and ysobj for reporting these issues and contributing fixes.
+    </p>
+
     <h2>Flyway 3.2.1 (2015-03-20)</h2>
 
     <h3>Bug fixes</h3>
@@ -1089,7 +1481,7 @@ subtitle: Release Notes
             <del>flyway.initialDescription</del>
         </code>. Use <code>flyway.initDescription</code> instead.
         </li>
-        <li>Flyway now enforces the <a href="/documentation/migration/index.html#versions">rules for what constitutes a
+        <li>Flyway now enforces the <a href="/documentation/migration/#versions">rules for what constitutes a
             valid
             version</a>.
         </li>
@@ -1510,7 +1902,7 @@ subtitle: Release Notes
         <li>Core: Removed deprecated Flyway.get/setTransactionManager() methods. They already had no effect anymore
             since 1.6
         </li>
-        <li>Core: Deprecated <a href="/documentation/migration/java.html">JavaMigration</a>. Use
+        <li>Core: Deprecated <a href="/documentation/migration/java">JavaMigration</a>. Use
             SpringJdbcMigration instead.
         </li>
         <li>Core: Deprecated JavaMigrationInfoProvider. Use MigrationInfoProvider instead.</li>
@@ -1682,7 +2074,7 @@ subtitle: Release Notes
         <li>Removed the deprecated Flyway.init(version,description) method</li>
         <li>Removed the deprecated BaseJavaMigration class and the pre
             1.0 inheritance-based Java Migration support (update to implements <a
-                    href="/documentation/migration/java.html">JavaMigration</a>
+                    href="/documentation/migration/java">JavaMigration</a>
             if you haven't already done so)
         </li>
     </ul>
@@ -2208,6 +2600,6 @@ subtitle: Release Notes
 </div>
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/roadmap.html">Roadmap <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/roadmap">Roadmap <i class="fa fa-arrow-right"></i></a>
 </p>
 </div>

@@ -14,7 +14,7 @@ subtitle: 'sbt flywayRepair'
         <li>Correct wrong checksums</li>
     </ul>
 
-    <a href="/documentation/command/repair.html"><img src="/assets/balsamiq/command-repair.png" alt="repair"></a>
+    <a href="/documentation/command/repair"><img src="/assets/balsamiq/command-repair.png" alt="repair"></a>
 
     <h2>Usage</h2>
     <pre class="console">&gt; sbt flywayRepair</pre>
@@ -74,7 +74,7 @@ subtitle: 'sbt flywayRepair'
         <tr>
             <td>flywayLocations</td>
             <td>NO</td>
-            <td>db/migration</td>
+            <td>filesystem:src/main/resources/db/migration</td>
             <td>Locations to scan recursively for migrations. The location type is determined by its prefix.<br/>
                 Unprefixed locations or locations starting with <code>classpath:</code> point to a package on the
                 classpath and may contain both sql and java-based migrations.<br/>
@@ -87,6 +87,12 @@ subtitle: 'sbt flywayRepair'
             <td>NO</td>
             <td>V</td>
             <td>The file name prefix for Sql migrations</td>
+        </tr>
+        <tr>
+            <td>flywayRepeatableSqlMigrationPrefix</td>
+            <td>NO</td>
+            <td>R</td>
+            <td>The file name prefix for repeatable Sql migrations</td>
         </tr>
         <tr>
             <td>flywaySqlMigrationSeparator</td>
@@ -136,16 +142,28 @@ subtitle: 'sbt flywayRepair'
             <td>NO</td>
             <td></td>
             <td>Fully qualified class names of custom
-                <a href="/documentation/api/javadoc/org/flywaydb/core/api/resolver/MigrationResolver.html">MigrationResolver</a>
+                <a href="/documentation/api/javadoc/org/flywaydb/core/api/resolver/MigrationResolver">MigrationResolver</a>
                 implementations to be used in addition to the built-in ones for resolving Migrations to apply.</td>
+        </tr>
+        <tr>
+            <td>flywaySkipDefaultResolvers</td>
+            <td>NO</td>
+            <td>false</td>
+            <td>Whether default built-in resolvers (sql, jdbc and spring-jdbc) should be skipped. If true, only custom resolvers are used.</td>
         </tr>
         <tr>
             <td>flywayCallbacks</td>
             <td>NO</td>
             <td></td>
             <td>Fully qualified class names of
-                <a href="/documentation/api/javadoc/org/flywaydb/core/api/callback/FlywayCallback.html">FlywayCallback</a>
+                <a href="/documentation/api/javadoc/org/flywaydb/core/api/callback/FlywayCallback">FlywayCallback</a>
                 implementations to use to hook into the Flyway lifecycle.</td>
+        </tr>
+        <tr>
+            <td>flywaySkipDefaultCallbacks</td>
+            <td>NO</td>
+            <td>false</td>
+            <td>Whether default built-in callbacks (sql) should be skipped. If true, only custom callbacks are used.</td>
         </tr>
     </table>
 
@@ -168,6 +186,8 @@ flywayLocations := Seq("classpath:migrations1", "migrations2", "filesystem:/sql-
 
 flywaySqlMigrationPrefix := "Migration-"
 
+flywayRepeatableSqlMigrationPrefix := "RRR"
+
 flywaySqlMigrationSeparator := "__"
 
 flywaySqlMigrationSuffix := "-OK.sql"
@@ -187,7 +207,11 @@ flywayPlaceholderSuffix := "]"
 
 flywayResolvers := Seq("com.mycompany.CustomResolver", "com.mycompany.AnotherResolver")
 
-flywayCallbacks := Seq("com.mycompany.CustomCallback", "com.mycompany.AnotherCallback")</pre>
+flywaySkipDefaultResolvers := false
+
+flywayCallbacks := Seq("com.mycompany.CustomCallback", "com.mycompany.AnotherCallback")
+
+flywaySkipDefaultCallbacks := false</pre>
     <h2>Sample output</h2>
 
     <pre class="console">&gt; sbt flywayRepair
@@ -195,6 +219,6 @@ flywayCallbacks := Seq("com.mycompany.CustomCallback", "com.mycompany.AnotherCal
 [info] Repair not necessary. No failed migration detected.</pre>
 
     <p class="next-steps">
-        <a class="btn btn-primary" href="/documentation/database/oracle.html">Oracle <i class="fa fa-arrow-right"></i></a>
+        <a class="btn btn-primary" href="/documentation/plugins/springboot">Spring Boot <i class="fa fa-arrow-right"></i></a>
     </p>
 </div>

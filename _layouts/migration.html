@@ -3,17 +3,25 @@ layout: documentation
 menu: migration
 ---
 <div>
+    <div id="pills">
     <ul class="nav nav-pills">
         <li
         {% if page.pill == 'overview' %} class="active" {% endif %}>
         <a href="/documentation/migration">Overview</a></li>
         <li
+        {% if page.pill == 'versioned' %} class="active" {% endif %}>
+        <a href="/documentation/migration/versioned">Versioned migrations</a></li>
+        <li
+        {% if page.pill == 'repeatable' %} class="active" {% endif %}>
+        <a href="/documentation/migration/repeatable">Repeatable migrations</a></li>
+        <li
         {% if page.pill == 'sql' %} class="active" {% endif %}>
-        <a href="/documentation/migration/sql.html">SQL-based migrations</a></li>
+        <a href="/documentation/migration/sql">SQL-based migrations</a></li>
         <li
         {% if page.pill == 'java' %} class="active" {% endif %}>
-        <a href="/documentation/migration/java.html">Java-based migrations</a></li>
+        <a href="/documentation/migration/java">Java-based migrations</a></li>
     </ul>
+    </div>
     
     {{ content }}
 

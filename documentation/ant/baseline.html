@@ -8,7 +8,7 @@ subtitle: 'Ant Task: Baseline'
 
     <p>Baselines an existing database, excluding all migrations up to and including baselineVersion.</p>
 
-    <a href="/documentation/command/baseline.html"><img src="/assets/balsamiq/command-baseline.png" alt="baseline"></a>
+    <a href="/documentation/command/baseline"><img src="/assets/balsamiq/command-baseline.png" alt="baseline"></a>
 
     <h2>Usage</h2>
     <pre class="prettyprint">&lt;flyway:baseline /&gt;</pre>
@@ -74,8 +74,14 @@ subtitle: 'Ant Task: Baseline'
             <td>NO</td>
             <td></td>
             <td>Fully qualified class names of
-                <a href="/documentation/api/javadoc/org/flywaydb/core/api/callback/FlywayCallback.html">FlywayCallback</a>
+                <a href="/documentation/api/javadoc/org/flywaydb/core/api/callback/FlywayCallback">FlywayCallback</a>
                 implementations to use to hook into the Flyway lifecycle.</td>
+        </tr>
+        <tr>
+            <td>skipDefaultCallbacks</td>
+            <td>NO</td>
+            <td>false</td>
+            <td>Whether default built-in callbacks (sql) should be skipped. If true, only custom callbacks are used.</td>
         </tr>
         <tr>
             <td>baselineVersion</td>
@@ -118,6 +124,7 @@ subtitle: 'Ant Task: Baseline'
 &lt;property name=&quot;flyway.schemas&quot; value=&quot;schema1,schema2,schema3&quot;/&gt;
 &lt;property name=&quot;flyway.table&quot; value=&quot;schema_history&quot;/&gt;
 &lt;property name=&quot;flyway.callbacks&quot; value=&quot;com.mycomp.MyCallback,com.mycomp.OtherCallback&quot;/&gt;
+&lt;property name=&quot;flyway.skipDefaultCallbacks&quot; value=&quot;false&quot;/&gt;
 &lt;property name=&quot;flyway.baselineVersion&quot; value=&quot;1.0&quot;/&gt;
 &lt;property name=&quot;flyway.baselineDescription&quot; value=&quot;Base Migration&quot;/&gt;</pre>
 
@@ -126,6 +133,6 @@ subtitle: 'Ant Task: Baseline'
 [flyway:baseline] Schema baselined with version: 1</pre>
 
     <p class="next-steps">
-        <a class="btn btn-primary" href="/documentation/ant/repair.html">Ant: repair <i class="fa fa-arrow-right"></i></a>
+        <a class="btn btn-primary" href="/documentation/ant/repair">Ant: repair <i class="fa fa-arrow-right"></i></a>
     </p>
 </div>

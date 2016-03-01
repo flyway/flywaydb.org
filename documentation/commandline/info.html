@@ -8,11 +8,11 @@ subtitle: 'Command-line: info'
 
     <p>Prints the details and status information about all the migrations.</p>
 
-    <a href="/documentation/command/info.html"><img src="/assets/balsamiq/command-info.png" alt="info"></a>
+    <a href="/documentation/command/info"><img src="/assets/balsamiq/command-info.png" alt="info"></a>
 
     <h2>Usage</h2>
 
-    <pre class="console">&gt; flyway [options] info</pre>
+    <pre class="console"><span>&gt;</span> flyway [options] info</pre>
 
     <h2>Options</h2>
 
@@ -92,6 +92,12 @@ subtitle: 'Command-line: info'
             <td>The file name prefix for Sql migrations</td>
         </tr>
         <tr>
+            <td>repeatableSqlMigrationPrefix</td>
+            <td>NO</td>
+            <td>R</td>
+            <td>The file name prefix for repeatable Sql migrations</td>
+        </tr>
+        <tr>
             <td>sqlMigrationSeparator</td>
             <td>NO</td>
             <td>__</td>
@@ -139,16 +145,28 @@ subtitle: 'Command-line: info'
             <td>NO</td>
             <td></td>
             <td>Comma-separated list of fully qualified class names of custom
-                <a href="/documentation/api/javadoc/org/flywaydb/core/api/resolver/MigrationResolver.html">MigrationResolver</a>
+                <a href="/documentation/api/javadoc/org/flywaydb/core/api/resolver/MigrationResolver">MigrationResolver</a>
                 implementations to be used in addition to the built-in ones for resolving Migrations to apply.</td>
+        </tr>
+        <tr>
+            <td>skipDefaultResolvers</td>
+            <td>NO</td>
+            <td>false</td>
+            <td>Whether default built-in resolvers (sql, jdbc and spring-jdbc) should be skipped. If true, only custom resolvers are used.</td>
         </tr>
         <tr>
             <td>callbacks</td>
             <td>NO</td>
             <td></td>
             <td>Comma-separated list of fully qualified class names of
-                <a href="/documentation/api/javadoc/org/flywaydb/core/api/callback/FlywayCallback.html">FlywayCallback</a>
+                <a href="/documentation/api/javadoc/org/flywaydb/core/api/callback/FlywayCallback">FlywayCallback</a>
                 implementations to use to hook into the Flyway lifecycle.</td>
+        </tr>
+        <tr>
+            <td>skipDefaultCallbacks</td>
+            <td>NO</td>
+            <td>false</td>
+            <td>Whether default built-in callbacks (sql) should be skipped. If true, only custom callbacks are used.</td>
         </tr>
         <tr>
             <td>target</td>
@@ -178,6 +196,7 @@ flyway.schemas=schema1,schema2,schema3
 flyway.table=schema_history
 flyway.locations=classpath:com.mycomp.migration,database/migrations,filesystem:/sql-migrations
 flyway.sqlMigrationPrefix=Migration-
+flyway.repeatableSqlMigrationPrefix=RRR
 flyway.sqlMigrationSeparator=__
 flyway.sqlMigrationSuffix=-OK.sql
 flyway.encoding=ISO-8859-1
@@ -187,7 +206,9 @@ flyway.placeholders.otherplaceholder=value123
 flyway.placeholderPrefix=#[
 flyway.placeholderSuffix=]
 flyway.resolvers=com.mycomp.project.CustomResolver,com.mycomp.project.AnotherResolver
+flyway.skipDefaultCallResolvers=false
 flyway.callbacks=com.mycomp.project.CustomCallback,com.mycomp.project.AnotherCallback
+flyway.skipDefaultCallbacks=false
 flyway.target=5.1
 flyway.outOfOrder=false</pre>
 
@@ -205,6 +226,6 @@ Flyway {{ site.flywayVersion }} by Boxfuse
 +-------------+------------------------+---------------------+---------+</pre>
 
     <p class="next-steps">
-        <a class="btn btn-primary" href="/documentation/commandline/validate.html">Command-line: validate <i class="fa fa-arrow-right"></i></a>
+        <a class="btn btn-primary" href="/documentation/commandline/validate">Command-line: validate <i class="fa fa-arrow-right"></i></a>
     </p>
 </div>

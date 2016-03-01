@@ -4,17 +4,17 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title>Flyway</title>
-  <link href="http://flywaydb.org/blog/"/>
+  <link href="https://flywaydb.org/blog/"/>
   <link type="application/atom+xml" rel="self" href="/blog/atom.xml"/>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
-  <id>http://flywaydb.org/blog/</id>
+  <id>https://flywaydb.org/blog/</id>
   <author>
     <name>Axel Fontaine</name>
   </author>
 
   {% for post in site.posts %}
   <entry>
-    <id>http://flywaydb.org{{ post.permalink }}</id>
+    <id>https://flywaydb.org{{ post.permalink }}</id>
     <link type="text/html" rel="alternate" href="{{ post.permalink }}"/>
     <title>{{ post.subtitle | xml_escape }}</title>
     <published>{{ post.date | date_to_xmlschema }}</published>

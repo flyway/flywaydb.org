@@ -4,45 +4,45 @@ tab: getStarted
 ---
 <div>
     <div class="row">
-        <div class="span3">
-            <div id="menu" class="well">
-                <ul class="nav nav-list">
+        <div class="col-md-3">
+            <div id="menu">
+                <ul class="nav nav-stacked nav-pills">
                     <li
                     {% if page.menu == 'overview' %} class="active" {% endif %}>
                     <a href="/getstarted">Overview</a></li>
                     <li
                     {% if page.menu == 'why' %} class="active" {% endif %}>
-                    <a href="/getstarted/why.html">Why database migrations</a></li>
+                    <a href="/getstarted/why">Why database migrations</a></li>
                     <li
                     {% if page.menu == 'how' %} class="active" {% endif %}>
-                    <a href="/getstarted/how.html">How Flyway works</a></li>
+                    <a href="/getstarted/how">How Flyway works</a></li>
                     <li class="nav-header">First steps</li>
                     <li
                     {% if page.menu == 'commandline' %} class="active" {% endif %}>
-                    <a href="/getstarted/firststeps/commandline.html">Command-line</a></li>
+                    <a href="/getstarted/firststeps/commandline">Command-line</a></li>
                     <li
                     {% if page.menu == 'api' %} class="active" {% endif %}>
-                    <a href="/getstarted/firststeps/api.html">API</a></li>
+                    <a href="/getstarted/firststeps/api">API</a></li>
                     <li
                     {% if page.menu == 'maven' %} class="active" {% endif %}>
-                    <a href="/getstarted/firststeps/maven.html">Maven</a></li>
+                    <a href="/getstarted/firststeps/maven">Maven</a></li>
                     <li
                     {% if page.menu == 'gradle' %} class="active" {% endif %}>
-                    <a href="/getstarted/firststeps/gradle.html">Gradle</a></li>
+                    <a href="/getstarted/firststeps/gradle">Gradle</a></li>
                     <li
                     {% if page.menu == 'ant' %} class="active" {% endif %}>
-                    <a href="/getstarted/firststeps/ant.html">Ant</a></li>
+                    <a href="/getstarted/firststeps/ant">Ant</a></li>
                     <li
                     {% if page.menu == 'sbt' %} class="active" {% endif %}>
-                    <a href="/getstarted/firststeps/sbt.html">SBT</a></li>
+                    <a href="/getstarted/firststeps/sbt">SBT</a></li>
                     <li class="nav-header">Download</li>
                     <li
                     {% if page.menu == 'download' %} class="active" {% endif %}>
-                    <a href="/getstarted/download.html">Download Flyway</a></li>
+                    <a href="/getstarted/download">Download Flyway</a></li>
                 </ul>
             </div>
         </div>
-        <div class="span9">
+        <div class="col-md-9">
 
             {{ content }}
 

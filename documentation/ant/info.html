@@ -8,7 +8,7 @@ subtitle: 'Ant Task: Info'
 
     <p>Prints the details and status information about all the migrations.</p>
 
-    <a href="/documentation/command/info.html"><img src="/assets/balsamiq/command-info.png" alt="info"></a>
+    <a href="/documentation/command/info"><img src="/assets/balsamiq/command-info.png" alt="info"></a>
 
     <h2>Usage</h2>
     <pre class="prettyprint">&lt;flyway:info /&gt;</pre>
@@ -86,6 +86,12 @@ subtitle: 'Ant Task: Info'
             <td>The file name prefix for Sql migrations</td>
         </tr>
         <tr>
+            <td>repeatableSqlMigrationPrefix</td>
+            <td>NO</td>
+            <td>R</td>
+            <td>The file name prefix for repeatable Sql migrations</td>
+        </tr>
+        <tr>
             <td>sqlMigrationSeparator</td>
             <td>NO</td>
             <td>__</td>
@@ -133,16 +139,28 @@ subtitle: 'Ant Task: Info'
             <td>NO</td>
             <td></td>
             <td>Fully qualified class names of custom
-                <a href="/documentation/api/javadoc/org/flywaydb/core/api/resolver/MigrationResolver.html">MigrationResolver</a>
+                <a href="/documentation/api/javadoc/org/flywaydb/core/api/resolver/MigrationResolver">MigrationResolver</a>
                 implementations to be used in addition to the built-in ones for resolving Migrations to apply.</td>
+        </tr>
+        <tr>
+            <td>skipDefaultResolvers</td>
+            <td>NO</td>
+            <td>false</td>
+            <td>Whether default built-in resolvers (sql, jdbc and spring-jdbc) should be skipped. If true, only custom resolvers are used.</td>
         </tr>
         <tr>
             <td>callbacks</td>
             <td>NO</td>
             <td></td>
             <td>Fully qualified class names of
-                <a href="/documentation/api/javadoc/org/flywaydb/core/api/callback/FlywayCallback.html">FlywayCallback</a>
+                <a href="/documentation/api/javadoc/org/flywaydb/core/api/callback/FlywayCallback">FlywayCallback</a>
                 implementations to use to hook into the Flyway lifecycle.</td>
+        </tr>
+        <tr>
+            <td>skipDefaultCallbacks</td>
+            <td>NO</td>
+            <td>false</td>
+            <td>Whether default built-in callbacks (sql) should be skipped. If true, only custom callbacks are used.</td>
         </tr>
         <tr>
             <td>target</td>
@@ -188,6 +206,7 @@ subtitle: 'Ant Task: Info'
 &lt;property name=&quot;flyway.table&quot; value=&quot;schema_history&quot;/&gt;
 &lt;property name=&quot;flyway.locations&quot; value=&quot;classpath:com.mycomp.db,db/mig,filesystem:/sql-mig&quot;/&gt;
 &lt;property name=&quot;flyway.sqlMigrationPrefix&quot; value=&quot;Migration-&quot;/&gt;
+&lt;property name=&quot;flyway.repeatableSqlMigrationPrefix&quot; value=&quot;RRR&quot;/&gt;
 &lt;property name=&quot;flyway.sqlMigrationSeparator&quot; value=&quot;__&quot;/&gt;
 &lt;property name=&quot;flyway.sqlMigrationSuffix&quot; value=&quot;-OK.sql&quot;/&gt;
 &lt;property name=&quot;flyway.encoding&quot; value=&quot;ISO-8859-1&quot;/&gt;
@@ -197,7 +216,9 @@ subtitle: 'Ant Task: Info'
 &lt;property name=&quot;flyway.placeholderPrefix&quot; value=&quot;#[&quot;/&gt;
 &lt;property name=&quot;flyway.placeholderSuffix&quot; value=&quot;]&quot;/&gt;
 &lt;property name=&quot;flyway.resolvers&quot; value=&quot;com.mycomp.MyResolver,com.mycomp.OtherResolver&quot;/&gt;
+&lt;property name=&quot;flyway.skipDefaultResolvers&quot; value=&quot;false&quot;/&gt;
 &lt;property name=&quot;flyway.callbacks&quot; value=&quot;com.mycomp.MyCallback,com.mycomp.OtherCallback&quot;/&gt;
+&lt;property name=&quot;flyway.skipDefaultCallbacks&quot; value=&quot;false&quot;/&gt;
 &lt;property name=&quot;flyway.target&quot; value=&quot;1.1&quot;/&gt;
 &lt;property name=&quot;flyway.outOfOrder&quot; value=&quot;false&quot;/&gt;</pre>
 
@@ -212,6 +233,6 @@ subtitle: 'Ant Task: Info'
 [flyway:info] +-------------+------------------------+---------------------+---------+</pre>
 
     <p class="next-steps">
-        <a class="btn btn-primary" href="/documentation/ant/validate.html">Ant: validate <i class="fa fa-arrow-right"></i></a>
+        <a class="btn btn-primary" href="/documentation/ant/validate">Ant: validate <i class="fa fa-arrow-right"></i></a>
     </p>
 </div>

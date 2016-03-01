@@ -14,11 +14,11 @@ subtitle: 'Command-line: repair'
         <li>Correct wrong checksums</li>
     </ul>
 
-    <a href="/documentation/command/repair.html"><img src="/assets/balsamiq/command-repair.png" alt="repair"></a>
+    <a href="/documentation/command/repair"><img src="/assets/balsamiq/command-repair.png" alt="repair"></a>
 
     <h2>Usage</h2>
 
-    <pre class="console">&gt; flyway [options] repair</pre>
+    <pre class="console"><span>&gt;</span> flyway [options] repair</pre>
 
     <h2>Options</h2>
 
@@ -98,6 +98,12 @@ subtitle: 'Command-line: repair'
             <td>The file name prefix for Sql migrations</td>
         </tr>
         <tr>
+            <td>repeatableSqlMigrationPrefix</td>
+            <td>NO</td>
+            <td>R</td>
+            <td>The file name prefix for repeatable Sql migrations</td>
+        </tr>
+        <tr>
             <td>sqlMigrationSeparator</td>
             <td>NO</td>
             <td>__</td>
@@ -144,16 +150,28 @@ subtitle: 'Command-line: repair'
             <td>NO</td>
             <td></td>
             <td>Comma-separated list of fully qualified class names of custom
-                <a href="/documentation/api/javadoc/org/flywaydb/core/api/resolver/MigrationResolver.html">MigrationResolver</a>
+                <a href="/documentation/api/javadoc/org/flywaydb/core/api/resolver/MigrationResolver">MigrationResolver</a>
                 implementations to be used in addition to the built-in ones for resolving Migrations to apply.</td>
+        </tr>
+        <tr>
+            <td>skipDefaultResolvers</td>
+            <td>NO</td>
+            <td>false</td>
+            <td>Whether default built-in resolvers (sql, jdbc and spring-jdbc) should be skipped. If true, only custom resolvers are used.</td>
         </tr>
         <tr>
             <td>callbacks</td>
             <td>NO</td>
             <td></td>
             <td>Comma-separated list of fully qualified class names of
-                <a href="/documentation/api/javadoc/org/flywaydb/core/api/callback/FlywayCallback.html">FlywayCallback</a>
+                <a href="/documentation/api/javadoc/org/flywaydb/core/api/callback/FlywayCallback">FlywayCallback</a>
                 implementations to use to hook into the Flyway lifecycle.</td>
+        </tr>
+        <tr>
+            <td>skipDefaultCallbacks</td>
+            <td>NO</td>
+            <td>false</td>
+            <td>Whether default built-in callbacks (sql) should be skipped. If true, only custom callbacks are used.</td>
         </tr>
         </tbody>
     </table>
@@ -167,6 +185,7 @@ flyway.schemas=schema1,schema2,schema3
 flyway.table=schema_history
 flyway.locations=classpath:com.mycomp.migration,database/migrations,filesystem:/sql-migrations
 flyway.sqlMigrationPrefix=Migration-
+flyway.repeatableSqlMigrationPrefix=RRR
 flyway.sqlMigrationSeparator=__
 flyway.sqlMigrationSuffix=-OK.sql
 flyway.encoding=ISO-8859-1
@@ -176,7 +195,9 @@ flyway.placeholders.otherplaceholder=value123
 flyway.placeholderPrefix=#[
 flyway.placeholderSuffix=]
 flyway.resolvers=com.mycomp.project.CustomResolver,com.mycomp.project.AnotherResolver
-flyway.callbacks=com.mycomp.project.CustomCallback,com.mycomp.project.AnotherCallback</pre>
+flyway.skipDefaultCallResolvers=false
+flyway.callbacks=com.mycomp.project.CustomCallback,com.mycomp.project.AnotherCallback
+flyway.skipDefaultCallbacks=false</pre>
 
     <h2>Sample output</h2>
     <pre class="console">&gt; flyway repair

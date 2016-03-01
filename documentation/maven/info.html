@@ -7,10 +7,10 @@ subtitle: 'mvn flyway:info'
     <h1>Maven Goal: Info</h1>
     <p>Prints the details and status information about all the migrations.</p>
 
-    <a href="/documentation/command/info.html"><img src="/assets/balsamiq/command-info.png" alt="info"></a>
+    <a href="/documentation/command/info"><img src="/assets/balsamiq/command-info.png" alt="info"></a>
 
     <h2>Usage</h2>
-    <pre class="console">&gt; mvn flyway:info</pre>
+    <pre class="console"><span>&gt;</span> mvn flyway:info</pre>
 
     <h2>Configuration</h2>
     <table class="table table-bordered table-hover">
@@ -79,7 +79,7 @@ subtitle: 'mvn flyway:info'
         <tr>
             <td>locations</td>
             <td>NO</td>
-            <td>db/migration</td>
+            <td>filesystem:src/main/resources/db/migration</td>
             <td>Locations to scan recursively for migrations. The location type is determined by its prefix.<br/>
                 Unprefixed locations or locations starting with <code>classpath:</code> point to a package on the
                 classpath and may contain both sql and java-based migrations.<br/>
@@ -92,6 +92,12 @@ subtitle: 'mvn flyway:info'
             <td>NO</td>
             <td>V</td>
             <td>The file name prefix for Sql migrations</td>
+        </tr>
+        <tr>
+            <td>repeatableSqlMigrationPrefix</td>
+            <td>NO</td>
+            <td>R</td>
+            <td>The file name prefix for repeatable Sql migrations</td>
         </tr>
         <tr>
             <td>sqlMigrationSeparator</td>
@@ -140,16 +146,28 @@ subtitle: 'mvn flyway:info'
             <td>NO</td>
             <td></td>
             <td>Fully qualified class names of custom
-                <a href="/documentation/api/javadoc/org/flywaydb/core/api/resolver/MigrationResolver.html">MigrationResolver</a>
+                <a href="/documentation/api/javadoc/org/flywaydb/core/api/resolver/MigrationResolver">MigrationResolver</a>
                 implementations to be used in addition to the built-in ones for resolving Migrations to apply.</td>
+        </tr>
+        <tr>
+            <td>skipDefaultResolvers</td>
+            <td>NO</td>
+            <td>false</td>
+            <td>Whether default built-in resolvers (sql, jdbc and spring-jdbc) should be skipped. If true, only custom resolvers are used.</td>
         </tr>
         <tr>
             <td>callbacks</td>
             <td>NO</td>
             <td></td>
             <td>Fully qualified class names of
-                <a href="/documentation/api/javadoc/org/flywaydb/core/api/callback/FlywayCallback.html">FlywayCallback</a>
+                <a href="/documentation/api/javadoc/org/flywaydb/core/api/callback/FlywayCallback">FlywayCallback</a>
                 implementations to use to hook into the Flyway lifecycle.</td>
+        </tr>
+        <tr>
+            <td>skipDefaultCallbacks</td>
+            <td>NO</td>
+            <td>false</td>
+            <td>Whether default built-in callbacks (sql) should be skipped. If true, only custom callbacks are used.</td>
         </tr>
         <tr>
             <td>target</td>
@@ -202,6 +220,7 @@ subtitle: 'mvn flyway:info'
         &lt;location&gt;filesystem:/sql-migrations&lt;/location&gt;
     &lt;/locations&gt;
     &lt;sqlMigrationPrefix&gt;Migration-&lt;/sqlMigrationPrefix&gt;
+    &lt;repeatableSqlMigrationPrefix&gt;RRR&lt;/repeatableSqlMigrationPrefix&gt;
     &lt;sqlMigrationSeparator&gt;__&lt;/sqlMigrationSeparator&gt;
     &lt;sqlMigrationSuffix&gt;-OK.sql&lt;/sqlMigrationSuffix&gt;
     &lt;encoding&gt;ISO-8859-1&lt;/encoding&gt;
@@ -216,10 +235,12 @@ subtitle: 'mvn flyway:info'
         &lt;resolver&gt;com.mycompany.project.CustomResolver&lt;/resolver&gt;
         &lt;resolver&gt;com.mycompany.project.AnotherResolver&lt;/resolver&gt;
     &lt;/resolvers&gt;
+    &lt;skipDefaultResolvers&gt;false&lt;/skipDefaultResolvers&gt;
     &lt;callbacks&gt;
         &lt;callback&gt;com.mycompany.project.CustomCallback&lt;/callback&gt;
         &lt;callback&gt;com.mycompany.project.AnotherCallback&lt;/callback&gt;
     &lt;/callbacks&gt;
+    &lt;skipDefaultCallbacks&gt;false&lt;/skipDefaultCallbacks&gt;
     &lt;target&gt;1.1&lt;/target&gt;
     &lt;outOfOrder&gt;false&lt;/outOfOrder&gt;
     &lt;skip&gt;false&lt;/skip&gt;
@@ -240,6 +261,6 @@ subtitle: 'mvn flyway:info'
 [INFO] +-------------+------------------------+---------------------+---------+</pre>
 
     <p class="next-steps">
-        <a class="btn btn-primary" href="/documentation/maven/validate.html">Maven: validate <i class="fa fa-arrow-right"></i></a>
+        <a class="btn btn-primary" href="/documentation/maven/validate">Maven: validate <i class="fa fa-arrow-right"></i></a>
     </p>
 </div>

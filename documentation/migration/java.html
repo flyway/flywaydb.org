@@ -15,7 +15,7 @@ subtitle: Java Migrations
                                                                       class="section_anchor"></a></h2>
 
     <p>Java migrations reside on the classpath in the package referenced by the <strong><a
-            href="/documentation/api/javadoc/org/flywaydb/core/Flyway.html#setLocations(java.lang.String...)"
+            href="/documentation/api/javadoc/org/flywaydb/core/Flyway#setLocations(java.lang.String...)"
             >locations</a></strong> property.<br/></p>
 
     <p><img src="/assets/balsamiq/JavaMigrationBasePackage.png"/></p>
@@ -26,27 +26,28 @@ subtitle: Java Migrations
     <h2><a name="Naming"></a>Naming<a href="#Naming" class="section_anchor"></a></h2>
 
     <p>In order to be picked up, the Java Migrations must implement <strong><a
-            href="/documentation/api/javadoc/org/flywaydb/core/api/migration/jdbc/JdbcMigration.html"
+            href="/documentation/api/javadoc/org/flywaydb/core/api/migration/jdbc/JdbcMigration"
             >JdbcMigration</a></strong>.<br/></p>
 
-    <p>A Java Migration automatically
+    <p>A Java Migration automatically</p>
     <ul>
         <li>wraps the migration in a transaction</li>
         <li>extracts the version and the description from the class name</li>
     </ul>
-    </p><p><img src="/assets/balsamiq/JavaMigrationNaming.png"/></p>
+    <p><img src="/assets/balsamiq/JavaMigrationNaming.png"/></p>
 
     <p>The class name consists of:
     <ul>
-        <li><strong>prefix</strong> (Always V)</li>
-        <li><strong>version</strong> (Underscores separate the parts, you can use as many parts as you like)</li>
-        <li><strong>separator</strong> (Two underscores)</li>
-        <li><strong>description</strong> (Underscores separate the words)</li>
+        <li><strong>prefix</strong>: Always <code>V</code> for versioned migrations, <code>R</code> for repeatable migrations</li>
+        <li><strong>version</strong>: (Versioned migrations only) Underscores separate as many parts as you like</li>
+        <li><strong>separator</strong>: Always <code>__</code> (Two underscores)</li>
+        <li><strong>description</strong>: Underscores separate the words</li>
     </ul>
-    <br/> </p><p>If you need more control over the version name than the class name gives you, you can override the default convention by
-    implementing <strong><a
-            href="/documentation/api/javadoc/org/flywaydb/core/api/migration/MigrationInfoProvider.html"
-            >MigrationInfoProvider</a></strong>. </p>
+    <br/>
+    <p>If you need more control over the class name, you can override the default convention by implementing
+        <strong><a href="/documentation/api/javadoc/org/flywaydb/core/api/migration/MigrationInfoProvider"
+            >MigrationInfoProvider</a></strong>.
+    </p>
 
     <p>This will allow you to name your class as you wish. Version and description are provided by implement the
         respective methods.<br/></p>
@@ -56,7 +57,7 @@ subtitle: Java Migrations
 
     <p>Unlike SQL migrations, Java migrations by default do not have a checksum and therefore do not participate in the
         change detection of Flyway&#x27;s validation. This can be remedied by implementing <strong><a
-                href="/documentation/api/javadoc/org/flywaydb/core/api/migration/MigrationChecksumProvider.html"
+                href="/documentation/api/javadoc/org/flywaydb/core/api/migration/MigrationChecksumProvider"
                 >MigrationChecksumProvider</a></strong>. </p>
 
     <p>By implementing the getChecksum() method you can provide your own checksum, which will then be stored and
@@ -88,9 +89,9 @@ public class V1_2__Another_user implements JdbcMigration {
 
     <h2>Spring support (Optional)</h2>
     <p>If you use Spring, you can choose to implement <strong><a
-            href="/documentation/api/javadoc/org/flywaydb/core/api/migration/spring/SpringJdbcMigration.html"
+            href="/documentation/api/javadoc/org/flywaydb/core/api/migration/spring/SpringJdbcMigration"
             >SpringJdbcMigration</a></strong> instead. This works exactly like <a
-            href="/documentation/api/javadoc/org/flywaydb/core/api/migration/jdbc/JdbcMigration.html"
+            href="/documentation/api/javadoc/org/flywaydb/core/api/migration/jdbc/JdbcMigration"
             >JdbcMigration</a>, the only difference being that you now receive a convenient Spring
         JdbcTemplate to work with instead of a plain Jdbc
         Connection.</p>
@@ -110,6 +111,6 @@ public class V1_2__Another_user implements SpringJdbcMigration {
 }</pre>
 
     <p class="next-steps">
-        <a class="btn btn-primary" href="/documentation/callbacks.html">Callbacks <i class="fa fa-arrow-right"></i></a>
+        <a class="btn btn-primary" href="/documentation/callbacks">Callbacks <i class="fa fa-arrow-right"></i></a>
     </p>
 </div>

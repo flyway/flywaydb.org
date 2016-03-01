@@ -8,10 +8,10 @@ subtitle: 'mvn flyway:baseline'
 
     <p>Baselines an existing database, excluding all migrations up to and including baselineVersion.</p>
 
-    <a href="/documentation/command/baseline.html"><img src="/assets/balsamiq/command-baseline.png" alt="baseline"></a>
+    <a href="/documentation/command/baseline"><img src="/assets/balsamiq/command-baseline.png" alt="baseline"></a>
 
     <h2>Usage</h2>
-    <pre class="console">&gt; mvn flyway:baseline</pre>
+    <pre class="console"><span>&gt;</span> mvn flyway:baseline</pre>
 
     <h2>Configuration</h2>
     <table class="table table-bordered table-hover">
@@ -82,8 +82,14 @@ subtitle: 'mvn flyway:baseline'
             <td>NO</td>
             <td></td>
             <td>Fully qualified class names of
-                <a href="/documentation/api/javadoc/org/flywaydb/core/api/callback/FlywayCallback.html">FlywayCallback</a>
+                <a href="/documentation/api/javadoc/org/flywaydb/core/api/callback/FlywayCallback">FlywayCallback</a>
                 implementations to use to hook into the Flyway lifecycle.</td>
+        </tr>
+        <tr>
+            <td>skipDefaultCallbacks</td>
+            <td>NO</td>
+            <td>false</td>
+            <td>Whether default built-in callbacks (sql) should be skipped. If true, only custom callbacks are used.</td>
         </tr>
         <tr>
             <td>baselineVersion</td>
@@ -131,6 +137,7 @@ subtitle: 'mvn flyway:baseline'
         &lt;callback&gt;com.mycompany.project.CustomCallback&lt;/callback&gt;
         &lt;callback&gt;com.mycompany.project.AnotherCallback&lt;/callback&gt;
     &lt;/callbacks&gt;
+    &lt;skipDefaultCallbacks&gt;false&lt;/skipDefaultCallbacks&gt;
     &lt;baselineVersion&gt;1.0&lt;/baselineVersion&gt;
     &lt;baselineDescription&gt;Base Migration&lt;/baselineDescription&gt;
     &lt;skip&gt;false&lt;/skip&gt;
@@ -144,6 +151,6 @@ subtitle: 'mvn flyway:baseline'
 [INFO] Schema baselined with version: 1</pre>
 
     <p class="next-steps">
-        <a class="btn btn-primary" href="/documentation/maven/repair.html">Maven: repair <i class="fa fa-arrow-right"></i></a>
+        <a class="btn btn-primary" href="/documentation/maven/repair">Maven: repair <i class="fa fa-arrow-right"></i></a>
     </p>
 </div>

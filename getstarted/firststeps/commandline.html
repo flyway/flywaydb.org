@@ -8,17 +8,18 @@ subtitle: Command-line - First Steps
 
     <h2>Downloading and extracting Flyway</h2>
 
-    <p>Start by <a href="/getstarted/download.html">downloading the Flyway Command-line Tool</a> for your platform and extract it.</p>
+    <p>Start by <a href="/getstarted/download">downloading the Flyway Command-line Tool</a> for your platform and extract it.</p>
 
     <p>Let's jump into our new directory:</p>
 
-    <pre class="console">&gt; cd flyway-{{ site.flywayVersion }}</pre>
+    <pre class="console"><span>&gt;</span> cd flyway-{{ site.flywayVersion }}</pre>
 
     <h2>Configuring Flyway</h2>
 
     <p>We can now configure Flyway by editing <code>/conf/flyway.conf</code> like this:</p>
     <pre class="prettyprint">flyway.url=jdbc:h2:file:./foobardb
-flyway.user=SA</pre>
+flyway.user=SA
+flyway.password=</pre>
 
     <h2>Creating the first migration</h2>
 
@@ -33,12 +34,12 @@ flyway.user=SA</pre>
 
     <p>It's now time to execute Flyway to migrate our database:</p>
 
-    <pre class="console">flyway-{{ site.flywayVersion }}&gt; flyway migrate</pre>
+    <pre class="console"><span>flyway-{{ site.flywayVersion }}&gt;</span> flyway <strong>migrate</strong></pre>
 
     <p>If all went well, you should see the following output:</p>
     <pre class="console">Creating Metadata table: "PUBLIC"."schema_version"
 Current version of schema "PUBLIC": &lt;&lt; Empty Schema &gt;&gt;
-Migrating schema "PUBLIC" to version 1
+Migrating schema "PUBLIC" to version 1 - Create person table
 Successfully applied 1 migration to schema "PUBLIC" (execution time 00:00.062s).</pre>
 
     <h2>Adding a second migration</h2>
@@ -50,11 +51,11 @@ insert into PERSON (ID, NAME) values (3, 'Ms. Bar');</pre>
 
     <p>and execute it by issuing:</p>
 
-    <pre class="console">flyway-{{ site.flywayVersion }}&gt; flyway migrate</pre>
+    <pre class="console"><span>flyway-{{ site.flywayVersion }}&gt;</span> flyway <strong>migrate</strong></pre>
 
     <p>We now get:</p>
     <pre class="console">Current version of schema "PUBLIC": 1
-Migrating schema "PUBLIC" to version 2
+Migrating schema "PUBLIC" to version 2 - Add people
 Successfully applied 1 migration to schema "PUBLIC" (execution time 00:00.090s).</pre>
 
     <h2>Summary</h2>

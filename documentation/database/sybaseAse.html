@@ -1,0 +1,89 @@
+---
+layout: documentation
+menu: sybaseAse
+subtitle: Sybase ASE Server
+---
+<div id="databaseSybaseAse">
+    <h1>Sybase ASE Server</h1>
+
+    <h2>Versions</h2>
+    <ul>
+        <li>12.5 or later</li>
+    </ul>
+
+    <h2>Default Driver</h2>
+    <ul>
+        <li>net.sourceforge.jtds.jdbc.Driver (jdbc:jtds: URLs)</li>
+    </ul>
+
+    <h2>Jdbc Drivers</h2>
+    <ul>
+        <li>Jtds 1.2.7 or later</li>
+    </ul>
+    <h2>Sql Script Syntax</h2>
+    <ul>
+        <li><a href="/documentation/migration/sql#syntax">Standard Sql
+            syntax</a> with statement delimiter <strong>GO</strong></li>
+        <li>T-SQL</li>
+    </ul>
+    <h3>Compatibility</h3>
+    <ul>
+        <li>DDL exported by Sybase ASE Client can be used unchanged in a Flyway migration.</li>
+        <li>Any Sybase ASE Server sql script executed by Flyway, can be executed by Sybase Interactive SQL client, Sybase Central (tested on v6.0) and
+            other Sybase ASE Server-compatible tools (after the placeholders have been replaced).
+        </li>
+    </ul>
+    <h3>Example</h3>
+    <pre class="prettyprint">/* Single line comment */
+CREATE TABLE Customers (
+CustomerId smallint identity(1,1),
+Name nvarchar(255),
+Priority tinyint
+)
+GO
+
+CREATE TABLE Sales (
+TransactionId smallint identity(1,1),
+CustomerId smallint,
+[Net Amount] int,
+Completed bit
+)
+GO
+
+/*
+Multi-line
+comment
+*/
+-- TSQL
+CREATE TRIGGER Update_Customer on Sales
+for insert,update
+as
+declare @errorMsg VARCHAR(200),
+        @customerID VARCHAR(10)
+BEGIN
+    select @customerID = customerID from inserted
+    
+    IF exists (select 1 from Sales tbl, inserted i
+        where tbl.customerID = i.customerID )
+    begin
+                select @errorMsg = 'Cannot have 2 record with the same customer ID '+@customerID
+        	raiserror 99999 @errorMsg
+        	rollback
+    end
+END
+
+GO
+
+-- Placeholder
+INSERT INTO ${tableName} (name) VALUES (&#x27;Mr. T&#x27;);</pre>
+
+    <h2>Limitations</h2>
+    <ul>
+    		<li>Schema feature in Flyway is disabled for Sybase ASE support due to incompatibility in Sybase ASE</li>
+    		<li>No Support for DDL transactions.</li>
+    </ul>
+
+    <p class="next-steps">
+        <a class="btn btn-primary" href="/documentation/database/phoenix.html">Phoenix <i class="fa fa-arrow-right"></i></a>
+    </p>
+</div>
