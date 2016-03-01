@@ -23,6 +23,8 @@ permalink: /blog/flyway-4.0
         <li>Repeatable Migrations support</li>
         <li>Sybase ASE, SAP HANA and Apache Phoenix support</li>
         <li>Java-based migration and callback enhancements</li>
+        <li>Improved compatibility with schema-first persistence frameworks</li>
+        <li>Improved compatibility with Git</li>
         <li>Disabling clean</li>
         <li>Datasource auto-configuration when running in Boxfuse instances</li>
         <li>Commercial support plans</li>
@@ -112,6 +114,48 @@ permalink: /blog/flyway-4.0
         // Migrate using configuration stored in the flywayConfiguration field
     }
 }</pre>
+
+    <h2>Improved compatibility with schema-first persistence frameworks</h2>
+
+    <p>We are strong believers in contract-first development and when it comes to the database, your schema is the contract
+    between your application and the DBMS. This is a natural fit for tools like <a href="http://www.jooq.org">jOOQ</a>
+        that generate their persistent model directly from a freshly migrated schema.
+    </p>
+
+    <p>Yet in the past Flyway's Maven, Gradle and SBT plugins looked for migrations in the target directory of the project,
+    which created a chicken and egg situation where they only solution was to split the project into separate modules of which
+        one would first migrate the database before the next one would then generate the persistence classes and compile the code.
+    </p>
+
+    <p>We decided to fix this in Flyway 4.0 by changing the defaults where the Flyway build tool plugins look for migrations:</p>
+
+    <table class="table table-striped table-condensed">
+        <tr>
+            <th></th>
+            <th>Flyway 3.x default location</th>
+            <th>Flyway 4.x default location</th>
+        </tr>
+        <tr>
+            <td>Maven, Gradle, SBT</td>
+            <td>classpath:db/migration</td>
+            <td>filesystem:src/main/resources/db/migration</td>
+        </tr>
+    </table>
+
+    <p>So if you don't need Java-based migrations, Flyway 4.0 will now be much easier to use with schema-first persistence frameworks like <a href="http://www.jooq.org">jOOQ</a>.</p>
+
+    <h2>Improved compatibility with Git</h2>
+
+    <p>Git has definitely won the version control system war. Yet it comes with this widely used "feature" called
+    <a href="https://help.github.com/articles/dealing-with-line-endings/"><code>core.autocrlf=true</code></a> which
+        automatically adjusts the line endings of text files based on the operating system you currently use.</p>
+
+    <p>While this sounds great in theory it actually causes a number of problems with teams using different operating systems.
+        One of them was Flyway checksum
+    failures as the files now have different contents on Windows than they do on Linux and Mac.</p>
+
+    <p>To address this Flyway 4.0 now ignores line endings when calculating checksums and all existing checksums
+        in your metadata table will be automatically adjusted on first run to be compatible with this new algorithm.</p>
 
     <h2>Disabling clean</h2>
 
@@ -231,7 +275,8 @@ permalink: /blog/flyway-4.0
     <p>Flyway 4.0 is out and it is a big one. Flyway now expands beyond versioned migrations and offers
         <a href="/documentation/migration/repeatable">Repeatable Migrations</a> as well as
     SAP ASE (previousls known as Sybase ASE), SAP HANA and Apache Phoenix support. Additionally, Java-based migrations
-        and callbacks now have an easy way to access the Flyway configuration, clean can be disabled and when running within <a href="https://boxfuse.com">Boxfuse</a> instances Flyway now auto-configures its datasource.</p>
+        and callbacks now have an easy way to access the Flyway configuration, compatibility with schema-first persistence tools has been improved,
+        Git's autocrlf issues have been relegated to the past, clean can be disabled and when running within <a href="https://boxfuse.com">Boxfuse</a> instances Flyway now auto-configures its datasource.</p>
 
     <p>Companies that require guaranteed response times now have access to our <a href="/support#commercial">professional support subscription plans</a>.</p>
 
