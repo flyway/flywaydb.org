@@ -100,7 +100,7 @@ end;
         connections from other machines than localhost: </p>
 
     <p>E.g. edit C:\Programme\PostgreSQL\9.0\data\pg_hba.conf: </p><pre class="prettyprint"># TYPE  DATABASE        USER            CIDR-ADDRESS            METHOD
-host    all             all             127.0.0.1/0		md5</pre>
+host    all             all             127.0.0.1/0     md5</pre>
     <blockquote>see <a href="http://developer.postgresql.org/pgdocs/postgres/auth-pg-hba-conf.html">http://developer.postgresql.org/pgdocs/postgres/auth-pg-hba-conf.html</a><br/>
     </blockquote>
 
@@ -256,14 +256,26 @@ sudo /opt/vertica/sbin/install_vertica --hosts localhost --deb vertica_7.0.1-0_a
     <h2>Sybase ASE</h2>
     
     <p>A developer version of Sybase ASE can be obtained at 
-    	<a href="http://scn.sap.com/community/developer-center/oltp-db">http://scn.sap.com/community/developer-center/oltp-db</a>. You need to provide
-    	registration information in order to download it.
+        <a href="http://scn.sap.com/community/developer-center/oltp-db">http://scn.sap.com/community/developer-center/oltp-db</a>. You need to provide
+        registration information in order to download it.
     </p>
     
     <p>The current version supports both Windows and Linux 64-bit. For other operation systems please contact SAP.</p>
     
     <p>To run Sybase tests, no special driver is needed as JTDS supports Sybase connection. Please amend <code>flyway-mediumtests.properties</code>
-    	to supply the username and password to connect to the testing database by using key <code>sybase.user</code> and <code>sybase.password</code>
+        to supply the username and password to connect to the testing database by using key <code>sybase.user</code> and <code>sybase.password</code>
+    </p>
+
+    <h2>Greenplum</h2>
+    
+    <p>Greenplum DB can be obtained at 
+        <a href="https://network.pivotal.io/products/pivotal-gpdb">https://network.pivotal.io/products/pivotal-gpdb</a>.
+    </p>
+    
+    <p>The current version supports Mac OSX and Linux 64-bit.</p>
+    
+    <p>To run Greenplum tests, no special driver is needed, as an option you can download Greenplum client from Pivotal website. Please amend <code>flyway-mediumtests.properties</code>
+        to supply the username and password to connect to the testing database by using key <code>greenplum.user</code> and <code>greenplum.password</code>
     </p>
     <p class="next-steps">
         <a class="btn btn-primary" href="/documentation/contribute/code/submit">Submit your Changes <i class="fa fa-arrow-right"></i></a>
