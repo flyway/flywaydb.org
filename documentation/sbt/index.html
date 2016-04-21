@@ -58,9 +58,7 @@ resolvers += "Flyway" at "https://flywaydb.org/repo"</pre>
     <p>The Flyway SBT plugin can be configured in the following ways:</p>
 
     <h3>Directly in build.sbt</h3>
-    <pre class="prettyprint">seq(flywaySettings: _*)
-
-flywayUrl := "jdbc:hsqldb:file:target/flyway_sample;shutdown=true"
+    <pre class="prettyprint">flywayUrl := "jdbc:hsqldb:file:target/flyway_sample;shutdown=true"
 
 flywayUser := "SA"
 
