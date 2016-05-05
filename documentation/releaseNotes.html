@@ -59,6 +59,8 @@ subtitle: Release Notes
         <li>
             <a href="https://github.com/flyway/flyway/issues/1235">Issue 1235</a>
             Flyway upgrade from 3.2.1 to 4.0 fails with Oracle error ORA-00955: name is already used by an existing object
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/1290"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/1245">Issue 1245</a>
@@ -95,7 +97,7 @@ subtitle: Release Notes
     <p>
         Thanks to Aurélien Mino, azalesky, fromi, J. Taylor O'Connor, Jeff Johnston,
         Kari Häkkinen, Kenji Yoshida, Kevin Wimmer, krispii, Marat Abrarov,
-        Nathan Vick, Nick Strecker, Renat Sabitov, Sten Røkke, Walter Gillett
+        Nathan Vick, Nick Strecker, Renat Sabitov, Sten Røkke, tsbx, Walter Gillett
         and Werner Mueller for reporting these issues and contributing fixes.
     </p>
 
@@ -103,7 +105,7 @@ subtitle: Release Notes
     <h2>Flyway 4.0 (2016-02-29)</h2>
 
     <p>This version comes with a <strong>new metadata table format</strong>. Migration is transparent and automatic on first
-        run.</p>
+        run of any Flyway command. This new format is not compatible with older Flyway versions.</p>
 
     <p><strong>Note:</strong> DB 2 z/OS, Vertica, and solidDB users may have to manually upgrade the metadata table or drop it and baseline the schema again.</p>
 
