@@ -10,6 +10,8 @@ subtitle: Repeatable migrations
 
     <p>This is very useful for managing database objects whose definition can then simply be maintained in a single file in version control.</p>
 
+    <p>Within a single migration run, repeatable migrations are always applied last, after all pending versioned migrations have been executed. Repeatable migrations are applied in the order of their description.</p>
+
     <p>It is your responsibility to ensure the same repeatable migration can be applied multiple times. This usually
         involves making use of <code>CREATE OR REPLACE</code> clauses in your DDL statements.</p>
 

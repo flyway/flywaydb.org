@@ -13,6 +13,8 @@ subtitle: Migrations & Versions
         (re-)applied
         every time their checksum changes.</p>
 
+    <p>Within a single migration run, repeatable migrations are always applied last, after all pending versioned migrations have been executed. Repeatable migrations are applied in the order of their description.</p>
+
     <p>Both versioned and repeatable migrations can be written either in <strong><a href="/documentation/migration/sql">sql</a></strong>
         or in <strong><a href="/documentation/migration/java">java</a></strong> and can consist of multiple statements.</p>
 

@@ -58,9 +58,7 @@ resolvers += "Flyway" at "https://flywaydb.org/repo"</pre>
     <p>The Flyway SBT plugin can be configured in the following ways:</p>
 
     <h3>Directly in build.sbt</h3>
-    <pre class="prettyprint">seq(flywaySettings: _*)
-
-flywayUrl := "jdbc:hsqldb:file:target/flyway_sample;shutdown=true"
+    <pre class="prettyprint">flywayUrl := "jdbc:hsqldb:file:target/flyway_sample;shutdown=true"
 
 flywayUser := "SA"
 
@@ -78,6 +76,23 @@ flywayPlaceholders := Map(
 
     <h3>Overriding order</h3>
     <p>System properties <i>override</i> Plugin configuration</p>
+
+    <h3>Custom Configurations</h3>
+    <p>The <code>flywayBaseSettings</code> value of the Flyway plugin provides base configuration and task definitions for the plugin.  This can be reused in custom configurations other than the those provided for the runtime and test configurations, if projects require it.  These settings may be reused as follows:</p>
+
+    <pre class="prettyprint">import org.flywaydb.sbt.FlywayPlugin
+
+lazy val CustomConfig = config("custom") describedAs "A custom config." extend Runtime
+
+lazy val customSettings: Seq[Def.Setting[_]] = Seq(
+  flywayUser := "customUser",
+  flywayPassword := "customPassword",
+  flywayUrl := "jdbc:driver://host:port/db",
+   ...
+)
+
+lazy val app = (project in file("app")).
+  settings(inConfig(CustomConfig)(FlywayPlugin.flywayBaseSettings(CustomConfig) ++ customSettings): _*)</pre>
 
     <p class="next-steps">
         <a class="btn btn-primary" href="/documentation/sbt/migrate">SBT: migrate <i class="fa fa-arrow-right"></i></a>
