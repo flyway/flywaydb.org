@@ -6,9 +6,14 @@ subtitle: 'sbt flywayValidate'
 <div id="sbtValidate">
     <h1>SBT Task: flywayValidate</h1>
 
-    <p>Validates the applied migrations against the ones available on the classpath.<br/>
-        The build fails if differences in
-        migration descriptions, types or checksums are found. </p>
+    <p>Validate applied migrations against resolved ones (on the filesystem or classpath)
+     to detect accidental changes that may prevent the schema(s) from being recreated exactly.</p>
+    <p>Validation fails if</p>
+    <ul>
+        <li>differences in migration names, types or checksums are found</li>
+        <li>versions have been applied that aren't resolved locally anymore</li>
+        <li>versions have been resolved that haven't been applied yet</li>
+    </ul>
 
     <a href="/documentation/command/validate"><img src="/assets/balsamiq/command-validate.png" alt="validate"></a>
 
