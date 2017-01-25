@@ -77,18 +77,44 @@ subtitle: Dev Environment Setup - Code
     </p>
 
     <ul>
-        <li>Windows x64 Server JRE 8u31</li>
-        <li>Linux x64 Server JRE 8u31</li>
-        <li>Mac OSX x64 JRE 8u31</li>
+        <li>Windows x64 Server JRE 8u74</li>
+        <li>Linux x64 Server JRE 8u74</li>
+        <li>Mac OSX x64 JRE 8u74</li>
     </ul>
 
     <p>and place them in your local maven repository as</p>
 
     <ul>
-        <li>~/.m2/repository/com/oracle/server-jre/8.31/server-jre-8.31-windows-x64.tar.gz</li>
-        <li>~/.m2/repository/com/oracle/server-jre/8.31/server-jre-8.31-linux-x64.tar.gz</li>
-        <li>~/.m2/repository/com/oracle/jre/8.31/jre-8.31-macosx-x64.tar.gz</li>
+        <li>~/.m2/repository/com/oracle/server-jre/8.74/server-jre-8.74-windows-x64.tar.gz</li>
+        <li>~/.m2/repository/com/oracle/server-jre/8.74/server-jre-8.74-linux-x64.tar.gz</li>
+        <li>~/.m2/repository/com/oracle/jre/8.74/jre-8.74-macosx-x64.tar.gz</li>
     </ul>
+
+    <p>by invoking</p>
+
+    <pre class="console">mvn install:install-file -DgroupId=com.oracle \
+-DartifactId=server-jre \
+-Dclassifier=windows-x64 \
+-Dtype=tar.gz \
+-Dversion=8.74 \
+-Dpackaging=tar.gz \
+-Dfile=server-jre-8u74-windows-x64.tar.gz</pre>
+
+    <pre class="console">mvn install:install-file -DgroupId=com.oracle \
+-DartifactId=server-jre \
+-Dclassifier=linux-x64 \
+-Dtype=tar.gz \
+-Dversion=8.74 \
+-Dpackaging=tar.gz \
+-Dfile=server-jre-8u74-linux-x64.tar.gz</pre>
+
+    <pre class="console">mvn install:install-file -DgroupId=com.oracle \
+-DartifactId=jre \
+-Dclassifier=macosx-x64 \
+-Dtype=tar.gz \
+-Dversion=8.74 \
+-Dpackaging=tar.gz \
+-Dfile=jre-8u74-macosx-x64.tar.gz</pre>
 
     <p class="next-steps">
         <a class="btn btn-primary" href="/documentation/contribute/code/database">Database Setup <i

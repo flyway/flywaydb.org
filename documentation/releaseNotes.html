@@ -9,10 +9,261 @@ subtitle: Release Notes
 <p>Thank you all for reporting all these issues and contributing fixes!</p>
 
 <div class="release">
+    <h2 id="4.0.3">Flyway 4.0.3 (2016-06-17)</h2>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1313">Issue 1313</a>
+            Flyway 4.0.1 Repeatable migrations running before versioned.
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/pull/1339">Issue 1339</a>
+            SQLite blob literal parsing support
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/1339"><i
+                class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/pull/1341">Issue 1341</a>
+            SQLite system table no drop
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/1341"><i
+                class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+    </ul>
+
+    <p>
+        Thanks to aaltergot and hartrc for reporting these issues and contributing fixes.
+    </p>
+
+    <h2 id="4.0.2">Flyway 4.0.2 (2016-06-09)</h2>
+
+    <h3>Changes</h3>
+    <ul>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1319">Issue 1319</a>
+            Update MariaDB driver to latest version
+        </li>
+    </ul>
+    <h3>Bug fixes</h3>
+    <ul>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1211">Issue 1211</a>
+            PostgreSQL upper case schema names end up double quoted
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/pull/1307">Issue 1307</a>
+            Removed drop table because of issues with partitioned tables
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/1307"><i
+                class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1309">Issue 1309</a>
+            Maven plugin : warning about flyway.configFile
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1326">Issue 1326</a>
+            SqlScriptFlywayCallback errors in ALL_CALLBACKS list
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1327">Issue 1327</a>
+            Option to Suppress "SQLServer does not support setting the schema..." messages
+        </li>
+    </ul>
+
+    <h3>Documentation fixes</h3>
+    <ul>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1312">Issue 1312</a>
+            Clarify validate javadoc
+        </li>
+    </ul>
+    <p>
+        Thanks to Dennis Hoer, frbo42, Gili Tzabari, hartrc, John McCall, lrozenblyum, smohara and Sten Røkke
+        for reporting these issues and contributing fixes.
+    </p>
+
+    <h2>Flyway 4.0.1 (2016-05-06)</h2>
+    <h3>Bug fixes</h3>
+    <ul>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1120">Issue 1120</a>
+            Db2 z/OS 3.x->4.0 migration, storage group setting, moved tests
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/1237"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1216">Issue 1216</a>
+            Parsing of string literals
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1220">Issue 1220</a>
+            Sybase support does not work with Sybase ASE 15.7
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/1221"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1222">Issue 1222</a>
+            Regression with MySQL delimiter in Flyway 3.2
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/pull/1226">Issue 1226</a>
+            Postgres clean drop all types
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/1226"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1227">Issue 1227</a>
+            Resources not found from bundles without wiring to org.osgi.framework
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/1228"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1231">Issue 1231</a>
+            Upgrading AWS Redshift DB from Flyway 3.2.1 to 4.0 failed - couldn't upgrade metadata table
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/1256"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/pull/1233">Issue 1233</a>
+            Allow commandline client to specify placeholderReplacement
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/1233"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1235">Issue 1235</a>
+            Flyway upgrade from 3.2.1 to 4.0 fails with Oracle error ORA-00955: name is already used by an existing object
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/1290"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1238">Issue 1238</a>
+            Dollar-quoted PostgreSQL function definitions are parsed incorrectly in some situations
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1245">Issue 1245</a>
+            Flyway 4.0 config Postgres requires user/pass
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1249">Issue 1249</a>
+            MigrationInfoImpl violates the compareTo contract
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1255">Issue 1255</a>
+            Issue with create schema_version for Sybase ASE
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1264">Issue 1264</a>
+            Regression in multiline comments/quotes handling
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1265">Issue 1265</a>
+            Upgrade metadata table to v4.0 fails on Derby
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/1269"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1270">Issue 1270</a>
+            Vertica does not support repeatable migrations
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1280">Issue 1280</a>
+            beforeEachMigrate callback can't change search_path anymore
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1292">Issue 1292</a>
+            Clean does not delete procedures on case sensitive SQLServer
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/1297"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1293">Issue 1293</a>
+            Flyway cannot create schema table on Galera cluster (MariaDB)
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/1294"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1296">Issue 1296</a>
+            Order in which callbacks are executed
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1298">Issue 1298</a>
+            Warning about flyway.current property
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1299">Issue 1299</a>
+            Using MySQL Connector/J 6.x warns about JDBC driver class name
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1300">Issue 1300</a>
+            Fail if user is set in Flyway config, but password is only present in settings.xml
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/pull/1301">Issue 1301</a>
+            Fix IBM classloader regression
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/1301"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1302">Issue 1302</a>
+            NullPointerException migrating to "current" on empty DB
+        </li>
+    </ul>
+
+    <h3>Documentation fixes</h3>
+    <ul>
+        <li>
+            <a href="https://github.com/flyway/flywaydb.org/issues/62">Issue 62</a>
+            Fix jre setup documentation
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flywaydb.org/pull/65">Issue 65</a>
+            Rewrite Android documentation to fit Android Studio/Gradle and SQLDroid better
+            <span class="label label-info"><a href="https://github.com/flyway/flywaydb.org/pull/65"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flywaydb.org/pull/66">Issue 66</a>
+            fix sbt version
+            <span class="label label-info"><a href="https://github.com/flyway/flywaydb.org/pull/66"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flywaydb.org/pull/68">Issue 68</a>
+            Remove flywaySettings from sample configurations
+            <span class="label label-info"><a href="https://github.com/flyway/flywaydb.org/pull/68"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flywaydb.org/pull/70">Issue 70</a>
+            Fix of lost tag `pre` around sample configuration
+            <span class="label label-info"><a href="https://github.com/flyway/flywaydb.org/pull/70"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1275">Issue 1275</a>
+            Document SBT custom configuration usage
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1277">Issue 1277</a>
+            The fact that repeatable migrations are applied after versioned migrations should be documented explicitly
+        </li>
+    </ul>
+
+    <p>
+        Thanks to alekseevIN, Alexey Kobyakov, Antti Lampinen, Artem Konenko,
+        Aurélien Mino, azalesky, Erin Drummond, fromi, Gian Marco Gherardi, Gili Tzabari,
+        hntran8, J. Taylor O'Connor, Jeff Johnston, Johannes Brodwall,
+        Kari Häkkinen, Kenji Yoshida, Kevin Wimmer, krispii, lrozenblyum, Maksim Serebro, Marat Abrarov,
+        mezuzza, Nathan Vick, Nick Strecker, oohira, Renat Sabitov, ridiekel,
+        sourcesmith, Sten Røkke, tsbx, Walter Gillett
+        and Werner Mueller for reporting these issues and contributing fixes.
+    </p>
+
+
     <h2>Flyway 4.0 (2016-02-29)</h2>
 
     <p>This version comes with a <strong>new metadata table format</strong>. Migration is transparent and automatic on first
-        run.</p>
+        run of any Flyway command. This new format is not compatible with older Flyway versions.</p>
 
     <p><strong>Note:</strong> DB 2 z/OS, Vertica, and solidDB users may have to manually upgrade the metadata table or drop it and baseline the schema again.</p>
 

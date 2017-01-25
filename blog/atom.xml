@@ -14,13 +14,13 @@
 
   {% for post in site.posts %}
   <entry>
-    <id>https://flywaydb.org{{ post.permalink }}</id>
+    <id>https://flywaydb.org{{ post.permalink | split: '.html' }}</id>
     <link type="text/html" rel="alternate" href="{{ post.permalink }}"/>
     <title>{{ post.subtitle | xml_escape }}</title>
     <published>{{ post.date | date_to_xmlschema }}</published>
     <updated>{{ post.date | date_to_xmlschema }}</updated>
     <author>
-      <name>Axel Fontaine</name>
+      <name>Boxfuse</name>
     </author>
     <content type="html">{{ post.content | xml_escape }}</content>
   </entry>

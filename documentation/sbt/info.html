@@ -180,9 +180,7 @@ subtitle: 'sbt flywayInfo'
     </table>
 
     <h2>Sample configuration</h2>
-    <pre class="prettyprint">seq(flywaySettings: _*)
-
-flywayDriver := "org.hsqldb.jdbcDriver"
+    <pre class="prettyprint">flywayDriver := "org.hsqldb.jdbcDriver"
 
 flywayUrl := "jdbc:hsqldb:file:target/flyway_sample;shutdown=true"
 

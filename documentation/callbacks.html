@@ -90,6 +90,8 @@ subtitle: Callbacks
 
     <p>Placeholder replacement works just like it does for <a href="/documentation/migration/sql">SQL migrations</a>.</p>
 
+    <p><strong>Note:</strong> Flyway will also honor any <code>sqlMigrationSuffix</code> you have configured, when scanning for SQL call callbacks.</p>
+
     <h2>Java Callbacks</h2>
 
     <p>If SQL Callbacks aren't flexible enough for you, you have the option to implement the

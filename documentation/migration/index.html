@@ -13,6 +13,8 @@ subtitle: Migrations & Versions
         (re-)applied
         every time their checksum changes.</p>
 
+    <p>Within a single migration run, repeatable migrations are always applied last, after all pending versioned migrations have been executed. Repeatable migrations are applied in the order of their description.</p>
+
     <p>Both versioned and repeatable migrations can be written either in <strong><a href="/documentation/migration/sql">sql</a></strong>
         or in <strong><a href="/documentation/migration/java">java</a></strong> and can consist of multiple statements.</p>
 
@@ -20,7 +22,7 @@ subtitle: Migrations & Versions
 
     <h2>Metadata table</h2>
 
-    <p>To keep track of which migrations have already been applied when and by whom, Flyway add a special bookkeeping
+    <p>To keep track of which migrations have already been applied when and by whom, Flyway adds a special bookkeeping
         table to your schema. This <strong>metadata table</strong> also tracks migration checksums and whether or not
         the migrations were successful.</p>
 
