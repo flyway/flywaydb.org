@@ -10,6 +10,11 @@ subtitle: Release Notes
 <div class="release">
     <h2 id="4.1.0">Flyway 4.1.0 (2017-01-XX)</h2>
 
+    <h3>Changes</h3>
+    <ul>
+        <li>Hsql Jdbc driver: Flyway is now tested with 2.3.4 (was 2.3.3)</li>
+    </ul>
+
     <h3>Bug fixes</h3>
     <ul>
         <li>
@@ -19,6 +24,10 @@ subtitle: Release Notes
         <li>
             <a href="https://github.com/flyway/flyway/issues/1318">Issue 1318</a>
             sqlite DB locked when you specify flywayDriver
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1346">Issue 1346</a>
+            Migration hanging with HsqlDB 2.3.4
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/1348">Issue 1348</a>
@@ -72,7 +81,7 @@ subtitle: Release Notes
 
     <p>
         Thanks to Andrew Berglund, Antti Lampinen,
-        Benoit Devos, JasonAUnrein, Joris Kuipers, masc3d, Michael Prankl, PeeZu,
+        Benoit Devos, Brian Krahmer, JasonAUnrein, Joris Kuipers, masc3d, Michael Prankl, PeeZu,
         reactormonk, sw00 and Taufiq Hoven for reporting these issues and contributing fixes.
     </p>
 
