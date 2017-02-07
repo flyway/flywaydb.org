@@ -72,11 +72,6 @@ COPY copy_test (c1, c2, c3) FROM stdin;
     <h2>Limitations</h2>
     <ul>
         <li>No support for psql meta-commands with no Jdbc equivalent like <code>\set</code> </li>
-        <li>No support for <code>ALTER TYPE ... ADD VALUE ...</code> as this statement is an odd beast that can't run
-            inside a transaction due to PostgreSQL limitations. There are <a
-                    href="http://stackoverflow.com/questions/1771543/postgresql-updating-an-enum-type">workarounds
-                available</a>.
-        </li>
         <li>Multiline RULE declarations are not parsed correctly (<a href="https://github.com/flyway/flyway/issues/183">Issue 183</a>)</li>
     </ul>
 
