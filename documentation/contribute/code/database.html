@@ -8,7 +8,7 @@ subtitle: Database Setup - Code
 
     <p>To run Flyway's entire test suite, you need to set up the databases Flyway supports.</p>
 
-    <p>For this you will need Oracle, MySQL, PostgreSQL, SQL Server and DB2.</p>
+    <p>For this you will need Oracle, MySQL, PostgreSQL, SQL Server, DB2 and EnterpriseDB.</p>
 
     <div class="well well-small">
         <strong>Tip:</strong>
@@ -264,6 +264,21 @@ sudo /opt/vertica/sbin/install_vertica --hosts localhost --deb vertica_7.0.1-0_a
     
     <p>To run Sybase tests, no special driver is needed as JTDS supports Sybase connection. Please amend <code>flyway-mediumtests.properties</code>
     	to supply the username and password to connect to the testing database by using key <code>sybase.user</code> and <code>sybase.password</code>
+    </p>
+
+    <h2>EnterpriseDB</h2>
+
+    <p>You will have to get a copy of EnterpriseDB: <a
+            href="http://www.enterprisedb.com/products-services-training/products/postgres-plus-advanced-server/downloads">http://www.enterprisedb.com/products-services-training/products/postgres-plus-advanced-server/downloads</a>
+    </p>
+
+    <p>Install it with all the default settings and use <code>flyway</code> as the password for the enterprisedb user. </p>
+
+    <p>The EnterpriseDB Jdbc drivers aren&#x27;t available from Maven Central. You can find them located in the "Connectors" directory,
+        which by default will be "PostgresPlus/connectors/jdbc".
+    </p>
+
+    <p>Now rename the jar as <code>edb-jdbc17-9.5.6.jar</code> and add it to your local Maven repository under <code>com/edb/edb-jdbc17/9.5.6</code>.
     </p>
     <p class="next-steps">
         <a class="btn btn-primary" href="/documentation/contribute/code/submit">Submit your Changes <i class="fa fa-arrow-right"></i></a>
