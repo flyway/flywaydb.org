@@ -99,12 +99,11 @@ subtitle: FAQ
     <h2 id="rollback">Does Flyway perform a roll back if a migration fails?</h2>
 
     <p>Flyway runs each migration in a separate transaction. In case of failure this transaction is rolled back.
-        Unfortunately, today only DB2, PostgreSQL, Derby and to a certain extent SQL Server support DDL statements
-        inside a
-        transaction. Other databases such as Oracle will implicitly sneak in a commit before and after each DDL
-        statement, drastically reducing the effectiveness of this roll back. One alternative if you want to work around
-        this, is to include only a single DDL statement per migration. This solution however has the drawback of being
-        quite cumbersome.</p>
+        Unfortunately, today only DB2, PostgreSQL, Derby, EnterpriseDB and to a certain extent SQL Server support DDL
+        statements inside a transaction. Other databases such as Oracle will implicitly sneak in a commit before and after
+        each DDL statement, drastically reducing the effectiveness of this roll back. One alternative if you want to work
+        around this, is to include only a single DDL statement per migration. This solution however has the drawback of
+        being quite cumbersome.</p>
 
     <h2 id="multiple-schemas">Does Flyway support multiple schemas?</h2>
 
