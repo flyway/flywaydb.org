@@ -116,6 +116,12 @@ subtitle: 'Ant Task: Migrate'
         <td>The file name suffix for Sql migrations</td>
     </tr>
     <tr>
+        <td>allowMixedMigrations</td>
+        <td>NO</td>
+        <td>false</td>
+        <td>Whether to allow mixing transactional and non-transactional statements within the same migration</td>
+    </tr>
+    <tr>
         <td>encoding</td>
         <td>NO</td>
         <td>UTF-8</td>
@@ -214,6 +220,18 @@ subtitle: 'Ant Task: Migrate'
         </td>
     </tr>
     <tr>
+        <td>ignoreMissingMigrations</td>
+        <td>NO</td>
+        <td>false</td>
+        <td>Ignore missing migrations when reading the metadata table. These are migrations that were performed by an
+            older deployment of the application that are no longer available in this version. For example: we have migrations
+            available on the classpath with versions 1.0 and 3.0. The metadata table indicates that a migration with version 2.0
+            (unknown to us) has also been applied. Instead of bombing out (fail fast) with an exception, a
+            warning is logged and Flyway continues normally. This is useful for situations where one must be able to deploy
+            a newer version of the application even though it doesn't contain migrations included with an older one anymore.
+        </td>
+    </tr>
+    <tr>
         <td>ignoreFutureMigrations</td>
         <td>NO</td>
         <td>true</td>
@@ -256,6 +274,12 @@ subtitle: 'Ant Task: Migrate'
         <td>NO</td>
         <td><nobr>&lt;&lt; Flyway Baseline &gt;&gt;</nobr></td>
         <td>The description to tag an existing schema with when executing baseline</td>
+    </tr>
+    <tr>
+        <td>installedBy</td>
+        <td>NO</td>
+        <td><i>Current database user</i></td>
+        <td>The username that will be recorded in the metadata table as having applied the migration</td>
     </tr>
     <tr>
         <td>classpath</td>
@@ -302,11 +326,14 @@ subtitle: 'Ant Task: Migrate'
 &lt;property name=&quot;flyway.outOfOrder&quot; value=&quot;false&quot;/&gt;
 &lt;property name=&quot;flyway.validateOnMigrate&quot; value=&quot;true&quot;/&gt;
 &lt;property name=&quot;flyway.cleanOnValidationError&quot; value=&quot;false&quot;/&gt;
+&lt;property name=&quot;flyway.allowMixedMigrations&quot; value=&quot;false&quot;/&gt;
+&lt;property name=&quot;flyway.ignoreMissingMigrations&quot; value=&quot;false&quot;/&gt;
 &lt;property name=&quot;flyway.ignoreFutureMigrations&quot; value=&quot;false&quot;/&gt;
 &lt;property name=&quot;flyway.cleanDisabled&quot; value=&quot;false&quot;/&gt;
 &lt;property name=&quot;flyway.baselineOnMigrate&quot; value=&quot;false&quot;/&gt;
 &lt;property name=&quot;flyway.baselineVersion&quot; value=&quot;1.0&quot;/&gt;
-&lt;property name=&quot;flyway.baselineDescription&quot; value=&quot;Base Migration&quot;/&gt;</pre>
+&lt;property name=&quot;flyway.baselineDescription&quot; value=&quot;Base Migration&quot;/&gt;
+&lt;property name=&quot;flyway.installedBy&quot; value=&quot;my-user&quot;/&gt;</pre>
 
 <h2>Sample output</h2>
 <pre class="console">[flyway:migrate] Creating Metadata table: schema_version (Schema: PUBLIC)

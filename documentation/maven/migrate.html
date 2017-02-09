@@ -121,6 +121,12 @@ subtitle: 'mvn flyway:migrate'
         <td>The file name suffix for Sql migrations</td>
     </tr>
     <tr>
+        <td>allowMixedMigrations</td>
+        <td>NO</td>
+        <td>false</td>
+        <td>Whether to allow mixing transactional and non-transactional statements within the same migration</td>
+    </tr>
+    <tr>
         <td>encoding</td>
         <td>NO</td>
         <td>UTF-8</td>
@@ -220,6 +226,18 @@ subtitle: 'mvn flyway:migrate'
         </td>
     </tr>
     <tr>
+        <td>ignoreMissingMigrations</td>
+        <td>NO</td>
+        <td>false</td>
+        <td>Ignore missing migrations when reading the metadata table. These are migrations that were performed by an
+            older deployment of the application that are no longer available in this version. For example: we have migrations
+            available on the classpath with versions 1.0 and 3.0. The metadata table indicates that a migration with version 2.0
+            (unknown to us) has also been applied. Instead of bombing out (fail fast) with an exception, a
+            warning is logged and Flyway continues normally. This is useful for situations where one must be able to deploy
+            a newer version of the application even though it doesn't contain migrations included with an older one anymore.
+        </td>
+    </tr>
+    <tr>
         <td>ignoreFutureMigrations</td>
         <td>NO</td>
         <td>true</td>
@@ -264,6 +282,12 @@ subtitle: 'mvn flyway:migrate'
             <nobr>&lt;&lt; Flyway Baseline &gt;&gt;</nobr>
         </td>
         <td>The description to tag an existing schema with when executing baseline</td>
+    </tr>
+    <tr>
+        <td>installedBy</td>
+        <td>NO</td>
+        <td><i>Current database user</i></td>
+        <td>The username that will be recorded in the metadata table as having applied the migration</td>
     </tr>
     <tr>
         <td>skip</td>
@@ -325,11 +349,14 @@ subtitle: 'mvn flyway:migrate'
     &lt;outOfOrder&gt;false&lt;/outOfOrder&gt;
     &lt;validateOnMigrate&gt;true&lt;/validateOnMigrate&gt;
     &lt;cleanOnValidationError&gt;false&lt;/cleanOnValidationError&gt;
+    &lt;allowMixedMigrations&gt;false&lt;/allowMixedMigrations&gt;
+    &lt;ignoreMissingMigrations&gt;false&lt;/ignoreMissingMigrations&gt;
     &lt;ignoreFutureMigrations&gt;false&lt;/ignoreFutureMigrations&gt;
     &lt;cleanDisabled&gt;false&lt;/cleanDisabled&gt;
     &lt;baselineOnMigrate&gt;false&lt;/baselineOnMigrate&gt;
     &lt;baselineVersion&gt;5&lt;/baselineVersion&gt;
     &lt;baselineDescription&gt;Let's go!&lt;/baselineDescription&gt;
+    &lt;installedBy&gt;my-user&lt;/installedBy&gt;
     &lt;skip&gt;false&lt;/skip&gt;
     &lt;configFile&gt;myConfig.properties&lt;/configFile&gt;
 &lt;/configuration&gt;</pre>
