@@ -1,0 +1,147 @@
+---
+layout: blog
+subtitle: "Flyway 4.1.0 Released"
+permalink: /blog/flyway-4.1.0.html
+---
+<div>
+    <p>Welcome to 2017! And do we have some great things in store for this year! But first let's see how last year
+        went.</p>
+
+    <h2>Looking back at 2016</h2>
+
+    <p>Like every year since Flyway's initial launch in 2010, last year was Flyway's best year ever.
+        We had both the fastest growth and the highest number of downloads since we started. <strong>In 2016 Flyway was
+            downloaded 1.6 million times!</strong></p>
+
+    <div class="blog-post-image">
+        <img src="/assets/downloads-2016.png" alt="Flyway 2016 Downloads"><br>
+        <p style="font-size: 20px; font-weight: bold">Flyway yearly downloads</p>
+    </div>
+
+    <h2>Introducing Flyway 4.1.0</h2>
+
+    <p>So let's start the year with a brand new release! <strong>Flyway 4.1.0</strong> comes with new features, better
+        performance and higher reliability.</p>
+
+    <p>These are the highlights of this release:</p>
+    <ul>
+        <li>EnterpriseDB support</li>
+        <li>PostgreSQL non-transactional statement support</li>
+        <li>Improved MySQL replication support</li>
+        <li>Performance improvements when dealing with lots of migrations</li>
+        <li>Improved parallel migration of empty databases</li>
+        <li>Overall polish</li>
+    </ul>
+
+    <p>Let's dive right in!</p>
+
+    <h3>EnterpriseDB support</h3>
+
+    <p>Once again Flyway expands its ever growing list of supported relational databases to almost 20 (!) and now comes
+        with support for <a href="/documentation/database/enterprisedb"><strong>EnterpriseDB</strong></a>.</p>
+
+    <div class="blog-post-image">
+        <img src="/assets/posts/flyway-4.1.0/enterprisedb.png" alt="EnterpriseDB">
+    </div>
+
+    <h3>PostgreSQL non-transactional statement support</h3>
+
+    <p>While PostgreSQL supports DDL transactions, there are unfortunately a number of statements like <code>CREATE
+        INDEX CONCURRENTLY</code>,
+        <code>ALTER TYPE ... ADD VALUE</code> and <code>VACUUM</code> among others that are not able to run within a
+        transaction.
+        In fact in the case of <code>CREATE INDEX CONCURRENTLY</code> there may not even be <em>any</em> other
+        transaction
+        active for the operation the be able to complete!</p>
+
+    <p>Flyway 4.1.0 comes with two major improvements to support these statements in a fully transparent fashion.</p>
+
+    <p>First Flyway now <strong>autodetects whether a non-transactional statement is present within a migration</strong>.
+        If it is, then the whole migration is run without a transaction (and clearly labelled as such in the logs).</p>
+
+    <p>In the spirit of fail-fast and to avoid accidentally mixing transactional and non-transactional statements within
+        the same migration, we have also introduced a new <code>allowMixedMigrations</code> parameter. When deactivated
+        it will cause Flyway to throw an error in those situations.</p>
+
+    <p>This however still doesn't work with <code>CREATE INDEX CONCURRENTLY</code> due to Flyway's support for
+        migrating databases from multiple applications nodes in parallel. To avoid things getting messy, Flyway uses a
+        separate connection with a careful <code>SELECT ... FOR UPDATE</code> for locking the metadata table to ensure consistency.</p>
+
+    <p>To address this situation we have now introduced a new
+        <strong>single connection mode</strong> in combination with <strong>PostgreSQL advisory locks</strong>.
+        Now only a single connection is being used for both
+        managing the metadata table and applying migrations while preserving the concurrent migration capabilities we already had,
+        while at the same time enabling support for <em>all</em> non-transactional PostgreSQL statements, including
+        <code>CREATE INDEX CONCURRENTLY</code>.
+    </p>
+
+    <p>From an end-user perspective all of this is fully transparent. Migrating a PostgreSQL database has never been easier!</p>
+
+    <h3>Improved MySQL replication support</h3>
+
+    <p>When running in a cluster MySQL supports two types of replication: statement-based and row-based.
+        Flyway has always worked great with row-based replication. However starting with MySQL 5.6, MySQL statement-based
+        replication has started producing warnings due to Flyway's use of MySQL's <code>USER()</code> function to record
+    the name of the current user in the metadata table. The reason for those warnings is that this could produce different
+        results on separate nodes.</p>
+
+    <p>To prevent this, Flyway has now introduced a new <code>installedBy</code> setting allowing you to avoid the use
+        of the <code>USER()</code> function by manually overriding the name of the database user being recorded.</p>
+
+    <h3>Performance improvements when applying thousands of migrations</h3>
+
+    <p>For projects that have been using Flyway for a long time and have accumulated thousands of migrations, migrating
+    to new versions would take longer and longer due to Flyway re-reading the metadata table every time. This then
+    meant more and more records had to be returned over time. While never an issue for smaller deployments, this
+    certainly started to become a burden for larger projects.</p>
+
+    <p>Starting with Flyway 4.1.0 we have introduced a new careful <strong>metadata table caching</strong> mechanism that provides identical
+        performance when applying thousands of migrations, all the way from the first to the last.</p>
+
+    <h3>Improved parallel migration of empty databases</h3>
+
+    <p>While Flyway has always worked great with multiple application nodes by using careful <code>SELECT ... FOR UPDATE</code>
+    metadata table locking to ensure consistency, this didn't work as well for a completely empty database where there
+        were no records to lock or where not even the metadata table (or the schema!) had already been created.</p>
+
+    <p>Flyway 4.1.0 now comes with a number of internal implementation and retry strategies to ensure this now also
+        works cleanly in all cases.</p>
+
+    <h3>Overall polish</h3>
+
+    <p>The improvements outlined above are by far not the only ones part of this release. Here are a few more:</p>
+    <ul>
+        <li>The DB2 parser now supports changing delimiters via the <code>--#SET TERMINATOR</code></li>
+        <li>SQLite support is now also based on the new single connection mode, avoiding all kinds of potential locking issues</li>
+        <li>HsqlDB 2.3.4+ compatibility has been restored by also moving it on the new single connection mode</li>
+        <li>Classpath scanning has been improved for Spring Boot executable wars</li>
+        <li>A number of repeatable migrations issues have been ironed out</li>
+        <li>Repair is now able to recover from more situations</li>
+        <li>And much more!</li>
+    </ul>
+
+    <h2>Spacial thanks</h2>
+
+    <p>For this release we would also like to extend special thanks to <a href="https://www.justwatch.com/">JustWatch</a>, <a href="https://porch.com/">Porch</a>
+        and <a href="http://stsa.info/">Startrack</a> for sponsoring the PostgreSQL improvements as well as classpath scanning fixes</p>
+
+    <div class="blog-post-image" style="margin-bottom: 20px">
+        <a href="https://www.justwatch.com/"><img src="/assets/posts/flyway-4.1.0/JustWatch.png" alt="JustWatch" style="height: 40px; margin-right: 50px"></a>
+        <a href="https://porch.com/"><img src="/assets/posts/flyway-4.1.0/porch.png" alt="Porch" style="height: 40px; margin-right: 50px"></a>
+        <a href="http://stsa.info/"><img src="/assets/posts/flyway-4.1.0/startrack.png" alt="Startrack" style="height: 50px; margin-right: 50px"></a>
+    </div>
+
+    <h2>Grab it while it's hot!</h2>
+
+    <p>Enjoy Flyway 4.1.0 and <a href="/getstarted/download">grab it while it's hot!</a></p>
+
+    <p>It is the fastest, most complete and most reliable Flyway release so far. <strong>All users are encouraged to
+        upgrade.</strong></p>
+
+    <p>Flyway is brought to you with <i class="fa fa-heart"></i> by <a href="https://twitter.com/axelfontaine">Axel
+        Fontaine</a>, <a href="https://boxfuse.com">Boxfuse</a> and the <a href="/documentation/contribute/hallOfFame">many
+        contributors</a>.</p>
+
+    <p>P.S.: Spread the word, <a href="https://twitter.com/axelfontaine">follow @flywaydb on Twitter</a> and subscribe
+        to our monthly newsletter below to be notified about updates.</p>
+</div>
