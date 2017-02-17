@@ -42,7 +42,7 @@
 <div class="container">
     <div id="header" class="row">
         <div class="col-md-2">
-            {% if page.tab != 'aa' %}<a href="/"><img src="/assets/logo/flyway-logo-tm-sm.png" alt="Flyway" usemap="#logosmmap"/>
+            {% if page.tab != 'home' %}<a href="/"><img src="/assets/logo/flyway-logo-tm-sm.png" alt="Flyway" usemap="#logosmmap"/>
             <map name="logosmmap">
                 <area shape="rect" coords="45,90,120,106" href="https://boxfuse.com" alt="Boxfuse">
             </map></a>{% endif %}
@@ -51,19 +51,21 @@
             <ul id="tabs" class="nav nav-tabs ">
                 <li
                 {% if layout.tab == 'getStarted' %} class="active" {% endif %}>
-                <a href="/getstarted"><i class="fa fa-play"></i> GET STARTED</a></li>
+                <a href="/getstarted">GET STARTED</a></li>
                 <li
                 {% if layout.tab == 'documentation' %} class="active" {% endif %}>
-                <a href="/documentation"><i class="fa fa-book"></i> DOCUMENTATION</a></li>
+                <a href="/documentation">DOCUMENTATION</a></li>
                 <li
                 {% if layout.tab == 'blog' %} class="active" {% endif %}>
-                <a href="/blog"><i class="fa fa-comment"></i> BLOG</a></li>
+                <a href="/blog">BLOG</a></li>
                 <li
                 {% if page.tab == 'support' %} class="active" {% endif %}>
-                <a href="/support"><i class="fa fa-life-ring"></i> SUPPORT</a></li>
+                <a href="/support">SUPPORT</a></li>
                 <li
                 {% if page.tab == 'about' %} class="active" {% endif %}>
-                <a href="/about"><i class="fa fa-question-circle"></i> ABOUT</a></li>
+                <a href="/about">ABOUT</a></li>
+                <li><a href="https://twitter.com/flywaydb" style="padding-bottom: 7px"><i class="fa fa-twitter" style="font-size: 150%"></i></a></li>
+                <li><a href="https://github.com/flyway/flyway" style="padding-bottom: 7px"><i class="fa fa-github" style="font-size: 150%"></i></a></li>
             </ul>
         </div>
     </div>
