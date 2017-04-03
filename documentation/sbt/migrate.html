@@ -106,7 +106,7 @@ subtitle: 'sbt flywayMigrate'
         <td>The file name suffix for Sql migrations</td>
     </tr>
     <tr>
-        <td>flywayAllowMixedMigrations</td>
+        <td>flywayMixed</td>
         <td>NO</td>
         <td>false</td>
         <td>Whether to allow mixing transactional and non-transactional statements within the same migration</td>
@@ -329,7 +329,7 @@ flywayValidateOnMigrate := true
 
 flywayCleanOnValidationError := false
 
-flywayAllowMixedMigrations := false
+flywayMixed := false
 
 flywayIgnoreMissingMigrations := false
 
