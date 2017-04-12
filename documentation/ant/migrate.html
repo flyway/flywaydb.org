@@ -121,6 +121,12 @@ subtitle: 'Ant Task: Migrate'
         <td>false</td>
         <td>Whether to allow mixing transactional and non-transactional statements within the same migration</td>
     </tr>
+    <tr id="group">
+        <td>group</td>
+        <td>NO</td>
+        <td>false</td>
+        <td>Whether to group all pending migrations together in the same transaction when applying them (only recommended for databases with support for DDL transactions)</td>
+    </tr>
     <tr>
         <td>encoding</td>
         <td>NO</td>
@@ -327,6 +333,7 @@ subtitle: 'Ant Task: Migrate'
 &lt;property name=&quot;flyway.validateOnMigrate&quot; value=&quot;true&quot;/&gt;
 &lt;property name=&quot;flyway.cleanOnValidationError&quot; value=&quot;false&quot;/&gt;
 &lt;property name=&quot;flyway.mixed&quot; value=&quot;false&quot;/&gt;
+&lt;property name=&quot;flyway.group&quot; value=&quot;false&quot;/&gt;
 &lt;property name=&quot;flyway.ignoreMissingMigrations&quot; value=&quot;false&quot;/&gt;
 &lt;property name=&quot;flyway.ignoreFutureMigrations&quot; value=&quot;false&quot;/&gt;
 &lt;property name=&quot;flyway.cleanDisabled&quot; value=&quot;false&quot;/&gt;
