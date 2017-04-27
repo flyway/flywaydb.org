@@ -1,0 +1,70 @@
+---
+layout: blog
+subtitle: "Flyway 4.2.0 Released"
+permalink: /blog/flyway-4.2.0.html
+---
+<div>
+    <p>Hot on the heels of <a href="/blog/flyway-4.1.0">Flyway 4.1.0</a> and the two patch releases that followed it, here is <strong>Flyway 4.2.0</strong>!</p>
+
+    <h2>Highlights</h2>
+
+    <p>These are the highlights of this release:</p>
+    <ul>
+        <li>Pivotal Greenplum support</li>
+        <li>Support for multiple migrations within a single transaction</li>
+        <li>Overall polish</li>
+    </ul>
+
+    <p>Let's dive right in!</p>
+
+    <h3>Greenplum support</h3>
+
+    <p>With <a href="/documentation/database/greenplum"><strong>Greenplum</strong></a> Flyway has now added support for its 20th relational databases!</p>
+
+    <div class="blog-post-image">
+        <img src="/assets/posts/flyway-4.2.0/greenplum.png" alt="Greenplum">
+    </div>
+
+    <h3>Support for multiple migrations within a single transaction</h3>
+
+    <p>Flyway always cleanly wraps the execution of a migration within a transaction. This is of course most useful
+    on databases supporting DDL transactions such as PostgreSQL, DB2 or SQL Server as it means and failed statement,
+        whether DDL or DML, will cause the entire migration to be cleanly rolled back.</p>
+
+    <p>This in turn means that if multiple pending migrations are migrated in a single run each migration succeeds or fails individually.
+    In certain scenarios, such as new software releases shipping with multiple new database migrations that should really
+        all succeed or fail as one unit, this isn't always the desirable behavior.</p>
+
+    <div class="blog-post-image">
+        <img src="/assets/balsamiq/group.png" alt="Group">
+    </div>
+
+    <p>To address this we are introducing <strong>migration groups</strong>. When the new <code>group</code> property is
+    set to <code>true</code>, all pending migrations are executing together in a single database transaction. On databases
+    with DDL transactions this now means that a single failed statement, will cause all of these migrations to be cleanly
+    rolled back together.</p>
+
+    <h3>Overall polish</h3>
+
+    <p>The improvements outlined above are by far not the only ones part of this release. Here are a few more:</p>
+    <ul>
+        <li>Much improved clean for Oracle</li>
+        <li>PostgreSQL DROP INDEX CONCURRENTLY support</li>
+        <li>Better support for classpath scanning with newer Tomcat versions</li>
+        <li>And much more!</li>
+    </ul>
+
+    <h2>Grab it while it's hot!</h2>
+
+    <p>Enjoy Flyway 4.2.0 and <a href="/getstarted/download">grab it while it's hot!</a></p>
+
+    <p>It is the fastest, most complete and most reliable Flyway release so far. <strong>All users are encouraged to
+        upgrade.</strong></p>
+
+    <p>Flyway is brought to you with <i class="fa fa-heart"></i> by <a href="https://twitter.com/axelfontaine">Axel
+        Fontaine</a>, <a href="https://boxfuse.com">Boxfuse</a> and the <a href="/documentation/contribute/hallOfFame">many
+        contributors</a>.</p>
+
+    <p>P.S.: Spread the word, <a href="https://twitter.com/flywaydb">follow @flywaydb on Twitter</a> and subscribe
+        to our monthly newsletter below to be notified about updates.</p>
+</div>

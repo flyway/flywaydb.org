@@ -6,8 +6,8 @@ title: Blog
 <div>
     <div class="row">
         <div class="col-md-9">
-            <p class="blog-post-date">{{page.date | date: "%Y-%m-%d"}}</p>
             <h1 class="blog-post-title">{{ page.subtitle }}</h1>
+            <p class="blog-post-date">{{page.date | date: "%Y-%m-%d"}} by <a href="https://twitter.com/axelfontaine">Axel Fontaine</a></p>
 
             {{ content }}
 

@@ -502,12 +502,13 @@ i {
 }
 
 .blog-post-date {
-    color: #ccc;
+    color: #888;
     font-weight: bold;
+    margin-bottom: 50px;
 }
 
 .blog-post-title {
-    margin-bottom: 50px;
+    margin-bottom: 5px;
 }
 
 .blog-post-image {
@@ -532,7 +533,10 @@ i {
 
 #blog-sidebar {
     color: #888;
-    margin-top: -10px;
+}
+
+#blog-sidebar h2 {
+    margin-top: 0;
 }
 
 #blog-sidebar #mce-EMAIL {
