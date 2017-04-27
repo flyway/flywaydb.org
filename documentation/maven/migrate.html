@@ -121,10 +121,16 @@ subtitle: 'mvn flyway:migrate'
         <td>The file name suffix for Sql migrations</td>
     </tr>
     <tr>
-        <td>allowMixedMigrations</td>
+        <td>mixed</td>
         <td>NO</td>
         <td>false</td>
         <td>Whether to allow mixing transactional and non-transactional statements within the same migration</td>
+    </tr>
+    <tr id="group">
+        <td>group</td>
+        <td>NO</td>
+        <td>false</td>
+        <td>Whether to group all pending migrations together in the same transaction when applying them (only recommended for databases with support for DDL transactions)</td>
     </tr>
     <tr>
         <td>encoding</td>
@@ -349,7 +355,8 @@ subtitle: 'mvn flyway:migrate'
     &lt;outOfOrder&gt;false&lt;/outOfOrder&gt;
     &lt;validateOnMigrate&gt;true&lt;/validateOnMigrate&gt;
     &lt;cleanOnValidationError&gt;false&lt;/cleanOnValidationError&gt;
-    &lt;allowMixedMigrations&gt;false&lt;/allowMixedMigrations&gt;
+    &lt;mixed&gt;false&lt;/mixed&gt;
+    &lt;group&gt;false&lt;/group&gt;
     &lt;ignoreMissingMigrations&gt;false&lt;/ignoreMissingMigrations&gt;
     &lt;ignoreFutureMigrations&gt;false&lt;/ignoreFutureMigrations&gt;
     &lt;cleanDisabled&gt;false&lt;/cleanDisabled&gt;

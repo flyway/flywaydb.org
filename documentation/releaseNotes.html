@@ -8,10 +8,55 @@ subtitle: Release Notes
 <p>Thank you all for reporting all these issues and contributing fixes!</p>
 
 <div class="release">
-    <h2 id="4.2.0">Flyway 4.2.0 (Not yet released)</h2>
+    <h2 id="4.2.0">Flyway 4.2.0 (2017-04-27)</h2>
+
+    <h3>New features</h3>
+    <ul>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/181">Issue 181</a>
+            Support Multiple Migrations within a single Transaction
+            <span class="label label-success"><a href="/support/#sponsor">€ Sponsored</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/pull/1219">Issue 1219</a>
+            Pivotal Greenplum support
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/1219"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+    </ul>
+
+    <h3>Changes</h3>
+    <ul>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1585">Issue 1585</a>
+            Rename `allowMixedMigrations` to `mixed`
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1588">Issue 1588</a>
+            Enable single-connection mode for SQL Server
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1589">Issue 1589</a>
+            Enable single-connection mode for DB2
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1590">Issue 1590</a>
+            Enable single-connection mode for Derby
+        </li>
+    </ul>
 
     <h3>Bug fixes</h3>
     <ul>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1549">Issue 1549</a>
+            Flyway "(unsupported protocol: war)" with Tomcat 8.0.41 and unpackWARs=false
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/1555"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1553">Issue 1553</a>
+            cleanOnValidationError does not recover from "Detected failed migration" error
+        </li>
         <li>
             <a href="https://github.com/flyway/flyway/pull/1558">Issue 1558</a>
             Fixed the current schema/current user confusion in OracleSchema
@@ -36,10 +81,32 @@ subtitle: Release Notes
             <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/1573"><i
                     class="fa fa-mail-reply"></i> Pull Request</a></span>
         </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1578">Issue 1578</a>
+            Oracle statement fails when it contains 'string'as and no space in between
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1587">Issue 1587</a>
+            Repeatable migration with version incorrectly detected as versioned migration
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/pull/1607">Issue 1607</a>
+            For Postgresql migrations, add support for "DROP INDEX CONCURRENTLY .*"
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/1607"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/pull/1611">Issue 1611</a>
+            Fix a minor typo in Javadoc
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/1611"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
     </ul>
 
     <p>
-        Thanks to Stephan Pauxberger and Victor Osolovskiy for reporting these issues and contributing fixes.
+        Thanks to Brian Chen, Durim Kryeziu, Gili Tzabari, Jamie Swain, mtcremin,
+        Stephan Pauxberger, svitalsky,
+        Thomas Meyer and Victor Osolovskiy for reporting these issues and contributing fixes.
     </p>
 </div>
 

@@ -280,6 +280,17 @@ sudo /opt/vertica/sbin/install_vertica --hosts localhost --deb vertica_7.0.1-0_a
 
     <p>Now rename the jar as <code>edb-jdbc17-9.5.6.jar</code> and add it to your local Maven repository under <code>com/edb/edb-jdbc17/9.5.6</code>.
     </p>
+    <h2>Greenplum</h2>
+
+    <p>Greenplum DB can be obtained at
+        <a href="https://network.pivotal.io/products/pivotal-gpdb">https://network.pivotal.io/products/pivotal-gpdb</a>.
+    </p>
+
+    <p>The current version supports Mac OSX and Linux 64-bit.</p>
+
+    <p>To run Greenplum tests, no special driver is needed, as an option you can download Greenplum client from Pivotal website. Please amend <code>flyway-mediumtests.properties</code>
+        to supply the username and password to connect to the testing database by using key <code>greenplum.user</code> and <code>greenplum.password</code>
+    </p>
     <p class="next-steps">
         <a class="btn btn-primary" href="/documentation/contribute/code/submit">Submit your Changes <i class="fa fa-arrow-right"></i></a>
     </p>
