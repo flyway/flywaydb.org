@@ -141,6 +141,15 @@
 <script type="text/javascript">
     $(function () {
         prettyPrint();
+
+        $("a[href^=http]").each(function () {
+            if (this.href.indexOf(location.hostname) == -1) {
+                $(this).attr({
+                    target: "_blank",
+                    title: "Opens in a new window"
+                });
+            }
+        });
     });
 
     if (navigator.platform.indexOf('Win') == -1) {
