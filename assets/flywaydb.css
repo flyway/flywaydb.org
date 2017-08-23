@@ -578,6 +578,10 @@ i {
     margin-top: 4px;
 }
 
+.thumbnail img {
+    min-width: 100%;
+}
+
 @media screen and (max-width: 1024px) {
     #downloadStatsRight, #upAndRunningRight {
         margin-top: 0;
