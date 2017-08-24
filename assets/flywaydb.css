@@ -582,6 +582,12 @@ i {
     min-width: 100%;
 }
 
+.thumbnail h4 {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
 @media screen and (max-width: 1024px) {
     #downloadStatsRight, #upAndRunningRight {
         margin-top: 0;
