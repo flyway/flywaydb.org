@@ -251,6 +251,10 @@ hr.soften {
     border-radius: 10px;
 }
 
+#download .checksum {
+    font-size: 10px;
+}
+
 #downloadStatsBg {
     height: 130px;
     width: 100%;
