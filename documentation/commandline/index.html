@@ -121,10 +121,12 @@ subtitle: Command-line
         <li><i>&lt;current-dir&gt;</i>/flyway.conf</li>
     </ul>
 
-    <p>To use an alternative
-        configuration file use -configFile=path/to/myAlternativeConfig.conf<br/>To use an alternative
-        configuration file encoding (default: UTF-8) use -configFileEncoding=ISO-8859-1
-    </p>
+    <p>It is possible to invoke the Flyway Command-line tool using an alternative configuration file. This is achieved by supplying
+        the command line parameter configFile as follows:</p>
+    <pre class="console"><span>&gt;</span> flyway -configFile=path/to/myAlternativeConfig.conf migrate</pre>
+
+    <p>To use an alternative configuration file encoding (default: UTF-8) use the command line parameter configFileEncoding as follows:</p>
+    <pre class="console"><span>&gt;</span> flyway -configFileEncoding=ISO-8859-1 migrate</pre>
 
     <p>Configuration files have the following syntax:</p>
     <pre class="prettyprint"># Settings are simple key-value pairs
