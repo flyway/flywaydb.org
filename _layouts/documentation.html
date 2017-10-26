@@ -5,7 +5,7 @@ title: Documentation
 ---
 <div>
     <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-3" style="width: auto">
             <div id="menu">
                 <ul class="nav nav-pills nav-stacked">
                     <li
@@ -37,7 +37,7 @@ title: Documentation
                     <li
                     {% if page.menu == 'callbacks' %} class="active" {% endif %}>
                     <a href="/documentation/callbacks">Callbacks</a></li>
-                    <li class="nav-header">Execution Modes</li>
+                    <li class="nav-header">Usage</li>
                     <li
                     {% if layout.menu == 'commandLine' %} class="active" {% endif %}>
                     <a href="/documentation/commandline">Command-line</a></li>
@@ -50,28 +50,6 @@ title: Documentation
                     <li
                     {% if layout.menu == 'gradle' %} class="active" {% endif %}>
                     <a href="/documentation/gradle">Gradle</a></li>
-                    <li
-                    {% if layout.menu == 'ant' %} class="active" {% endif %}>
-                    <a href="/documentation/ant">Ant</a></li>
-                    <li
-                    {% if layout.menu == 'sbt' %} class="active" {% endif %}>
-                    <a href="/documentation/sbt">SBT</a></li>
-                    <li class="nav-header">Third Party Plugins</li>
-                    <li
-                    {% if page.menu == 'springboot' %} class="active" {% endif %}>
-                    <a href="/documentation/plugins/springboot">Spring Boot</a></li>
-                    <li
-                    {% if page.menu == 'grails' %} class="active" {% endif %}>
-                    <a href="/documentation/plugins/grails">Grails</a></li>
-                    <li
-                    {% if page.menu == 'Play' %} class="active" {% endif %}>
-                    <a href="/documentation/plugins/play">Play</a></li>
-                    <li
-                    {% if page.menu == 'dropwizard' %} class="active" {% endif %}>
-                    <a href="/documentation/plugins/dropwizard">Dropwizard</a></li>
-                    <li
-                    {% if page.menu == 'plugins' %} class="active" {% endif %}>
-                    <a href="/documentation/plugins/other">Other Tools &amp; Frameworks</a></li>
                     <li class="nav-header">Supported Databases</li>
                     <li
                     {% if page.menu == 'oracle' %} class="active" {% endif %}>
@@ -80,14 +58,8 @@ title: Documentation
                     {% if page.menu == 'sqlServer' %} class="active" {% endif %}>
                     <a href="/documentation/database/sqlserver">SQL Server</a></li>
                     <li
-                    {% if page.menu == 'sqlAzure' %} class="active" {% endif %}>
-                    <a href="/documentation/database/sqlazure">SQL Azure</a></li>
-                    <li
                     {% if page.menu == 'db2' %} class="active" {% endif %}>
                     <a href="/documentation/database/db2">DB2</a></li>
-                    <li
-                    {% if page.menu == 'db2zos' %} class="active" {% endif %}>
-                    <a href="/documentation/database/db2zos">DB2 z/OS</a></li>
                     <li
                     {% if page.menu == 'mySql' %} class="active" {% endif %}>
                     <a href="/documentation/database/mysql">MySQL</a></li>
@@ -98,45 +70,27 @@ title: Documentation
                     {% if page.menu == 'postgreSql' %} class="active" {% endif %}>
                     <a href="/documentation/database/postgresql">PostgreSQL</a></li>
                     <li
-                    {% if page.menu == 'redshift' %} class="active" {% endif %}>
-                    <a href="/documentation/database/redshift">Redshift</a></li>
-                    <li
-                    {% if page.menu == 'vertica' %} class="active" {% endif %}>
-                    <a href="/documentation/database/vertica">Vertica</a></li>
-                    <li
-                    {% if page.menu == 'enterprisedb' %} class="active" {% endif %}>
-                    <a href="/documentation/database/enterprisedb">EnterpriseDB</a></li>
-                    <li
                     {% if page.menu == 'h2' %} class="active" {% endif %}>
                     <a href="/documentation/database/h2">H2</a></li>
                     <li
                     {% if page.menu == 'hsql' %} class="active" {% endif %}>
-                    <a href="/documentation/database/hsql">Hsql</a></li>
+                    <a href="/documentation/database/hsql">HSQLDB</a></li>
                     <li
                     {% if page.menu == 'derby' %} class="active" {% endif %}>
                     <a href="/documentation/database/derby">Derby</a></li>
                     <li
                     {% if page.menu == 'sqlite' %} class="active" {% endif %}>
                     <a href="/documentation/database/sqlite">SQLite</a></li>
-                    <li
-                    {% if page.menu == 'saphana' %} class="active" {% endif %}>
-                    <a href="/documentation/database/saphana">SAP HANA</a></li>
-                    <li
-                    {% if page.menu == 'solid' %} class="active" {% endif %}>
-                    <a href="/documentation/database/solid">solidDB</a></li>
-                    <li
-                    {% if page.menu == 'sybaseAse' %} class="active" {% endif %}>
-                    <a href="/documentation/database/sybaseAse">Sybase ASE</a></li>
-                    <li
-                    {% if page.menu == 'phoenix' %} class="active" {% endif %}>
-                    <a href="/documentation/database/phoenix">Phoenix</a></li>
-                    <li
-                    {% if page.menu == 'greenplum' %} class="active" {% endif %}>
-                    <a href="/documentation/database/greenplum">Greenplum</a></li>
                     <li class="nav-header">Learn more</li>
                     <li
                     {% if page.menu == 'existing' %} class="active" {% endif %}>
                     <a href="/documentation/existing">Existing database setup</a></li>
+                    <li
+                    {% if page.menu == 'envvars' %} class="active" {% endif %}>
+                    <a href="/documentation/envvars">Environment Variables</a></li>
+                    <li
+                    {% if page.menu == 'configfiles' %} class="active" {% endif %}>
+                    <a href="/documentation/configfiles">Config Files</a></li>
                     <li
                     {% if page.menu == 'articles' %} class="active" {% endif %}>
                     <a href="/documentation/articles">Articles</a></li>
@@ -152,23 +106,38 @@ title: Documentation
                     <li
                     {% if page.menu == 'faq' %} class="active" {% endif %}>
                     <a href="/documentation/faq">FAQ</a></li>
+                    <li class="nav-header">Third Party Plugins</li>
+                    <li
+                            {% if page.menu == 'springboot' %} class="active" {% endif %}>
+                    <a href="/documentation/plugins/springboot">Spring Boot</a></li>
+                    <li
+                            {% if page.menu == 'grails' %} class="active" {% endif %}>
+                    <a href="/documentation/plugins/grails">Grails</a></li>
+                    <li
+                            {% if page.menu == 'dropwizard' %} class="active" {% endif %}>
+                    <a href="/documentation/plugins/dropwizard">Dropwizard</a></li>
+                    <li
+                            {% if page.menu == 'Play' %} class="active" {% endif %}>
+                    <a href="/documentation/plugins/play">Play</a></li>
+                    <li
+                            {% if layout.menu == 'sbt' %} class="active" {% endif %}>
+                    <a href="/documentation/sbt">SBT</a></li>
+                    <li
+                            {% if page.menu == 'plugins' %} class="active" {% endif %}>
+                    <a href="/documentation/plugins/other">Other Tools/Frameworks</a></li>
                     <li class="nav-header">Contribute</li>
                     <li
                     {% if page.menu == 'contribute' %} class="active" {% endif %}>
                     <a href="/documentation/contribute">Contributing to Flyway</a></li>
-                    <li
-                    {% if page.menu == 'hallOfFame' %} class="active" {% endif %}>
-                    <a href="/documentation/contribute/hallOfFame">Hall Of Fame</a></li>
                     <li
                     {% if layout.menu == 'website' %} class="active" {% endif %}>
                     <a href="/documentation/contribute/website">Website</a></li>
                     <li
                     {% if layout.menu == 'code' %} class="active" {% endif %}>
                     <a href="/documentation/contribute/code">Code</a></li>
-                    <li class="nav-header">Commiters only</li>
                     <li
-                    {% if page.menu == 'release' %} class="active" {% endif %}>
-                    <a href="/documentation/contribute/release">Releasing Flyway</a></li>
+                            {% if page.menu == 'hallOfFame' %} class="active" {% endif %}>
+                    <a href="/documentation/contribute/hallOfFame">Hall Of Fame</a></li>
                 </ul>
             </div>
         </div>
