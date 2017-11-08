@@ -1,0 +1,107 @@
+---
+layout: documentation
+menu: sybasease
+subtitle: Sybase ASE
+---
+# Sybase ASE
+
+## Supported Versions
+
+- `16.0`
+- `15.7`
+
+## Driver
+
+<table class="table">
+<thead>
+<tr>
+<th></th>
+<th>jTDS</th>
+</tr>
+</thead>
+<tr>
+<th>Supported versions</th>
+<td><code>1.3.1</code> and later</td>
+</tr>
+<tr>
+<th>URL format</th>
+<td><code>jdbc:jtds:sybase://<i>host</i>:<i>port</i>/<i>database</i></code></td>
+</tr>
+<tr>
+<th>Ships with Flyway Command-line</th>
+<td>Yes</td>
+</tr>
+<tr>
+<th>Maven Central coordinates</th>
+<td><code>net.sourceforge.jtds:jtds:1.3.1</code></td>
+</tr>
+<tr>
+<th>Default Java class</th>
+<td><code>net.sourceforge.jtds.jdbc.Driver</code></td>
+</tr>
+</table>
+
+## SQL Script Syntax
+
+- [Standard SQL syntax](/documentation/migration/sql#syntax) with statement delimiter **GO**
+- T-SQL
+
+### Compatibility
+
+- DDL exported by Sybase ASE Client can be used unchanged in a Flyway migration.</li>
+- Any Sybase ASE Server sql script executed by Flyway, can be executed by Sybase Interactive SQL client, Sybase Central and
+        other Sybase ASE Server-compatible tools (after the placeholders have been replaced).
+
+### Example
+
+<pre class="prettyprint">/* Single line comment */
+CREATE TABLE Customers (
+CustomerId smallint identity(1,1),
+Name nvarchar(255),
+Priority tinyint
+)
+GO
+
+CREATE TABLE Sales (
+TransactionId smallint identity(1,1),
+CustomerId smallint,
+[Net Amount] int,
+Completed bit
+)
+GO
+
+/*
+Multi-line
+comment
+*/
+-- TSQL
+CREATE TRIGGER Update_Customer on Sales
+for insert,update
+as
+declare @errorMsg VARCHAR(200),
+        @customerID VARCHAR(10)
+BEGIN
+    select @customerID = customerID from inserted
+
+    IF exists (select 1 from Sales tbl, inserted i
+        where tbl.customerID = i.customerID )
+    begin
+                select @errorMsg = 'Cannot have 2 record with the same customer ID '+@customerID
+        	raiserror 99999 @errorMsg
+        	rollback
+    end
+END
+
+GO
+
+-- Placeholder
+INSERT INTO ${tableName} (name) VALUES (&#x27;Mr. T&#x27;);</pre>
+
+## Limitations
+
+- No Support for <code>flyway.schemas</code> due to Sybase ASE limitations.
+- No Support for DDL transactions due to Sybase ASE limitations.
+
+<p class="next-steps">
+    <a class="btn btn-primary" href="/documentation/database/h2">H2 <i class="fa fa-arrow-right"></i></a>
+</p>
