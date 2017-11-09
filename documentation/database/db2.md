@@ -10,6 +10,7 @@ subtitle: DB2
 - `11.1`
 - `10.5`
 - `10.1` <span class="label label-primary">Flyway Enterprise</span>
+- `9.8` <span class="label label-primary">Flyway Enterprise</span>
 - `9.7` <span class="label label-primary">Flyway Enterprise</span>
 
 
