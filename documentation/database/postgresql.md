@@ -1,6 +1,6 @@
 ---
 layout: documentation
-menu: postgreSql
+menu: postgresql
 subtitle: PostgreSQL
 ---
 # PostgreSQL
@@ -105,5 +105,5 @@ COPY copy_test (c1, c2, c3) FROM stdin;
 - No support for cleaning native extensions installed in the public schema
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/database/sybasease">Sybase ASE <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/database/redshift">Redshift <i class="fa fa-arrow-right"></i></a>
 </p>
