@@ -12,33 +12,27 @@ subtitle: Redshift
 <tr>
 <th></th>
 <th>Redshift</th>
-<th>PostgreSQL</th>
 </tr>
 </thead>
 <tr>
 <th>Supported versions</th>
 <td><code>1.2.10.1009</code> and later</td>
-<td><code>9.3-1104-jdbc4</code> and later</td>
 </tr>
 <tr>
 <th>URL format</th>
 <td><code>jdbc:redshift://<i>host</i>:<i>port</i>/<i>database</i></code></td>
-<td><code>jdbc:postgresql://<i>host</i>:<i>port</i>/<i>database</i></code></td>
 </tr>
 <tr>
 <th>Ships with Flyway Command-line</th>
 <td>No</td>
-<td>Yes</td>
 </tr>
 <tr>
 <th>Download</th>
 <td>Follow the instructions at <a href="http://docs.aws.amazon.com/redshift/latest/mgmt/configure-jdbc-connection.html#download-jdbc-driver">docs.aws.amazon.com</a></td>
-<td>Maven Central: <code>org.postgresql:postgresql:42.1.4</code></td>
 </tr>
 <tr>
 <th>Default Java class</th>
 <td><code>com.amazon.redshift.jdbc42.Driver</code></td>
-<td><code>org.postgresql.Driver</code></td>
 </tr>
 </table>
 
