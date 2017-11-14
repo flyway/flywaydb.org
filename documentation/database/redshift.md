@@ -49,7 +49,7 @@ subtitle: Redshift
         can be executed by the PostgreSQL command-line tool and other PostgreSQL-compatible tools,
         such as SQL Workbench/J (after the placeholders have been replaced).
 
-### Example</h3>
+### Example
 
 <pre class="prettyprint">/* Single line comment */
 CREATE TABLE test_data (
