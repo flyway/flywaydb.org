@@ -10,33 +10,39 @@ subtitle: Sybase ASE
 - `16.0`
 - `15.7`
 
-## Driver
+## Drivers
 
 <table class="table">
 <thead>
 <tr>
 <th></th>
+<th>jConnect</th>
 <th>jTDS</th>
 </tr>
 </thead>
 <tr>
 <th>Supported versions</th>
+<td><code>7.0</code> and later</td>
 <td><code>1.3.1</code> and later</td>
 </tr>
 <tr>
 <th>URL format</th>
+<td><code>jdbc:sybase:Tds:<i>host</i>:<i>port</i>/<i>database</i></code></td>
 <td><code>jdbc:jtds:sybase://<i>host</i>:<i>port</i>/<i>database</i></code></td>
 </tr>
 <tr>
 <th>Ships with Flyway Command-line</th>
+<td>No</td>
 <td>Yes</td>
 </tr>
 <tr>
-<th>Maven Central coordinates</th>
-<td><code>net.sourceforge.jtds:jtds:1.3.1</code></td>
+<th>Download</th>
+<td>Download from <a href="https://sap.com">sap.com</a></td>
+<td>Maven Central coordinates: <code>net.sourceforge.jtds:jtds:1.3.1</code></td>
 </tr>
 <tr>
 <th>Default Java class</th>
+<td><code>com.sybase.jdbc4.jdbc.SybDriver</code></td>
 <td><code>net.sourceforge.jtds.jdbc.Driver</code></td>
 </tr>
 </table>
