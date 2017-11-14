@@ -466,6 +466,13 @@ a.stackoverflow-tag:hover {
 h2 {
     margin-top: 40px;
 }
+h2[id], h3[id], tr[id]>td:first-child {
+    cursor: pointer;
+}
+h2[id]:hover:after, h3[id]:hover:after, tr[id]:hover>td:first-child:after {
+    content: ' §';
+    color: #ccc;
+}
 
 pre.console {
     background: #555;

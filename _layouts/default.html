@@ -142,6 +142,13 @@
     $(function () {
         prettyPrint();
 
+        $("h2[id],h3[id]").click(function () {
+            window.location.hash = $(this).attr("id");
+        });
+        $("tr[id]>td:first-child").click(function () {
+            window.location.hash = $(this).parent().attr("id");
+        });
+
         $("a[href^=http]").each(function () {
             if (this.href.indexOf(location.hostname) == -1) {
                 $(this).attr({
