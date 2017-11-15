@@ -81,5 +81,5 @@ INSERT INTO ${tableName} (name) VALUES (&#x27;Mr. T&#x27;);</pre>
 - *None*
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/database/sybasease">Sybase ASE <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/database/cockroachdb">CockroachDB <i class="fa fa-arrow-right"></i></a>
 </p>
