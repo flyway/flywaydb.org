@@ -170,6 +170,11 @@ Database password:</pre>
 If you want Flyway to connect to your database without a user or password, you can suppress prompting by adding
     the `-n` flag.
 
+### Java Arguments
+
+If need to to pass custom arguments to Flyway's JVM, you can do so by setting the `JAVA_ARGS` environment variable.
+They will then automatically be taken into account when launching Flyway. This is particularly useful when needing to set JVM system properties.
+
 ## Output
 
 All debug, info and warning output is sent to `stdout`. All errors are sent to `stderr`.
