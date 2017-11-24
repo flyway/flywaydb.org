@@ -10,9 +10,9 @@ subtitle: SQL Server
 - `2017`
 - `2016`
 - `2014`
-- `2012` <span class="label label-primary">Flyway Enterprise</span>
-- `2008 R2` <span class="label label-primary">Flyway Enterprise</span>
-- `2008` <span class="label label-primary">Flyway Enterprise</span>
+- `2012` {% include enterprise.html %}
+- `2008 R2` {% include enterprise.html %}
+- `2008` {% include enterprise.html %}
 
 ## Drivers
 

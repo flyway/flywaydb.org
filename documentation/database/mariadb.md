@@ -11,9 +11,9 @@ subtitle: MariaDB
 - `10.1`
 - `10.0`
 - `5.5`
-- `5.3` <span class="label label-primary">Flyway Enterprise</span>
-- `5.2` <span class="label label-primary">Flyway Enterprise</span>
-- `5.1` <span class="label label-primary">Flyway Enterprise</span>
+- `5.3` {% include enterprise.html %}
+- `5.2` {% include enterprise.html %}
+- `5.1` {% include enterprise.html %}
 
 
 ## Driver

@@ -9,10 +9,10 @@ subtitle: Oracle
 
 - `12.2`
 - `12.1`
-- `11.2` <span class="label label-primary">Flyway Enterprise</span>
-- `11.1` <span class="label label-primary">Flyway Enterprise</span>
-- `10.2` <span class="label label-primary">Flyway Enterprise</span>
-- `10.1` <span class="label label-primary">Flyway Enterprise</span>
+- `11.2` {% include enterprise.html %}
+- `11.1` {% include enterprise.html %}
+- `10.2` {% include enterprise.html %}
+- `10.1` {% include enterprise.html %}
 
 All editions are supported, including XE.
 

@@ -15,8 +15,8 @@ be migrated to a state the rest of the code can work with.
 
 - `Java 9`
 - `Java 8`
-- `Java 7` <span class="label label-primary">Flyway Enterprise</span>
-- `Java 6` <span class="label label-primary">Flyway Enterprise</span>
+- `Java 7` {% include enterprise.html %}
+- `Java 6` {% include enterprise.html %}
 
 ## Download
 

@@ -10,7 +10,7 @@ subtitle: MySQL
 - `5.7`
 - `5.6`
 - `5.5`
-- `5.1` <span class="label label-primary">Flyway Enterprise</span>
+- `5.1` {% include enterprise.html %}
 
 ## Drivers
 

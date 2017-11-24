@@ -11,7 +11,7 @@ subtitle: HSQLDB
 - `2.3`
 - `2.2`
 - `2.0`
-- `1.8` <span class="label label-primary">Flyway Enterprise</span>
+- `1.8` {% include enterprise.html %}
 
 ## Driver
 

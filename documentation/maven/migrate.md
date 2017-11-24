@@ -1,20 +1,25 @@
 ---
-layout: gradle
+layout: maven
 pill: migrate
-subtitle: 'gradle flywayMigrate'
+subtitle: 'mvn flyway:migrate'
 ---
-<div id="gradleMigrate">
-<h1>Gradle Task: flywayMigrate</h1>
+# Maven Goal: Migrate
 
-<p>Migrates the schema to the latest version. Flyway will create the metadata table automatically if it doesn't
-    exist.</p>
+Migrates the schema to the latest version. Flyway will create the metadata table automatically if it doesn't
+    exist.
 
 <a href="/documentation/command/migrate"><img src="/assets/balsamiq/command-migrate.png" alt="migrate"></a>
 
-<h2>Usage</h2>
-<pre class="console">&gt; gradle flywayMigrate</pre>
+## Default Phase
 
-<h2>Configuration</h2>
+- pre-integration-test
+
+## Usage
+
+<pre class="console">&gt; mvn flyway:migrate</pre>
+
+## Configuration
+
 <table class="table table-bordered table-hover">
     <thead>
     <tr>
@@ -37,6 +42,15 @@ subtitle: 'gradle flywayMigrate'
         <td><i>Auto-detected based on url</i></td>
         <td>The fully qualified classname of the jdbc driver to use
             to connect to the database
+        </td>
+    </tr>
+    <tr>
+        <td>serverId</td>
+        <td>NO</td>
+        <td>flyway-db</td>
+        <td>The id of the server in the Maven settings.xml file to
+            load the credentials from.<br/><br/>This is an alternative to passing the credentials in
+            directly through properties.
         </td>
     </tr>
     <tr>
@@ -139,7 +153,7 @@ subtitle: 'gradle flywayMigrate'
         <td>placeholderPrefix</td>
         <td>NO</td>
         <td>${</td>
-        <td>The prefix of every placeholder</td>
+        <td>The prefix of every placeholder </td>
     </tr>
     <tr>
         <td>placeholderSuffix</td>
@@ -204,7 +218,7 @@ subtitle: 'gradle flywayMigrate'
             when the sql script is executed. The validate mechanism checks if the sql migration in the classpath
             still has the same checksum as the sql migration already executed in the database.<br/></td>
     </tr>
-    <tr>
+    <tr id="cleanOnValidationError">
         <td>cleanOnValidationError</td>
         <td>NO</td>
         <td>false</td>
@@ -280,65 +294,113 @@ subtitle: 'gradle flywayMigrate'
         <td><i>Current database user</i></td>
         <td>The username that will be recorded in the metadata table as having applied the migration</td>
     </tr>
+    <tr>
+        <td>skip</td>
+        <td>NO</td>
+        <td>false</td>
+        <td>Skips the execution of the plugin for this module</td>
+    </tr>
+    <tr>
+        <td>configFile</td>
+        <td>NO</td>
+        <td>flyway.properties</td>
+        <td>Properties file from which to load the Flyway configuration. The names of the individual properties match the ones you would
+            use as Maven or System properties. The encoding of the file must be the same as the encoding defined with the
+            flyway.encoding property, which is UTF-8 by default. Relative paths are relative to the POM.</td>
+    </tr>
+    <tr>
+        <td>errorHandler {% include pro.html %}</td>
+        <td>NO</td>
+        <td><i>Fail on every error</i></td>
+        <td>The fully qualified class name of the ErrorHandler for errors that occur during a migration.
+            This can be used to customize Flyway's behavior by for example throwing another runtime exception,
+            outputting a warning or suppressing the error instead of throwing a FlywaySqlException.</td>
+    </tr>
+    <tr>
+        <td>dryRunOutput {% include pro.html %}</td>
+        <td>NO</td>
+        <td><i>Execute directly against the database</i></td>
+        <td>The file where to output the SQL statements of a migration dry run. If the file specified is in a non-existent
+            directory, Flyway will create all directories and parent directories as needed.
+            Omit to use the default mode of executing the SQL statements directly against the database.</td>
+    </tr>
     </tbody>
 </table>
 
 <h2>Sample configuration</h2>
-<pre class="prettyprint">flyway {
-    driver = 'org.hsqldb.jdbcDriver'
-    url = 'jdbc:hsqldb:file:/db/flyway_sample;shutdown=true'
-    user = 'SA'
-    password = 'mySecretPwd'
-    schemas = ['schema1', 'schema2', 'schema3']
-    table = 'schema_history'
-    locations = ['classpath:migrations1', 'migrations2', 'filesystem:/sql-migrations']
-    sqlMigrationPrefix = 'Migration-'
-    repeatableSqlMigrationPrefix = 'RRR'
-    sqlMigrationSeparator = '__'
-    sqlMigrationSuffix = '-OK.sql'
-    encoding = 'ISO-8859-1'
-    placeholderReplacement = true
-    placeholders = [
-        'aplaceholder' : 'value',
-        'otherplaceholder' : 'value123'
-    ]
-    placeholderPrefix = '#['
-    placeholderSuffix = ']'
-    resolvers = ['com.mycompany.proj.CustomResolver', 'com.mycompany.proj.AnotherResolver']
-    skipDefaultResolvers = false
-    callbacks = ['com.mycompany.proj.CustomCallback', 'com.mycompany.proj.AnotherCallback']
-    skipDefaultCallbacks = false
-    target = '1.1'
-    outOfOrder = false
-    validateOnMigrate = true
-    cleanOnValidationError = false
-    mixed = false
-    group = false
-    ignoreMissingMigrations = false
-    ignoreFutureMigrations = false
-    cleanDisabled = false
-    baselineOnMigrate = false
-    baselineVersion = 5
-    baselineDescription = "Let's go!"
-    installedBy = "my-user"
-}</pre>
+<pre class="prettyprint">&lt;configuration&gt;
+    &lt;driver&gt;org.hsqldb.jdbcDriver&lt;/driver&gt;
+    &lt;url&gt;jdbc:hsqldb:file:${project.build.directory}/db/flyway_sample;shutdown=true&lt;/url&gt;
+    &lt;user&gt;SA&lt;/user&gt;
+    &lt;password&gt;mySecretPwd&lt;/password&gt;
+    &lt;schemas&gt;
+        &lt;schema&gt;schema1&lt;/schema&gt;
+        &lt;schema&gt;schema2&lt;/schema&gt;
+        &lt;schema&gt;schema3&lt;/schema&gt;
+    &lt;/schemas&gt;
+    &lt;table&gt;schema_history&lt;/table&gt;
+    &lt;locations&gt;
+        &lt;location&gt;classpath:migrations1&lt;/location&gt;
+        &lt;location&gt;migrations2&lt;/location&gt;
+        &lt;location&gt;filesystem:/sql-migrations&lt;/location&gt;
+    &lt;/locations&gt;
+    &lt;sqlMigrationPrefix&gt;Migration-&lt;/sqlMigrationPrefix&gt;
+    &lt;repeatableSqlMigrationPrefix&gt;RRR&lt;/repeatableSqlMigrationPrefix&gt;
+    &lt;sqlMigrationSeparator&gt;__&lt;/sqlMigrationSeparator&gt;
+    &lt;sqlMigrationSuffix&gt;-OK.sql&lt;/sqlMigrationSuffix&gt;
+    &lt;encoding&gt;ISO-8859-1&lt;/encoding&gt;
+    &lt;placeholderReplacement&gt;true&lt;/placeholderReplacement&gt;
+    &lt;placeholders&gt;
+        &lt;aplaceholder&gt;value&lt;/aplaceholder&gt;
+        &lt;otherplaceholder&gt;value123&lt;/otherplaceholder&gt;
+    &lt;/placeholders&gt;
+    &lt;placeholderPrefix&gt;#[&lt;/placeholderPrefix&gt;
+    &lt;placeholderSuffix&gt;]&lt;/placeholderSuffix&gt;
+    &lt;resolvers&gt;
+        &lt;resolver&gt;com.mycompany.project.CustomResolver&lt;/resolver&gt;
+        &lt;resolver&gt;com.mycompany.project.AnotherResolver&lt;/resolver&gt;
+    &lt;/resolvers&gt;
+    &lt;skipDefaultResolvers&gt;false&lt;/skipDefaultResolvers&gt;
+    &lt;callbacks&gt;
+        &lt;callback&gt;com.mycompany.project.CustomCallback&lt;/callback&gt;
+        &lt;callback&gt;com.mycompany.project.AnotherCallback&lt;/callback&gt;
+    &lt;/callbacks&gt;
+    &lt;skipDefaultCallbacks&gt;false&lt;/skipDefaultCallbacks&gt;
+    &lt;target&gt;1.1&lt;/target&gt;
+    &lt;outOfOrder&gt;false&lt;/outOfOrder&gt;
+    &lt;validateOnMigrate&gt;true&lt;/validateOnMigrate&gt;
+    &lt;cleanOnValidationError&gt;false&lt;/cleanOnValidationError&gt;
+    &lt;mixed&gt;false&lt;/mixed&gt;
+    &lt;group&gt;false&lt;/group&gt;
+    &lt;ignoreMissingMigrations&gt;false&lt;/ignoreMissingMigrations&gt;
+    &lt;ignoreFutureMigrations&gt;false&lt;/ignoreFutureMigrations&gt;
+    &lt;cleanDisabled&gt;false&lt;/cleanDisabled&gt;
+    &lt;baselineOnMigrate&gt;false&lt;/baselineOnMigrate&gt;
+    &lt;baselineVersion&gt;5&lt;/baselineVersion&gt;
+    &lt;baselineDescription&gt;Let's go!&lt;/baselineDescription&gt;
+    &lt;installedBy&gt;my-user&lt;/installedBy&gt;
+    &lt;skip&gt;false&lt;/skip&gt;
+    &lt;configFile&gt;myConfig.properties&lt;/configFile&gt;
+    &lt;errorHandler&gt;com.mycompany.MyCustomErrorHandler&lt;/errorHandler&gt;
+    &lt;dryRunOutput&gt;/my/sql/dryrun-outputfile.sql&lt;/dryRunOutput&gt;
+&lt;/configuration&gt;</pre>
 
-<h2>Sample output</h2>
-<pre class="console">&gt; gradle flywayMigrate -i
+## Exposed properties
+The new database version number is exposed in the `flyway.current` Maven property.
 
-Current schema version: 0
-Migrating to version 1
-Migrating to version 1.1
-Migrating to version 1.2
-Migrating to version 1.3
-Successfully applied 4 migrations (execution time 00:00.091s).</pre>
+## Sample output
+<pre class="console">&gt; mvn compile flyway:migrate
 
-<h2>Important Note</h2>
-
-<p>When using Spring JDBC migrations, you must declare a dependency on <code>org.springframework:spring-jdbc:${springVersion}</code>
-    in Gradle's <code>buildScript</code> block to avoid being hit with a <code>java.lang.LinkageError</code>.</p>
+[INFO] [compiler:compile {execution: default-compile}]
+[INFO] Nothing to compile - all classes are up to date
+[INFO] [flyway:migrate {execution: default-cli}]
+[INFO] Current schema version: 0
+[INFO] Migrating to version 1
+[INFO] Migrating to version 1.1
+[INFO] Migrating to version 1.2
+[INFO] Migrating to version 1.3
+[INFO] Successfully applied 4 migrations (execution time 00:00.091s).</pre>
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/gradle/clean">Gradle: clean <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/maven/clean">Maven: clean <i class="fa fa-arrow-right"></i></a>
 </p>
-</div>

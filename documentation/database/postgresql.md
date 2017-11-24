@@ -12,9 +12,9 @@ subtitle: PostgreSQL
 - `9.5`
 - `9.4`
 - `9.3`
-- `9.2` <span class="label label-primary">Flyway Enterprise</span>
-- `9.1` <span class="label label-primary">Flyway Enterprise</span>
-- `9.0` <span class="label label-primary">Flyway Enterprise</span>
+- `9.2` {% include enterprise.html %}
+- `9.1` {% include enterprise.html %}
+- `9.0` {% include enterprise.html %}
 
 ## Driver
 
