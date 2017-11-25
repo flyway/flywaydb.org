@@ -54,7 +54,7 @@ subtitle: Sybase ASE
 
 ### Compatibility
 
-- DDL exported by Sybase ASE Client can be used unchanged in a Flyway migration.</li>
+- DDL exported by Sybase ASE Client can be used unchanged in a Flyway migration.
 - Any Sybase ASE Server sql script executed by Flyway, can be executed by Sybase Interactive SQL client, Sybase Central and
         other Sybase ASE Server-compatible tools (after the placeholders have been replaced).
 

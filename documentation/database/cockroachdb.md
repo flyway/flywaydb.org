@@ -71,5 +71,5 @@ INSERT INTO ${tableName} (name) VALUES (&#x27;Mr. T&#x27;);</pre>
 - No support for psql meta-commands with no JDBC equivalent like `\set`
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/database/sybasease">Sybase ASE <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/database/saphana">SAP HANA <i class="fa fa-arrow-right"></i></a>
 </p>
