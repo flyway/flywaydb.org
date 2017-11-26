@@ -101,7 +101,6 @@ COPY copy_test (c1, c2, c3) FROM stdin;
 ## Limitations
 
 - No support for psql meta-commands with no JDBC equivalent like `\set`
-- Multiline RULE declarations are not parsed correctly ([Issue 183](https://github.com/flyway/flyway/issues/183)
 - No support for cleaning native extensions installed in the public schema
 
 <p class="next-steps">
