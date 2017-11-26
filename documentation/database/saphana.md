@@ -7,8 +7,8 @@ subtitle: SAP HANA
 
 ## Supported Versions
 
-- `2.00`
-- `1.00` {% include enterprise.html %}
+- `2.0`
+- `1.0` {% include enterprise.html %}
 
 ## Driver
 
