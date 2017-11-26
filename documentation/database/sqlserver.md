@@ -122,7 +122,6 @@ INSERT INTO ${tableName} (name) VALUES (&#x27;Mr. T&#x27;);</pre>
 
 - When setting `flyway.schemas`, the first schema is not set as the default due to [SQL Server limitations](http://connect.microsoft.com/SQLServer/feedback/details/390528/t-sql-statement-for-changing-default-schema-context)
 - `ALTER DATABASE ... SET single_user` is not supported as it mandates that no other transaction be active in the entire database, which is incompatible with Flyway's current model
-- `BACKUP` and `RESTORE` statements are currently not supported as they must be run outside of a transaction
 
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/database/db2">DB2 <i class="fa fa-arrow-right"></i></a>
