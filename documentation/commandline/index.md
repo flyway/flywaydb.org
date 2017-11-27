@@ -119,6 +119,8 @@ To pass in multiple files, separate their names with commas:
 
 <pre class="console"><span>&gt;</span> flyway <strong>-configFiles</strong>=path/to/myAlternativeConfig.conf,other.conf migrate</pre>
 
+Relative paths are relative to the current working directory. 
+
 Alternatively you can also use the `FLYWAY_CONFIG_FILES` environment variable for this.
 When set it will take preference over the command-line parameter.
 

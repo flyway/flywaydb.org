@@ -140,6 +140,8 @@ To pass in multiple files, separate their names with commas:
 
 <pre class="console"><span>&gt;</span> mvn <strong>-Dflyway.configFiles</strong>=path/to/myAlternativeConfig.conf,other.conf flyway:migrate</pre>
 
+Relative paths are relative to the directory containing your `pom.xml` file. 
+
 Alternatively you can also use the `FLYWAY_CONFIG_FILES` environment variable for this.
 When set it will take preference over the command-line parameter.
 
