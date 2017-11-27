@@ -25,7 +25,7 @@ subtitle: SAP HANA
 </tr>
 <tr>
 <th>URL format</th>
-<td><code>jdbc:sap://<i>host</i>:<i>port</i>/<i>database</i></code></td>
+<td><code>jdbc:sap://<i>host</i>:<i>port</i>/?databaseName=<i>database</i></code></td>
 </tr>
 <tr>
 <th>Ships with Flyway Command-line</th>
