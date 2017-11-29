@@ -91,6 +91,8 @@ The following commands are fully supported and can be used just like any regular
 - `EXECUTE`
 - `PROMPT`
 - `REMARK`
+- `SET SERVEROUTPUT OFF`
+- `SET SERVEROUTPUT ON`
 - `SHOW CON_ID`
 - `SHOW ERRORS`
 - `SHOW RELEASE`
@@ -98,8 +100,11 @@ The following commands are fully supported and can be used just like any regular
 - `WHENEVER SQLERROR CONTINUE`
 - `WHENEVER SQLERROR EXIT FAILURE`
 
-The short form of these commands is also supported. All other SQL*Plus commands are gracefully ignored with a warning 
-message.
+The short form of these commands is also supported. 
+
+When `SET SERVEROUTPUT ON` is invoked output produced by `DBMS_OUTPUT.PUT_LINE` will be shown in the console. 
+
+All other SQL*Plus commands are gracefully ignored with a warning message.
 
 ## Limitations
 
