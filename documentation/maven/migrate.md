@@ -309,12 +309,15 @@ Migrates the schema to the latest version. Flyway will create the metadata table
             flyway.encoding property, which is UTF-8 by default. Relative paths are relative to the POM.</td>
     </tr>
     <tr>
-        <td>errorHandler {% include pro.html %}</td>
+        <td>errorHandlers {% include pro.html %}</td>
         <td>NO</td>
-        <td><i>Fail on every error</i></td>
-        <td>The fully qualified class name of the ErrorHandler for errors that occur during a migration.
-            This can be used to customize Flyway's behavior by for example throwing another runtime exception,
-            outputting a warning or suppressing the error instead of throwing a FlywaySqlException.</td>
+        <td><i>none</i></td>
+        <td>The fully qualified class names of handlers for errors and warnings that occur during
+         a migration. This can be used to customize Flyway's behavior by for example throwing another runtime exception,
+          outputting a warning or suppressing the error instead of throwing a FlywayException. ErrorHandlers are invoked
+           in order until one reports to have successfully handled the errors or warnings.
+           If none do, or if none are present, Flyway falls back to its default handling of errors and warnings.
+           </td>
     </tr>
     <tr>
         <td>dryRunOutput {% include pro.html %}</td>
@@ -381,7 +384,10 @@ Migrates the schema to the latest version. Flyway will create the metadata table
     &lt;installedBy&gt;my-user&lt;/installedBy&gt;
     &lt;skip&gt;false&lt;/skip&gt;
     &lt;configFile&gt;myConfig.properties&lt;/configFile&gt;
-    &lt;errorHandler&gt;com.mycompany.MyCustomErrorHandler&lt;/errorHandler&gt;
+    &lt;errorHandlers&gt;
+        &lt;errorHandler&gt;com.mycompany.MyCustomErrorHandler&lt;/errorHandler&gt;
+        &lt;errorHandler&gt;com.mycompany.AnotherErrorHandler&lt;/errorHandler&gt;
+    &lt;/errorHandlers&gt;
     &lt;dryRunOutput&gt;/my/sql/dryrun-outputfile.sql&lt;/dryRunOutput&gt;
 &lt;/configuration&gt;</pre>
 

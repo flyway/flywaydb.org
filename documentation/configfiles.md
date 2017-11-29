@@ -195,11 +195,13 @@ flyway.url=
 # &lt;&lt;blank&gt;&gt; for the current database user of the connection. (default: &lt;&lt;blank&gt;&gt;).
 # flyway.installedBy=
 
-# The fully qualified class name of the ErrorHandler for errors that occur during a migration.
-# This can be used to customize Flyway's behavior by for example throwing another runtime exception,
-# outputting a warning or suppressing the error instead of throwing a FlywaySqlException.
-# &lt;&lt;blank&gt;&gt; to use the default internal handler (default: &lt;&lt;blank&gt;&gt;
-# flyway.errorHandler=</pre>
+# Comma-separated list of the fully qualified calss names of handlers for errors and warnings that occur during a
+# migration. This can be used to customize Flyway's behavior by for example
+# throwing another runtime exception, outputting a warning or suppressing the error instead of throwing a FlywayException.
+# ErrorHandlers are invoked in order until one reports to have successfully handled the errors or warnings.
+# <<blank>> to use the default internal handler (default: <<blank>>)
+# Flyway Pro and Flyway Enterprise only
+# flyway.errorHandlers=</pre>
 
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/articles">Articles <i class="fa fa-arrow-right"></i></a>

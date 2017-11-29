@@ -282,12 +282,15 @@ Migrates the schema to the latest version. Flyway will create the metadata table
         <td>The username that will be recorded in the metadata table as having applied the migration</td>
     </tr>
     <tr>
-        <td>errorHandler {% include pro.html %}</td>
+        <td>errorHandlers {% include pro.html %}</td>
         <td>NO</td>
-        <td><i>Fail on every error</i></td>
-        <td>The fully qualified class name of the ErrorHandler for errors that occur during a migration.
-            This can be used to customize Flyway's behavior by for example throwing another runtime exception,
-            outputting a warning or suppressing the error instead of throwing a FlywaySqlException.</td>
+        <td><i>none</i></td>
+        <td>Comma-sparated list of fully qualified class names of handlers for errors and warnings that occur during
+         a migration. This can be used to customize Flyway's behavior by for example throwing another runtime exception,
+          outputting a warning or suppressing the error instead of throwing a FlywayException. ErrorHandlers are invoked
+           in order until one reports to have successfully handled the errors or warnings.
+           If none do, or if none are present, Flyway falls back to its default handling of errors and warnings.
+           </td>
     </tr>
     <tr>
         <td>dryRunOutput {% include pro.html %}</td>
@@ -334,7 +337,7 @@ flyway.ignoreFutureMigrations=false
 flyway.cleanDisabled=false
 flyway.baselineOnMigrate=false
 flyway.installedBy=my-user
-flyway.errorHandler=com.mycompany.MyCustomErrorHandler
+flyway.errorHandlers=com.mycomp.MyCustomErrorHandler,com.mycomp.AnotherErrorHandler
 flyway.dryRunOutput=/my/sql/dryrun-outputfile.sql</pre>
 
 ## Sample output

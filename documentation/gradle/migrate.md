@@ -280,12 +280,15 @@ Migrates the schema to the latest version. Flyway will create the metadata table
         <td>The username that will be recorded in the metadata table as having applied the migration</td>
     </tr>
     <tr>
-        <td>errorHandler {% include pro.html %}</td>
+        <td>errorHandlers {% include pro.html %}</td>
         <td>NO</td>
-        <td><i>Fail on every error</i></td>
-        <td>The fully qualified class name of the ErrorHandler for errors that occur during a migration.
-            This can be used to customize Flyway's behavior by for example throwing another runtime exception,
-            outputting a warning or suppressing the error instead of throwing a FlywaySqlException.</td>
+        <td><i>none</i></td>
+        <td>The fully qualified class names of handlers for errors and warnings that occur during
+         a migration. This can be used to customize Flyway's behavior by for example throwing another runtime exception,
+          outputting a warning or suppressing the error instead of throwing a FlywayException. ErrorHandlers are invoked
+           in order until one reports to have successfully handled the errors or warnings.
+           If none do, or if none are present, Flyway falls back to its default handling of errors and warnings.
+           </td>
     </tr>
     <tr>
         <td>dryRunOutput {% include pro.html %}</td>
@@ -307,7 +310,7 @@ Migrates the schema to the latest version. Flyway will create the metadata table
     password = 'mySecretPwd'
     schemas = ['schema1', 'schema2', 'schema3']
     table = 'schema_history'
-    locations = ['classpath:migrations1', 'migrations2', 'filesystem:/sql-migrations']
+    locations = ['classpath:migrations', 'classpath:db/pkg', 'filesystem:/sql-migrations']
     sqlMigrationPrefix = 'Migration-'
     repeatableSqlMigrationPrefix = 'RRR'
     sqlMigrationSeparator = '__'
@@ -337,7 +340,7 @@ Migrates the schema to the latest version. Flyway will create the metadata table
     baselineVersion = 5
     baselineDescription = "Let's go!"
     installedBy = "my-user"
-    errorHandler = 'com.mycompany.MyCustomErrorHandler'
+    errorHandlers = ['com.mycomp.MyCustomErrorHandler', 'com.mycomp.AnotherErrorHandler']
     dryRunOutput = '/my/sql/dryrun-outputfile.sql'
 }</pre>
 
