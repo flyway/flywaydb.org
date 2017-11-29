@@ -80,10 +80,30 @@ END;
 -- Placeholder
 INSERT INTO ${tableName} (name) VALUES (&#x27;Mr. T&#x27;);</pre>
 
+## SQL*Plus commands 
+{% include pro.html %}
+
+In addition to the regular Oracle SQL syntax, Flyway Pro and Flyway Enterprise also come with support for Oracle 
+SQL*Plus commands.
+
+The following commands are fully supported and can be used just like any regular command within your SQL migrations:
+
+- `EXECUTE`
+- `PROMPT`
+- `REMARK`
+- `SHOW CON_ID`
+- `SHOW ERRORS`
+- `SHOW RELEASE`
+- `SHOW USER`
+- `WHENEVER SQLERROR CONTINUE`
+- `WHENEVER SQLERROR EXIT FAILURE`
+
+The short form of these commands is also supported. All other SQL*Plus commands are gracefully ignored with a warning 
+message.
+
 ## Limitations
 
 - SPATIAL EXTENSIONS: sdo_geom_metadata can only be cleaned for the user currently logged in
-- No support for SQL*Plus-specific commands that have no JDBC equivalent (SET DEFINE OFF, ...)
 - No support for executing external scripts referenced with @other.script, as supported by SQL*Plus
 
 <p class="next-steps">
