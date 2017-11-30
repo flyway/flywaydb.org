@@ -5,8 +5,8 @@ subtitle: Gradle Plugin
 ---
 # Gradle Plugin
 
-The Flyway Open-Source Maven plugin supports **Gradle 2.1 and newer** running on **Java 8** or **Java 9**. The Flyway
-Enterprise Maven plugin also supports **Java 6** and **Java 7**.
+The Flyway Open-Source Gradle plugin supports **Gradle 3.0 and newer** running on **Java 8** or **Java 9**. The Flyway
+Enterprise Gradle plugin also supports **Java 7**.
 
 ## Installation
 
