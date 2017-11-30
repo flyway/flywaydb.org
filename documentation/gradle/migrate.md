@@ -225,6 +225,8 @@ Migrates the schema to the latest version. Flyway will create the metadata table
             (unknown to us) has also been applied. Instead of bombing out (fail fast) with an exception, a
             warning is logged and Flyway continues normally. This is useful for situations where one must be able to deploy
             a newer version of the application even though it doesn't contain migrations included with an older one anymore.
+            Note that if the most recently applied migration is removed, Flyway has no way to know it is missing and will 
+            mark it as future instead.
         </td>
     </tr>
     <tr>

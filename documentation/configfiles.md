@@ -171,6 +171,8 @@ flyway.url=
 # (unknown to us) has also been applied. Instead of bombing out (fail fast) with an exception, a
 # warning is logged and Flyway continues normally. This is useful for situations where one must be able to deploy
 # a newer version of the application even though it doesn't contain migrations included with an older one anymore.
+# Note that if the most recently applied migration is removed, Flyway has no way to know it is missing and will 
+# mark it as future instead.
 # true to continue normally and log a warning, false to fail fast with an exception.
 # flyway.ignoreMissingMigrations=
 
