@@ -72,7 +72,7 @@ Now simply add it to the `PATH` and the `flyway` command will be available from 
     </tr>
     <tr>
         <td><a href="/documentation/commandline/repair">repair</a></td>
-        <td>Repairs the metadata table</td>
+        <td>Repairs the schema history table</td>
     </tr>
     </tbody>
 </table>

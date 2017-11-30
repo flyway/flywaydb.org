@@ -20,10 +20,10 @@ subtitle: Migrations & Versions
 
     <p>Within a single migration, all statements are run within a single transaction.</p>
 
-    <h2>Metadata table</h2>
+    <h2>schema history table</h2>
 
     <p>To keep track of which migrations have already been applied when and by whom, Flyway adds a special bookkeeping
-        table to your schema. This <strong>metadata table</strong> also tracks migration checksums and whether or not
+        table to your schema. This <strong>schema history table</strong> also tracks migration checksums and whether or not
         the migrations were successful.</p>
 
     <p>Read more about this in our getting started guide on <a href="/getstarted/how">how Flyway works</a>.</p>
@@ -43,10 +43,10 @@ subtitle: Migrations & Versions
             table</em>.
         </li>
         <li>When the migration <em>fails</em> and the database supports <em>DDL transactions</em>, the migration is <em>rolled
-            back</em> and nothing is recorded in the metadata table.
+            back</em> and nothing is recorded in the schema history table.
         </li>
         <li>When the migration <em>fails</em> and the database doesn't supports <em>DDL transactions</em>, the migration
-            is marked as <strong>failed</strong> in the metadata table, indicating manual database cleanup may be
+            is marked as <strong>failed</strong> in the schema history table, indicating manual database cleanup may be
             required.
         </li>
     </ul>

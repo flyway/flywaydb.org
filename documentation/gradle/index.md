@@ -48,7 +48,7 @@ The Flyway Gradle plugin can be installed directly from the official Gradle plug
     </tr>
     <tr>
         <td><a href="/documentation/gradle/repair">flywayRepair</a></td>
-        <td>Repairs the metadata table</td>
+        <td>Repairs the schema history table</td>
     </tr>
     </tbody>
 </table>

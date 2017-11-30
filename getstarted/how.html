@@ -11,7 +11,7 @@ subtitle: How Flyway works
     <p align="center"><img src="/assets/balsamiq/EmptyDb.png" style="max-width: 100%"/></p>
 
     <p>It will try to
-        locate its <strong>metadata table</strong>. As the database is empty, Flyway won&#x27;t find it and will
+        locate its <strong>schema history table</strong>. As the database is empty, Flyway won&#x27;t find it and will
         <strong>create</strong> it instead.<br/> <br/> You now have a database with a single empty table called <i>SCHEMA_VERSION</i>
         by default: </p>
 
@@ -29,7 +29,7 @@ subtitle: How Flyway works
     <p align="center"><img src="/assets/balsamiq/Migration-1-2.png" style="max-width: 100%"/></p>
 
     <p>As each
-        migration gets applied, the metadata table is updated accordingly: </p>
+        migration gets applied, the schema history table is updated accordingly: </p>
 
     <h5>schema_version</h5>
     <table class="table table-bordered table-striped table-condensed" style="font-size: 70%">
@@ -77,7 +77,7 @@ subtitle: How Flyway works
 
     <p>Flyway will once again scan the filesystem or the classpath of the application for migrations. The migrations are
         checked against
-        the metadata table. If their version number is lower or equal to the one of the version marked as current, they
+        the schema history table. If their version number is lower or equal to the one of the version marked as current, they
         are ignored.<br/> <br/> The remaining migrations are the <strong>pending migrations</strong>: available,
         but not applied. </p>
 
@@ -87,7 +87,7 @@ subtitle: How Flyway works
 
     <p align="center"><img src="/assets/balsamiq/Migration21.png" style="max-width: 100%"/></p>
 
-    <p>The <strong>metadata table</strong> is <strong>updated</strong> accordingly: </p>
+    <p>The <strong>schema history table</strong> is <strong>updated</strong> accordingly: </p>
 
     <h5>schema_version</h5>
     <table class="table table-bordered table-striped table-condensed" style="font-size: 70%">

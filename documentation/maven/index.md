@@ -50,7 +50,7 @@ Enterprise Maven plugin also supports **Java 6** and **Java 7**.
     </tr>
     <tr>
         <td><a href="/documentation/maven/repair">repair</a></td>
-        <td>Repairs the metadata table</td>
+        <td>Repairs the schema history table</td>
     </tr>
     </tbody>
 </table>

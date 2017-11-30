@@ -118,13 +118,13 @@ subtitle: FAQ
 
     <p>Use a single Flyway instance. Flyway has support for this built-in. Fill the
         <code>flyway.schemas</code> property with the comma-separated list of schemas you wish to manage. All
-        schemas will be tracked using a single metadata table that will be placed in the first schema of the list. Make
+        schemas will be tracked using a single schema history table that will be placed in the first schema of the list. Make
         sure the user of the datasource has the necessary grants for all schemas, and prefix the objects (tables, views,
         ...) you reference.</p>
 
     <h3>The schemas have a distinct life-cycle or must be autonomous and cleanly separated:</h3>
 
-    <p>Use multiple Flyway instances. Each instance manages its own schema and references its own metadata table. Place
+    <p>Use multiple Flyway instances. Each instance manages its own schema and references its own schema history table. Place
         migrations for each schema in a distinct location.</p>
 
     <p>Schema foo: </p><pre class="prettyprint">locations = /sql/foo

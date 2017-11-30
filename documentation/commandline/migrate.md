@@ -5,7 +5,7 @@ subtitle: 'Command-line: migrate'
 ---
 # Command-line: migrate
 
-Migrates the schema to the latest version. Flyway will create the metadata table automatically if it doesn't
+Migrates the schema to the latest version. Flyway will create the schema history table automatically if it doesn't
     exist.
 
 <a href="/documentation/command/migrate"><img src="/assets/balsamiq/command-migrate.png" alt="migrate"></a>
@@ -58,17 +58,17 @@ Migrates the schema to the latest version. Flyway will create the metadata table
         <td><i>default schema of the connection</i></td>
         <td>Comma-separated case-sensitive list of schemas managed by Flyway.<br/>
             The first schema in the list will be automatically set as the default one during
-            the migration. It will also be the one containing the metadata table.
+            the migration. It will also be the one containing the schema history table.
         </td>
     </tr>
     <tr>
         <td>table</td>
         <td>NO</td>
         <td>schema_version</td>
-        <td>The name of Flyway&#x27;s metadata table.<br/>By
-            default (single-schema mode) the metadata table is placed in the default schema for the connection
+        <td>The name of Flyway&#x27;s schema history table.<br/>By
+            default (single-schema mode) the schema history table is placed in the default schema for the connection
             provided by the datasource.<br/>When the <i>flyway.schemas</i> property is set (multi-schema mode),
-            the metadata table is placed in the first schema of the list.
+            the schema history table is placed in the first schema of the list.
         </td>
     </tr>
     <tr id="locations">
@@ -221,9 +221,9 @@ Migrates the schema to the latest version. Flyway will create the metadata table
         <td>ignoreMissingMigrations</td>
         <td>NO</td>
         <td>false</td>
-        <td>Ignore missing migrations when reading the metadata table. These are migrations that were performed by an
+        <td>Ignore missing migrations when reading the schema history table. These are migrations that were performed by an
             older deployment of the application that are no longer available in this version. For example: we have migrations
-            available on the classpath with versions 1.0 and 3.0. The metadata table indicates that a migration with version 2.0
+            available on the classpath with versions 1.0 and 3.0. The schema history table indicates that a migration with version 2.0
             (unknown to us) has also been applied. Instead of bombing out (fail fast) with an exception, a
             warning is logged and Flyway continues normally. This is useful for situations where one must be able to deploy
             a newer version of the application even though it doesn't contain migrations included with an older one anymore.
@@ -235,9 +235,9 @@ Migrates the schema to the latest version. Flyway will create the metadata table
         <td>ignoreFutureMigrations</td>
         <td>NO</td>
         <td>true</td>
-        <td>Ignore future migrations when reading the metadata table. These are migrations that were performed by a
+        <td>Ignore future migrations when reading the schema history table. These are migrations that were performed by a
             newer deployment of the application that are not yet available in this version. For example: we have migrations
-            available on the classpath up to version 3.0. The metadata table indicates that a migration to version 4.0
+            available on the classpath up to version 3.0. The schema history table indicates that a migration to version 4.0
             (unknown to us) has already been applied. Instead of bombing out (fail fast) with an exception, a
             warning is logged and Flyway continues normally. This is useful for situations where one must be able to redeploy
             an older version of the application after the database has been migrated by a newer one.</td>
@@ -281,7 +281,7 @@ Migrates the schema to the latest version. Flyway will create the metadata table
         <td>installedBy</td>
         <td>NO</td>
         <td><i>Current database user</i></td>
-        <td>The username that will be recorded in the metadata table as having applied the migration</td>
+        <td>The username that will be recorded in the schema history table as having applied the migration</td>
     </tr>
     <tr>
         <td>errorHandlers {% include pro.html %}</td>
@@ -348,7 +348,7 @@ flyway.dryRunOutput=/my/sql/dryrun-outputfile.sql</pre>
 
 Flyway {{ site.flywayVersion }} by Boxfuse
 
-Creating Metadata table: "PUBLIC"."schema_version"
+Creating schema history table: "PUBLIC"."schema_version"
 Current schema version: null
 Migrating to version 1
 Migrating to version 1.1

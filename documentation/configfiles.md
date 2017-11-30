@@ -58,13 +58,13 @@ flyway.url=
 # (default: The default schema for the datasource connection)
 # Consequences:
 # - The first schema in the list will be automatically set as the default one during the migration.
-# - The first schema in the list will also be the one containing the metadata table.
+# - The first schema in the list will also be the one containing the schema history table.
 # - The schemas will be cleaned in the order of this list.
 # flyway.schemas=
 
-# Name of Flyway's metadata table (default: schema_version)
-# By default (single-schema mode) the metadata table is placed in the default schema for the connection provided by the datasource.
-# When the flyway.schemas property is set (multi-schema mode), the metadata table is placed in the first schema of the list.
+# Name of Flyway's schema history table (default: schema_version)
+# By default (single-schema mode) the schema history table is placed in the default schema for the connection provided by the datasource.
+# When the flyway.schemas property is set (multi-schema mode), the schema history table is placed in the first schema of the list.
 # flyway.table=
 
 # Comma-separated list of locations to scan recursively for migrations. (default: filesystem:&lt;&lt;INSTALL-DIR&gt;&gt;/sql)
@@ -144,7 +144,7 @@ flyway.url=
 # The description to tag an existing schema with when executing baseline. (default: &lt;&lt; Flyway Baseline &gt;&gt;)
 # flyway.baselineDescription=
 
-# Whether to automatically call baseline when migrate is executed against a non-empty schema with no metadata table.
+# Whether to automatically call baseline when migrate is executed against a non-empty schema with no schema history table.
 # This schema will then be initialized with the baselineVersion before executing the migrations.
 # Only migrations above baselineVersion will then be applied.
 # This is useful for initial Flyway production deployments on projects with an existing DB.
@@ -165,9 +165,9 @@ flyway.url=
 # defined by 'flyway.callbacks' are used. (default: false)
 # flyway.skipDefaultCallbacks=
 
-# Ignore missing migrations when reading the metadata table. These are migrations that were performed by an
+# Ignore missing migrations when reading the schema history table. These are migrations that were performed by an
 # older deployment of the application that are no longer available in this version. For example: we have migrations
-# available on the classpath with versions 1.0 and 3.0. The metadata table indicates that a migration with version 2.0
+# available on the classpath with versions 1.0 and 3.0. The schema history table indicates that a migration with version 2.0
 # (unknown to us) has also been applied. Instead of bombing out (fail fast) with an exception, a
 # warning is logged and Flyway continues normally. This is useful for situations where one must be able to deploy
 # a newer version of the application even though it doesn't contain migrations included with an older one anymore.
@@ -176,9 +176,9 @@ flyway.url=
 # true to continue normally and log a warning, false to fail fast with an exception.
 # flyway.ignoreMissingMigrations=
 
-# Ignore future migrations when reading the metadata table. These are migrations that were performed by a
+# Ignore future migrations when reading the schema history table. These are migrations that were performed by a
 # newer deployment of the application that are not yet available in this version. For example: we have migrations
-# available on the classpath up to version 3.0. The metadata table indicates that a migration to version 4.0
+# available on the classpath up to version 3.0. The schema history table indicates that a migration to version 4.0
 # (unknown to us) has already been applied. Instead of bombing out (fail fast) with an exception, a
 # warning is logged and Flyway continues normally. This is useful for situations where one must be able to redeploy
 # an older version of the application after the database has been migrated by a newer one.
@@ -193,7 +193,7 @@ flyway.url=
 # true if migrations should be grouped. false if they should be applied individually instead. (default: false)
 # flyway.group=
 
-# The username that will be recorded in the metadata table as having applied the migration.
+# The username that will be recorded in the schema history table as having applied the migration.
 # &lt;&lt;blank&gt;&gt; for the current database user of the connection. (default: &lt;&lt;blank&gt;&gt;).
 # flyway.installedBy=
 
