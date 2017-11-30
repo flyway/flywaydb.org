@@ -64,7 +64,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
     <tr>
         <td>table</td>
         <td>NO</td>
-        <td>schema_version</td>
+        <td>flyway_schema_history</td>
         <td>The name of Flyway&#x27;s schema history table.<br/>By
             default (single-schema mode) the schema history table is placed in the default schema for the connection
             provided by the datasource.<br/>When the <i>flyway.schemas</i> property is set (multi-schema mode),
@@ -348,7 +348,7 @@ flyway.dryRunOutput=/my/sql/dryrun-outputfile.sql</pre>
 
 Flyway {{ site.flywayVersion }} by Boxfuse
 
-Creating schema history table: "PUBLIC"."schema_version"
+Creating schema history table: "PUBLIC"."flyway_schema_history"
 Current schema version: null
 Migrating to version 1
 Migrating to version 1.1

@@ -21,7 +21,7 @@ subtitle: FAQ
         <li><a href="#repair">How do you repair the database after a failed migration?</a></li>
         <li><a href="#clean-objects">Why does clean drop individual objects instead of the schema itself?</a></li>
         <li><a href="#db-specific-sql">What is the best strategy for handling database-specific sql?</a></li>
-        <li><a href="#case-sensitive">Why is the schema_version table case-sensitive?</a></li>
+        <li><a href="#case-sensitive">Why is the flyway_schema_history table case-sensitive?</a></li>
         <li><a href="#hibernate-cdi">How can I integrate Flyway with Hibernate in a CDI environment?</a></li>
     </ul>
 
@@ -129,10 +129,10 @@ subtitle: FAQ
 
     <p>Schema foo: </p><pre class="prettyprint">locations = /sql/foo
 schemas = foo
-table = schema_version</pre>
+table = flyway_schema_history</pre>
     <p>Schema bar: </p><pre class="prettyprint">locations = /sql/bar
 schemas = bar
-table = schema_version</pre>
+table = flyway_schema_history</pre>
 
     <h2 id="osgi">Does Flyway work with OSGI?</h2>
 
@@ -192,9 +192,9 @@ table = schema_version</pre>
         performance, but on the other hand you also eliminate another difference (and potential source of errors)
         between the environments.</p>
 
-    <h2 id="case-sensitive">Why is the schema_version table case-sensitive?</h2>
+    <h2 id="case-sensitive">Why is the flyway_schema_history table case-sensitive?</h2>
 
-    <p>The schema_version is case-sensitive due to the quotes used in its creation script. This allows for characters not
+    <p>The flyway_schema_history is case-sensitive due to the quotes used in its creation script. This allows for characters not
         supported in identifiers otherwise.</p>
 
     <p>The name (and case) can be configured through the <code>flyway.table</code> property.</p>

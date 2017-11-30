@@ -10,7 +10,7 @@ subtitle: Release Notes
 <div class="release">
     <h2 id="unreleased">Flyway 5.0.0 (not yet released)</h2>
 
-    <p><strong>Important note for users upgrading from Flyway 3.x:</strong> This release no longer supports a metadata
+    <p><strong>Important note for users upgrading from Flyway 3.x:</strong> This release no longer supports a schema history
     table upgrade from Flyway 3.x. You must upgrade to Flyway 4.2.0 first before upgrading to Flyway 5.0.0.</p>
 
     <p><strong>Important note for EnterpriseDB, Vertica, SolidDB, Phoenix and Greenplum:</strong>
@@ -148,6 +148,10 @@ subtitle: Release Notes
         <li>
             <a href="https://github.com/flyway/flyway/issues/1824">Issue 1824</a>
             Flyway Command-line now ships with SQLite 3.20.1
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1848">Issue 1848</a>
+            The default for flyway.table has been changed from schema_version to flyway_schema_history
         </li>
     </ul>
 
