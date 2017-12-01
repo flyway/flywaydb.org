@@ -99,10 +99,14 @@ Migrates the schema to the latest version. Flyway will create the schema history
         <td>The file name separator for Sql migrations</td>
     </tr>
     <tr>
-        <td>sqlMigrationSuffix</td>
+        <td>sqlMigrationSuffixes</td>
         <td>NO</td>
         <td>.sql</td>
-        <td>The file name suffix for Sql migrations</td>
+        <td><p>The file name suffixes for SQL migrations.</p>
+            <p>SQL migrations have the following file name structure: prefixVERSIONseparatorDESCRIPTIONsuffix ,
+                which using the defaults translates to V1_1__My_description.sql</p>
+            Multiple suffixes (like .sql,.pkg,.pkb) can be specified for easier compatibility with other tools such as
+            editors with specific file associations.</td>
     </tr>
     <tr>
         <td>mixed</td>
@@ -316,7 +320,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
     sqlMigrationPrefix = 'Migration-'
     repeatableSqlMigrationPrefix = 'RRR'
     sqlMigrationSeparator = '__'
-    sqlMigrationSuffix = '-OK.sql'
+    sqlMigrationSuffixes = ['.sql', '.pkg', '.pkb']
     encoding = 'ISO-8859-1'
     placeholderReplacement = true
     placeholders = [
