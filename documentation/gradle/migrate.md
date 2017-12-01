@@ -84,13 +84,26 @@ Migrates the schema to the latest version. Flyway will create the schema history
         <td>sqlMigrationPrefix</td>
         <td>NO</td>
         <td>V</td>
-        <td>The file name prefix for Sql migrations</td>
+        <td><p>The file name prefix for versioned SQL migrations.</p>
+            Versioned SQL migrations have the following file name structure: prefixVERSIONseparatorDESCRIPTIONsuffix ,
+                which using the defaults translates to V1.1__My_description.sql</td>
+    </tr>
+    <tr>
+        <td>undoSqlMigrationPrefix {% include pro.html %}</td>
+        <td>NO</td>
+        <td>U</td>
+        <td><p>The file name prefix for undo SQL migrations.</p>
+            <p>Undo SQL migrations are responsible for undoing the effects of the versioned migration with the same version.</p>
+            They have the following file name structure: prefixVERSIONseparatorDESCRIPTIONsuffix ,
+            which using the defaults translates to U1.1__My_description.sql</td>
     </tr>
     <tr>
         <td>repeatableSqlMigrationPrefix</td>
         <td>NO</td>
         <td>R</td>
-        <td>The file name prefix for repeatable Sql migrations</td>
+        <td><p>The file name prefix for repeatable SQL migrations.</p>
+            Repeatable SQL migrations have the following file name structure: prefixSeparatorDESCRIPTIONsuffix ,
+            which using the defaults translates to R__My_description.sql</td>
     </tr>
     <tr>
         <td>sqlMigrationSeparator</td>
@@ -318,6 +331,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
     table = 'schema_history'
     locations = ['classpath:migrations', 'classpath:db/pkg', 'filesystem:/sql-migrations']
     sqlMigrationPrefix = 'Migration-'
+    undoSqlMigrationPrefix = 'downgrade'
     repeatableSqlMigrationPrefix = 'RRR'
     sqlMigrationSeparator = '__'
     sqlMigrationSuffixes = ['.sql', '.pkg', '.pkb']

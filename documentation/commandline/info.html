@@ -89,13 +89,26 @@ subtitle: 'Command-line: info'
             <td>sqlMigrationPrefix</td>
             <td>NO</td>
             <td>V</td>
-            <td>The file name prefix for Sql migrations</td>
+            <td><p>The file name prefix for versioned SQL migrations.</p>
+                Versioned SQL migrations have the following file name structure: prefixVERSIONseparatorDESCRIPTIONsuffix ,
+                    which using the defaults translates to V1.1__My_description.sql</td>
+        </tr>
+        <tr>
+            <td>undoSqlMigrationPrefix {% include pro.html %}</td>
+            <td>NO</td>
+            <td>U</td>
+            <td><p>The file name prefix for undo SQL migrations.</p>
+                <p>Undo SQL migrations are responsible for undoing the effects of the versioned migration with the same version.</p>
+                They have the following file name structure: prefixVERSIONseparatorDESCRIPTIONsuffix ,
+                which using the defaults translates to U1.1__My_description.sql</td>
         </tr>
         <tr>
             <td>repeatableSqlMigrationPrefix</td>
             <td>NO</td>
             <td>R</td>
-            <td>The file name prefix for repeatable Sql migrations</td>
+            <td><p>The file name prefix for repeatable SQL migrations.</p>
+                Repeatable SQL migrations have the following file name structure: prefixSeparatorDESCRIPTIONsuffix ,
+                which using the defaults translates to R__My_description.sql</td>
         </tr>
         <tr>
             <td>sqlMigrationSeparator</td>
@@ -200,6 +213,7 @@ flyway.schemas=schema1,schema2,schema3
 flyway.table=schema_history
 flyway.locations=classpath:com.mycomp.migration,database/migrations,filesystem:/sql-migrations
 flyway.sqlMigrationPrefix=Migration-
+flyway.undoSqlMigrationPrefix=downgrade
 flyway.repeatableSqlMigrationPrefix=RRR
 flyway.sqlMigrationSeparator=__
 flyway.sqlMigrationSuffixes=.sql,.pkg,.pkb
