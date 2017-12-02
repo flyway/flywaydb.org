@@ -107,6 +107,7 @@ subtitle: Command-line
     </ul>
 
     <p>If your database is not listed here, you need to manually place your JDBC driver in the <code>drivers</code> directory.</p>
+    <p>Refer to the default configuration file located within the <code>conf</code> directory for example JDBC connection urls.</p>
 
     <h2>Configuration</h2>
 
@@ -138,6 +139,7 @@ flyway.url=jdbc:mydb://mydatabaseurl
 flyway.schemas=schema1,schema2
 flyway.placeholders.keyABC=valueXYZ</pre>
 
+    <p>To see the complete set of flyway configuration options please refer to the <i>flyway.conf</i> configuration file located in the <code>conf</code> directory.</p>
     <h3>Command-line parameters</h3>
     <pre class="console"><span>&gt;</span> flyway -user=myuser -schemas=schema1,schema2 -placeholders.keyABC=valueXYZ migrate</pre>
     <h3>Overriding order</h3>
