@@ -22,11 +22,12 @@ title: Documentation
 <p>Flyway is an open-source database migration tool. It strongly favors simplicity and convention over
     configuration.</p>
 
-<p>It is based around just 6 basic commands:
+<p>It is based around just 7 basic commands:
     <a href="/documentation/command/migrate">Migrate</a>,
     <a href="/documentation/command/clean">Clean</a>,
     <a href="/documentation/command/info">Info</a>,
     <a href="/documentation/command/validate">Validate</a>,
+    <a href="/documentation/command/undo">Undo</a>,
     <a href="/documentation/command/baseline">Baseline</a> and
     <a href="/documentation/command/repair">Repair</a>.
 </p>
