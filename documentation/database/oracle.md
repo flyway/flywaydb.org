@@ -31,7 +31,9 @@ All editions are supported, including XE.
 </tr>
 <tr>
 <th>URL format</th>
-<td><code>jdbc:oracle:thin:@//<i>host</i>:<i>port</i>/<i>service</i></code></td>
+<td><code>jdbc:oracle:thin:@//<i>host</i>:<i>port</i>/<i>service</i></code><br>
+<code>jdbc:oracle:thin:@<i>tns_entry</i></code> *
+</td>
 </tr>
 <tr>
 <th>Ships with Flyway Command-line</th>
@@ -46,6 +48,8 @@ All editions are supported, including XE.
 <td><code>oracle.jdbc.OracleDriver</code></td>
 </tr>
 </table>
+
+\* `TNS_ADMIN` environment variable must point to the directory of where `tnsnames.ora` resides
 
 ## SQL Script Syntax
 
