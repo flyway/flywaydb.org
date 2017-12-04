@@ -1,22 +1,18 @@
 ---
 layout: maven
-pill: migrate
-subtitle: 'mvn flyway:migrate'
+pill: undo
+subtitle: 'mvn flyway:undo'
 ---
-# Maven Goal: Migrate
+# Maven Goal: Undo
+{% include pro.html %}
 
-Migrates the schema to the latest version. Flyway will create the schema history table automatically if it doesn't
-    exist.
+[Undoes](/documentation/command/undo) the most recently applied versioned migration.
 
-<a href="/documentation/command/migrate"><img src="/assets/balsamiq/command-migrate.png" alt="migrate"></a>
-
-## Default Phase
-
-- pre-integration-test
+<a href="/documentation/command/undo"><img src="/assets/balsamiq/command-undo.png" alt="undo"></a>
 
 ## Usage
 
-<pre class="console">&gt; mvn flyway:migrate</pre>
+<pre class="console">&gt; mvn flyway:undo</pre>
 
 ## Configuration
 
@@ -104,21 +100,13 @@ Migrates the schema to the latest version. Flyway will create the schema history
                 which using the defaults translates to V1.1__My_description.sql</td>
     </tr>
     <tr>
-        <td>undoSqlMigrationPrefix {% include pro.html %}</td>
+        <td>undoSqlMigrationPrefix</td>
         <td>NO</td>
         <td>U</td>
         <td><p>The file name prefix for undo SQL migrations.</p>
             <p>Undo SQL migrations are responsible for undoing the effects of the versioned migration with the same version.</p>
             They have the following file name structure: prefixVERSIONseparatorDESCRIPTIONsuffix ,
             which using the defaults translates to U1.1__My_description.sql</td>
-    </tr>
-    <tr>
-        <td>repeatableSqlMigrationPrefix</td>
-        <td>NO</td>
-        <td>R</td>
-        <td><p>The file name prefix for repeatable SQL migrations.</p>
-            Repeatable SQL migrations have the following file name structure: prefixSeparatorDESCRIPTIONsuffix ,
-            which using the defaults translates to R__My_description.sql</td>
     </tr>
     <tr>
         <td>sqlMigrationSeparator</td>
@@ -210,42 +198,8 @@ Migrates the schema to the latest version. Flyway will create the schema history
     <tr>
         <td>target</td>
         <td>NO</td>
-        <td><i>latest version</i></td>
-        <td>The target version up to which Flyway should run
-            migrations. Migrations with a higher version number will not be applied. The string 'current' will be
-            interpreted as MigrationVersion.CURRENT, a placeholder for the latest version that has been applied to the
-            database.
-        </td>
-    </tr>
-    <tr>
-        <td>outOfOrder</td>
-        <td>NO</td>
-        <td>false</td>
-        <td>Allows migrations to be run "out of order".
-            <p>If you already have versions 1 and 3 applied, and now a version 2 is found,
-                it will be applied too instead of being ignored.</p>
-        </td>
-    </tr>
-    <tr>
-        <td>validateOnMigrate</td>
-        <td>NO</td>
-        <td>true</td>
-        <td>Whether to automatically call validate or not when running migrate.<br/>
-            For each sql migration a CRC32 checksum is calculated
-            when the sql script is executed. The validate mechanism checks if the sql migration in the classpath
-            still has the same checksum as the sql migration already executed in the database.<br/></td>
-    </tr>
-    <tr id="cleanOnValidationError">
-        <td>cleanOnValidationError</td>
-        <td>NO</td>
-        <td>false</td>
-        <td>Whether to automatically call clean or not when a validation error occurs.<br/><br/>
-            This is exclusively intended as a convenience for development. Even tough we
-            strongly recommend not to change migration scripts once they have been checked into SCM and run, this
-            provides a way of dealing with this case in a smooth manner. The database will be wiped clean
-            automatically, ensuring that the next migration will bring you back to the state checked into
-            SCM.<br/><br/><strong>Warning ! Do not enable in production !</strong>
-        </td>
+        <td><i>previous version</i></td>
+        <td>The target version up to which Flyway should undo migrations. Migrations with a lower version number will be ignored.</td>
     </tr>
     <tr>
         <td>ignoreMissingMigrations</td>
@@ -273,41 +227,6 @@ Migrates the schema to the latest version. Flyway will create the schema history
             an older version of the application after the database has been migrated by a newer one.</td>
     </tr>
     <tr>
-        <td>cleanDisabled</td>
-        <td>NO</td>
-        <td>false</td>
-        <td>Whether to disable clean. This is especially useful for production environments where running clean can be quite a career limiting move.</td>
-    </tr>
-    <tr>
-        <td>baselineOnMigrate</td>
-        <td>NO</td>
-        <td>false</td>
-        <td>Whether to automatically call baseline when migrate is executed against a non-empty schema with no metadata
-            table.
-            This schema will then be baselined with the <code>baselineVersion</code> before executing the migrations.
-            Only migrations above <code>baselineVersion</code> will then be applied.<br/>
-
-            <p>This is useful for initial Flyway production deployments on projects with an existing DB.</p>
-
-            <p>Be careful when enabling this as it removes the safety net that ensures Flyway does not migrate the wrong
-                database in case of a configuration mistake!</p>
-        </td>
-    </tr>
-    <tr>
-        <td>baselineVersion</td>
-        <td>NO</td>
-        <td>1</td>
-        <td>The version to tag an existing schema with when executing baseline</td>
-    </tr>
-    <tr>
-        <td>baselineDescription</td>
-        <td>NO</td>
-        <td>
-            <nobr>&lt;&lt; Flyway Baseline &gt;&gt;</nobr>
-        </td>
-        <td>The description to tag an existing schema with when executing baseline</td>
-    </tr>
-    <tr>
         <td>installedBy</td>
         <td>NO</td>
         <td><i>Current database user</i></td>
@@ -328,7 +247,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
             flyway.encoding property, which is UTF-8 by default. Relative paths are relative to the POM.</td>
     </tr>
     <tr>
-        <td>errorHandlers {% include pro.html %}</td>
+        <td>errorHandlers</td>
         <td>NO</td>
         <td><i>none</i></td>
         <td>The fully qualified class names of handlers for errors and warnings that occur during
@@ -339,7 +258,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
            </td>
     </tr>
     <tr>
-        <td>dryRunOutput {% include pro.html %}</td>
+        <td>dryRunOutput</td>
         <td>NO</td>
         <td><i>Execute directly against the database</i></td>
         <td>The file where to output the SQL statements of a migration dry run. If the file specified is in a non-existent
@@ -368,7 +287,6 @@ Migrates the schema to the latest version. Flyway will create the schema history
     &lt;/locations&gt;
     &lt;sqlMigrationPrefix&gt;Migration-&lt;/sqlMigrationPrefix&gt;
     &lt;undoSqlMigrationPrefix&gt;downgrade&lt;/undoSqlMigrationPrefix&gt;
-    &lt;repeatableSqlMigrationPrefix&gt;RRR&lt;/repeatableSqlMigrationPrefix&gt;
     &lt;sqlMigrationSeparator&gt;__&lt;/sqlMigrationSeparator&gt;
     &lt;sqlMigrationSuffixes&gt;
         &lt;sqlMigrationSuffix&gt;.sql&lt;/sqlMigrationSuffix&gt;
@@ -394,17 +312,10 @@ Migrates the schema to the latest version. Flyway will create the schema history
     &lt;/callbacks&gt;
     &lt;skipDefaultCallbacks&gt;false&lt;/skipDefaultCallbacks&gt;
     &lt;target&gt;1.1&lt;/target&gt;
-    &lt;outOfOrder&gt;false&lt;/outOfOrder&gt;
-    &lt;validateOnMigrate&gt;true&lt;/validateOnMigrate&gt;
-    &lt;cleanOnValidationError&gt;false&lt;/cleanOnValidationError&gt;
     &lt;mixed&gt;false&lt;/mixed&gt;
     &lt;group&gt;false&lt;/group&gt;
     &lt;ignoreMissingMigrations&gt;false&lt;/ignoreMissingMigrations&gt;
     &lt;ignoreFutureMigrations&gt;false&lt;/ignoreFutureMigrations&gt;
-    &lt;cleanDisabled&gt;false&lt;/cleanDisabled&gt;
-    &lt;baselineOnMigrate&gt;false&lt;/baselineOnMigrate&gt;
-    &lt;baselineVersion&gt;5&lt;/baselineVersion&gt;
-    &lt;baselineDescription&gt;Let's go!&lt;/baselineDescription&gt;
     &lt;installedBy&gt;my-user&lt;/installedBy&gt;
     &lt;skip&gt;false&lt;/skip&gt;
     &lt;configFiles&gt;
@@ -422,18 +333,16 @@ Migrates the schema to the latest version. Flyway will create the schema history
 The new database version number is exposed in the `flyway.current` Maven property.
 
 ## Sample output
-<pre class="console">&gt; mvn compile flyway:migrate
+<pre class="console">&gt; mvn compile flyway:undo
 
 [INFO] [compiler:compile {execution: default-compile}]
 [INFO] Nothing to compile - all classes are up to date
 [INFO] [flyway:migrate {execution: default-cli}]
-[INFO] Current schema version: 0
-[INFO] Migrating to version 1
-[INFO] Migrating to version 1.1
-[INFO] Migrating to version 1.2
-[INFO] Migrating to version 1.3
-[INFO] Successfully applied 4 migrations (execution time 00:00.091s).</pre>
+[INFO] Database: jdbc:h2:file:C:\Programs\flyway-0-SNAPSHOT\flyway.db (H2 1.3)
+[INFO] Current version of schema "PUBLIC": 1
+[INFO] Undoing migration of schema "PUBLIC" to version 1 - First
+[INFO] Successfully undid 1 migration to schema "PUBLIC" (execution time 00:00.024s).</pre>
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/maven/clean">Maven: clean <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/maven/baseline">Maven: baseline <i class="fa fa-arrow-right"></i></a>
 </p>

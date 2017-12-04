@@ -9,7 +9,7 @@ subtitle: FAQ
         <li><a href="#defect">I found a defect. Where should I report it?</a></li>
         <li><a href="#feature-request">I have a feature request. Where should I submit it?</a></li>
         <li><a href="#question">I have a question. Where can I ask it?</a></li>
-        <li><a href="#downgrade">What about downgrade scripts/downward migrations?</a></li>
+        <li><a href="#downgrade">Does Flyway support undo/downgrade/downward migrations?</a></li>
         <li><a href="#hot-fixes">What is the best strategy for dealing with hot fixes?</a></li>
         <li><a href="#parallel">Can multiple nodes migrate in parallel?</a></li>
         <li><a href="#rollback">Does Flyway perform a roll back if a migration fails?</a></li>
@@ -43,30 +43,9 @@ subtitle: FAQ
         <a class="stackoverflow-tag" href="http://stackoverflow.com/questions/tagged/flyway">flyway</a> tag.
     </p>
 
-    <h2 id="downgrade">What about downgrade scripts/downward migrations?</h2>
+    <h2 id="downgrade">What about undo/downgrade/downward migrations?</h2>
 
-    <p><strong>Flyway does NOT support downgrade scripts</strong>.<br/> While the idea of downgrade scripts
-        (popularized by Rails Migrations) is a nice one in theory, unfortunately it breaks down in practice. As soon as
-        you have destructive changes (drop, delete, truncate, ...), you start getting into trouble. And even if you don&#x27;t,
-        you end up creating home-made alternatives for restoring backups, which need to be properly tested as well.</p>
-
-    <p><strong>Downgrade scripts assume the whole migration failed</strong>.<br/> A migration can fail at
-        any point. If you have 10 statements, it is possible for the 1st, the 5th, the 7th or the 10th to fail. There is
-        simply no way to know in advance. Downgrade scripts are written to roll back an entire migration. This renders
-        them effectively useless, even for non-destructive changes.</p>
-
-    <p><strong>Maintain backwards compatibility
-        between the DB and all versions of the code currently deployed in production</strong>.<br/> This way a
-        failed migration is not a disaster. The old version of the application is still compatible with the DB, so you
-        can simply roll back the application code, investigate, and take corrective measures.</p>
-
-    <p><strong>A much
-        better solution is a proper, well tested, backup and restore strategy</strong>.<br/> It is independent
-        of the database structure, and once it is tested and proven to work, no migration script can break it. For
-        optimal performance, and if your infrastructure supports this, we recommend using the <strong>snapshot
-            technology of your underlying storage solution</strong>. Especially for larger data volumes, this can be
-        <strong>several orders of magnitude faster</strong> than traditional backups and restores!
-    </p>
+    <p>Yes, Flyway does support <a href="/documentation/command/undo">undo migrations</a>.</p>
 
     <h2 id="hot-fixes">What is the best strategy for dealing with hot fixes?</h2>
 

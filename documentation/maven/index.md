@@ -45,6 +45,10 @@ Enterprise Maven plugin also supports **Java 6** and **Java 7**.
         <td>Validates the applied migrations against the ones available on the classpath</td>
     </tr>
     <tr>
+        <td><a href="/documentation/maven/undo">undo</a> {% include pro.html %}</td>
+        <td>Undoes the most recently applied versioned migration</td>
+    </tr>
+    <tr>
         <td><a href="/documentation/maven/baseline">baseline</a></td>
         <td>Baselines an existing database, excluding all migrations up to and including baselineVersion</td>
     </tr>
@@ -124,6 +128,17 @@ For storing the database user and password, Maven `settings.xml` files can also 
 
 Both regular and encrypted settings files are supported.
 
+### Environment Variables
+
+To make it ease to work with cloud and containerized environments, Flyway also supports configuration via
+[environment variables](/documentation/envvars). Check out the [Flyway environment variable reference](/documentation/envvars) for details.
+
+### System properties
+
+Configuration can also be supplied directly via the command-line using JVM system properties:
+
+<pre class="console"><span>&gt;</span> mvn -Dflyway.user=myUser -Dflyway.schemas=schema1,schema2 -Dflyway.placeholders.keyABC=valueXYZ</pre>
+
 ### Config files
 
 [Config files](/documentaion/configfiles) are supported by the Flyway Maven plugin. If you are not familiar with them,
@@ -147,9 +162,9 @@ When set it will take preference over the command-line parameter.
 
 <pre class="console"><span>&gt;</span> export <strong>FLYWAY_CONFIG_FILES</strong>=path/to/myAlternativeConfig.conf,other.conf</pre>
 
-By default Flyway loads configuration files using UTF-8. To use an alternative encoding, use the command line parameter <code>-configFileEncoding=</code>
+By default Flyway loads configuration files using UTF-8. To use an alternative encoding, pass the system property <code>flyway.configFileEncoding</code>
     as follows:
-<pre class="console"><span>&gt;</span> mvn <strong>-DconfigFileEncoding=</strong>ISO-8859-1 flyway:migrate</pre>
+<pre class="console"><span>&gt;</span> mvn <strong>-Dflyway.configFileEncoding=</strong>ISO-8859-1 flyway:migrate</pre>
 
 This is also possible via the configuration section of the plugin or Maven properties, as described above.
 
@@ -157,17 +172,6 @@ Alternatively you can also use the `FLYWAY_CONFIG_FILE_ENCODING` environment var
     When set it will take preference over the command-line parameter.
 
 <pre class="console"><span>&gt;</span> export <strong>FLYWAY_CONFIG_FILE_ENCODING</strong>=ISO-8859-1</pre>
-
-### Environment Variables
-
-To make it ease to work with cloud and containerized environments, Flyway also supports configuration via
-[environment variables](/documentation/envvars). Check out the [Flyway environment variable reference](/documentation/envvars) for details.
-
-### System properties
-
-Finally configuration can also be supplied directly via the command-line using JVM system properties:
-
-<pre class="console"><span>&gt;</span> mvn -Dflyway.user=myUser -Dflyway.schemas=schema1,schema2 -Dflyway.placeholders.keyABC=valueXYZ</pre>
 
 ### Overriding order
 

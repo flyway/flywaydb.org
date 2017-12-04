@@ -1,25 +1,23 @@
 ---
-layout: commandLine
-pill: migrate
-subtitle: 'Command-line: migrate'
+layout: gradle
+pill: undo
+subtitle: 'gradle flywayUndo'
 ---
-# Command-line: migrate
+# Gradle Task: flywayUndo
+{% include pro.html %}
 
-Migrates the schema to the latest version. Flyway will create the schema history table automatically if it doesn't
-    exist.
+[Undoes](/documentation/command/undo) the most recently applied versioned migration.
 
-<a href="/documentation/command/migrate"><img src="/assets/balsamiq/command-migrate.png" alt="migrate"></a>
+<a href="/documentation/command/undo"><img src="/assets/balsamiq/command-undo.png" alt="undo"></a>
 
 ## Usage
+<pre class="console">&gt; gradle flywayUndo</pre>
 
-<pre class="console"><span>&gt;</span> flyway [options] migrate</pre>
-
-## Options
-
+## Configuration
 <table class="table table-bordered table-hover">
     <thead>
     <tr>
-        <th>Option</th>
+        <th>Parameter</th>
         <th>Required</th>
         <th>Default</th>
         <th>Description</th>
@@ -56,7 +54,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
         <td>schemas</td>
         <td>NO</td>
         <td><i>default schema of the connection</i></td>
-        <td>Comma-separated case-sensitive list of schemas managed by Flyway.<br/>
+        <td>Case-sensitive list of schemas managed by Flyway.<br/>
             The first schema in the list will be automatically set as the default one during
             the migration. It will also be the one containing the schema history table.
         </td>
@@ -71,20 +69,16 @@ Migrates the schema to the latest version. Flyway will create the schema history
             the schema history table is placed in the first schema of the list.
         </td>
     </tr>
-    <tr id="locations">
+    <tr>
         <td>locations</td>
         <td>NO</td>
-        <td><nobr>filesystem:<i>&lt;install-dir&gt;</i>/sql</nobr></td>
-        <td>Comma-separated list of locations to scan recursively for migrations. The location type is determined by its prefix.<br/>
-            Unprefixed locations or locations starting with <code>classpath:</code> point to a package on the classpath and may contain both sql and java-based migrations.<br/>
-            Locations starting with <code>filesystem:</code> point to a directory on the filesystem and may only contain sql migrations.
+        <td>filesystem:src/main/resources/db/migration</td>
+        <td>Locations to scan recursively for migrations. The location type is determined by its prefix.<br/>
+            Unprefixed locations or locations starting with <code>classpath:</code> point to a package on the
+            classpath and may contain both sql and java-based migrations.<br/>
+            Locations starting with <code>filesystem:</code> point to a directory on the filesystem and may only
+            contain sql migrations.
         </td>
-    </tr>
-    <tr id="jarDirs">
-        <td>jarDirs</td>
-        <td>NO</td>
-        <td><nobr><i>&lt;install-dir&gt;</i>/jars</nobr></td>
-        <td>Comma-separated list of directories containing JDBC drivers and Java-based migrations</td>
     </tr>
     <tr>
         <td>sqlMigrationPrefix</td>
@@ -95,21 +89,13 @@ Migrates the schema to the latest version. Flyway will create the schema history
                 which using the defaults translates to V1.1__My_description.sql</td>
     </tr>
     <tr>
-        <td>undoSqlMigrationPrefix {% include pro.html %}</td>
+        <td>undoSqlMigrationPrefix</td>
         <td>NO</td>
         <td>U</td>
         <td><p>The file name prefix for undo SQL migrations.</p>
             <p>Undo SQL migrations are responsible for undoing the effects of the versioned migration with the same version.</p>
             They have the following file name structure: prefixVERSIONseparatorDESCRIPTIONsuffix ,
             which using the defaults translates to U1.1__My_description.sql</td>
-    </tr>
-    <tr>
-        <td>repeatableSqlMigrationPrefix</td>
-        <td>NO</td>
-        <td>R</td>
-        <td><p>The file name prefix for repeatable SQL migrations.</p>
-            Repeatable SQL migrations have the following file name structure: prefixSeparatorDESCRIPTIONsuffix ,
-            which using the defaults translates to R__My_description.sql</td>
     </tr>
     <tr>
         <td>sqlMigrationSeparator</td>
@@ -121,11 +107,11 @@ Migrates the schema to the latest version. Flyway will create the schema history
         <td>sqlMigrationSuffixes</td>
         <td>NO</td>
         <td>.sql</td>
-        <td><p>Comma-separated list of file name suffixes for SQL migrations.</p>
+        <td><p>The file name suffixes for SQL migrations.</p>
             <p>SQL migrations have the following file name structure: prefixVERSIONseparatorDESCRIPTIONsuffix ,
                 which using the defaults translates to V1_1__My_description.sql</p>
             Multiple suffixes (like .sql,.pkg,.pkb) can be specified for easier compatibility with other tools such as
-                editors with specific file associations.</td>
+            editors with specific file associations.</td>
     </tr>
     <tr>
         <td>mixed</td>
@@ -152,7 +138,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
         <td>Whether placeholders should be replaced</td>
     </tr>
     <tr>
-        <td>placeholders.<i>name</i></td>
+        <td>placeholders</td>
         <td>NO</td>
         <td></td>
         <td>Placeholders to replace in Sql migrations</td>
@@ -166,14 +152,15 @@ Migrates the schema to the latest version. Flyway will create the schema history
     <tr>
         <td>placeholderSuffix</td>
         <td>NO</td>
-        <td>}</td>
+        <td>}
+        </td>
         <td>The suffix of every placeholder</td>
     </tr>
     <tr>
         <td>resolvers</td>
         <td>NO</td>
         <td></td>
-        <td>Comma-separated list of fully qualified class names of custom
+        <td>Fully qualified class names of custom
             <a href="/documentation/api/javadoc/org/flywaydb/core/api/resolver/MigrationResolver">MigrationResolver</a>
             implementations to be used in addition to the built-in ones for resolving Migrations to apply.</td>
     </tr>
@@ -187,7 +174,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
         <td>callbacks</td>
         <td>NO</td>
         <td></td>
-        <td>Comma-separated list of fully qualified class names of
+        <td>Fully qualified class names of
             <a href="/documentation/api/javadoc/org/flywaydb/core/api/callback/FlywayCallback">FlywayCallback</a>
             implementations to use to hook into the Flyway lifecycle.</td>
     </tr>
@@ -200,39 +187,8 @@ Migrates the schema to the latest version. Flyway will create the schema history
     <tr>
         <td>target</td>
         <td>NO</td>
-        <td><i>latest version</i></td>
-        <td>The target version up to which Flyway should consider migrations. Migrations with a higher version number will be ignored. The special value <code>current</code> designates the current version of the schema.
-        </td>
-    </tr>
-    <tr>
-        <td>outOfOrder</td>
-        <td>NO</td>
-        <td>false</td>
-        <td>Allows migrations to be run "out of order".
-            <p>If you already have versions 1 and 3 applied, and now a version 2 is found,
-                it will be applied too instead of being ignored.</p>
-        </td>
-    </tr>
-    <tr>
-        <td>validateOnMigrate</td>
-        <td>NO</td>
-        <td>true</td>
-        <td>Whether to automatically call validate or not when running migrate.<br/>
-            For each sql migration a CRC32 checksum is calculated
-            when the sql script is executed. The validate mechanism checks if the sql migration in the classpath
-            still has the same checksum as the sql migration already executed in the database.<br/></td>
-    </tr>
-    <tr>
-        <td>cleanOnValidationError</td>
-        <td>NO</td>
-        <td>false</td>
-        <td>Whether to automatically call clean or not when a validation error occurs.<br/><br/>
-            This is exclusively intended as a convenience for development. Even tough we
-            strongly recommend not to change migration scripts once they have been checked into SCM and run, this
-            provides a way of dealing with this case in a smooth manner. The database will be wiped clean
-            automatically, ensuring that the next migration will bring you back to the state checked into
-            SCM.<br/><br/><strong>Warning ! Do not enable in production !</strong>
-        </td>
+        <td><i>previous version</i></td>
+        <td>The target version up to which Flyway should undo migrations. Migrations with a lower version number will be ignored.</td>
     </tr>
     <tr>
         <td>ignoreMissingMigrations</td>
@@ -260,51 +216,16 @@ Migrates the schema to the latest version. Flyway will create the schema history
             an older version of the application after the database has been migrated by a newer one.</td>
     </tr>
     <tr>
-        <td>cleanDisabled</td>
-        <td>NO</td>
-        <td>false</td>
-        <td>Whether to disable clean. This is especially useful for production environments where running clean can be quite a career limiting move.</td>
-    </tr>
-    <tr>
-        <td>baselineOnMigrate</td>
-        <td>NO</td>
-        <td>false</td>
-        <td>Whether to automatically call baseline when migrate is executed against a non-empty schema with no metadata
-            table.
-            This schema will then be baselined with the <code>baselineVersion</code> before executing the migrations.
-            Only migrations above <code>baselineVersion</code> will then be applied.<br/>
-
-            <p>This is useful for initial Flyway production deployments on projects with an existing DB.</p>
-
-            <p>Be careful when enabling this as it removes the safety net that ensures Flyway does not migrate the wrong
-                database in case of a configuration mistake!</p>
-        </td>
-    </tr>
-    <tr>
-        <td>baselineVersion</td>
-        <td>NO</td>
-        <td>1</td>
-        <td>The version to tag an existing schema with when executing baseline</td>
-    </tr>
-    <tr>
-        <td>baselineDescription</td>
-        <td>NO</td>
-        <td>
-            <nobr>&lt;&lt; Flyway Baseline &gt;&gt;</nobr>
-        </td>
-        <td>The description to tag an existing schema with when executing baseline</td>
-    </tr>
-    <tr>
         <td>installedBy</td>
         <td>NO</td>
         <td><i>Current database user</i></td>
         <td>The username that will be recorded in the schema history table as having applied the migration</td>
     </tr>
     <tr>
-        <td>errorHandlers {% include pro.html %}</td>
+        <td>errorHandlers</td>
         <td>NO</td>
         <td><i>none</i></td>
-        <td>Comma-sparated list of fully qualified class names of handlers for errors and warnings that occur during
+        <td>The fully qualified class names of handlers for errors and warnings that occur during
          a migration. This can be used to customize Flyway's behavior by for example throwing another runtime exception,
           outputting a warning or suppressing the error instead of throwing a FlywayException. ErrorHandlers are invoked
            in order until one reports to have successfully handled the errors or warnings.
@@ -312,7 +233,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
            </td>
     </tr>
     <tr>
-        <td>dryRunOutput {% include pro.html %}</td>
+        <td>dryRunOutput</td>
         <td>NO</td>
         <td><i>Execute directly against the database</i></td>
         <td>The file where to output the SQL statements of a migration dry run. If the file specified is in a non-existent
@@ -324,56 +245,53 @@ Migrates the schema to the latest version. Flyway will create the schema history
 
 ## Sample configuration
 
-<pre class="prettyprint">flyway.driver=org.hsqldb.jdbcDriver
-flyway.url=jdbc:hsqldb:file:/db/flyway_sample
-flyway.user=SA
-flyway.password=mySecretPwd
-flyway.schemas=schema1,schema2,schema3
-flyway.table=schema_history
-flyway.locations=classpath:com.mycomp.migration,database/migrations,filesystem:/sql-migrations
-flyway.sqlMigrationPrefix=Migration-
-flyway.undoSqlMigrationPrefix=downgrade
-flyway.repeatableSqlMigrationPrefix=RRR
-flyway.sqlMigrationSeparator=__
-flyway.sqlMigrationSuffixes=.sql,.pkg,.pkb
-flyway.encoding=ISO-8859-1
-flyway.placeholderReplacement=true
-flyway.placeholders.aplaceholder=value
-flyway.placeholders.otherplaceholder=value123
-flyway.placeholderPrefix=#[
-flyway.placeholderSuffix=]
-flyway.resolvers=com.mycomp.project.CustomResolver,com.mycomp.project.AnotherResolver
-flyway.skipDefaultCallResolvers=false
-flyway.callbacks=com.mycomp.project.CustomCallback,com.mycomp.project.AnotherCallback
-flyway.skipDefaultCallbacks=false
-flyway.target=5.1
-flyway.outOfOrder=false
-flyway.validateOnMigrate=true
-flyway.cleanOnValidationError=false
-flyway.mixed=false
-flyway.group=false
-flyway.ignoreMissingMigrations=false
-flyway.ignoreFutureMigrations=false
-flyway.cleanDisabled=false
-flyway.baselineOnMigrate=false
-flyway.installedBy=my-user
-flyway.errorHandlers=com.mycomp.MyCustomErrorHandler,com.mycomp.AnotherErrorHandler
-flyway.dryRunOutput=/my/sql/dryrun-outputfile.sql</pre>
+<pre class="prettyprint">flyway {
+    driver = 'org.hsqldb.jdbcDriver'
+    url = 'jdbc:hsqldb:file:/db/flyway_sample;shutdown=true'
+    user = 'SA'
+    password = 'mySecretPwd'
+    schemas = ['schema1', 'schema2', 'schema3']
+    table = 'schema_history'
+    locations = ['classpath:migrations', 'classpath:db/pkg', 'filesystem:/sql-migrations']
+    sqlMigrationPrefix = 'Migration-'
+    undoSqlMigrationPrefix = 'downgrade'
+    sqlMigrationSeparator = '__'
+    sqlMigrationSuffixes = ['.sql', '.pkg', '.pkb']
+    encoding = 'ISO-8859-1'
+    placeholderReplacement = true
+    placeholders = [
+        'aplaceholder' : 'value',
+        'otherplaceholder' : 'value123'
+    ]
+    placeholderPrefix = '#['
+    placeholderSuffix = ']'
+    resolvers = ['com.mycompany.proj.CustomResolver', 'com.mycompany.proj.AnotherResolver']
+    skipDefaultResolvers = false
+    callbacks = ['com.mycompany.proj.CustomCallback', 'com.mycompany.proj.AnotherCallback']
+    skipDefaultCallbacks = false
+    target = '1.1'
+    mixed = false
+    group = false
+    ignoreMissingMigrations = false
+    ignoreFutureMigrations = false
+    installedBy = "my-user"
+    errorHandlers = ['com.mycomp.MyCustomErrorHandler', 'com.mycomp.AnotherErrorHandler']
+    dryRunOutput = '/my/sql/dryrun-outputfile.sql'
+}</pre>
 
 ## Sample output
+<pre class="console">&gt; gradle flywayMigrate -i
 
-<pre class="console">&gt; flyway migrate
+Database: jdbc:h2:file:C:\Programs\flyway-0-SNAPSHOT\flyway.db (H2 1.3)
+Current version of schema "PUBLIC": 1
+Undoing migration of schema "PUBLIC" to version 1 - First
+Successfully undid 1 migration to schema "PUBLIC" (execution time 00:00.024s).</pre>
 
-Flyway {{ site.flywayVersion }} by Boxfuse
+## Important Note
 
-Database: jdbc:h2:file:flyway.db (H2 1.3)
-Successfully validated 5 migrations (execution time 00:00.010s)
-Creating Schema History table: "PUBLIC"."flyway_schema_history"
-Current version of schema "PUBLIC": << Empty Schema >>
-Migrating schema "PUBLIC" to version 1 - First
-Migrating schema "PUBLIC" to version 1.1 - View
-Successfully applied 2 migrations to schema "PUBLIC" (execution time 00:00.030s).</pre>
+When using Spring JDBC migrations, you must declare a dependency on `org.springframework:spring-jdbc:${springVersion}`
+in Gradle's `buildScript` block to avoid being hit with a `java.lang.LinkageError`.
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/commandline/clean">Command-line: clean <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/gradle/baseline">Gradle: baseline <i class="fa fa-arrow-right"></i></a>
 </p>
