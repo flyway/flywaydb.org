@@ -95,6 +95,7 @@ The following commands are fully supported and can be used just like any regular
 - `EXECUTE`
 - `PROMPT`
 - `REMARK`
+- `SET NULL`
 - `SET SERVEROUTPUT OFF`
 - `SET SERVEROUTPUT ON`
 - `SHOW CON_ID`
