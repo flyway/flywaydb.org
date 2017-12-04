@@ -94,8 +94,14 @@
     line-height: 100%;
     display: block;
 }
-#big-sell p#worksOn i {
+#big-sell div#worksOn i {
     font-size: 16px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+#big-sell div#worksOn img {
+    margin-top: -4px;
+    height: 12px;
     padding-left: 3px;
     padding-right: 3px;
 }

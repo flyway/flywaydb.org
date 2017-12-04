@@ -13,10 +13,7 @@ into their applications nor having to install a build tool.
 
 <table class="table">
 <tr><td><i class="fa fa-windows"></i> Windows</td><td><a class="btn btn-primary btn-download" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-windows-x64.zip"><i class="fa fa-download"></i> flyway-commandline-{{site.flywayVersion}}-windows-x64.zip</a></td></tr>
-<tr><td><i class="fa fa-apple"></i> macOS</td><td><p><a class="btn btn-primary btn-download" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-macosx-x64.tar.gz"><i class="fa fa-download"></i> flyway-commandline-{{site.flywayVersion}}-macosx-x64.tar.gz</a></p>
-<p>or for Homebrew users:</p>
-<pre class="console"><span>$</span> brew install flyway</pre>
-</td></tr>
+<tr><td><i class="fa fa-apple"></i> macOS</td><td><a class="btn btn-primary btn-download" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-macosx-x64.tar.gz"><i class="fa fa-download"></i> flyway-commandline-{{site.flywayVersion}}-macosx-x64.tar.gz</a></td></tr>
 <tr><td><i class="fa fa-linux"></i> Linux</td><td><a class="btn btn-primary btn-download" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-linux-x64.tar.gz"><i class="fa fa-download"></i> flyway-commandline-{{site.flywayVersion}}-linux-x64.tar.gz</a></td></tr>
 <tr><td>All platforms</td><td>            <a href="https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}.zip">flyway-commandline-{{site.flywayVersion}}.zip
                                               (requires at Java 8 JRE)</a><br/>
@@ -35,6 +32,14 @@ The newly extracted directory contains the following structure:
 ![directory structure](/assets/balsamiq/CommandLineDirectoryStructure.png)
 
 Now simply add it to the `PATH` and the `flyway` command will be available from anywhere on your system.
+
+## Docker
+
+The Flyway command-line tool is also available from Docker Hub.
+
+<pre class="console"><span>&gt;</span> docker pull <strong>boxfuse/flyway</strong></pre>
+
+Go to Docker Hub for [detailed usage instructions](https://hub.docker.com/r/boxfuse/flyway/).
 
 ## Usage
 
