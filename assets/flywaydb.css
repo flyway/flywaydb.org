@@ -257,8 +257,23 @@ hr.soften {
     border-radius: 10px;
 }
 
-#download .checksum {
-    font-size: 10px;
+img.screenshot {
+    border: 1px #ccc dashed;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+
+#download-pricing {
+    text-align: center;
+}
+
+#download-pricing th {
+    text-align: center;
+    font-size: 18px;
+}
+
+#flyway-pro-license-modal {
+    text-align: left;
 }
 
 #downloadStatsBg {
@@ -450,6 +465,10 @@ hr.soften {
 }
 
 #menu .date {
+    font-size: 10px;
+}
+
+.note {
     font-size: 10px;
 }
 

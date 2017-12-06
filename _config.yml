@@ -1,3 +1,4 @@
 safe: true
-exclude: [.gitattributes, .gitignore, Flywaydb.org.iml, flywaydb.org.ipr, flywaydb.org.iws, README.md]
+future: true
+exclude: [.gitattributes, .gitignore, flywaydb.org.iml, flywaydb.org.ipr, flywaydb.org.iws, README.md, CNAME]
 flywayVersion: 5.0.0

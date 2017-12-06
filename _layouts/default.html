@@ -53,17 +53,14 @@
                 {% if layout.tab == 'getStarted' %} class="active" {% endif %}>
                 <a href="/getstarted">GET STARTED</a></li>
                 <li
+                {% if page.tab == 'download' %} class="active" {% endif %}>
+                <a href="/download">DOWNLOAD / PRICING</a></li>
+                <li
                 {% if layout.tab == 'documentation' %} class="active" {% endif %}>
                 <a href="/documentation">DOCUMENTATION</a></li>
                 <li
                 {% if layout.tab == 'blog' %} class="active" {% endif %}>
                 <a href="/blog">BLOG</a></li>
-                <li
-                {% if page.tab == 'support' %} class="active" {% endif %}>
-                <a href="/support">SUPPORT</a></li>
-                <li
-                {% if page.tab == 'about' %} class="active" {% endif %}>
-                <a href="/about">ABOUT</a></li>
                 <li><a href="https://twitter.com/flywaydb" style="padding-bottom: 7px"><i class="fa fa-twitter" style="font-size: 150%"></i></a></li>
                 <li><a href="https://github.com/flyway/flyway" style="padding-bottom: 7px"><i class="fa fa-github" style="font-size: 150%"></i></a></li>
             </ul>
@@ -74,7 +71,15 @@
 <div class="container">
 {% endif %}
 
+{% if page.cssid %}
+<div id="{{ page.cssid }}">
+{% endif %}
+
 {{ content }}
+
+{% if page.cssid %}
+</div>
+{% endif %}
 
 {% if page.tab != 'home' %}
 </div>
@@ -169,6 +174,15 @@
         $("pre.console span").html(function () {
             return $(this).html().replace("&gt;", "$");
         });
+    }
+
+    function hideAndDownload(id, url) {
+        $(id).modal('hide');
+
+        var link = document.createElement("a");
+        link.download = "data:text/html";
+        link.href = url;
+        link.click();
     }
 </script>
 <!-- Place this tag right after the last button or just before your close body tag. -->
