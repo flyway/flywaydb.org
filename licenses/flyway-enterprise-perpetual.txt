@@ -1,5 +1,5 @@
-End User License Agreement
-==========================
+Flyway Enterprise Perpetual License and Support Agreement
+=========================================================
 1.	Subject
 -----------
 Subject of this agreement are the conditions under which and the extent to which the end user (referred to as “Licensee” below) is granted the right to use the software specified in the License Certificate (referred to as “software” below) provided by Boxfuse GmbH, Baubergerstr. 59, Munich (referred to as “Licensor” below). Provisions in the License Certificate take precedence over provisions in this agreement.
