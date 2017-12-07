@@ -48,7 +48,7 @@ Choose your Flyway edition based on the features and support level you require
 <tr><td></td>
 <td></td>
 <td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-pro-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
-<td></td>
+<td><a class="btn btn-success btn-download" href="/download/enterprise"><strong><i class="fa fa-credit-card"></i> Buy now</strong></a></td>
 </tr>
 </table>
 
