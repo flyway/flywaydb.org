@@ -37,6 +37,22 @@ subtitle: Callbacks
             <td>After Migrate runs</td>
         </tr>
         <tr>
+            <td>beforeUndo {% include pro.html %}</td>
+            <td>Before Undo runs</td>
+        </tr>
+        <tr>
+            <td>beforeEachUndo {% include pro.html %}</td>
+            <td>Before every single migration during Undo</td>
+        </tr>
+        <tr>
+            <td>afterEachUndo {% include pro.html %}</td>
+            <td>After every single migration during Undo</td>
+        </tr>
+        <tr>
+            <td>afterUndo {% include pro.html %}</td>
+            <td>After Undo runs</td>
+        </tr>
+        <tr>
             <td>beforeClean</td>
             <td>Before Clean runs</td>
         </tr>
@@ -90,7 +106,7 @@ subtitle: Callbacks
 
     <p>Placeholder replacement works just like it does for <a href="/documentation/migration/sql">SQL migrations</a>.</p>
 
-    <p><strong>Note:</strong> Flyway will also honor any <code>sqlMigrationSuffix</code> you have configured, when scanning for SQL call callbacks.</p>
+    <p><strong>Note:</strong> Flyway will also honor any <code>sqlMigrationSuffixes</code> you have configured, when scanning for SQL call callbacks.</p>
 
     <h2>Java Callbacks</h2>
 

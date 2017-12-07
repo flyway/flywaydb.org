@@ -63,17 +63,17 @@ subtitle: 'mvn flyway:info'
             <td>NO</td>
             <td><i>default schema of the connection</i></td>
             <td>Case-sensitive list of schemas managed by Flyway.<br/>
-                The first schema will be the one containing the metadata table.
+                The first schema will be the one containing the schema history table.
             </td>
         </tr>
         <tr>
             <td>table</td>
             <td>NO</td>
-            <td>schema_version</td>
-            <td>The name of Flyway&#x27;s metadata table.<br/>By
-                default (single-schema mode) the metadata table is placed in the default schema for the connection
+            <td>flyway_schema_history</td>
+            <td>The name of Flyway&#x27;s schema history table.<br/>By
+                default (single-schema mode) the schema history table is placed in the default schema for the connection
                 provided by the datasource.<br/>When the <i>flyway.schemas</i> property is set (multi-schema mode),
-                the metadata table is placed in the first schema of the list.
+                the schema history table is placed in the first schema of the list.
             </td>
         </tr>
         <tr>
@@ -91,13 +91,26 @@ subtitle: 'mvn flyway:info'
             <td>sqlMigrationPrefix</td>
             <td>NO</td>
             <td>V</td>
-            <td>The file name prefix for Sql migrations</td>
+            <td><p>The file name prefix for versioned SQL migrations.</p>
+                Versioned SQL migrations have the following file name structure: prefixVERSIONseparatorDESCRIPTIONsuffix ,
+                which using the defaults translates to V1.1__My_description.sql</td>
+        </tr>
+        <tr>
+            <td>undoSqlMigrationPrefix {% include pro.html %}</td>
+            <td>NO</td>
+            <td>U</td>
+            <td><p>The file name prefix for undo SQL migrations.</p>
+                <p>Undo SQL migrations are responsible for undoing the effects of the versioned migration with the same version.</p>
+                They have the following file name structure: prefixVERSIONseparatorDESCRIPTIONsuffix ,
+                which using the defaults translates to U1.1__My_description.sql</td>
         </tr>
         <tr>
             <td>repeatableSqlMigrationPrefix</td>
             <td>NO</td>
             <td>R</td>
-            <td>The file name prefix for repeatable Sql migrations</td>
+            <td><p>The file name prefix for repeatable SQL migrations.</p>
+                Repeatable SQL migrations have the following file name structure: prefixSeparatorDESCRIPTIONsuffix ,
+                which using the defaults translates to R__My_description.sql</td>
         </tr>
         <tr>
             <td>sqlMigrationSeparator</td>
@@ -106,10 +119,14 @@ subtitle: 'mvn flyway:info'
             <td>The file name separator for Sql migrations</td>
         </tr>
         <tr>
-            <td>sqlMigrationSuffix</td>
+            <td>sqlMigrationSuffixes</td>
             <td>NO</td>
             <td>.sql</td>
-            <td>The file name suffix for Sql migrations</td>
+            <td><p>The file name suffixes for SQL migrations.</p>
+                <p>SQL migrations have the following file name structure: prefixVERSIONseparatorDESCRIPTIONsuffix ,
+                    which using the defaults translates to V1_1__My_description.sql</p>
+                Multiple suffixes (like .sql,.pkg,.pkb) can be specified for easier compatibility with other tools such as
+                editors with specific file associations.</td>
         </tr>
         <tr>
             <td>encoding</td>
@@ -192,10 +209,10 @@ subtitle: 'mvn flyway:info'
             <td>Skips the execution of the plugin for this module</td>
         </tr>
         <tr>
-            <td>configFile</td>
+            <td>configFiles</td>
             <td>NO</td>
-            <td>flyway.properties</td>
-            <td>Properties file from which to load the Flyway configuration. The names of the individual properties match the ones you would
+            <td></td>
+            <td>Additional files from which to load the Flyway configuration. The names of the individual properties match the ones you would
                 use as Maven or System properties. The encoding of the file must be the same as the encoding defined with the
                 flyway.encoding property, which is UTF-8 by default. Relative paths are relative to the POM.</td>
         </tr>
@@ -220,9 +237,14 @@ subtitle: 'mvn flyway:info'
         &lt;location&gt;filesystem:/sql-migrations&lt;/location&gt;
     &lt;/locations&gt;
     &lt;sqlMigrationPrefix&gt;Migration-&lt;/sqlMigrationPrefix&gt;
+    &lt;undoSqlMigrationPrefix&gt;downgrade&lt;/undoSqlMigrationPrefix&gt;
     &lt;repeatableSqlMigrationPrefix&gt;RRR&lt;/repeatableSqlMigrationPrefix&gt;
     &lt;sqlMigrationSeparator&gt;__&lt;/sqlMigrationSeparator&gt;
-    &lt;sqlMigrationSuffix&gt;-OK.sql&lt;/sqlMigrationSuffix&gt;
+    &lt;sqlMigrationSuffixes&gt;
+        &lt;sqlMigrationSuffix&gt;.sql&lt;/sqlMigrationSuffix&gt;
+        &lt;sqlMigrationSuffix&gt;.pkg&lt;/sqlMigrationSuffix&gt;
+        &lt;sqlMigrationSuffix&gt;.pkb&lt;/sqlMigrationSuffix&gt;
+    &lt;/sqlMigrationSuffixes&gt;
     &lt;encoding&gt;ISO-8859-1&lt;/encoding&gt;
     &lt;placeholderReplacement&gt;true&lt;/placeholderReplacement&gt;
     &lt;placeholders&gt;
@@ -244,7 +266,10 @@ subtitle: 'mvn flyway:info'
     &lt;target&gt;1.1&lt;/target&gt;
     &lt;outOfOrder&gt;false&lt;/outOfOrder&gt;
     &lt;skip&gt;false&lt;/skip&gt;
-    &lt;configFile&gt;myConfig.properties&lt;/configFile&gt;
+    &lt;configFiles&gt;
+        &lt;configFile&gt;myConfig.conf&lt;/configFile&gt;
+        &lt;configFile&gt;other.conf&lt;/configFile&gt;
+    &lt;/configFiles&gt;
 &lt;/configuration&gt;</pre>
 
     <h2>Sample output</h2>

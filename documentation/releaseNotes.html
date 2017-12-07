@@ -8,12 +8,56 @@ subtitle: Release Notes
 <p>Thank you all for reporting all these issues and contributing fixes!</p>
 
 <div class="release">
-    <h2 id="unreleased">Flyway 5.0.0 (not yet released)</h2>
+    <h2 id="5.0.1">Flyway 5.0.1 (2017-12-07)</h2>
+
+    <p>This release is identical to Flyway 5.0.0. It only adds the platform specific distribution of Flyway Command-line
+    which were missing in Flyway 5.0.0.</p>
+</div>
+
+
+<div class="release">
+    <h2 id="5.0.0">Flyway 5.0.0 (2017-12-07)</h2>
+
+    <p><strong>Important note for users upgrading from Flyway 3.x:</strong> This release no longer supports a schema history
+    table upgrade from Flyway 3.x. You must upgrade to Flyway 4.2.0 first before upgrading to Flyway 5.0.0.</p>
+
+    <p><strong>Important note for EnterpriseDB, Vertica, SolidDB, Phoenix and Greenplum:</strong>
+        Support for these databases has been kept back and will be integrated later in the Flyway 5.0 series.
+        You can keep using Flyway 4.2.0 until then.</p>
+
     <h3>New features</h3>
     <ul>
         <li>
+            <a href="https://github.com/flyway/flyway/issues/87">Issue 87</a>
+            Output to sql file instead of committing against the DB
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/109">Issue 109</a>
+            Undo migrations
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/797">Issue 797</a>
+            Official Flyway Dockerfile
+        </li>
+        <li>
             <a href="https://github.com/flyway/flyway/issues/809">Issue 809</a>
             Promote internal logging wrapper to external API
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/944">Issue 944</a>
+            Allow to use paths relative to flyway.conf location
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1562">Issue 1562</a>
+            Add flyway.configFiles support to Gradle plugin
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1624">Issue 1624</a>
+            Multiple configuration files
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/pull/1663">Issue 1663</a>
+            Support TestContainers JDBC connection string
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/1693">Issue 1693</a>
@@ -24,24 +68,101 @@ subtitle: Release Notes
             Command-line: allow setting system properties in config file
         </li>
         <li>
+            <a href="https://github.com/flyway/flyway/issues/1727">Issue 1727</a>
+            Command-line: JAVA_ARGS environment variable support
+        </li>
+        <li>
             <a href="https://github.com/flyway/flyway/pull/1728">Issue 1728</a>
             Command-line: Use Windows CLASSPATH environment variable
         </li>
         <li>
+            <a href="https://github.com/flyway/flyway/issues/1733">Issue 1733</a>
+            Redshift JDBC 4.2 driver support
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1742">Issue 1742</a>
+            Allow Multiple Suffixes/File Extensions
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1754">Issue 1754</a>
+            Allow injecting a complete Configuration
+        </li>
+        <li>
             <a href="https://github.com/flyway/flyway/issues/1760">Issue 1760</a>
             CockroachDB support
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1777">Issue 1777</a>
+            Sybase ASE jConnect JDBC driver support
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1804">Issue 1804</a>
+            Repair: also correct migration type
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1806">Issue 1806</a>
+            Oracle: Automatically enable support TNSNames aliases if TNS_ADMIN is set
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1819">Issue 1819</a>
+            Flyway Command-line now ships with the official Microsoft JDBC driver for SQL Server
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1845">Issue 1845</a>
+            Oracle SQL*Plus commands support
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1849">Issue 1849</a>
+            Show output from select statements in console
         </li>
     </ul>
 
     <h3>Incompatible changes</h3>
     <ul>
         <li>
+            <a href="https://github.com/flyway/flyway/issues/109">Issue 109</a>
+            The <code>FlywayCallback</code> interface has 4 new methods:
+            <code>beforeUndo</code>, <code>beforeEachUndo</code>, <code>afterEachUndo</code> and <code>afterUndo</code>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/109">Issue 109</a>
+            The <code>MigrationInfoProvider</code> interface has 1 new method: <code>isUndo</code>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/109">Issue 109</a>
+            The <code>MigrationState</code> enum has 2 new elements: <code>AVAILABLE</code> and <code>UNDONE</code>
+        </li>
+        <li>
             <a href="https://github.com/flyway/flyway/issues/1402">Issue 1402</a>
             Maven 3 is now the new minimum supported version
         </li>
         <li>
+            <a href="https://github.com/flyway/flyway/issues/1429">Issue 1429</a>
+            Gradle 3.0 is now the new minimum supported version
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1577">Issue 1577</a>
+            Flyway now fails on incorrect parameter instead of showing a warning
+        </li>
+        <li>
             <a href="https://github.com/flyway/flyway/issues/1692">Issue 1692</a>
             Java 8 is now the new minimum supported version
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1818">Issue 1818</a>
+            Sybase ASE 15.7 is now the new minimum supported version
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1820">Issue 1820</a>
+            DB2 z/OS support has been discontinued
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1827">Issue 1827</a>
+            Redshift users must now connect using the Redshift driver. Connections with the PostgreSQL driver are no longer supported.
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1841">Issue 1841</a>
+            MigrationState.SUPERSEEDED has now been renamed to SUPERSEDED
         </li>
     </ul>
 
@@ -49,23 +170,77 @@ subtitle: Release Notes
     <ul>
         <li>
             <a href="https://github.com/flyway/flyway/pull/1752">Issue 1752</a>
-            Flyway now ships with MariaDB JDBC driver 2.1.0
+            Flyway Command-line now ships with MariaDB JDBC driver 2.2.0
             <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/1752"><i
                     class="fa fa-mail-reply"></i> Pull Request</a></span>
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/1756">Issue 1756</a>
-            Flyway now ships with PostgreSQL JDBC driver 42.1.4
+            Flyway Command-line now ships with PostgreSQL JDBC driver 42.1.4
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1822">Issue 1822</a>
+            Flyway Command-line now ships with H2 1.4.196
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1823">Issue 1823</a>
+            Flyway Command-line now ships with HSQLDB 2.4.0
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1824">Issue 1824</a>
+            Flyway Command-line now ships with SQLite 3.20.1
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1848">Issue 1848</a>
+            The default for flyway.table has been changed from schema_version to flyway_schema_history
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1850">Issue 1850</a>
+            The Flyway Command-line platform-specific archives now ship with JRE 8u152
         </li>
     </ul>
 
     <h3>Bug fixes</h3>
     <ul>
         <li>
+            <a href="https://github.com/flyway/flyway/issues/183">Issue 183</a>
+            Multiline RULE declarations are not parsed correctly
+        </li>
+        <li>
             <a href="https://github.com/flyway/flyway/issues/1167">Issue 1167</a>
             Clean on DB2 functions or procedures fails when two procedures have the same name
             <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/1750"><i
                     class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1305">Issue 1305</a>
+            Maven warning when using Flyway plugin with parallel builds
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1336">Issue 1336</a>
+            State column contents truncated in Info command
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1361">Issue 1361</a>
+            Clean fails to DROP AGGREGATE in SQL Server
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1426">Issue 1426</a>
+            SQL Server: ALTER DATABASE ... SET SINGLE_USER not supported
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1550">Issue 1550</a>
+            Numerous flaws in Clean implementation for Oracle DB
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/1601"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1554">Issue 1554</a>
+            validate does not respect target
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1575">Issue 1575</a>
+            Command info: Comparison method violates its general contract
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/pull/1601">Issue 1601</a>
@@ -74,13 +249,51 @@ subtitle: Release Notes
                     class="fa fa-mail-reply"></i> Pull Request</a></span>
         </li>
         <li>
+            <a href="https://github.com/flyway/flyway/issues/1620">Issue 1620</a>
+            Flyway logs passwords at INFO level
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1625">Issue 1625</a>
+            Callbacks are added and executed multiple times
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1627">Issue 1627</a>
+            Appengine & ClassPathScanner : throw AccessControlException since 4.1.0
+        </li>
+        <li>
             <a href="https://github.com/flyway/flyway/issues/1634">Issue 1634</a>
             DB2 inserting of triggers fails, depending on the format of the statement
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1636">Issue 1636</a>
+            Metadata table creation error is not reported
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1642">Issue 1642</a>
+            Java error when running flyway from bash shell of Git for Windows
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/1643"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/1649">Issue 1649</a>
             flyway:clean fails on db2 when trying to drop versioning on tables which is accessed by a MQT
             <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/1650"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1654">Issue 1654</a>
+            Deadlock produced in Postgres when running migrations in parallel with a migration task containing CREATE INDEX CONCURRENTLY
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/1656"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1678">Issue 1678</a>
+            ignoreMissingMigrations default not specified
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1686">Issue 1686</a>
+            Gradle plugin warning after migrating to Gradle 4.0
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/1853"><i
                     class="fa fa-mail-reply"></i> Pull Request</a></span>
         </li>
         <li>
@@ -92,16 +305,104 @@ subtitle: Release Notes
             DB2 stored procedure nested block support
         </li>
         <li>
+            <a href="https://github.com/flyway/flyway/issues/1694">Issue 1694</a>
+            Can't use Use MSDB in SQL server
+        </li>
+        <li>
             <a href="https://github.com/flyway/flyway/issues/1701">Issue 1701</a>
             Table.exists() very slow in Postgres Environments with a lot of objects
             <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/1702"><i
                     class="fa fa-mail-reply"></i> Pull Request</a></span>
         </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1711">Issue 1711</a>
+            SQL Server BACKUP and RESTORE statements broken
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1713">Issue 1713</a>
+            Suppress redundant "SQLite does not support setting the schema..." messages
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1723">Issue 1723</a>
+            Anonymous block in SAP HANA is not working
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1726">Issue 1726</a>
+            outOfOrder parameter value not validated
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1729">Issue 1729</a>
+            Resource leak detected enabling Strict Mode on Android platform
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/1730"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1732">Issue 1732</a>
+            Cannot create metadata table in DB2 when default table organization is set to column
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1757">Issue 1757</a>
+            Warn on incompatible class change
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1764">Issue 1764</a>
+            USE sql command leaks to subsequent migration files
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1782">Issue 1782</a>
+            First character in script column of schema_version table removed if double back slashes in location.
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1802">Issue 1802</a>
+            Clean fails when Postgres DOMAIN depends on SEQUENCE
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1813">Issue 1813</a>
+            Checksum mismatch error not helpful
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1817">Issue 1817</a>
+            DB2 truncate statement fails under Flyway 4.2.0
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1831">Issue 1831</a>
+            Incorrect Redshift search_path parsing
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1842">Issue 1842</a>
+            Oracle: Ignore lone /
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1846">Issue 1846</a>
+            Oracle statement fails when it contains DATE'11/29/2017' and no space in between
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1847">Issue 1847</a>
+            Documentation is not clear about the definition of missing and future migration
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1851">Issue 1851</a>
+            CockroachDb invalid default database name
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/1852"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/pull/1854">Issue 1854</a>
+            Adding comment surrounding usage of Oracle TNS Connection string
+        </li>
     </ul>
 
     <p>
-        Thanks to Dennis Hoer, Francesco Proietti, jsross, Mattias Sällström, pswrdf, RobertRad, sandman24,
-        Stephan Pauxberger and Victor Osolovskiy for reporting these issues and contributing fixes.
+        Thanks to Alexei Osipov, andrey-poltavskiy, aoksys, Carl Taylor, Christopher Smith, Craig Davidson, czyzby,
+        Dennis Hoer, djohnsonmach, FlakM, Francesco Proietti, George Thomas, Gili Tzabari,
+        hmtelbi, Igor Nikolaev, J0s3f, Jason Hinch, Jasper Brekelmans, Jasper van Wanrooy, jcoulehan,
+        Jeffrey Li, Jens Doose, Jidehem, John McCall, Joshy Austin, jsross, Julien Coupez, Kevin Bloch,
+        masc3d, Mattias Sällström, Mihir Mehta, mstarita, nvartolomei,
+        o2dac, pswrdf, rbatllet, Renat Sabitov, Rob34, RobertRad, Roger Qiu,
+        Sabine Heimsath, sandman24, sasivarnans,
+        Simon Kissane, Stefano Teodorani,
+        Stephan Pauxberger, Tibor Baksa, ToBeReplaced, Victor Osolovskiy, vojbarzz,
+        wanglin0413, xindu and Yogi2803 for reporting these issues and contributing fixes.
     </p>
 
     <h2 id="4.2.0">Flyway 4.2.0 (2017-04-27)</h2>

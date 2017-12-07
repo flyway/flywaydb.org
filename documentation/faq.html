@@ -9,7 +9,7 @@ subtitle: FAQ
         <li><a href="#defect">I found a defect. Where should I report it?</a></li>
         <li><a href="#feature-request">I have a feature request. Where should I submit it?</a></li>
         <li><a href="#question">I have a question. Where can I ask it?</a></li>
-        <li><a href="#downgrade">What about downgrade scripts/downward migrations?</a></li>
+        <li><a href="#downgrade">Does Flyway support undo/downgrade/downward migrations?</a></li>
         <li><a href="#hot-fixes">What is the best strategy for dealing with hot fixes?</a></li>
         <li><a href="#parallel">Can multiple nodes migrate in parallel?</a></li>
         <li><a href="#rollback">Does Flyway perform a roll back if a migration fails?</a></li>
@@ -21,7 +21,7 @@ subtitle: FAQ
         <li><a href="#repair">How do you repair the database after a failed migration?</a></li>
         <li><a href="#clean-objects">Why does clean drop individual objects instead of the schema itself?</a></li>
         <li><a href="#db-specific-sql">What is the best strategy for handling database-specific sql?</a></li>
-        <li><a href="#case-sensitive">Why is the schema_version table case-sensitive?</a></li>
+        <li><a href="#case-sensitive">Why is the flyway_schema_history table case-sensitive?</a></li>
         <li><a href="#hibernate-cdi">How can I integrate Flyway with Hibernate in a CDI environment?</a></li>
     </ul>
 
@@ -43,30 +43,9 @@ subtitle: FAQ
         <a class="stackoverflow-tag" href="http://stackoverflow.com/questions/tagged/flyway">flyway</a> tag.
     </p>
 
-    <h2 id="downgrade">What about downgrade scripts/downward migrations?</h2>
+    <h2 id="downgrade">What about undo/downgrade/downward migrations?</h2>
 
-    <p><strong>Flyway does NOT support downgrade scripts</strong>.<br/> While the idea of downgrade scripts
-        (popularized by Rails Migrations) is a nice one in theory, unfortunately it breaks down in practice. As soon as
-        you have destructive changes (drop, delete, truncate, ...), you start getting into trouble. And even if you don&#x27;t,
-        you end up creating home-made alternatives for restoring backups, which need to be properly tested as well.</p>
-
-    <p><strong>Downgrade scripts assume the whole migration failed</strong>.<br/> A migration can fail at
-        any point. If you have 10 statements, it is possible for the 1st, the 5th, the 7th or the 10th to fail. There is
-        simply no way to know in advance. Downgrade scripts are written to roll back an entire migration. This renders
-        them effectively useless, even for non-destructive changes.</p>
-
-    <p><strong>Maintain backwards compatibility
-        between the DB and all versions of the code currently deployed in production</strong>.<br/> This way a
-        failed migration is not a disaster. The old version of the application is still compatible with the DB, so you
-        can simply roll back the application code, investigate, and take corrective measures.</p>
-
-    <p><strong>A much
-        better solution is a proper, well tested, backup and restore strategy</strong>.<br/> It is independent
-        of the database structure, and once it is tested and proven to work, no migration script can break it. For
-        optimal performance, and if your infrastructure supports this, we recommend using the <strong>snapshot
-            technology of your underlying storage solution</strong>. Especially for larger data volumes, this can be
-        <strong>several orders of magnitude faster</strong> than traditional backups and restores!
-    </p>
+    <p>Yes, Flyway does support <a href="/documentation/command/undo">undo migrations</a>.</p>
 
     <h2 id="hot-fixes">What is the best strategy for dealing with hot fixes?</h2>
 
@@ -118,21 +97,21 @@ subtitle: FAQ
 
     <p>Use a single Flyway instance. Flyway has support for this built-in. Fill the
         <code>flyway.schemas</code> property with the comma-separated list of schemas you wish to manage. All
-        schemas will be tracked using a single metadata table that will be placed in the first schema of the list. Make
+        schemas will be tracked using a single schema history table that will be placed in the first schema of the list. Make
         sure the user of the datasource has the necessary grants for all schemas, and prefix the objects (tables, views,
         ...) you reference.</p>
 
     <h3>The schemas have a distinct life-cycle or must be autonomous and cleanly separated:</h3>
 
-    <p>Use multiple Flyway instances. Each instance manages its own schema and references its own metadata table. Place
+    <p>Use multiple Flyway instances. Each instance manages its own schema and references its own schema history table. Place
         migrations for each schema in a distinct location.</p>
 
     <p>Schema foo: </p><pre class="prettyprint">locations = /sql/foo
 schemas = foo
-table = schema_version</pre>
+table = flyway_schema_history</pre>
     <p>Schema bar: </p><pre class="prettyprint">locations = /sql/bar
 schemas = bar
-table = schema_version</pre>
+table = flyway_schema_history</pre>
 
     <h2 id="osgi">Does Flyway work with OSGI?</h2>
 
@@ -192,9 +171,9 @@ table = schema_version</pre>
         performance, but on the other hand you also eliminate another difference (and potential source of errors)
         between the environments.</p>
 
-    <h2 id="case-sensitive">Why is the schema_version table case-sensitive?</h2>
+    <h2 id="case-sensitive">Why is the flyway_schema_history table case-sensitive?</h2>
 
-    <p>The schema_version is case-sensitive due to the quotes used in its creation script. This allows for characters not
+    <p>The flyway_schema_history is case-sensitive due to the quotes used in its creation script. This allows for characters not
         supported in identifiers otherwise.</p>
 
     <p>The name (and case) can be configured through the <code>flyway.table</code> property.</p>
@@ -209,6 +188,6 @@ table = schema_version</pre>
 
 
     <p class="next-steps">
-        <a class="btn btn-primary" href="/documentation/contribute">Contribute <i class="fa fa-arrow-right"></i></a>
+        <a class="btn btn-primary" href="/documentation/plugins/springboot">Spring Boot <i class="fa fa-arrow-right"></i></a>
     </p>
 </div>

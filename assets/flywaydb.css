@@ -94,8 +94,14 @@
     line-height: 100%;
     display: block;
 }
-#big-sell p#worksOn i {
+#big-sell div#worksOn i {
     font-size: 16px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+#big-sell div#worksOn img {
+    margin-top: -4px;
+    height: 12px;
     padding-left: 3px;
     padding-right: 3px;
 }
@@ -251,8 +257,31 @@ hr.soften {
     border-radius: 10px;
 }
 
-#download .checksum {
-    font-size: 10px;
+img.screenshot {
+    border: 1px #ccc dashed;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+
+#download-pricing {
+    text-align: center;
+}
+
+#download-pricing th {
+    text-align: center;
+    font-size: 18px;
+}
+
+#download-pricing .btn {
+    width: 150px;
+}
+
+#download-pricing .btn i {
+    color: white;
+}
+
+#download-pricing .modal {
+    text-align: left;
 }
 
 #downloadStatsBg {
@@ -447,6 +476,10 @@ hr.soften {
     font-size: 10px;
 }
 
+.note {
+    font-size: 10px;
+}
+
 a.stackoverflow-tag {
     color: #39739d;
     background-color: #E1ECF4;
@@ -466,8 +499,12 @@ a.stackoverflow-tag:hover {
 h2 {
     margin-top: 40px;
 }
-
-h3 {
+h2[id], h3[id], tr[id]>td:first-child {
+    cursor: pointer;
+}
+h2[id]:hover:after, h3[id]:hover:after, tr[id]:hover>td:first-child:after {
+    content: ' §';
+    color: #ccc;
 }
 
 pre.console {
