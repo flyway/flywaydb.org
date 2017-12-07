@@ -3,6 +3,8 @@ org.flywaydb.core.api
 org.flywaydb.core.api.android
 org.flywaydb.core.api.callback
 org.flywaydb.core.api.configuration
+org.flywaydb.core.api.errorhandler
+org.flywaydb.core.api.logging
 org.flywaydb.core.api.migration
 org.flywaydb.core.api.migration.jdbc
 org.flywaydb.core.api.migration.spring
