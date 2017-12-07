@@ -272,7 +272,15 @@ img.screenshot {
     font-size: 18px;
 }
 
-#flyway-pro-license-modal {
+#download-pricing .btn {
+    width: 150px;
+}
+
+#download-pricing .btn i {
+    color: white;
+}
+
+#download-pricing .modal {
     text-align: left;
 }
 

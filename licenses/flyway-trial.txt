@@ -19,7 +19,7 @@ The license fee to be paid for the software is specified in the Licensor’s pri
 
 4. Updates and upgrades
 -----------------------
-This license include all updates and upgrades of the software released during the license period without any further fees, unless otherwise agreed on in a separate agreement.
+This license includes all updates and upgrades of the software released during the license period without any further fees, unless otherwise agreed on in a separate agreement.
 
 5. Rights to the source code
 ----------------------------
