@@ -300,7 +300,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
         <td><i>Current database user</i></td>
         <td>The username that will be recorded in the schema history table as having applied the migration</td>
     </tr>
-    <tr>
+    <tr id="errorHandlers">
         <td>errorHandlers {% include pro.html %}</td>
         <td>NO</td>
         <td><i>none</i></td>
