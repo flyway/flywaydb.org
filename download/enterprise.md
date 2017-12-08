@@ -11,64 +11,71 @@ All levels come with unlimited database schemas in dev and test
 <table class="table table-striped">
 <thead>
 <tr>
-<th>Usage</th>
+<th>Number of schemas in production<br>managed by Flyway</th>
 <th>Price</th>
 <th></th>
 </tr>
 </thead>
 <tr>
-<td>10 schemas in production</td>
-<td>2950 USD per year</td>
+<td>10 schemas</td>
+<td>2,950 USD per year</td>
 <td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-enterprise-1-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
 </tr>
 <tr>
-<td>20 schemas in production</td>
-<td>5900 USD per year</td>
+<td>20 schemas</td>
+<td>5,900 USD per year</td>
 <td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-enterprise-2-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
 </tr>
 <tr>
-<td>30 schemas in production</td>
-<td>8850 USD per year</td>
+<td>30 schemas</td>
+<td>8,850 USD per year</td>
 <td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-enterprise-3-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
 </tr>
 <tr>
-<td>40 schemas in production</td>
-<td>11210 USD per year</td>
+<td>40 schemas</td>
+<td>11,210 USD per year</td>
 <td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-enterprise-4-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
 </tr>
 <tr>
-<td>50 schemas in production</td>
-<td>13275 USD per year</td>
+<td>50 schemas</td>
+<td>13,275 USD per year</td>
 <td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-enterprise-5-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
 </tr>
 <tr>
-<td>60 schemas in production</td>
-<td>15045 USD per year</td>
+<td>60 schemas</td>
+<td>15,045 USD per year</td>
 <td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-enterprise-6-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
 </tr>
 <tr>
-<td>70 schemas in production</td>
-<td>16520 USD per year</td>
+<td>70 schemas</td>
+<td>16,520 USD per year</td>
 <td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-enterprise-7-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
 </tr>
 <tr>
-<td>80 schemas in production</td>
-<td>17700 USD per year</td>
+<td>80 schemas</td>
+<td>17,700 USD per year</td>
 <td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-enterprise-8-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
 </tr>
 <tr>
-<td>90 schemas in production</td>
-<td>18585 USD per year</td>
+<td>90 schemas</td>
+<td>18,585 USD per year</td>
 <td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-enterprise-9-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
 </tr>
 <tr>
-<td>100 schemas in production</td>
-<td>19175 USD per year</td>
+<td>100 schemas</td>
+<td>19,175 USD per year</td>
 <td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-enterprise-10-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
+</tr>
+<tr>
+<td><strong>unlimited</strong></td>
+<td>19,950 USD per year</td>
+<td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-enterprise-site-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
 </tr>
 </table>
 
-We also offer high volume discounts, site licenses and redistributable licenses. Contact us for more information at <strong>sales@flywaydb.org</strong>.
+If you need to ship Flyway Enterprise Edition with your own product, we also offer redistributable licenses.
+ 
+Contact us for more information at <strong>sales@flywaydb.org</strong>.
 
 <div class="modal fade" id="flyway-enterprise-1-license-modal" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
@@ -245,6 +252,24 @@ We also offer high volume discounts, site licenses and redistributable licenses.
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">I do not agree</button>
         <a data-fsc-action="Reset,Add,Update,Checkout" data-fsc-item-path-value="flyway-enterprise-2017" data-fsc-item-quantity-value="10" data-dismiss="modal" class="btn btn-primary" href="javascript:$('#flyway-enterprise-10-license-modal').modal('hide');">I agree</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="flyway-enterprise-site-license-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">License Agreement</h4>
+      </div>
+      <div class="modal-body">
+        By downloading the Flyway Enterprise Edition you confirm to have read and that you agree to the terms of the <a href="/licenses/flyway-enterprise-site.txt" target="_blank">Flyway Enterprise Edition Site License</a>.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">I do not agree</button>
+        <a data-fsc-action="Reset,Add,Update,Checkout" data-fsc-item-path-value="flyway-enterprise-site-2017" data-dismiss="modal" class="btn btn-primary" href="javascript:$('#flyway-enterprise-site-license-modal').modal('hide');">I agree</a>
       </div>
     </div>
   </div>
