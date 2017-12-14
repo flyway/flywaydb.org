@@ -629,6 +629,10 @@ i {
     overflow: hidden;
 }
 
+.table tr:first-child th, .table tr:first-child td {
+    border-top: 0;
+}
+
 @media screen and (max-width: 1024px) {
     #downloadStatsRight, #upAndRunningRight {
         margin-top: 0;

@@ -10,14 +10,104 @@ Enterprise Maven plugin also supports **Java 6** and **Java 7**.
 
 ## Installation
 
-<pre class="prettyprint">&lt;plugin&gt;
+<div class="tabbable">
+    <ul class="nav nav-tabs">
+        <li class="active marketing-item"><a href="#tab-community" data-toggle="tab">Community Edition</a>
+        </li>
+        <li class="marketing-item"><a href="#tab-pro" data-toggle="tab">Pro Edition</a>
+        </li>
+        <li class="marketing-item"><a href="#tab-enterprise" data-toggle="tab">Enterprise Edition</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active" id="tab-community">
+            <code>pom.xml</code>
+            <pre class="prettyprint">&lt;plugin&gt;
     &lt;groupId&gt;org.flywaydb&lt;/groupId&gt;
     &lt;artifactId&gt;flyway-maven-plugin&lt;/artifactId&gt;
     &lt;version&gt;{{ site.flywayVersion }}&lt;/version&gt;
-    &lt;configuration&gt;
-        ....
-    &lt;/configuration&gt;
 &lt;/plugin&gt;</pre>
+        </div>
+        <div class="tab-pane" id="tab-pro">
+            <code>pom.xml</code>
+            <pre class="prettyprint">&lt;pluginRepositories&gt;
+    &lt;pluginRepository&gt;
+        &lt;id&gt;flyway-repo&lt;/id&gt;
+        &lt;url&gt;s3://flyway-repo/release&lt;/url&gt;
+    &lt;/pluginRepository&gt;
+    ...
+&lt;/pluginRepositories&gt;
+        
+&lt;build&gt;
+    &lt;extensions&gt;
+        &lt;extension&gt;
+            &lt;groupId&gt;com.allogy.maven.wagon&lt;/groupId&gt;
+            &lt;artifactId&gt;maven-s3-wagon&lt;/artifactId&gt;
+            &lt;version&gt;1.0.1&lt;/version&gt;
+        &lt;/extension&gt;
+    &lt;/extensions&gt;
+    ...
+    &lt;plugins&gt;
+        &lt;plugin&gt;
+            &lt;groupId&gt;org.flywaydb<strong>.pro</strong>&lt;/groupId&gt;
+            &lt;artifactId&gt;flyway-maven-plugin&lt;/artifactId&gt;
+            &lt;version&gt;{{ site.flywayVersion }}&lt;/version&gt;
+        &lt;/plugin&gt;
+    &lt;/plugins&gt;
+&lt;/build&gt;</pre>
+            <code>settings.xml</code>
+            <pre class="prettyprint">&lt;settings&gt;
+    &lt;servers&gt;
+        &lt;server&gt;
+            &lt;id&gt;flyway-repo&lt;/id&gt;
+            &lt;username&gt;<i>your-flyway-pro-user</i>&lt;/username&gt;
+            &lt;password&gt;<i>your-flyway-pro-password</i>&lt;/password&gt;
+        &lt;/server&gt;
+    &lt;/servers&gt;
+    ...
+&lt;/settings&gt;</pre>
+        </div>
+        <div class="tab-pane" id="tab-enterprise">
+            <code>pom.xml</code>
+            <pre class="prettyprint">&lt;pluginRepositories&gt;
+    &lt;pluginRepository&gt;
+        &lt;id&gt;flyway-repo&lt;/id&gt;
+        &lt;url&gt;s3://flyway-repo/release&lt;/url&gt;
+    &lt;/pluginRepository&gt;
+    ...
+&lt;/pluginRepositories&gt;
+        
+&lt;build&gt;
+    &lt;extensions&gt;
+        &lt;extension&gt;
+            &lt;groupId&gt;com.allogy.maven.wagon&lt;/groupId&gt;
+            &lt;artifactId&gt;maven-s3-wagon&lt;/artifactId&gt;
+            &lt;version&gt;1.0.1&lt;/version&gt;
+        &lt;/extension&gt;
+    &lt;/extensions&gt;
+    ...
+    &lt;plugins&gt;
+        &lt;plugin&gt;
+            &lt;groupId&gt;org.flywaydb<strong>.enterprise</strong>&lt;/groupId&gt;
+            &lt;artifactId&gt;flyway-maven-plugin&lt;/artifactId&gt;
+            &lt;version&gt;{{ site.flywayVersion }}&lt;/version&gt;
+        &lt;/plugin&gt;
+    &lt;/plugins&gt;
+&lt;/build&gt;</pre>
+            <code>settings.xml</code>
+            <pre class="prettyprint">&lt;settings&gt;
+    &lt;servers&gt;
+        &lt;server&gt;
+            &lt;id&gt;flyway-repo&lt;/id&gt;
+            &lt;username&gt;<i>your-flyway-enterprise-user</i>&lt;/username&gt;
+            &lt;password&gt;<i>your-flyway-enterprise-password</i>&lt;/password&gt;
+        &lt;/server&gt;
+    &lt;/servers&gt;
+    ...
+&lt;/settings&gt;</pre>
+        </div>
+    </div>
+</div>
 
 ## Goals
 <table class="table table-bordered table-hover">

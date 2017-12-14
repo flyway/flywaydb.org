@@ -20,63 +20,188 @@ be migrated to a state the rest of the code can work with.
 
 ## Download
 
-<table class="table">
-    <thead>
-    <tr>
-        <th><strong>Binary</strong></th>
-        <th><strong>Source</strong></th>
-    </tr>
-    </thead>
-    <tr>
-        <td>
-            <a href="http://repo1.maven.org/maven2/org/flywaydb/flyway-core/{{site.flywayVersion}}/flyway-core-{{site.flywayVersion}}.jar">flyway-core-{{site.flywayVersion}}.jar</a>
-        </td>
-        <td>
-            <a href="http://repo1.maven.org/maven2/org/flywaydb/flyway-core/{{site.flywayVersion}}/flyway-core-{{site.flywayVersion}}-sources.jar">flyway-core-{{site.flywayVersion}}-sources.jar</a>
-        </td>
-    </tr>
-</table>
-
-<h3>Build Tools</h3>
 <div class="tabbable">
     <ul class="nav nav-tabs">
-        <li class="active marketing-item"><a href="#tab-maven" data-toggle="tab"><i class="fa fa-maxcdn"></i> Maven</a>
+        <li class="active marketing-item"><a href="#tab-community" data-toggle="tab">Community Edition</a>
         </li>
-        <li class="marketing-item"><a href="#tab-gradle" data-toggle="tab"><i class="fa fa-cogs"></i> Gradle</a>
+        <li class="marketing-item"><a href="#tab-pro" data-toggle="tab">Pro Edition</a>
         </li>
-        <li class="marketing-item"><a href="#tab-ant" data-toggle="tab"><i class="fa fa-wrench"></i> Ant + Ivy</a>
-        </li>
-        <li class="marketing-item"><a href="#tab-sbt" data-toggle="tab"><i class="fa fa-angle-right"></i> SBT</a>
+        <li class="marketing-item"><a href="#tab-enterprise" data-toggle="tab">Enterprise Edition</a>
         </li>
     </ul>
     <div class="tab-content">
-        <div class="tab-pane active" id="tab-maven">
+        <div class="tab-pane active" id="tab-community">
+<table class="table">
+    <tr>
+        <th>Maven</th>
+        <td>
+            <code>pom.xml</code>
             <pre class="prettyprint">&lt;dependency&gt;
     &lt;groupId&gt;org.flywaydb&lt;/groupId&gt;
     &lt;artifactId&gt;flyway-core&lt;/artifactId&gt;
     &lt;version&gt;{{ site.flywayVersion }}&lt;/version&gt;
 &lt;/dependency&gt;</pre>
-        </div>
-        <div class="tab-pane" id="tab-gradle">
+        </td>
+    </tr>
+    <tr>
+        <th>Gradle</th>
+        <td>
             <pre class="prettyprint">compile "org.flywaydb:flyway-core:{{ site.flywayVersion }}"</pre>
+        </td>
+    </tr>
+    <tr>
+        <th>Binary</th>
+        <td>
+            <a href="http://repo1.maven.org/maven2/org/flywaydb/flyway-core/{{site.flywayVersion}}/flyway-core-{{site.flywayVersion}}.jar">flyway-core-{{site.flywayVersion}}.jar</a>
+        </td>
+    </tr>
+    <tr>
+        <th>Source</th>
+        <td>
+            <a href="http://repo1.maven.org/maven2/org/flywaydb/flyway-core/{{site.flywayVersion}}/flyway-core-{{site.flywayVersion}}-sources.jar">flyway-core-{{site.flywayVersion}}-sources.jar</a>
+        </td>
+    </tr>
+</table>
         </div>
-        <div class="tab-pane" id="tab-ant">
-            <pre class="prettyprint">&lt;dependency org="org.flywaydb" name="flyway-core" rev="{{ site.flywayVersion }}"/&gt;</pre>
+        <div class="tab-pane" id="tab-pro">
+<table class="table">
+    <tr>
+        <th>Maven</th>
+        <td>
+            <code>pom.xml</code>
+            <pre class="prettyprint">&lt;repositories&gt;
+    &lt;repository&gt;
+        &lt;id&gt;flyway-repo&lt;/id&gt;
+        &lt;url&gt;s3://flyway-repo/release&lt;/url&gt;
+    &lt;/repository&gt;
+    ...
+&lt;/repositories&gt;
+
+&lt;dependencies&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.flywaydb<strong>.pro</strong>&lt;/groupId&gt;
+        &lt;artifactId&gt;flyway-core&lt;/artifactId&gt;
+        &lt;version&gt;{{ site.flywayVersion }}&lt;/version&gt;
+    &lt;/dependency&gt;
+    ...
+&lt;/dependencies&gt;
+        
+&lt;build&gt;
+    &lt;extensions&gt;
+        &lt;extension&gt;
+            &lt;groupId&gt;com.allogy.maven.wagon&lt;/groupId&gt;
+            &lt;artifactId&gt;maven-s3-wagon&lt;/artifactId&gt;
+            &lt;version&gt;1.0.1&lt;/version&gt;
+        &lt;/extension&gt;
+    &lt;/extensions&gt;
+    ...
+&lt;/build&gt;</pre>
+            <code>settings.xml</code>
+            <pre class="prettyprint">&lt;settings&gt;
+    &lt;servers&gt;
+        &lt;server&gt;
+            &lt;id&gt;flyway-repo&lt;/id&gt;
+            &lt;username&gt;<i>your-flyway-pro-user</i>&lt;/username&gt;
+            &lt;password&gt;<i>your-flyway-pro-password</i>&lt;/password&gt;
+        &lt;/server&gt;
+    &lt;/servers&gt;
+    ...
+&lt;/settings&gt;</pre>
+        </td>
+    </tr>
+    <tr>
+        <th>Gradle</th>
+        <td>
+            <pre class="prettyprint">repositories {
+    maven {
+        url "s3://flyway-repo/release"
+        credentials(AwsCredentials) {
+            accessKey '<i>your-flyway-pro-user</i>'
+            secretKey '<i>your-flyway-pro-password</i>'
+        }
+    }
+}
+
+compile "org.flywaydb<strong>.pro</strong>:flyway-core:{{ site.flywayVersion }}"</pre>
+        </td>
+    </tr>
+</table>
         </div>
-        <div class="tab-pane" id="tab-sbt">
-            <pre class="prettyprint">"org.flywaydb" % "flyway-core" % "{{ site.flywayVersion }}"</pre>
+        <div class="tab-pane" id="tab-enterprise">
+<table class="table">
+    <tr>
+        <th>Maven</th>
+        <td>
+            <code>pom.xml</code>
+            <pre class="prettyprint">&lt;repositories&gt;
+    &lt;repository&gt;
+        &lt;id&gt;flyway-repo&lt;/id&gt;
+        &lt;url&gt;s3://flyway-repo/release&lt;/url&gt;
+    &lt;/repository&gt;
+    ...
+&lt;/repositories&gt;
+
+&lt;dependencies&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.flywaydb<strong>.enterprise</strong>&lt;/groupId&gt;
+        &lt;artifactId&gt;flyway-core&lt;/artifactId&gt;
+        &lt;version&gt;{{ site.flywayVersion }}&lt;/version&gt;
+    &lt;/dependency&gt;
+    ...
+&lt;/dependencies&gt;
+        
+&lt;build&gt;
+    &lt;extensions&gt;
+        &lt;extension&gt;
+            &lt;groupId&gt;com.allogy.maven.wagon&lt;/groupId&gt;
+            &lt;artifactId&gt;maven-s3-wagon&lt;/artifactId&gt;
+            &lt;version&gt;1.0.1&lt;/version&gt;
+        &lt;/extension&gt;
+    &lt;/extensions&gt;
+    ...
+&lt;/build&gt;</pre>
+            <code>settings.xml</code>
+            <pre class="prettyprint">&lt;settings&gt;
+    &lt;servers&gt;
+        &lt;server&gt;
+            &lt;id&gt;flyway-repo&lt;/id&gt;
+            &lt;username&gt;<i>your-flyway-enterprise-user</i>&lt;/username&gt;
+            &lt;password&gt;<i>your-flyway-enterprise-password</i>&lt;/password&gt;
+        &lt;/server&gt;
+    &lt;/servers&gt;
+    ...
+&lt;/settings&gt;</pre>
+        </td>
+    </tr>
+    <tr>
+        <th>Gradle</th>
+        <td>
+            <pre class="prettyprint">repositories {
+    maven {
+        url "s3://flyway-repo/release"
+        credentials(AwsCredentials) {
+            accessKey '<i>your-flyway-enterprise-user</i>'
+            secretKey '<i>your-flyway-enterprise-password</i>'
+        }
+    }
+}
+
+compile "org.flywaydb<strong>.enterprise</strong>:flyway-core:{{ site.flywayVersion }}"</pre>
+        </td>
+    </tr>
+</table>
         </div>
     </div>
 </div>
 
-<h2>The Flyway Class</h2>
+## The Flyway Class
 
-<p>The central piece of Flyway&#x27;s database migration infrastructure is the <strong><a
-        href="/documentation/api/javadoc/org/flywaydb/core/Flyway">org.flywaydb.core.Flyway</a></strong>
-    class. It is your <strong>one-stop shop</strong> for working with Flyway programmatically. It serves both as a
-    <strong>configuration</strong> and a <strong>launching</strong> point for all of Flyway&#x27;s functions. </p>
+The central piece of Flyway's database migration infrastructure is the **<a
+        href="/documentation/api/javadoc/org/flywaydb/core/Flyway">org.flywaydb.core.Flyway</a>**
+    class. It is your **one-stop shop** for working with Flyway programmatically. It serves both as a
+    **configuration** and a **launching** point for all of Flyway's functions.
 
-<h2>Programmatic Configuration (Java)</h2>
+## Programmatic Configuration (Java)
 
 <p>Flyway is super easy to use programmatically: </p><pre class="prettyprint">import org.flywaydb.core.Flyway;
 
