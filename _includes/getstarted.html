@@ -9,10 +9,6 @@
             </li>
             <li class="marketing-item"><a href="#tab-gradle" data-toggle="tab"><i class="fa fa-cogs"></i> Gradle</a>
             </li>
-            <li class="marketing-item"><a href="#tab-ant" data-toggle="tab"><i class="fa fa-wrench"></i> Ant</a>
-            </li>
-            <li class="marketing-item"><a href="#tab-sbt" data-toggle="tab"><i class="fa fa-angle-right"></i> SBT</a>
-            </li>
         </ul>
         <div class="tab-content">
             <div class="tab-pane active" id="tab-commandline">
@@ -40,18 +36,6 @@ flyway.migrate();</pre>
                 <pre class="console"><span>&gt;</span> gradle flywayMigrate -Dflyway.url=... -Dflyway.user=... -Dflyway.password=...</pre>
                 <a href="/getstarted/firststeps/gradle" class="btn btn-primary">Get Started with the Gradle
                     Plugin <i class="fa fa-arrow-right"></i></a>
-            </div>
-            <div class="tab-pane" id="tab-ant">
-                <p>Antlib with tasks for Ant 1.8 and above</p>
-                <pre class="prettyprint">&lt;flyway:migrate url="..." user="..." password="..."/&gt;</pre>
-                <a href="/getstarted/firststeps/ant" class="btn btn-primary">Get Started with the Ant Tasks <i
-                        class="fa fa-arrow-right"></i></a>
-            </div>
-            <div class="tab-pane" id="tab-sbt">
-                <p>First class SBT integration</p>
-                <pre class="console"><span>&gt;</span> sbt flywayMigrate -Dflyway.url=... -Dflyway.user=... -Dflyway.password=...</pre>
-                <a href="/getstarted/firststeps/sbt" class="btn btn-primary">Get Started with the SBT plugin <i
-                        class="fa fa-arrow-right"></i></a>
             </div>
         </div>
     </div>
