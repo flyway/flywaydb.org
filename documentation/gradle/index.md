@@ -10,12 +10,62 @@ Enterprise Gradle plugin also supports **Java 7**.
 
 ## Installation
 
-The Flyway Gradle plugin can be installed directly from the official Gradle plugin repository:
+<div class="tabbable">
+    <ul class="nav nav-tabs">
+        <li class="active marketing-item"><a href="#tab-community" data-toggle="tab">Community Edition</a>
+        </li>
+        <li class="marketing-item"><a href="#tab-pro" data-toggle="tab">Pro Edition</a>
+        </li>
+        <li class="marketing-item"><a href="#tab-enterprise" data-toggle="tab">Enterprise Edition</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active" id="tab-community">
+<p>The Flyway Gradle plugin can be installed directly from the official Gradle plugin repository</p>
 
 <pre class="prettyprint">plugins {
     id "org.flywaydb.flyway" version "{{ site.flywayVersion }}"
 }</pre>
+        </div>
+        <div class="tab-pane" id="tab-pro">
+        <pre class="prettyprint">buildscript {
+    repositories {
+        maven {
+            url "s3://flyway-repo/release"
+            credentials(AwsCredentials) {
+                accessKey '<i>your-flyway-pro-user</i>'
+                secretKey '<i>your-flyway-pro-password</i>'
+            }
+        }
+    }
+    dependencies {
+        classpath "org.flywaydb<strong>.pro</strong>:flyway-gradle-plugin:{{ site.flywayVersion }}"
+    }
+}
 
+apply plugin: 'org.flywaydb.flyway'</pre>
+        </div>
+        <div class="tab-pane" id="tab-enterprise">
+        <pre class="prettyprint">buildscript {
+    repositories {
+        maven {
+            url "s3://flyway-repo/release"
+            credentials(AwsCredentials) {
+                accessKey '<i>your-flyway-enterprise-user</i>'
+                secretKey '<i>your-flyway-enterprise-password</i>'
+            }
+        }
+    }
+    dependencies {
+        classpath "org.flywaydb<strong>.enterprise</strong>:flyway-gradle-plugin:{{ site.flywayVersion }}"
+    }
+}
+
+apply plugin: 'org.flywaydb.flyway'</pre>
+                </div>
+    </div>
+</div>
+                
 ## Tasks
 
 <table class="table table-bordered table-hover">
