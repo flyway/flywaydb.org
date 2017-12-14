@@ -53,6 +53,10 @@
     margin-bottom: -20px;
 }
 
+.tab-pane>pre {
+    margin-top: 10px;
+}
+
 #tabs {
     float: right;
     margin-top: 30px;

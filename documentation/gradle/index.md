@@ -21,8 +21,6 @@ Enterprise Gradle plugin also supports **Java 7**.
     </ul>
     <div class="tab-content">
         <div class="tab-pane active" id="tab-community">
-<p>The Flyway Gradle plugin can be installed directly from the official Gradle plugin repository</p>
-
 <pre class="prettyprint">plugins {
     id "org.flywaydb.flyway" version "{{ site.flywayVersion }}"
 }</pre>
