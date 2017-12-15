@@ -109,7 +109,7 @@ apply plugin: 'org.flywaydb.flyway'</pre>
 
 The Flyway Gradle plugin can be configured in a wide variety of following ways, which can all be combined at will.
 
-### Gradle build script
+### Build script (single database)
 
 The easiest way is to simply define a Flyway section in your `build.gradle`:
 
@@ -122,6 +122,22 @@ The easiest way is to simply define a Flyway section in your `build.gradle`:
         'keyABC': 'valueXYZ',
         'otherplaceholder': 'value123'
     ]
+}</pre>
+
+### Build script (multiple databases)
+
+To migrate multiple database you have the option to extend the various Flyway tasks in your `build.gradle`:
+
+<pre class="prettyprint">task migrateDatabase1(type: org.flywaydb.gradle.task.FlywayMigrateTask) {
+    url = 'jdbc:h2:mem:mydb1'
+    user = 'myUsr1'
+    password = 'mySecretPwd1'
+}
+
+task migrateDatabase2(type: org.flywaydb.gradle.task.FlywayMigrateTask) {
+    url = 'jdbc:h2:mem:mydb2'
+    user = 'myUsr2'
+    password = 'mySecretPwd2'
 }</pre>
 
 ### Gradle properties
