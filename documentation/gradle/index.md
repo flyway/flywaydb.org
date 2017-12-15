@@ -144,7 +144,7 @@ task migrateDatabase2(type: org.flywaydb.gradle.task.FlywayMigrateTask) {
 
 The plugin can also be configured using Gradle properties. Their can be passed either directly via the command-line:
 
-<pre class="console">gradle -Pflyway.user=myUsr -Pflyway.schemas=schema1,schema2 -Pflyway.placeholders.keyABC=valXYZ</pre>
+<pre class="console"><span>&gt;</span> gradle -Pflyway.user=myUsr -Pflyway.schemas=schema1,schema2 -Pflyway.placeholders.keyABC=valXYZ</pre>
 
 or via a `gradle.properties` file:
 
