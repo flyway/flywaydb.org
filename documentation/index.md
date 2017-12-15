@@ -63,5 +63,5 @@ title: Documentation
     <a href="/documentation/database/sqlite">SQLite</a>.</p>
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/command/migrate">Migrate <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/migration/">Migrations <i class="fa fa-arrow-right"></i></a>
 </p>
