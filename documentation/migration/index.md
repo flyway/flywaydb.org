@@ -42,7 +42,7 @@ Versioned migrations are typically used for:
 
 Here is a small example:
 
-```
+```sql
 CREATE TABLE car (
     id INT NOT NULL PRIMARY KEY,
     license_plate VARCHAR NOT NULL,
