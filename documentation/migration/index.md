@@ -42,7 +42,7 @@ Versioned migrations are typically used for:
 
 Here is a small example:
 
-```sql
+```
 CREATE TABLE car (
     id INT NOT NULL PRIMARY KEY,
     license_plate VARCHAR NOT NULL,
@@ -132,9 +132,9 @@ Within a single migration, all statements are run within a single transaction.
 
 ## Schema History Table
 
-<p>To keep track of which migrations have already been applied when and by whom, Flyway adds a special bookkeeping
-    table to your schema. This <strong>schema history table</strong> also tracks migration checksums and whether or not
-    the migrations were successful.</p>
+To keep track of which migrations have already been applied when and by whom, Flyway adds a special bookkeeping
+table to your schema. This <strong>schema history table</strong> also tracks migration checksums and whether or not
+the migrations were successful.
 
 <p>Read more about this in our getting started guide on <a href="/getstarted/how">how Flyway works</a>.</p>
 

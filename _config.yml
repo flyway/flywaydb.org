@@ -2,4 +2,7 @@ safe: true
 future: true
 exclude: [.gitattributes, .gitignore, flywaydb.org.iml, flywaydb.org.ipr, flywaydb.org.iws, README.md, CNAME, Gemfile, Gemfile.lock]
 flywayVersion: 5.0.2
-highlighter: rouge
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
