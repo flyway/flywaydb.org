@@ -117,7 +117,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
         <td>__</td>
         <td>The file name separator for Sql migrations</td>
     </tr>
-    <tr>
+    <tr id="sqlMigrationSuffixes">
         <td>sqlMigrationSuffixes</td>
         <td>NO</td>
         <td>.sql</td>
@@ -127,7 +127,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
             Multiple suffixes (like .sql,.pkg,.pkb) can be specified for easier compatibility with other tools such as
                 editors with specific file associations.</td>
     </tr>
-    <tr>
+    <tr id="mixed">
         <td>mixed</td>
         <td>NO</td>
         <td>false</td>
@@ -139,7 +139,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
         <td>false</td>
         <td>Whether to group all pending migrations together in the same transaction when applying them (only recommended for databases with support for DDL transactions)</td>
     </tr>
-    <tr>
+    <tr id="encoding">
         <td>encoding</td>
         <td>NO</td>
         <td>UTF-8</td>

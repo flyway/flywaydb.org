@@ -49,7 +49,7 @@ subtitle: Sybase ASE
 
 ## SQL Script Syntax
 
-- [Standard SQL syntax](/documentation/migration/sql#syntax) with statement delimiter **GO**
+- [Standard SQL syntax](/documentation/migrations#sql-based-migrations#syntax) with statement delimiter **GO**
 - T-SQL
 
 ### Compatibility

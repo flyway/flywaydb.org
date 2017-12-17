@@ -2559,10 +2559,7 @@ subtitle: Release Notes
             <del>flyway.initialDescription</del>
         </code>. Use <code>flyway.initDescription</code> instead.
         </li>
-        <li>Flyway now enforces the <a href="/documentation/migration/#versions">rules for what constitutes a
-            valid
-            version</a>.
-        </li>
+        <li>Flyway now enforces the rules for what constitutes a valid version.</li>
         <li>SqlServer: Flyway is now tested with Jtds 1.2.7 (was 1.2.4).</li>
         <li>H2: Flyway is now tested with H2 1.3.170 (still compatible with 1.2.137 and above).</li>
         <li>
@@ -2982,7 +2979,7 @@ subtitle: Release Notes
         <li>Core: Removed deprecated Flyway.get/setTransactionManager() methods. They already had no effect anymore
             since 1.6
         </li>
-        <li>Core: Deprecated <a href="/documentation/migration/java">JavaMigration</a>. Use
+        <li>Core: Deprecated <a href="/documentation/migrations#java-based-migrations">JavaMigration</a>. Use
             SpringJdbcMigration instead.
         </li>
         <li>Core: Deprecated JavaMigrationInfoProvider. Use MigrationInfoProvider instead.</li>
@@ -3154,7 +3151,7 @@ subtitle: Release Notes
         <li>Removed the deprecated Flyway.init(version,description) method</li>
         <li>Removed the deprecated BaseJavaMigration class and the pre
             1.0 inheritance-based Java Migration support (update to implements <a
-                    href="/documentation/migration/java">JavaMigration</a>
+                    href="/documentation/migrations#java-based-migrations">JavaMigration</a>
             if you haven't already done so)
         </li>
     </ul>

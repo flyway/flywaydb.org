@@ -7,7 +7,7 @@
     <title>{% if page.subtitle %} {{ page.subtitle }} -{% endif %}{% if page.title %} {{ page.title }} -{% endif %} Flyway by Boxfuse &bull; Database Migrations Made Easy.</title>
     <link rel="alternate" type="application/atom+xml" title="Flyway" href="/blog/atom.xml" />
     <link href="/assets/bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-    <link href="/assets/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
     <link href="/assets/prettify-20110601/prettify.css" rel="stylesheet" type="text/css"/>
     <link href="/assets/flywaydb.css" rel="stylesheet" type="text/css"/>
     <link href="/assets/default.css" rel="stylesheet" type="text/css"/>
@@ -144,9 +144,11 @@
 <script src="/assets/jquery-1.12.1/jquery-1.12.1.min.js" type="text/javascript"></script>
 <script src="/assets/bootstrap-3.3.6-dist/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="/assets/prettify-20110601/prettify.js" type="text/javascript"></script>
+<script src="/assets/toc.js" type="text/javascript"></script>
 <script type="text/javascript">
     $(function () {
         prettyPrint();
+        $('#toc').toc({ listType: 'ul', noBackToTopLinks: true, showSpeed: 0, headers: 'h2, h3, h4, h5, h6', title: '' });
 
         $("h2[id],h3[id]").click(function () {
             window.location.hash = $(this).attr("id");

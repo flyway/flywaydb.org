@@ -43,7 +43,7 @@ subtitle: SAP HANA
 
 ## SQL Script Syntax
 
-- [Standard SQL syntax](/documentation/migration/sql#syntax) with statement delimiter **;**
+- [Standard SQL syntax](/documentation/migrations#sql-based-migrations#syntax) with statement delimiter **;**
 - `BEGIN .. END;` blocks used for triggers and anonymous do blocks
 
 ### Compatibility

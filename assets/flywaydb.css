@@ -432,6 +432,37 @@ img.screenshot {
     background: #eeeeee;
 }
 
+pre.filetree {
+    background: #555;
+    color: white;
+}
+
+pre.filetree i.fa {
+    color: white;
+}
+
+pre.filetree code {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #c7254e;
+    background-color: #f9f2f4;
+}
+
+pre.filetree i.fa-folder-open {
+    color: #e38d13;
+}
+
+pre.filetree i.fa-file, pre.filetree i.fa-file-text {
+    color: gold;
+}
+
+pre.filetree span {
+    display: inline-block;
+    padding: 5px;
+    margin-left: -5px;
+    background-color: #666;
+}
+
 .release {
     margin-bottom: 30px;
 }
