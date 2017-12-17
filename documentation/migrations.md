@@ -173,11 +173,13 @@ In order to be picked up by Flyway, SQL migrations must comply with the followin
 </div>
 
 The file name consists of the following parts:
-- **Prefix**: Configurable, default: `V` for versioned migrations, `U` for versioned migrations, `R` for repeatable migrations
-- **Version**: Dots or underscores separate as many parts as you like (Not for repeatable migrations)
-- **Separator**: Configurable, default: `__` (two underscores)
+- **Prefix**: `V` for versioned ([configurable](/documentation/commandline/migrate#sqlMigrationPrefix)),
+`U` for undo ([configurable](/documentation/commandline/migrate#undoSqlMigrationPrefix)) and
+`R` for repeatable migrations ([configurable](/documentation/commandline/migrate#repeatableSqlMigrationPrefix))
+- **Version**: Version with dots or underscores separate as many parts as you like (Not for repeatable migrations)
+- **Separator**: `__` (two underscores) ([configurable](/documentation/commandline/migrate#sqlMigrationSeparator))
 - **Description**: Underscores or spaces separate the words
-- **Suffix**: Configurable, default: `.sql`
+- **Suffix**: `.sql` ([configurable](/documentation/commandline/migrate#sqlMigrationSuffixes))
 
 ### Discovery
 
@@ -288,7 +290,7 @@ the class name must comply with the following naming pattern:
 </div>
 
 The file name consists of the following parts:
-- **Prefix**: `V` for versioned migrations, `U` for versioned migrations, `R` for repeatable migrations
+- **Prefix**: `V` for versioned migrations, `U` for undo migrations, `R` for repeatable migrations
 - **Version**: Underscores (automatically replaced by dots at runtime) separate as many parts as you like (Not for repeatable migrations)
 - **Separator**: `__` (two underscores)
 - **Description**: Underscores (automatically replaced by spaces at runtime) separate the words

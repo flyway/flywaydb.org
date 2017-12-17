@@ -86,7 +86,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
         <td><nobr><i>&lt;install-dir&gt;</i>/jars</nobr></td>
         <td>Comma-separated list of directories containing JDBC drivers and Java-based migrations</td>
     </tr>
-    <tr>
+    <tr id="sqlMigrationPrefix">
         <td>sqlMigrationPrefix</td>
         <td>NO</td>
         <td>V</td>
@@ -94,7 +94,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
             Versioned SQL migrations have the following file name structure: prefixVERSIONseparatorDESCRIPTIONsuffix ,
                 which using the defaults translates to V1.1__My_description.sql</td>
     </tr>
-    <tr>
+    <tr id="undoSqlMigrationPrefix">
         <td>undoSqlMigrationPrefix {% include pro.html %}</td>
         <td>NO</td>
         <td>U</td>
@@ -103,7 +103,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
             They have the following file name structure: prefixVERSIONseparatorDESCRIPTIONsuffix ,
             which using the defaults translates to U1.1__My_description.sql</td>
     </tr>
-    <tr>
+    <tr id="repeatableSqlMigrationPrefix">
         <td>repeatableSqlMigrationPrefix</td>
         <td>NO</td>
         <td>R</td>
@@ -111,7 +111,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
             Repeatable SQL migrations have the following file name structure: prefixSeparatorDESCRIPTIONsuffix ,
             which using the defaults translates to R__My_description.sql</td>
     </tr>
-    <tr>
+    <tr id="sqlMigrationSeparator">
         <td>sqlMigrationSeparator</td>
         <td>NO</td>
         <td>__</td>
