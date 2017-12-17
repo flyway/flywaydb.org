@@ -53,11 +53,9 @@ DROP TABLE PERSON;
 
 This is now the status
 
-<pre class="console"><span>flyway-{{ site.flywayVersion }}&gt;</span> flyway <strong>info</strong></pre>
+<pre class="console"><span>flyway-{{ site.flywayVersion }}&gt;</span> flyway <strong>info</strong>
 
-gives us:
-
-<pre class="console">Database: jdbc:h2:file:./foobardb (H2 1.4)
+Database: jdbc:h2:file:./foobardb (H2 1.4)
                      
 +-----------+---------+---------------------+------+---------------------+---------+----------+
 | Category  | Version | Description         | Type | Installed On        | State   | Undoable |
@@ -83,13 +81,11 @@ Current version of schema "PUBLIC": 2
 Undoing migration of schema "PUBLIC" to version 2 - Add people
 Successfully undid 1 migration to schema "PUBLIC" (execution time 00:00.030s)</pre>
 
-And you can check with
+And you can check that this is indeed the new status:
 
-<pre class="console"><span>flyway-{{ site.flywayVersion }}&gt;</span> flyway <strong>info</strong></pre>
+<pre class="console"><span>flyway-{{ site.flywayVersion }}&gt;</span> flyway <strong>info</strong>
 
-that this is indeed the new status:
-
-<pre class="console">Database: jdbc:h2:file:./foobardb (H2 1.4)
+Database: jdbc:h2:file:./foobardb (H2 1.4)
                      
 +-----------+---------+---------------------+----------+---------------------+---------+----------+
 | Category  | Version | Description         | Type     | Installed On        | State   | Undoable |
