@@ -99,6 +99,7 @@ The following commands are fully supported and can be used just like any regular
 - `SET SERVEROUTPUT OFF`
 - `SET SERVEROUTPUT ON`
 - `SHOW CON_ID`
+- `SHOW EDITION`
 - `SHOW ERRORS`
 - `SHOW RELEASE`
 - `SHOW USER`
