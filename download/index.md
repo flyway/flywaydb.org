@@ -35,6 +35,7 @@ Choose your Flyway edition based on the features and support level you require
 <tr><td>Older database versions compatibility</td><td></td><td></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td>Java 6 / 7 compatibility</td><td></td><td></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td>License</td><td><a href="/licenses/flyway-community">Apache v2</a></td><td><a href="/licenses/flyway-pro">Commercial</a></td><td><a href="/licenses/flyway-enterprise">Commercial</a></td></tr>
+<tr><td>Maven Repository</td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td>Source Code included</td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td>Support</td><td>Community</td><td>Email (best effort)<br><span class="note">English</span></td><td>Email (2 business days)<br><span class="note">English, German, French, Dutch, Spanish</span></td></tr>
 <tr><td>Price</td><td>Free</td><td>950 USD per year<br><span class="note">for 10 schemas in production<br>unlimited for dev and test</span></td><td>2950 USD per year<br><span class="note">per 10 schemas in production<br>unlimited for dev and test</span></td></tr>
@@ -52,7 +53,11 @@ Choose your Flyway edition based on the features and support level you require
 </tr>
 </table>
 
-We also offer volume discounts, site licenses and redistributable licenses. Contact us for more information at <strong>sales@flywaydb.org</strong>.
+Any questions regarding the Flyway Pro Edition and Flyway Enterprise Edition licensing?<br>
+Read the [**Commercial Licensing FAQ**](/download/faq)
+
+We also offer volume discounts, site licenses and redistributable licenses.<br>
+Contact us for more information at **sales@flywaydb.org**.
 
 <div class="modal fade" id="flyway-trial-license-modal" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
