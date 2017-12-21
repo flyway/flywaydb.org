@@ -9,8 +9,8 @@ subtitle: 'Tutorial: Undo Migrations'
 This tutorial assumes you have successfully completed the [**First Steps: Command-line**](/getstarted/firststeps/commandline)
 tutorial. **If you have not done so, please do so first.** This tutorial picks up where that one left off.
 
-This brief tutorial will teach **how to get up and running with the Flyway Command-line tool**. It will take you through the
-steps on how to configure it and how to write and execute your first few database migrations.
+This brief tutorial will teach **how to use undo migrations**. It will take you through the
+steps on how to create and use them.
 
 ## Introduction
 
@@ -37,7 +37,7 @@ This should give you the following status:
 ## Creating the undo migrations
 
 Now let's create undo migrations for these two applied versioned migrations. With Flyway's default naming convention,
-the filenames will be identical to the regular migrations, except for the `V` prefer which is now replaced with a `U`.
+the filenames will be identical to the regular migrations, except for the `V` prefix which is now replaced with a `U`.
 
 So go ahead and create `U2__Add_people.sql` in the `/sql` directory:
 
