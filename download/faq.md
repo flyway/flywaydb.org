@@ -18,7 +18,7 @@ and provide additional support options for customers.
 
 ## Is there a trial version?
 
-There is a trial version which you can [download directly from the pricing page](https://flywaydb.org/download/).
+There is a trial version which you can [download directly from the pricing page](/download).
 This trial is valid for 30 days, after which you must
 either upgrade to Flyway Pro Edition or Flyway Enterprise Edition or downgrade to Flyway Community Edition. The trial comes
 with the full functionality of Flyway Enterprise Edition, except the source code, which is only available to paying customers.
