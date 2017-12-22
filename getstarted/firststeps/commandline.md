@@ -1,7 +1,7 @@
 ---
 layout: getstarted
 menu: commandline
-subtitle: Command-line - First Steps
+subtitle: Flyway Command-line - First Steps
 ---
 # First Steps: Command-line
 
