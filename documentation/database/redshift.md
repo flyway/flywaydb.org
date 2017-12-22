@@ -78,7 +78,9 @@ INSERT INTO ${tableName} (name) VALUES (&#x27;Mr. T&#x27;);</pre>
 
 ## Limitations
 
-- *None*
+Due to Redshift limitations `DROP TABLE` for external tables cannot run within a transaction, yet Flyway doesn't
+autodetect this. You can work around this limitation and successfully execute such a statement by including a `VACUUM`
+statement in the same SQL file as this will force Flyway to run the entire migration without a transaction.
 
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/database/cockroachdb">CockroachDB <i class="fa fa-arrow-right"></i></a>
