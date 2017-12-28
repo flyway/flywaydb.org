@@ -37,7 +37,7 @@ This should give you the following status:
 | Versioned | 2       | Add people          | SQL  | 2017-12-21 18:05:10 | Success | No       |
 +-----------+---------+---------------------+------+---------------------+---------+----------+</pre>
 
-## Creating a repeatable migrations
+## Creating a repeatable migration
 
 Now let's create a repeatable migration to manage a view of the person table. With Flyway's default naming convention,
 the filename will be similar to the regular migrations, except for the `V` prefix which is now replaced with a `R` and
