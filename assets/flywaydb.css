@@ -637,6 +637,10 @@ i {
     text-decoration: none;
 }
 
+#plugins table img {
+    height: 40px;
+}
+
 #getStarted #first-steps .marketing-item {
     font-size: 14px;
 }
