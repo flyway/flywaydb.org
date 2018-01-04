@@ -97,7 +97,8 @@ The standard license is only appropriate for SaaS usage as it does not allow dis
 Flyway Pro Edition and Flyway Enterprise Edition have a Redistributable license option which does allow you to
 distribute them. The Redistributable license is 9,500 USD per year for Pro and 29,500 USD per year for Enterprise.
 This license allows you to distribute the Pro or Enterprise Edition as part of your application to your
-customers. One licence enables each of your customers to run Flyway Pro or Enterprise Edition to manage up to 10 schemas as part of your application only.
+customers. One licence enables each of your customers to run Flyway Pro or Enterprise Edition to manage up to 10 schemas
+in production (and an unlimited number of schemas in test) as part of your application only.
 Email **sales@flywaydb.org** to purchase.
 
 ## Can I use Flyway Pro or Enterprise Edition to migrate my customers' databases?
