@@ -250,7 +250,7 @@ subtitle: 'mvn flyway:undo'
         <td>errorHandlers</td>
         <td>NO</td>
         <td><i>none</i></td>
-        <td>The fully qualified class names of handlers for errors and warnings that occur during
+        <td>The fully qualified class names of <a href="/documentation/errorhandlers">Error Handlers</a> for errors and warnings that occur during
          a migration. This can be used to customize Flyway's behavior by for example throwing another runtime exception,
           outputting a warning or suppressing the error instead of throwing a FlywayException. ErrorHandlers are invoked
            in order until one reports to have successfully handled the errors or warnings.
