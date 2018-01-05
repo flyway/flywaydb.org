@@ -51,8 +51,14 @@ in the order the are configured. If no Error Handlers are configured Flyway fall
 
 ## Example
 
-Here is an example Error Handler that treats a failed Oracle stored procedure compilation as an error, despite the
-driver simply returning a warning:
+By default when an Oracle stored procedure compilation fails, the driver simply returns a warning which is being output
+by Flyway as
+
+```
+DB: Warning: execution completed with warning (SQL State: 99999 - Error Code: 17110)
+```
+
+Here is an example Error Handler that treats that warning as an error instead:
 
 ```java
 package org.mycompany.mypkg;
@@ -81,7 +87,7 @@ If you now configure Flyway with
 flyway.errorHandlers=org.mycompany.mypkg.OracleProcedureFailFastErrorHandler
 ```
 
-all Oracle stored procedure compilation failures will result in an immediate error saying `Compilation failed`.
+all Oracle stored procedure compilation failures will result in an **immediate error** saying `Compilation failed`.
 
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/command/migrate">Migrate <i class="fa fa-arrow-right"></i></a>
