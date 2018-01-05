@@ -27,7 +27,7 @@ This default behavior is great for the vast majority of the cases.
 There are however situations where you may want to
 - treat an error as a warning as you know your migration will handle it correctly later
 - treat a warning as an error as you prefer to fail fast to be able to fix the problem sooner
-- to perform an additional action when a specific error or warning is being emitted by the database
+- perform an additional action when a specific error or warning is being emitted by the database
 
 Flyway Pro and Enterprise Edition give you a way to achieve all these scenarios using **Error Handlers**.
 
