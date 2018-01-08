@@ -102,8 +102,10 @@ The following environment variables are supported:
         <td>Whether placeholders should be replaced</td>
     </tr>
     <tr id="FLYWAY_PLACEHOLDERS_">
-        <td>FLYWAY_PLACEHOLDERS_<i>NAME</i></td>
-        <td>Placeholders to replace in Sql migrations</td>
+        <td>FLYWAY_PLACEHOLDERS_<i>&lt;NAME&gt;</i></td>
+        <td>Placeholders to replace in SQL migrations. For example to replace a placeholder named <code>key1</code>
+        with the value <code>value1</code>, you can set the environment variable <code>FLYWAY_PLACEHOLDERS_KEY1</code>
+        to <code>value1</code>.</td>
     </tr>
     <tr id="FLYWAY_PLACEHOLDER_PREFIX">
         <td>FLYWAY_PLACEHOLDER_PREFIX</td>
