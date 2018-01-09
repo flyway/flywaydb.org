@@ -31,23 +31,18 @@ No. No Flyway Edition needs a license server and no Flyway Edition calls home.
 
 Here is the [Flyway Pro Edition license](/licenses/flyway-pro) and here is the [Flyway Enterprise Edition license](/licenses/flyway-enterprise).
 
-## How does Pro licensing work?
+## How does Flyway Pro and Enterprise Edition licensing work?
 
-Every organization running Flyway Pro Edition on its own servers or cloud accounts must have a license. The Flyway Pro
-Edition is limited to 10 schemas in the production environment being managed by Flyway. If you need more than that, you
-must acquire an Enterprise license.
-
-## How does Enterprise licensing work?
-
-Every organization running Flyway Edition Edition on its own servers or cloud accounts must have a license.
-The price is based on the numbers of schemas in production managed by Flyway. You can use Flyway Enterprise with any
+Every organization running Flyway Pro or Enterprise Edition on its own servers or cloud accounts must have a license.
+The price is based on the numbers of schemas in production managed by Flyway. You can use Flyway Pro or Enterprise with any
 number of schemas as long as the number of schemas **in production** is smaller or equal to the licensed amount.
 Development, test and staging environments are free and unlimited.
 
-If you wish to expand your Flyway Enterprise Edition schema count beyond your current license, contact us at 
+If you wish to expand your Flyway Pro or Enterprise Edition schema count beyond your current license, contact us at 
 **sales@flywaydb.org** so we can update your account and let you know how we will bill you.
 
-A site license (unlimited usage for your organization) for Flyway Enterprise Edition is available for 19,950 USD per year.
+A site license (unlimited usage for your organization) is available for Flyway Pro Edition for 9,500 USD and
+for Flyway Enterprise Edition for 19,950 USD per year.
 
 ## What exactly counts as a schema?
 

@@ -18,52 +18,52 @@ All levels come with unlimited database schemas in dev and test
 </thead>
 <tr>
 <td>10 schemas</td>
-<td>2,950 USD per year</td>
+<td>2,950 USD per year<br><span class="note">less than 25 USD per schema per month</span></td>
 <td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-enterprise-1-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
 </tr>
 <tr>
 <td>20 schemas</td>
-<td>5,900 USD per year</td>
+<td>5,900 USD per year<br><span class="note">less than 25 USD per schema per month</span></td>
 <td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-enterprise-2-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
 </tr>
 <tr>
 <td>30 schemas</td>
-<td>8,850 USD per year</td>
+<td>8,850 USD per year<br><span class="note">less than 25 USD per schema per month</span></td>
 <td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-enterprise-3-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
 </tr>
 <tr>
 <td>40 schemas</td>
-<td>11,210 USD per year</td>
+<td>11,210 USD per year<br><span class="note">less than 24 USD per schema per month</span></td>
 <td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-enterprise-4-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
 </tr>
 <tr>
 <td>50 schemas</td>
-<td>13,275 USD per year</td>
+<td>13,275 USD per year<br><span class="note">less than 23 USD per schema per month</span></td>
 <td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-enterprise-5-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
 </tr>
 <tr>
 <td>60 schemas</td>
-<td>15,045 USD per year</td>
+<td>15,045 USD per year<br><span class="note">less than 21 USD per schema per month</span></td>
 <td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-enterprise-6-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
 </tr>
 <tr>
 <td>70 schemas</td>
-<td>16,520 USD per year</td>
+<td>16,520 USD per year<br><span class="note">less than 20 USD per schema per month</span></td>
 <td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-enterprise-7-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
 </tr>
 <tr>
 <td>80 schemas</td>
-<td>17,700 USD per year</td>
+<td>17,700 USD per year<br><span class="note">less than 19 USD per schema per month</span></td>
 <td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-enterprise-8-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
 </tr>
 <tr>
 <td>90 schemas</td>
-<td>18,585 USD per year</td>
+<td>18,585 USD per year<br><span class="note">less than 18 USD per schema per month</span></td>
 <td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-enterprise-9-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
 </tr>
 <tr>
 <td>100 schemas</td>
-<td>19,175 USD per year</td>
+<td>19,175 USD per year<br><span class="note">less than 16 USD per schema per month</span></td>
 <td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-enterprise-10-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
 </tr>
 <tr>
@@ -73,9 +73,12 @@ All levels come with unlimited database schemas in dev and test
 </tr>
 </table>
 
+Any questions regarding the Flyway Enterprise Edition licensing?<br>
+Read the [**Commercial Licensing FAQ**](/download/faq)
+
 If you need to ship Flyway Enterprise Edition with your own product, we also offer redistributable licenses.
  
-Contact us for more information at <strong>sales@flywaydb.org</strong>.
+Contact us for more information at **sales@flywaydb.org**.
 
 <div class="modal fade" id="flyway-enterprise-1-license-modal" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">

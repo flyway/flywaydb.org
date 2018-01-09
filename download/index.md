@@ -38,7 +38,7 @@ Choose your Flyway edition based on the features and support level you require
 <tr><td>Maven Repository</td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td>Source Code included</td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td>Support</td><td>Community</td><td>Email (best effort)<br><span class="note">English</span></td><td>Email (2 business days)<br><span class="note">English, German, French, Dutch, Spanish</span></td></tr>
-<tr><td>Price</td><td>Free</td><td>950 USD per year<br><span class="note">for 10 schemas in production<br>unlimited for dev and test</span></td><td>2950 USD per year<br><span class="note">per 10 schemas in production<br>unlimited for dev and test</span></td></tr>
+<tr><td>Price</td><td>Free</td><td>950 USD per year<br><span class="note">per 10 schemas in production<br>(less than 8 USD per schema per month)<br>unlimited for dev and test</span></td><td>2950 USD per year<br><span class="note">per 10 schemas in production<br>(less than 25 USD per schema per month)<br>unlimited for dev and test</span></td></tr>
 <tr><td>Automatic renewal</td><td></td><td><i class="fa fa-check"></i></td><td>optional</td></tr>
 <tr><td>Payment methods accepted</td><td></td><td>Credit card</td><td>Credit card, wire transfer, purchase order</td></tr>
 <tr><td></td>
@@ -48,7 +48,7 @@ Choose your Flyway edition based on the features and support level you require
 </tr>
 <tr><td></td>
 <td></td>
-<td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-pro-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
+<td><a class="btn btn-success btn-download" href="/download/pro"><strong>Pricing Details</strong> <i class="fa fa-arrow-right"></i></a></td>
 <td><a class="btn btn-success btn-download" href="/download/enterprise"><strong>Pricing Details</strong> <i class="fa fa-arrow-right"></i></a></td>
 </tr>
 </table>
@@ -56,7 +56,7 @@ Choose your Flyway edition based on the features and support level you require
 Any questions regarding the Flyway Pro Edition and Flyway Enterprise Edition licensing?<br>
 Read the [**Commercial Licensing FAQ**](/download/faq)
 
-We also offer volume discounts, site licenses and redistributable licenses.<br>
+We also offer site licenses and redistributable licenses.<br>
 Contact us for more information at **sales@flywaydb.org**.
 
 <div class="modal fade" id="flyway-trial-license-modal" tabindex="-1" role="dialog">
@@ -76,28 +76,3 @@ Contact us for more information at **sales@flywaydb.org**.
     </div>
   </div>
 </div>
-
-<div class="modal fade" id="flyway-pro-license-modal" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">License Agreement</h4>
-      </div>
-      <div class="modal-body">
-        By downloading the Flyway Pro Edition you confirm to have read and that you agree to the terms of the <a href="/licenses/flyway-pro.txt" target="_blank">Flyway Pro Edition License</a>.
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">I do not agree</button>
-        <a data-fsc-action="Reset,Add,Checkout" data-fsc-item-path-value="flyway-pro-2017"  data-dismiss="modal" class="btn btn-primary" href="javascript:$('#flyway-pro-license-modal').modal('hide');">I agree</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<script
-    id="fsc-api"
-    src="https://d1f8f9xcsvx3ha.cloudfront.net/sbl/0.7.4/fastspring-builder.min.js"
-    type="text/javascript"
-    data-storefront="flyway.onfastspring.com/popup-store-flyway-pro">
-</script>
