@@ -70,6 +70,8 @@ all these versions are valid versioned migration versions:
 - 2013.1.15.11.35.56
 - 2013.01.15.11.35.56
 
+Versioned migrations are applied in the order of their versions. Versions are sorted numerically as you would normally expect.
+
 ## Undo Migrations
 {% include pro.html %}
 
