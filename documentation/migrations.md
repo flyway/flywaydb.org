@@ -400,6 +400,16 @@ If on the other hand your database does NOT cleanly supports DDL statements with
 issuing an implicit commit before and after every DDL statement), Flyway won't be able to perform a clean rollback in
 case of failure and will instead mark the migration as failed, indicating that some manual cleanup may be required. 
 
+## Query Results
+{% include pro.html %}
+
+Migrations are primarily meant to be executed as part of release and deployment automation processes and there is rarely
+the need to visually inspect the result of SQL queries.
+
+There are however some scenarios where such manual inspection makes sense, and therefore Flyway Pro and Enterprise
+Edition also display query results in the usual tabular form when a `SELECT` statement (or any other statement that
+returns results) is executed. 
+
 ## Schema History Table
 
 To keep track of which migrations have already been applied when and by whom, Flyway adds a special
