@@ -102,8 +102,8 @@ These different means of configuration can be combined at will.
 
 ### Config files
 
-[Config files](/documentaion/configfiles) are supported by the Flyway command-line tool. If you are not familiar with them,
-check out the [Flyway config file structure and settings reference](/documentaion/configfiles) first.
+[Config files](/documentation/configfiles) are supported by the Flyway command-line tool. If you are not familiar with them,
+check out the [Flyway config file structure and settings reference](/documentation/configfiles) first.
 
 Flyway will search for and automatically load the following config files if present:
 - `<install-dir>/conf/flyway.conf`
