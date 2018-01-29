@@ -64,7 +64,7 @@ title: Blog
                     {% for post in site.posts %}
                     <li
                     {% if page.permalink == post.permalink %} class="active" {% endif %}>
-                    <a href="{{ post.permalink }}"><span class="date">{{ post.date | date: "%Y-%m-%d" }}</span><br/>{{ post.subtitle | xml_escape }}</a></li>
+                    <a href="{{ post.permalink | split: '.html' }}"><span class="date">{{ post.date | date: "%Y-%m-%d" }}</span><br/>{{ post.subtitle | xml_escape }}</a></li>
                     {% endfor %}
                 </ul>
             </div>
