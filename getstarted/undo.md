@@ -45,7 +45,7 @@ So go ahead and create `U2__Add_people.sql` in the `/sql` directory:
 DELETE FROM PERSON;
 ```
 
-And and a `U1__Create_person_table.sql` as well:
+And add a `U1__Create_person_table.sql` as well:
 
 ```sql
 DROP TABLE PERSON;
