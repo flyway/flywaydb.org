@@ -103,9 +103,12 @@ The following environment variables are supported:
     </tr>
     <tr id="FLYWAY_PLACEHOLDERS_">
         <td>FLYWAY_PLACEHOLDERS_<i>&lt;NAME&gt;</i></td>
-        <td>Placeholders to replace in SQL migrations. For example to replace a placeholder named <code>key1</code>
-        with the value <code>value1</code>, you can set the environment variable <code>FLYWAY_PLACEHOLDERS_KEY1</code>
-        to <code>value1</code>.</td>
+        <td>Placeholders to replace in SQL migrations.
+        For example to replace a placeholder named <code>key1</code> with the value <code>value1</code>,
+        you can set the environment variable <code>FLYWAY_PLACEHOLDERS_KEY1</code> to <code>value1</code>.
+        Regardless of how you set your environment variable,
+        the resultant placeholder key will always be converted to lowercase,
+        making this unsuitable for, e.g., CamelCase placeholder names.</td>
     </tr>
     <tr id="FLYWAY_PLACEHOLDER_PREFIX">
         <td>FLYWAY_PLACEHOLDER_PREFIX</td>
