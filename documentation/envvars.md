@@ -105,7 +105,9 @@ The following environment variables are supported:
         <td>FLYWAY_PLACEHOLDERS_<i>&lt;NAME&gt;</i></td>
         <td>Placeholders to replace in SQL migrations. For example to replace a placeholder named <code>key1</code>
         with the value <code>value1</code>, you can set the environment variable <code>FLYWAY_PLACEHOLDERS_KEY1</code>
-        to <code>value1</code>.</td>
+        to <code>value1</code>. Flyway will then convert the <code>KEY1</code> part to lowercase (<code>key1</code>) and look for it, in
+        conjunction with the placeholder prefix and suffix, in your SQL migrations. Flyway will then 
+        replace any occurances it finds with <code>value1</code>.</td>
     </tr>
     <tr id="FLYWAY_PLACEHOLDER_PREFIX">
         <td>FLYWAY_PLACEHOLDER_PREFIX</td>
