@@ -16,7 +16,7 @@ Marcio shows how to integrate Spring Boot and Flyway and make the most out of th
 ## Come fly with me: Database Migrations Patterns with Flyway
 by **[Joris Kuipers](https://twitter.com/jkuipers)** (2017-11-02)
 
-Joris provides solutions to a number of more advanced Flyway questions which you will most certainly run in at some
+Joris provides solutions to a number of more advanced Flyway questions which you will most certainly run into at some
 point on your projects.
 
 <iframe width="670" height="377" src="https://www.youtube.com/embed/x7U3zBV5DyQ" frameborder="0" allowfullscreen></iframe>
@@ -24,7 +24,7 @@ point on your projects.
 ## Continuous Database Integration with Flyway
 by **[Sandra Parsick](https://twitter.com/SandraParsick)** (2018-02-08)
 
-Sandra is currently touring various events around Germany talking about CI with Flyway and how to make things even better
+Sandra is currently touring various events around Germany talking about Continuous Database Integration with Flyway and how to make things even better
 by integration [TestContainers](https://www.testcontainers.org/).
 
 Here are her slides:
