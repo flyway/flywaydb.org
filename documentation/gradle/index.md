@@ -165,7 +165,7 @@ flyway {
 
 }</pre>
 
-(For details on how to setup and use custom gradle configurations, see the official gradle documentation.)
+(For details on how to setup and use custom gradle configurations, see the [official gradle documentation](https://docs.gradle.org/current/dsl/org.gradle.api.artifacts.ConfigurationContainer.html).)
 
 ### Gradle properties
 
