@@ -18,6 +18,34 @@ subtitle: Release Notes
             <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/1866"><i
                     class="fa fa-mail-reply"></i> Pull Request</a></span>
         </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1928">Issue 1928</a>
+            Introduce fluent configuration
+        </li>
+    </ul>
+
+    <h3>Incompatible Changes</h3>
+    <ul>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1928">Issue 1928</a>
+            FlywayConfiguration.getLocations() now returns Location[] instead of String[]
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1928">Issue 1928</a>
+            Flyway.getLocations() now returns Location[] instead of String[]
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1928">Issue 1928</a>
+            Flyway.getSchemas() now returns an empty array (instead of the connection's default schema) if no schemas were set using setSchemas()
+        </li>
+    </ul>
+
+    <h3>Changes</h3>
+    <ul>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1928">Issue 1928</a>
+            All getters and setters of the Flyway class have been deprecated in favor of Flyway.config() and ClassicConfiguration.
+        </li>
     </ul>
 
     <h3>Bug fixes</h3>
