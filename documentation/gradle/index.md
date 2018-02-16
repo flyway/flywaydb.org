@@ -140,6 +140,33 @@ task migrateDatabase2(type: org.flywaydb.gradle.task.FlywayMigrateTask) {
     password = 'mySecretPwd2'
 }</pre>
 
+### Extending the default classpath
+
+By default flyway searches the default gradle classpath consisting of `compile`, `runtime`, `testCompile` and `testRuntime`
+for migration files.
+
+You can extend this default classpath with your own custom configurations in `build.gradle` as follows:
+
+<pre class="prettyprint">//somewhere in your build.gradle file a custom configuration like 'provided', 'migration' or similar
+configurations {
+    migration
+}
+
+flyway {
+    url = 'jdbc:h2:mem:mydb'
+    user = 'myUsr'
+    password = 'mySecretPwd'
+    schemas = ['schema1', 'schema2', 'schema3']
+    placeholders = [
+        'keyABC': 'valueXYZ',
+        'otherplaceholder': 'value123'
+    ]
+    classpathExtensions = [ configurations.migration ] //your custom extension(s) of classpath to scan
+
+}</pre>
+
+(For details on how to setup and use custom gradle configurations, see the [official gradle documentation](https://docs.gradle.org/current/dsl/org.gradle.api.artifacts.ConfigurationContainer.html).)
+
 ### Gradle properties
 
 The plugin can also be configured using Gradle properties. Their can be passed either directly via the command-line:
