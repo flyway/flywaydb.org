@@ -113,7 +113,8 @@ The Flyway Gradle plugin can be configured in a wide variety of following ways, 
 
 The easiest way is to simply define a Flyway section in your `build.gradle`:
 
-<pre class="prettyprint">flyway {
+```groovy
+flyway {
     url = 'jdbc:h2:mem:mydb'
     user = 'myUsr'
     password = 'mySecretPwd'
@@ -122,13 +123,15 @@ The easiest way is to simply define a Flyway section in your `build.gradle`:
         'keyABC': 'valueXYZ',
         'otherplaceholder': 'value123'
     ]
-}</pre>
+}
+```
 
 ### Build script (multiple databases)
 
 To migrate multiple database you have the option to extend the various Flyway tasks in your `build.gradle`:
 
-<pre class="prettyprint">task migrateDatabase1(type: org.flywaydb.gradle.task.FlywayMigrateTask) {
+```groovy
+task migrateDatabase1(type: org.flywaydb.gradle.task.FlywayMigrateTask) {
     url = 'jdbc:h2:mem:mydb1'
     user = 'myUsr1'
     password = 'mySecretPwd1'
@@ -138,18 +141,26 @@ task migrateDatabase2(type: org.flywaydb.gradle.task.FlywayMigrateTask) {
     url = 'jdbc:h2:mem:mydb2'
     user = 'myUsr2'
     password = 'mySecretPwd2'
-}</pre>
+}
+```
 
 ### Extending the default classpath
 
-By default flyway searches the default gradle classpath consisting of `compile`, `runtime`, `testCompile` and `testRuntime`
-for migration files.
+By default the Flyway Gradle plugin uses a classpath consisting of the `compile`, `runtime`, `testCompile` and `testRuntime`
+Gradle configurations for loading drivers, migrations, resolvers, callbacks, etc.
 
-You can extend this default classpath with your own custom configurations in `build.gradle` as follows:
+You can optionally extend this default classpath with your own custom configurations in `build.gradle` as follows:
 
-<pre class="prettyprint">//somewhere in your build.gradle file a custom configuration like 'provided', 'migration' or similar
+```groovy
+// Start by defining a custom configuration like 'provided', 'migration' or similar
 configurations {
-    migration
+    flywayMigration
+}
+
+// Declare your dependencies as usual for each configuration
+dependencies {
+    compile "org.flywaydb:flyway-core:${flywayVersion}"
+    flywayMigration "com.mygroupid:my-lib:1.2.3"
 }
 
 flyway {
@@ -161,11 +172,12 @@ flyway {
         'keyABC': 'valueXYZ',
         'otherplaceholder': 'value123'
     ]
-    classpathExtensions = [ configurations.migration ] //your custom extension(s) of classpath to scan
+    // Include your custom configuration here in addition to any default ones you want included
+    configurations = [ 'compile', 'flywayMigration' ]
+}
+```
 
-}</pre>
-
-(For details on how to setup and use custom gradle configurations, see the [official gradle documentation](https://docs.gradle.org/current/dsl/org.gradle.api.artifacts.ConfigurationContainer.html).)
+For details on how to setup and use custom Gradle configurations, see the [official Gradle documentation](https://docs.gradle.org/current/dsl/org.gradle.api.artifacts.ConfigurationContainer.html).
 
 ### Gradle properties
 
