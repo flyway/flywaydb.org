@@ -101,7 +101,8 @@ COPY copy_test (c1, c2, c3) FROM stdin;
 ## Limitations
 
 - No support for psql meta-commands with no JDBC equivalent like `\set`
-- No support for cleaning native extensions installed in the public schema
+- Clean does not remove objects created by extensions. It is therefore highly recommended to create your extensions
+ using `CREATE EXTENSION IF NOT EXISTS` in order to be able to clean and (re-)migrate your schema(s) at will.
 
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/database/redshift">Redshift <i class="fa fa-arrow-right"></i></a>
