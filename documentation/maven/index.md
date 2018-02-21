@@ -47,7 +47,7 @@ Enterprise Maven plugin also supports **Java 6** and **Java 7**.
         &lt;/plugin&gt;
     &lt;/plugins&gt;
 &lt;/build&gt;</pre>
-            <code>&lt;project-dir&gt;/.mvn/pom.xml</code>
+            <code>&lt;project-dir&gt;/.mvn/extensions.xml</code>
             <pre class="prettyprint">&lt;extensions&gt;
     &lt;extension&gt;
         &lt;groupId&gt;com.allogy.maven.wagon&lt;/groupId&gt;
@@ -86,7 +86,7 @@ Enterprise Maven plugin also supports **Java 6** and **Java 7**.
         &lt;/plugin&gt;
     &lt;/plugins&gt;
 &lt;/build&gt;</pre>
-            <code>&lt;project-dir&gt;/.mvn/pom.xml</code>
+            <code>&lt;project-dir&gt;/.mvn/extensions.xml</code>
             <pre class="prettyprint">&lt;extensions&gt;
     &lt;extension&gt;
         &lt;groupId&gt;com.allogy.maven.wagon&lt;/groupId&gt;
