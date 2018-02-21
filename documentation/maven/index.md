@@ -29,7 +29,7 @@ Enterprise Maven plugin also supports **Java 6** and **Java 7**.
 &lt;/plugin&gt;</pre>
         </div>
         <div class="tab-pane" id="tab-pro">
-            <code>pom.xml</code>
+            <code>&lt;project-dir&gt;/pom.xml</code>
             <pre class="prettyprint">&lt;pluginRepositories&gt;
     &lt;pluginRepository&gt;
         &lt;id&gt;flyway-repo&lt;/id&gt;
@@ -39,14 +39,6 @@ Enterprise Maven plugin also supports **Java 6** and **Java 7**.
 &lt;/pluginRepositories&gt;
         
 &lt;build&gt;
-    &lt;extensions&gt;
-        &lt;extension&gt;
-            &lt;groupId&gt;com.allogy.maven.wagon&lt;/groupId&gt;
-            &lt;artifactId&gt;maven-s3-wagon&lt;/artifactId&gt;
-            &lt;version&gt;1.0.1&lt;/version&gt;
-        &lt;/extension&gt;
-    &lt;/extensions&gt;
-    ...
     &lt;plugins&gt;
         &lt;plugin&gt;
             &lt;groupId&gt;org.flywaydb<strong>.pro</strong>&lt;/groupId&gt;
@@ -55,7 +47,15 @@ Enterprise Maven plugin also supports **Java 6** and **Java 7**.
         &lt;/plugin&gt;
     &lt;/plugins&gt;
 &lt;/build&gt;</pre>
-            <code>settings.xml</code>
+            <code>&lt;project-dir&gt;/.mvn/pom.xml</code>
+            <pre class="prettyprint">&lt;extensions&gt;
+    &lt;extension&gt;
+        &lt;groupId&gt;com.allogy.maven.wagon&lt;/groupId&gt;
+        &lt;artifactId&gt;maven-s3-wagon&lt;/artifactId&gt;
+        &lt;version&gt;1.0.1&lt;/version&gt;
+    &lt;/extension&gt;
+&lt;/extensions&gt;</pre>
+            <code>&lt;user-home&gt;/.m2/settings.xml</code>
             <pre class="prettyprint">&lt;settings&gt;
     &lt;servers&gt;
         &lt;server&gt;
@@ -68,7 +68,7 @@ Enterprise Maven plugin also supports **Java 6** and **Java 7**.
 &lt;/settings&gt;</pre>
         </div>
         <div class="tab-pane" id="tab-enterprise">
-            <code>pom.xml</code>
+            <code>&lt;project-dir&gt;/pom.xml</code>
             <pre class="prettyprint">&lt;pluginRepositories&gt;
     &lt;pluginRepository&gt;
         &lt;id&gt;flyway-repo&lt;/id&gt;
@@ -78,14 +78,6 @@ Enterprise Maven plugin also supports **Java 6** and **Java 7**.
 &lt;/pluginRepositories&gt;
         
 &lt;build&gt;
-    &lt;extensions&gt;
-        &lt;extension&gt;
-            &lt;groupId&gt;com.allogy.maven.wagon&lt;/groupId&gt;
-            &lt;artifactId&gt;maven-s3-wagon&lt;/artifactId&gt;
-            &lt;version&gt;1.0.1&lt;/version&gt;
-        &lt;/extension&gt;
-    &lt;/extensions&gt;
-    ...
     &lt;plugins&gt;
         &lt;plugin&gt;
             &lt;groupId&gt;org.flywaydb<strong>.enterprise</strong>&lt;/groupId&gt;
@@ -94,7 +86,15 @@ Enterprise Maven plugin also supports **Java 6** and **Java 7**.
         &lt;/plugin&gt;
     &lt;/plugins&gt;
 &lt;/build&gt;</pre>
-            <code>settings.xml</code>
+            <code>&lt;project-dir&gt;/.mvn/pom.xml</code>
+            <pre class="prettyprint">&lt;extensions&gt;
+    &lt;extension&gt;
+        &lt;groupId&gt;com.allogy.maven.wagon&lt;/groupId&gt;
+        &lt;artifactId&gt;maven-s3-wagon&lt;/artifactId&gt;
+        &lt;version&gt;1.0.1&lt;/version&gt;
+    &lt;/extension&gt;
+&lt;/extensions&gt;</pre>
+            <code>&lt;user-home&gt;/.m2/settings.xml</code>
             <pre class="prettyprint">&lt;settings&gt;
     &lt;servers&gt;
         &lt;server&gt;
