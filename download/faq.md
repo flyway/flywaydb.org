@@ -106,7 +106,7 @@ Flyway Pro Edition is credit card only, no exceptions.
 
 Flyway Enterprise Edition customers can pay via invoice and get NET15 payment terms.
 
-# What happens if you change your prices in the future?
+## What happens if you change your prices in the future?
 
 We practice a fair pricing policy for our customers. If our prices go up, you will still pay your initial lower price
 as long as you renew and your usage stays constant. If on the other our prices go down, we will automatically charge you the new lower
