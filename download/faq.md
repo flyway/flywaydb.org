@@ -90,7 +90,7 @@ This is a common requirement for "on-site installs" or "appliances" sold to larg
 
 The standard license is only appropriate for SaaS usage as it does not allow distribution.
 Flyway Pro Edition and Flyway Enterprise Edition have a Redistributable license option which does allow you to
-distribute them. The Redistributable license is 9,500 USD per year for Pro and 29,500 USD per year for Enterprise.
+distribute them. The [Redistributable license](/licenses/flyway-pro-redistributable) is 9,500 USD per year for Pro and 29,500 USD per year for Enterprise.
 This license allows you to distribute the Pro or Enterprise Edition as part of your application to your
 customers. One licence enables each of your customers to run Flyway Pro or Enterprise Edition to manage up to 10 schemas
 in production (and an unlimited number of schemas in test) as part of your application only.
@@ -105,3 +105,9 @@ See the previous question: [Can I distribute Flyway Pro Edition or Flyway Enterp
 Flyway Pro Edition is credit card only, no exceptions.
 
 Flyway Enterprise Edition customers can pay via invoice and get NET15 payment terms.
+
+# What happens if you change your prices in the future?
+
+We practice a fair pricing policy for our customers. If our prices go up, you will still pay your initial lower price
+as long as you renew and your usage stays constant. If on the other our prices go down, we will automatically charge you the new lower
+price at your next renewal.
