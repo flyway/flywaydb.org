@@ -102,7 +102,7 @@ COPY copy_test (c1, c2, c3) FROM stdin;
 
 - No support for psql meta-commands with no JDBC equivalent like `\set`
 - No support for cleaning native extensions installed in the public schema
-- No support for cleaning referenced large objects in `pg_largeobject` (#1934)
+- No support for cleaning referenced large objects in `pg_largeobject` ([Issue 1934](https://github.com/flyway/flyway/issues/1934))
 
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/database/redshift">Redshift <i class="fa fa-arrow-right"></i></a>
