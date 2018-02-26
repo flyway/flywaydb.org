@@ -11,41 +11,45 @@ Flyway optionally supports loading configuration via config files.
 
 Config files have the following structure:
 
-<pre class="prettyprint"># Settings are simple key-value pairs
+```properties
+# Settings are simple key-value pairs
 flyway.key=value
 # Single line comment start with a hash
 
 # These are some example settings
 flyway.url=jdbc:mydb://mydatabaseurl
 flyway.schemas=schema1,schema2
-flyway.placeholders.keyABC=valueXYZ</pre>
+flyway.placeholders.keyABC=valueXYZ
+```
 
 ## Reference
 
 These are the settings supported via config files:
 
-<pre class="prettyprint"># Jdbc url to use to connect to the database
+```properties
+# JDBC url to use to connect to the database
 # Examples
 # --------
 # Most drivers are included out of the box.
 # * = driver must be downloaded and installed in /drivers manually
-# CockroachDB       : jdbc:postgresql://&lt;host&gt;:&lt;port&gt;/&lt;database&gt;?&lt;key1&gt;=&lt;value1&gt;&&lt;key2&gt;=&lt;value2&gt;...
-# DB2*              : jdbc:db2://&lt;host&gt;:&lt;port&gt;/&lt;database&gt;
-# Derby             : jdbc:derby:&lt;subsubprotocol:&gt;&lt;databaseName&gt;&lt;;attribute=value&gt;
-# H2                : jdbc:h2:&lt;file&gt;
-# Hsql              : jdbc:hsqldb:file:&lt;file&gt;
-# Google Cloud SQL* : jdbc:google:mysql://&lt;project-id&gt;:&lt;instance-name&gt;/&lt;database&gt;
-# MariaDB           : jdbc:mariadb://&lt;host&gt;:&lt;port&gt;/&lt;database&gt;?&lt;key1&gt;=&lt;value1&gt;&&lt;key2&gt;=&lt;value2&gt;...
-# MySQL             : jdbc:mysql://&lt;host&gt;:&lt;port&gt;/&lt;database&gt;?&lt;key1&gt;=&lt;value1&gt;&&lt;key2&gt;=&lt;value2&gt;...
-# Oracle*           : jdbc:oracle:thin:@//&lt;host&gt;:&lt;port&gt;/&lt;service&gt;
-# Phoenix*          : jdbc:phoenix:&lt;host&gt;
-# PostgreSQL        : jdbc:postgresql://&lt;host&gt;:&lt;port&gt;/&lt;database&gt;?&lt;key1&gt;=&lt;value1&gt;&&lt;key2&gt;=&lt;value2&gt;...
-# SQL Azure*        : jdbc:sqlserver://&lt;servername&gt;.database.windows.net;databaseName=&lt;database&gt;
-# SQL Server        : jdbc:jtds:sqlserver://&lt;host&gt;:&lt;port&gt;/&lt;database&gt;
-# SQLite            : jdbc:sqlite:&lt;database&gt;
+# ** = TNS_ADMIN environment variable must point to the directory of where tnsnames.ora resides
+# CockroachDB       : jdbc:postgresql://<host>:<port>/<database>?<key1>=<value1>&<key2>=<value2>...
+# DB2*              : jdbc:db2://<host>:<port>/<database>
+# Derby             : jdbc:derby:<subsubprotocol>:<databaseName><;attribute=value>
+# H2                : jdbc:h2:<file>
+# HSQLDB            : jdbc:hsqldb:file:<file>
+# MariaDB           : jdbc:mariadb://<host>:<port>/<database>?<key1>=<value1>&<key2>=<value2>...
+# MySQL             : jdbc:mysql://<host>:<port>/<database>?<key1>=<value1>&<key2>=<value2>...
+# Oracle*           : jdbc:oracle:thin:@//<host>:<port>/<service>
+# Oracle* (TNS)**   : jdbc:oracle:thin:@<tns_entry>
+# PostgreSQL        : jdbc:postgresql://<host>:<port>/<database>?<key1>=<value1>&<key2>=<value2>...
+# SAP HANA*         : jdbc:sap://<host>:<port>/?databaseName=<database>
+# SQL Server        : jdbc:sqlserver:////<host>:<port>;databaseName=<database>
+# SQLite            : jdbc:sqlite:<database>
+# Sybase ASE        : jdbc:jtds:sybase://<host>:<port>/<database>
 flyway.url=
 
-# Fully qualified classname of the jdbc driver (autodetected by default based on flyway.url)
+# Fully qualified classname of the JDBC driver (autodetected by default based on flyway.url)
 # flyway.driver=
 
 # User to use to connect to the database. Flyway will prompt you to enter it if not specified.
@@ -63,13 +67,16 @@ flyway.url=
 # flyway.schemas=
 
 # Name of Flyway's schema history table (default: flyway_schema_history)
-# By default (single-schema mode) the schema history table is placed in the default schema for the connection provided by the datasource.
-# When the flyway.schemas property is set (multi-schema mode), the schema history table is placed in the first schema of the list.
+# By default (single-schema mode) the schema history table is placed in the default schema for the connection 
+# provided by the datasource.
+# When the flyway.schemas property is set (multi-schema mode), the schema history table is placed in the first 
+# schema of the list.
 # flyway.table=
 
-# Comma-separated list of locations to scan recursively for migrations. (default: filesystem:&lt;&lt;INSTALL-DIR&gt;&gt;/sql)
+# Comma-separated list of locations to scan recursively for migrations. (default: filesystem:<<INSTALL-DIR>>/sql)
 # The location type is determined by its prefix.
-# Unprefixed locations or locations starting with classpath: point to a package on the classpath and may contain both sql and java-based migrations.
+# Unprefixed locations or locations starting with classpath: point to a package on the classpath and may contain 
+# both sql and java-based migrations.
 # Locations starting with filesystem: point to a directory on the filesystem and may only contain sql migrations.
 # flyway.locations=
 
@@ -80,7 +87,8 @@ flyway.url=
 # defined by 'flyway.resolvers' are used. (default: false)
 # flyway.skipDefaultResolvers=
 
-# Comma-separated list of directories containing JDBC drivers and Java-based migrations. (default: &lt;INSTALL-DIR&gt;/jars)
+# Comma-separated list of directories containing JDBC drivers and Java-based migrations.
+# (default: <INSTALL-DIR>/jars)
 # flyway.jarDirs=
 
 # File name prefix for versioned SQL migrations (default: V)
@@ -129,7 +137,7 @@ flyway.url=
 # flyway.placeholderSuffix=
 
 # Target version up to which Flyway should consider migrations.
-# The special value 'current' designates the current version of the schema. (default: &lt;&lt;latest version&gt;&gt;)
+# The special value 'current' designates the current version of the schema. (default: <<latest version>>)
 # flyway.target=
 
 # Whether to automatically call validate or not when running migrate. (default: true)
@@ -150,11 +158,11 @@ flyway.url=
 # The version to tag an existing schema with when executing baseline. (default: 1)
 # flyway.baselineVersion=
 
-# The description to tag an existing schema with when executing baseline. (default: &lt;&lt; Flyway Baseline &gt;&gt;)
+# The description to tag an existing schema with when executing baseline. (default: << Flyway Baseline >>)
 # flyway.baselineDescription=
 
-# Whether to automatically call baseline when migrate is executed against a non-empty schema with no schema history table.
-# This schema will then be initialized with the baselineVersion before executing the migrations.
+# Whether to automatically call baseline when migrate is executed against a non-empty schema with no schema history
+# table. This schema will then be initialized with the baselineVersion before executing the migrations.
 # Only migrations above baselineVersion will then be applied.
 # This is useful for initial Flyway production deployments on projects with an existing DB.
 # Be careful when enabling this as it removes the safety net that ensures
@@ -176,13 +184,13 @@ flyway.url=
 
 # Ignore missing migrations when reading the schema history table. These are migrations that were performed by an
 # older deployment of the application that are no longer available in this version. For example: we have migrations
-# available on the classpath with versions 1.0 and 3.0. The schema history table indicates that a migration with version 2.0
-# (unknown to us) has also been applied. Instead of bombing out (fail fast) with an exception, a
+# available on the classpath with versions 1.0 and 3.0. The schema history table indicates that a migration with 
+# version 2.0 (unknown to us) has also been applied. Instead of bombing out (fail fast) with an exception, a
 # warning is logged and Flyway continues normally. This is useful for situations where one must be able to deploy
 # a newer version of the application even though it doesn't contain migrations included with an older one anymore.
-# Note that if the most recently applied migration is removed, Flyway has no way to know it is missing and will 
+# Note that if the most recently applied migration is removed, Flyway has no way to know it is missing and will
 # mark it as future instead.
-# true to continue normally and log a warning, false to fail fast with an exception.
+# true to continue normally and log a warning, false to fail fast with an exception. (default: false)
 # flyway.ignoreMissingMigrations=
 
 # Ignore ignored migrations when reading the schema history table. These are migrations that were added in between
@@ -209,22 +217,30 @@ flyway.url=
 # true if mixed migrations should be allowed. false if an error should be thrown instead. (default: false)
 # flyway.mixed=
 
-# Whether to group all pending migrations together in the same transaction when applying them (only recommended for databases with support for DDL transactions).
+# Whether to group all pending migrations together in the same transaction when applying them 
+# (only recommended for databases with support for DDL transactions).
 # true if migrations should be grouped. false if they should be applied individually instead. (default: false)
 # flyway.group=
 
 # The username that will be recorded in the schema history table as having applied the migration.
-# &lt;&lt;blank&gt;&gt; for the current database user of the connection. (default: &lt;&lt;blank&gt;&gt;).
+# <<blank>> for the current database user of the connection. (default: <<blank>>).
 # flyway.installedBy=
 
-# Comma-separated list of the fully qualified calss names of handlers for errors and warnings that occur during a
-# migration. This can be used to customize Flyway's behavior by for example
-# throwing another runtime exception, outputting a warning or suppressing the error instead of throwing a FlywayException.
+# Comma-separated list of the fully qualified class names of handlers for errors and warnings that occur during a
+# migration. This can be used to customize Flyway's behavior by for example throwing another runtime exception,
+# outputting a warning or suppressing the error instead of throwing a FlywayException.
 # ErrorHandlers are invoked in order until one reports to have successfully handled the errors or warnings.
 # If none do, or if none are present, Flyway falls back to its default handling of errors and warnings.
-# &lt;&lt;blank&gt;&gt; to use the default internal handler (default: <<blank>>)
+# <<blank>> to use the default internal handler (default: <<blank>>)
 # Flyway Pro and Flyway Enterprise only
-# flyway.errorHandlers=</pre>
+# flyway.errorHandlers=
+
+# The file where to output the SQL statements of a migration dry run. If the file specified is in a non-existent
+# directory, Flyway will create all directories and parent directories as needed.
+# <<blank>> to execute the SQL statements directly against the database. (default: <<blank>>)
+# Flyway Pro and Flyway Enterprise only
+# flyway.dryRunOutput=
+```
 
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/articles">Articles <i class="fa fa-arrow-right"></i></a>
