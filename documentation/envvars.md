@@ -5,7 +5,7 @@ subtitle: Environment Variables
 ---
 # Environment Variables
 
-Flyway optionally supports loading configuration via environment variables.
+The Flyway Command-line tool, Maven plugin and Gradle plugin optionally support loading configuration via environment variables.
 
 ## Reference
 
