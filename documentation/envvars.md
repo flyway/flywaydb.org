@@ -72,19 +72,34 @@ The following environment variables are supported:
     </tr>
     <tr id="FLYWAY_SQL_MIGRATION_PREFIX">
         <td>FLYWAY_SQL_MIGRATION_PREFIX</td>
-        <td>The file name prefix for Sql migrations</td>
+        <td><p>The file name prefix for versioned SQL migrations.</p>
+            Versioned SQL migrations have the following file name structure: prefixVERSIONseparatorDESCRIPTIONsuffix ,
+                which using the defaults translates to V1.1__My_description.sql</td>
+    </tr>
+    <tr id="FLYWAY_UNDO_SQL_MIGRATION_PREFIX">
+        <td>FLYWAY_UNDO_SQL_MIGRATION_PREFIX {% include pro.html %}</td>
+        <td><p>The file name prefix for undo SQL migrations.</p>
+            <p>Undo SQL migrations are responsible for undoing the effects of the versioned migration with the same version.</p>
+            They have the following file name structure: prefixVERSIONseparatorDESCRIPTIONsuffix ,
+            which using the defaults translates to U1.1__My_description.sql</td>
     </tr>
     <tr id="FLYWAY_REPEATABLE_SQL_MIGRATION_PREFIX">
         <td>FLYWAY_REPEATABLE_SQL_MIGRATION_PREFIX</td>
-        <td>The file name prefix for repeatable Sql migrations</td>
+        <td><p>The file name prefix for repeatable SQL migrations.</p>
+            Repeatable SQL migrations have the following file name structure: prefixSeparatorDESCRIPTIONsuffix ,
+            which using the defaults translates to R__My_description.sql</td>
     </tr>
     <tr id="FLYWAY_SQL_MIGRATION_SEPARATOR">
         <td>FLYWAY_SQL_MIGRATION_SEPARATOR</td>
         <td>The file name separator for Sql migrations</td>
     </tr>
-    <tr id="FLYWAY_SQL_MIGRATION_SUFFIX">
-        <td>FLYWAY_SQL_MIGRATION_SUFFIX</td>
-        <td>The file name suffix for Sql migrations</td>
+    <tr id="FLYWAY_SQL_MIGRATION_SUFFIXES">
+        <td>FLYWAY_SQL_MIGRATION_SUFFIXES</td>
+        <td><p>Comma-separated list of file name suffixes for SQL migrations.</p>
+            <p>SQL migrations have the following file name structure: prefixVERSIONseparatorDESCRIPTIONsuffix ,
+                which using the defaults translates to V1_1__My_description.sql</p>
+            Multiple suffixes (like .sql,.pkg,.pkb) can be specified for easier compatibility with other tools such as
+                editors with specific file associations.</td>
     </tr>
     <tr id="FLYWAY_MIXED">
         <td>FLYWAY_MIXED</td>
@@ -214,6 +229,16 @@ The following environment variables are supported:
     <tr id="FLYWAY_INSTALLED_BY">
         <td>FLYWAY_INSTALLED_BY</td>
         <td>The username that will be recorded in the schema history table as having applied the migration</td>
+    </tr>
+    <tr id="FLYWAY_ERROR_HANDLERS">
+        <td>FLYWAY_ERROR_HANDLERS {% include pro.html %}</td>
+        <td>Comma-sparated list of fully qualified class names of <a href="/documentation/errorhandlers">Error Handlers</a>
+         for errors and warnings that occur during
+         a migration. This can be used to customize Flyway's behavior by for example throwing another runtime exception,
+          outputting a warning or suppressing the error instead of throwing a FlywayException. ErrorHandlers are invoked
+           in order until one reports to have successfully handled the errors or warnings.
+           If none do, or if none are present, Flyway falls back to its default handling of errors and warnings.
+           </td>
     </tr>
     </tbody>
 </table>
