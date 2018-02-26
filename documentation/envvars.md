@@ -252,6 +252,12 @@ The following environment variables are supported:
            If none do, or if none are present, Flyway falls back to its default handling of errors and warnings.
            </td>
     </tr>
+    <tr id="FLYWAY_DRYRUN_OUTPUT">
+        <td>FLYWAY_DRYRUN_OUTPUT {% include pro.html %}</td>
+        <td>The file where to output the SQL statements of a migration dry run. If the file specified is in a non-existent
+            directory, Flyway will create all directories and parent directories as needed.
+            Omit to use the default mode of executing the SQL statements directly against the database.</td>
+    </tr>
     </tbody>
 </table>
 
