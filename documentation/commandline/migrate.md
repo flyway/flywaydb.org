@@ -265,7 +265,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
         <td>false</td>
         <td>Whether to disable clean. This is especially useful for production environments where running clean can be quite a career limiting move.</td>
     </tr>
-    <tr>
+    <tr id="baselineOnMigrate">
         <td>baselineOnMigrate</td>
         <td>NO</td>
         <td>false</td>
