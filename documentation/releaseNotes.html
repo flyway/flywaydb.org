@@ -69,6 +69,10 @@ subtitle: Release Notes
             Flyway Maven Plugin can't find JDBC driver if the driver is a dependency with scope provided
         </li>
         <li>
+            <a href="https://github.com/flyway/flyway/issues/1926">Issue 1926</a>
+            PostgreSQL: Flyway uses "public" schema instead of current_schema when search_path starts with $user
+        </li>
+        <li>
             <a href="https://github.com/flyway/flyway/issues/1927">Issue 1927</a>
             Flyway 5 regression when line in multi line string starts with single line comment
         </li>
@@ -81,7 +85,7 @@ subtitle: Release Notes
     </ul>
 
     <p>
-        Thanks to Bartosz Kamiński, Craig Davidson,
+        Thanks to Bartosz Kamiński, Craig Davidson, Daniel Huss,
         Manikanta G, Sandra Parsick, Simon Gamma and Yannik Hampe for reporting these issues.
     </p>
 </div>
