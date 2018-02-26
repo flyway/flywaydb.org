@@ -11,14 +11,16 @@ Flyway optionally supports loading configuration via config files.
 
 Config files have the following structure:
 
-<pre class="prettyprint"># Settings are simple key-value pairs
+```properties
+# Settings are simple key-value pairs
 flyway.key=value
 # Single line comment start with a hash
 
 # These are some example settings
 flyway.url=jdbc:mydb://mydatabaseurl
 flyway.schemas=schema1,schema2
-flyway.placeholders.keyABC=valueXYZ</pre>
+flyway.placeholders.keyABC=valueXYZ
+```
 
 ## Reference
 
