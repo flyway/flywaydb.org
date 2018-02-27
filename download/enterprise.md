@@ -33,42 +33,37 @@ All levels come with unlimited database schemas in dev and test
 </tr>
 <tr>
 <td>40 schemas</td>
-<td>11,210 USD per year<br><span class="note">less than 24 USD per schema per month</span></td>
+<td>11,800 USD per year<br><span class="note">less than 25 USD per schema per month</span></td>
 <td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-enterprise-4-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
 </tr>
 <tr>
 <td>50 schemas</td>
-<td>13,275 USD per year<br><span class="note">less than 23 USD per schema per month</span></td>
+<td>14,750 USD per year<br><span class="note">less than 25 USD per schema per month</span></td>
 <td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-enterprise-5-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
 </tr>
 <tr>
 <td>60 schemas</td>
-<td>15,045 USD per year<br><span class="note">less than 21 USD per schema per month</span></td>
+<td>17,700 USD per year<br><span class="note">less than 25 USD per schema per month</span></td>
 <td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-enterprise-6-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
 </tr>
 <tr>
 <td>70 schemas</td>
-<td>16,520 USD per year<br><span class="note">less than 20 USD per schema per month</span></td>
+<td>20,650 USD per year<br><span class="note">less than 25 USD per schema per month</span></td>
 <td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-enterprise-7-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
 </tr>
 <tr>
 <td>80 schemas</td>
-<td>17,700 USD per year<br><span class="note">less than 19 USD per schema per month</span></td>
+<td>23,600 USD per year<br><span class="note">less than 25 USD per schema per month</span></td>
 <td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-enterprise-8-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
 </tr>
 <tr>
 <td>90 schemas</td>
-<td>18,585 USD per year<br><span class="note">less than 18 USD per schema per month</span></td>
+<td>26,550 USD per year<br><span class="note">less than 25 USD per schema per month</span></td>
 <td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-enterprise-9-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
 </tr>
 <tr>
-<td>100 schemas</td>
-<td>19,175 USD per year<br><span class="note">less than 16 USD per schema per month</span></td>
-<td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-enterprise-10-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
-</tr>
-<tr>
 <td><strong>unlimited</strong></td>
-<td>19,950 USD per year</td>
+<td>29,500 USD per year</td>
 <td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-enterprise-site-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
 </tr>
 </table>
@@ -237,24 +232,6 @@ Contact us for more information at **sales@flywaydb.org**.
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">I do not agree</button>
         <a data-fsc-action="Reset,Add,Update,Checkout" data-fsc-item-path-value="flyway-enterprise-2017" data-fsc-item-quantity-value="9" data-dismiss="modal" class="btn btn-primary" href="javascript:$('#flyway-enterprise-9-license-modal').modal('hide');">I agree</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="flyway-enterprise-10-license-modal" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">License Agreement</h4>
-      </div>
-      <div class="modal-body">
-        By downloading the Flyway Enterprise Edition you confirm to have read and that you agree to the terms of the <a href="/licenses/flyway-enterprise.txt" target="_blank">Flyway Enterprise Edition License</a>.
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">I do not agree</button>
-        <a data-fsc-action="Reset,Add,Update,Checkout" data-fsc-item-path-value="flyway-enterprise-2017" data-fsc-item-quantity-value="10" data-dismiss="modal" class="btn btn-primary" href="javascript:$('#flyway-enterprise-10-license-modal').modal('hide');">I agree</a>
       </div>
     </div>
   </div>
