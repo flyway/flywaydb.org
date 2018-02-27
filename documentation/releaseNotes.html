@@ -34,15 +34,15 @@ subtitle: Release Notes
     <ul>
         <li>
             <a href="https://github.com/flyway/flyway/issues/1928">Issue 1928</a>
-            FlywayConfiguration.getLocations() now returns Location[] instead of String[]
+            <code>Configuration.getLocations()</code> now returns <code>Location[]</code> instead of <code>String[]</code>
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/1928">Issue 1928</a>
-            Flyway.getLocations() now returns Location[] instead of String[]
+            <code>Flyway.getLocations()</code> now returns <code>Location[]</code> instead of <code>String[]</code>
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/1928">Issue 1928</a>
-            Flyway.getSchemas() now returns an empty array (instead of the connection's default schema) if no schemas were set using setSchemas()
+            <code>Flyway.getSchemas()</code> now returns an empty array (instead of the connection's default schema) if no schemas were set using <code>setSchemas()</code>
         </li>
     </ul>
 
@@ -50,7 +50,11 @@ subtitle: Release Notes
     <ul>
         <li>
             <a href="https://github.com/flyway/flyway/issues/1928">Issue 1928</a>
-            All getters and setters of the Flyway class have been deprecated in favor of Flyway.config() and ClassicConfiguration.
+            <code>FlywayConfiguration</code> has been deprecated in favor of <code>Configuration</code>.
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1928">Issue 1928</a>
+            All getters and setters of the <code>Flyway</code> class have been deprecated in favor of <code>Flyway.config()</code> and <code>ClassicConfiguration</code>.
         </li>
     </ul>
 
