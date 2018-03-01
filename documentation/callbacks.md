@@ -140,14 +140,20 @@ Callbacks can be implemented either in SQL or in Java.
 
 ## SQL Callbacks
 
-<p>The most convenient way to hook into Flyway's lifecycle is through SQL callbacks. These are simply sql files
-    in the configured locations following a certain naming convention: the callback name followed by the SQL migration suffix.</p>
+The most convenient way to hook into Flyway's lifecycle is through SQL callbacks. These are simply sql files
+in the configured locations following a certain naming convention: the event name followed by the SQL migration suffix.
 
-<p>Using the default settings, Flyway looks in its default locations (&lt;install_dir&gt;/sql) for the Command-line tool) for SQL files like beforeMigrate.sql, beforeEachMigrate.sql, afterEachMigrate.sql, ...</p>
+Using the default settings, Flyway looks in its default locations (&lt;install_dir&gt;/sql) for the Command-line tool)
+for SQL files like `beforeMigrate.sql`, `beforeEachMigrate.sql`, `afterEachMigrate.sql`, ...
 
-<p>Placeholder replacement works just like it does for <a href="/documentation/migrations#sql-based-migrations">SQL migrations</a>.</p>
+Placeholder replacement works just like it does for <a href="/documentation/migrations#sql-based-migrations">SQL migrations</a>.
 
-<p><strong>Note:</strong> Flyway will also honor any <code>sqlMigrationSuffixes</code> you have configured, when scanning for SQL call callbacks.</p>
+Optionally the callback may also include a description. In that case the callback name is composed of the event name,
+the separator, the description and the suffix. Example: `beforeRepair__vacuum.sql`.
+
+When multiple SQL callbacks for the same event are found, they are executed in the order of their description.
+
+**Note:** Flyway will also honor any `sqlMigrationSuffixes` you have configured, when scanning for SQL callbacks.
 
 ## Java Callbacks
 
