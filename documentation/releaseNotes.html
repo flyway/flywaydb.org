@@ -36,6 +36,10 @@ subtitle: Release Notes
             <a href="https://github.com/flyway/flyway/issues/1928">Issue 1928</a>
             Introduce fluent configuration
         </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1936">Issue 1936</a>
+            Environment variable configuration using API
+        </li>
     </ul>
 
     <h3>Incompatible Changes</h3>
@@ -47,6 +51,10 @@ subtitle: Release Notes
         <li>
             <a href="https://github.com/flyway/flyway/issues/1707">Issue 1707</a>
             <code>Flyway.getCallbacks()</code> now returns <code>Callback[]</code> instead of <code>FlywayCallback[]</code>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1865">Issue 1865</a>
+            'Ignored' migrations now trigger an error by default. The old more lenient behavior can be restored by setting `ignoreIgnoredMigrations` to `true`
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/1928">Issue 1928</a>
@@ -122,7 +130,8 @@ subtitle: Release Notes
 
     <p>
         Thanks to aebaugh, Bartosz Kamiński, brodgers-oreilly, Chuck May, Craig Davidson, Daniel Huss,
-        Kevin Sheedy, Manikanta G, Sandra Parsick, Simon Gamma and Yannik Hampe for reporting these issues.
+        Kevin Sheedy, Manikanta G, Peter Wippermann,
+        Sandra Parsick, Simon Gamma and Yannik Hampe for reporting these issues.
     </p>
 </div>
 
