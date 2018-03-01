@@ -1,0 +1,162 @@
+---
+layout: documentation
+menu: callbacks
+subtitle: Callbacks
+---
+# Callbacks
+
+While migrations are sufficient for most needs, there are certain situations that require you to <strong>execute the same action
+over and over again</strong>. This could be recompiling procedures, updating materialized views and many other types of housekeeping.
+
+For this reason, Flyway offers you the possibility to **hook into its lifecycle** by using Callbacks.
+
+These are the events Flyway supports:
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <th><strong>Name</strong></th>
+        <th><strong>Execution</strong></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>beforeMigrate</td>
+        <td>Before Migrate runs</td>
+    </tr>
+    <tr>
+        <td>beforeEachMigrate</td>
+        <td>Before every single migration during Migrate</td>
+    </tr>
+    <tr>
+        <td>afterEachMigrate</td>
+        <td>After every single successful migration during Migrate</td>
+    </tr>
+    <tr>
+        <td>afterEachMigrateError</td>
+        <td>After every single failed migration during Migrate</td>
+    </tr>
+    <tr>
+        <td>afterMigrate</td>
+        <td>After successful Migrate runs</td>
+    </tr>
+    <tr>
+        <td>afterMigrateError</td>
+        <td>After failed Migrate runs</td>
+    </tr>
+    <tr><td></td><td></td></tr>
+    <tr>
+        <td>beforeUndo {% include pro.html %}</td>
+        <td>Before Undo runs</td>
+    </tr>
+    <tr>
+        <td>beforeEachUndo {% include pro.html %}</td>
+        <td>Before every single migration during Undo</td>
+    </tr>
+    <tr>
+        <td>afterEachUndo {% include pro.html %}</td>
+        <td>After every single successful migration during Undo</td>
+    </tr>
+    <tr>
+        <td>afterEachUndoError {% include pro.html %}</td>
+        <td>After every single failed migration during Undo</td>
+    </tr>
+    <tr>
+        <td>afterUndo {% include pro.html %}</td>
+        <td>After successful Undo runs</td>
+    </tr>
+    <tr>
+        <td>afterUndoError {% include pro.html %}</td>
+        <td>After failed Undo runs</td>
+    </tr>
+    <tr><td></td><td></td></tr>
+    <tr>
+        <td>beforeClean</td>
+        <td>Before Clean runs</td>
+    </tr>
+    <tr>
+        <td>afterClean</td>
+        <td>After successful Clean runs</td>
+    </tr>
+    <tr>
+        <td>afterCleanError</td>
+        <td>After failed Clean runs</td>
+    </tr>
+    <tr><td></td><td></td></tr>
+    <tr>
+        <td>beforeInfo</td>
+        <td>Before Info runs</td>
+    </tr>
+    <tr>
+        <td>afterInfo</td>
+        <td>After successful Info runs</td>
+    </tr>
+    <tr>
+        <td>afterInfoError</td>
+        <td>After failed Info runs</td>
+    </tr>
+    <tr><td></td><td></td></tr>
+    <tr>
+        <td>beforeValidate</td>
+        <td>Before Validate runs</td>
+    </tr>
+    <tr>
+        <td>afterValidate</td>
+        <td>After successful Validate runs</td>
+    </tr>
+    <tr>
+        <td>afterValidateError</td>
+        <td>After failed Validate runs</td>
+    </tr>
+    <tr><td></td><td></td></tr>
+    <tr>
+        <td>beforeBaseline</td>
+        <td>Before Baseline runs</td>
+    </tr>
+    <tr>
+        <td>afterBaseline</td>
+        <td>After successful Baseline runs</td>
+    </tr>
+    <tr>
+        <td>afterBaselineError</td>
+        <td>After failed Baseline runs</td>
+    </tr>
+    <tr><td></td><td></td></tr>
+    <tr>
+        <td>beforeRepair</td>
+        <td>Before Repair runs</td>
+    </tr>
+    <tr>
+        <td>afterRepair</td>
+        <td>After successful Repair runs</td>
+    </tr>
+    <tr>
+        <td>afterRepairError</td>
+        <td>After failed Repair runs</td>
+    </tr>
+    </tbody>
+</table>
+
+Callbacks can be implemented either in SQL or in Java.
+
+## SQL Callbacks
+
+<p>The most convenient way to hook into Flyway's lifecycle is through SQL callbacks. These are simply sql files
+    in the configured locations following a certain naming convention: the callback name followed by the SQL migration suffix.</p>
+
+<p>Using the default settings, Flyway looks in its default locations (&lt;install_dir&gt;/sql) for the Command-line tool) for SQL files like beforeMigrate.sql, beforeEachMigrate.sql, afterEachMigrate.sql, ...</p>
+
+<p>Placeholder replacement works just like it does for <a href="/documentation/migrations#sql-based-migrations">SQL migrations</a>.</p>
+
+<p><strong>Note:</strong> Flyway will also honor any <code>sqlMigrationSuffixes</code> you have configured, when scanning for SQL call callbacks.</p>
+
+## Java Callbacks
+
+If SQL Callbacks aren't flexible enough for you, you have the option to implement the
+[**Callback**](/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback)
+interface yourself. You can even hook multiple Callback implementations in the lifecycle.
+
+**More info:** <a href="/documentation/api/hooks#callsbacks">Java-based Callbacks</a></p>
+
+<p class="next-steps">
+    <a class="btn btn-primary" href="/documentation/errorhandlers">Error Handlers <i class="fa fa-arrow-right"></i></a>
+</p>
