@@ -33,8 +33,16 @@ subtitle: Release Notes
     <h3>Incompatible Changes</h3>
     <ul>
         <li>
+            <a href="https://github.com/flyway/flyway/issues/1707">Issue 1707</a>
+            <code>FlywayConfiguration.getCallbacks()</code> now returns <code>Callback[]</code> instead of <code>FlywayCallback[]</code>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1707">Issue 1707</a>
+            <code>Flyway.getCallbacks()</code> now returns <code>Callback[]</code> instead of <code>FlywayCallback[]</code>
+        </li>
+        <li>
             <a href="https://github.com/flyway/flyway/issues/1928">Issue 1928</a>
-            <code>Configuration.getLocations()</code> now returns <code>Location[]</code> instead of <code>String[]</code>
+            <code>FlywayConfiguration.getLocations()</code> now returns <code>Location[]</code> instead of <code>String[]</code>
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/1928">Issue 1928</a>
@@ -48,6 +56,10 @@ subtitle: Release Notes
 
     <h3>Changes</h3>
     <ul>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1707">Issue 1707</a>
+            <code>FlywayCallback</code> and <code>BaseFlywayCallback</code> have been deprecated in favor of <code>Callback</code>.
+        </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/1928">Issue 1928</a>
             <code>FlywayConfiguration</code> has been deprecated in favor of <code>Configuration</code>.
@@ -63,6 +75,10 @@ subtitle: Release Notes
         <li>
             <a href="https://github.com/flyway/flyway/issues/100">Issue 100</a>
             Clean tries to drop a function from an extension and fails
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1707">Issue 1707</a>
+            Non-transactional SQL callbacks failing after upgrade to 4.2.0
         </li>
         <li>
             <a href="https://github.com/flyway/flyway/issues/1876">Issue 1876</a>
@@ -97,7 +113,7 @@ subtitle: Release Notes
     </ul>
 
     <p>
-        Thanks to Bartosz Kamiński, brodgers-oreilly, Craig Davidson, Daniel Huss,
+        Thanks to aebaugh, Bartosz Kamiński, brodgers-oreilly, Craig Davidson, Daniel Huss,
         Manikanta G, Sandra Parsick, Simon Gamma and Yannik Hampe for reporting these issues.
     </p>
 </div>
