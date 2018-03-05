@@ -88,7 +88,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
             Versioned SQL migrations have the following file name structure: prefixVERSIONseparatorDESCRIPTIONsuffix ,
                 which using the defaults translates to V1.1__My_description.sql</td>
     </tr>
-    <tr>
+    <tr id="undoSqlMigrationPrefix">
         <td>undoSqlMigrationPrefix {% include pro.html %}</td>
         <td>NO</td>
         <td>U</td>
@@ -298,7 +298,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
         <td><i>Current database user</i></td>
         <td>The username that will be recorded in the schema history table as having applied the migration</td>
     </tr>
-    <tr>
+    <tr id="errorHandlers">
         <td>errorHandlers {% include pro.html %}</td>
         <td>NO</td>
         <td><i>none</i></td>
@@ -309,7 +309,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
            If none do, or if none are present, Flyway falls back to its default handling of errors and warnings.
            </td>
     </tr>
-    <tr>
+    <tr id="dryRunOutput">
         <td>dryRunOutput {% include pro.html %}</td>
         <td>NO</td>
         <td><i>Execute directly against the database</i></td>

@@ -10,19 +10,25 @@ subtitle: 'Spring Boot'
 Spring Boot comes with out-of-the-box <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/howto-database-initialization.html#howto-execute-flyway-database-migrations-on-startup">integration for Flyway</a>.
 
 All you need to do is add `flyway-core` to either your `pom.xml`:
-<pre class="prettyprint">&lt;dependency&gt;
-    &lt;groupId&gt;org.flywaydb&lt;/groupId&gt;
-    &lt;artifactId&gt;flyway-core&lt;/artifactId&gt;
-    &lt;version&gt;{{ site.flywayVersion }}&lt;/version&gt;
-&lt;/dependency&gt;</pre>
+```xml
+<dependency>
+    <groupId>org.flywaydb</groupId>
+    <artifactId>flyway-core</artifactId>
+    <version>{{ site.flywayVersion }}</version>
+</dependency>
+```
 
 Or `build.gradle`:
 
-<pre class="prettyprint">compile "org.flywaydb:flyway-core:{{ site.flywayVersion }}"</pre>
+```groovy
+compile "org.flywaydb:flyway-core:{{ site.flywayVersion }}"
+```
 
 Spring Boot will then automatically autowire Flyway with its DataSource and invoke it on startup.
 
-You can then configure a good number of Flyway properties <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html">directly from your <code>application.properties</code> or <code>application.yml file</code></a>.
+You can then configure a good number of Flyway properties [directly from your `application.properties` or `application.yml` file](https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html).
+Spring Boot also lets you configure Flyway using [environment variables](https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-external-config.html).
+Just be aware that the names of these environment variables differ from [Flyway's native environment variables](https://flywaydb.org/documentation/envvars).
 
 <a class="inline-cta" href="https://boxfuse.com/blog/spring-boot-ec2"><i class="fa fa-cloud"></i> Want to deploy your Spring Boot apps effortlessly to AWS? Follow our <strong>5 minute</strong> tutorial using <img src="/assets/logo/boxfuse-logo-nano-blue.png"> Boxfuse <i class="fa fa-arrow-right"></i></a>
 
