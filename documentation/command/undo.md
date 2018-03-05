@@ -8,7 +8,7 @@ subtitle: Undo
 
 Undoes the most recently applied versioned migration.
 
-![Undo](/assets/balsamiq/command-migrate.png)
+![Undo](/assets/balsamiq/command-undo.png)
 
 If `target` is specified, Flyway will attempt to undo versioned migrations in the order they were applied until it hits
 one with a version below the target. If `group` is active, Flyway will attempt to undo all these migrations within a
