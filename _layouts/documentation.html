@@ -59,6 +59,9 @@ title: Documentation
                     <li
                     {% if layout.menu == 'gradle' %} class="active" {% endif %}>
                     <a href="/documentation/gradle">Gradle</a></li>
+                    <li
+                            {% if page.menu == 'plugins' %} class="active" {% endif %}>
+                    <a href="/documentation/plugins/">Community Plugins</a></li>
                     <li class="nav-header">Supported Databases</li>
                     <li
                     {% if page.menu == 'oracle' %} class="active" {% endif %}>
@@ -127,28 +130,6 @@ title: Documentation
                     <li
                     {% if page.menu == 'faq' %} class="active" {% endif %}>
                     <a href="/documentation/faq">FAQ</a></li>
-                    <li class="nav-header">Third Party Plugins</li>
-                    <li
-                            {% if page.menu == 'springboot' %} class="active" {% endif %}>
-                    <a href="/documentation/plugins/springboot">Spring Boot</a></li>
-                    <li
-                            {% if page.menu == 'grails' %} class="active" {% endif %}>
-                    <a href="/documentation/plugins/grails">Grails</a></li>
-                    <li
-                            {% if page.menu == 'dropwizard' %} class="active" {% endif %}>
-                    <a href="/documentation/plugins/dropwizard">Dropwizard</a></li>
-                    <li
-                            {% if page.menu == 'play' %} class="active" {% endif %}>
-                    <a href="/documentation/plugins/play">Play</a></li>
-                    <li
-                            {% if page.menu == 'sbt' %} class="active" {% endif %}>
-                    <a href="/documentation/plugins/sbt">SBT</a></li>
-                    <li
-                            {% if page.menu == 'ant' %} class="active" {% endif %}>
-                    <a href="/documentation/plugins/ant">Ant</a></li>
-                    <li
-                            {% if page.menu == 'plugins' %} class="active" {% endif %}>
-                    <a href="/documentation/plugins/other">Other Tools/Frameworks</a></li>
                     <li class="nav-header">Contribute</li>
                     <li
                     {% if page.menu == 'contribute' %} class="active" {% endif %}>
