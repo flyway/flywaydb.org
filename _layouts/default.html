@@ -181,18 +181,21 @@
         });
     }
 
-    function hideAndDownload(id, url) {
-        $(id).modal('hide');
-
+    function downloadThanks() {
         setTimeout(function () {
             document.location.pathname = "/download/thankyou";
         }, 1000);
+    }
+
+    function hideAndDownload(id, url) {
+        $(id).modal('hide');
+
+        downloadThanks();
 
         var link = document.createElement("a");
         link.download = "data:text/html";
         link.href = url;
         link.click();
-
     }
 </script>
 <!-- Place this tag right after the last button or just before your close body tag. -->
