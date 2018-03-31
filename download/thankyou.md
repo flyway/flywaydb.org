@@ -15,9 +15,9 @@ Your download should start shortly.
 <p>Subscribe to our newsletter to stay updated about Flyway.</p>
 
 <p>Our newsletter is low-frequency (around one email per month),
-highly relevant for Flyway users and there is an unsubscribe link in each email.</p>
+it is highly relevant for Flyway users and there is an unsubscribe link in each email.</p>
 
-<p class="note">Needless to say, we hate spam just as much as you do and your email address will <i>never</i> be shared or sold.</p>
+<p class="note">Needless to say, we hate spam just as much as you do and we will <i>never</i> share or sell your email address.</p>
 
 <form action="//boxfuse.us9.list-manage.com/subscribe/post?u=0e72f61962b6b47f78568d56c&amp;id=e1046edb96" method="post" id="mc-embedded-subscribe-form-thankyou" name="mc-embedded-subscribe-form-thankyou" class="validate form-inline" target="_blank" novalidate>
     <div>
