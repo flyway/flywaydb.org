@@ -3,7 +3,7 @@ layout: documentation
 menu: sbt
 subtitle: 'SBT'
 ---
-# SBT
+# Community Plugins and Integrations: SBT
 
 <img src="/assets/logos/sbt.svg" height="80">
 
@@ -12,5 +12,5 @@ David Webber maintains a great <strong><a href="https://github.com/flyway/flyway
 The website also comes with comprehensive documentation on usage and configuration.
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/plugins/ant">Ant <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/database/oracle">Oracle <i class="fa fa-arrow-right"></i></a>
 </p>

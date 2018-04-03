@@ -3,7 +3,7 @@ layout: documentation
 menu: springboot
 subtitle: 'Spring Boot'
 ---
-# Spring Boot
+# Community Plugins and Integrations: Spring Boot
 
 <img src="/assets/logos/springboot.png" style="margin-bottom: 20px">
 
@@ -33,5 +33,5 @@ Just be aware that the names of these environment variables differ from [Flyway'
 <a class="inline-cta" href="https://boxfuse.com/blog/spring-boot-ec2"><i class="fa fa-cloud"></i> Want to deploy your Spring Boot apps effortlessly to AWS? Follow our <strong>5 minute</strong> tutorial using <img src="/assets/logo/boxfuse-logo-nano-blue.png"> Boxfuse <i class="fa fa-arrow-right"></i></a>
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/plugins/grails">Grails <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/database/oracle">Oracle <i class="fa fa-arrow-right"></i></a>
 </p>

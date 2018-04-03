@@ -90,6 +90,7 @@
 <div class="container">
     <hr class="soften"/>
     <div id="footer">
+        {% if page.footerform != 'no' %}
         <!-- Begin MailChimp Signup Form -->
         <h3 style="color: #888">Stay updated with our monthly newsletter</h3>
         <form action="//boxfuse.us9.list-manage.com/subscribe/post?u=0e72f61962b6b47f78568d56c&amp;id=e1046edb96" method="post" id="mc-embedded-subscribe-form-footer" name="mc-embedded-subscribe-form-footer" class="validate form-inline" target="_blank" novalidate>
@@ -108,6 +109,7 @@
             </div>
         </form>
         <!--End mc_embed_signup-->
+        {% endif %}
 
         <!-- Place this tag where you want the button to render. -->
         <p style="margin-top: 30px">
@@ -179,8 +181,16 @@
         });
     }
 
+    function downloadThanks() {
+        setTimeout(function () {
+            document.location.pathname = "/download/thankyou";
+        }, 1000);
+    }
+
     function hideAndDownload(id, url) {
         $(id).modal('hide');
+
+        downloadThanks();
 
         var link = document.createElement("a");
         link.download = "data:text/html";

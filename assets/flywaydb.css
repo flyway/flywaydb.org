@@ -664,8 +664,36 @@ i {
     margin-top: 4px;
 }
 
+.plugin {
+    height: 300px;
+    overflow: hidden;
+}
+.plugin .caption p {
+    overflow: hidden;
+}
+.plugin .caption p:after {
+    content: '';
+    width: 80%;
+    height: 10px;
+    position: absolute;
+    left: 25px;
+    bottom: 21px;
+    background: linear-gradient(transparent, white);
+}
+.plugin:hover .caption p:after {
+    background: #ddd;
+}
+a.thumbnail:hover, a.thumbnail:focus {
+    background-color: #ddd;
+    border-color: #ddd;
+    text-decoration: none;
+}
+
 .thumbnail img {
     min-width: 100%;
+    min-height: 160px;
+    max-height: 160px;
+    object-fit: contain;
 }
 
 .thumbnail h4 {
