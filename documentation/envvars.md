@@ -102,6 +102,12 @@ The following environment variables are supported:
             Multiple suffixes (like .sql,.pkg,.pkb) can be specified for easier compatibility with other tools such as
                 editors with specific file associations.</td>
     </tr>
+    <tr id="FLYWAY_STREAM">
+        <td>FLYWAY_STREAM {% include pro.html %}</td>
+        <td>Whether to stream SQL migrations when executing them. Streaming doesn't load the entire migration in memory at
+            once. Instead each statement is loaded individually. This is particularly useful for very large SQL migrations
+            composed of multiple MB or even GB of reference data, as this dramatically reduces Flyway's memory consumption.</td>
+    </tr>
     <tr id="FLYWAY_MIXED">
         <td>FLYWAY_MIXED</td>
         <td>Whether to allow mixing transactional and non-transactional statements within the same migration</td>

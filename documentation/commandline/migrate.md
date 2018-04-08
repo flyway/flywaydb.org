@@ -127,6 +127,14 @@ Migrates the schema to the latest version. Flyway will create the schema history
             Multiple suffixes (like .sql,.pkg,.pkb) can be specified for easier compatibility with other tools such as
                 editors with specific file associations.</td>
     </tr>
+    <tr id="stream">
+        <td>stream {% include pro.html %}</td>
+        <td>NO</td>
+        <td>false</td>
+        <td>Whether to stream SQL migrations when executing them. Streaming doesn't load the entire migration in memory at
+            once. Instead each statement is loaded individually. This is particularly useful for very large SQL migrations
+            composed of multiple MB or even GB of reference data, as this dramatically reduces Flyway's memory consumption.</td>
+    </tr>
     <tr id="mixed">
         <td>mixed</td>
         <td>NO</td>
@@ -351,6 +359,7 @@ flyway.undoSqlMigrationPrefix=downgrade
 flyway.repeatableSqlMigrationPrefix=RRR
 flyway.sqlMigrationSeparator=__
 flyway.sqlMigrationSuffixes=.sql,.pkg,.pkb
+flyway.stream=true
 flyway.encoding=ISO-8859-1
 flyway.placeholderReplacement=true
 flyway.placeholders.aplaceholder=value

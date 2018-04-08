@@ -67,15 +67,15 @@ flyway.url=
 # flyway.schemas=
 
 # Name of Flyway's schema history table (default: flyway_schema_history)
-# By default (single-schema mode) the schema history table is placed in the default schema for the connection 
+# By default (single-schema mode) the schema history table is placed in the default schema for the connection
 # provided by the datasource.
-# When the flyway.schemas property is set (multi-schema mode), the schema history table is placed in the first 
+# When the flyway.schemas property is set (multi-schema mode), the schema history table is placed in the first
 # schema of the list.
 # flyway.table=
 
 # Comma-separated list of locations to scan recursively for migrations. (default: filesystem:<<INSTALL-DIR>>/sql)
 # The location type is determined by its prefix.
-# Unprefixed locations or locations starting with classpath: point to a package on the classpath and may contain 
+# Unprefixed locations or locations starting with classpath: point to a package on the classpath and may contain
 # both sql and java-based migrations.
 # Locations starting with filesystem: point to a directory on the filesystem and may only contain sql migrations.
 # flyway.locations=
@@ -120,7 +120,14 @@ flyway.url=
 # editors with specific file associations.
 # flyway.sqlMigrationSuffixes=
 
-# Encoding of Sql migrations (default: UTF-8)
+# Whether to stream SQL migrations when executing them. (default: false)
+# Streaming doesn't load the entire migration in memory at once. Instead each statement is loaded individually.
+# This is particularly useful for very large SQL migrations composed of multiple MB or even GB of reference data,
+# as this dramatically reduces Flyway's memory consumption.
+# Flyway Pro and Flyway Enterprise only
+# flyway.stream=
+
+# Encoding of SQL migrations (default: UTF-8)
 # flyway.encoding=
 
 # Whether placeholders should be replaced. (default: true)
@@ -184,7 +191,7 @@ flyway.url=
 
 # Ignore missing migrations when reading the schema history table. These are migrations that were performed by an
 # older deployment of the application that are no longer available in this version. For example: we have migrations
-# available on the classpath with versions 1.0 and 3.0. The schema history table indicates that a migration with 
+# available on the classpath with versions 1.0 and 3.0. The schema history table indicates that a migration with
 # version 2.0 (unknown to us) has also been applied. Instead of bombing out (fail fast) with an exception, a
 # warning is logged and Flyway continues normally. This is useful for situations where one must be able to deploy
 # a newer version of the application even though it doesn't contain migrations included with an older one anymore.
@@ -217,7 +224,7 @@ flyway.url=
 # true if mixed migrations should be allowed. false if an error should be thrown instead. (default: false)
 # flyway.mixed=
 
-# Whether to group all pending migrations together in the same transaction when applying them 
+# Whether to group all pending migrations together in the same transaction when applying them
 # (only recommended for databases with support for DDL transactions).
 # true if migrations should be grouped. false if they should be applied individually instead. (default: false)
 # flyway.group=
