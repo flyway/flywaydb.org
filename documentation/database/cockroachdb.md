@@ -7,6 +7,7 @@ subtitle: CockroachDB
 
 ## Supported Versions
 
+- `2.0`
 - `1.1`
 
 ## Driver
