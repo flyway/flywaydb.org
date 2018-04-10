@@ -108,6 +108,14 @@ The following environment variables are supported:
             once. Instead each statement is loaded individually. This is particularly useful for very large SQL migrations
             composed of multiple MB or even GB of reference data, as this dramatically reduces Flyway's memory consumption.</td>
     </tr>
+    <tr id="FLYWAY_BATCH">
+        <td>FLYWAY_BATCH {% include pro.html %}</td>
+        <td>Whether to batch SQL statements when executing them. Batching can save up to 99 percent of network roundtrips by
+            sending up to 100 statements at once over the network to the database, instead of sending each statement
+            individually. This is particularly useful for very large SQL migrations composed of multiple MB or even GB of
+            reference data, as this can dramatically reduce the network overhead. This is supported for INSERT, UPDATE,
+            DELETE, MERGE and UPSERT statements. All other statements are automatically executed without batching.</td>
+    </tr>
     <tr id="FLYWAY_MIXED">
         <td>FLYWAY_MIXED</td>
         <td>Whether to allow mixing transactional and non-transactional statements within the same migration</td>
