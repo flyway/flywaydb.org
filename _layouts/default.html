@@ -37,6 +37,7 @@
             top.location = self.location;
         }
     </script>
+    <script src="/assets/jquery-1.12.1/jquery-1.12.1.min.js" type="text/javascript"></script>
 </head>
 <body>
 <div id="top-cta"><a href="https://boxfuse.com">Want to deploy your JVM, Node.js and Go apps effortlessly to AWS? Try our service <img src="/assets/logo/boxfuse-logo-nano.png"> Boxfuse <i class="fa fa-arrow-right" style="color: #EFF7FB"></i></a></div>
@@ -144,7 +145,6 @@
             <p>This site collects anonymous usage information through Google Analytics.</p>
     </div>
 </div>
-<script src="/assets/jquery-1.12.1/jquery-1.12.1.min.js" type="text/javascript"></script>
 <script src="/assets/bootstrap-3.3.6-dist/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="/assets/prettify-20110601/prettify.js" type="text/javascript"></script>
 <script src="/assets/toc.js" type="text/javascript"></script>
@@ -181,21 +181,16 @@
         });
     }
 
-    function downloadThanks() {
+    function downloadDeferred(url) {
         setTimeout(function () {
-            document.location.pathname = "/download/thankyou";
+            document.location.href = url;
         }, 1000);
     }
 
     function hideAndDownload(id, url) {
         $(id).modal('hide');
 
-        downloadThanks();
-
-        var link = document.createElement("a");
-        link.download = "data:text/html";
-        link.href = url;
-        link.click();
+        downloadDeferred("/download/thankyou?dl=" + url);
     }
 </script>
 <!-- Place this tag right after the last button or just before your close body tag. -->
