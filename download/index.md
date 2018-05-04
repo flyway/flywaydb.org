@@ -71,7 +71,7 @@ Contact us for more information at **sales@flywaydb.org**.
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">I do not agree</button>
-        <a class="btn btn-primary" href="javascript:hideAndDownload('#flyway-trial-license-modal', 'http://files.flywaydb.org/downloads/flyway-trial-edition/flyway-trial-{{site.flywayVersion}}.zip')">I agree</a>
+        <a class="btn btn-primary" href="javascript:hideAndDownload('#flyway-trial-license-modal', 'https://files.flywaydb.org/downloads/flyway-trial-edition/flyway-trial-{{site.flywayVersion}}.zip')">I agree</a>
       </div>
     </div>
   </div>
