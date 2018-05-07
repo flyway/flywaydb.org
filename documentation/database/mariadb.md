@@ -39,7 +39,7 @@ subtitle: MariaDB
 </tr>
 <tr>
 <th>Maven Central coordinates</th>
-<td><code>org.mariadb.jdbc:mariadb-java-client:2.2.0</code></td>
+<td><code>org.mariadb.jdbc:mariadb-java-client:2.2.3</code></td>
 </tr>
 <tr>
 <th>Default Java class</th>
