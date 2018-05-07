@@ -109,5 +109,5 @@ INSERT INTO ${tableName} (name) VALUES (&#x27;Mr. T&#x27;);</pre>
 - No Support for DDL transactions due to Sybase ASE limitations.
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/database/h2">H2 <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/database/informix">Informix <i class="fa fa-arrow-right"></i></a>
 </p>

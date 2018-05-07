@@ -57,6 +57,7 @@ title: Documentation
     <a href="/documentation/database/cockroachdb">CockroachDB</a>,
     <a href="/documentation/database/saphana">SAP HANA</a>,
     <a href="/documentation/database/sybasease">Sybase ASE</a>,
+    <a href="/documentation/database/informix">Informix</a>,
     <a href="/documentation/database/h2">H2</a>,
     <a href="/documentation/database/hsqldb">HSQLDB</a>,
     <a href="/documentation/database/derby">Derby</a> and
