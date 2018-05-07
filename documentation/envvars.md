@@ -273,6 +273,10 @@ The following environment variables are supported:
             directory, Flyway will create all directories and parent directories as needed.
             Omit to use the default mode of executing the SQL statements directly against the database.</td>
     </tr>
+    <tr id="FLYWAY_ORACLE_SQLPLUS">
+        <td>FLYWAY_ORACLE_SQLPLUS {% include pro.html %}</td>
+        <td>Whether to Flyway's support for Oracle SQL*Plus commands should be activated.</td>
+    </tr>
     </tbody>
 </table>
 

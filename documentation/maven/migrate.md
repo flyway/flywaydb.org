@@ -378,80 +378,89 @@ Migrates the schema to the latest version. Flyway will create the schema history
             directory, Flyway will create all directories and parent directories as needed.
             Omit to use the default mode of executing the SQL statements directly against the database.</td>
     </tr>
+    <tr id="oracle.sqlplus">
+        <td>oracle.sqlplus {% include pro.html %}</td>
+        <td>NO</td>
+        <td>false</td>
+        <td>Whether to Flyway's support for Oracle SQL*Plus commands should be activated.</td>
+    </tr>
     </tbody>
 </table>
 
-<h2>Sample configuration</h2>
-<pre class="prettyprint">&lt;configuration&gt;
-    &lt;driver&gt;org.hsqldb.jdbcDriver&lt;/driver&gt;
-    &lt;url&gt;jdbc:hsqldb:file:${project.build.directory}/db/flyway_sample;shutdown=true&lt;/url&gt;
-    &lt;user&gt;SA&lt;/user&gt;
-    &lt;password&gt;mySecretPwd&lt;/password&gt;
-    &lt;schemas&gt;
-        &lt;schema&gt;schema1&lt;/schema&gt;
-        &lt;schema&gt;schema2&lt;/schema&gt;
-        &lt;schema&gt;schema3&lt;/schema&gt;
-    &lt;/schemas&gt;
-    &lt;table&gt;schema_history&lt;/table&gt;
-    &lt;locations&gt;
-        &lt;location&gt;classpath:migrations1&lt;/location&gt;
-        &lt;location&gt;migrations2&lt;/location&gt;
-        &lt;location&gt;filesystem:/sql-migrations&lt;/location&gt;
-    &lt;/locations&gt;
-    &lt;sqlMigrationPrefix&gt;Migration-&lt;/sqlMigrationPrefix&gt;
-    &lt;undoSqlMigrationPrefix&gt;downgrade&lt;/undoSqlMigrationPrefix&gt;
-    &lt;repeatableSqlMigrationPrefix&gt;RRR&lt;/repeatableSqlMigrationPrefix&gt;
-    &lt;sqlMigrationSeparator&gt;__&lt;/sqlMigrationSeparator&gt;
-    &lt;sqlMigrationSuffixes&gt;
-        &lt;sqlMigrationSuffix&gt;.sql&lt;/sqlMigrationSuffix&gt;
-        &lt;sqlMigrationSuffix&gt;.pkg&lt;/sqlMigrationSuffix&gt;
-        &lt;sqlMigrationSuffix&gt;.pkb&lt;/sqlMigrationSuffix&gt;
-    &lt;/sqlMigrationSuffixes&gt;
-    &lt;stream&gt;true&lt;/stream&gt;
-    &lt;batch&gt;true&lt;/batch&gt;
-    &lt;encoding&gt;ISO-8859-1&lt;/encoding&gt;
-    &lt;placeholderReplacement&gt;true&lt;/placeholderReplacement&gt;
-    &lt;placeholders&gt;
-        &lt;aplaceholder&gt;value&lt;/aplaceholder&gt;
-        &lt;otherplaceholder&gt;value123&lt;/otherplaceholder&gt;
-    &lt;/placeholders&gt;
-    &lt;placeholderPrefix&gt;#[&lt;/placeholderPrefix&gt;
-    &lt;placeholderSuffix&gt;]&lt;/placeholderSuffix&gt;
-    &lt;resolvers&gt;
-        &lt;resolver&gt;com.mycompany.project.CustomResolver&lt;/resolver&gt;
-        &lt;resolver&gt;com.mycompany.project.AnotherResolver&lt;/resolver&gt;
-    &lt;/resolvers&gt;
-    &lt;skipDefaultResolvers&gt;false&lt;/skipDefaultResolvers&gt;
-    &lt;callbacks&gt;
-        &lt;callback&gt;com.mycompany.project.CustomCallback&lt;/callback&gt;
-        &lt;callback&gt;com.mycompany.project.AnotherCallback&lt;/callback&gt;
-    &lt;/callbacks&gt;
-    &lt;skipDefaultCallbacks&gt;false&lt;/skipDefaultCallbacks&gt;
-    &lt;target&gt;1.1&lt;/target&gt;
-    &lt;outOfOrder&gt;false&lt;/outOfOrder&gt;
-    &lt;validateOnMigrate&gt;true&lt;/validateOnMigrate&gt;
-    &lt;cleanOnValidationError&gt;false&lt;/cleanOnValidationError&gt;
-    &lt;mixed&gt;false&lt;/mixed&gt;
-    &lt;group&gt;false&lt;/group&gt;
-    &lt;ignoreMissingMigrations&gt;false&lt;/ignoreMissingMigrations&gt;
-    &lt;ignoreIgnoredMigrations&gt;false&lt;/ignoreIgnoredMigrations&gt;
-    &lt;ignoreFutureMigrations&gt;false&lt;/ignoreFutureMigrations&gt;
-    &lt;cleanDisabled&gt;false&lt;/cleanDisabled&gt;
-    &lt;baselineOnMigrate&gt;false&lt;/baselineOnMigrate&gt;
-    &lt;baselineVersion&gt;5&lt;/baselineVersion&gt;
-    &lt;baselineDescription&gt;Let's go!&lt;/baselineDescription&gt;
-    &lt;installedBy&gt;my-user&lt;/installedBy&gt;
-    &lt;skip&gt;false&lt;/skip&gt;
-    &lt;configFiles&gt;
-        &lt;configFile&gt;myConfig.conf&lt;/configFile&gt;
-        &lt;configFile&gt;other.conf&lt;/configFile&gt;
-    &lt;/configFiles&gt;
-    &lt;errorHandlers&gt;
-        &lt;errorHandler&gt;com.mycompany.MyCustomErrorHandler&lt;/errorHandler&gt;
-        &lt;errorHandler&gt;com.mycompany.AnotherErrorHandler&lt;/errorHandler&gt;
-    &lt;/errorHandlers&gt;
-    &lt;dryRunOutput&gt;/my/sql/dryrun-outputfile.sql&lt;/dryRunOutput&gt;
-&lt;/configuration&gt;</pre>
+## Sample configuration
+```xml
+<configuration>
+    <driver>org.hsqldb.jdbcDriver</driver>
+    <url>jdbc:hsqldb:file:${project.build.directory}/db/flyway_sample;shutdown=true</url>
+    <user>SA</user>
+    <password>mySecretPwd</password>
+    <schemas>
+        <schema>schema1</schema>
+        <schema>schema2</schema>
+        <schema>schema3</schema>
+    </schemas>
+    <table>schema_history</table>
+    <locations>
+        <location>classpath:migrations1</location>
+        <location>migrations2</location>
+        <location>filesystem:/sql-migrations</location>
+    </locations>
+    <sqlMigrationPrefix>Migration-</sqlMigrationPrefix>
+    <undoSqlMigrationPrefix>downgrade</undoSqlMigrationPrefix>
+    <repeatableSqlMigrationPrefix>RRR</repeatableSqlMigrationPrefix>
+    <sqlMigrationSeparator>__</sqlMigrationSeparator>
+    <sqlMigrationSuffixes>
+        <sqlMigrationSuffix>.sql</sqlMigrationSuffix>
+        <sqlMigrationSuffix>.pkg</sqlMigrationSuffix>
+        <sqlMigrationSuffix>.pkb</sqlMigrationSuffix>
+    </sqlMigrationSuffixes>
+    <stream>true</stream>
+    <batch>true</batch>
+    <encoding>ISO-8859-1</encoding>
+    <placeholderReplacement>true</placeholderReplacement>
+    <placeholders>
+        <aplaceholder>value</aplaceholder>
+        <otherplaceholder>value123</otherplaceholder>
+    </placeholders>
+    <placeholderPrefix>#[</placeholderPrefix>
+    <placeholderSuffix>]</placeholderSuffix>
+    <resolvers>
+        <resolver>com.mycompany.project.CustomResolver</resolver>
+        <resolver>com.mycompany.project.AnotherResolver</resolver>
+    </resolvers>
+    <skipDefaultResolvers>false</skipDefaultResolvers>
+    <callbacks>
+        <callback>com.mycompany.project.CustomCallback</callback>
+        <callback>com.mycompany.project.AnotherCallback</callback>
+    </callbacks>
+    <skipDefaultCallbacks>false</skipDefaultCallbacks>
+    <target>1.1</target>
+    <outOfOrder>false</outOfOrder>
+    <validateOnMigrate>true</validateOnMigrate>
+    <cleanOnValidationError>false</cleanOnValidationError>
+    <mixed>false</mixed>
+    <group>false</group>
+    <ignoreMissingMigrations>false</ignoreMissingMigrations>
+    <ignoreIgnoredMigrations>false</ignoreIgnoredMigrations>
+    <ignoreFutureMigrations>false</ignoreFutureMigrations>
+    <cleanDisabled>false</cleanDisabled>
+    <baselineOnMigrate>false</baselineOnMigrate>
+    <baselineVersion>5</baselineVersion>
+    <baselineDescription>Let's go!</baselineDescription>
+    <installedBy>my-user</installedBy>
+    <skip>false</skip>
+    <configFiles>
+        <configFile>myConfig.conf</configFile>
+        <configFile>other.conf</configFile>
+    </configFiles>
+    <errorHandlers>
+        <errorHandler>com.mycompany.MyCustomErrorHandler</errorHandler>
+        <errorHandler>com.mycompany.AnotherErrorHandler</errorHandler>
+    </errorHandlers>
+    <dryRunOutput>/my/sql/dryrun-outputfile.sql</dryRunOutput>
+    <oracle.sqlplus>true</oracle.sqlplus>
+</configuration>
+```
 
 ## Exposed properties
 The new database version number is exposed in the `flyway.current` Maven property.

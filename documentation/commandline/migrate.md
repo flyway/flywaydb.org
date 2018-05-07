@@ -352,12 +352,19 @@ Migrates the schema to the latest version. Flyway will create the schema history
             directory, Flyway will create all directories and parent directories as needed.
             Omit to use the default mode of executing the SQL statements directly against the database.</td>
     </tr>
+    <tr id="oracle.sqlplus">
+        <td>oracle.sqlplus {% include pro.html %}</td>
+        <td>NO</td>
+        <td>false</td>
+        <td>Whether to Flyway's support for Oracle SQL*Plus commands should be activated.</td>
+    </tr>
     </tbody>
 </table>
 
 ## Sample configuration
 
-<pre class="prettyprint">flyway.driver=org.hsqldb.jdbcDriver
+```properties
+flyway.driver=org.hsqldb.jdbcDriver
 flyway.url=jdbc:hsqldb:file:/db/flyway_sample
 flyway.user=SA
 flyway.password=mySecretPwd
@@ -394,7 +401,9 @@ flyway.cleanDisabled=false
 flyway.baselineOnMigrate=false
 flyway.installedBy=my-user
 flyway.errorHandlers=com.mycomp.MyCustomErrorHandler,com.mycomp.AnotherErrorHandler
-flyway.dryRunOutput=/my/sql/dryrun-outputfile.sql</pre>
+flyway.dryRunOutput=/my/sql/dryrun-outputfile.sql
+flyway.oracle.sqlplus=true
+```
 
 ## Sample output
 

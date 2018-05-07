@@ -349,12 +349,19 @@ Migrates the schema to the latest version. Flyway will create the schema history
             directory, Flyway will create all directories and parent directories as needed.
             Omit to use the default mode of executing the SQL statements directly against the database.</td>
     </tr>
+    <tr id="oracleSqlplus">
+        <td>oracleSqlplus {% include pro.html %}</td>
+        <td>NO</td>
+        <td>false</td>
+        <td>Whether to Flyway's support for Oracle SQL*Plus commands should be activated.</td>
+    </tr>
     </tbody>
 </table>
 
 ## Sample configuration
 
-<pre class="prettyprint">flyway {
+```groovy
+flyway {
     driver = 'org.hsqldb.jdbcDriver'
     url = 'jdbc:hsqldb:file:/db/flyway_sample;shutdown=true'
     user = 'SA'
@@ -397,7 +404,9 @@ Migrates the schema to the latest version. Flyway will create the schema history
     installedBy = "my-user"
     errorHandlers = ['com.mycomp.MyCustomErrorHandler', 'com.mycomp.AnotherErrorHandler']
     dryRunOutput = '/my/sql/dryrun-outputfile.sql'
-}</pre>
+    oracleSqlplus = true 
+}
+```
 
 <h2>Sample output</h2>
 <pre class="console">&gt; gradle flywayMigrate -i
