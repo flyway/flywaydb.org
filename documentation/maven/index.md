@@ -202,7 +202,7 @@ To make it easy to work with Maven profiles and to logically group configuration
 
 ### settings.xml
 
-For storing the database user and password, Maven `settings.xml` files can also be used:</p>
+For storing the database user and password, Maven `settings.xml` files can also be used:
 
 <pre class="prettyprint">&lt;settings&gt;
     &lt;servers&gt;
