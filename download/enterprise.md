@@ -83,7 +83,7 @@ Contact us for more information at **sales@flywaydb.org**.
         <h4 class="modal-title" id="myModalLabel">License Agreement</h4>
       </div>
       <div class="modal-body">
-        By downloading the Flyway Enterprise Edition you confirm to have read and that you agree to the terms of the <a href="/licenses/flyway-enterprise.txt" target="_blank">Flyway Enterprise Edition License</a>.
+        By downloading the Flyway Enterprise Edition you confirm to have read and that you agree to the terms of the <a href="/licenses/flyway-enterprise" target="_blank">Flyway Enterprise Edition License</a>.
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">I do not agree</button>
@@ -101,7 +101,7 @@ Contact us for more information at **sales@flywaydb.org**.
         <h4 class="modal-title" id="myModalLabel">License Agreement</h4>
       </div>
       <div class="modal-body">
-        By downloading the Flyway Enterprise Edition you confirm to have read and that you agree to the terms of the <a href="/licenses/flyway-enterprise.txt" target="_blank">Flyway Enterprise Edition License</a>.
+        By downloading the Flyway Enterprise Edition you confirm to have read and that you agree to the terms of the <a href="/licenses/flyway-enterprise" target="_blank">Flyway Enterprise Edition License</a>.
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">I do not agree</button>
@@ -119,7 +119,7 @@ Contact us for more information at **sales@flywaydb.org**.
         <h4 class="modal-title" id="myModalLabel">License Agreement</h4>
       </div>
       <div class="modal-body">
-        By downloading the Flyway Enterprise Edition you confirm to have read and that you agree to the terms of the <a href="/licenses/flyway-enterprise.txt" target="_blank">Flyway Enterprise Edition License</a>.
+        By downloading the Flyway Enterprise Edition you confirm to have read and that you agree to the terms of the <a href="/licenses/flyway-enterprise" target="_blank">Flyway Enterprise Edition License</a>.
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">I do not agree</button>
@@ -137,7 +137,7 @@ Contact us for more information at **sales@flywaydb.org**.
         <h4 class="modal-title" id="myModalLabel">License Agreement</h4>
       </div>
       <div class="modal-body">
-        By downloading the Flyway Enterprise Edition you confirm to have read and that you agree to the terms of the <a href="/licenses/flyway-enterprise.txt" target="_blank">Flyway Enterprise Edition License</a>.
+        By downloading the Flyway Enterprise Edition you confirm to have read and that you agree to the terms of the <a href="/licenses/flyway-enterprise" target="_blank">Flyway Enterprise Edition License</a>.
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">I do not agree</button>
@@ -155,7 +155,7 @@ Contact us for more information at **sales@flywaydb.org**.
         <h4 class="modal-title" id="myModalLabel">License Agreement</h4>
       </div>
       <div class="modal-body">
-        By downloading the Flyway Enterprise Edition you confirm to have read and that you agree to the terms of the <a href="/licenses/flyway-enterprise.txt" target="_blank">Flyway Enterprise Edition License</a>.
+        By downloading the Flyway Enterprise Edition you confirm to have read and that you agree to the terms of the <a href="/licenses/flyway-enterprise" target="_blank">Flyway Enterprise Edition License</a>.
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">I do not agree</button>
@@ -173,7 +173,7 @@ Contact us for more information at **sales@flywaydb.org**.
         <h4 class="modal-title" id="myModalLabel">License Agreement</h4>
       </div>
       <div class="modal-body">
-        By downloading the Flyway Enterprise Edition you confirm to have read and that you agree to the terms of the <a href="/licenses/flyway-enterprise.txt" target="_blank">Flyway Enterprise Edition License</a>.
+        By downloading the Flyway Enterprise Edition you confirm to have read and that you agree to the terms of the <a href="/licenses/flyway-enterprise" target="_blank">Flyway Enterprise Edition License</a>.
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">I do not agree</button>
@@ -191,7 +191,7 @@ Contact us for more information at **sales@flywaydb.org**.
         <h4 class="modal-title" id="myModalLabel">License Agreement</h4>
       </div>
       <div class="modal-body">
-        By downloading the Flyway Enterprise Edition you confirm to have read and that you agree to the terms of the <a href="/licenses/flyway-enterprise.txt" target="_blank">Flyway Enterprise Edition License</a>.
+        By downloading the Flyway Enterprise Edition you confirm to have read and that you agree to the terms of the <a href="/licenses/flyway-enterprise" target="_blank">Flyway Enterprise Edition License</a>.
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">I do not agree</button>
@@ -209,7 +209,7 @@ Contact us for more information at **sales@flywaydb.org**.
         <h4 class="modal-title" id="myModalLabel">License Agreement</h4>
       </div>
       <div class="modal-body">
-        By downloading the Flyway Enterprise Edition you confirm to have read and that you agree to the terms of the <a href="/licenses/flyway-enterprise.txt" target="_blank">Flyway Enterprise Edition License</a>.
+        By downloading the Flyway Enterprise Edition you confirm to have read and that you agree to the terms of the <a href="/licenses/flyway-enterprise" target="_blank">Flyway Enterprise Edition License</a>.
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">I do not agree</button>
@@ -227,7 +227,7 @@ Contact us for more information at **sales@flywaydb.org**.
         <h4 class="modal-title" id="myModalLabel">License Agreement</h4>
       </div>
       <div class="modal-body">
-        By downloading the Flyway Enterprise Edition you confirm to have read and that you agree to the terms of the <a href="/licenses/flyway-enterprise.txt" target="_blank">Flyway Enterprise Edition License</a>.
+        By downloading the Flyway Enterprise Edition you confirm to have read and that you agree to the terms of the <a href="/licenses/flyway-enterprise" target="_blank">Flyway Enterprise Edition License</a>.
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">I do not agree</button>
@@ -245,7 +245,7 @@ Contact us for more information at **sales@flywaydb.org**.
         <h4 class="modal-title" id="myModalLabel">License Agreement</h4>
       </div>
       <div class="modal-body">
-        By downloading the Flyway Enterprise Edition you confirm to have read and that you agree to the terms of the <a href="/licenses/flyway-enterprise-site.txt" target="_blank">Flyway Enterprise Edition Site License</a>.
+        By downloading the Flyway Enterprise Edition you confirm to have read and that you agree to the terms of the <a href="/licenses/flyway-enterprise-site" target="_blank">Flyway Enterprise Edition Site License</a>.
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">I do not agree</button>
