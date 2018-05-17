@@ -90,27 +90,34 @@ INSERT INTO ${tableName} (name) VALUES (&#x27;Mr. T&#x27;);</pre>
 In addition to the regular Oracle SQL syntax, Flyway Pro and Flyway Enterprise also come with support for Oracle 
 SQL*Plus commands.
 
-This support can be activated using the [`oracle.sqlplus`](/documentation/commandline/migrate#oracle.sqlplus) flag.
+This support is disabled by default and must be activated using the [`oracle.sqlplus`](/documentation/commandline/migrate#oracle.sqlplus) flag.
 
 The following commands are fully supported and can be used just like any regular command within your SQL migrations:
 
+- `DEFINE`
 - `EXECUTE`
 - `PROMPT`
 - `REMARK`
+- `SET DEFINE`
 - `SET NULL`
-- `SET SERVEROUTPUT OFF`
-- `SET SERVEROUTPUT ON`
+- `SET SCAN`
+- `SET SERVEROUTPUT`
 - `SHOW CON_ID`
 - `SHOW EDITION`
 - `SHOW ERRORS`
 - `SHOW RELEASE`
 - `SHOW USER`
+- `UNDEFINE`
 - `WHENEVER SQLERROR CONTINUE`
 - `WHENEVER SQLERROR EXIT FAILURE`
 
 The short form of these commands is also supported. 
 
-When `SET SERVEROUTPUT ON` is invoked output produced by `DBMS_OUTPUT.PUT_LINE` will be shown in the console. 
+When `SET SERVEROUTPUT ON` is invoked output produced by `DBMS_OUTPUT.PUT_LINE` will be shown in the console.
+
+By default SQL\*Plus placeholder support is enabled. `&VAR`-style placeholders will automatically be replaced with the
+matching value supplied by either Flyway's regular placeholder configuration or a `DEFINE` command. 
+Use of these placeholders can be disabled in the usual way using the `SET DEFINE OFF` command. 
 
 All other SQL*Plus commands are gracefully ignored with a warning message.
 
