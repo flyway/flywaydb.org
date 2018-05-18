@@ -11,8 +11,8 @@ steps on how to configure it and how to write and execute your first few databas
 This tutorial should take you about **5 minutes** to complete.
 
 ## Prerequisites
-- A working Java 8 or 9 install
-- A working Maven 3.x install
+- Java 8, 9 or 10
+- Maven 3.x
 
 ## Creating the project
 

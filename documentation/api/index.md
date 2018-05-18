@@ -13,6 +13,7 @@ be migrated to a state the rest of the code can work with.
 
 ## Supported Java Versions
 
+- `Java 10`
 - `Java 9`
 - `Java 8`
 - `Java 7` {% include enterprise.html %}
