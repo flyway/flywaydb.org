@@ -191,7 +191,7 @@ flyway.url=
 # flyway.outOfOrder=
 
 # This allows you to tie in custom code and logic to the Flyway lifecycle notifications (default: empty).
-# Set this to a comma-separated list of fully qualified FlywayCallback class name implementations
+# Set this to a comma-separated list of fully qualified Callback class name implementations
 # flyway.callbacks=
 
 # If set to true, default built-in callbacks (sql) are skipped and only custom callback as

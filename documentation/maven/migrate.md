@@ -216,7 +216,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
         <td>NO</td>
         <td></td>
         <td>Fully qualified class names of
-            <a href="/documentation/api/javadoc/org/flywaydb/core/api/callback/FlywayCallback">FlywayCallback</a>
+            <a href="/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback">Callback</a>
             implementations to use to hook into the Flyway lifecycle.</td>
     </tr>
     <tr>
@@ -357,7 +357,13 @@ Migrates the schema to the latest version. Flyway will create the schema history
         <td></td>
         <td>Additional files from which to load the Flyway configuration. The names of the individual properties match the ones you would
             use as Maven or System properties. The encoding of the file must be the same as the encoding defined with the
-            flyway.encoding property, which is UTF-8 by default. Relative paths are relative to the POM.</td>
+            flyway.encoding property, which is UTF-8 by default. Relative paths are relative to `workingDirectory`.</td>
+    </tr>
+    <tr>
+        <td>workingDirectory</td>
+        <td>NO</td>
+        <td><i>project.basedir</i> (where the POM resides)</td>
+        <td>The working directory to consider when dealing with relative paths for both config files and locations.</td>
     </tr>
     <tr>
         <td>errorHandlers {% include pro.html %}</td>
@@ -453,6 +459,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
         <configFile>myConfig.conf</configFile>
         <configFile>other.conf</configFile>
     </configFiles>
+    <workingDirectory>/my/working/dir</workingDirectory>
     <errorHandlers>
         <errorHandler>com.mycompany.MyCustomErrorHandler</errorHandler>
         <errorHandler>com.mycompany.AnotherErrorHandler</errorHandler>

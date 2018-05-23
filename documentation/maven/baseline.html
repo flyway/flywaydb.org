@@ -71,7 +71,7 @@ subtitle: 'mvn flyway:baseline'
             <td>table</td>
             <td>NO</td>
             <td>flyway_schema_history</td>
-            <td>The name of Flyway&#x27;s schema history table.<br/>By
+            <td>The name of Flyway's schema history table.<br/>By
                 default (single-schema mode) the schema history table is placed in the default schema for the connection
                 provided by the datasource.<br/>When the <i>flyway.schemas</i> property is set (multi-schema mode),
                 the schema history table is placed in the first schema of the list.
@@ -82,7 +82,7 @@ subtitle: 'mvn flyway:baseline'
             <td>NO</td>
             <td></td>
             <td>Fully qualified class names of
-                <a href="/documentation/api/javadoc/org/flywaydb/core/api/callback/FlywayCallback">FlywayCallback</a>
+                <a href="/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback">Callback</a>
                 implementations to use to hook into the Flyway lifecycle.</td>
         </tr>
         <tr>
@@ -117,7 +117,13 @@ subtitle: 'mvn flyway:baseline'
             <td></td>
             <td>Additional files from which to load the Flyway configuration. The names of the individual properties match the ones you would
                 use as Maven or System properties. The encoding of the file must be the same as the encoding defined with the
-                flyway.encoding property, which is UTF-8 by default. Relative paths are relative to the POM.</td>
+                flyway.encoding property, which is UTF-8 by default. Relative paths are relative to `workingDirectory`.</td>
+        </tr>
+        <tr>
+            <td>workingDirectory</td>
+            <td>NO</td>
+            <td><i>project.basedir</i> (where the POM resides)</td>
+            <td>The working directory to consider when dealing with relative paths for both config files and locations.</td>
         </tr>
         </tbody>
     </table>
@@ -145,6 +151,7 @@ subtitle: 'mvn flyway:baseline'
         &lt;configFile&gt;myConfig.conf&lt;/configFile&gt;
         &lt;configFile&gt;other.conf&lt;/configFile&gt;
     &lt;/configFiles&gt;
+    &lt;workingDirectory&gt;/my/working/dir&lt;/workingDirectory&gt;
 &lt;/configuration&gt;</pre>
     <h2>Sample output</h2>
     <pre class="console">&gt; mvn flyway:baseline
