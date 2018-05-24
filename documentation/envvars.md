@@ -267,6 +267,18 @@ The following environment variables are supported:
            If none do, or if none are present, Flyway falls back to its default handling of errors and warnings.
            </td>
     </tr>
+    <tr id="FLYWAY_ERROR_OVERRIDES">
+        <td>FLYWAY_ERROR_OVERRIDES {% include pro.html %}</td>
+        <td><p>Comma-sparated list of rules for the built-in error handler that lets you override specific SQL states and errors codes from error
+             to warning or from warning to error.</p>
+             <p>Each error override has the following format: <code>STATE:12345:W</code>.
+             It is a 5 character SQL state, a colon, the SQL error code, a colon and finally the desired
+             behavior that should override the initial one. The following behaviors are accepted: <code>W</code> to force a warning
+             and <code>E</code> to force an error.</p>
+             <p>For example, to force Oracle stored procedure compilation issues to produce
+             errors instead of warnings, the following errorOverride can be used: <code>99999:17110:E</code></p>
+       </td>
+    </tr>
     <tr id="FLYWAY_DRYRUN_OUTPUT">
         <td>FLYWAY_DRYRUN_OUTPUT {% include pro.html %}</td>
         <td>The file where to output the SQL statements of a migration dry run. If the file specified is in a non-existent

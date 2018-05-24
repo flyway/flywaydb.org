@@ -83,11 +83,31 @@ public class OracleProcedureFailFastErrorHandler implements ErrorHandler {
 
 If you now configure Flyway with
 
-```
+```properties
 flyway.errorHandlers=org.mycompany.mypkg.OracleProcedureFailFastErrorHandler
 ```
 
 all Oracle stored procedure compilation failures will result in an **immediate error** saying `Compilation failed`.
+
+## Declarative configuration
+
+The examples above show how one can fully customize the error handling behavior. However one of the most common uses for
+this is turning warning into errors and errors into warnings. This is primarily used to either fail fast or suppress a
+benign error.
+
+For this special case Flyway comes with a property called `errorOverrides` which accepts multiple error override
+definitions in the following form: `STATE:12345:W`.
+
+This is a 5 character SQL state, a colon, the SQL error code, a colon and finally the desired
+behavior that should override the initial one. The following behaviors are accepted: `W` to force a warning
+and `E` to force an error.
+             
+For example, to use the same example as above and force Oracle stored procedure compilation issues to produce
+errors instead of warnings, all one needs to do is add the following to Flyway's configuration:
+
+```properties
+flyway.errorOverrides=99999:17110:E
+```
 
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/dryruns">Dry Runs <i class="fa fa-arrow-right"></i></a>

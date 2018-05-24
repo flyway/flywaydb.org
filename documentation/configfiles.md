@@ -31,13 +31,14 @@ These are the settings supported via config files:
 # Examples
 # --------
 # Most drivers are included out of the box.
-# * = driver must be downloaded and installed in /drivers manually
+# * = JDBC driver must be downloaded and installed in /drivers manually
 # ** = TNS_ADMIN environment variable must point to the directory of where tnsnames.ora resides
 # CockroachDB       : jdbc:postgresql://<host>:<port>/<database>?<key1>=<value1>&<key2>=<value2>...
 # DB2*              : jdbc:db2://<host>:<port>/<database>
-# Derby             : jdbc:derby:<subsubprotocol>:<databaseName><;attribute=value>
+# Derby             : jdbc:derby:<subsubprotocol>:<database><;attribute=value>
 # H2                : jdbc:h2:<file>
 # HSQLDB            : jdbc:hsqldb:file:<file>
+# Informix*         : jdbc:informix-sqli://<host>:<port>/<database>:informixserver=dev
 # MariaDB           : jdbc:mariadb://<host>:<port>/<database>?<key1>=<value1>&<key2>=<value2>...
 # MySQL             : jdbc:mysql://<host>:<port>/<database>?<key1>=<value1>&<key2>=<value2>...
 # Oracle*           : jdbc:oracle:thin:@//<host>:<port>/<service>
@@ -47,6 +48,7 @@ These are the settings supported via config files:
 # SQL Server        : jdbc:sqlserver:////<host>:<port>;databaseName=<database>
 # SQLite            : jdbc:sqlite:<database>
 # Sybase ASE        : jdbc:jtds:sybase://<host>:<port>/<database>
+# Redshift*         : jdbc:redshift://<host>:<port>/<database>
 flyway.url=
 
 # Fully qualified classname of the JDBC driver (autodetected by default based on flyway.url)
@@ -191,7 +193,8 @@ flyway.url=
 # flyway.outOfOrder=
 
 # This allows you to tie in custom code and logic to the Flyway lifecycle notifications (default: empty).
-# Set this to a comma-separated list of fully qualified Callback class name implementations
+# Set this to a comma-separated list of fully qualified class names of org.flywaydb.core.api.callback.Callback
+# implementations.
 # flyway.callbacks=
 
 # If set to true, default built-in callbacks (sql) are skipped and only custom callback as
@@ -251,11 +254,25 @@ flyway.url=
 # Flyway Pro and Flyway Enterprise only
 # flyway.errorHandlers=
 
+# Rules for the built-in error handler that lets you override specific SQL states and errors codes from error to
+# warning or from warning to error.
+# Each error override has the following format: STATE:12345:W. It is a 5 character SQL state, a colon, the SQL 
+# error code, a colon and finally the desired behavior that should override the initial one. The following 
+# behaviors are accepted: W to force a warning and E to force an error.
+# For example, to force Oracle stored procedure compilation issues to produce errors instead of warnings,
+# the following errorOverride can be used: 99999:17110:E
+# Flyway Pro and Flyway Enterprise only
+# flyway.errorOverrides=
+
 # The file where to output the SQL statements of a migration dry run. If the file specified is in a non-existent
 # directory, Flyway will create all directories and parent directories as needed.
 # <<blank>> to execute the SQL statements directly against the database. (default: <<blank>>)
 # Flyway Pro and Flyway Enterprise only
 # flyway.dryRunOutput=
+
+# Whether to Flyway's support for Oracle SQL*Plus commands should be activated. (default: false)
+# Flyway Pro and Flyway Enterprise only
+# flyway.oracle.sqlplus=
 ```
 
 <p class="next-steps">
