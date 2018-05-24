@@ -31,13 +31,14 @@ These are the settings supported via config files:
 # Examples
 # --------
 # Most drivers are included out of the box.
-# * = driver must be downloaded and installed in /drivers manually
+# * = JDBC driver must be downloaded and installed in /drivers manually
 # ** = TNS_ADMIN environment variable must point to the directory of where tnsnames.ora resides
 # CockroachDB       : jdbc:postgresql://<host>:<port>/<database>?<key1>=<value1>&<key2>=<value2>...
 # DB2*              : jdbc:db2://<host>:<port>/<database>
-# Derby             : jdbc:derby:<subsubprotocol>:<databaseName><;attribute=value>
+# Derby             : jdbc:derby:<subsubprotocol>:<database><;attribute=value>
 # H2                : jdbc:h2:<file>
 # HSQLDB            : jdbc:hsqldb:file:<file>
+# Informix*         : jdbc:informix-sqli://<host>:<port>/<database>:informixserver=dev
 # MariaDB           : jdbc:mariadb://<host>:<port>/<database>?<key1>=<value1>&<key2>=<value2>...
 # MySQL             : jdbc:mysql://<host>:<port>/<database>?<key1>=<value1>&<key2>=<value2>...
 # Oracle*           : jdbc:oracle:thin:@//<host>:<port>/<service>
@@ -47,6 +48,7 @@ These are the settings supported via config files:
 # SQL Server        : jdbc:sqlserver:////<host>:<port>;databaseName=<database>
 # SQLite            : jdbc:sqlite:<database>
 # Sybase ASE        : jdbc:jtds:sybase://<host>:<port>/<database>
+# Redshift*         : jdbc:redshift://<host>:<port>/<database>
 flyway.url=
 
 # Fully qualified classname of the JDBC driver (autodetected by default based on flyway.url)
@@ -67,15 +69,15 @@ flyway.url=
 # flyway.schemas=
 
 # Name of Flyway's schema history table (default: flyway_schema_history)
-# By default (single-schema mode) the schema history table is placed in the default schema for the connection 
+# By default (single-schema mode) the schema history table is placed in the default schema for the connection
 # provided by the datasource.
-# When the flyway.schemas property is set (multi-schema mode), the schema history table is placed in the first 
+# When the flyway.schemas property is set (multi-schema mode), the schema history table is placed in the first
 # schema of the list.
 # flyway.table=
 
 # Comma-separated list of locations to scan recursively for migrations. (default: filesystem:<<INSTALL-DIR>>/sql)
 # The location type is determined by its prefix.
-# Unprefixed locations or locations starting with classpath: point to a package on the classpath and may contain 
+# Unprefixed locations or locations starting with classpath: point to a package on the classpath and may contain
 # both sql and java-based migrations.
 # Locations starting with filesystem: point to a directory on the filesystem and may only contain sql migrations.
 # flyway.locations=
@@ -120,7 +122,23 @@ flyway.url=
 # editors with specific file associations.
 # flyway.sqlMigrationSuffixes=
 
-# Encoding of Sql migrations (default: UTF-8)
+# Whether to stream SQL migrations when executing them. (default: false)
+# Streaming doesn't load the entire migration in memory at once. Instead each statement is loaded individually.
+# This is particularly useful for very large SQL migrations composed of multiple MB or even GB of reference data,
+# as this dramatically reduces Flyway's memory consumption.
+# Flyway Pro and Flyway Enterprise only
+# flyway.stream=
+
+# Whether to batch SQL statements when executing them. (default: false)
+# Batching can save up to 99 percent of network roundtrips by sending up to 100 statements at once over the
+# network to the database, instead of sending each statement individually. This is particularly useful for very
+# large SQL migrations composed of multiple MB or even GB of reference data, as this can dramatically reduce
+# the network overhead. This is supported for INSERT, UPDATE, DELETE, MERGE and UPSERT statements.
+# All other statements are automatically executed without batching.
+# Flyway Pro and Flyway Enterprise only
+# flyway.batch=
+
+# Encoding of SQL migrations (default: UTF-8)
 # flyway.encoding=
 
 # Whether placeholders should be replaced. (default: true)
@@ -175,7 +193,8 @@ flyway.url=
 # flyway.outOfOrder=
 
 # This allows you to tie in custom code and logic to the Flyway lifecycle notifications (default: empty).
-# Set this to a comma-separated list of fully qualified FlywayCallback class name implementations
+# Set this to a comma-separated list of fully qualified class names of org.flywaydb.core.api.callback.Callback
+# implementations.
 # flyway.callbacks=
 
 # If set to true, default built-in callbacks (sql) are skipped and only custom callback as
@@ -184,7 +203,7 @@ flyway.url=
 
 # Ignore missing migrations when reading the schema history table. These are migrations that were performed by an
 # older deployment of the application that are no longer available in this version. For example: we have migrations
-# available on the classpath with versions 1.0 and 3.0. The schema history table indicates that a migration with 
+# available on the classpath with versions 1.0 and 3.0. The schema history table indicates that a migration with
 # version 2.0 (unknown to us) has also been applied. Instead of bombing out (fail fast) with an exception, a
 # warning is logged and Flyway continues normally. This is useful for situations where one must be able to deploy
 # a newer version of the application even though it doesn't contain migrations included with an older one anymore.
@@ -217,7 +236,7 @@ flyway.url=
 # true if mixed migrations should be allowed. false if an error should be thrown instead. (default: false)
 # flyway.mixed=
 
-# Whether to group all pending migrations together in the same transaction when applying them 
+# Whether to group all pending migrations together in the same transaction when applying them
 # (only recommended for databases with support for DDL transactions).
 # true if migrations should be grouped. false if they should be applied individually instead. (default: false)
 # flyway.group=
@@ -235,11 +254,25 @@ flyway.url=
 # Flyway Pro and Flyway Enterprise only
 # flyway.errorHandlers=
 
+# Rules for the built-in error handler that lets you override specific SQL states and errors codes from error to
+# warning or from warning to error.
+# Each error override has the following format: STATE:12345:W. It is a 5 character SQL state, a colon, the SQL 
+# error code, a colon and finally the desired behavior that should override the initial one. The following 
+# behaviors are accepted: W to force a warning and E to force an error.
+# For example, to force Oracle stored procedure compilation issues to produce errors instead of warnings,
+# the following errorOverride can be used: 99999:17110:E
+# Flyway Pro and Flyway Enterprise only
+# flyway.errorOverrides=
+
 # The file where to output the SQL statements of a migration dry run. If the file specified is in a non-existent
 # directory, Flyway will create all directories and parent directories as needed.
 # <<blank>> to execute the SQL statements directly against the database. (default: <<blank>>)
 # Flyway Pro and Flyway Enterprise only
 # flyway.dryRunOutput=
+
+# Whether to Flyway's support for Oracle SQL*Plus commands should be activated. (default: false)
+# Flyway Pro and Flyway Enterprise only
+# flyway.oracle.sqlplus=
 ```
 
 <p class="next-steps">

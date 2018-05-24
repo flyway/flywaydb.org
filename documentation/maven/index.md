@@ -5,7 +5,7 @@ subtitle: Maven Plugin
 ---
 # Maven Plugin
 
-The Flyway Open-Source Maven plugin supports **Maven 3.x** running on **Java 8** or **Java 9**. The Flyway
+The Flyway Open-Source Maven plugin supports **Maven 3.x** running on **Java 8**, **Java 9** or **Java 10**. The Flyway
 Enterprise Maven plugin also supports **Java 6** and **Java 7**.
 
 ## Installation
@@ -202,7 +202,7 @@ To make it easy to work with Maven profiles and to logically group configuration
 
 ### settings.xml
 
-For storing the database user and password, Maven `settings.xml` files can also be used:</p>
+For storing the database user and password, Maven `settings.xml` files can also be used:
 
 <pre class="prettyprint">&lt;settings&gt;
     &lt;servers&gt;

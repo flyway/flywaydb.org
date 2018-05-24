@@ -13,6 +13,7 @@ be migrated to a state the rest of the code can work with.
 
 ## Supported Java Versions
 
+- `Java 10`
 - `Java 9`
 - `Java 8`
 - `Java 7` {% include enterprise.html %}
@@ -196,44 +197,53 @@ compile "org.flywaydb<strong>.enterprise</strong>:flyway-core:{{ site.flywayVers
 
 ## The Flyway Class
 
-The central piece of Flyway's database migration infrastructure is the **<a
-        href="/documentation/api/javadoc/org/flywaydb/core/Flyway">org.flywaydb.core.Flyway</a>**
-    class. It is your **one-stop shop** for working with Flyway programmatically. It serves both as a
-    **configuration** and a **launching** point for all of Flyway's functions.
+The central piece of Flyway's database migration infrastructure is the 
+**[org.flywaydb.core.Flyway](/documentation/api/javadoc/org/flywaydb/core/Flyway)**
+class. It is your **one-stop shop** for working with Flyway programmatically. It serves both as a
+**configuration** and a **launching** point for all of Flyway's functions.
 
 ## Programmatic Configuration (Java)
 
-<p>Flyway is super easy to use programmatically: </p><pre class="prettyprint">import org.flywaydb.core.Flyway;
+Flyway is super easy to use programmatically:
+
+```java
+import org.flywaydb.core.Flyway;
 
 ...
 Flyway flyway = new Flyway();
-flyway.setDataSource(...);
+flyway.setDataSource(url, user, password);
 flyway.migrate();
 
 // Start the rest of the application (incl. Hibernate)
-...</pre>
+...
+```
 
 <div class="well"><strong>Tip:</strong> When running inside a <a href="https://boxfuse.com">Boxfuse</a>
     instance (both locally and on AWS), Flyway will automatically use the JDBC url, user and password
     <a href="https://boxfuse.com/docs/databases#envvars">provided by Boxfuse</a>.</div>
 
-<h2>Programmatic Configuration (Android)</h2>
+## Programmatic Configuration (Android)
 
-<p>In order to use Flyway on Android you have to add flyway-core as well as SQLDroid as dependencies. There are two things to keep in mind with Android: First, you have to load the migrations as <i>assets</i>, not <i>resources</i> and second, you have to let Flyway know your Android context, by calling <code>ContextHolder.setContext</code>.</p>
+In order to use Flyway on Android you have to add flyway-core as well as SQLDroid as dependencies. 
+There are two things to keep in mind with Android: First, you have to load the migrations as *assets*, not *resources* 
+and second, you have to let Flyway know your Android context, by calling `ContextHolder.setContext()`.
 
-<p>1. Add the necessary dependencies to <code>build.gradle</code>:</p>
+Add the necessary dependencies to `build.gradle`:
 
-<pre class="prettyprint">dependencies {
+```groovy
+dependencies {
     // Your other dependencies
     // ...
 
     compile 'org.flywaydb:flyway-core:{{ site.flywayVersion }}'
     compile 'org.sqldroid:sqldroid:1.0.3'
-}</pre>
+}
+```
 
-    <p>2. Make sure that your migrations are included as assets (notice that assets have to be declared in the project itself and not in a dependency. But you can use reference e.g. <code>'../lib/src/main/resources'</code> to use the resources of a lib project)</p>
+Make sure that your migrations are included as assets (notice that assets have to be declared in the project itself and not in a dependency. But you can use reference e.g. `../lib/src/main/resources` to use the resources of a lib project)
 
-<pre class="prettyprint">android {
+```groovy
+android {
     // SDK, config, buildTypes, etc
     // ...
 
@@ -243,36 +253,41 @@ flyway.migrate();
     }
 
     // ...
-}</pre>
+}
+```
 
-<p>3. Include the setup in your main activity onCreate or application onCreate:</p>
+Include the setup in your main activity onCreate or application onCreate:
 
-<pre class="prettyprint">import org.flywaydb.core.Flyway;
+```java
+import org.flywaydb.core.Flyway;
 import org.flywaydb.core.api.android.ContextHolder;
 import org.sqldroid.DroidDataSource;
 
 ...
-
 DroidDataSource dataSource = new DroidDataSource(getPackageName(), "...");
 ContextHolder.setContext(this);
 Flyway flyway = new Flyway();
 flyway.setDataSource(dataSource);
-flyway.migrate();</pre>
+flyway.migrate();
+```
 
-<h2 id="spring">Spring Configuration</h2>
+## Spring Configuration
 
-<p>As an alternative to the programmatic configuration, here is how you can configure and start Flyway in a typical
-    Spring application: </p>
-<pre class="prettyprint">&lt;bean id=&quot;flyway&quot; class=&quot;org.flywaydb.core.Flyway&quot; init-method=&quot;migrate&quot;&gt;
-    &lt;property name=&quot;dataSource&quot; ref=&quot;...&quot;/&gt;
+As an alternative to the programmatic configuration, here is how you can configure and start Flyway in a classic
+Spring application using XML bean configuration:
+
+```xml
+<bean id="flyway" class="org.flywaydb.core.Flyway" init-method="migrate">
+    <property name="dataSource" ref="..."/>
     ...
-&lt;/bean&gt;
+</bean>
 
-&lt;!-- The rest of the application (incl. Hibernate) --&gt;
-&lt;!-- Must be run after Flyway to ensure the database is compatible with the code --&gt;
-&lt;bean id=&quot;sessionFactory&quot; class=&quot;...&quot; depends-on=&quot;flyway&quot;&gt;
+<!-- The rest of the application (incl. Hibernate) -->
+<!-- Must be run after Flyway to ensure the database is compatible with the code -->
+<bean id="sessionFactory" class="..." depends-on="flyway">
     ...
-&lt;/bean&gt;</pre>
+</bean>
+```
 
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/api/hooks">API: Hooks <i class="fa fa-arrow-right"></i></a>

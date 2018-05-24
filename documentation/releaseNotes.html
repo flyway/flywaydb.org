@@ -8,18 +8,285 @@ subtitle: Release Notes
 <p>Thank you all for reporting all these issues and contributing fixes!</p>
 
 <div class="release">
-    <h2 id="5.1.0">Flyway 5.1.0 (Unreleased)</h2>
+    <h2 id="5.1.0">Flyway 5.1.0 (2018-05-24)</h2>
+
+    <h3>New features</h3>
+    <ul>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/94">Issue 94</a>
+            Batch updates for SQL statements {% include pro.html %}
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/104">Issue 104</a>
+            Informix support
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/615">Issue 615</a>
+            Stream parser for SQL migrations {% include pro.html %}
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1315">Issue 1315</a>
+            SQL Callbacks - more than one .sql file per event
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1392">Issue 1392</a>
+            Callbacks for errors
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1675">Issue 1675</a>
+            ErrorOverrides: override errors into warnings and warnings into errors {% include pro.html %}
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/pull/1738">Issue 1738</a>
+            Allow extending classpath in gradle task config
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/1738"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1865">Issue 1865</a>
+            New option to allow for 'Ignored' migrations in 'validate' command: `ignoreIgnoredMigrations`
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/1866"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1877">Issue 1877</a>
+            Maven: Add a workingDirectory parameter to support relative filesystem locations in conf files
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1883">Issue 1883</a>
+            SQL*Plus variable substitution support {% include pro.html %}
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1928">Issue 1928</a>
+            Fluent configuration using API
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1936">Issue 1936</a>
+            Environment variable configuration using API
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1970">Issue 1970</a>
+            CockroachDB 2.0 support
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1980">Issue 1980</a>
+            Provide a default implementation of `Configuration` as part of the API
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/2003">Issue 2003</a>
+            MySQL 8.0 support
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/2019">Issue 2019</a>
+            Java 10 support
+        </li>
+    </ul>
+
+    <h3>Incompatible Changes</h3>
+    <ul>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1707">Issue 1707</a>
+            <code>FlywayConfiguration.getCallbacks()</code> now returns <code>Callback[]</code> instead of <code>FlywayCallback[]</code>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1707">Issue 1707</a>
+            <code>Flyway.getCallbacks()</code> now returns <code>Callback[]</code> instead of <code>FlywayCallback[]</code>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1865">Issue 1865</a>
+            'Ignored' migrations now trigger an error by default. The old more lenient behavior can be restored by setting `ignoreIgnoredMigrations` to `true`
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1883">Issue 1883</a>
+            SQL*Plus support is now disabled by default and must be explicitly activated using the new <code>oracle.sqlplus</code> flag
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1928">Issue 1928</a>
+            <code>Flyway</code> now implements <code>Configuration</code> instead of <code>FlywayConfiguration</code>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1928">Issue 1928</a>
+            <code>FlywayConfiguration.getLocations()</code> now returns <code>Location[]</code> instead of <code>String[]</code>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1928">Issue 1928</a>
+            <code>Flyway.getLocations()</code> now returns <code>Location[]</code> instead of <code>String[]</code>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1928">Issue 1928</a>
+            <code>Flyway.getSchemas()</code> now returns an empty array (instead of the connection's default schema) if no schemas were set using <code>setSchemas()</code>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1946">Issue 1946</a>
+            <code>FlywayConfiguration.getEncoding()</code> now returns <code>Charset</code> instead of <code>String</code>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1946">Issue 1946</a>
+            <code>Flyway.getEncoding()</code> now returns <code>Charset</code> instead of <code>String</code>
+        </li>
+    </ul>
+
+    <h3>Changes</h3>
+    <ul>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1707">Issue 1707</a>
+            <code>FlywayCallback</code> and <code>BaseFlywayCallback</code> have been deprecated in favor of <code>Callback</code>.
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1928">Issue 1928</a>
+            <code>FlywayConfiguration</code> has been deprecated in favor of <code>Configuration</code>.
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1989">Issue 1989</a>
+            Flyway Command-line now ships with H2 1.4.197
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/2007">Issue 2007</a>
+            Flyway Command-line now ships with MariaDB JDBC driver 2.2.4
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/2013">Issue 2013</a>
+            Flyway Command-line now ships with Derby 10.14
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/2014">Issue 2014</a>
+            Flyway Command-line now ships with JRE 8u172
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/2015">Issue 2015</a>
+            Flyway Command-line now ships with SQL Server JDBC driver 6.4.0
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/2016">Issue 2016</a>
+            Flyway Command-line now ships with PostgreSQL JDBC driver 42.2.2
+        </li>
+    </ul>
 
     <h3>Bug fixes</h3>
     <ul>
         <li>
+            <a href="https://github.com/flyway/flyway/issues/100">Issue 100</a>
+            Clean tries to drop a function from an extension and fails
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1362">Issue 1362</a>
+            Header comment on stored procedure
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1420">Issue 1420</a>
+            Line break settings are not respected (Windows)
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1707">Issue 1707</a>
+            Non-transactional SQL callbacks failing after upgrade to 4.2.0
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1876">Issue 1876</a>
+            Postgres COPY FROM STDIN fails on data containing string delimiters
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1892">Issue 1892</a>
+            Allow executing info while a migration is running
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1917">Issue 1917</a>
+            CommandLine Help / Usage for Community Editions shows PRO commands and options
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1918">Issue 1918</a>
+            UNC path support for filesystem locations
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1922">Issue 1922</a>
+            LogFactory should use same classloader for feature detection and loading the correct logcreator
+        </li>
+        <li>
             <a href="https://github.com/flyway/flyway/issues/1923">Issue 1923</a>
             Flyway Maven Plugin can't find JDBC driver if the driver is a dependency with scope provided
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1924">Issue 1924</a>
+            Too much memory allocations
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1926">Issue 1926</a>
+            PostgreSQL: Flyway uses "public" schema instead of current_schema when search_path starts with $user
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1927">Issue 1927</a>
+            Flyway 5 regression when line in multi line string starts with single line comment
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/pull/1932">Issue 1932</a>
+            Do not delete types that extensions depend on when cleaning PostgreSql
+            <span class="label label-info"><a href="https://github.com/flyway/flyway/pull/1932"><i
+                    class="fa fa-mail-reply"></i> Pull Request</a></span>
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1940">Issue 1940</a>
+            PostgreSQL: Ignore objects created by extensions when checking whether a schema is empty
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1943">Issue 1943</a>
+            Flyway schema creation issue on Oracle 12.2 DB with password policy enabled
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1945">Issue 1945</a>
+            COPY ... FROM stdin throws "missing data for column" error
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1948">Issue 1948</a>
+            On PostgreSql the alternate quote string literal is not detected if it is not followed by a space
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1950">Issue 1950</a>
+            Repair dry-run: java.lang.IndexOutOfBoundsException
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1955">Issue 1955</a>
+            Redshift: Unable to create uppercase schema history table
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1959">Issue 1959</a>
+            PostgreSQL search path not restored properly after migrations when auto-comit == false
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1968">Issue 1968</a>
+            JDBC Migration failures not entered into schema_version table
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1979">Issue 1979</a>
+            Support for tnsnames.ora if TNS_ADMIN is set (issue #1806) does not work correctly
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1983">Issue 1983</a>
+            Failure on creation of a schema history table on an empty database when autoCommit is false
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1989">Issue 1989</a>
+            Clean cannot drop schema with H2 1.4.197 and newer
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/1992">Issue 1992</a>
+            CREATE SUBSCRIPTION PostgreSQL statement not detected as non-transactional
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/2011">Issue 2011</a>
+            SQL Server parsing issue when string literal is followed by as keyword without a space in between
+        </li>
+        <li>
+            <a href="https://github.com/flyway/flyway/issues/2025">Issue 2025</a>
+            Baseline migration is always updated when repairing
         </li>
     </ul>
 
     <p>
-        Thanks to Sandra Parsick for reporting these issues.
+        Thanks to aebaugh, AndrasJanurik,
+        andrey-poltavskiy, Bartosz Kamiński, Ben Manes, bigslack, Brett Randall, Brian O'Halloran,
+        brodgers-oreilly, Chuck May, cmcmurtrie, Craig Davidson, Daniel Huss, Dmitrii Apanasevich,
+        Jens Doose, jezovuk, jMediaConverter, Kevin Sheedy, Konrad Botor, Leo Breuss,
+        luengnat, Manikanta G, nireno, nkbysani, Oleg Artenii, Peter Wippermann, Punnapulusu, Razvan,
+        Sandra Parsick, Simon Gamma, TimoTHa, umapathy08, Wim Deblauwe and Yannik Hampe for reporting these issues.
     </p>
 </div>
 

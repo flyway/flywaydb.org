@@ -1,12 +1,13 @@
 ---
 layout: documentation
-menu: mySql
+menu: mysql
 subtitle: MySQL
 ---
 # MySQL
 
 ## Supported Versions
 
+- `8.0`
 - `5.7`
 - `5.6`
 - `5.5`
@@ -40,7 +41,7 @@ subtitle: MySQL
 <tr>
 <th>Maven Central coordinates</th>
 <td><code>mysql:mysql-connector-java:6.0.6</code></td>
-<td><code>org.mariadb.jdbc:mariadb-java-client:2.2.0</code></td>
+<td><code>org.mariadb.jdbc:mariadb-java-client:2.2.3</code></td>
 </tr>
 <tr>
 <th>Default Java class</th>

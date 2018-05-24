@@ -5,8 +5,8 @@ subtitle: Gradle Plugin
 ---
 # Gradle Plugin
 
-The Flyway Open-Source Gradle plugin supports **Gradle 3.x** and **Gradle 4.x** running on **Java 8** or **Java 9**. The Flyway
-Enterprise Gradle plugin also supports **Java 7**.
+The Flyway Community Edition and Flyway Pro Edition Gradle plugin support **Gradle 3.x** and **Gradle 4.x** 
+running on **Java 8**, **Java 9** or **Java 10**. The Flyway Enterprise Gradle plugin also supports **Java 7**.
 
 ## Installation
 
@@ -113,7 +113,8 @@ The Flyway Gradle plugin can be configured in a wide variety of following ways, 
 
 The easiest way is to simply define a Flyway section in your `build.gradle`:
 
-<pre class="prettyprint">flyway {
+```groovy
+flyway {
     url = 'jdbc:h2:mem:mydb'
     user = 'myUsr'
     password = 'mySecretPwd'
@@ -122,13 +123,15 @@ The easiest way is to simply define a Flyway section in your `build.gradle`:
         'keyABC': 'valueXYZ',
         'otherplaceholder': 'value123'
     ]
-}</pre>
+}
+```
 
 ### Build script (multiple databases)
 
 To migrate multiple database you have the option to extend the various Flyway tasks in your `build.gradle`:
 
-<pre class="prettyprint">task migrateDatabase1(type: org.flywaydb.gradle.task.FlywayMigrateTask) {
+```groovy
+task migrateDatabase1(type: org.flywaydb.gradle.task.FlywayMigrateTask) {
     url = 'jdbc:h2:mem:mydb1'
     user = 'myUsr1'
     password = 'mySecretPwd1'
@@ -138,7 +141,43 @@ task migrateDatabase2(type: org.flywaydb.gradle.task.FlywayMigrateTask) {
     url = 'jdbc:h2:mem:mydb2'
     user = 'myUsr2'
     password = 'mySecretPwd2'
-}</pre>
+}
+```
+
+### Extending the default classpath
+
+By default the Flyway Gradle plugin uses a classpath consisting of the `compile`, `runtime`, `testCompile` and `testRuntime`
+Gradle configurations for loading drivers, migrations, resolvers, callbacks, etc.
+
+You can optionally extend this default classpath with your own custom configurations in `build.gradle` as follows:
+
+```groovy
+// Start by defining a custom configuration like 'provided', 'migration' or similar
+configurations {
+    flywayMigration
+}
+
+// Declare your dependencies as usual for each configuration
+dependencies {
+    compile "org.flywaydb:flyway-core:${flywayVersion}"
+    flywayMigration "com.mygroupid:my-lib:1.2.3"
+}
+
+flyway {
+    url = 'jdbc:h2:mem:mydb'
+    user = 'myUsr'
+    password = 'mySecretPwd'
+    schemas = ['schema1', 'schema2', 'schema3']
+    placeholders = [
+        'keyABC': 'valueXYZ',
+        'otherplaceholder': 'value123'
+    ]
+    // Include your custom configuration here in addition to any default ones you want included
+    configurations = [ 'compile', 'flywayMigration' ]
+}
+```
+
+For details on how to setup and use custom Gradle configurations, see the [official Gradle documentation](https://docs.gradle.org/current/dsl/org.gradle.api.artifacts.ConfigurationContainer.html).
 
 ### Gradle properties
 

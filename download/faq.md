@@ -59,6 +59,7 @@ With schema we mean the container for database objects commonly referred to as "
 - CockroachDB: `DATABASE` (no schema support)
 - SAP HANA: `SCHEMA`
 - Sybase ASE: `DATABASE` (no schema support)
+- Informix: `DATABASE` (no schema support)
 - H2: `SCHEMA`
 - HSQLDB: `SCHEMA`
 - Derby: `SCHEMA`

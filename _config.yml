@@ -1,7 +1,7 @@
 safe: true
 future: true
 exclude: [.gitattributes, .gitignore, flywaydb.org.iml, flywaydb.org.ipr, flywaydb.org.iws, README.md, CNAME, Gemfile, Gemfile.lock]
-flywayVersion: 5.0.7
+flywayVersion: 5.1.0
 markdown: kramdown
 kramdown:
   input: GFM

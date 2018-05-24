@@ -7,6 +7,7 @@ subtitle: Environment Variables
 
 The Flyway [command-line tool](/documentation/commandline), [Maven plugin](/documentation/maven) and
 [Gradle plugin](/documentation/gradle) optionally support loading configuration via environment variables.
+This also possible using the Flyway API by calling the `envVars()` method on the configuration.
 
 ## Reference
 
@@ -101,6 +102,20 @@ The following environment variables are supported:
             Multiple suffixes (like .sql,.pkg,.pkb) can be specified for easier compatibility with other tools such as
                 editors with specific file associations.</td>
     </tr>
+    <tr id="FLYWAY_STREAM">
+        <td>FLYWAY_STREAM {% include pro.html %}</td>
+        <td>Whether to stream SQL migrations when executing them. Streaming doesn't load the entire migration in memory at
+            once. Instead each statement is loaded individually. This is particularly useful for very large SQL migrations
+            composed of multiple MB or even GB of reference data, as this dramatically reduces Flyway's memory consumption.</td>
+    </tr>
+    <tr id="FLYWAY_BATCH">
+        <td>FLYWAY_BATCH {% include pro.html %}</td>
+        <td>Whether to batch SQL statements when executing them. Batching can save up to 99 percent of network roundtrips by
+            sending up to 100 statements at once over the network to the database, instead of sending each statement
+            individually. This is particularly useful for very large SQL migrations composed of multiple MB or even GB of
+            reference data, as this can dramatically reduce the network overhead. This is supported for INSERT, UPDATE,
+            DELETE, MERGE and UPSERT statements. All other statements are automatically executed without batching.</td>
+    </tr>
     <tr id="FLYWAY_MIXED">
         <td>FLYWAY_MIXED</td>
         <td>Whether to allow mixing transactional and non-transactional statements within the same migration</td>
@@ -146,7 +161,7 @@ The following environment variables are supported:
     <tr id="FLYWAY_CALLBACKS">
         <td>FLYWAY_CALLBACKS</td>
         <td>Comma-separated list of fully qualified class names of
-            <a href="/documentation/api/javadoc/org/flywaydb/core/api/callback/FlywayCallback">FlywayCallback</a>
+            <a href="/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback">Callback</a>
             implementations to use to hook into the Flyway lifecycle.</td>
     </tr>
     <tr id="FLYWAY_SKIP_DEFAULT_CALLBACKS">
@@ -190,6 +205,18 @@ The following environment variables are supported:
             (unknown to us) has also been applied. Instead of bombing out (fail fast) with an exception, a
             warning is logged and Flyway continues normally. This is useful for situations where one must be able to deploy
             a newer version of the application even though it doesn't contain migrations included with an older one anymore.
+        </td>
+    </tr>
+    <tr id="FLYWAY_IGNORE_IGNORED_MIGRATIONS">
+        <td>FLYWAY_IGNORE_IGNORED_MIGRATIONS</td>
+        <td>Ignore ignored migrations when reading the schema history table. These are migrations that were added in between
+			already migrated migrations in this version. For example: we have migrations available on the classpath with
+			versions from 1.0 to 3.0. The schema history table indicates that version 1 was finished on 1.0.15, and the next
+			one was 2.0.0. But with the next release a new migration was added to version 1: 1.0.16. Such scenario is ignored
+			by migrate command, but by default is rejected by validate. When ignoreIgnoredMigrations is enabled, such case
+			will not be reported by validate command. This is useful for situations where one must be able to deliver
+			complete set of migrations in a delivery package for multiple versions of the product, and allows for further
+			development of older versions.
         </td>
     </tr>
     <tr id="FLYWAY_IGNORE_FUTURE_MIGRATIONS">
@@ -239,6 +266,28 @@ The following environment variables are supported:
            in order until one reports to have successfully handled the errors or warnings.
            If none do, or if none are present, Flyway falls back to its default handling of errors and warnings.
            </td>
+    </tr>
+    <tr id="FLYWAY_ERROR_OVERRIDES">
+        <td>FLYWAY_ERROR_OVERRIDES {% include pro.html %}</td>
+        <td><p>Comma-sparated list of rules for the built-in error handler that lets you override specific SQL states and errors codes from error
+             to warning or from warning to error.</p>
+             <p>Each error override has the following format: <code>STATE:12345:W</code>.
+             It is a 5 character SQL state, a colon, the SQL error code, a colon and finally the desired
+             behavior that should override the initial one. The following behaviors are accepted: <code>W</code> to force a warning
+             and <code>E</code> to force an error.</p>
+             <p>For example, to force Oracle stored procedure compilation issues to produce
+             errors instead of warnings, the following errorOverride can be used: <code>99999:17110:E</code></p>
+       </td>
+    </tr>
+    <tr id="FLYWAY_DRYRUN_OUTPUT">
+        <td>FLYWAY_DRYRUN_OUTPUT {% include pro.html %}</td>
+        <td>The file where to output the SQL statements of a migration dry run. If the file specified is in a non-existent
+            directory, Flyway will create all directories and parent directories as needed.
+            Omit to use the default mode of executing the SQL statements directly against the database.</td>
+    </tr>
+    <tr id="FLYWAY_ORACLE_SQLPLUS">
+        <td>FLYWAY_ORACLE_SQLPLUS {% include pro.html %}</td>
+        <td>Whether to Flyway's support for Oracle SQL*Plus commands should be activated.</td>
     </tr>
     </tbody>
 </table>

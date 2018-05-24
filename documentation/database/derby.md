@@ -9,9 +9,9 @@ subtitle: Derby
 ## Supported Versions
 
 - `10.14`
-- `10.13`
-- `10.12`
-- `10.11`
+- `10.13` {% include enterprise.html %}
+- `10.12` {% include enterprise.html %}
+- `10.11` {% include enterprise.html %}
 
 ## Driver
 

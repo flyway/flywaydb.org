@@ -175,7 +175,7 @@ subtitle: 'gradle flywayUndo'
         <td>NO</td>
         <td></td>
         <td>Fully qualified class names of
-            <a href="/documentation/api/javadoc/org/flywaydb/core/api/callback/FlywayCallback">FlywayCallback</a>
+            <a href="/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback">Callback</a>
             implementations to use to hook into the Flyway lifecycle.</td>
     </tr>
     <tr>
@@ -205,6 +205,20 @@ subtitle: 'gradle flywayUndo'
         </td>
     </tr>
     <tr>
+        <td>ignoreIgnoredMigrations</td>
+        <td>NO</td>
+        <td>false</td>
+        <td>Ignore ignored migrations when reading the schema history table. These are migrations that were added in between
+            already migrated migrations in this version. For example: we have migrations available on the classpath with
+            versions from 1.0 to 3.0. The schema history table indicates that version 1 was finished on 1.0.15, and the next
+            one was 2.0.0. But with the next release a new migration was added to version 1: 1.0.16. Such scenario is ignored
+            by migrate command, but by default is rejected by validate. When ignoreIgnoredMigrations is enabled, such case
+            will not be reported by validate command. This is useful for situations where one must be able to deliver
+            complete set of migrations in a delivery package for multiple versions of the product, and allows for further
+            development of older versions.
+        </td>
+    </tr>
+    <tr>
         <td>ignoreFutureMigrations</td>
         <td>NO</td>
         <td>true</td>
@@ -231,6 +245,20 @@ subtitle: 'gradle flywayUndo'
            in order until one reports to have successfully handled the errors or warnings.
            If none do, or if none are present, Flyway falls back to its default handling of errors and warnings.
            </td>
+    </tr>
+    <tr id="errorOverrides">
+        <td>errorOverrides {% include pro.html %}</td>
+        <td>NO</td>
+        <td><i>none</i></td>
+        <td><p>Rules for the built-in error handler that lets you override specific SQL states and errors codes from error
+             to warning or from warning to error.</p>
+             <p>Each error override has the following format: <code>STATE:12345:W</code>.
+             It is a 5 character SQL state, a colon, the SQL error code, a colon and finally the desired
+             behavior that should override the initial one. The following behaviors are accepted: <code>W</code> to force a warning
+             and <code>E</code> to force an error.</p>
+             <p>For example, to force Oracle stored procedure compilation issues to produce
+             errors instead of warnings, the following errorOverride can be used: <code>99999:17110:E</code></p>
+             </td>
     </tr>
     <tr>
         <td>dryRunOutput</td>
@@ -273,9 +301,11 @@ subtitle: 'gradle flywayUndo'
     mixed = false
     group = false
     ignoreMissingMigrations = false
+    ignoreIgnoredMigrations = false
     ignoreFutureMigrations = false
     installedBy = "my-user"
     errorHandlers = ['com.mycomp.MyCustomErrorHandler', 'com.mycomp.AnotherErrorHandler']
+    errorOverrides = ['99999:17110:E', '42001:42001:W']
     dryRunOutput = '/my/sql/dryrun-outputfile.sql'
 }</pre>
 

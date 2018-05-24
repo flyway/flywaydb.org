@@ -127,6 +127,24 @@ Migrates the schema to the latest version. Flyway will create the schema history
             Multiple suffixes (like .sql,.pkg,.pkb) can be specified for easier compatibility with other tools such as
                 editors with specific file associations.</td>
     </tr>
+    <tr id="stream">
+        <td>stream {% include pro.html %}</td>
+        <td>NO</td>
+        <td>false</td>
+        <td>Whether to stream SQL migrations when executing them. Streaming doesn't load the entire migration in memory at
+            once. Instead each statement is loaded individually. This is particularly useful for very large SQL migrations
+            composed of multiple MB or even GB of reference data, as this dramatically reduces Flyway's memory consumption.</td>
+    </tr>
+    <tr id="batch">
+        <td>batch {% include pro.html %}</td>
+        <td>NO</td>
+        <td>false</td>
+        <td>Whether to batch SQL statements when executing them. Batching can save up to 99 percent of network roundtrips by
+            sending up to 100 statements at once over the network to the database, instead of sending each statement
+            individually. This is particularly useful for very large SQL migrations composed of multiple MB or even GB of
+            reference data, as this can dramatically reduce the network overhead. This is supported for INSERT, UPDATE,
+            DELETE, MERGE and UPSERT statements. All other statements are automatically executed without batching.</td>
+    </tr>
     <tr id="mixed">
         <td>mixed</td>
         <td>NO</td>
@@ -188,7 +206,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
         <td>NO</td>
         <td></td>
         <td>Comma-separated list of fully qualified class names of
-            <a href="/documentation/api/javadoc/org/flywaydb/core/api/callback/FlywayCallback">FlywayCallback</a>
+            <a href="/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback">Callback</a>
             implementations to use to hook into the Flyway lifecycle.</td>
     </tr>
     <tr>
@@ -246,6 +264,20 @@ Migrates the schema to the latest version. Flyway will create the schema history
             a newer version of the application even though it doesn't contain migrations included with an older one anymore.
             Note that if the most recently applied migration is removed, Flyway has no way to know it is missing and will 
             mark it as future instead.
+        </td>
+    </tr>
+    <tr>
+        <td>ignoreIgnoredMigrations</td>
+        <td>NO</td>
+        <td>false</td>
+        <td>Ignore ignored migrations when reading the schema history table. These are migrations that were added in between
+            already migrated migrations in this version. For example: we have migrations available on the classpath with
+            versions from 1.0 to 3.0. The schema history table indicates that version 1 was finished on 1.0.15, and the next
+            one was 2.0.0. But with the next release a new migration was added to version 1: 1.0.16. Such scenario is ignored
+            by migrate command, but by default is rejected by validate. When ignoreIgnoredMigrations is enabled, such case
+            will not be reported by validate command. This is useful for situations where one must be able to deliver
+            complete set of migrations in a delivery package for multiple versions of the product, and allows for further
+            development of older versions.
         </td>
     </tr>
     <tr>
@@ -312,6 +344,20 @@ Migrates the schema to the latest version. Flyway will create the schema history
            If none do, or if none are present, Flyway falls back to its default handling of errors and warnings.
            </td>
     </tr>
+    <tr id="errorOverrides">
+        <td>errorOverrides {% include pro.html %}</td>
+        <td>NO</td>
+        <td><i>none</i></td>
+        <td><p>Comma-sparated list of rules for the built-in error handler that lets you override specific SQL states and errors codes from error
+             to warning or from warning to error.</p>
+             <p>Each error override has the following format: <code>STATE:12345:W</code>.
+             It is a 5 character SQL state, a colon, the SQL error code, a colon and finally the desired
+             behavior that should override the initial one. The following behaviors are accepted: <code>W</code> to force a warning
+             and <code>E</code> to force an error.</p>
+             <p>For example, to force Oracle stored procedure compilation issues to produce
+             errors instead of warnings, the following errorOverride can be used: <code>99999:17110:E</code></p>
+             </td>
+    </tr>
     <tr id="dryRunOutput">
         <td>dryRunOutput {% include pro.html %}</td>
         <td>NO</td>
@@ -320,12 +366,19 @@ Migrates the schema to the latest version. Flyway will create the schema history
             directory, Flyway will create all directories and parent directories as needed.
             Omit to use the default mode of executing the SQL statements directly against the database.</td>
     </tr>
+    <tr id="oracle.sqlplus">
+        <td>oracle.sqlplus {% include pro.html %}</td>
+        <td>NO</td>
+        <td>false</td>
+        <td>Whether to Flyway's support for Oracle SQL*Plus commands should be activated.</td>
+    </tr>
     </tbody>
 </table>
 
 ## Sample configuration
 
-<pre class="prettyprint">flyway.driver=org.hsqldb.jdbcDriver
+```properties
+flyway.driver=org.hsqldb.jdbcDriver
 flyway.url=jdbc:hsqldb:file:/db/flyway_sample
 flyway.user=SA
 flyway.password=mySecretPwd
@@ -337,6 +390,8 @@ flyway.undoSqlMigrationPrefix=downgrade
 flyway.repeatableSqlMigrationPrefix=RRR
 flyway.sqlMigrationSeparator=__
 flyway.sqlMigrationSuffixes=.sql,.pkg,.pkb
+flyway.stream=true
+flyway.batch=true
 flyway.encoding=ISO-8859-1
 flyway.placeholderReplacement=true
 flyway.placeholders.aplaceholder=value
@@ -354,12 +409,16 @@ flyway.cleanOnValidationError=false
 flyway.mixed=false
 flyway.group=false
 flyway.ignoreMissingMigrations=false
+flyway.ignoreIgnoredMigrations=false
 flyway.ignoreFutureMigrations=false
 flyway.cleanDisabled=false
 flyway.baselineOnMigrate=false
 flyway.installedBy=my-user
 flyway.errorHandlers=com.mycomp.MyCustomErrorHandler,com.mycomp.AnotherErrorHandler
-flyway.dryRunOutput=/my/sql/dryrun-outputfile.sql</pre>
+flyway.errorOverrides=99999:17110:E,42001:42001:W
+flyway.dryRunOutput=/my/sql/dryrun-outputfile.sql
+flyway.oracle.sqlplus=true
+```
 
 ## Sample output
 
