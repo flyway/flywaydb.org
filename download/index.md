@@ -31,6 +31,8 @@ Choose your Flyway edition based on the features and support level you require
 <tr><td>Custom error handlers</td><td></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td>Dry runs</td><td></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td>Undo</td><td></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
+<tr><td>Batching</td><td></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
+<tr><td>Streaming</td><td></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td>Display query results</td><td></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td>Older database versions compatibility</td><td></td><td></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td>Java 6 / 7 compatibility</td><td></td><td></td><td><i class="fa fa-check"></i></td></tr>
