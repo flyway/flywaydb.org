@@ -12,7 +12,7 @@ title: Blog
             {{ content }}
 
             <div id="social-buttons">
-                <a class="btn btn-primary btn-twitter" target="_blank" href="https://twitter.com/intent/tweet?original_referer={{ site.url | uri_escape}}{{ page.url | uri_escape}}&ref_src=twsrc%5Etfw&text={{ page.subtitle | uri_escape }}&tw_p=tweetbutton&url={{ site.url | uri_escape}}{{ page.url | uri_escape}}"><i class="fa fa-twitter"></i> Tweet</a>
+                <a class="btn btn-primary btn-twitter" target="_blank" href="https://twitter.com/intent/tweet?original_referer={{ site.url | uri_escape}}{{ page.url | uri_escape | split: '.html'}}&ref_src=twsrc%5Etfw&text={{ page.subtitle | uri_escape }}&tw_p=tweetbutton&url={{ site.url | uri_escape}}{{ page.url | uri_escape | split: '.html' }}"><i class="fa fa-twitter"></i> Tweet</a>
             </div>
             <div id="blog-post-nav">
                 {% if page.previous %}
