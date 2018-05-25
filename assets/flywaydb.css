@@ -153,6 +153,22 @@ img {
     border-radius: 6px;
 }
 
+.btn-twitter {
+    padding: 3px 9px;
+    font-size: 11px;
+    font-weight: bold;
+    background-color: #1b95e0;
+    border: 0;
+}
+
+.btn-twitter:hover {
+    background-color: #0c7abf;
+}
+
+.btn-twitter i {
+    padding-left: 0 !important;
+}
+
 #social i {
     font-size: 28px;
     padding-top: 40px;
