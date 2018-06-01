@@ -240,7 +240,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
             when the sql script is executed. The validate mechanism checks if the sql migration in the classpath
             still has the same checksum as the sql migration already executed in the database.<br/></td>
     </tr>
-    <tr>
+    <tr id="cleanOnValidationError">
         <td>cleanOnValidationError</td>
         <td>NO</td>
         <td>false</td>
@@ -252,7 +252,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
             SCM.<br/><br/><strong>Warning ! Do not enable in production !</strong>
         </td>
     </tr>
-    <tr>
+    <tr id="ignoreMissingMigrations">
         <td>ignoreMissingMigrations</td>
         <td>NO</td>
         <td>false</td>
@@ -266,7 +266,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
             mark it as future instead.
         </td>
     </tr>
-    <tr>
+    <tr id="ignoreIgnoredMigrations">
         <td>ignoreIgnoredMigrations</td>
         <td>NO</td>
         <td>false</td>
@@ -280,7 +280,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
             development of older versions.
         </td>
     </tr>
-    <tr>
+    <tr id="ignoreFutureMigrations">
         <td>ignoreFutureMigrations</td>
         <td>NO</td>
         <td>true</td>
@@ -291,7 +291,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
             warning is logged and Flyway continues normally. This is useful for situations where one must be able to redeploy
             an older version of the application after the database has been migrated by a newer one.</td>
     </tr>
-    <tr>
+    <tr id="cleanDisabled">
         <td>cleanDisabled</td>
         <td>NO</td>
         <td>false</td>
