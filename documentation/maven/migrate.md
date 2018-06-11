@@ -84,7 +84,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
             the schema history table is placed in the first schema of the list.
         </td>
     </tr>
-    <tr>
+    <tr id="locations">
         <td>locations</td>
         <td>NO</td>
         <td>filesystem:src/main/resources/db/migration</td>
