@@ -25,6 +25,8 @@ be migrated to a state the rest of the code can work with.
     <ul class="nav nav-tabs">
         <li class="active marketing-item"><a href="#tab-community" data-toggle="tab">Community Edition</a>
         </li>
+        <li class="marketing-item"><a href="#tab-trial" data-toggle="tab">Trial Edition</a>
+        </li>
         <li class="marketing-item"><a href="#tab-pro" data-toggle="tab">Pro Edition</a>
         </li>
         <li class="marketing-item"><a href="#tab-enterprise" data-toggle="tab">Enterprise Edition</a>
@@ -36,7 +38,6 @@ be migrated to a state the rest of the code can work with.
     <tr>
         <th>Maven</th>
         <td>
-            <code>pom.xml</code>
             <pre class="prettyprint">&lt;dependency&gt;
     &lt;groupId&gt;org.flywaydb&lt;/groupId&gt;
     &lt;artifactId&gt;flyway-core&lt;/artifactId&gt;
@@ -60,6 +61,40 @@ be migrated to a state the rest of the code can work with.
         <th>Source</th>
         <td>
             <a href="/download/thankyou?dl=https://repo1.maven.org/maven2/org/flywaydb/flyway-core/{{site.flywayVersion}}/flyway-core-{{site.flywayVersion}}-sources.jar">flyway-core-{{site.flywayVersion}}-sources.jar</a>
+        </td>
+    </tr>
+</table>
+        </div>
+        <div class="tab-pane" id="tab-trial">
+<table class="table">
+    <tr>
+        <th>Installation</th>
+        <td>Start by downloading and extracting the <a href="/download">Flyway Trial Edition</a> zip. Then execute the
+            <code>installToLocalMavenRepo</code> script in the <code>flyway-{{ site.flywayVersion }}</code> directory.
+            This installs all necessary artifacts in your local Maven repository, making it possible to use them in Maven and Gradle builds.
+        </td>
+    </tr>
+    <tr>
+        <th>Maven</th>
+        <td>
+            <pre class="prettyprint">&lt;dependencies&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.flywaydb<strong>.trial</strong>&lt;/groupId&gt;
+        &lt;artifactId&gt;flyway-core&lt;/artifactId&gt;
+        &lt;version&gt;{{ site.flywayVersion }}&lt;/version&gt;
+    &lt;/dependency&gt;
+    ...
+&lt;/dependencies&gt;</pre>
+        </td>
+    </tr>
+    <tr>
+        <th>Gradle</th>
+        <td>
+            <pre class="prettyprint">repositories {
+    mavenLocal()
+}
+
+compile "org.flywaydb<strong>.trial</strong>:flyway-core:{{ site.flywayVersion }}"</pre>
         </td>
     </tr>
 </table>
