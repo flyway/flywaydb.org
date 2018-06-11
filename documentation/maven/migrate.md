@@ -365,7 +365,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
         <td><i>project.basedir</i> (where the POM resides)</td>
         <td>The working directory to consider when dealing with relative paths for both config files and locations.</td>
     </tr>
-    <tr>
+    <tr id="errorHandlers">
         <td>errorHandlers {% include pro.html %}</td>
         <td>NO</td>
         <td><i>none</i></td>
@@ -390,7 +390,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
              errors instead of warnings, the following errorOverride can be used: <code>99999:17110:E</code></p>
              </td>
     </tr>
-    <tr>
+    <tr id="dryRunOutput">
         <td>dryRunOutput {% include pro.html %}</td>
         <td>NO</td>
         <td><i>Execute directly against the database</i></td>
