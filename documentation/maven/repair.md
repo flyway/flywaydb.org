@@ -209,6 +209,7 @@ Repairs the Flyway schema history table. This will perform the following actions
         <td><i>project.basedir</i> (where the POM resides)</td>
         <td>The working directory to consider when dealing with relative paths for both config files and locations.</td>
     </tr>
+    {% include cfg/licenseKey.html %}
 </table>
 
 ## Sample configuration

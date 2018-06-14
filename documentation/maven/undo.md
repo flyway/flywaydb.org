@@ -299,6 +299,7 @@ subtitle: 'mvn flyway:undo'
             directory, Flyway will create all directories and parent directories as needed.
             Omit to use the default mode of executing the SQL statements directly against the database.</td>
     </tr>
+    {% include cfg/licenseKey.html %}
     </tbody>
 </table>
 

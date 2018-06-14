@@ -113,6 +113,7 @@ The schemas are cleaned in the order specified by the <code>schemas</code> prope
         <td><i>project.basedir</i> (where the POM resides)</td>
         <td>The working directory to consider when dealing with relative paths for both config files and locations.</td>
     </tr>
+    {% include cfg/licenseKey.html %}
     </tbody>
 </table>
 

@@ -195,6 +195,7 @@ Prints the details and status information about all the migrations.
                 it will be applied too instead of being ignored.</p>
         </td>
     </tr>
+    {% include cfg/licenseKey.html %}
     </tbody>
 </table>
 

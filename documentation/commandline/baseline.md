@@ -103,6 +103,7 @@ Baselines an existing database, excluding all migrations up to and including `ba
         </td>
         <td>The description to tag an existing schema with when executing baseline</td>
     </tr>
+    {% include cfg/licenseKey.html %}
     </tbody>
 </table>
 

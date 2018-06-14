@@ -256,8 +256,8 @@ flyway.url=
 
 # Rules for the built-in error handler that lets you override specific SQL states and errors codes from error to
 # warning or from warning to error.
-# Each error override has the following format: STATE:12345:W. It is a 5 character SQL state, a colon, the SQL 
-# error code, a colon and finally the desired behavior that should override the initial one. The following 
+# Each error override has the following format: STATE:12345:W. It is a 5 character SQL state, a colon, the SQL
+# error code, a colon and finally the desired behavior that should override the initial one. The following
 # behaviors are accepted: W to force a warning and E to force an error.
 # For example, to force Oracle stored procedure compilation issues to produce errors instead of warnings,
 # the following errorOverride can be used: 99999:17110:E
@@ -273,6 +273,10 @@ flyway.url=
 # Whether to Flyway's support for Oracle SQL*Plus commands should be activated. (default: false)
 # Flyway Pro and Flyway Enterprise only
 # flyway.oracle.sqlplus=
+
+# Flyway's license key.
+# Flyway Pro and Flyway Enterprise only
+# flyway.licenseKey=
 ```
 
 <p class="next-steps">

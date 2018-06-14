@@ -369,6 +369,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
         <td>false</td>
         <td>Whether to Flyway's support for Oracle SQL*Plus commands should be activated.</td>
     </tr>
+    {% include cfg/licenseKey.html %}
     </tbody>
 </table>
 
