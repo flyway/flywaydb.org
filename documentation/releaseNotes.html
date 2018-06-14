@@ -12,29 +12,18 @@ subtitle: Release Notes
 
     <h3>New features</h3>
     <ul>
-        <li>
-            <a href="https://github.com/flyway/flyway/issues/2033">Issue 2033</a>
-            Automatically set application name to easily identify Flyway connections
-        </li>
-        <li>
-            <a href="https://github.com/flyway/flyway/issues/2043">Issue 2043</a>
-            Introduce license key {% include pro.html %}
-        </li>
+        {% include issue.html id="2033" title="Automatically set application name to easily identify Flyway connections" %}
+        {% include issue.html id="2043" title="Introduce license key" pro=true %}
     </ul>
 
     <h3>Bug fixes</h3>
     <ul>
-        <li>
-            <a href="https://github.com/flyway/flyway/issues/2028">Issue 2028</a>
-            Unable to clean schema that contains a user-defined function with schemabinding in SQL Server
-        </li>
-        <li>
-            <a href="https://github.com/flyway/flyway/issues/2031">Issue 2031</a>
-            Warning "Input stream has been finalized or forced closed without being explicitly closed"
-        </li>
+        {% include issue.html id="2028" title="Unable to clean schema that contains a user-defined function with schemabinding in SQL Server" %}
+        {% include issue.html id="2031" title="Warning: Input stream has been finalized or forced closed without being explicitly closed" %}
+        {% include issue.html id="2041" title="Sybase 15.7: Incorrect syntax near 'GO'" %}
     </ul>
     <p>
-        Thanks to Esteban Marin and Piotrek Żygieło for reporting these issues.
+        Thanks to Esteban Marin, Piotrek Żygieło and seneiran for reporting these issues.
     </p>
 </div>
 
