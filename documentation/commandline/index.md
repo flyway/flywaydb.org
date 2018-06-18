@@ -170,7 +170,7 @@ If you do not supply a database `user` or `password` via any of the means above,
 Database password:</pre>
 
 If you want Flyway to connect to your database without a user or password, you can suppress prompting by adding
-    the `-n` flag.
+the `-n` flag.
 
 ### Java Arguments
 
