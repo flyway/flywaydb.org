@@ -174,8 +174,20 @@ If you want Flyway to connect to your database without a user or password, you c
 
 ### Java Arguments
 
-If need to to pass custom arguments to Flyway's JVM, you can do so by setting the `JAVA_ARGS` environment variable.
+If you need to to pass custom arguments to Flyway's JVM, you can do so by setting the `JAVA_ARGS` environment variable.
 They will then automatically be taken into account when launching Flyway. This is particularly useful when needing to set JVM system properties.
+
+### Flyway Edition
+
+You can switch between the various Flyway editions by setting the `FLYWAY_EDITION` environment variable prior to
+executing Flyway to any of the following values:
+
+<table class="table table-striped">
+<tr><td><code>community</code></td><td>Select the Flyway Community Edition (default)</td></tr> 
+<tr><td><code>trial</code></td><td>Select the Flyway Trial Edition</td></tr> 
+<tr><td><code>pro</code></td><td>Select the Flyway Pro Edition</td></tr> 
+<tr><td><code>enterprise</code></td><td>Select the Flyway Enterprise Edition</td></tr> 
+</table> 
 
 ## Output
 

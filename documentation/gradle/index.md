@@ -46,10 +46,10 @@ apply plugin: 'org.flywaydb.flyway'</pre>
         <pre class="prettyprint">buildscript {
     repositories {
         maven {
-            url "s3://flyway-repo/release"
-            credentials(AwsCredentials) {
-                accessKey '<i>your-flyway-pro-user</i>'
-                secretKey '<i>your-flyway-pro-password</i>'
+            url "https://repo.flywaydb.org/repo"
+            credentials {
+                username '<i>your-flyway-pro-license-key</i>'
+                password 'flyway'
             }
         }
     }
@@ -64,10 +64,10 @@ apply plugin: 'org.flywaydb.flyway'</pre>
         <pre class="prettyprint">buildscript {
     repositories {
         maven {
-            url "s3://flyway-repo/release"
-            credentials(AwsCredentials) {
-                accessKey '<i>your-flyway-enterprise-user</i>'
-                secretKey '<i>your-flyway-enterprise-password</i>'
+            url "https://repo.flywaydb.org/repo"
+            credentials {
+                username '<i>your-flyway-enterprise-license-key</i>'
+                password 'flyway'
             }
         }
     }

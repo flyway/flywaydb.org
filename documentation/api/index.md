@@ -108,7 +108,7 @@ compile "org.flywaydb<strong>.trial</strong>:flyway-core:{{ site.flywayVersion }
             <pre class="prettyprint">&lt;repositories&gt;
     &lt;repository&gt;
         &lt;id&gt;flyway-repo&lt;/id&gt;
-        &lt;url&gt;s3://flyway-repo/release&lt;/url&gt;
+        &lt;url&gt;https://repo.flywaydb.org/repo&lt;/url&gt;
     &lt;/repository&gt;
     ...
 &lt;/repositories&gt;
@@ -120,25 +120,14 @@ compile "org.flywaydb<strong>.trial</strong>:flyway-core:{{ site.flywayVersion }
         &lt;version&gt;{{ site.flywayVersion }}&lt;/version&gt;
     &lt;/dependency&gt;
     ...
-&lt;/dependencies&gt;
-        
-&lt;build&gt;
-    &lt;extensions&gt;
-        &lt;extension&gt;
-            &lt;groupId&gt;com.allogy.maven.wagon&lt;/groupId&gt;
-            &lt;artifactId&gt;maven-s3-wagon&lt;/artifactId&gt;
-            &lt;version&gt;1.0.1&lt;/version&gt;
-        &lt;/extension&gt;
-    &lt;/extensions&gt;
-    ...
-&lt;/build&gt;</pre>
+&lt;/dependencies&gt;</pre>
             <code>settings.xml</code>
             <pre class="prettyprint">&lt;settings&gt;
     &lt;servers&gt;
         &lt;server&gt;
             &lt;id&gt;flyway-repo&lt;/id&gt;
-            &lt;username&gt;<i>your-flyway-pro-user</i>&lt;/username&gt;
-            &lt;password&gt;<i>your-flyway-pro-password</i>&lt;/password&gt;
+            &lt;username&gt;<i>your-flyway-pro-license-key</i>&lt;/username&gt;
+            &lt;password&gt;flyway&lt;/password&gt;
         &lt;/server&gt;
     &lt;/servers&gt;
     ...
@@ -150,15 +139,17 @@ compile "org.flywaydb<strong>.trial</strong>:flyway-core:{{ site.flywayVersion }
         <td>
             <pre class="prettyprint">repositories {
     maven {
-        url "s3://flyway-repo/release"
-        credentials(AwsCredentials) {
-            accessKey '<i>your-flyway-pro-user</i>'
-            secretKey '<i>your-flyway-pro-password</i>'
+        url "https://repo.flywaydb.org/repo"
+        credentials {
+            username '<i>your-flyway-pro-license-key</i>'
+            password 'flyway'
         }
     }
 }
 
-compile "org.flywaydb<strong>.pro</strong>:flyway-core:{{ site.flywayVersion }}"</pre>
+dependencies {
+    compile "org.flywaydb<strong>.pro</strong>:flyway-core:{{ site.flywayVersion }}"
+}</pre>
         </td>
     </tr>
 </table>
@@ -172,7 +163,7 @@ compile "org.flywaydb<strong>.pro</strong>:flyway-core:{{ site.flywayVersion }}"
             <pre class="prettyprint">&lt;repositories&gt;
     &lt;repository&gt;
         &lt;id&gt;flyway-repo&lt;/id&gt;
-        &lt;url&gt;s3://flyway-repo/release&lt;/url&gt;
+        &lt;url&gt;https://repo.flywaydb.org/repo&lt;/url&gt;
     &lt;/repository&gt;
     ...
 &lt;/repositories&gt;
@@ -184,25 +175,14 @@ compile "org.flywaydb<strong>.pro</strong>:flyway-core:{{ site.flywayVersion }}"
         &lt;version&gt;{{ site.flywayVersion }}&lt;/version&gt;
     &lt;/dependency&gt;
     ...
-&lt;/dependencies&gt;
-        
-&lt;build&gt;
-    &lt;extensions&gt;
-        &lt;extension&gt;
-            &lt;groupId&gt;com.allogy.maven.wagon&lt;/groupId&gt;
-            &lt;artifactId&gt;maven-s3-wagon&lt;/artifactId&gt;
-            &lt;version&gt;1.0.1&lt;/version&gt;
-        &lt;/extension&gt;
-    &lt;/extensions&gt;
-    ...
-&lt;/build&gt;</pre>
+&lt;/dependencies&gt;</pre>
             <code>settings.xml</code>
             <pre class="prettyprint">&lt;settings&gt;
     &lt;servers&gt;
         &lt;server&gt;
             &lt;id&gt;flyway-repo&lt;/id&gt;
-            &lt;username&gt;<i>your-flyway-enterprise-user</i>&lt;/username&gt;
-            &lt;password&gt;<i>your-flyway-enterprise-password</i>&lt;/password&gt;
+            &lt;username&gt;<i>your-flyway-enterprise-license-key</i>&lt;/username&gt;
+            &lt;password&gt;flyway&lt;/password&gt;
         &lt;/server&gt;
     &lt;/servers&gt;
     ...
@@ -214,15 +194,17 @@ compile "org.flywaydb<strong>.pro</strong>:flyway-core:{{ site.flywayVersion }}"
         <td>
             <pre class="prettyprint">repositories {
     maven {
-        url "s3://flyway-repo/release"
-        credentials(AwsCredentials) {
-            accessKey '<i>your-flyway-enterprise-user</i>'
-            secretKey '<i>your-flyway-enterprise-password</i>'
+        url "https://repo.flywaydb.org/repo"
+        credentials {
+            username '<i>your-flyway-enterprise-license-key</i>'
+            password 'flyway'
         }
     }
 }
 
-compile "org.flywaydb<strong>.enterprise</strong>:flyway-core:{{ site.flywayVersion }}"</pre>
+dependencies {
+    compile "org.flywaydb<strong>.enterprise</strong>:flyway-core:{{ site.flywayVersion }}"
+}</pre>
         </td>
     </tr>
 </table>
