@@ -8,7 +8,7 @@ subtitle: Community Plugins and Integrations
 Flyway comes out of the box with integrations for [Maven](/documentation/maven), [Gradle](/documentation/gradle)
 and [Docker](/documentation/commandline).
 
-The broader Flyway community however maintains a much larger collection of integrations and plugins. This tools and
+The broader Flyway community however maintains a much larger collection of integrations and plugins. The tools and
 platforms being integrated with include application frameworks, CI servers, deployment automation platforms, build tools
 and much more.
 
@@ -27,6 +27,7 @@ and much more.
     {% include plugin.html name="Ninja" logo="ninja.png" url="http://www.ninjaframework.org/documentation/working_with_relational_dbs/db_migrations.html" info="Full stack web framework for Java" %}
     {% include plugin.html name="NPM" logo="npm.svg" url="https://www.npmjs.com/package/flywaydb-cli" info="Package manager for JavaScript" %}
     {% include plugin.html name="Play" logo="play.png" url="/documentation/plugins/play" info="High velocity web framework for Java and Scala" %}
+    {% include plugin.html name="PowerShell" logo="powershell.svg" url="https://github.com/cdavid15/flyway-ps-cli" info="Windows command-line shell designed especially for system administrators" %}
     {% include plugin.html name="SBT" logo="sbt.svg" url="/documentation/plugins/sbt" info="Build tool for Scala projects" %}
     {% include plugin.html name="Spring Boot" logo="springboot.png" url="/documentation/plugins/springboot" info="Framework for production-ready Spring applications" %}
     {% include plugin.html name="Topia" logo="topia.png" url="http://topia.nuiton.org/documentation/flyway_integration.html" info="Tools for Portable and Independent Architecture" %}
