@@ -8,30 +8,26 @@ subtitle: Release Notes
 <p>Thank you all for reporting all these issues and contributing fixes!</p>
 
 <div class="release">
-    <h2 id="5.1.2">Flyway 5.1.2 (Unreleased)</h2>
-
-    <h3>New features</h3>
-    <ul>
-        <li>
-            <a href="https://github.com/flyway/flyway/issues/2033">Issue 2033</a>
-            Automatically set application name to easily identify Flyway connections
-        </li>
-    </ul>
+    <h2 id="5.1.3">Flyway 5.1.3 (2018-06-20)</h2>
 
     <h3>Bug fixes</h3>
     <ul>
-        <li>
-            <a href="https://github.com/flyway/flyway/issues/2028">Issue 2028</a>
-            Unable to clean schema that contains a user-defined function with schemabinding in SQL Server
-        </li>
-        <li>
-            <a href="https://github.com/flyway/flyway/issues/2031">Issue 2031</a>
-            Warning "Input stream has been finalized or forced closed without being explicitly closed"
-        </li>
+        {% include issue.html id="2028" title="Unable to clean schema that contains a user-defined function with schemabinding in SQL Server" %}
+        {% include issue.html id="2031" title="Warning: Input stream has been finalized or forced closed without being explicitly closed" %}
+        {% include issue.html id="2037" title="Upgrade Maven plugins to protect against Zip Slip" pr="2037" %}
+        {% include issue.html id="2041" title="Sybase 15.7: Incorrect syntax near 'GO'" %}
+        {% include issue.html id="2042" title="Workaround a bug in windows cmd" pr="2042" %}
+        {% include issue.html id="2045" title="Info: Synthetic migrations (like SCHEMA) should not show up as repeatable" %}
+        {% include issue.html id="2046" title="ErrorOverrides fail to override warning into error" %}
+        {% include issue.html id="2047" title="Batching sometimes executes statements twice" %}
     </ul>
     <p>
-        Thanks to Esteban Marin and Piotrek Żygieło for reporting these issues.
+        Thanks to Dar Brett, Esteban Marin, Piotrek Żygieło, seneiran and sullis for reporting these issues and contributing fixes.
     </p>
+</div>
+
+<div class="release">
+    <h2 id="5.1.2">Flyway 5.1.2 (Skipped due to build process failure)</h2>
 </div>
 
 <div class="release">

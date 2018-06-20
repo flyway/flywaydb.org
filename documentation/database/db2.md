@@ -5,6 +5,10 @@ subtitle: DB2
 ---
 # DB2
 
+## Supported Variants
+
+- LUW
+
 ## Supported Versions
 
 - `11.1`
@@ -58,7 +62,8 @@ subtitle: DB2
 
 ### Example
 
-<pre class="prettyprint">/* Single line comment */
+```sql
+/* Single line comment */
 CREATE TABLE test_user (
  name VARCHAR(25) NOT NULL,
  PRIMARY KEY(name)
@@ -94,7 +99,8 @@ CREATE FUNCTION TEST_FUNC(PARAM1 INTEGER, PARAM2 INTEGER, PARAM3 INTEGER)
   RETURNS INTEGER
 LANGUAGE SQL
   RETURN
-  1;</pre>
+  1;
+```
  
 ## Limitations
 
