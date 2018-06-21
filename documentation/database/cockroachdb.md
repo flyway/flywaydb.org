@@ -53,7 +53,8 @@ subtitle: CockroachDB
 
 ### Example
 
-<pre class="prettyprint">/* Single line comment */
+```sql
+/* Single line comment */
 CREATE TABLE test_data (
  value VARCHAR(25) NOT NULL PRIMARY KEY
 );
@@ -65,7 +66,8 @@ comment
 */
 
 -- Placeholder
-INSERT INTO ${tableName} (name) VALUES (&#x27;Mr. T&#x27;);</pre>
+INSERT INTO ${tableName} (name) VALUES ('Mr. T');
+```
 
 ## Limitations
 

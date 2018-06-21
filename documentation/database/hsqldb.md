@@ -56,7 +56,8 @@ subtitle: HSQLDB
 
 ### Example
 
-<pre class="prettyprint">/* Single line comment */
+```sql
+/* Single line comment */
 CREATE TABLE test_data (
   value VARCHAR(25) NOT NULL PRIMARY KEY
 );
@@ -78,7 +79,8 @@ CREATE TRIGGER uniqueidx_trigger BEFORE INSERT ON usertable
       IF EXISTS (SELECT * FROM usertable WHERE usertable.name = newrow.name) THEN
         SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'duplicate name';
       END IF;
-    END;</pre>
+    END;
+```
 
 ## Limitations
 
