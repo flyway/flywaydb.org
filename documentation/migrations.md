@@ -37,7 +37,7 @@ to your schema.
 The most common type of migration is a **versioned migration**. Each versioned migration has a *version*, a *description*
 and a *checksum*. The version must be unique. The description is purely
 informative for you to be able to remember what each migration does. The checksum is there to detect accidental changes.
-Versioned migrations are the most common type of migration. They are applied in order exactly once.
+Versioned migrations are applied in order exactly once.
 
 Versioned migrations are typically used for:
 - Creating/altering/dropping tables/indexes/foreign keys/enums/UDTs/...
