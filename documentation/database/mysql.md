@@ -40,7 +40,7 @@ subtitle: MySQL
 </tr>
 <tr>
 <th>Maven Central coordinates</th>
-<td><code>mysql:mysql-connector-java:6.0.6</code></td>
+<td><code>mysql:mysql-connector-java:8.0.11</code></td>
 <td><code>org.mariadb.jdbc:mariadb-java-client:2.2.3</code></td>
 </tr>
 <tr>
