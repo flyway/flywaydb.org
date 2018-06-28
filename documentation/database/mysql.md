@@ -19,8 +19,8 @@ subtitle: MySQL
 <thead>
 <tr>
 <th></th>
-<th>MySQL</th>
-<th>MariaDB</th>
+<th>MySQL (for MySQL 5.5 and newer)</th>
+<th>MariaDB (for MySQL 5.1)</th>
 </tr>
 </thead>
 <tr>
@@ -40,7 +40,7 @@ subtitle: MySQL
 </tr>
 <tr>
 <th>Maven Central coordinates</th>
-<td><code>mysql:mysql-connector-java:6.0.6</code></td>
+<td><code>mysql:mysql-connector-java:8.0.11</code></td>
 <td><code>org.mariadb.jdbc:mariadb-java-client:2.2.3</code></td>
 </tr>
 <tr>
