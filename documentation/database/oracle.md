@@ -100,6 +100,8 @@ The following commands are fully supported and can be used just like any regular
 - `REMARK`
 - `SET DEFINE`
 - `SET ESCAPE`
+- `SET FLAGGER`
+- `SET HEADING`
 - `SET NULL`
 - `SET SCAN`
 - `SET SERVEROUTPUT`
