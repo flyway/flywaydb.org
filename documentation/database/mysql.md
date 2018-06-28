@@ -19,7 +19,7 @@ subtitle: MySQL
 <thead>
 <tr>
 <th></th>
-<th>MySQL (recommended for MySQL 5.5 and newer)</th>
+<th>MySQL (for MySQL 5.5 and newer)</th>
 <th>MariaDB (for MySQL 5.1)</th>
 </tr>
 </thead>
