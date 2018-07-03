@@ -1,9 +1,9 @@
 ---
 layout: default
 tab: download
-title: Flyway Pro Redistributable License and Support Agreement
+title: Flyway Pro Edition Redistributable License and Support Agreement
 ---
-# Flyway Pro Redistributable License and Support Agreement
+# Flyway Pro Edition Redistributable License and Support Agreement
 
 ## 1. Subject
 Subject of this agreement are the conditions under which and the extent to which the end user (referred to as “Licensee” below) is granted the right to use the “Flyway Pro Edition” software (referred to as “software” below) provided by Boxfuse GmbH, Baubergerstr. 59, Munich (referred to as “Licensor” below).

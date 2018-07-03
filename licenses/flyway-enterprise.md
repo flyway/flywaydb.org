@@ -1,9 +1,9 @@
 ---
 layout: default
 tab: download
-title: Flyway Enterprise License and Support Agreement
+title: Flyway Enterprise Edition License and Support Agreement
 ---
-# Flyway Enterprise License and Support Agreement
+# Flyway Enterprise Edition License and Support Agreement
 
 ## 1. Subject
 Subject of this agreement are the conditions under which and the extent to which the end user (referred to as “Licensee” below) is granted the right to use the “Flyway Enterprise Edition” software (referred to as “software” below) provided by Boxfuse GmbH, Baubergerstr. 59, Munich (referred to as “Licensor” below).
