@@ -1,12 +1,12 @@
 ---
 layout: default
 tab: download
-title: Flyway Enterprise Edition Site License and Support Agreement
+title: Flyway Pro Edition Site License and Support Agreement
 ---
-# Flyway Enterprise Edition Site License and Support Agreement
+# Flyway Pro Edition Site License and Support Agreement
 
 ## 1. Subject
-Subject of this agreement are the conditions under which and the extent to which the end user (referred to as “Licensee” below) is granted the right to use the “Flyway Enterprise Edition Site” software (referred to as “software” below) provided by Boxfuse GmbH, Baubergerstr. 59, Munich (referred to as “Licensor” below).
+Subject of this agreement are the conditions under which and the extent to which the end user (referred to as “Licensee” below) is granted the right to use the “Flyway Pro Edition Site” software (referred to as “software” below) provided by Boxfuse GmbH, Baubergerstr. 59, Munich (referred to as “Licensor” below).
 
 ## 2. Grant of rights
 The Licensee is granted the following rights to the software, but not to the source code of the software:
@@ -32,8 +32,7 @@ These rights are granted without any territorial limitation. The license is vali
 The rights are non-transferable. Sub-licensing is not allowed.
 
 ## 6. Support
-This license entitles the Licensee to technical support by e-mail for a period of one year, starting with the acquisition of the license.
-The Licensor agrees to provide the Licensee technical support at no charge. Support requests must be sent by e-mail to support@flywaydb.org and shall be answered by email within 2 business days in Germany.
+This license does not entitle the Licensee to technical support.
 
 ## 7. Mention right
 The Licensee grants the Licensor the right to mention the Licensee as a customer and user of the software, including the right to list the Licensee as a customer on Licensor’s Web site using both the Licensee’s company name and logo.

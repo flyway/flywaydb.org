@@ -1,5 +1,5 @@
-Flyway Enterprise License and Support Agreement
-===============================================
+Flyway Enterprise Edition License and Support Agreement
+=======================================================
 
 1. Subject
 ----------
