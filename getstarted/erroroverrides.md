@@ -3,7 +3,7 @@ layout: getstarted
 menu: erroroverrides
 subtitle: 'Tutorial: Error Overrides'
 ---
-# Tutorial: Error Handlers
+# Tutorial: Error Overrides
 {% include pro.html %}
 
 This tutorial assumes you have successfully completed the [**First Steps: Maven**](/getstarted/firststeps/maven)
