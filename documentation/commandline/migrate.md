@@ -332,23 +332,11 @@ Migrates the schema to the latest version. Flyway will create the schema history
         <td><i>Current database user</i></td>
         <td>The username that will be recorded in the schema history table as having applied the migration</td>
     </tr>
-    <tr id="errorHandlers">
-        <td>errorHandlers {% include pro.html %}</td>
-        <td>NO</td>
-        <td><i>none</i></td>
-        <td>Comma-sparated list of fully qualified class names of <a href="/documentation/errorhandlers">Error Handlers</a>
-         for errors and warnings that occur during
-         a migration. This can be used to customize Flyway's behavior by for example throwing another runtime exception,
-          outputting a warning or suppressing the error instead of throwing a FlywayException. ErrorHandlers are invoked
-           in order until one reports to have successfully handled the errors or warnings.
-           If none do, or if none are present, Flyway falls back to its default handling of errors and warnings.
-           </td>
-    </tr>
     <tr id="errorOverrides">
         <td>errorOverrides {% include pro.html %}</td>
         <td>NO</td>
         <td><i>none</i></td>
-        <td><p>Comma-sparated list of rules for the built-in error handler that lets you override specific SQL states and errors codes from error
+        <td><p>Comma-sparated list of rules for the built-in error handling that lets you override specific SQL states and errors codes from error
              to warning or from warning to error.</p>
              <p>Each error override has the following format: <code>STATE:12345:W</code>.
              It is a 5 character SQL state, a colon, the SQL error code, a colon and finally the desired
@@ -415,7 +403,6 @@ flyway.ignoreFutureMigrations=false
 flyway.cleanDisabled=false
 flyway.baselineOnMigrate=false
 flyway.installedBy=my-user
-flyway.errorHandlers=com.mycomp.MyCustomErrorHandler,com.mycomp.AnotherErrorHandler
 flyway.errorOverrides=99999:17110:E,42001:42001:W
 flyway.dryRunOutput=/my/sql/dryrun-outputfile.sql
 flyway.oracle.sqlplus=true
