@@ -163,31 +163,31 @@ Migrates the schema to the latest version. Flyway will create the schema history
         <td>UTF-8</td>
         <td>The encoding of Sql migrations</td>
     </tr>
-    <tr>
+    <tr id="placeholderReplacement">
         <td>placeholderReplacement</td>
         <td>NO</td>
         <td>true</td>
         <td>Whether placeholders should be replaced</td>
     </tr>
-    <tr>
+    <tr id="placeholders">
         <td>placeholders.<i>name</i></td>
         <td>NO</td>
         <td></td>
         <td>Placeholders to replace in Sql migrations</td>
     </tr>
-    <tr>
+    <tr id="placeholderPrefix">
         <td>placeholderPrefix</td>
         <td>NO</td>
         <td>${</td>
         <td>The prefix of every placeholder</td>
     </tr>
-    <tr>
+    <tr id="placeholderSuffix">
         <td>placeholderSuffix</td>
         <td>NO</td>
         <td>}</td>
         <td>The suffix of every placeholder</td>
     </tr>
-    <tr>
+    <tr id="resolvers">
         <td>resolvers</td>
         <td>NO</td>
         <td></td>
@@ -195,13 +195,13 @@ Migrates the schema to the latest version. Flyway will create the schema history
             <a href="/documentation/api/javadoc/org/flywaydb/core/api/resolver/MigrationResolver">MigrationResolver</a>
             implementations to be used in addition to the built-in ones for resolving Migrations to apply.</td>
     </tr>
-    <tr>
+    <tr id="skipDefaultResolvers">
         <td>skipDefaultResolvers</td>
         <td>NO</td>
         <td>false</td>
         <td>Whether default built-in resolvers (sql, jdbc and spring-jdbc) should be skipped. If true, only custom resolvers are used.</td>
     </tr>
-    <tr>
+    <tr id="callbacks">
         <td>callbacks</td>
         <td>NO</td>
         <td></td>
@@ -209,20 +209,20 @@ Migrates the schema to the latest version. Flyway will create the schema history
             <a href="/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback">Callback</a>
             implementations to use to hook into the Flyway lifecycle.</td>
     </tr>
-    <tr>
+    <tr id="skipDefaultCallbacks">
         <td>skipDefaultCallbacks</td>
         <td>NO</td>
         <td>false</td>
         <td>Whether default built-in callbacks (sql) should be skipped. If true, only custom callbacks are used.</td>
     </tr>
-    <tr>
+    <tr id="target">
         <td>target</td>
         <td>NO</td>
         <td><i>latest version</i></td>
         <td>The target version up to which Flyway should consider migrations. Migrations with a higher version number will be ignored. The special value <code>current</code> designates the current version of the schema.
         </td>
     </tr>
-    <tr>
+    <tr id="outOfOrder">
         <td>outOfOrder</td>
         <td>NO</td>
         <td>false</td>
@@ -231,7 +231,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
                 it will be applied too instead of being ignored.</p>
         </td>
     </tr>
-    <tr>
+    <tr id="validateOnMigrate">
         <td>validateOnMigrate</td>
         <td>NO</td>
         <td>true</td>
