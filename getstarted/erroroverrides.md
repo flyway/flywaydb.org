@@ -1,7 +1,7 @@
 ---
 layout: getstarted
-menu: errorhandlers
-subtitle: 'Tutorial: Error Handlers'
+menu: erroroverrides
+subtitle: 'Tutorial: Error Overrides'
 ---
 # Tutorial: Error Handlers
 {% include pro.html %}
@@ -9,15 +9,14 @@ subtitle: 'Tutorial: Error Handlers'
 This tutorial assumes you have successfully completed the [**First Steps: Maven**](/getstarted/firststeps/maven)
 tutorial. **If you have not done so, please do so first.** This tutorial picks up where that one left off.
 
-This brief tutorial will teach **how to use Error Handlers**. It will take you through the
-steps on how to create and use them.
+This brief tutorial will teach **how to use Error Overrides**. It will take you through the
+steps on how to configure and use them.
 
 ## Introduction
 
-**Error Handlers** are a great fit for situations where you may want to:
+**Error Overrides** are a great fit for situations where you may want to:
 - treat an error as a warning as you know your migration will handle it correctly later
 - treat a warning as an error as you prefer to fail fast to be able to fix the problem sooner
-- perform an additional action when a specific error or warning is being emitted by the database
 
 ## Reviewing the status
 
@@ -59,36 +58,16 @@ it will fail as expected:
 [ERROR] Line       : 1
 [ERROR] Statement  : broken sql statement</pre> 
 
-## Creating an Error Handler
+## Configuring an Error Override
 
-Now let's create an Error Handler that will trap invalid statements in our migrations and simply log a warning instead of failing with an error.
-
-Start by
-- adding the `flyway-core` dependency to our `pom.xml`
-- configuring the Java compiler for Java 8
-- configuring Flyway to use our new error handler
+Now let's configure an Error Override that will trap invalid statements in our migrations and simply log a warning 
+instead of failing with an error.
 
 ```xml
 <project xmlns="...">
     ...
-    <dependencies>
-        <dependency>
-            <groupId>org.flywaydb.pro</groupId>
-            <artifactId>flyway-core</artifactId>
-            <version>{{ site.flywayVersion }}</version>
-        </dependency>
-        ...
-    </dependencies>
     <build>
         <plugins>
-            <plugin>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.7.0</version>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                </configuration>
-            </plugin>
             <plugin>
                 <groupId>org.flywaydb</groupId>
                 <artifactId>flyway-maven-plugin</artifactId>
@@ -96,9 +75,9 @@ Start by
                 <configuration>
                     <url>jdbc:h2:file:./target/foobar</url>
                     <user>sa</user>
-                    <errorHandlers>
-                        <errorHandler>db.errorhandler.InvalidStatementErrorHandler</errorHandler>
-                    </errorHandlers>
+                    <errorOverrides>
+                        <errorOverride>42001:42001:W</errorOverride>
+                    </errorOverrides>
                 </configuration>
                 <dependencies>
                     <dependency>
@@ -113,36 +92,8 @@ Start by
 </project>
 ```
 
-Now create the migration directory `src/main/java/db/errorhandler`.
-    
-Followed by the error handler called `src/main/java/db/errorhandler/InvalidStatementErrorHandler.java`:
-```java
-package db.errorhandler;
-
-import org.flywaydb.core.api.errorhandler.Context;
-import org.flywaydb.core.api.errorhandler.Error;
-import org.flywaydb.core.api.errorhandler.ErrorHandler;
-import org.flywaydb.core.api.logging.Log;
-import org.flywaydb.core.api.logging.LogFactory;
-
-public class InvalidStatementErrorHandler implements ErrorHandler {
-    private static final Log LOG = LogFactory.getLog(InvalidStatementErrorHandler.class);
-
-    @Override
-    public boolean handle(Context context) {
-        for (Error error : context.getErrors()) {
-            if ("42001".equals(error.getState()) && error.getCode() == 42001) {
-                LOG.warn("Ignoring invalid statement");
-                return true;
-            }
-        }
-        return false;
-    }
-}
-```
-
-Finally compile the project, clean and migrate again using
-<pre class="console"><span>bar&gt;</span> mvn clean compile flyway:clean flyway:migrate</pre>
+Finally clean and migrate again using
+<pre class="console"><span>bar&gt;</span> mvn flyway:clean flyway:migrate</pre>
 
 And we now get:
 
@@ -153,7 +104,7 @@ And we now get:
 [INFO] Migrating schema "PUBLIC" to version 1 - Create person table
 [INFO] Migrating schema "PUBLIC" to version 2 - Add people
 [INFO] Migrating schema "PUBLIC" to version 3 - Invalid
-<strong>[WARNING] Ignoring invalid statement</strong>
+<strong>[WARNING] Syntax error in SQL statement (SQL state: 42001, error code: 42001)</strong>
 [INFO] Successfully applied 3 migrations to schema "PUBLIC" (execution time 00:00.039s)</pre>
 
 And as we were expecting we now had a successful execution with a warning instead of an error.
@@ -161,9 +112,8 @@ And as we were expecting we now had a successful execution with a warning instea
 ## Summary
 
 In this brief tutorial we saw how to
-- create Error Handlers
-- configure Flyway to load and execute them
+- configure Flyway to use error overrides
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/errorhandlers">Read the Error Handlers documentation <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/erroroverrides">Read the Error Overrides documentation <i class="fa fa-arrow-right"></i></a>
 </p>
