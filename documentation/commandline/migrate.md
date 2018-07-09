@@ -26,13 +26,13 @@ Migrates the schema to the latest version. Flyway will create the schema history
     </tr>
     </thead>
     <tbody>
-    <tr>
+    <tr id="url">
         <td>url</td>
         <td>YES</td>
         <td></td>
         <td>The jdbc url to use to connect to the database</td>
     </tr>
-    <tr>
+    <tr id="driver">
         <td>driver</td>
         <td>NO</td>
         <td><i>Auto-detected based on url</i></td>
@@ -40,19 +40,19 @@ Migrates the schema to the latest version. Flyway will create the schema history
             to connect to the database
         </td>
     </tr>
-    <tr>
+    <tr id="user">
         <td>user</td>
         <td>NO</td>
         <td></td>
         <td>The user to use to connect to the database</td>
     </tr>
-    <tr>
+    <tr id="password">
         <td>password</td>
         <td>NO</td>
         <td></td>
         <td>The password to use to connect to the database</td>
     </tr>
-    <tr>
+    <tr id="schemas">
         <td>schemas</td>
         <td>NO</td>
         <td><i>default schema of the connection</i></td>
@@ -61,7 +61,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
             the migration. It will also be the one containing the schema history table.
         </td>
     </tr>
-    <tr>
+    <tr id="table">
         <td>table</td>
         <td>NO</td>
         <td>flyway_schema_history</td>
