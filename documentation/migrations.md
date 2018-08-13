@@ -389,6 +389,7 @@ within a single transaction by setting the [`group`](/documentation/commandline/
 
 If Flyway detects that a specific statement cannot be run within a transaction due to technical limitations of your
 database, it won't run that migration within a transaction. Instead it will be marked as *non-transactional*.
+For JdbcMigrations, you can override the `executeInTransaction()` method to mark migrations as *non-transactional*.
 
 By default transactional and non-transactional statements cannot be mixed within a migration run. You can however allow
 this by setting the [`mixed`](/documentation/commandline/migrate#mixed) property to `true`.
