@@ -335,14 +335,15 @@ stored and validated for changes.
 ```java
 package db.migration;
 
-import org.flywaydb.core.api.migration.jdbc.JdbcMigration;
+import org.flywaydb.core.api.migration.jdbc.BaseJdbcMigration;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
 /**
  * Example of a Java-based migration.
  */
-public class V1_2__Another_user implements JdbcMigration {
+public class V1_2__Another_user extends BaseJdbcMigration {
+    @Override
     public void migrate(Connection connection) throws Exception {
         PreparedStatement statement =
             connection.prepareStatement("INSERT INTO test_user (name) VALUES ('Obelix')");
@@ -365,13 +366,14 @@ plain JDBC connection.
 ```java
 package db.migration;
 
-import org.flywaydb.core.api.migration.spring.SpringJdbcMigration;
+import org.flywaydb.core.api.migration.spring.BaseSpringJdbcMigration;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 /**
  * Example of a Spring Jdbc migration.
  */
-public class V1_2__Another_user implements SpringJdbcMigration {
+public class V1_2__Another_user extends BaseSpringJdbcMigration {
+    @Override
     public void migrate(JdbcTemplate jdbcTemplate) throws Exception {
         jdbcTemplate.execute("INSERT INTO test_user (name) VALUES ('Obelix')");
     }
