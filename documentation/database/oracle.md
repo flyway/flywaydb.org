@@ -94,6 +94,8 @@ This support is disabled by default and must be activated using the [`oracle.sql
 
 The following commands are fully supported and can be used just like any regular command within your SQL migrations:
 
+- `@` (only files, no URLs)
+- `@@` (only files, no URLs)
 - `DEFINE`
 - `EXECUTE`
 - `PROMPT`
@@ -105,10 +107,13 @@ The following commands are fully supported and can be used just like any regular
 - `SET NULL`
 - `SET SCAN`
 - `SET SERVEROUTPUT`
+- `SET SUFFIX`
+- `START` (only files, no URLs)
 - `SHOW CON_ID`
 - `SHOW EDITION`
 - `SHOW ERRORS`
 - `SHOW RELEASE`
+- `SHOW SUFFIX`
 - `SHOW USER`
 - `UNDEFINE`
 - `WHENEVER SQLERROR CONTINUE`
