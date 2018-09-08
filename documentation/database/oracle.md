@@ -104,6 +104,7 @@ The following commands are fully supported and can be used just like any regular
 - `SET ESCAPE`
 - `SET FLAGGER`
 - `SET HEADING`
+- `SET LINESIZE` (DBMS_OUTPUT only)
 - `SET NULL`
 - `SET SCAN`
 - `SET SERVEROUTPUT`
@@ -112,7 +113,9 @@ The following commands are fully supported and can be used just like any regular
 - `SHOW CON_ID`
 - `SHOW EDITION`
 - `SHOW ERRORS`
+- `SHOW LINESIZE`
 - `SHOW RELEASE`
+- `SHOW SERVEROUTPUT`
 - `SHOW SUFFIX`
 - `SHOW USER`
 - `UNDEFINE`
