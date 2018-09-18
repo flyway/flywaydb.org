@@ -35,12 +35,12 @@ subtitle: MySQL
 </tr>
 <tr>
 <th>Ships with Flyway Command-line</th>
-<td>No</td>
+<td>Yes</td>
 <td>Yes</td>
 </tr>
 <tr>
 <th>Maven Central coordinates</th>
-<td><code>mysql:mysql-connector-java:8.0.11</code></td>
+<td><code>mysql:mysql-connector-java:8.0.12</code></td>
 <td><code>org.mariadb.jdbc:mariadb-java-client:2.2.3</code></td>
 </tr>
 <tr>
