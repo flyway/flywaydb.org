@@ -253,6 +253,7 @@ Validation fails if
             development of older versions.
         </td>
     </tr>
+    {% include cfg/ignorePendingMigrations.html %}
     <tr>
         <td>ignoreFutureMigrations</td>
         <td>NO</td>
@@ -339,6 +340,7 @@ Validation fails if
     <cleanOnValidationError>false</cleanOnValidationError>
     <ignoreMissingMigrations>false</ignoreMissingMigrations>
     <ignoreIgnoredMigrations>false</ignoreIgnoredMigrations>
+    <ignorePendingMigrations>false</ignorePendingMigrations>
     <ignoreFutureMigrations>false</ignoreFutureMigrations>
     <skip>false</skip>
     <configFiles>

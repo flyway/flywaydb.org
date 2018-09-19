@@ -240,6 +240,7 @@ Validation fails if
             development of older versions.
         </td>
     </tr>
+    {% include cfg/ignorePendingMigrations.html %}
     <tr>
         <td>ignoreFutureMigrations</td>
         <td>NO</td>
@@ -288,6 +289,7 @@ flyway {
     cleanOnValidationError = false
     ignoreMissingMigrations = false
     ignoreIgnoredMigrations = false
+    ignorePendingMigrations = false
     ignoreFutureMigrations = false
 }
 ```

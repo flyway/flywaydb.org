@@ -219,6 +219,11 @@ The following environment variables are supported:
 			development of older versions.
         </td>
     </tr>
+    <tr id="FLYWAY_IGNORE_PENDING_MIGRATIONS">
+        <td>FLYWAY_IGNORE_PENDING_MIGRATIONS</td>
+        <td>Ignore pending migrations when reading the schema history table. These are migrations that are available but have not yet been applied. This can be useful for verifying that in-development migration changes don't contain any validation-breaking changes of migrations that have already been applied to a production environment, e.g. as part of a CI/CD process, without failing because of the existence of new migration versions.
+        </td>
+    </tr>
     <tr id="FLYWAY_IGNORE_FUTURE_MIGRATIONS">
         <td>FLYWAY_IGNORE_FUTURE_MIGRATIONS</td>
         <td>Ignore future migrations when reading the schema history table. These are migrations that were performed by a
@@ -278,6 +283,10 @@ The following environment variables are supported:
     <tr id="FLYWAY_ORACLE_SQLPLUS">
         <td>FLYWAY_ORACLE_SQLPLUS {% include pro.html %}</td>
         <td>Whether to Flyway's support for Oracle SQL*Plus commands should be activated.</td>
+    </tr>
+    <tr id="FLYWAY_LICENSE_KEY">
+        <td>FLYWAY_LICENSE_KEY {% include pro.html %}</td>
+        <td>Flyway's license key.</td>
     </tr>
     </tbody>
 </table>
