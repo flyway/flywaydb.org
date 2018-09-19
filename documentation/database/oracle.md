@@ -93,6 +93,8 @@ SQL*Plus commands.
 
 This support is disabled by default and must be activated using the [`oracle.sqlplus`](/documentation/commandline/migrate#oracle.sqlplus) flag.
 
+### Supported commands
+
 The following commands are fully supported and can be used just like any regular command within your SQL migrations:
 
 - `@` (only files, no URLs)
@@ -125,18 +127,23 @@ The following commands are fully supported and can be used just like any regular
 
 The short form of these commands is also supported. 
 
+### Output
+
 When `SET SERVEROUTPUT ON` is invoked output produced by `DBMS_OUTPUT.PUT_LINE` will be shown in the console.
+
+### Placeholders
 
 By default SQL\*Plus placeholder support is enabled. `&VAR`-style placeholders will automatically be replaced with the
 matching value supplied by either Flyway's regular placeholder configuration or a `DEFINE` command. 
 Use of these placeholders can be disabled in the usual way using the `SET DEFINE OFF` command. 
+
+### Unsupported commands
 
 All other SQL*Plus commands are gracefully ignored with a warning message.
 
 ## Limitations
 
 - SPATIAL EXTENSIONS: sdo_geom_metadata can only be cleaned for the user currently logged in
-- No support for executing external scripts referenced with @other.script, as supported by SQL*Plus
 
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/database/sqlserver">SQL Server <i class="fa fa-arrow-right"></i></a>
