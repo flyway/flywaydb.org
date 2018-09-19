@@ -7,8 +7,9 @@ subtitle: Oracle
 
 ## Supported Versions
 
+- `18.3`
 - `12.2`
-- `12.1`
+- `12.1` {% include enterprise.html %}
 - `11.2` {% include enterprise.html %}
 - `11.1` {% include enterprise.html %}
 - `10.2` {% include enterprise.html %}
