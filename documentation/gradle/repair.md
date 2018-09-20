@@ -51,6 +51,7 @@ Repairs the Flyway schema history table. This will perform the following actions
         <td></td>
         <td>The password to use to connect to the database</td>
     </tr>
+    {% include cfg/connectRetries.html %}
     <tr>
         <td>schemas</td>
         <td>NO</td>
@@ -191,6 +192,7 @@ flyway {
     url = 'jdbc:hsqldb:file:/db/flyway_sample;shutdown=true'
     user = 'SA'
     password = 'mySecretPwd'
+    connectRetries = 10
     schemas = ['schema1', 'schema2', 'schema3']
     table = 'schema_history'
     locations = ['classpath:migrations1', 'migrations2', 'filesystem:/sql-migrations']

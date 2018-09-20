@@ -45,6 +45,10 @@ The following environment variables are supported:
         <td>FLYWAY_PASSWORD</td>
         <td>The password to use to connect to the database</td>
     </tr>
+    <tr id="FLYWAY_CONNECT_RETRIES">
+        <td>FLYWAY_CONNECT_RETRIES</td>
+        <td>The maximum number of retries when attempting to connect to the database. After each failed attempt, Flyway will wait 1 second before attempting to connect again, up to the maximum number of times specified by connectRetries.</td>
+    </tr>
     <tr id="FLYWAY_SCHEMAS">
         <td>FLYWAY_SCHEMAS</td>
         <td>Comma-separated case-sensitive list of schemas managed by Flyway.<br/>

@@ -65,6 +65,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
         <td></td>
         <td>The password to use to connect to the database</td>
     </tr>
+    {% include cfg/connectRetries.html %}
     <tr>
         <td>schemas</td>
         <td>NO</td>
@@ -404,6 +405,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
     <url>jdbc:hsqldb:file:${project.build.directory}/db/flyway_sample;shutdown=true</url>
     <user>SA</user>
     <password>mySecretPwd</password>
+    <connectRetries>10</connectRetries>
     <schemas>
         <schema>schema1</schema>
         <schema>schema2</schema>

@@ -52,6 +52,7 @@ subtitle: 'Command-line: undo'
         <td></td>
         <td>The password to use to connect to the database</td>
     </tr>
+    {% include cfg/connectRetries.html %}
     <tr>
         <td>schemas</td>
         <td>NO</td>
@@ -276,10 +277,12 @@ subtitle: 'Command-line: undo'
 
 ## Sample configuration
 
-<pre class="prettyprint">flyway.driver=org.hsqldb.jdbcDriver
+```properties
+flyway.driver=org.hsqldb.jdbcDriver
 flyway.url=jdbc:hsqldb:file:/db/flyway_sample
 flyway.user=SA
 flyway.password=mySecretPwd
+flyway.connectRetries=10
 flyway.schemas=schema1,schema2,schema3
 flyway.table=schema_history
 flyway.locations=classpath:com.mycomp.migration,database/migrations,filesystem:/sql-migrations
@@ -306,7 +309,8 @@ flyway.ignoreIgnoredMigrations=false
 flyway.ignoreFutureMigrations=false
 flyway.installedBy=my-user
 flyway.errorOverrides=99999:17110:E,42001:42001:W
-flyway.dryRunOutput=/my/sql/dryrun-outputfile.sql</pre>
+flyway.dryRunOutput=/my/sql/dryrun-outputfile.sql
+```
 
 ## Sample output
 

@@ -50,6 +50,7 @@ subtitle: 'gradle flywayUndo'
         <td></td>
         <td>The password to use to connect to the database</td>
     </tr>
+    {% include cfg/connectRetries.html %}
     <tr>
         <td>schemas</td>
         <td>NO</td>
@@ -263,11 +264,13 @@ subtitle: 'gradle flywayUndo'
 
 ## Sample configuration
 
-<pre class="prettyprint">flyway {
+```groovy
+flyway {
     driver = 'org.hsqldb.jdbcDriver'
     url = 'jdbc:hsqldb:file:/db/flyway_sample;shutdown=true'
     user = 'SA'
     password = 'mySecretPwd'
+    connectRetries = 10
     schemas = ['schema1', 'schema2', 'schema3']
     table = 'schema_history'
     locations = ['classpath:migrations', 'classpath:db/pkg', 'filesystem:/sql-migrations']
@@ -296,7 +299,8 @@ subtitle: 'gradle flywayUndo'
     installedBy = "my-user"
     errorOverrides = ['99999:17110:E', '42001:42001:W']
     dryRunOutput = '/my/sql/dryrun-outputfile.sql'
-}</pre>
+}
+```
 
 ## Sample output
 <pre class="console">&gt; gradle flywayMigrate -i

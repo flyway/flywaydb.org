@@ -65,6 +65,7 @@ The schemas are cleaned in the order specified by the <code>schemas</code> prope
         <td></td>
         <td>The password to use to connect to the database</td>
     </tr>
+    {% include cfg/connectRetries.html %}
     <tr>
         <td>schemas</td>
         <td>NO</td>
@@ -125,6 +126,7 @@ The schemas are cleaned in the order specified by the <code>schemas</code> prope
     <url>jdbc:hsqldb:file:${project.build.directory}/db/flyway_sample;shutdown=true</url>
     <user>SA</user>
     <password>mySecretPwd</password>
+    <connectRetries>10</connectRetries>
     <schemas>
         <schema>schema1</schema>
         <schema>schema2</schema>
