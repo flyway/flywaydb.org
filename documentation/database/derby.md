@@ -15,16 +15,6 @@ subtitle: Derby
 ## Driver
 
 <table class="table">
-<thead>
-<tr>
-<th></th>
-<th>Derby</th>
-</tr>
-</thead>
-<tr>
-<th>Supported versions</th>
-<td><code>10.11</code> and later</td>
-</tr>
 <tr>
 <th>URL format</th>
 <td><code>jdbc:derby:<i>subsubprotocol</i>:<i>databaseName</i></code></td>
@@ -36,6 +26,10 @@ subtitle: Derby
 <tr>
 <th>Maven Central coordinates</th>
 <td><code>org.apache.derby:derbyclient:10.14.1.0</code></td>
+</tr>
+<tr>
+<th>Supported versions</th>
+<td><code>10.11</code> and later</td>
 </tr>
 <tr>
 <th>Default Java class</th>

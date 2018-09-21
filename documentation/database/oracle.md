@@ -20,16 +20,6 @@ All editions are supported, including XE.
 ## Driver
 
 <table class="table">
-<thead>
-<tr>
-<th></th>
-<th>Oracle</th>
-</tr>
-</thead>
-<tr>
-<th>Supported versions</th>
-<td><code>11.2</code> and later</td>
-</tr>
 <tr>
 <th>URL format</th>
 <td><code>jdbc:oracle:thin:@//<i>host</i>:<i>port</i>/<i>service</i></code><br>
@@ -42,7 +32,13 @@ All editions are supported, including XE.
 </tr>
 <tr>
 <th>Download</th>
-<td>Follow instructuctions on <a href="http://www.oracle.com/technetwork/database/features/jdbc/index.html">oracle.com</a></td>
+<td>Download the latest version of both <code>ojdbc8.jar</code> and <code>orai18n.jar</code> from
+ <a href="http://www.oracle.com/technetwork/database/features/jdbc/index.html">oracle.com</a> 
+ and place them in Flyway's <code>drivers</code> directory</td>
+</tr>
+<tr>
+<th>Supported versions</th>
+<td><code>11.2</code> and later</td>
 </tr>
 <tr>
 <th>Default Java class</th>

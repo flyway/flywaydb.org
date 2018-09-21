@@ -16,16 +16,6 @@ subtitle: HSQLDB
 ## Driver
 
 <table class="table">
-<thead>
-<tr>
-<th></th>
-<th>HSQLDB</th>
-</tr>
-</thead>
-<tr>
-<th>Supported versions</th>
-<td><code>1.8</code> and later</td>
-</tr>
 <tr>
 <th>URL format</th>
 <td><code>jdbc:hsqldb:file:<i>file</i></code></td>
@@ -37,6 +27,10 @@ subtitle: HSQLDB
 <tr>
 <th>Maven Central coordinates</th>
 <td><code>org.hsqldb:hsqldb:1.4.196</code></td>
+</tr>
+<tr>
+<th>Supported versions</th>
+<td><code>1.8</code> and later</td>
 </tr>
 <tr>
 <th>Default Java class</th>

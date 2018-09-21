@@ -14,40 +14,28 @@ subtitle: SQL Server
 - `2008 R2` {% include enterprise.html %}
 - `2008` {% include enterprise.html %}
 
-## Drivers
+## Driver
 
 <table class="table">
-<thead>
-<tr>
-<th></th>
-<th>Microsoft (recommended)</th>
-<th>jTDS</th>
-</tr>
-</thead>
-<tr>
-<th>Supported versions</th>
-<td><code>4.0</code> and later</td>
-<td><code>1.3.1</code> and later</td>
-</tr>
 <tr>
 <th>URL format</th>
 <td><code>jdbc:sqlserver://<i>host</i>:<i>port</i>;databaseName=<i>database</i></code></td>
-<td><code>jdbc:jtds:sqlserver://<i>host</i>:<i>port</i>/<i>database</i></code></td>
 </tr>
 <tr>
 <th>Ships with Flyway Command-line</th>
-<td>Yes</td>
 <td>Yes</td>
 </tr>
 <tr>
 <th>Maven Central coordinates</th>
 <td><code>com.microsoft.sqlserver:mssql-jdbc:6.2.2.jre8</code></td>
-<td><code>net.sourceforge.jtds:jtds:1.3.1</code></td>
+</tr>
+<tr>
+<th>Supported versions</th>
+<td><code>4.0</code> and later</td>
 </tr>
 <tr>
 <th>Default Java class</th>
 <td><code>com.microsoft.sqlserver.jdbc.SQLServerDriver</code></td>
-<td><code>net.sourceforge.jtds.jdbc.Driver</code></td>
 </tr>
 </table>
 
@@ -64,7 +52,8 @@ subtitle: SQL Server
 
 ### Example
 
-<pre class="prettyprint">/* Single line comment */
+```sql
+/* Single line comment */
 CREATE TABLE Customers (
 CustomerId smallint identity(1,1),
 Name nvarchar(255),
@@ -116,7 +105,8 @@ LEFT JOIN (
 GO
 
 -- Placeholder
-INSERT INTO ${tableName} (name) VALUES (&#x27;Mr. T&#x27;);</pre>
+INSERT INTO ${tableName} (name) VALUES ('Mr. T');
+```
 
 ## Limitations
 

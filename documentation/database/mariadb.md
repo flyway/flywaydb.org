@@ -19,16 +19,6 @@ subtitle: MariaDB
 ## Driver
 
 <table class="table">
-<thead>
-<tr>
-<th></th>
-<th>MariaDB</th>
-</tr>
-</thead>
-<tr>
-<th>Supported versions</th>
-<td><code>2.0.0</code> and later</td>
-</tr>
 <tr>
 <th>URL format</th>
 <td><code>jdbc:mariadb://<i>host</i>:<i>port</i>/<i>database</i></code></td>
@@ -40,6 +30,10 @@ subtitle: MariaDB
 <tr>
 <th>Maven Central coordinates</th>
 <td><code>org.mariadb.jdbc:mariadb-java-client:2.2.4</code></td>
+</tr>
+<tr>
+<th>Supported versions</th>
+<td><code>2.0.0</code> and later</td>
 </tr>
 <tr>
 <th>Default Java class</th>

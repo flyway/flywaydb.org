@@ -24,11 +24,6 @@ subtitle: MySQL
 </tr>
 </thead>
 <tr>
-<th>Supported versions</th>
-<td><code>5.1.44</code> and later</td>
-<td><code>2.0.0</code> and later</td>
-</tr>
-<tr>
 <th>URL format</th>
 <td><code>jdbc:mysql://<i>host</i>:<i>port</i>/<i>database</i></code></td>
 <td><code>jdbc:mysql://<i>host</i>:<i>port</i>/<i>database</i></code></td>
@@ -42,6 +37,11 @@ subtitle: MySQL
 <th>Maven Central coordinates</th>
 <td><code>mysql:mysql-connector-java:8.0.12</code></td>
 <td><code>org.mariadb.jdbc:mariadb-java-client:2.2.3</code></td>
+</tr>
+<tr>
+<th>Supported versions</th>
+<td><code>5.1.44</code> and later</td>
+<td><code>2.0.0</code> and later</td>
 </tr>
 <tr>
 <th>Default Java class</th>
