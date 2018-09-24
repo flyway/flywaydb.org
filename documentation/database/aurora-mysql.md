@@ -1,52 +1,37 @@
 ---
 layout: documentation
-menu: mysql
-subtitle: MySQL
+menu: aurora-mysql
+subtitle: Aurora MySQL
 ---
-# MySQL
+# Aurora MySQL
 
 ## Supported Versions
 
-- `8.0`
 - `5.7`
 - `5.6`
-- `5.5`
-- `5.1` {% include enterprise.html %}
 
 ## Drivers
 
 <table class="table">
-<thead>
-<tr>
-<th></th>
-<th>MySQL (for MySQL 5.5 and newer)</th>
-<th>MariaDB (for MySQL 5.1)</th>
-</tr>
-</thead>
 <tr>
 <th>URL format</th>
-<td><code>jdbc:mysql://<i>host</i>:<i>port</i>/<i>database</i></code></td>
-<td><code>jdbc:mysql://<i>host</i>:<i>port</i>/<i>database</i></code></td>
+<td><code>jdbc:mysql://<i>instance</i>.<i>region</i>.rds.amazonaws.com:<i>port</i>/<i>database</i></code></td>
 </tr>
 <tr>
 <th>Ships with Flyway Command-line</th>
-<td>Yes</td>
 <td>Yes</td>
 </tr>
 <tr>
 <th>Maven Central coordinates</th>
 <td><code>mysql:mysql-connector-java:8.0.12</code></td>
-<td><code>org.mariadb.jdbc:mariadb-java-client:2.2.3</code></td>
 </tr>
 <tr>
 <th>Supported versions</th>
-<td><code>5.1.44</code> and later</td>
-<td><code>2.0.0</code> and later</td>
+<td><code>8.0.12</code> and later</td>
 </tr>
 <tr>
 <th>Default Java class</th>
 <td><code>com.mysql.jdbc.Driver</code></td>
-<td><code>org.mariadb.jdbc.Driver</code></td>
 </tr>
 </table>
 
@@ -101,5 +86,5 @@ INSERT INTO ${tableName} (name) VALUES (&#x27;Mr. T&#x27;);</pre>
         Example: /*!50003 CREATE*/ /*!50017 DEFINER=`...`*/ /*!50003 TRIGGER EntityBeforeInsert ...
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/database/aurora-mysql">Aurora MySQL <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/database/mariadb">MariaDB <i class="fa fa-arrow-right"></i></a>
 </p>

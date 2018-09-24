@@ -1,27 +1,20 @@
 ---
 layout: documentation
-menu: postgresql
-subtitle: PostgreSQL
+menu: aurora-postgresql
+subtitle: Aurora PostgreSQL
 ---
 # PostgreSQL
 
 ## Supported Versions
 
-- `10`
 - `9.6`
-- `9.5`
-- `9.4`
-- `9.3`
-- `9.2` {% include enterprise.html %}
-- `9.1` {% include enterprise.html %}
-- `9.0` {% include enterprise.html %}
 
 ## Driver
 
 <table class="table">
 <tr>
 <th>URL format</th>
-<td><code>jdbc:postgresql://<i>host</i>:<i>port</i>/<i>database</i></code></td>
+<td><code>jdbc:postgresql://<i>instance</i>.<i>region</i>.rds.amazonaws.com:<i>port</i>/<i>database</i></code></td>
 </tr>
 <tr>
 <th>Ships with Flyway Command-line</th>
@@ -100,5 +93,5 @@ COPY copy_test (c1, c2, c3) FROM stdin;
 - No support for cleaning referenced large objects in `pg_largeobject` ([Issue 1934](https://github.com/flyway/flyway/issues/1934))
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/database/aurora-postgresql">Aurora PostgreSQL <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/database/redshift">Redshift <i class="fa fa-arrow-right"></i></a>
 </p>
