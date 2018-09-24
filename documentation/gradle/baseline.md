@@ -52,6 +52,7 @@ Baselines an existing database, excluding all migrations up to and including bas
         <td>The password to use to connect to the database</td>
     </tr>
     {% include cfg/connectRetries.html %}
+    {% include cfg/initSql.html %}
     <tr>
         <td>schemas</td>
         <td>NO</td>
@@ -111,6 +112,7 @@ flyway {
     user = 'SA'
     password = 'mySecretPwd'
     connectRetries = 10
+    initSql = 'SET ROLE \'myuser\''
     schemas = ['schema1', 'schema2', 'schema3']
     table = 'schema_history'
     callbacks = ['com.mycompany.proj.CustomCallback', 'com.mycompany.proj.AnotherCallback']

@@ -53,6 +53,7 @@ The schemas are cleaned in the order specified by the `schemas` property.
         <td>The password to use to connect to the database</td>
     </tr>
     {% include cfg/connectRetries.html %}
+    {% include cfg/initSql.html %}
     <tr>
         <td>schemas</td>
         <td>NO</td>
@@ -99,6 +100,7 @@ flyway.url=jdbc:hsqldb:file:/db/flyway_sample
 flyway.user=SA
 flyway.password=mySecretPwd
 flyway.connectRetries=10
+flyway.initSql=SET ROLE 'myuser'
 flyway.schemas=schema1,schema2,schema3
 flyway.callbacks=com.mycomp.project.CustomCallback,com.mycomp.project.AnotherCallback
 flyway.skipDefaultCallbacks=false

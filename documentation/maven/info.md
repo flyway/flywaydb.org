@@ -61,6 +61,7 @@ Prints the details and status information about all the migrations.
         <td>The password to use to connect to the database</td>
     </tr>
     {% include cfg/connectRetries.html %}
+    {% include cfg/initSql.html %}
     <tr>
         <td>schemas</td>
         <td>NO</td>
@@ -238,6 +239,7 @@ Prints the details and status information about all the migrations.
     <user>SA</user>
     <password>mySecretPwd</password>
     <connectRetries>10</connectRetries>
+    <initSql>SET ROLE 'myuser'</initSql>
     <schemas>
         <schema>schema1</schema>
         <schema>schema2</schema>

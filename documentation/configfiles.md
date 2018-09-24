@@ -34,7 +34,7 @@ These are the settings supported via config files:
 # * = JDBC driver must be downloaded and installed in /drivers manually
 # ** = TNS_ADMIN environment variable must point to the directory of where tnsnames.ora resides
 # Aurora MySQL      : jdbc:mysql://<instance>.<region>.rds.amazonaws.com:<port>/<database>?<key1>=<value1>&<key2>=<value2>...
-# Aurora PostgreSQL : jdbc:mysql://<instance>.<region>.rds.amazonaws.com:<port>/<database>?<key1>=<value1>&<key2>=<value2>...
+# Aurora PostgreSQL : jdbc:postgresql://<instance>.<region>.rds.amazonaws.com:<port>/<database>?<key1>=<value1>&<key2>=<value2>...
 # CockroachDB       : jdbc:postgresql://<host>:<port>/<database>?<key1>=<value1>&<key2>=<value2>...
 # DB2*              : jdbc:db2://<host>:<port>/<database>
 # Derby             : jdbc:derby:<subsubprotocol>:<database><;attribute=value>
@@ -66,6 +66,9 @@ flyway.url=
 # Flyway will wait 1 second before attempting to connect again, up to the maximum number of times specified
 # by connectRetries. (default: 0)
 # flyway.connectRetries=
+
+# The SQL statements to run to initialize a new database connection immediately after opening it. (default: none)
+# flyway.initSql=
 
 # Comma-separated list of schemas managed by Flyway. These schema names are case-sensitive.
 # (default: The default schema for the datasource connection)

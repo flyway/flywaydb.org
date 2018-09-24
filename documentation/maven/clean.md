@@ -66,6 +66,7 @@ The schemas are cleaned in the order specified by the <code>schemas</code> prope
         <td>The password to use to connect to the database</td>
     </tr>
     {% include cfg/connectRetries.html %}
+    {% include cfg/initSql.html %}
     <tr>
         <td>schemas</td>
         <td>NO</td>
@@ -127,6 +128,7 @@ The schemas are cleaned in the order specified by the <code>schemas</code> prope
     <user>SA</user>
     <password>mySecretPwd</password>
     <connectRetries>10</connectRetries>
+    <initSql>SET ROLE 'myuser'</initSql>
     <schemas>
         <schema>schema1</schema>
         <schema>schema2</schema>
