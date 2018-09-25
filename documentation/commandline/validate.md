@@ -77,15 +77,7 @@ Validation fails if
             the schema history table is placed in the first schema of the list.
         </td>
     </tr>
-    <tr id="locations">
-        <td>locations</td>
-        <td>NO</td>
-        <td><nobr>filesystem:<i>&lt;install-dir&gt;</i>/sql</nobr></td>
-        <td>Comma-separated list of locations to scan recursively for migrations. The location type is determined by its prefix.<br/>
-            Unprefixed locations or locations starting with <code>classpath:</code> point to a package on the classpath and may contain both sql and java-based migrations.<br/>
-            Locations starting with <code>filesystem:</code> point to a directory on the filesystem and may only contain sql migrations.
-        </td>
-    </tr>
+    {% include cfg/locations-commandline.html %}
     <tr id="jarDirs">
         <td>jarDirs</td>
         <td>NO</td>

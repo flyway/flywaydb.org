@@ -71,8 +71,10 @@ The following environment variables are supported:
     <tr id="FLYWAY_LOCATIONS">
         <td>FLYWAY_LOCATIONS</td>
         <td>Comma-separated list of locations to scan recursively for migrations. The location type is determined by its prefix.<br/>
-            Unprefixed locations or locations starting with <code>classpath:</code> point to a package on the classpath and may contain both sql and java-based migrations.<br/>
-            Locations starting with <code>filesystem:</code> point to a directory on the filesystem and may only contain sql migrations.
+            Unprefixed locations or locations starting with <code>classpath:</code> point to a package on the
+            classpath and may contain both SQL and Java-based migrations.<br/>
+            Locations starting with <code>filesystem:</code> point to a directory on the filesystem, may only
+            contain SQL migrations and are only scanned recursively down non-hidden directories.
         </td>
     </tr>
     <tr id="FLYWAY_JAR_DIRS">
