@@ -227,8 +227,7 @@ Flyway is super easy to use programmatically:
 import org.flywaydb.core.Flyway;
 
 ...
-Flyway flyway = new Flyway();
-flyway.setDataSource(url, user, password);
+Flyway flyway = Flyway.configure().dataSource(url, user, password).load();
 flyway.migrate();
 
 // Start the rest of the application (incl. Hibernate)
@@ -253,7 +252,7 @@ dependencies {
     // ...
 
     compile 'org.flywaydb:flyway-core:{{ site.flywayVersion }}'
-    compile 'org.sqldroid:sqldroid:1.0.3'
+    compile 'org.sqldroid:sqldroid:1.1.0-rc1'
 }
 ```
 
@@ -283,8 +282,7 @@ import org.sqldroid.DroidDataSource;
 ...
 DroidDataSource dataSource = new DroidDataSource(getPackageName(), "...");
 ContextHolder.setContext(this);
-Flyway flyway = new Flyway();
-flyway.setDataSource(dataSource);
+Flyway flyway = Flyway.configure().dataSource(dataSource).load();
 flyway.migrate();
 ```
 
@@ -294,9 +292,13 @@ As an alternative to the programmatic configuration, here is how you can configu
 Spring application using XML bean configuration:
 
 ```xml
-<bean id="flyway" class="org.flywaydb.core.Flyway" init-method="migrate">
+<bean id="flywayConfig" class="org.flywaydb.core.configuration.ClassicConfiguration">
     <property name="dataSource" ref="..."/>
     ...
+</bean>
+
+<bean id="flyway" class="org.flywaydb.core.Flyway" init-method="migrate">
+    <constructor-arg ref="flywayConfig"/>
 </bean>
 
 <!-- The rest of the application (incl. Hibernate) -->
