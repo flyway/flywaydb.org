@@ -13,6 +13,7 @@ be migrated to a state the rest of the code can work with.
 
 ## Supported Java Versions
 
+- `Java 11`
 - `Java 10`
 - `Java 9`
 - `Java 8`
