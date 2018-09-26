@@ -29,7 +29,7 @@ subtitle: PostgreSQL
 </tr>
 <tr>
 <th>Maven Central coordinates</th>
-<td><code>org.postgresql:postgresql:42.1.4</code></td>
+<td><code>org.postgresql:postgresql:42.2.5</code></td>
 </tr>
 <tr>
 <th>Supported versions</th>

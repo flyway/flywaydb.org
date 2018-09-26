@@ -27,7 +27,7 @@ subtitle: SQL Server
 </tr>
 <tr>
 <th>Maven Central coordinates</th>
-<td><code>com.microsoft.sqlserver:mssql-jdbc:6.2.2.jre8</code></td>
+<td><code>com.microsoft.sqlserver:mssql-jdbc:7.0.0.jre8</code></td>
 </tr>
 <tr>
 <th>Supported versions</th>

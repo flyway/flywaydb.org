@@ -36,7 +36,7 @@ subtitle: MySQL
 <tr>
 <th>Maven Central coordinates</th>
 <td><code>mysql:mysql-connector-java:8.0.12</code></td>
-<td><code>org.mariadb.jdbc:mariadb-java-client:2.2.3</code></td>
+<td><code>org.mariadb.jdbc:mariadb-java-client:2.3.0</code></td>
 </tr>
 <tr>
 <th>Supported versions</th>

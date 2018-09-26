@@ -26,7 +26,7 @@ subtitle: HSQLDB
 </tr>
 <tr>
 <th>Maven Central coordinates</th>
-<td><code>org.hsqldb:hsqldb:1.4.196</code></td>
+<td><code>org.hsqldb:hsqldb:2.4.1</code></td>
 </tr>
 <tr>
 <th>Supported versions</th>
