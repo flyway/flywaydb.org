@@ -1,27 +1,20 @@
 ---
 layout: documentation
-menu: mariadb
-subtitle: MariaDB
+menu: xtradb
+subtitle: Percona XtraDB Cluster
 ---
-# MariaDB
+# Percona XtraDB Cluster
 
 ## Supported Versions
 
-- `10.2`
-- `10.1`
-- `10.0`
-- `5.5`
-- `5.3` {% include enterprise.html %}
-- `5.2` {% include enterprise.html %}
-- `5.1` {% include enterprise.html %}
+- `5.7`
 
-
-## Driver
+## Drivers
 
 <table class="table">
 <tr>
 <th>URL format</th>
-<td><code>jdbc:mariadb://<i>host</i>:<i>port</i>/<i>database</i></code></td>
+<td><code>jdbc:mysql://<i>host</i>:<i>port</i>/<i>database</i></code></td>
 </tr>
 <tr>
 <th>Ships with Flyway Command-line</th>
@@ -29,15 +22,15 @@ subtitle: MariaDB
 </tr>
 <tr>
 <th>Maven Central coordinates</th>
-<td><code>org.mariadb.jdbc:mariadb-java-client:2.2.4</code></td>
+<td><code>mysql:mysql-connector-java:8.0.12</code></td>
 </tr>
 <tr>
 <th>Supported versions</th>
-<td><code>2.0.0</code> and later</td>
+<td><code>8.0.12</code> and later</td>
 </tr>
 <tr>
 <th>Default Java class</th>
-<td><code>org.mariadb.jdbc.Driver</code></td>
+<td><code>com.mysql.jdbc.Driver</code></td>
 </tr>
 </table>
 
@@ -53,7 +46,7 @@ subtitle: MariaDB
 - DDL exported by mysqldump can be used unchanged in a Flyway migration.
 - Any MySQL SQL script executed by Flyway, can be executed by the MySQL command-line tool and other
         MySQL-compatible tools (after the placeholders have been replaced).
-
+        
 ### Example
 
 <pre class="prettyprint">/* Single line comment */
@@ -92,5 +85,5 @@ INSERT INTO ${tableName} (name) VALUES (&#x27;Mr. T&#x27;);</pre>
         Example: /*!50003 CREATE*/ /*!50017 DEFINER=`...`*/ /*!50003 TRIGGER EntityBeforeInsert ...
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/database/xtradb">Percona XtraDB Cluster <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/database/postgresql">PostgreSQL <i class="fa fa-arrow-right"></i></a>
 </p>
