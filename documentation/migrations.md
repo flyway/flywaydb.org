@@ -335,14 +335,15 @@ stored and validated for changes.
 ```java
 package db.migration;
 
-import org.flywaydb.core.api.migration.jdbc.JdbcMigration;
+import org.flywaydb.core.api.migration.jdbc.BaseJdbcMigration;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
 /**
  * Example of a Java-based migration.
  */
-public class V1_2__Another_user implements JdbcMigration {
+public class V1_2__Another_user extends BaseJdbcMigration {
+    @Override
     public void migrate(Connection connection) throws Exception {
         PreparedStatement statement =
             connection.prepareStatement("INSERT INTO test_user (name) VALUES ('Obelix')");
@@ -365,13 +366,14 @@ plain JDBC connection.
 ```java
 package db.migration;
 
-import org.flywaydb.core.api.migration.spring.SpringJdbcMigration;
+import org.flywaydb.core.api.migration.spring.BaseSpringJdbcMigration;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 /**
  * Example of a Spring Jdbc migration.
  */
-public class V1_2__Another_user implements SpringJdbcMigration {
+public class V1_2__Another_user extends BaseSpringJdbcMigration {
+    @Override
     public void migrate(JdbcTemplate jdbcTemplate) throws Exception {
         jdbcTemplate.execute("INSERT INTO test_user (name) VALUES ('Obelix')");
     }
@@ -387,6 +389,7 @@ within a single transaction by setting the [`group`](/documentation/commandline/
 
 If Flyway detects that a specific statement cannot be run within a transaction due to technical limitations of your
 database, it won't run that migration within a transaction. Instead it will be marked as *non-transactional*.
+For JdbcMigrations, you can override the `executeInTransaction()` method to mark migrations as *non-transactional*.
 
 By default transactional and non-transactional statements cannot be mixed within a migration run. You can however allow
 this by setting the [`mixed`](/documentation/commandline/migrate#mixed) property to `true`.
