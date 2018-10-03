@@ -212,7 +212,7 @@ New SQL-based migrations are **discovered automatically** through filesystem and
 Once you have configured the [`locations`](/documentation/commandline/migrate#locations) you want to use, Flyway will
 automatically pick up any new SQL migrations as long as they conform to the configured *naming convention*.
 
-This scanning is recursive. All migrations in directories below the specified ones are also picked up.
+This scanning is recursive. All migrations in non-hidden directories below the specified ones are also picked up.
 
 ### Syntax
 
