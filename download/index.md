@@ -26,7 +26,7 @@ Choose your Flyway edition based on the features and support level you require
 <tr><td>Safe for multiple nodes in parallel</td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td>Native SQL dialect support (PL/SQL, SQLPL, T-SQL, ...)</td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td>Latest database versions compatibility</td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
-<tr><td>Java 8 / 9 / 10 compatibility</td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
+<tr><td>Java 8 / 9 / 10 / 11 compatibility</td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td>Oracle SQL*Plus compatibility</td><td></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td>Custom error handling</td><td></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td>Statement-level callbacks</td><td></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
