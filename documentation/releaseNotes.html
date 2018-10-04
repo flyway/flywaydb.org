@@ -35,16 +35,24 @@ subtitle: Release Notes
         {% include issue.html id="2157" title="Command-line: Update PostgreSQL JDBC driver to 42.2.5" %}
         {% include issue.html id="2158" title="Command-line: Update SQLite to 3.23.1" %}
         {% include issue.html id="2163" title="DB2: Enable human-readable error messages" %}
+        {% include issue.html id="2164" title="Non-transactional Java-based migrations support" %}
     </ul>
 
     <h3>Incompatible Changes</h3>
     <ul>
         {% include issue.html id="1807" title="Disable recursive filesystem scanning down hidden directories" %}
+        {% include issue.html id="2165" title="<code>MigrationResolver.resolveMigrations()</code> now takes a Context parameter" %}
+        {% include issue.html id="2165" title="<code>MigrationExecutor</code> has been moved to the new <code>org.flywaydb.core.api.executor</code> package" %}
+        {% include issue.html id="2165" title="<code>MigrationExecutor.executeInTransaction()</code> has been renamed to <code>canExecuteInTransaction()</code>" %}
+        {% include issue.html id="2165" title="<code>MigrationExecutor.execute()</code> now takes a Context parameter" %}
     </ul>
 
     <h3>Changes</h3>
     <ul>
         {% include issue.html id="2147" title="Oracle 12.1 support is now Flyway Enterprise Edition-only" enterprise=true %}
+        {% include issue.html id="2164" title="<code>JdbcMigration</code> and <code>SpringJdbcMigration</code> have been deprecated in favor of <code>JavaMigration</code>" %}
+        {% include issue.html id="2164" title="<code>BaseJdbcMigration</code> and <code>BaseSpringJdbcMigration</code> have been deprecated in favor of <code>BaseJavaMigration</code>" %}
+        {% include issue.html id="2164" title="<code>MigrationInfoProvider</code>, <code>MigrationChecksumProvider</code> and <code>ConfigurationAware</code> have been deprecated in favor of <code>JavaMigration</code>" %}
     </ul>
 
     <h3>Bug fixes</h3>
