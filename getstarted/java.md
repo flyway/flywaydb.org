@@ -96,15 +96,15 @@ Followed by a first migration called `src/main/java/db/migration/V3__Anonymize.j
 ```java
 package db.migration;
 
-import org.flywaydb.core.api.migration.jdbc.JdbcMigration;
+import org.flywaydb.core.api.migration.BaseJavaMigration;
+import org.flywaydb.core.api.migration.Context;
 
-import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-public class V3__Anonymize implements JdbcMigration {
-    public void migrate(Connection connection) throws Exception {
-        try (Statement select = connection.createStatement()) {
+public class V3__Anonymize extends BaseJavaMigration {
+    public void migrate(Context context) throws Exception {
+        try (Statement select = context.getConnection().createStatement()) {
             try (ResultSet rows = select.executeQuery("SELECT id FROM person ORDER BY id")) {
                 while (rows.next()) {
                     int id = rows.getInt(1);

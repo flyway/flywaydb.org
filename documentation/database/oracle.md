@@ -7,8 +7,9 @@ subtitle: Oracle
 
 ## Supported Versions
 
+- `18.3`
 - `12.2`
-- `12.1`
+- `12.1` {% include enterprise.html %}
 - `11.2` {% include enterprise.html %}
 - `11.1` {% include enterprise.html %}
 - `10.2` {% include enterprise.html %}
@@ -19,16 +20,6 @@ All editions are supported, including XE.
 ## Driver
 
 <table class="table">
-<thead>
-<tr>
-<th></th>
-<th>Oracle</th>
-</tr>
-</thead>
-<tr>
-<th>Supported versions</th>
-<td><code>11.2</code> and later</td>
-</tr>
 <tr>
 <th>URL format</th>
 <td><code>jdbc:oracle:thin:@//<i>host</i>:<i>port</i>/<i>service</i></code><br>
@@ -41,7 +32,13 @@ All editions are supported, including XE.
 </tr>
 <tr>
 <th>Download</th>
-<td>Follow instructuctions on <a href="http://www.oracle.com/technetwork/database/features/jdbc/index.html">oracle.com</a></td>
+<td>Download the latest version of both <code>ojdbc8.jar</code> and <code>orai18n.jar</code> from
+ <a href="http://www.oracle.com/technetwork/database/features/jdbc/index.html">oracle.com</a> 
+ and place them in Flyway's <code>drivers</code> directory</td>
+</tr>
+<tr>
+<th>Supported versions</th>
+<td><code>11.2</code> and later</td>
 </tr>
 <tr>
 <th>Default Java class</th>
@@ -92,8 +89,12 @@ SQL*Plus commands.
 
 This support is disabled by default and must be activated using the [`oracle.sqlplus`](/documentation/commandline/migrate#oracle.sqlplus) flag.
 
+### Supported commands
+
 The following commands are fully supported and can be used just like any regular command within your SQL migrations:
 
+- `@` (only files, no URLs)
+- `@@` (only files, no URLs)
 - `DEFINE`
 - `EXECUTE`
 - `PROMPT`
@@ -102,32 +103,43 @@ The following commands are fully supported and can be used just like any regular
 - `SET ESCAPE`
 - `SET FLAGGER`
 - `SET HEADING`
+- `SET LINESIZE` (DBMS_OUTPUT only)
 - `SET NULL`
 - `SET SCAN`
 - `SET SERVEROUTPUT`
+- `SET SUFFIX`
 - `SHOW CON_ID`
 - `SHOW EDITION`
 - `SHOW ERRORS`
+- `SHOW LINESIZE`
 - `SHOW RELEASE`
+- `SHOW SERVEROUTPUT`
+- `SHOW SUFFIX`
 - `SHOW USER`
+- `START` (only files, no URLs)
 - `UNDEFINE`
 - `WHENEVER SQLERROR CONTINUE`
 - `WHENEVER SQLERROR EXIT FAILURE`
 
 The short form of these commands is also supported. 
 
+### Output
+
 When `SET SERVEROUTPUT ON` is invoked output produced by `DBMS_OUTPUT.PUT_LINE` will be shown in the console.
+
+### Placeholders
 
 By default SQL\*Plus placeholder support is enabled. `&VAR`-style placeholders will automatically be replaced with the
 matching value supplied by either Flyway's regular placeholder configuration or a `DEFINE` command. 
 Use of these placeholders can be disabled in the usual way using the `SET DEFINE OFF` command. 
+
+### Unsupported commands
 
 All other SQL*Plus commands are gracefully ignored with a warning message.
 
 ## Limitations
 
 - SPATIAL EXTENSIONS: sdo_geom_metadata can only be cleaned for the user currently logged in
-- No support for executing external scripts referenced with @other.script, as supported by SQL*Plus
 
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/database/sqlserver">SQL Server <i class="fa fa-arrow-right"></i></a>

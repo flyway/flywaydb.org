@@ -8,16 +8,6 @@ subtitle: Redshift
 ## Driver
 
 <table class="table">
-<thead>
-<tr>
-<th></th>
-<th>Redshift</th>
-</tr>
-</thead>
-<tr>
-<th>Supported versions</th>
-<td><code>1.2.10.1009</code> and later</td>
-</tr>
 <tr>
 <th>URL format</th>
 <td><code>jdbc:redshift://<i>host</i>:<i>port</i>/<i>database</i></code></td>
@@ -29,6 +19,10 @@ subtitle: Redshift
 <tr>
 <th>Download</th>
 <td>Follow the instructions at <a href="http://docs.aws.amazon.com/redshift/latest/mgmt/configure-jdbc-connection.html#download-jdbc-driver">docs.aws.amazon.com</a></td>
+</tr>
+<tr>
+<th>Supported versions</th>
+<td><code>1.2.10.1009</code> and later</td>
 </tr>
 <tr>
 <th>Default Java class</th>

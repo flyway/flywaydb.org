@@ -1,0 +1,6 @@
+<tr id="{{ include.name }}">
+    <td>{{ include.name }}{% if include.pro %} {% include pro.html %}{% endif %}</td>
+    <td>{% if include.required %}YES{% else %}NO{% endif %}</td>
+    <td>{{ include.default }}</td>
+    <td>{{ include.description }}</td>
+</tr>

@@ -8,6 +8,80 @@ subtitle: Release Notes
 <p>Thank you all for reporting all these issues and contributing fixes!</p>
 
 <div class="release">
+    <h2 id="5.2.0">Flyway 5.2.0 (Unreleased)</h2>
+
+    <h3>New features</h3>
+    <ul>
+        {% include issue.html id="705" title="Oracle SQL*Plus: Add support for executing external scripts using @other_script.sql" pro=true %}
+        {% include issue.html id="1289" title="Statement-level callbacks: before, after and after error" pro=true %}
+        {% include issue.html id="1324" title="Add initSql for all clients" %}
+        {% include issue.html id="1556" title="Percona XtraDB Cluster support" %}
+        {% include issue.html id="2033" title="Automatically set application name to easily identify Flyway connections" %}
+        {% include issue.html id="2043" title="Introduce license key" pro=true %}
+        {% include issue.html id="2044" title="Flyway Command-line downloads now include all Flyway editions" %}
+        {% include issue.html id="2068" title="MariaDB 10.3 support" %}
+        {% include issue.html id="2093" title="Oracle 18c support" %}
+        {% include issue.html id="2100" title="Aurora MySQL support" %}
+        {% include issue.html id="2101" title="Aurora PostgreSQL support" %}
+        {% include issue.html id="2106" title="Introduce single statement configuration and deprecate old configuration methods on Flyway class" %}
+        {% include issue.html id="2119" title="SQL*Plus: Support SET LINESIZE" pro=true %}
+        {% include issue.html id="2124" title="Introduce connectRetries setting" %}
+        {% include issue.html id="2128" title="Add an 'ignorePendingMigrations' configuration option" pr="2129" %}
+        {% include issue.html id="2144" title="Command-line: Bundle MySQL JDBC driver" %}
+        {% include issue.html id="2150" title="Java 11 support" %}
+        {% include issue.html id="2151" title="Command-line: Update SQL Server JDBC driver to 7.0.0" %}
+        {% include issue.html id="2155" title="Command-line: Update HsqlDB to 2.4.1" %}
+        {% include issue.html id="2156" title="Command-line: Update MariaDB JDBC driver to 2.3.0" %}
+        {% include issue.html id="2157" title="Command-line: Update PostgreSQL JDBC driver to 42.2.5" %}
+        {% include issue.html id="2158" title="Command-line: Update SQLite to 3.23.1" %}
+        {% include issue.html id="2163" title="DB2: Enable human-readable error messages" %}
+        {% include issue.html id="2164" title="Non-transactional Java-based migrations support" %}
+    </ul>
+
+    <h3>Incompatible Changes</h3>
+    <ul>
+        {% include issue.html id="1807" title="Disable recursive filesystem scanning down hidden directories" %}
+        {% include issue.html id="2165" title="<code>MigrationResolver.resolveMigrations()</code> now takes a Context parameter" %}
+        {% include issue.html id="2165" title="<code>MigrationExecutor</code> has been moved to the new <code>org.flywaydb.core.api.executor</code> package" %}
+        {% include issue.html id="2165" title="<code>MigrationExecutor.executeInTransaction()</code> has been renamed to <code>canExecuteInTransaction()</code>" %}
+        {% include issue.html id="2165" title="<code>MigrationExecutor.execute()</code> now takes a Context parameter" %}
+    </ul>
+
+    <h3>Changes</h3>
+    <ul>
+        {% include issue.html id="2147" title="Oracle 12.1 support is now Flyway Enterprise Edition-only" enterprise=true %}
+        {% include issue.html id="2164" title="<code>JdbcMigration</code> and <code>SpringJdbcMigration</code> have been deprecated in favor of <code>JavaMigration</code>" %}
+        {% include issue.html id="2164" title="<code>BaseJdbcMigration</code> and <code>BaseSpringJdbcMigration</code> have been deprecated in favor of <code>BaseJavaMigration</code>" %}
+        {% include issue.html id="2164" title="<code>MigrationInfoProvider</code>, <code>MigrationChecksumProvider</code> and <code>ConfigurationAware</code> have been deprecated in favor of <code>JavaMigration</code>" %}
+    </ul>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        {% include issue.html id="1909" title="Flyway breaks when JDBC driver returns null URL" %}
+        {% include issue.html id="2035" title="PostgreSQL: Restore role to its original value between migrations instead of resetting it" %}
+        {% include issue.html id="2048" title="Oracle: Parser fails on CREATE VIEW ... AS WITH <PL/SQL>" %}
+        {% include issue.html id="2071" title="DROP FULLTEXT INDEX statement cannot be used inside a user transaction" %}
+        {% include issue.html id="2082" title="Non-transactional RECONFIGURE statement not working in SQL Server" %}
+        {% include issue.html id="2088" title="Derby Embedded DB stays open when using the Gradle wrapper" %}
+        {% include issue.html id="2095" title="Flyway fails to drop aggregate functions from postgres on clean" %}
+        {% include issue.html id="2096" title="Sql Server schema clean throws exception for indices on virtual columns for json attributes" %}
+        {% include issue.html id="2097" title="CockroachDB 2.0: Clean broken for sequences" %}
+        {% include issue.html id="2115" title="Oracle SQL/Plus DEFINE should not be case sensitive" %}
+        {% include issue.html id="2118" title="SQL*Plus: SET SERVEROUTPUT ON SIZE not processed correctly" %}
+        {% include issue.html id="2123" title="Performance issue for the MySQLSchema doEmpty() call" %}
+        {% include issue.html id="2134" title="PostgreSQL current schema function throws NPE instead of permission denied exception" %}
+        {% include issue.html id="2136" title="Issues connecting to mariadb linux socket" %}
+        {% include issue.html id="2143" title="COPY ... FROM fails if run after a single-line comment" %}
+        {% include issue.html id="2148" title="Flyway uses schema_version table even if I specify the table to be flyway_schema_history" %}
+    </ul>
+    <p>
+        Thanks to Daniel Scott, DanskerDave, Elvadas NONO, Fabian Bergmark, Gili Tzabari, Guy Brand,
+        hdconradi, HiddenKnowledge, JeP42, JLopeDeB, Joe Lee-Moyet, Matt Sprague, Matthew Burghoffer, Mihir Mehta,
+        raffig, Reinhard Handler, Sajith1988V, swanke00, Tim Hadwen and Valentin Gohard for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
     <h2 id="5.1.4">Flyway 5.1.4 (2018-07-04)</h2>
 
     <h3>New features</h3>

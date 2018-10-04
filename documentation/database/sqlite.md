@@ -20,11 +20,6 @@ subtitle: SQLite
 </tr>
 </thead>
 <tr>
-<th>Supported versions</th>
-<td><code>3.7</code> and later</td>
-<td><code>1.0.3</code> and later</td>
-</tr>
-<tr>
 <th>URL format</th>
 <td><code>jdbc:sqlite:<i>database</i></code></td>
 <td><code>jdbc:sqlite:<i>database</i></code></td>
@@ -36,8 +31,13 @@ subtitle: SQLite
 </tr>
 <tr>
 <th>Maven Central coordinates</th>
-<td><code>org.xerial:sqlite-jdbc:3.20.1</code></td>
-<td><code>org.sqldroid:sqldroid:1.0.3</code></td>
+<td><code>org.xerial:sqlite-jdbc:3.23.1</code></td>
+<td><code>org.sqldroid:sqldroid:1.1.0-rc1</code></td>
+</tr>
+<tr>
+<th>Supported versions</th>
+<td><code>3.7</code> and later</td>
+<td><code>1.1.0-rc1</code> and later</td>
 </tr>
 <tr>
 <th>Default Java class</th>

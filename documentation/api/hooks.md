@@ -13,25 +13,11 @@ The first one is the the most common one: <a href="/documentation/migrations#jav
 when you need more power than SQL can offer you. This is great to for dealing with LOBs or performing advanced
 data transformations.
 
-<p>This can be achieved by implementing the <strong><a
-        href="/documentation/api/javadoc/org/flywaydb/core/api/migration/jdbc/JdbcMigration"
-        >JdbcMigration</a></strong> interface.</p>
-
-<p>Alternatively Spring users may prefer to implement the <strong><a
-        href="/documentation/api/javadoc/org/flywaydb/core/api/migration/spring/SpringJdbcMigration"
-        >SpringJdbcMigration</a></strong> interface to gain access to a Spring JdbcTemplate instead of a plain JDBC connection.</p>
-
-<p>For even more flexibility with regard to naming and checksums you can additionally implement the <strong><a
-        href="/documentation/api/javadoc/org/flywaydb/core/api/migration/MigrationInfoProvider"
-        >MigrationInfoProvider</a></strong> and <strong><a
-        href="/documentation/api/javadoc/org/flywaydb/core/api/migration/MigrationChecksumProvider"
-        >MigrationChecksumProvider</a></strong> interfaces.</p>
-
-<p>To access the Flyway configuration your migration can implement <strong><a
-        href="/documentation/api/javadoc/org/flywaydb/core/api/configuration/ConfigurationAware"
-        >ConfigurationAware</a></strong> and Flyway will automatically inject an instance of <strong><a
-        href="/documentation/api/javadoc/org/flywaydb/core/api/configuration/FlywayConfiguration"
-        >FlywayConfiguration</a></strong>.</p>
+In order to be picked up by Flyway, Java-based Migrations must implement the
+[`JavaMigration`](/documentation/api/javadoc/org/flywaydb/core/api/migration/JavaMigration) interface. Most users
+however should inherit from the convenience class [`BaseJavaMigration`](/documentation/api/javadoc/org/flywaydb/core/api/migration/BaseJavaMigration)
+instead as it encourages Flyway's default naming convention, enabling Flyway to automatically extract the version and
+the description from the class name.
 
 ## Java-based Callbacks
 

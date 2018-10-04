@@ -19,8 +19,7 @@
             </div>
             <div class="tab-pane" id="tab-api">
                 <p>Migrate directly from within your application</p>
-                <pre class="prettyprint">Flyway flyway = new Flyway();
-flyway.setDataSource(url, user, password);
+                <pre class="prettyprint">Flyway flyway = Flyway.configure().dataSource(url, user, password).load();
 flyway.migrate();</pre>
                 <a href="/getstarted/firststeps/api" class="btn btn-primary">Get Started with the Java API <i
                         class="fa fa-arrow-right"></i></a>

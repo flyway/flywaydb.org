@@ -21,16 +21,6 @@ subtitle: DB2
 ## Driver
 
 <table class="table">
-<thead>
-<tr>
-<th></th>
-<th>IBM</th>
-</tr>
-</thead>
-<tr>
-<th>Supported versions</th>
-<td><code>4.16.53</code> and later</td>
-</tr>
 <tr>
 <th>URL format</th>
 <td><code>jdbc:db2://<i>host</i>:<i>port</i>/<i>database</i></code></td>
@@ -42,6 +32,10 @@ subtitle: DB2
 <tr>
 <th>Download</th>
 <td>Follow instructuctions on <a href="http://www-01.ibm.com/support/docview.wss?uid=swg21363866">ibm.com</a></td>
+</tr>
+<tr>
+<th>Supported versions</th>
+<td><code>4.16.53</code> and later</td>
 </tr>
 <tr>
 <th>Default Java class</th>

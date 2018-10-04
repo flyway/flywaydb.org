@@ -21,11 +21,6 @@ subtitle: Sybase ASE
 </tr>
 </thead>
 <tr>
-<th>Supported versions</th>
-<td><code>7.0</code> and later</td>
-<td><code>1.3.1</code> and later</td>
-</tr>
-<tr>
 <th>URL format</th>
 <td><code>jdbc:sybase:Tds:<i>host</i>:<i>port</i>/<i>database</i></code></td>
 <td><code>jdbc:jtds:sybase://<i>host</i>:<i>port</i>/<i>database</i></code></td>
@@ -39,6 +34,11 @@ subtitle: Sybase ASE
 <th>Download</th>
 <td>Download from <a href="https://sap.com">sap.com</a></td>
 <td>Maven Central coordinates: <code>net.sourceforge.jtds:jtds:1.3.1</code></td>
+</tr>
+<tr>
+<th>Supported versions</th>
+<td><code>7.0</code> and later</td>
+<td><code>1.3.1</code> and later</td>
 </tr>
 <tr>
 <th>Default Java class</th>

@@ -12,16 +12,6 @@ subtitle: Sybase ASE
 ## Drivers
 
 <table class="table">
-<thead>
-<tr>
-<th></th>
-<th>Informix</th>
-</tr>
-</thead>
-<tr>
-<th>Supported versions</th>
-<td><code>4.10.10.0</code> and later</td>
-</tr>
 <tr>
 <th>URL format</th>
 <td><code>jdbc:informix-sqli://<i>host</i>:<i>port</i>/<i>database</i>:informixserver=dev</code></td>
@@ -33,6 +23,10 @@ subtitle: Sybase ASE
 <tr>
 <th>Download</th>
 <td>Maven Central coordinates: <code>com.ibm.informix:jdbc:4.10.10.0</code></td>
+</tr>
+<tr>
+<th>Supported versions</th>
+<td><code>4.10.10.0</code> and later</td>
 </tr>
 <tr>
 <th>Default Java class</th>

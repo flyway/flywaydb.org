@@ -13,6 +13,7 @@ be migrated to a state the rest of the code can work with.
 
 ## Supported Java Versions
 
+- `Java 11`
 - `Java 10`
 - `Java 9`
 - `Java 8`
@@ -108,7 +109,7 @@ compile "org.flywaydb<strong>.trial</strong>:flyway-core:{{ site.flywayVersion }
             <pre class="prettyprint">&lt;repositories&gt;
     &lt;repository&gt;
         &lt;id&gt;flyway-repo&lt;/id&gt;
-        &lt;url&gt;s3://flyway-repo/release&lt;/url&gt;
+        &lt;url&gt;https://repo.flywaydb.org/repo&lt;/url&gt;
     &lt;/repository&gt;
     ...
 &lt;/repositories&gt;
@@ -120,25 +121,14 @@ compile "org.flywaydb<strong>.trial</strong>:flyway-core:{{ site.flywayVersion }
         &lt;version&gt;{{ site.flywayVersion }}&lt;/version&gt;
     &lt;/dependency&gt;
     ...
-&lt;/dependencies&gt;
-        
-&lt;build&gt;
-    &lt;extensions&gt;
-        &lt;extension&gt;
-            &lt;groupId&gt;com.allogy.maven.wagon&lt;/groupId&gt;
-            &lt;artifactId&gt;maven-s3-wagon&lt;/artifactId&gt;
-            &lt;version&gt;1.0.1&lt;/version&gt;
-        &lt;/extension&gt;
-    &lt;/extensions&gt;
-    ...
-&lt;/build&gt;</pre>
+&lt;/dependencies&gt;</pre>
             <code>settings.xml</code>
             <pre class="prettyprint">&lt;settings&gt;
     &lt;servers&gt;
         &lt;server&gt;
             &lt;id&gt;flyway-repo&lt;/id&gt;
-            &lt;username&gt;<i>your-flyway-pro-user</i>&lt;/username&gt;
-            &lt;password&gt;<i>your-flyway-pro-password</i>&lt;/password&gt;
+            &lt;username&gt;<i>your-flyway-pro-license-key</i>&lt;/username&gt;
+            &lt;password&gt;flyway&lt;/password&gt;
         &lt;/server&gt;
     &lt;/servers&gt;
     ...
@@ -150,15 +140,17 @@ compile "org.flywaydb<strong>.trial</strong>:flyway-core:{{ site.flywayVersion }
         <td>
             <pre class="prettyprint">repositories {
     maven {
-        url "s3://flyway-repo/release"
-        credentials(AwsCredentials) {
-            accessKey '<i>your-flyway-pro-user</i>'
-            secretKey '<i>your-flyway-pro-password</i>'
+        url "https://repo.flywaydb.org/repo"
+        credentials {
+            username '<i>your-flyway-pro-license-key</i>'
+            password 'flyway'
         }
     }
 }
 
-compile "org.flywaydb<strong>.pro</strong>:flyway-core:{{ site.flywayVersion }}"</pre>
+dependencies {
+    compile "org.flywaydb<strong>.pro</strong>:flyway-core:{{ site.flywayVersion }}"
+}</pre>
         </td>
     </tr>
 </table>
@@ -172,7 +164,7 @@ compile "org.flywaydb<strong>.pro</strong>:flyway-core:{{ site.flywayVersion }}"
             <pre class="prettyprint">&lt;repositories&gt;
     &lt;repository&gt;
         &lt;id&gt;flyway-repo&lt;/id&gt;
-        &lt;url&gt;s3://flyway-repo/release&lt;/url&gt;
+        &lt;url&gt;https://repo.flywaydb.org/repo&lt;/url&gt;
     &lt;/repository&gt;
     ...
 &lt;/repositories&gt;
@@ -184,25 +176,14 @@ compile "org.flywaydb<strong>.pro</strong>:flyway-core:{{ site.flywayVersion }}"
         &lt;version&gt;{{ site.flywayVersion }}&lt;/version&gt;
     &lt;/dependency&gt;
     ...
-&lt;/dependencies&gt;
-        
-&lt;build&gt;
-    &lt;extensions&gt;
-        &lt;extension&gt;
-            &lt;groupId&gt;com.allogy.maven.wagon&lt;/groupId&gt;
-            &lt;artifactId&gt;maven-s3-wagon&lt;/artifactId&gt;
-            &lt;version&gt;1.0.1&lt;/version&gt;
-        &lt;/extension&gt;
-    &lt;/extensions&gt;
-    ...
-&lt;/build&gt;</pre>
+&lt;/dependencies&gt;</pre>
             <code>settings.xml</code>
             <pre class="prettyprint">&lt;settings&gt;
     &lt;servers&gt;
         &lt;server&gt;
             &lt;id&gt;flyway-repo&lt;/id&gt;
-            &lt;username&gt;<i>your-flyway-enterprise-user</i>&lt;/username&gt;
-            &lt;password&gt;<i>your-flyway-enterprise-password</i>&lt;/password&gt;
+            &lt;username&gt;<i>your-flyway-enterprise-license-key</i>&lt;/username&gt;
+            &lt;password&gt;flyway&lt;/password&gt;
         &lt;/server&gt;
     &lt;/servers&gt;
     ...
@@ -214,15 +195,17 @@ compile "org.flywaydb<strong>.pro</strong>:flyway-core:{{ site.flywayVersion }}"
         <td>
             <pre class="prettyprint">repositories {
     maven {
-        url "s3://flyway-repo/release"
-        credentials(AwsCredentials) {
-            accessKey '<i>your-flyway-enterprise-user</i>'
-            secretKey '<i>your-flyway-enterprise-password</i>'
+        url "https://repo.flywaydb.org/repo"
+        credentials {
+            username '<i>your-flyway-enterprise-license-key</i>'
+            password 'flyway'
         }
     }
 }
 
-compile "org.flywaydb<strong>.enterprise</strong>:flyway-core:{{ site.flywayVersion }}"</pre>
+dependencies {
+    compile "org.flywaydb<strong>.enterprise</strong>:flyway-core:{{ site.flywayVersion }}"
+}</pre>
         </td>
     </tr>
 </table>
@@ -245,8 +228,7 @@ Flyway is super easy to use programmatically:
 import org.flywaydb.core.Flyway;
 
 ...
-Flyway flyway = new Flyway();
-flyway.setDataSource(url, user, password);
+Flyway flyway = Flyway.configure().dataSource(url, user, password).load();
 flyway.migrate();
 
 // Start the rest of the application (incl. Hibernate)
@@ -271,7 +253,7 @@ dependencies {
     // ...
 
     compile 'org.flywaydb:flyway-core:{{ site.flywayVersion }}'
-    compile 'org.sqldroid:sqldroid:1.0.3'
+    compile 'org.sqldroid:sqldroid:1.1.0-rc1'
 }
 ```
 
@@ -301,8 +283,7 @@ import org.sqldroid.DroidDataSource;
 ...
 DroidDataSource dataSource = new DroidDataSource(getPackageName(), "...");
 ContextHolder.setContext(this);
-Flyway flyway = new Flyway();
-flyway.setDataSource(dataSource);
+Flyway flyway = Flyway.configure().dataSource(dataSource).load();
 flyway.migrate();
 ```
 
@@ -312,9 +293,13 @@ As an alternative to the programmatic configuration, here is how you can configu
 Spring application using XML bean configuration:
 
 ```xml
-<bean id="flyway" class="org.flywaydb.core.Flyway" init-method="migrate">
+<bean id="flywayConfig" class="org.flywaydb.core.configuration.ClassicConfiguration">
     <property name="dataSource" ref="..."/>
     ...
+</bean>
+
+<bean id="flyway" class="org.flywaydb.core.Flyway" init-method="migrate">
+    <constructor-arg ref="flywayConfig"/>
 </bean>
 
 <!-- The rest of the application (incl. Hibernate) -->

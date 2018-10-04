@@ -5,8 +5,8 @@ subtitle: Maven Plugin
 ---
 # Maven Plugin
 
-The Flyway Open-Source Maven plugin supports **Maven 3.x** running on **Java 8**, **Java 9** or **Java 10**. The Flyway
-Enterprise Maven plugin also supports **Java 6** and **Java 7**.
+The Flyway Open-Source Maven plugin supports **Maven 3.x** running on **Java 8**, **Java 9**, **Java 10** or **Java 11**.
+The Flyway Enterprise Maven plugin also supports **Java 6** and **Java 7**.
 
 ## Installation
 
@@ -49,7 +49,7 @@ Enterprise Maven plugin also supports **Java 6** and **Java 7**.
             <pre class="prettyprint">&lt;pluginRepositories&gt;
     &lt;pluginRepository&gt;
         &lt;id&gt;flyway-repo&lt;/id&gt;
-        &lt;url&gt;s3://flyway-repo/release&lt;/url&gt;
+        &lt;url&gt;https://repo.flywaydb.org/repo&lt;/url&gt;
     &lt;/pluginRepository&gt;
     ...
 &lt;/pluginRepositories&gt;
@@ -63,21 +63,13 @@ Enterprise Maven plugin also supports **Java 6** and **Java 7**.
         &lt;/plugin&gt;
     &lt;/plugins&gt;
 &lt;/build&gt;</pre>
-            <code>&lt;project-dir&gt;/.mvn/extensions.xml</code>
-            <pre class="prettyprint">&lt;extensions&gt;
-    &lt;extension&gt;
-        &lt;groupId&gt;com.allogy.maven.wagon&lt;/groupId&gt;
-        &lt;artifactId&gt;maven-s3-wagon&lt;/artifactId&gt;
-        &lt;version&gt;1.0.1&lt;/version&gt;
-    &lt;/extension&gt;
-&lt;/extensions&gt;</pre>
             <code>&lt;user-home&gt;/.m2/settings.xml</code>
             <pre class="prettyprint">&lt;settings&gt;
     &lt;servers&gt;
         &lt;server&gt;
             &lt;id&gt;flyway-repo&lt;/id&gt;
-            &lt;username&gt;<i>your-flyway-pro-user</i>&lt;/username&gt;
-            &lt;password&gt;<i>your-flyway-pro-password</i>&lt;/password&gt;
+            &lt;username&gt;<i>your-flyway-pro-license-key</i>&lt;/username&gt;
+            &lt;password&gt;flyway&lt;/password&gt;
         &lt;/server&gt;
     &lt;/servers&gt;
     ...
@@ -88,7 +80,7 @@ Enterprise Maven plugin also supports **Java 6** and **Java 7**.
             <pre class="prettyprint">&lt;pluginRepositories&gt;
     &lt;pluginRepository&gt;
         &lt;id&gt;flyway-repo&lt;/id&gt;
-        &lt;url&gt;s3://flyway-repo/release&lt;/url&gt;
+        &lt;url&gt;https://repo.flywaydb.org/repo&lt;/url&gt;
     &lt;/pluginRepository&gt;
     ...
 &lt;/pluginRepositories&gt;
@@ -102,21 +94,13 @@ Enterprise Maven plugin also supports **Java 6** and **Java 7**.
         &lt;/plugin&gt;
     &lt;/plugins&gt;
 &lt;/build&gt;</pre>
-            <code>&lt;project-dir&gt;/.mvn/extensions.xml</code>
-            <pre class="prettyprint">&lt;extensions&gt;
-    &lt;extension&gt;
-        &lt;groupId&gt;com.allogy.maven.wagon&lt;/groupId&gt;
-        &lt;artifactId&gt;maven-s3-wagon&lt;/artifactId&gt;
-        &lt;version&gt;1.0.1&lt;/version&gt;
-    &lt;/extension&gt;
-&lt;/extensions&gt;</pre>
             <code>&lt;user-home&gt;/.m2/settings.xml</code>
             <pre class="prettyprint">&lt;settings&gt;
     &lt;servers&gt;
         &lt;server&gt;
             &lt;id&gt;flyway-repo&lt;/id&gt;
-            &lt;username&gt;<i>your-flyway-enterprise-user</i>&lt;/username&gt;
-            &lt;password&gt;<i>your-flyway-enterprise-password</i>&lt;/password&gt;
+            &lt;username&gt;<i>your-flyway-enterprise-license-key</i>&lt;/username&gt;
+            &lt;password&gt;flyway&lt;/password&gt;
         &lt;/server&gt;
     &lt;/servers&gt;
     ...

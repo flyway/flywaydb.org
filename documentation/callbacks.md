@@ -28,6 +28,18 @@ These are the events Flyway supports:
         <td>Before every single migration during Migrate</td>
     </tr>
     <tr>
+        <td>beforeEachMigrateStatement {% include pro.html %}</td>
+        <td>Before every single statement of a migration during Migrate</td>
+    </tr>
+    <tr>
+        <td>afterEachMigrateStatement {% include pro.html %}</td>
+        <td>After every single successful statement of a migration during Migrate</td>
+    </tr>
+    <tr>
+        <td>afterEachMigrateStatementError {% include pro.html %}</td>
+        <td>After every single failed statement of a migration during Migrate</td>
+    </tr>
+    <tr>
         <td>afterEachMigrate</td>
         <td>After every single successful migration during Migrate</td>
     </tr>
@@ -51,6 +63,18 @@ These are the events Flyway supports:
     <tr>
         <td>beforeEachUndo {% include pro.html %}</td>
         <td>Before every single migration during Undo</td>
+    </tr>
+    <tr>
+        <td>beforeEachUndoStatement {% include pro.html %}</td>
+        <td>Before every single statement of a migration during Undo</td>
+    </tr>
+    <tr>
+        <td>afterEachUndoStatement {% include pro.html %}</td>
+        <td>After every single successful statement of a migration during Undo</td>
+    </tr>
+    <tr>
+        <td>afterEachUndoStatementError {% include pro.html %}</td>
+        <td>After every single failed statement of a migration during Undo</td>
     </tr>
     <tr>
         <td>afterEachUndo {% include pro.html %}</td>

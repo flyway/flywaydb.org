@@ -16,16 +16,6 @@ subtitle: HSQLDB
 ## Driver
 
 <table class="table">
-<thead>
-<tr>
-<th></th>
-<th>HSQLDB</th>
-</tr>
-</thead>
-<tr>
-<th>Supported versions</th>
-<td><code>1.8</code> and later</td>
-</tr>
 <tr>
 <th>URL format</th>
 <td><code>jdbc:hsqldb:file:<i>file</i></code></td>
@@ -36,7 +26,11 @@ subtitle: HSQLDB
 </tr>
 <tr>
 <th>Maven Central coordinates</th>
-<td><code>org.hsqldb:hsqldb:1.4.196</code></td>
+<td><code>org.hsqldb:hsqldb:2.4.1</code></td>
+</tr>
+<tr>
+<th>Supported versions</th>
+<td><code>1.8</code> and later</td>
 </tr>
 <tr>
 <th>Default Java class</th>
@@ -56,7 +50,8 @@ subtitle: HSQLDB
 
 ### Example
 
-<pre class="prettyprint">/* Single line comment */
+```sql
+/* Single line comment */
 CREATE TABLE test_data (
   value VARCHAR(25) NOT NULL PRIMARY KEY
 );
@@ -78,7 +73,8 @@ CREATE TRIGGER uniqueidx_trigger BEFORE INSERT ON usertable
       IF EXISTS (SELECT * FROM usertable WHERE usertable.name = newrow.name) THEN
         SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'duplicate name';
       END IF;
-    END;</pre>
+    END;
+```
 
 ## Limitations
 

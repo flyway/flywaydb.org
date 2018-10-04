@@ -19,16 +19,6 @@ subtitle: MariaDB
 ## Driver
 
 <table class="table">
-<thead>
-<tr>
-<th></th>
-<th>MariaDB</th>
-</tr>
-</thead>
-<tr>
-<th>Supported versions</th>
-<td><code>2.0.0</code> and later</td>
-</tr>
 <tr>
 <th>URL format</th>
 <td><code>jdbc:mariadb://<i>host</i>:<i>port</i>/<i>database</i></code></td>
@@ -39,7 +29,11 @@ subtitle: MariaDB
 </tr>
 <tr>
 <th>Maven Central coordinates</th>
-<td><code>org.mariadb.jdbc:mariadb-java-client:2.2.4</code></td>
+<td><code>org.mariadb.jdbc:mariadb-java-client:2.3.0</code></td>
+</tr>
+<tr>
+<th>Supported versions</th>
+<td><code>2.0.0</code> and later</td>
 </tr>
 <tr>
 <th>Default Java class</th>
@@ -98,5 +92,5 @@ INSERT INTO ${tableName} (name) VALUES (&#x27;Mr. T&#x27;);</pre>
         Example: /*!50003 CREATE*/ /*!50017 DEFINER=`...`*/ /*!50003 TRIGGER EntityBeforeInsert ...
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/database/postgresql">PostgreSQL <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/database/xtradb">Percona XtraDB Cluster <i class="fa fa-arrow-right"></i></a>
 </p>
