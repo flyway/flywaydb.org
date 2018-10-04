@@ -108,7 +108,6 @@ The following commands are fully supported and can be used just like any regular
 - `SET SCAN`
 - `SET SERVEROUTPUT`
 - `SET SUFFIX`
-- `START` (only files, no URLs)
 - `SHOW CON_ID`
 - `SHOW EDITION`
 - `SHOW ERRORS`
@@ -117,6 +116,7 @@ The following commands are fully supported and can be used just like any regular
 - `SHOW SERVEROUTPUT`
 - `SHOW SUFFIX`
 - `SHOW USER`
+- `START` (only files, no URLs)
 - `UNDEFINE`
 - `WHENEVER SQLERROR CONTINUE`
 - `WHENEVER SQLERROR EXIT FAILURE`
