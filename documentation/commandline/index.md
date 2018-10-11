@@ -40,6 +40,37 @@ Now simply add it to the `PATH` and the `flyway` command will be available from 
 
 <pre class="console"><span>&gt;</span> flyway [options] command</pre>
 
+## Flyway editions
+
+The Flyway Command-line tool distribution ships with all editions of Flyway. It defaults to Flyway Community Edition.
+It can however easily be configured to run the [Flyway Trial, Pro or Enterprise Edition](/download) instead.  
+
+### Environment variable
+
+One way to switch between the various Flyway editions is to set the `FLYWAY_EDITION` environment variable prior to
+executing Flyway to any of the following values:
+
+<table class="table table-striped">
+<tr><td><code>community</code></td><td>Select the Flyway Community Edition (default)</td></tr> 
+<tr><td><code>trial</code></td><td>Select the Flyway Trial Edition</td></tr> 
+<tr><td><code>pro</code></td><td>Select the Flyway Pro Edition</td></tr> 
+<tr><td><code>enterprise</code></td><td>Select the Flyway Enterprise Edition</td></tr> 
+</table> 
+
+### Edition-specific launchers
+
+Alternatively Flyway also comes with edition-specific launchers. Whereas the `flyway` command will launch whatever
+edition has been selected with the `FLYWAY_EDITION` environment variable (defaulting to `community`), you can also use
+edition-specific launchers to force the selection of the edition of your choice:
+
+<table class="table table-striped">
+<tr><td><code>flyway</code></td><td>Select the Flyway Edition selected with the <code>FLYWAY_EDITION</code> environment variable (defaulting to <code>community</code>)</td></tr> 
+<tr><td><code>flyway-community</code></td><td>Select the Flyway Community Edition</td></tr> 
+<tr><td><code>flyway-trial</code></td><td>Select the Flyway Trial Edition</td></tr> 
+<tr><td><code>flyway-pro</code></td><td>Select the Flyway Pro Edition</td></tr> 
+<tr><td><code>flyway-enterprise</code></td><td>Select the Flyway Enterprise Edition</td></tr> 
+</table> 
+
 ## Commands
 
 <table class="table table-bordered table-hover">
@@ -182,18 +213,6 @@ the `-n` flag.
 
 If you need to to pass custom arguments to Flyway's JVM, you can do so by setting the `JAVA_ARGS` environment variable.
 They will then automatically be taken into account when launching Flyway. This is particularly useful when needing to set JVM system properties.
-
-### Flyway Edition
-
-You can switch between the various Flyway editions by setting the `FLYWAY_EDITION` environment variable prior to
-executing Flyway to any of the following values:
-
-<table class="table table-striped">
-<tr><td><code>community</code></td><td>Select the Flyway Community Edition (default)</td></tr> 
-<tr><td><code>trial</code></td><td>Select the Flyway Trial Edition</td></tr> 
-<tr><td><code>pro</code></td><td>Select the Flyway Pro Edition</td></tr> 
-<tr><td><code>enterprise</code></td><td>Select the Flyway Enterprise Edition</td></tr> 
-</table> 
 
 ## Output
 
