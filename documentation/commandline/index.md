@@ -19,9 +19,9 @@ into their applications nor having to install a build tool.
 <pre class="console"><span>&gt;</span> docker pull <strong>boxfuse/flyway</strong></pre>
 Go to Docker Hub for <a href="https://hub.docker.com/r/boxfuse/flyway/">detailed usage instructions</a>.</td></tr>
 <tr><td>All platforms</td><td>            <a href="/download/thankyou?dl=https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}.zip">flyway-commandline-{{site.flywayVersion}}.zip
-                                              (requires at Java 8 JRE)</a><br/>
+                                              (requires a Java 8 JRE)</a><br/>
                                           <a href="/download/thankyou?dl=https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}.tar.gz">flyway-commandline-{{site.flywayVersion}}.tar.gz
-                                              (requires at Java 8 without JRE)</a>
+                                              (requires a Java 8 JRE)</a>
 <tr><td>Sources</td><td><a href="/download/thankyou?dl=https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-sources.jar">flyway-commandline-{{site.flywayVersion}}-sources.jar</a></td></tr>
 </td></tr>
 </table>
