@@ -1,0 +1,9 @@
+{% include cfg/_cfg.html name="schemas" required=false default='<i>The default schema for the database connection</i>' description="Comma-separated list of schemas managed by Flyway. These schema names are case-sensitive.
+<p>Consequences:</p>
+<ul>
+    <li>Flyway will automatically attempt to create all these schemas, unless the first one already exists.</li>
+    <li>The first schema in the list will be automatically set as the default one during the migration.</li>
+    <li>The first schema in the list will also be the one containing the schema history table.</li>
+    <li>The schemas will be cleaned in the order of this list.</li>
+    <li>If Flyway created them, the schemas themselves will as be dropped when cleaning.</li>
+</ul>" %}

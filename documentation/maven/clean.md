@@ -67,14 +67,7 @@ The schemas are cleaned in the order specified by the <code>schemas</code> prope
     </tr>
     {% include cfg/connectRetries.html %}
     {% include cfg/initSql.html %}
-    <tr>
-        <td>schemas</td>
-        <td>NO</td>
-        <td><i>default schema of the connection</i></td>
-        <td>Case-sensitive list of schemas managed by Flyway.<br/>
-            The schemas will be cleaned in the order of this list.
-        </td>
-    </tr>
+    {% include cfg/schemas-maven-gradle.html %}
     <tr>
         <td>callbacks</td>
         <td>NO</td>

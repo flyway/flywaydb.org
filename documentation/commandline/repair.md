@@ -56,14 +56,7 @@ Repairs the Flyway schema history table. This will perform the following actions
     </tr>
     {% include cfg/connectRetries.html %}
     {% include cfg/initSql.html %}
-    <tr>
-        <td>schemas</td>
-        <td>NO</td>
-        <td><i>default schema of the connection</i></td>
-        <td>Comma-separated case-sensitive list of schemas managed by Flyway.<br/>
-            The first schema will be the one containing the schema history table.
-        </td>
-    </tr>
+    {% include cfg/schemas-commandline.html %}
     <tr>
         <td>table</td>
         <td>NO</td>

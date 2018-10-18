@@ -54,15 +54,7 @@ subtitle: 'Command-line: undo'
     </tr>
     {% include cfg/connectRetries.html %}
     {% include cfg/initSql.html %}
-    <tr>
-        <td>schemas</td>
-        <td>NO</td>
-        <td><i>default schema of the connection</i></td>
-        <td>Comma-separated case-sensitive list of schemas managed by Flyway.<br/>
-            The first schema in the list will be automatically set as the default one during
-            the migration. It will also be the one containing the schema history table.
-        </td>
-    </tr>
+    {% include cfg/schemas-commandline.html %}
     <tr>
         <td>table</td>
         <td>NO</td>

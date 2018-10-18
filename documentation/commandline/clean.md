@@ -54,14 +54,7 @@ The schemas are cleaned in the order specified by the `schemas` property.
     </tr>
     {% include cfg/connectRetries.html %}
     {% include cfg/initSql.html %}
-    <tr>
-        <td>schemas</td>
-        <td>NO</td>
-        <td><i>default schema of the connection</i></td>
-        <td>Comma-separated case-sensitive list of schemas managed by Flyway.<br/>
-            The schemas will be cleaned in the order of this list.
-        </td>
-    </tr>
+    {% include cfg/schemas-commandline.html %}
     <tr id="jarDirs">
         <td>jarDirs</td>
         <td>NO</td>
