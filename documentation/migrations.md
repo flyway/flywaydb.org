@@ -212,7 +212,7 @@ New SQL-based migrations are **discovered automatically** through filesystem and
 Once you have configured the [`locations`](/documentation/commandline/migrate#locations) you want to use, Flyway will
 automatically pick up any new SQL migrations as long as they conform to the configured *naming convention*.
 
-This scanning is recursive. All migrations in directories below the specified ones are also picked up.
+This scanning is recursive. All migrations in non-hidden directories below the specified ones are also picked up.
 
 ### Syntax
 
@@ -259,10 +259,10 @@ These would typically be things like
 ### Naming
 
 In order to be picked up by Flyway, Java-based Migrations must implement the
-[`JdbcMigration`](/documentation/api/javadoc/org/flywaydb/core/api/migration/jdbc/JdbcMigration) interface.
-
-By default Flyway will automatically extract the version and the description from the class name. To be able to do so,
-the class name must comply with the following naming pattern:
+[`JavaMigration`](/documentation/api/javadoc/org/flywaydb/core/api/migration/JavaMigration) interface. Most users
+however should inherit from the convenience class [`BaseJavaMigration`](/documentation/api/javadoc/org/flywaydb/core/api/migration/BaseJavaMigration)
+instead as it encourages Flyway's default naming convention, enabling Flyway to automatically extract the version and
+the description from the class name. To be able to do so, the class name must comply with the following naming pattern:
 
 <div class="row">
     <div class="col-md-4">
@@ -298,7 +298,7 @@ The file name consists of the following parts:
 - **Description**: Underscores (automatically replaced by spaces at runtime) separate the words
 
 If you need more control over the class name, you can override the default convention by implementing the
-[`MigrationInfoProvider`](/documentation/api/javadoc/org/flywaydb/core/api/migration/MigrationInfoProvider) interface.
+[`JavaMigration`](/documentation/api/javadoc/org/flywaydb/core/api/migration/JavaMigration) interface directly.
 
 This will allow you to name your class as you wish. Version, description and migration category are provided by
 implementing the respective methods.
@@ -327,53 +327,30 @@ scanning is recursive. Java migrations in subpackages of the specified ones are 
 
 Unlike SQL migrations, Java migrations by default do not have a checksum and therefore do not participate in the
 change detection of Flyway's validation. This can be remedied by implementing the 
-[`MigrationChecksumProvider`](/documentation/api/javadoc/org/flywaydb/core/api/migration/MigrationChecksumProvider)
-interface. Your implementation of the `getChecksum()` method can then provide your own checksum, which will then be
+`getChecksum()` method, which you can then use to provide your own checksum, which will then be
 stored and validated for changes.
 
 ### Sample Class
 ```java
 package db.migration;
 
-import org.flywaydb.core.api.migration.jdbc.JdbcMigration;
-import java.sql.Connection;
+import org.flywaydb.core.api.migration.BaseJavaMigration;
+import org.flywaydb.core.api.migration.Context;
 import java.sql.PreparedStatement;
 
 /**
  * Example of a Java-based migration.
  */
-public class V1_2__Another_user implements JdbcMigration {
-    public void migrate(Connection connection) throws Exception {
+public class V1_2__Another_user extends BaseJavaMigration {
+    public void migrate(Context context) throws Exception {
         PreparedStatement statement =
-            connection.prepareStatement("INSERT INTO test_user (name) VALUES ('Obelix')");
+            context.getConnection().prepareStatement("INSERT INTO test_user (name) VALUES ('Obelix')");
 
         try {
             statement.execute();
         } finally {
             statement.close();
         }
-    }
-}
-```
-
-### Spring support (Optional)
-If you use Spring, you can choose to implement the [`SpringJdbcMigration`](/documentation/api/javadoc/org/flywaydb/core/api/migration/spring/SpringJdbcMigration)
-interface instead. It works exactly like the [`JdbcMigration`](/documentation/api/javadoc/org/flywaydb/core/api/migration/jdbc/JdbcMigration)
-interface, the only difference being that you now receive a convenient Spring JdbcTemplate to work with instead of a
-plain JDBC connection.
-
-```java
-package db.migration;
-
-import org.flywaydb.core.api.migration.spring.SpringJdbcMigration;
-import org.springframework.jdbc.core.JdbcTemplate;
-
-/**
- * Example of a Spring Jdbc migration.
- */
-public class V1_2__Another_user implements SpringJdbcMigration {
-    public void migrate(JdbcTemplate jdbcTemplate) throws Exception {
-        jdbcTemplate.execute("INSERT INTO test_user (name) VALUES ('Obelix')");
     }
 }
 ```

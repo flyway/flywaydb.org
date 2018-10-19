@@ -52,15 +52,9 @@ subtitle: 'Command-line: undo'
         <td></td>
         <td>The password to use to connect to the database</td>
     </tr>
-    <tr>
-        <td>schemas</td>
-        <td>NO</td>
-        <td><i>default schema of the connection</i></td>
-        <td>Comma-separated case-sensitive list of schemas managed by Flyway.<br/>
-            The first schema in the list will be automatically set as the default one during
-            the migration. It will also be the one containing the schema history table.
-        </td>
-    </tr>
+    {% include cfg/connectRetries.html %}
+    {% include cfg/initSql.html %}
+    {% include cfg/schemas-commandline.html %}
     <tr>
         <td>table</td>
         <td>NO</td>
@@ -71,15 +65,7 @@ subtitle: 'Command-line: undo'
             the schema history table is placed in the first schema of the list.
         </td>
     </tr>
-    <tr id="locations">
-        <td>locations</td>
-        <td>NO</td>
-        <td><nobr>filesystem:<i>&lt;install-dir&gt;</i>/sql</nobr></td>
-        <td>Comma-separated list of locations to scan recursively for migrations. The location type is determined by its prefix.<br/>
-            Unprefixed locations or locations starting with <code>classpath:</code> point to a package on the classpath and may contain both sql and java-based migrations.<br/>
-            Locations starting with <code>filesystem:</code> point to a directory on the filesystem and may only contain sql migrations.
-        </td>
-    </tr>
+    {% include cfg/locations-commandline.html %}
     <tr id="jarDirs">
         <td>jarDirs</td>
         <td>NO</td>
@@ -248,22 +234,11 @@ subtitle: 'Command-line: undo'
         <td><i>Current database user</i></td>
         <td>The username that will be recorded in the schema history table as having applied the migration</td>
     </tr>
-    <tr>
-        <td>errorHandlers</td>
-        <td>NO</td>
-        <td><i>none</i></td>
-        <td>Comma-sparated list of fully qualified class names of <a href="/documentation/errorhandlers">Error Handlers</a> for errors and warnings that occur during
-         a migration. This can be used to customize Flyway's behavior by for example throwing another runtime exception,
-          outputting a warning or suppressing the error instead of throwing a FlywayException. ErrorHandlers are invoked
-           in order until one reports to have successfully handled the errors or warnings.
-           If none do, or if none are present, Flyway falls back to its default handling of errors and warnings.
-           </td>
-    </tr>
     <tr id="errorOverrides">
         <td>errorOverrides {% include pro.html %}</td>
         <td>NO</td>
         <td><i>none</i></td>
-        <td><p>Comma-sparated list of rules for the built-in error handler that lets you override specific SQL states and errors codes from error
+        <td><p>Comma-sparated list of rules for the built-in error handling that lets you override specific SQL states and errors codes from error
              to warning or from warning to error.</p>
              <p>Each error override has the following format: <code>STATE:12345:W</code>.
              It is a 5 character SQL state, a colon, the SQL error code, a colon and finally the desired
@@ -281,15 +256,19 @@ subtitle: 'Command-line: undo'
             directory, Flyway will create all directories and parent directories as needed.
             Omit to use the default mode of executing the SQL statements directly against the database.</td>
     </tr>
+    {% include cfg/licenseKey.html %}
     </tbody>
 </table>
 
 ## Sample configuration
 
-<pre class="prettyprint">flyway.driver=org.hsqldb.jdbcDriver
+```properties
+flyway.driver=org.hsqldb.jdbcDriver
 flyway.url=jdbc:hsqldb:file:/db/flyway_sample
 flyway.user=SA
 flyway.password=mySecretPwd
+flyway.connectRetries=10
+flyway.initSql=SET ROLE 'myuser'
 flyway.schemas=schema1,schema2,schema3
 flyway.table=schema_history
 flyway.locations=classpath:com.mycomp.migration,database/migrations,filesystem:/sql-migrations
@@ -315,9 +294,9 @@ flyway.ignoreMissingMigrations=false
 flyway.ignoreIgnoredMigrations=false
 flyway.ignoreFutureMigrations=false
 flyway.installedBy=my-user
-flyway.errorHandlers=com.mycomp.MyCustomErrorHandler,com.mycomp.AnotherErrorHandler
 flyway.errorOverrides=99999:17110:E,42001:42001:W
-flyway.dryRunOutput=/my/sql/dryrun-outputfile.sql</pre>
+flyway.dryRunOutput=/my/sql/dryrun-outputfile.sql
+```
 
 ## Sample output
 

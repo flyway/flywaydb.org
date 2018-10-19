@@ -45,6 +45,14 @@ The following environment variables are supported:
         <td>FLYWAY_PASSWORD</td>
         <td>The password to use to connect to the database</td>
     </tr>
+    <tr id="FLYWAY_CONNECT_RETRIES">
+        <td>FLYWAY_CONNECT_RETRIES</td>
+        <td>The maximum number of retries when attempting to connect to the database. After each failed attempt, Flyway will wait 1 second before attempting to connect again, up to the maximum number of times specified by connectRetries.</td>
+    </tr>
+    <tr id="FLYWAY_INIT_SQL">
+        <td>FLYWAY_INIT_SQL</td>
+        <td>The SQL statements to run to initialize a new database connection immediately after opening it.</td>
+    </tr>
     <tr id="FLYWAY_SCHEMAS">
         <td>FLYWAY_SCHEMAS</td>
         <td>Comma-separated case-sensitive list of schemas managed by Flyway.<br/>
@@ -63,8 +71,10 @@ The following environment variables are supported:
     <tr id="FLYWAY_LOCATIONS">
         <td>FLYWAY_LOCATIONS</td>
         <td>Comma-separated list of locations to scan recursively for migrations. The location type is determined by its prefix.<br/>
-            Unprefixed locations or locations starting with <code>classpath:</code> point to a package on the classpath and may contain both sql and java-based migrations.<br/>
-            Locations starting with <code>filesystem:</code> point to a directory on the filesystem and may only contain sql migrations.
+            Unprefixed locations or locations starting with <code>classpath:</code> point to a package on the
+            classpath and may contain both SQL and Java-based migrations.<br/>
+            Locations starting with <code>filesystem:</code> point to a directory on the filesystem, may only
+            contain SQL migrations and are only scanned recursively down non-hidden directories.
         </td>
     </tr>
     <tr id="FLYWAY_JAR_DIRS">
@@ -219,6 +229,11 @@ The following environment variables are supported:
 			development of older versions.
         </td>
     </tr>
+    <tr id="FLYWAY_IGNORE_PENDING_MIGRATIONS">
+        <td>FLYWAY_IGNORE_PENDING_MIGRATIONS</td>
+        <td>Ignore pending migrations when reading the schema history table. These are migrations that are available but have not yet been applied. This can be useful for verifying that in-development migration changes don't contain any validation-breaking changes of migrations that have already been applied to a production environment, e.g. as part of a CI/CD process, without failing because of the existence of new migration versions.
+        </td>
+    </tr>
     <tr id="FLYWAY_IGNORE_FUTURE_MIGRATIONS">
         <td>FLYWAY_IGNORE_FUTURE_MIGRATIONS</td>
         <td>Ignore future migrations when reading the schema history table. These are migrations that were performed by a
@@ -257,19 +272,9 @@ The following environment variables are supported:
         <td>FLYWAY_INSTALLED_BY</td>
         <td>The username that will be recorded in the schema history table as having applied the migration</td>
     </tr>
-    <tr id="FLYWAY_ERROR_HANDLERS">
-        <td>FLYWAY_ERROR_HANDLERS {% include pro.html %}</td>
-        <td>Comma-sparated list of fully qualified class names of <a href="/documentation/errorhandlers">Error Handlers</a>
-         for errors and warnings that occur during
-         a migration. This can be used to customize Flyway's behavior by for example throwing another runtime exception,
-          outputting a warning or suppressing the error instead of throwing a FlywayException. ErrorHandlers are invoked
-           in order until one reports to have successfully handled the errors or warnings.
-           If none do, or if none are present, Flyway falls back to its default handling of errors and warnings.
-           </td>
-    </tr>
     <tr id="FLYWAY_ERROR_OVERRIDES">
         <td>FLYWAY_ERROR_OVERRIDES {% include pro.html %}</td>
-        <td><p>Comma-sparated list of rules for the built-in error handler that lets you override specific SQL states and errors codes from error
+        <td><p>Comma-sparated list of rules for the built-in error handling that lets you override specific SQL states and errors codes from error
              to warning or from warning to error.</p>
              <p>Each error override has the following format: <code>STATE:12345:W</code>.
              It is a 5 character SQL state, a colon, the SQL error code, a colon and finally the desired
@@ -288,6 +293,10 @@ The following environment variables are supported:
     <tr id="FLYWAY_ORACLE_SQLPLUS">
         <td>FLYWAY_ORACLE_SQLPLUS {% include pro.html %}</td>
         <td>Whether to Flyway's support for Oracle SQL*Plus commands should be activated.</td>
+    </tr>
+    <tr id="FLYWAY_LICENSE_KEY">
+        <td>FLYWAY_LICENSE_KEY {% include pro.html %}</td>
+        <td>Flyway's license key.</td>
     </tr>
     </tbody>
 </table>

@@ -13,16 +13,6 @@ subtitle: CockroachDB
 ## Driver
 
 <table class="table">
-<thead>
-<tr>
-<th></th>
-<th>PostgreSQL</th>
-</tr>
-</thead>
-<tr>
-<th>Supported versions</th>
-<td><code>9.3-1104-jdbc4</code> and later</td>
-</tr>
 <tr>
 <th>URL format</th>
 <td><code>jdbc:postgresql://<i>host</i>:<i>port</i>/<i>database</i></code></td>
@@ -33,7 +23,11 @@ subtitle: CockroachDB
 </tr>
 <tr>
 <th>Maven Central coordinates</th>
-<td><code>org.postgresql:postgresql:42.1.4</code></td>
+<td><code>org.postgresql:postgresql:42.2.5</code></td>
+</tr>
+<tr>
+<th>Supported versions</th>
+<td><code>9.3-1104-jdbc4</code> and later</td>
 </tr>
 <tr>
 <th>Default Java class</th>
@@ -53,7 +47,8 @@ subtitle: CockroachDB
 
 ### Example
 
-<pre class="prettyprint">/* Single line comment */
+```sql
+/* Single line comment */
 CREATE TABLE test_data (
  value VARCHAR(25) NOT NULL PRIMARY KEY
 );
@@ -65,7 +60,8 @@ comment
 */
 
 -- Placeholder
-INSERT INTO ${tableName} (name) VALUES (&#x27;Mr. T&#x27;);</pre>
+INSERT INTO ${tableName} (name) VALUES ('Mr. T');
+```
 
 ## Limitations
 

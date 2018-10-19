@@ -19,9 +19,9 @@ into their applications nor having to install a build tool.
 <pre class="console"><span>&gt;</span> docker pull <strong>boxfuse/flyway</strong></pre>
 Go to Docker Hub for <a href="https://hub.docker.com/r/boxfuse/flyway/">detailed usage instructions</a>.</td></tr>
 <tr><td>All platforms</td><td>            <a href="/download/thankyou?dl=https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}.zip">flyway-commandline-{{site.flywayVersion}}.zip
-                                              (requires at Java 8 JRE)</a><br/>
+                                              (requires a Java 8 JRE)</a><br/>
                                           <a href="/download/thankyou?dl=https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}.tar.gz">flyway-commandline-{{site.flywayVersion}}.tar.gz
-                                              (requires at Java 8 without JRE)</a>
+                                              (requires a Java 8 JRE)</a>
 <tr><td>Sources</td><td><a href="/download/thankyou?dl=https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-sources.jar">flyway-commandline-{{site.flywayVersion}}-sources.jar</a></td></tr>
 </td></tr>
 </table>
@@ -39,6 +39,37 @@ Now simply add it to the `PATH` and the `flyway` command will be available from 
 ## Usage
 
 <pre class="console"><span>&gt;</span> flyway [options] command</pre>
+
+## Flyway editions
+
+The Flyway Command-line tool distribution ships with all editions of Flyway. It defaults to Flyway Community Edition.
+It can however easily be configured to run the [Flyway Trial, Pro or Enterprise Edition](/download) instead.  
+
+### Environment variable
+
+One way to switch between the various Flyway editions is to set the `FLYWAY_EDITION` environment variable prior to
+executing Flyway to any of the following values:
+
+<table class="table table-striped">
+<tr><td><code>community</code></td><td>Select the Flyway Community Edition (default)</td></tr> 
+<tr><td><code>trial</code></td><td>Select the Flyway Trial Edition</td></tr> 
+<tr><td><code>pro</code></td><td>Select the Flyway Pro Edition</td></tr> 
+<tr><td><code>enterprise</code></td><td>Select the Flyway Enterprise Edition</td></tr> 
+</table> 
+
+### Edition-specific launchers
+
+Alternatively Flyway also comes with edition-specific launchers. Whereas the `flyway` command will launch whatever
+edition has been selected with the `FLYWAY_EDITION` environment variable (defaulting to `community`), you can also use
+edition-specific launchers to force the selection of the edition of your choice:
+
+<table class="table table-striped">
+<tr><td><code>flyway</code></td><td>Select the Flyway Edition selected with the <code>FLYWAY_EDITION</code> environment variable (defaulting to <code>community</code>)</td></tr> 
+<tr><td><code>flyway-community</code></td><td>Select the Flyway Community Edition</td></tr> 
+<tr><td><code>flyway-trial</code></td><td>Select the Flyway Trial Edition</td></tr> 
+<tr><td><code>flyway-pro</code></td><td>Select the Flyway Pro Edition</td></tr> 
+<tr><td><code>flyway-enterprise</code></td><td>Select the Flyway Enterprise Edition</td></tr> 
+</table> 
 
 ## Commands
 
@@ -82,17 +113,23 @@ Now simply add it to the `PATH` and the `flyway` command will be available from 
 In order to connect with your database, Flyway needs the appropriate JDBC driver to be available in its `drivers` directory.
 
 Flyway ships with JDBC drivers for the following databases by default:
-- SQL Server
-- MySQL
-- MariaDB
-- PostgreSQL
-- Sybase ASE
+- Aurora MySQL
+- Aurora PostgreSQL
+- CockroachDB
+- Derby
 - H2
 - HSQLDB
-- Derby
+- MariaDB
+- MySQL
+- Percona XtraDB
+- PostgreSQL
 - SQLite
+- SQL Server
+- Sybase ASE
 
-If your database is not listed here, you need to download its JDBC driver and place it in the `drivers` directory yourself.
+If your database is not listed here, you need to download its JDBC driver and place it in the `drivers` directory
+yourself. Instructions on where to download the drivers from are provided on the respective documentation pages for each
+database.
 
 ## Configuration
 
@@ -138,7 +175,7 @@ Alternatively you can also use the `FLYWAY_CONFIG_FILE_ENCODING` environment var
 
 ### Environment Variables
 
-To make it ease to work with cloud and containerized environments, Flyway also supports configuration via
+To make it easier to work with cloud and containerized environments, Flyway also supports configuration via
 [environment variables](/documentation/envvars). Check out the [Flyway environment variable reference](/documentation/envvars) for details.
 
 ### Command-line Arguments
@@ -170,11 +207,11 @@ If you do not supply a database `user` or `password` via any of the means above,
 Database password:</pre>
 
 If you want Flyway to connect to your database without a user or password, you can suppress prompting by adding
-    the `-n` flag.
+the `-n` flag.
 
 ### Java Arguments
 
-If need to to pass custom arguments to Flyway's JVM, you can do so by setting the `JAVA_ARGS` environment variable.
+If you need to to pass custom arguments to Flyway's JVM, you can do so by setting the `JAVA_ARGS` environment variable.
 They will then automatically be taken into account when launching Flyway. This is particularly useful when needing to set JVM system properties.
 
 ## Output

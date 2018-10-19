@@ -50,15 +50,9 @@ subtitle: 'gradle flywayUndo'
         <td></td>
         <td>The password to use to connect to the database</td>
     </tr>
-    <tr>
-        <td>schemas</td>
-        <td>NO</td>
-        <td><i>default schema of the connection</i></td>
-        <td>Case-sensitive list of schemas managed by Flyway.<br/>
-            The first schema in the list will be automatically set as the default one during
-            the migration. It will also be the one containing the schema history table.
-        </td>
-    </tr>
+    {% include cfg/connectRetries.html %}
+    {% include cfg/initSql.html %}
+    {% include cfg/schemas-maven-gradle.html %}
     <tr>
         <td>table</td>
         <td>NO</td>
@@ -69,17 +63,7 @@ subtitle: 'gradle flywayUndo'
             the schema history table is placed in the first schema of the list.
         </td>
     </tr>
-    <tr>
-        <td>locations</td>
-        <td>NO</td>
-        <td>filesystem:src/main/resources/db/migration</td>
-        <td>Locations to scan recursively for migrations. The location type is determined by its prefix.<br/>
-            Unprefixed locations or locations starting with <code>classpath:</code> point to a package on the
-            classpath and may contain both sql and java-based migrations.<br/>
-            Locations starting with <code>filesystem:</code> point to a directory on the filesystem and may only
-            contain sql migrations.
-        </td>
-    </tr>
+    {% include cfg/locations-maven-gradle.html %}
     <tr>
         <td>sqlMigrationPrefix</td>
         <td>NO</td>
@@ -235,22 +219,11 @@ subtitle: 'gradle flywayUndo'
         <td><i>Current database user</i></td>
         <td>The username that will be recorded in the schema history table as having applied the migration</td>
     </tr>
-    <tr>
-        <td>errorHandlers</td>
-        <td>NO</td>
-        <td><i>none</i></td>
-        <td>The fully qualified class names of <a href="/documentation/errorhandlers">Error Handlers</a> for errors and warnings that occur during
-         a migration. This can be used to customize Flyway's behavior by for example throwing another runtime exception,
-          outputting a warning or suppressing the error instead of throwing a FlywayException. ErrorHandlers are invoked
-           in order until one reports to have successfully handled the errors or warnings.
-           If none do, or if none are present, Flyway falls back to its default handling of errors and warnings.
-           </td>
-    </tr>
     <tr id="errorOverrides">
         <td>errorOverrides {% include pro.html %}</td>
         <td>NO</td>
         <td><i>none</i></td>
-        <td><p>Rules for the built-in error handler that lets you override specific SQL states and errors codes from error
+        <td><p>Rules for the built-in error handling that lets you override specific SQL states and errors codes from error
              to warning or from warning to error.</p>
              <p>Each error override has the following format: <code>STATE:12345:W</code>.
              It is a 5 character SQL state, a colon, the SQL error code, a colon and finally the desired
@@ -268,16 +241,20 @@ subtitle: 'gradle flywayUndo'
             directory, Flyway will create all directories and parent directories as needed.
             Omit to use the default mode of executing the SQL statements directly against the database.</td>
     </tr>
+    {% include cfg/licenseKey.html %}
     </tbody>
 </table>
 
 ## Sample configuration
 
-<pre class="prettyprint">flyway {
+```groovy
+flyway {
     driver = 'org.hsqldb.jdbcDriver'
     url = 'jdbc:hsqldb:file:/db/flyway_sample;shutdown=true'
     user = 'SA'
     password = 'mySecretPwd'
+    connectRetries = 10
+    initSql = 'SET ROLE \'myuser\''
     schemas = ['schema1', 'schema2', 'schema3']
     table = 'schema_history'
     locations = ['classpath:migrations', 'classpath:db/pkg', 'filesystem:/sql-migrations']
@@ -304,10 +281,10 @@ subtitle: 'gradle flywayUndo'
     ignoreIgnoredMigrations = false
     ignoreFutureMigrations = false
     installedBy = "my-user"
-    errorHandlers = ['com.mycomp.MyCustomErrorHandler', 'com.mycomp.AnotherErrorHandler']
     errorOverrides = ['99999:17110:E', '42001:42001:W']
     dryRunOutput = '/my/sql/dryrun-outputfile.sql'
-}</pre>
+}
+```
 
 ## Sample output
 <pre class="console">&gt; gradle flywayMigrate -i

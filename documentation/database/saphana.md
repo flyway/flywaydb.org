@@ -13,16 +13,6 @@ subtitle: SAP HANA
 ## Driver
 
 <table class="table">
-<thead>
-<tr>
-<th></th>
-<th>SAP</th>
-</tr>
-</thead>
-<tr>
-<th>Supported versions</th>
-<td><code>1.0</code> and later</td>
-</tr>
 <tr>
 <th>URL format</th>
 <td><code>jdbc:sap://<i>host</i>:<i>port</i>/?databaseName=<i>database</i></code></td>
@@ -34,6 +24,10 @@ subtitle: SAP HANA
 <tr>
 <th>Download</th>
 <td>Download from <a href="https://sap.com">sap.com</a></td>
+</tr>
+<tr>
+<th>Supported versions</th>
+<td><code>1.0</code> and later</td>
 </tr>
 <tr>
 <th>Default Java class</th>

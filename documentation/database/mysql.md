@@ -24,24 +24,24 @@ subtitle: MySQL
 </tr>
 </thead>
 <tr>
-<th>Supported versions</th>
-<td><code>5.1.44</code> and later</td>
-<td><code>2.0.0</code> and later</td>
-</tr>
-<tr>
 <th>URL format</th>
 <td><code>jdbc:mysql://<i>host</i>:<i>port</i>/<i>database</i></code></td>
 <td><code>jdbc:mysql://<i>host</i>:<i>port</i>/<i>database</i></code></td>
 </tr>
 <tr>
 <th>Ships with Flyway Command-line</th>
-<td>No</td>
+<td>Yes</td>
 <td>Yes</td>
 </tr>
 <tr>
 <th>Maven Central coordinates</th>
-<td><code>mysql:mysql-connector-java:8.0.11</code></td>
-<td><code>org.mariadb.jdbc:mariadb-java-client:2.2.3</code></td>
+<td><code>mysql:mysql-connector-java:8.0.12</code></td>
+<td><code>org.mariadb.jdbc:mariadb-java-client:2.3.0</code></td>
+</tr>
+<tr>
+<th>Supported versions</th>
+<td><code>5.1.44</code> and later</td>
+<td><code>2.0.0</code> and later</td>
 </tr>
 <tr>
 <th>Default Java class</th>
@@ -101,5 +101,5 @@ INSERT INTO ${tableName} (name) VALUES (&#x27;Mr. T&#x27;);</pre>
         Example: /*!50003 CREATE*/ /*!50017 DEFINER=`...`*/ /*!50003 TRIGGER EntityBeforeInsert ...
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/database/mariadb">MariaDB <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/database/aurora-mysql">Aurora MySQL <i class="fa fa-arrow-right"></i></a>
 </p>

@@ -19,16 +19,6 @@ subtitle: PostgreSQL
 ## Driver
 
 <table class="table">
-<thead>
-<tr>
-<th></th>
-<th>PostgreSQL</th>
-</tr>
-</thead>
-<tr>
-<th>Supported versions</th>
-<td><code>9.3-1104-jdbc4</code> and later</td>
-</tr>
 <tr>
 <th>URL format</th>
 <td><code>jdbc:postgresql://<i>host</i>:<i>port</i>/<i>database</i></code></td>
@@ -39,7 +29,11 @@ subtitle: PostgreSQL
 </tr>
 <tr>
 <th>Maven Central coordinates</th>
-<td><code>org.postgresql:postgresql:42.1.4</code></td>
+<td><code>org.postgresql:postgresql:42.2.5</code></td>
+</tr>
+<tr>
+<th>Supported versions</th>
+<td><code>9.3-1104-jdbc4</code> and later</td>
 </tr>
 <tr>
 <th>Default Java class</th>
@@ -106,5 +100,5 @@ COPY copy_test (c1, c2, c3) FROM stdin;
 - No support for cleaning referenced large objects in `pg_largeobject` ([Issue 1934](https://github.com/flyway/flyway/issues/1934))
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/database/redshift">Redshift <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/database/aurora-postgresql">Aurora PostgreSQL <i class="fa fa-arrow-right"></i></a>
 </p>

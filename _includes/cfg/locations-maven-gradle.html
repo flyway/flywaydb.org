@@ -1,0 +1,5 @@
+{% include cfg/_cfg.html name="locations" required=false default='filesystem:src/main/resources/db/migration' description="Locations to scan recursively for migrations. The location type is determined by its prefix.<br/>
+Unprefixed locations or locations starting with <code>classpath:</code> point to a package on the
+classpath and may contain both SQL and Java-based migrations.<br/>
+Locations starting with <code>filesystem:</code> point to a directory on the filesystem, may only
+contain SQL migrations and are only scanned recursively down non-hidden directories." %}

@@ -6,7 +6,7 @@ subtitle: Gradle Plugin
 # Gradle Plugin
 
 The Flyway Community Edition and Flyway Pro Edition Gradle plugin support **Gradle 3.x** and **Gradle 4.x** 
-running on **Java 8**, **Java 9** or **Java 10**. The Flyway Enterprise Gradle plugin also supports **Java 7**.
+running on **Java 8**, **Java 9**, **Java 10** or **Java 11**. The Flyway Enterprise Gradle plugin also supports **Java 7**.
 
 ## Installation
 
@@ -46,10 +46,10 @@ apply plugin: 'org.flywaydb.flyway'</pre>
         <pre class="prettyprint">buildscript {
     repositories {
         maven {
-            url "s3://flyway-repo/release"
-            credentials(AwsCredentials) {
-                accessKey '<i>your-flyway-pro-user</i>'
-                secretKey '<i>your-flyway-pro-password</i>'
+            url "https://repo.flywaydb.org/repo"
+            credentials {
+                username '<i>your-flyway-pro-license-key</i>'
+                password 'flyway'
             }
         }
     }
@@ -64,10 +64,10 @@ apply plugin: 'org.flywaydb.flyway'</pre>
         <pre class="prettyprint">buildscript {
     repositories {
         maven {
-            url "s3://flyway-repo/release"
-            credentials(AwsCredentials) {
-                accessKey '<i>your-flyway-enterprise-user</i>'
-                secretKey '<i>your-flyway-enterprise-password</i>'
+            url "https://repo.flywaydb.org/repo"
+            credentials {
+                username '<i>your-flyway-enterprise-license-key</i>'
+                password 'flyway'
             }
         }
     }
