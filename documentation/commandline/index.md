@@ -57,18 +57,18 @@ executing Flyway to any of the following values:
 <tr><td><code>enterprise</code></td><td>Select the Flyway Enterprise Edition</td></tr> 
 </table> 
 
-### Edition-specific launchers
+### Edition-selecting flags
 
-Alternatively Flyway also comes with edition-specific launchers. Whereas the `flyway` command will launch whatever
-edition has been selected with the `FLYWAY_EDITION` environment variable (defaulting to `community`), you can also use
-edition-specific launchers to force the selection of the edition of your choice:
+Alternatively Flyway also comes with edition-selecting flags. By default the `flyway` command will launch whatever
+edition has been selected with the `FLYWAY_EDITION` environment variable (defaulting to `community`).
+You can however also use edition-selecting flags to force the selection of the edition of your choice and avoid the need
+to set any environment variable at all:
 
 <table class="table table-striped">
-<tr><td><code>flyway</code></td><td>Select the Flyway Edition selected with the <code>FLYWAY_EDITION</code> environment variable (defaulting to <code>community</code>)</td></tr> 
-<tr><td><code>flyway-community</code></td><td>Select the Flyway Community Edition</td></tr> 
-<tr><td><code>flyway-trial</code></td><td>Select the Flyway Trial Edition</td></tr> 
-<tr><td><code>flyway-pro</code></td><td>Select the Flyway Pro Edition</td></tr> 
-<tr><td><code>flyway-enterprise</code></td><td>Select the Flyway Enterprise Edition</td></tr> 
+<tr><td><code>-community</code></td><td>Select the Flyway Community Edition</td></tr> 
+<tr><td><code>-trial</code></td><td>Select the Flyway Trial Edition</td></tr> 
+<tr><td><code>-pro</code></td><td>Select the Flyway Pro Edition</td></tr> 
+<tr><td><code>-enterprise</code></td><td>Select the Flyway Enterprise Edition</td></tr> 
 </table> 
 
 ## Commands
