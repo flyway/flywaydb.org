@@ -18,7 +18,7 @@ Select the platform that you need. Each download contains all editions (communit
 <tr><td><i class="fa fa-apple"></i> macOS</td><td><a class="btn btn-primary btn-download" href="/download/thankyou?dl=https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-macosx-x64.tar.gz"><i class="fa fa-download"></i> flyway-commandline-{{site.flywayVersion}}-macosx-x64.tar.gz</a></td></tr>
 <tr><td><i class="fa fa-linux"></i> Linux</td><td><a class="btn btn-primary btn-download" href="/download/thankyou?dl=https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-linux-x64.tar.gz"><i class="fa fa-download"></i> flyway-commandline-{{site.flywayVersion}}-linux-x64.tar.gz</a></td></tr>
 <tr><td><img title="Docker" height="10" src="/assets/logos/docker.png"> Docker</td><td>
-<pre class="console"><span>&gt;</span> docker pull <strong>boxfuse/flyway</strong></pre>
+<pre class="console"><span>&gt;</span> docker pull <strong>boxfuse/flyway:{{site.flywayVersion}}</strong></pre>
 Go to Docker Hub for <a href="https://hub.docker.com/r/boxfuse/flyway/">detailed usage instructions</a>.</td></tr>
 <tr><td>All platforms</td><td>            <a href="/download/thankyou?dl=https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}.zip">flyway-commandline-{{site.flywayVersion}}.zip
                                               (requires a Java 8 JRE)</a><br/>
