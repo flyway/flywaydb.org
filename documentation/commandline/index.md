@@ -11,6 +11,8 @@ into their applications nor having to install a build tool.
 
 ## Download
 
+Select the platform that you need. Each download contains all editions (community, trial, pro, enterprise) of Flyway.
+
 <table class="table">
 <tr><td><i class="fa fa-windows"></i> Windows</td><td><a class="btn btn-primary btn-download" href="/download/thankyou?dl=https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-windows-x64.zip"><i class="fa fa-download"></i> flyway-commandline-{{site.flywayVersion}}-windows-x64.zip</a></td></tr>
 <tr><td><i class="fa fa-apple"></i> macOS</td><td><a class="btn btn-primary btn-download" href="/download/thankyou?dl=https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-macosx-x64.tar.gz"><i class="fa fa-download"></i> flyway-commandline-{{site.flywayVersion}}-macosx-x64.tar.gz</a></td></tr>
