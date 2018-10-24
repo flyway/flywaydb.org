@@ -46,8 +46,8 @@ Choose your Flyway edition based on the features and support level you require
 <tr><td>Payment methods accepted</td><td></td><td>Credit card</td><td>Credit card, wire transfer, purchase order</td></tr>
 <tr><td></td>
 <td><a class="btn btn-primary btn-download" href="/download/community"><i class="fa fa-download"></i> Download</a></td>
-<td><button class="btn btn-primary btn-download" data-toggle="modal" data-target="#flyway-trial-license-modal"><i class="fa fa-download"></i> Download<br><span class="note">Free Trial for 30 days</span></button></td>
-<td><button class="btn btn-primary btn-download" data-toggle="modal" data-target="#flyway-trial-license-modal"><i class="fa fa-download"></i> Download<br><span class="note">Free Trial for 30 days</span></button></td>
+<td><button class="btn btn-primary btn-download" data-toggle="modal" data-target="#flyway-trial-license-modal">Start Free Trial <i class="fa fa-arrow-right"></i><br><span class="note">License key for 30 days</span></button></td>
+<td><button class="btn btn-primary btn-download" data-toggle="modal" data-target="#flyway-trial-license-modal">Start Free Trial <i class="fa fa-arrow-right"></i><br><span class="note">License key for 30 days</span></button></td>
 </tr>
 <tr><td></td>
 <td></td>
@@ -65,17 +65,28 @@ Contact us for more information at **sales@flywaydb.org**.
 <div class="modal fade" id="flyway-trial-license-modal" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">License Agreement</h4>
-      </div>
-      <div class="modal-body">
-        By downloading the Flyway Trial Edition you confirm to have read and that you agree to the terms of the <a href="/licenses/flyway-trial" target="_blank">Flyway Trial Edition License</a>.
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">I do not agree</button>
-        <a class="btn btn-primary" href="javascript:hideAndDownload('#flyway-trial-license-modal', 'https://files.flywaydb.org/downloads/flyway-trial-edition/flyway-trial-{{site.flywayVersion}}.zip')">I agree</a>
-      </div>
+      <form id="trial_form" action="javascript:hideAndSubmitTrialForm();">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">License Agreement</h4>
+          </div>
+          <div class="modal-body">
+            <p>By requesting a Flyway Trial Edition license key you confirm to have read and that you agree to the terms of the <a href="/licenses/flyway-trial" target="_blank">Flyway Trial Edition License</a>.</p>
+              <div class="form-group">
+                <label for="inputCompany">Company name (required)</label>
+                <input type="text" class="form-control" id="inputCompany" placeholder="My Company, Inc" required autofocus>
+              </div>
+            <div class="form-group">
+                <label for="inputEmail">Email address (required)</label>
+                <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
+              </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">I do not agree</button>
+            <button type="submit" class="btn btn-primary">I agree, email me the license key</button>
+          </div>
+      </form>
     </div>
   </div>
 </div>
+

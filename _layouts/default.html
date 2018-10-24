@@ -169,6 +169,9 @@
                 });
             }
         });
+        $('.modal').on('shown.bs.modal', function() {
+            $(this).find('[autofocus]').focus();
+        });
     });
 
     if (navigator.platform.indexOf('Win') == -1) {
@@ -193,6 +196,21 @@
         $(id).modal('hide');
 
         downloadDeferred("/download/thankyou?dl=" + url);
+    }
+
+    function hideAndSubmitTrialForm() {
+        $("#trial_form button").attr("disabled", "disabled");
+
+        var company = $("#trial_form #inputCompany").val();
+        var email = $("#trial_form #inputEmail").val();
+
+        $.ajax({
+            type: "POST",
+            url: 'https://repo.flywaydb.org/license/trial',
+            data: {"licensedTo":company,"email":email}
+        });
+
+        $('#flyway-trial-license-modal').modal('hide');
     }
 </script>
 <!-- Place this tag right after the last button or just before your close body tag. -->
