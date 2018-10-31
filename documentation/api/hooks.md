@@ -9,7 +9,7 @@ There are three ways you can hook into the Flyway API.
 
 ## Java-based Migrations
 
-The first one is the the most common one: <a href="/documentation/migrations#java-based-migrations">Java-based Migrations</a>
+The first one is the the most common one: [Java-based Migrations](/documentation/migrations#java-based-migrations)
 when you need more power than SQL can offer you. This is great to for dealing with LOBs or performing advanced
 data transformations.
 
@@ -68,28 +68,21 @@ public interface Callback {
 }
 ```
 
-The `event` argument tells you which [**Event**](/documentation/api/javadoc/org/flywaydb/core/api/callback/Event) 
+The `event` argument tells you which [`Event`](/documentation/api/javadoc/org/flywaydb/core/api/callback/Event) 
 (`beforeClean`, `afterMigrate`, ...) is being handled and the `context` argument gives you access to things
 like the database connection and the Flyway configuration.
 
 ## Custom Migration resolvers &amp; executors
 
-<p>For those that need more than what the SQL and Java-based migrations offer, you also have the possibility to
-implement your own <strong><a href="/documentation/api/javadoc/org/flywaydb/core/api/resolver/MigrationResolver">MigrationResolver</a></strong>
-    coupled with a custom <strong><a href="/documentation/api/javadoc/org/flywaydb/core/api/resolver/MigrationExecutor">MigrationExecutor</a></strong>.
-</p>
+For those that need more than what the SQL and Java-based migrations offer, you also have the possibility to
+implement your own [`MigrationResolver`](/documentation/api/javadoc/org/flywaydb/core/api/resolver/MigrationResolver)
+coupled with a custom [`MigrationExecutor`](/documentation/api/javadoc/org/flywaydb/core/api/executor/MigrationExecutor).
 
-<p>These can then be used for loading things like CSV-based migrations or other custom formats.</p>
+These can then be used for loading things like CSV-based migrations or other custom formats.
 
-<p>To access the Flyway configuration your resolver can implement <strong><a
-        href="/documentation/api/javadoc/org/flywaydb/core/api/configuration/ConfigurationAware"
->ConfigurationAware</a></strong> and Flyway will automatically inject an instance of <strong><a
-        href="/documentation/api/javadoc/org/flywaydb/core/api/configuration/FlywayConfiguration"
->FlywayConfiguration</a></strong>.</p>
-
-<p>By using the <strong>skipDefaultResolvers</strong> property, these custom resolvers can also be used
+By using the `skipDefaultResolvers` property, these custom resolvers can also be used
 to completely replace the built-in ones (by default, custom resolvers will run in addition to
-built-in ones).</p>
+built-in ones).
 
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/api/javadoc">API: Javadoc <i class="fa fa-arrow-right"></i></a>

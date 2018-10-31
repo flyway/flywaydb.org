@@ -82,6 +82,7 @@ CREATE TRIGGER update_customer_address UPDATE OF address ON customers
 
 - No concurrent migration as SQLite does not support `SELECT ... FOR UPDATE` locking
 - No support for multiple schemas or changing the current schema, as SQLite doesn't support schemas
+- No support for `CREATE TRANSACTION` and `COMMIT` statements within a migration, as SQLite doesn't support nested transactions ([Issue 2190](https://github.com/flyway/flyway/issues/2190))
 
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/existing">Existing database setup <i class="fa fa-arrow-right"></i></a>

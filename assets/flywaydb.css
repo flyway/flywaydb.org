@@ -298,11 +298,11 @@ img.screenshot {
     font-size: 18px;
 }
 
-#download-pricing .btn {
+#download-pricing .btn-download {
     width: 150px;
 }
 
-#download-pricing .btn i {
+#download-pricing .btn-download i {
     color: white;
 }
 

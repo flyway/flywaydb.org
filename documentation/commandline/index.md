@@ -11,12 +11,14 @@ into their applications nor having to install a build tool.
 
 ## Download
 
+Select the platform that you need. Each download contains all editions (community, trial, pro, enterprise) of Flyway.
+
 <table class="table">
 <tr><td><i class="fa fa-windows"></i> Windows</td><td><a class="btn btn-primary btn-download" href="/download/thankyou?dl=https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-windows-x64.zip"><i class="fa fa-download"></i> flyway-commandline-{{site.flywayVersion}}-windows-x64.zip</a></td></tr>
 <tr><td><i class="fa fa-apple"></i> macOS</td><td><a class="btn btn-primary btn-download" href="/download/thankyou?dl=https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-macosx-x64.tar.gz"><i class="fa fa-download"></i> flyway-commandline-{{site.flywayVersion}}-macosx-x64.tar.gz</a></td></tr>
 <tr><td><i class="fa fa-linux"></i> Linux</td><td><a class="btn btn-primary btn-download" href="/download/thankyou?dl=https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-linux-x64.tar.gz"><i class="fa fa-download"></i> flyway-commandline-{{site.flywayVersion}}-linux-x64.tar.gz</a></td></tr>
 <tr><td><img title="Docker" height="10" src="/assets/logos/docker.png"> Docker</td><td>
-<pre class="console"><span>&gt;</span> docker pull <strong>boxfuse/flyway</strong></pre>
+<pre class="console"><span>&gt;</span> docker pull <strong>boxfuse/flyway:{{site.flywayVersion}}</strong></pre>
 Go to Docker Hub for <a href="https://hub.docker.com/r/boxfuse/flyway/">detailed usage instructions</a>.</td></tr>
 <tr><td>All platforms</td><td>            <a href="/download/thankyou?dl=https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}.zip">flyway-commandline-{{site.flywayVersion}}.zip
                                               (requires a Java 8 JRE)</a><br/>
@@ -57,18 +59,18 @@ executing Flyway to any of the following values:
 <tr><td><code>enterprise</code></td><td>Select the Flyway Enterprise Edition</td></tr> 
 </table> 
 
-### Edition-specific launchers
+### Edition-selecting flags
 
-Alternatively Flyway also comes with edition-specific launchers. Whereas the `flyway` command will launch whatever
-edition has been selected with the `FLYWAY_EDITION` environment variable (defaulting to `community`), you can also use
-edition-specific launchers to force the selection of the edition of your choice:
+Alternatively Flyway also comes with edition-selecting flags. By default the `flyway` command will launch whatever
+edition has been selected with the `FLYWAY_EDITION` environment variable (defaulting to `community`).
+You can however also use edition-selecting flags to force the selection of the edition of your choice and avoid the need
+to set any environment variable at all:
 
 <table class="table table-striped">
-<tr><td><code>flyway</code></td><td>Select the Flyway Edition selected with the <code>FLYWAY_EDITION</code> environment variable (defaulting to <code>community</code>)</td></tr> 
-<tr><td><code>flyway-community</code></td><td>Select the Flyway Community Edition</td></tr> 
-<tr><td><code>flyway-trial</code></td><td>Select the Flyway Trial Edition</td></tr> 
-<tr><td><code>flyway-pro</code></td><td>Select the Flyway Pro Edition</td></tr> 
-<tr><td><code>flyway-enterprise</code></td><td>Select the Flyway Enterprise Edition</td></tr> 
+<tr><td><code>-community</code></td><td>Select the Flyway Community Edition</td></tr> 
+<tr><td><code>-trial</code></td><td>Select the Flyway Trial Edition</td></tr> 
+<tr><td><code>-pro</code></td><td>Select the Flyway Pro Edition</td></tr> 
+<tr><td><code>-enterprise</code></td><td>Select the Flyway Enterprise Edition</td></tr> 
 </table> 
 
 ## Commands

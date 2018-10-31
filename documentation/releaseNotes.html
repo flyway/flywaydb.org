@@ -8,20 +8,35 @@ subtitle: Release Notes
 <p>Thank you all for reporting all these issues and contributing fixes!</p>
 
 <div class="release">
-    <h2 id="5.2.1">Flyway 5.2.1 (Unreleased)</h2>
+    <h2 id="5.2.2">Flyway 5.2.2 (Unreleased)</h2>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        {% include issue.html id="2185" title="CONFIG statement cannot be used inside a user transaction" %}
+    </ul>
+    <p>
+        Thanks to seb-urbaniak for reporting this issue.
+    </p>
+</div>
+
+
+<div class="release">
+    <h2 id="5.2.1">Flyway 5.2.1 (2018-10-24)</h2>
 
     <h3>New features</h3>
     <ul>
-        {% include issue.html id="2170" title="Command-line: Add launchers for each edition" %}
+        {% include issue.html id="2170" title="Command-line: Add flags for running specific editions" %}
     </ul>
 
     <h3>Bug fixes</h3>
     <ul>
         {% include issue.html id="2169" title="setCallbacks inconsistent deprecation warning" %}
         {% include issue.html id="2171" title="MySQL Driver 5.1.x support" %}
+        {% include issue.html id="2175" title="'sp_addsubscription' cannot be executed within a transaction" %}
+        {% include issue.html id="2176" title="MySQL: Exception restoring original database on a connection to a dropped database" %}
     </ul>
     <p>
-        Thanks to GregorKo and Stéphane Nicoll for reporting these issues.
+        Thanks to edquan, GregorKo, seb-urbaniak and Stéphane Nicoll for reporting these issues.
     </p>
 </div>
 

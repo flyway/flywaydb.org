@@ -355,6 +355,29 @@ public class V1_2__Another_user extends BaseJavaMigration {
 }
 ```
 
+### Spring
+
+If your application already uses Spring and you do not want to use JDBC directly you can easily use Spring JDBC's
+`JdbcTemplate` instead:
+
+```java
+package db.migration;
+
+import org.flywaydb.core.api.migration.BaseJavaMigration;
+import org.flywaydb.core.api.migration.Context;
+import java.sql.PreparedStatement;
+
+/**
+ * Example of a Java-based migration using Spring JDBC.
+ */
+public class V1_2__Another_user extends BaseJavaMigration {
+    public void migrate(Context context) {
+        new JdbcTemplate(new SingleConnectionDataSource(context.getConnection(), true))
+                .execute("INSERT INTO test_user (name) VALUES ('Obelix')");
+    }
+}
+```
+
 ## Transactions
 
 By default, Flyway always wraps the execution of an entire migration within a single transaction.
