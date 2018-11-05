@@ -31,10 +31,16 @@ The Flyway Enterprise Maven plugin also supports **Java 6** and **Java 7**.
 &lt;/plugin&gt;</pre>
         </div>
         <div class="tab-pane" id="tab-trial">
-            <p style="margin-top: 10px">Start by downloading and extracting the <a href="/download">Flyway Trial Edition</a> zip. Then execute the
-            <code>installToLocalMavenRepo</code> script in the <code>flyway-{{ site.flywayVersion }}</code> directory.
-            This installs all necessary artifacts in your local Maven repository, making it possible to use them in Maven builds.</p>
-            <pre class="prettyprint">&lt;build&gt;
+            <code>&lt;project-dir&gt;/pom.xml</code>
+            <pre class="prettyprint">&lt;pluginRepositories&gt;
+    &lt;pluginRepository&gt;
+        &lt;id&gt;flyway-repo&lt;/id&gt;
+        &lt;url&gt;https://repo.flywaydb.org/repo&lt;/url&gt;
+    &lt;/pluginRepository&gt;
+    ...
+&lt;/pluginRepositories&gt;
+        
+&lt;build&gt;
     &lt;plugins&gt;
         &lt;plugin&gt;
             &lt;groupId&gt;org.flywaydb<strong>.trial</strong>&lt;/groupId&gt;
@@ -43,6 +49,17 @@ The Flyway Enterprise Maven plugin also supports **Java 6** and **Java 7**.
         &lt;/plugin&gt;
     &lt;/plugins&gt;
 &lt;/build&gt;</pre>
+            <code>&lt;user-home&gt;/.m2/settings.xml</code>
+            <pre class="prettyprint">&lt;settings&gt;
+    &lt;servers&gt;
+        &lt;server&gt;
+            &lt;id&gt;flyway-repo&lt;/id&gt;
+            &lt;username&gt;<i>your-flyway-trial-license-key</i>&lt;/username&gt;
+            &lt;password&gt;flyway&lt;/password&gt;
+        &lt;/server&gt;
+    &lt;/servers&gt;
+    ...
+&lt;/settings&gt;</pre>
         </div>
         <div class="tab-pane" id="tab-pro">
             <code>&lt;project-dir&gt;/pom.xml</code>

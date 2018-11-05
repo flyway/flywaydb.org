@@ -28,12 +28,15 @@ running on **Java 8**, **Java 9**, **Java 10** or **Java 11**. The Flyway Enterp
 }</pre>
         </div>
         <div class="tab-pane" id="tab-trial">
-            <p style="margin-top: 10px">Start by downloading and extracting the <a href="/download">Flyway Trial Edition</a> zip. Then execute the
-            <code>installToLocalMavenRepo</code> script in the <code>flyway-{{ site.flywayVersion }}</code> directory.
-            This installs all necessary artifacts in your local Maven repository, making it possible to use them in Gradle builds.</p>
         <pre class="prettyprint">buildscript {
     repositories {
-        mavenLocal()
+        maven {
+            url "https://repo.flywaydb.org/repo"
+            credentials {
+                username '<i>your-flyway-trial-license-key</i>'
+                password 'flyway'
+            }
+        }
     }
     dependencies {
         classpath "org.flywaydb<strong>.trial</strong>:flyway-gradle-plugin:{{ site.flywayVersion }}"
