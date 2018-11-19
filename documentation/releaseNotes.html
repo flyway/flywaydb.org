@@ -13,12 +13,13 @@ subtitle: Release Notes
     <h3>Bug fixes</h3>
     <ul>
         {% include issue.html id="2185" title="CONFIG statement cannot be used inside a user transaction" %}
+        {% include issue.html id="2190" title="SQLite: Migrations containing PRAGMA foreign_keys= should be marked as non-transactional" %}
         {% include issue.html id="2197" title="MySQL: User-defined variables leak across migrations" %}
         {% include issue.html id="2202" title="NullPointerException with PostgreSQL CREATE RULE statements" %}
         {% include issue.html id="2206" title="MariaDB: Can't create database 'null' error if no database was specified in URL" %}
     </ul>
     <p>
-        Thanks to Gerd Behrmann, htto and seb-urbaniak for reporting these issues.
+        Thanks to Gerd Behrmann, htto, seb-urbaniak and SH.Xue for reporting these issues.
     </p>
 </div>
 
