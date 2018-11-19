@@ -69,16 +69,18 @@ be migrated to a state the rest of the code can work with.
         <div class="tab-pane" id="tab-trial">
 <table class="table">
     <tr>
-        <th>Installation</th>
-        <td>Start by downloading and extracting the <a href="/download">Flyway Trial Edition</a> zip. Then execute the
-            <code>installToLocalMavenRepo</code> script in the <code>flyway-{{ site.flywayVersion }}</code> directory.
-            This installs all necessary artifacts in your local Maven repository, making it possible to use them in Maven and Gradle builds.
-        </td>
-    </tr>
-    <tr>
         <th>Maven</th>
         <td>
-            <pre class="prettyprint">&lt;dependencies&gt;
+            <code>pom.xml</code>
+            <pre class="prettyprint">&lt;repositories&gt;
+    &lt;repository&gt;
+        &lt;id&gt;flyway-repo&lt;/id&gt;
+        &lt;url&gt;https://repo.flywaydb.org/repo&lt;/url&gt;
+    &lt;/repository&gt;
+    ...
+&lt;/repositories&gt;
+
+&lt;dependencies&gt;
     &lt;dependency&gt;
         &lt;groupId&gt;org.flywaydb<strong>.trial</strong>&lt;/groupId&gt;
         &lt;artifactId&gt;flyway-core&lt;/artifactId&gt;
@@ -86,16 +88,35 @@ be migrated to a state the rest of the code can work with.
     &lt;/dependency&gt;
     ...
 &lt;/dependencies&gt;</pre>
+            <code>settings.xml</code>
+            <pre class="prettyprint">&lt;settings&gt;
+    &lt;servers&gt;
+        &lt;server&gt;
+            &lt;id&gt;flyway-repo&lt;/id&gt;
+            &lt;username&gt;<i>your-flyway-trial-license-key</i>&lt;/username&gt;
+            &lt;password&gt;flyway&lt;/password&gt;
+        &lt;/server&gt;
+    &lt;/servers&gt;
+    ...
+&lt;/settings&gt;</pre>
         </td>
     </tr>
     <tr>
         <th>Gradle</th>
         <td>
             <pre class="prettyprint">repositories {
-    mavenLocal()
+    maven {
+        url "https://repo.flywaydb.org/repo"
+        credentials {
+            username '<i>your-flyway-trial-license-key</i>'
+            password 'flyway'
+        }
+    }
 }
 
-compile "org.flywaydb<strong>.trial</strong>:flyway-core:{{ site.flywayVersion }}"</pre>
+dependencies {
+    compile "org.flywaydb<strong>.trial</strong>:flyway-core:{{ site.flywayVersion }}"
+}</pre>
         </td>
     </tr>
 </table>
