@@ -185,8 +185,8 @@ If SQL Callbacks aren't flexible enough for you, you have the option to implemen
 [**Callback**](/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback)
 interface yourself. You can even hook multiple Callback implementations in the lifecycle.
 
-**More info:** <a href="/documentation/api/hooks#callsbacks">Java-based Callbacks</a></p>
+**More info:** [Java-based Callbacks](/documentation/api/hooks#callsbacks)
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/errorhandlers">Error Handlers <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/erroroverrides">Error Overrides <i class="fa fa-arrow-right"></i></a>
 </p>
