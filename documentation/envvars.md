@@ -274,14 +274,21 @@ The following environment variables are supported:
     </tr>
     <tr id="FLYWAY_ERROR_OVERRIDES">
         <td>FLYWAY_ERROR_OVERRIDES {% include pro.html %}</td>
-        <td><p>Comma-sparated list of rules for the built-in error handling that lets you override specific SQL states and errors codes from error
-             to warning or from warning to error.</p>
-             <p>Each error override has the following format: <code>STATE:12345:W</code>.
-             It is a 5 character SQL state, a colon, the SQL error code, a colon and finally the desired
-             behavior that should override the initial one. The following behaviors are accepted: <code>W</code> to force a warning
-             and <code>E</code> to force an error.</p>
-             <p>For example, to force Oracle stored procedure compilation issues to produce
-             errors instead of warnings, the following errorOverride can be used: <code>99999:17110:E</code></p>
+        <td>Comma-sparated list of rules for the built-in error handler that let you override specific SQL states and errors codes in order to force specific errors or warnings to be treated as debug messages, info messages, warnings or errors.
+            <p>Each error override has the following format: <code>STATE:12345:W</code>. It is a 5 character SQL state, a colon, the SQL error code, a colon and finally the desired behavior that should override the initial one.</p>
+            <p>The following behaviors are accepted:</p>
+            <ul>
+              <li><code>D</code> to force a debug message</li>
+              <li><code>D-</code> to force a debug message, but do not show the original sql state and error code</li>
+              <li><code>I</code> to force an info message</li>
+              <li><code>I-</code> to force an info message, but do not show the original sql state and error code</li>
+              <li><code>W</code> to force a warning</li>
+              <li><code>W-</code> to force a warning, but do not show the original sql state and error code</li>
+              <li><code>E</code> to force an error</li>
+              <li><code>E-</code> to force an error, but do not show the original sql state and error code</li>
+            </ul>
+            <p>Example 1: to force Oracle stored procedure compilation issues to produce errors instead of warnings, the following errorOverride can be used: <code>99999:17110:E</code></p>
+            <p>Example 2: to force SQL Server PRINT messages to be displayed as info messages (without SQL state and error code details) instead of warnings, the following errorOverride can be used: <code>S0001:0:I-</code></p>
        </td>
     </tr>
     <tr id="FLYWAY_DRYRUN_OUTPUT">
@@ -292,11 +299,11 @@ The following environment variables are supported:
     </tr>
     <tr id="FLYWAY_ORACLE_SQLPLUS">
         <td>FLYWAY_ORACLE_SQLPLUS {% include pro.html %}</td>
-        <td>Whether to Flyway's support for Oracle SQL*Plus commands should be activated.</td>
+        <td>Enable Flyway's support for <a href="/documentation/database/oracle#sqlplus-commands">Oracle SQL*Plus commands</a></td>
     </tr>
     <tr id="FLYWAY_LICENSE_KEY">
         <td>FLYWAY_LICENSE_KEY {% include pro.html %}</td>
-        <td>Flyway's license key.</td>
+        <td>Your Flyway license key (FL01...). Not yet a Flyway Pro or Enterprise Edition customer? Request your <a href="" data-toggle="modal" data-target="#flyway-trial-license-modal">Flyway trial license key</a> to try out Flyway Pro and Enterprise Edition features free for 30 days.</td>
     </tr>
     </tbody>
 </table>
@@ -304,3 +311,5 @@ The following environment variables are supported:
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/configfiles">Config Files <i class="fa fa-arrow-right"></i></a>
 </p>
+
+{% include trialpopup.html %}

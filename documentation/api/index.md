@@ -26,8 +26,6 @@ be migrated to a state the rest of the code can work with.
     <ul class="nav nav-tabs">
         <li class="active marketing-item"><a href="#tab-community" data-toggle="tab">Community Edition</a>
         </li>
-        <li class="marketing-item"><a href="#tab-trial" data-toggle="tab">Trial Edition</a>
-        </li>
         <li class="marketing-item"><a href="#tab-pro" data-toggle="tab">Pro Edition</a>
         </li>
         <li class="marketing-item"><a href="#tab-enterprise" data-toggle="tab">Enterprise Edition</a>
@@ -55,78 +53,28 @@ be migrated to a state the rest of the code can work with.
     <tr>
         <th>Binary</th>
         <td>
-            <a href="/download/thankyou?dl=https://repo1.maven.org/maven2/org/flywaydb/flyway-core/{{site.flywayVersion}}/flyway-core-{{site.flywayVersion}}.jar">flyway-core-{{site.flywayVersion}}.jar</a>
+            <a class="btn btn-primary btn-download" href="/download/thankyou?dl=https://repo1.maven.org/maven2/org/flywaydb/flyway-core/{{site.flywayVersion}}/flyway-core-{{site.flywayVersion}}.jar"><i class="fa fa-download"></i> flyway-core-{{site.flywayVersion}}.jar</a>
+            <a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-core/{{site.flywayVersion}}/flyway-core-{{site.flywayVersion}}.jar.md5">md5</a>
+            <a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-core/{{site.flywayVersion}}/flyway-core-{{site.flywayVersion}}.jar.sha1">sha1</a>
         </td>
     </tr>
     <tr>
-        <th>Source</th>
+        <th>Sources</th>
         <td>
-            <a href="/download/thankyou?dl=https://repo1.maven.org/maven2/org/flywaydb/flyway-core/{{site.flywayVersion}}/flyway-core-{{site.flywayVersion}}-sources.jar">flyway-core-{{site.flywayVersion}}-sources.jar</a>
+            <a class="btn btn-primary btn-download" href="/download/thankyou?dl=https://repo1.maven.org/maven2/org/flywaydb/flyway-core/{{site.flywayVersion}}/flyway-core-{{site.flywayVersion}}-sources.jar"><i class="fa fa-download"></i> flyway-core-{{site.flywayVersion}}-sources.jar</a>
+            <a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-core/{{site.flywayVersion}}/flyway-core-{{site.flywayVersion}}-sources.jar.md5">md5</a>
+            <a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-core/{{site.flywayVersion}}/flyway-core-{{site.flywayVersion}}-sources.jar.sha1">sha1</a>
         </td>
     </tr>
 </table>
-        </div>
-        <div class="tab-pane" id="tab-trial">
-<table class="table">
-    <tr>
-        <th>Maven</th>
-        <td>
-            <code>pom.xml</code>
-            <pre class="prettyprint">&lt;repositories&gt;
-    &lt;repository&gt;
-        &lt;id&gt;flyway-repo&lt;/id&gt;
-        &lt;url&gt;https://repo.flywaydb.org/repo&lt;/url&gt;
-    &lt;/repository&gt;
-    ...
-&lt;/repositories&gt;
-
-&lt;dependencies&gt;
-    &lt;dependency&gt;
-        &lt;groupId&gt;org.flywaydb<strong>.trial</strong>&lt;/groupId&gt;
-        &lt;artifactId&gt;flyway-core&lt;/artifactId&gt;
-        &lt;version&gt;{{ site.flywayVersion }}&lt;/version&gt;
-    &lt;/dependency&gt;
-    ...
-&lt;/dependencies&gt;</pre>
-            <code>settings.xml</code>
-            <pre class="prettyprint">&lt;settings&gt;
-    &lt;servers&gt;
-        &lt;server&gt;
-            &lt;id&gt;flyway-repo&lt;/id&gt;
-            &lt;username&gt;<i>your-flyway-trial-license-key</i>&lt;/username&gt;
-            &lt;password&gt;flyway&lt;/password&gt;
-        &lt;/server&gt;
-    &lt;/servers&gt;
-    ...
-&lt;/settings&gt;</pre>
-        </td>
-    </tr>
-    <tr>
-        <th>Gradle</th>
-        <td>
-            <pre class="prettyprint">repositories {
-    maven {
-        url "https://repo.flywaydb.org/repo"
-        credentials {
-            username '<i>your-flyway-trial-license-key</i>'
-            password 'flyway'
-        }
-    }
-}
-
-dependencies {
-    compile "org.flywaydb<strong>.trial</strong>:flyway-core:{{ site.flywayVersion }}"
-}</pre>
-        </td>
-    </tr>
-</table>
+<p class="note">Older versions are available from <a href="https://repo1.maven.org/maven2/org/flywaydb/flyway-core">Maven Central</a></p>
         </div>
         <div class="tab-pane" id="tab-pro">
 <table class="table">
     <tr>
         <th>Maven</th>
         <td>
-            <code>pom.xml</code>
+            <code>&lt;project-dir&gt;/pom.xml</code>
             <pre class="prettyprint">&lt;repositories&gt;
     &lt;repository&gt;
         &lt;id&gt;flyway-repo&lt;/id&gt;
@@ -143,12 +91,12 @@ dependencies {
     &lt;/dependency&gt;
     ...
 &lt;/dependencies&gt;</pre>
-            <code>settings.xml</code>
+            <code>&lt;user-home&gt;/.m2/settings.xml</code>
             <pre class="prettyprint">&lt;settings&gt;
     &lt;servers&gt;
         &lt;server&gt;
             &lt;id&gt;flyway-repo&lt;/id&gt;
-            &lt;username&gt;<i>your-flyway-pro-license-key</i>&lt;/username&gt;
+            &lt;username&gt;<a href="" data-toggle="modal" data-target="#flyway-trial-license-modal"><i>your-flyway-license-key</i></a>&lt;/username&gt;
             &lt;password&gt;flyway&lt;/password&gt;
         &lt;/server&gt;
     &lt;/servers&gt;
@@ -163,7 +111,7 @@ dependencies {
     maven {
         url "https://repo.flywaydb.org/repo"
         credentials {
-            username '<i>your-flyway-pro-license-key</i>'
+            username '<a href="" data-toggle="modal" data-target="#flyway-trial-license-modal"><i>your-flyway-license-key</i></a>'
             password 'flyway'
         }
     }
@@ -174,6 +122,22 @@ dependencies {
 }</pre>
         </td>
     </tr>
+    <tr>
+        <th>Binary</th>
+        <td>
+            <a class="btn btn-primary btn-download" href="/download/thankyou?dl=https://repo.flywaydb.org/repo/org/flywaydb/pro/flyway-core/{{site.flywayVersion}}/flyway-core-{{site.flywayVersion}}.jar"><i class="fa fa-download"></i> flyway-core-{{site.flywayVersion}}.jar</a>
+            <a class="note" href="https://repo.flywaydb.org/repo/org/flywaydb/pro/flyway-core/{{site.flywayVersion}}/flyway-core-{{site.flywayVersion}}.jar.md5">md5</a>
+            <a class="note" href="https://repo.flywaydb.org/repo/org/flywaydb/pro/flyway-core/{{site.flywayVersion}}/flyway-core-{{site.flywayVersion}}.jar.sha1">sha1</a>
+        </td>
+    </tr>
+    <tr>
+        <th>Sources</th>
+        <td>
+            <a class="btn btn-primary btn-download" href="/download/thankyou?dl=https://repo.flywaydb.org/repo/org/flywaydb/pro/flyway-core/{{site.flywayVersion}}/flyway-core-{{site.flywayVersion}}-sources.jar"><i class="fa fa-download"></i> flyway-core-{{site.flywayVersion}}-sources.jar</a>
+            <a class="note" href="https://repo.flywaydb.org/repo/org/flywaydb/pro/flyway-core/{{site.flywayVersion}}/flyway-core-{{site.flywayVersion}}-sources.jar.md5">md5</a>
+            <a class="note" href="https://repo.flywaydb.org/repo/org/flywaydb/pro/flyway-core/{{site.flywayVersion}}/flyway-core-{{site.flywayVersion}}-sources.jar.sha1">sha1</a>
+        </td>
+    </tr>
 </table>
         </div>
         <div class="tab-pane" id="tab-enterprise">
@@ -181,7 +145,7 @@ dependencies {
     <tr>
         <th>Maven</th>
         <td>
-            <code>pom.xml</code>
+            <code>&lt;project-dir&gt;/pom.xml</code>
             <pre class="prettyprint">&lt;repositories&gt;
     &lt;repository&gt;
         &lt;id&gt;flyway-repo&lt;/id&gt;
@@ -198,12 +162,12 @@ dependencies {
     &lt;/dependency&gt;
     ...
 &lt;/dependencies&gt;</pre>
-            <code>settings.xml</code>
+            <code>&lt;user-home&gt;/.m2/settings.xml</code>
             <pre class="prettyprint">&lt;settings&gt;
     &lt;servers&gt;
         &lt;server&gt;
             &lt;id&gt;flyway-repo&lt;/id&gt;
-            &lt;username&gt;<i>your-flyway-enterprise-license-key</i>&lt;/username&gt;
+            &lt;username&gt;<a href="" data-toggle="modal" data-target="#flyway-trial-license-modal"><i>your-flyway-license-key</i></a>&lt;/username&gt;
             &lt;password&gt;flyway&lt;/password&gt;
         &lt;/server&gt;
     &lt;/servers&gt;
@@ -218,7 +182,7 @@ dependencies {
     maven {
         url "https://repo.flywaydb.org/repo"
         credentials {
-            username '<i>your-flyway-enterprise-license-key</i>'
+            username '<a href="" data-toggle="modal" data-target="#flyway-trial-license-modal"><i>your-flyway-license-key</i></a>'
             password 'flyway'
         }
     }
@@ -227,6 +191,22 @@ dependencies {
 dependencies {
     compile "org.flywaydb<strong>.enterprise</strong>:flyway-core:{{ site.flywayVersion }}"
 }</pre>
+        </td>
+    </tr>
+    <tr>
+        <th>Binary</th>
+        <td>
+            <a class="btn btn-primary btn-download" href="/download/thankyou?dl=https://repo.flywaydb.org/repo/org/flywaydb/enterprise/flyway-core/{{site.flywayVersion}}/flyway-core-{{site.flywayVersion}}.jar"><i class="fa fa-download"></i> flyway-core-{{site.flywayVersion}}.jar</a>
+            <a class="note" href="https://repo.flywaydb.org/repo/org/flywaydb/enterprise/flyway-core/{{site.flywayVersion}}/flyway-core-{{site.flywayVersion}}.jar.md5">md5</a>
+            <a class="note" href="https://repo.flywaydb.org/repo/org/flywaydb/enterprise/flyway-core/{{site.flywayVersion}}/flyway-core-{{site.flywayVersion}}.jar.sha1">sha1</a>
+        </td>
+    </tr>
+    <tr>
+        <th>Sources</th>
+        <td>
+            <a class="btn btn-primary btn-download" href="/download/thankyou?dl=https://repo.flywaydb.org/repo/org/flywaydb/enterprise/flyway-core/{{site.flywayVersion}}/flyway-core-{{site.flywayVersion}}-sources.jar"><i class="fa fa-download"></i> flyway-core-{{site.flywayVersion}}-sources.jar</a>
+            <a class="note" href="https://repo.flywaydb.org/repo/org/flywaydb/enterprise/flyway-core/{{site.flywayVersion}}/flyway-core-{{site.flywayVersion}}-sources.jar.md5">md5</a>
+            <a class="note" href="https://repo.flywaydb.org/repo/org/flywaydb/enterprise/flyway-core/{{site.flywayVersion}}/flyway-core-{{site.flywayVersion}}-sources.jar.sha1">sha1</a>
         </td>
     </tr>
 </table>
@@ -333,3 +313,5 @@ Spring application using XML bean configuration:
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/api/hooks">API: Hooks <i class="fa fa-arrow-right"></i></a>
 </p>
+
+{% include trialpopup.html %}

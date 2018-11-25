@@ -17,21 +17,21 @@ Choose your Flyway edition based on the features and support level you require
 <th>Enterprise Edition</th>
 </tr>
 </thead>
-<tr><td>SQL-based migrations</td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
-<tr><td>Java-based migrations</td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
-<tr><td>Repeatable migrations</td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
+<tr><td><a href="/documentation/migrations#sql-based-migrations">SQL-based migrations</a></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
+<tr><td><a href="/documentation/migrations#java-based-migrations">Java-based migrations</a></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
+<tr><td><a href="/documentation/migrations#repeatable-migrations">Repeatable migrations</a></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td>Placeholder replacement</td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
-<tr><td>Callbacks</td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
+<tr><td><a href="/documentation/callbacks">Callbacks</a></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td>Custom migration resolvers/executors</td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td>Safe for multiple nodes in parallel</td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td>Native SQL dialect support (PL/SQL, SQLPL, T-SQL, ...)</td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td>Latest database versions compatibility</td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td>Java 8 / 9 / 10 / 11 compatibility</td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
-<tr><td>Oracle SQL*Plus compatibility</td><td></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
-<tr><td>Custom error handling</td><td></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
+<tr><td><a href="/documentation/database/oracle#sqlplus-commands">Oracle SQL*Plus compatibility</a></td><td></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
+<tr><td><a href="/documentation/erroroverrides">Error Overrides</a></td><td></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td>Statement-level callbacks</td><td></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
-<tr><td>Dry runs</td><td></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
-<tr><td>Undo</td><td></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
+<tr><td><a href="/documentation/dryruns">Dry runs</a></td><td></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
+<tr><td><a href="/documentation/command/undo">Undo</a></td><td></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td>Batching</td><td></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td>Streaming</td><td></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td>Display query results</td><td></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
@@ -44,8 +44,7 @@ Choose your Flyway edition based on the features and support level you require
 <tr><td>Price</td><td>Free</td><td>950 USD per year<br><span class="note">per 10 schemas in production<br>(less than 8 USD per schema per month)<br>unlimited for dev and test</span></td><td>2950 USD per year<br><span class="note">per 10 schemas in production<br>(less than 25 USD per schema per month)<br>unlimited for dev and test</span></td></tr>
 <tr><td>Automatic renewal</td><td></td><td><i class="fa fa-check"></i></td><td>optional</td></tr>
 <tr><td>Payment methods accepted</td><td></td><td>Credit card</td><td>Credit card, wire transfer, purchase order</td></tr>
-<tr><td></td>
-<td><a class="btn btn-primary btn-download" href="/download/community"><i class="fa fa-download"></i> Download</a></td>
+<tr><td></td><td></td>
 <td><button class="btn btn-primary btn-download" data-toggle="modal" data-target="#flyway-trial-license-modal">Start Free Trial <i class="fa fa-arrow-right"></i><br><span class="note">License key for 30 days</span></button></td>
 <td><button class="btn btn-primary btn-download" data-toggle="modal" data-target="#flyway-trial-license-modal">Start Free Trial <i class="fa fa-arrow-right"></i><br><span class="note">License key for 30 days</span></button></td>
 </tr>
@@ -62,31 +61,30 @@ Read the [**Commercial Licensing FAQ**](/download/faq)
 We also offer site licenses and redistributable licenses.<br>
 Contact us for more information at **sales@flywaydb.org**.
 
-<div class="modal fade" id="flyway-trial-license-modal" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <form id="trial_form" action="javascript:hideAndSubmitTrialForm();">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel">License Agreement</h4>
-          </div>
-          <div class="modal-body">
-            <p>By requesting a Flyway Trial Edition license key you confirm to have read and that you agree to the terms of the <a href="/licenses/flyway-trial" target="_blank">Flyway Trial Edition License</a>.</p>
-              <div class="form-group">
-                <label for="inputCompany">Company name (required)</label>
-                <input type="text" class="form-control" id="inputCompany" placeholder="My Company, Inc" required autofocus>
-              </div>
-            <div class="form-group">
-                <label for="inputEmail">Email address (required)</label>
-                <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
-              </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">I do not agree</button>
-            <button type="submit" class="btn btn-primary">I agree, email me the license key</button>
-          </div>
-      </form>
+<hr class="soften">
+
+## Downloads
+
+Choose your download based on how you want to use Flyway
+
+<div class="row">
+    <div class="col-md-2"></div>
+    {% include download.html name="Windows" icon="windows" url="/documentation/commandline/#download" %}
+    {% include download.html name="macOS" icon="apple" url="/documentation/commandline/#download" %}
+    {% include download.html name="Linux" icon="linux" url="/documentation/commandline/#download" %}
+    <div class="col-md-2">
+        <a class="download" href="/documentation/commandline/#download" title="Docker">
+            <img title="Docker" src="/assets/logos/docker.png"><br><br>
+            <strong>Docker</strong>
+        </a>
     </div>
-  </div>
+</div>    
+<div class="row">
+    <div class="col-md-2"></div>
+    {% include download.html name="Java" icon="coffee" url="/documentation/api/#download" %}
+    {% include download.html name="Android" icon="android" url="/documentation/api/#download" %}
+    {% include download.html name="Maven" icon="maxcdn" url="/documentation/maven/#installation" %}
+    {% include download.html name="Gradle" icon="cogs" url="/documentation/gradle/#installation" %}
 </div>
 
+{% include trialpopup.html %}

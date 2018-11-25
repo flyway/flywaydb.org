@@ -37,12 +37,23 @@ One or more Errors Overrides can be configured using the [`errorOverrides`](/doc
 setting which accepts multiple error override definitions in the following form: `STATE:12345:W`.
                              
 This is a 5 character SQL state, a colon, the SQL error code, a colon and finally the desired
-behavior that should override the initial one. The following behaviors are accepted: `W` to force a warning
-and `E` to force an error.
+behavior that should override the initial one. The following behaviors are accepted:
+- `D` to force a debug message
+- `D-` to force a debug message, but do not show the original sql state and error code
+- `I` to force an info message
+- `I-` to force an info message, but do not show the original sql state and error code
+- `W` to force a warning
+- `W-` to force a warning, but do not show the original sql state and error code
+- `E` to force an error
+- `E-` to force an error, but do not show the original sql state and error code
               
 If no matching Error Overrides are configured Flyway falls back to its default behavior.
 
-## Example
+## Examples
+
+Here are some examples on how to use this feature.
+
+### Example 1: Throw an error when Oracle stored procedure compilation fails
 
 By default when an Oracle stored procedure compilation fails, the driver simply returns a warning which is being output
 by Flyway as
@@ -59,6 +70,37 @@ flyway.errorOverrides=99999:17110:E
 ```
 
 All Oracle stored procedure compilation failures will then result in an **immediate error**.
+
+### Example 2: Display SQL Server PRINT messages as simple info messages
+
+By default when a SQL Server `PRINT` statement executes, the message is returned as a warning to the client. This
+means that the following statements:
+
+```sql
+PRINT 'Starting ...';
+PRINT 'Done.';
+```
+
+produce the following output by default:
+
+```
+WARNING: DB: Starting ... (SQL State: S0001 - Error Code: 0)
+WARNING: DB: Done. (SQL State: S0001 - Error Code: 0)
+```
+
+To force these `PRINT` statements to produce simple info messages (with no SQL State and Error Code details) instead
+of warnings, all one needs to do is add the following to Flyway's configuration:
+
+```properties
+flyway.errorOverrides=S0001:0:I-
+```
+
+With that setting in place the output then simply becomes **info messages with no SQL State and Error Code details**:
+
+```
+Starting ...
+Done.
+```
 
 ## Advanced programmatic configuration
 

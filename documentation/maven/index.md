@@ -14,8 +14,6 @@ The Flyway Enterprise Maven plugin also supports **Java 6** and **Java 7**.
     <ul class="nav nav-tabs">
         <li class="active marketing-item"><a href="#tab-community" data-toggle="tab">Community Edition</a>
         </li>
-        <li class="marketing-item"><a href="#tab-trial" data-toggle="tab">Trial Edition</a>
-        </li>
         <li class="marketing-item"><a href="#tab-pro" data-toggle="tab">Pro Edition</a>
         </li>
         <li class="marketing-item"><a href="#tab-enterprise" data-toggle="tab">Enterprise Edition</a>
@@ -29,37 +27,7 @@ The Flyway Enterprise Maven plugin also supports **Java 6** and **Java 7**.
     &lt;artifactId&gt;flyway-maven-plugin&lt;/artifactId&gt;
     &lt;version&gt;{{ site.flywayVersion }}&lt;/version&gt;
 &lt;/plugin&gt;</pre>
-        </div>
-        <div class="tab-pane" id="tab-trial">
-            <code>&lt;project-dir&gt;/pom.xml</code>
-            <pre class="prettyprint">&lt;pluginRepositories&gt;
-    &lt;pluginRepository&gt;
-        &lt;id&gt;flyway-repo&lt;/id&gt;
-        &lt;url&gt;https://repo.flywaydb.org/repo&lt;/url&gt;
-    &lt;/pluginRepository&gt;
-    ...
-&lt;/pluginRepositories&gt;
-        
-&lt;build&gt;
-    &lt;plugins&gt;
-        &lt;plugin&gt;
-            &lt;groupId&gt;org.flywaydb<strong>.trial</strong>&lt;/groupId&gt;
-            &lt;artifactId&gt;flyway-maven-plugin&lt;/artifactId&gt;
-            &lt;version&gt;{{ site.flywayVersion }}&lt;/version&gt;
-        &lt;/plugin&gt;
-    &lt;/plugins&gt;
-&lt;/build&gt;</pre>
-            <code>&lt;user-home&gt;/.m2/settings.xml</code>
-            <pre class="prettyprint">&lt;settings&gt;
-    &lt;servers&gt;
-        &lt;server&gt;
-            &lt;id&gt;flyway-repo&lt;/id&gt;
-            &lt;username&gt;<i>your-flyway-trial-license-key</i>&lt;/username&gt;
-            &lt;password&gt;flyway&lt;/password&gt;
-        &lt;/server&gt;
-    &lt;/servers&gt;
-    ...
-&lt;/settings&gt;</pre>
+            <p class="note">Older versions are available from <a href="https://repo1.maven.org/maven2/org/flywaydb/flyway-maven-plugin">Maven Central</a></p>
         </div>
         <div class="tab-pane" id="tab-pro">
             <code>&lt;project-dir&gt;/pom.xml</code>
@@ -85,7 +53,7 @@ The Flyway Enterprise Maven plugin also supports **Java 6** and **Java 7**.
     &lt;servers&gt;
         &lt;server&gt;
             &lt;id&gt;flyway-repo&lt;/id&gt;
-            &lt;username&gt;<i>your-flyway-pro-license-key</i>&lt;/username&gt;
+            &lt;username&gt;<a href="" data-toggle="modal" data-target="#flyway-trial-license-modal"><i>your-flyway-license-key</i></a>&lt;/username&gt;
             &lt;password&gt;flyway&lt;/password&gt;
         &lt;/server&gt;
     &lt;/servers&gt;
@@ -116,7 +84,7 @@ The Flyway Enterprise Maven plugin also supports **Java 6** and **Java 7**.
     &lt;servers&gt;
         &lt;server&gt;
             &lt;id&gt;flyway-repo&lt;/id&gt;
-            &lt;username&gt;<i>your-flyway-enterprise-license-key</i>&lt;/username&gt;
+            &lt;username&gt;<a href="" data-toggle="modal" data-target="#flyway-trial-license-modal"><i>your-flyway-license-key</i></a>&lt;/username&gt;
             &lt;password&gt;flyway&lt;/password&gt;
         &lt;/server&gt;
     &lt;/servers&gt;
