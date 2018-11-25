@@ -318,20 +318,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
         <td><i>Current database user</i></td>
         <td>The username that will be recorded in the schema history table as having applied the migration</td>
     </tr>
-    <tr id="errorOverrides">
-        <td>errorOverrides {% include pro.html %}</td>
-        <td>NO</td>
-        <td><i>none</i></td>
-        <td><p>Comma-sparated list of rules for the built-in error handling that lets you override specific SQL states and errors codes from error
-             to warning or from warning to error.</p>
-             <p>Each error override has the following format: <code>STATE:12345:W</code>.
-             It is a 5 character SQL state, a colon, the SQL error code, a colon and finally the desired
-             behavior that should override the initial one. The following behaviors are accepted: <code>W</code> to force a warning
-             and <code>E</code> to force an error.</p>
-             <p>For example, to force Oracle stored procedure compilation issues to produce
-             errors instead of warnings, the following errorOverride can be used: <code>99999:17110:E</code></p>
-             </td>
-    </tr>
+    {% include cfg/errorOverrides-commandline.html %}
     <tr id="dryRunOutput">
         <td>dryRunOutput {% include pro.html %}</td>
         <td>NO</td>
@@ -340,12 +327,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
             directory, Flyway will create all directories and parent directories as needed.
             Omit to use the default mode of executing the SQL statements directly against the database.</td>
     </tr>
-    <tr id="oracle.sqlplus">
-        <td>oracle.sqlplus {% include pro.html %}</td>
-        <td>NO</td>
-        <td>false</td>
-        <td>Whether to Flyway's support for Oracle SQL*Plus commands should be activated.</td>
-    </tr>
+    {% include cfg/oracleSqlplus.html %}
     {% include cfg/licenseKey.html %}
     </tbody>
 </table>
