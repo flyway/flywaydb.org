@@ -6,7 +6,7 @@ subtitle: Maven Plugin
 # Maven Plugin
 
 The Flyway Open-Source Maven plugin supports **Maven 3.x** running on **Java 8**, **Java 9**, **Java 10** or **Java 11**.
-The Flyway Enterprise Maven plugin also supports **Java 6** and **Java 7**.
+The Flyway Enterprise Maven plugin also supports **Java 7**.
 
 ## Installation
 

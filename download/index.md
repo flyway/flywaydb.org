@@ -36,7 +36,7 @@ Choose your Flyway edition based on the features and support level you require
 <tr><td>Streaming</td><td></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td>Display query results</td><td></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td>Older database versions compatibility</td><td></td><td></td><td><i class="fa fa-check"></i></td></tr>
-<tr><td>Java 6 / 7 compatibility</td><td></td><td></td><td><i class="fa fa-check"></i></td></tr>
+<tr><td>Java 7 compatibility</td><td></td><td></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td>License</td><td><a href="/licenses/flyway-community">Apache v2</a></td><td><a href="/licenses/flyway-pro">Commercial</a></td><td><a href="/licenses/flyway-enterprise">Commercial</a></td></tr>
 <tr><td>Maven Repository</td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td>Source Code included</td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
