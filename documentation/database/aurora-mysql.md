@@ -8,7 +8,7 @@ subtitle: Aurora MySQL
 ## Supported Versions
 
 - `5.7`
-- `5.6`
+- `5.6` {% include enterprise.html %}
 
 ## Drivers
 

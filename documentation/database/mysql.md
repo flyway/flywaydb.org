@@ -9,8 +9,8 @@ subtitle: MySQL
 
 - `8.0`
 - `5.7`
-- `5.6`
-- `5.5`
+- `5.6` {% include enterprise.html %}
+- `5.5` {% include enterprise.html %}
 - `5.1` {% include enterprise.html %}
 
 ## Drivers
