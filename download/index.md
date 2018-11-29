@@ -26,7 +26,7 @@ Choose your Flyway edition based on the features and support level you require
 <tr><td>Safe for multiple nodes in parallel</td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td>Native SQL dialect support (PL/SQL, SQLPL, T-SQL, ...)</td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td>Java 8 / 9 / 10 / 11 compatibility</td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
-<tr><td>Guaranteed database support timeline</td><td>3 years</td><td>5 years</td><td>10 years</td></tr>
+<tr><td><a href="/download/faq#how-long-are-database-releases-supported-in-each-edition-of-flyway">Guaranteed database support timeline</a></td><td>3 years</td><td>5 years</td><td>10 years</td></tr>
 <tr><td><a href="/documentation/database/oracle#sqlplus-commands">Oracle SQL*Plus compatibility</a></td><td></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td><a href="/documentation/erroroverrides">Error Overrides</a></td><td></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td>Statement-level callbacks</td><td></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
@@ -35,7 +35,6 @@ Choose your Flyway edition based on the features and support level you require
 <tr><td>Batching</td><td></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td>Streaming</td><td></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td>Display query results</td><td></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
-<tr><td>Older database versions compatibility</td><td></td><td></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td>Java 7 compatibility</td><td></td><td></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td>License</td><td><a href="/licenses/flyway-community">Apache v2</a></td><td><a href="/licenses/flyway-pro">Commercial</a></td><td><a href="/licenses/flyway-enterprise">Commercial</a></td></tr>
 <tr><td>Maven Repository</td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
