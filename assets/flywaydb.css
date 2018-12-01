@@ -60,7 +60,6 @@
 .tab-pane>code {
     display: inline-block;
     margin-top: 10px;
-    margin-bottom: 5px;
 }
 
 #tabs {
@@ -291,6 +290,17 @@ img.screenshot {
 
 #download-pricing {
     text-align: center;
+}
+
+#download-pricing tr>td:first-child {
+    font-weight: bold;
+    text-align: left;
+}
+
+#download-pricing tr>td>.fa-check {
+    color: #888888;
+    font-weight: bold;
+    text-align: left;
 }
 
 #download-pricing th {
@@ -717,6 +727,26 @@ a.thumbnail:hover, a.thumbnail:focus {
     text-overflow: ellipsis;
     overflow: hidden;
 }
+
+a.download {
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+a.download img {
+    height: 56px;
+}
+
+a.download:hover, a.download:focus {
+    background-color: #ddd;
+    border-color: #ddd;
+    text-decoration: none;
+}
+
 
 .table tr:first-child th, .table tr:first-child td {
     border-top: 0;

@@ -257,7 +257,7 @@ Contact us for more information at **sales@flywaydb.org**.
 
 <script
     id="fsc-api"
-    src="https://d1f8f9xcsvx3ha.cloudfront.net/sbl/0.7.4/fastspring-builder.min.js"
+    src="https://d1f8f9xcsvx3ha.cloudfront.net/sbl/0.7.6/fastspring-builder.min.js"
     type="text/javascript"
     data-storefront="flyway.onfastspring.com/popup-store-flyway-pro">
 </script>

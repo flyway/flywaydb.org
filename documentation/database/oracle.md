@@ -101,6 +101,7 @@ The following commands are fully supported and can be used just like any regular
 - `REMARK`
 - `SET DEFINE`
 - `SET ESCAPE`
+- `SET FEEDBACK`
 - `SET FLAGGER`
 - `SET HEADING`
 - `SET LINESIZE` (DBMS_OUTPUT only)
@@ -108,14 +109,20 @@ The following commands are fully supported and can be used just like any regular
 - `SET SCAN`
 - `SET SERVEROUTPUT`
 - `SET SUFFIX`
+- `SET VERIFY`
 - `SHOW CON_ID`
+- `SHOW DEFINE`
 - `SHOW EDITION`
 - `SHOW ERRORS`
+- `SHOW ESCAPE`
+- `SHOW FEEDBACK`
 - `SHOW LINESIZE`
+- `SHOW NULL`
 - `SHOW RELEASE`
 - `SHOW SERVEROUTPUT`
 - `SHOW SUFFIX`
 - `SHOW USER`
+- `SHOW VERIFY`
 - `START` (only files, no URLs)
 - `UNDEFINE`
 - `WHENEVER SQLERROR CONTINUE`

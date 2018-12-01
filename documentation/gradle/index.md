@@ -14,8 +14,6 @@ running on **Java 8**, **Java 9**, **Java 10** or **Java 11**. The Flyway Enterp
     <ul class="nav nav-tabs">
         <li class="active marketing-item"><a href="#tab-community" data-toggle="tab">Community Edition</a>
         </li>
-        <li class="marketing-item"><a href="#tab-trial" data-toggle="tab">Trial Edition</a>
-        </li>
         <li class="marketing-item"><a href="#tab-pro" data-toggle="tab">Pro Edition</a>
         </li>
         <li class="marketing-item"><a href="#tab-enterprise" data-toggle="tab">Enterprise Edition</a>
@@ -27,28 +25,13 @@ running on **Java 8**, **Java 9**, **Java 10** or **Java 11**. The Flyway Enterp
     id "org.flywaydb.flyway" version "{{ site.flywayVersion }}"
 }</pre>
         </div>
-        <div class="tab-pane" id="tab-trial">
-            <p style="margin-top: 10px">Start by downloading and extracting the <a href="/download">Flyway Trial Edition</a> zip. Then execute the
-            <code>installToLocalMavenRepo</code> script in the <code>flyway-{{ site.flywayVersion }}</code> directory.
-            This installs all necessary artifacts in your local Maven repository, making it possible to use them in Gradle builds.</p>
-        <pre class="prettyprint">buildscript {
-    repositories {
-        mavenLocal()
-    }
-    dependencies {
-        classpath "org.flywaydb<strong>.trial</strong>:flyway-gradle-plugin:{{ site.flywayVersion }}"
-    }
-}
-
-apply plugin: 'org.flywaydb.flyway'</pre>
-        </div>
         <div class="tab-pane" id="tab-pro">
         <pre class="prettyprint">buildscript {
     repositories {
         maven {
             url "https://repo.flywaydb.org/repo"
             credentials {
-                username '<i>your-flyway-pro-license-key</i>'
+                username '<a href="" data-toggle="modal" data-target="#flyway-trial-license-modal"><i>your-flyway-license-key</i></a>'
                 password 'flyway'
             }
         }
@@ -66,7 +49,7 @@ apply plugin: 'org.flywaydb.flyway'</pre>
         maven {
             url "https://repo.flywaydb.org/repo"
             credentials {
-                username '<i>your-flyway-enterprise-license-key</i>'
+                username '<a href="" data-toggle="modal" data-target="#flyway-trial-license-modal"><i>your-flyway-license-key</i></a>'
                 password 'flyway'
             }
         }

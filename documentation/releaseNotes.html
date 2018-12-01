@@ -8,17 +8,61 @@ subtitle: Release Notes
 <p>Thank you all for reporting all these issues and contributing fixes!</p>
 
 <div class="release">
-    <h2 id="5.2.2">Flyway 5.2.2 (Unreleased)</h2>
+    <h2 id="5.2.4">Flyway 5.2.4 (unreleased)</h2>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        {% include issue.html id="2215" title="MySQL: Migrate fails when the user does not have permission to SELECT on user_variables_by_thread table" %}
+        {% include issue.html id="2219" title="Undo followed by repair leads to corrupted schema history" %}
+        {% include issue.html id="2220" title="Command-line on Windows: Locations with spaces fails with `was unexpected at this time` error" %}
+        {% include issue.html id="2221" title="Flyway 5.2.2 incorrectly complains about required SQLite upgrade" %}
+        {% include issue.html id="2222" title="SAP HANA: CREATE OR REPLACE not working" %}
+    </ul>
+    <p>
+        Thanks to ArunNeo, Jason Hinch, Jean-Pierre Froud, Kevin George and laurre for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
+    <h2 id="5.2.3">Flyway 5.2.3 (2018-11-26)</h2>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        {% include issue.html id="2213" title="Flyway warns about Postgres 10.5 being unsupported" %}
+    </ul>
+    <p>
+        Thanks to Antti Lampinen for reporting this issue.
+    </p>
+</div>
+
+<div class="release">
+    <h2 id="5.2.2">Flyway 5.2.2 (2018-11-25)</h2>
+
+    <h3>New features</h3>
+    <ul>
+        {% include issue.html id="2210" title="SQL*Plus: Add support for SHOW/SET FEEDBACK/VERIFY" pro=true %}
+        {% include issue.html id="2212" title="Additional D and I behaviors for errorOverrides to turn specific errors and warnings into debug or info messages"  pro=true %}
+    </ul>
+
+    <h3>Changes</h3>
+    <ul>
+        {% include issue.html id="2209" title="Integrate Trial Edition into Pro and Enterprise Editions" %}
+    </ul>
 
     <h3>Bug fixes</h3>
     <ul>
         {% include issue.html id="2185" title="CONFIG statement cannot be used inside a user transaction" %}
+        {% include issue.html id="2190" title="SQLite: Migrations containing PRAGMA foreign_keys= should be marked as non-transactional" %}
+        {% include issue.html id="2197" title="MySQL: User-defined variables leak across migrations" %}
+        {% include issue.html id="2198" title="Flyway fails to find resources in Felix 6.0.1 environment" %}
+        {% include issue.html id="2202" title="NullPointerException with PostgreSQL CREATE RULE statements" %}
+        {% include issue.html id="2206" title="MariaDB: Can't create database 'null' error if no database was specified in URL" %}
+        {% include issue.html id="2210" title="SQL*Plus: SHOW and SET should allow multiple commands on same line" %}
     </ul>
     <p>
-        Thanks to seb-urbaniak for reporting this issue.
+        Thanks to Gerd Behrmann, htto, pjchester, Renat Sabitov, seb-urbaniak and SH.Xue for reporting these issues.
     </p>
 </div>
-
 
 <div class="release">
     <h2 id="5.2.1">Flyway 5.2.1 (2018-10-24)</h2>

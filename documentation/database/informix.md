@@ -1,7 +1,7 @@
 ---
 layout: documentation
-menu: sybasease
-subtitle: Sybase ASE
+menu: informix
+subtitle: Informix
 ---
 # Informix
 
