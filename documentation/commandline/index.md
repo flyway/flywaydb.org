@@ -11,9 +11,9 @@ into their applications nor having to install a build tool.
 
 ## Download and installation
 
-Select the platform that you need. Each download contains all editions (community, pro, enterprise) of Flyway.
+Select the platform that you need. Each download contains all editions (community, pro, enterprise) of Flyway.<br/><br/>
 
-### <i class="fa fa-windows"></i> Windows
+#### <i class="fa fa-windows"></i> Windows
 
 Download <a href="/download/thankyou?dl=https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-windows-x64.zip">flyway-commandline-{{site.flywayVersion}}-windows-x64.zip</a>
 <a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-windows-x64.zip.md5">md5</a>
@@ -21,13 +21,13 @@ Download <a href="/download/thankyou?dl=https://repo1.maven.org/maven2/org/flywa
 
 Then extract it and simply add the new `flyway-{{site.flywayVersion}}` directory to the `PATH` to make the `flyway` command available from anywhere on your system.<br/><br/>
 
-### <i class="fa fa-apple"></i> macOS
+#### <i class="fa fa-apple"></i> macOS
 
 Download <a href="/download/thankyou?dl=https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-macosx-x64.tar.gz">flyway-commandline-{{site.flywayVersion}}-macosx-x64.tar.gz</a>
 <a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-macosx-x64.tar.gz.md5">md5</a>
 <a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-macosx-x64.tar.gz.sha1">sha1</a><br/><br/>
 
-### <i class="fa fa-linux"></i> Linux
+#### <i class="fa fa-linux"></i> Linux
 
 Download, extract and install by adding to `PATH` (requires `sudo` permissions):
 <pre class="console" style="overflow-x: auto"><span>$</span> wget -qO- https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/<strong>flyway-commandline-{{site.flywayVersion}}-linux-x64.tar.gz</strong> | tar xvz && sudo ln -s `pwd`/flyway-{{site.flywayVersion}}/flyway /usr/local/bin </pre> 
@@ -36,7 +36,7 @@ Or simply download the <a href="/download/thankyou?dl=https://repo1.maven.org/ma
 <a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-linux-x64.tar.gz.md5">md5</a>
 <a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-linux-x64.tar.gz.sha1">sha1</a><br/><br/>
 
-### <img title="Docker" style="height: 16px;margin-top: -4px;" src="/assets/logos/docker.png"> Docker
+#### <img title="Docker" style="height: 12px;margin-top: -4px;" src="/assets/logos/docker.png"> Docker
 
 (Linux only) Download, extract and install by adding to `PATH` (requires `sudo` permissions):
 
