@@ -8,7 +8,7 @@ cssid: download-pricing
 
 Choose your Flyway edition based on the features and support level you require
 
-<table class="table table-striped">
+<table class="table table-striped table-left">
 <thead>
 <tr>
 <th></th>
