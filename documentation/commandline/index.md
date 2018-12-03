@@ -11,7 +11,7 @@ into their applications nor having to install a build tool.
 
 ## Download
 
-Select the platform that you need. Each download contains all editions (community, trial, pro, enterprise) of Flyway.
+Select the platform that you need. Each download contains all editions (community, pro, enterprise) of Flyway.
 
 <table class="table">
 <tr><td><i class="fa fa-windows"></i> Windows</td>
@@ -71,7 +71,7 @@ Now simply add it to the `PATH` and the `flyway` command will be available from 
 ## Flyway editions
 
 The Flyway Command-line tool distribution ships with all editions of Flyway. It defaults to Flyway Community Edition.
-It can however easily be configured to run the [Flyway Trial, Pro or Enterprise Edition](/download) instead.  
+It can however easily be configured to run the [Flyway Pro or Enterprise Edition](/download) instead.  
 
 ### Environment variable
 
