@@ -294,7 +294,7 @@ As an alternative to the programmatic configuration, here is how you can configu
 Spring application using XML bean configuration:
 
 ```xml
-<bean id="flywayConfig" class="org.flywaydb.core.configuration.ClassicConfiguration">
+<bean id="flywayConfig" class="org.flywaydb.core.api.configuration.ClassicConfiguration">
     <property name="dataSource" ref="..."/>
     ...
 </bean>
