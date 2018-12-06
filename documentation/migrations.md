@@ -183,6 +183,8 @@ The file name consists of the following parts:
 - **Description**: Underscores or spaces separate the words
 - **Suffix**: `.sql` ([configurable](/documentation/commandline/migrate#sqlMigrationSuffixes))
 
+Optionally versioned SQL migrations can also omit both the separator and the description.
+
 ### Discovery
 
 Flyway discovers SQL-based migrations both on the **filesystem** and on the Java **classpath**. 
