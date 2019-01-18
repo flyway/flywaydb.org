@@ -43,8 +43,8 @@ Development, test and staging environments are free and unlimited.
 If you wish to expand your Flyway Pro or Enterprise Edition schema count beyond your current license, contact us at 
 **sales@flywaydb.org** so we can update your account and let you know how we will bill you.
 
-A site license (unlimited usage for your organization) is available for Flyway Pro Edition for 14,950 USD and
-for Flyway Enterprise Edition for 44,950 USD per year.
+A site license (unlimited usage for your organization) is available for Flyway Pro Edition for 14,500 USD and
+for Flyway Enterprise Edition for 44,500 USD per year.
 
 ## What exactly is a schema?
 
