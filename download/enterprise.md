@@ -62,8 +62,13 @@ All levels come with unlimited database schemas in dev and test
 <td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-enterprise-9-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
 </tr>
 <tr>
+<td>100 schemas</td>
+<td>29,500 USD per year<br><span class="note">less than 25 USD per schema per month</span></td>
+<td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-enterprise-10-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
+</tr>
+<tr>
 <td><strong>unlimited</strong></td>
-<td>29,500 USD per year</td>
+<td>44,950 USD per year</td>
 <td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-enterprise-site-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
 </tr>
 </table>
@@ -237,6 +242,24 @@ Contact us for more information at **sales@flywaydb.org**.
   </div>
 </div>
 
+<div class="modal fade" id="flyway-enterprise-10-license-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">License Agreement</h4>
+      </div>
+      <div class="modal-body">
+        By downloading the Flyway Enterprise Edition you confirm to have read and that you agree to the terms of the <a href="/licenses/flyway-enterprise" target="_blank">Flyway Enterprise Edition License</a>.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">I do not agree</button>
+        <a data-fsc-action="Reset,Add,Update,Checkout" data-fsc-item-path-value="flyway-enterprise-2017" data-fsc-item-quantity-value="10" data-dismiss="modal" class="btn btn-primary" href="javascript:$('#flyway-enterprise-9-license-modal').modal('hide');">I agree</a>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="modal fade" id="flyway-enterprise-site-license-modal" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -249,7 +272,7 @@ Contact us for more information at **sales@flywaydb.org**.
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">I do not agree</button>
-        <a data-fsc-action="Reset,Add,Update,Checkout" data-fsc-item-path-value="flyway-enterprise-site-2017" data-dismiss="modal" class="btn btn-primary" href="javascript:$('#flyway-enterprise-site-license-modal').modal('hide');">I agree</a>
+        <a data-fsc-action="Reset,Add,Update,Checkout" data-fsc-item-path-value="flyway-enterprise-site-2019" data-dismiss="modal" class="btn btn-primary" href="javascript:$('#flyway-enterprise-site-license-modal').modal('hide');">I agree</a>
       </div>
     </div>
   </div>

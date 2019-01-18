@@ -8,7 +8,7 @@ cssid: download-pricing
 
 Choose your Flyway edition based on the features and support level you require
 
-<table class="table table-striped">
+<table class="table table-striped table-left">
 <thead>
 <tr>
 <th></th>
@@ -69,11 +69,11 @@ Choose your download based on how you want to use Flyway
 
 <div class="row">
     <div class="col-md-2"></div>
-    {% include download.html name="Windows" icon="windows" url="/documentation/commandline/#download" %}
-    {% include download.html name="macOS" icon="apple" url="/documentation/commandline/#download" %}
-    {% include download.html name="Linux" icon="linux" url="/documentation/commandline/#download" %}
+    {% include download.html name="Windows" icon="windows" url="/documentation/commandline/#download-and-installation" %}
+    {% include download.html name="macOS" icon="apple" url="/documentation/commandline/#download-and-installation" %}
+    {% include download.html name="Linux" icon="linux" url="/documentation/commandline/#download-and-installation" %}
     <div class="col-md-2">
-        <a class="download" href="/documentation/commandline/#download" title="Docker">
+        <a class="download" href="/documentation/commandline/#download-and-installation" title="Docker">
             <img title="Docker" src="/assets/logos/docker.png"><br><br>
             <strong>Docker</strong>
         </a>

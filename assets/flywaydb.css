@@ -292,7 +292,7 @@ img.screenshot {
     text-align: center;
 }
 
-#download-pricing tr>td:first-child {
+#download-pricing .table-left tr>td:first-child {
     font-weight: bold;
     text-align: left;
 }
