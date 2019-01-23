@@ -68,6 +68,12 @@ The following environment variables are supported:
             the schema history table is placed in the first schema of the list.
         </td>
     </tr>
+    <tr id="FLYWAY_TABLESPACE">
+        <td>FLYWAY_TABLESPACE</td>
+        <td>The tablespace where to create the schema history table that will be used by Flyway.
+            This setting is only relevant for databases that do support the notion of tablespaces. It's value is simply ignored for all others.
+        </td>
+    </tr>
     <tr id="FLYWAY_LOCATIONS">
         <td>FLYWAY_LOCATIONS</td>
         <td>Comma-separated list of locations to scan recursively for migrations. The location type is determined by its prefix.<br/>

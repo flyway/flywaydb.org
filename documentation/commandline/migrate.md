@@ -65,6 +65,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
             the schema history table is placed in the first schema of the list.
         </td>
     </tr>
+    {% include cfg/tablespace.html %}
     {% include cfg/locations-commandline.html %}
     <tr id="jarDirs">
         <td>jarDirs</td>
@@ -343,6 +344,7 @@ flyway.connectRetries=10
 flyway.initSql=SET ROLE 'myuser'
 flyway.schemas=schema1,schema2,schema3
 flyway.table=schema_history
+flyway.tablespace=my_tablespace
 flyway.locations=classpath:com.mycomp.migration,database/migrations,filesystem:/sql-migrations
 flyway.sqlMigrationPrefix=Migration-
 flyway.undoSqlMigrationPrefix=downgrade

@@ -78,6 +78,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
             the schema history table is placed in the first schema of the list.
         </td>
     </tr>
+    {% include cfg/tablespace.html %}
     {% include cfg/locations-maven-gradle.html %}
     <tr>
         <td>sqlMigrationPrefix</td>
@@ -378,6 +379,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
         <schema>schema3</schema>
     </schemas>
     <table>schema_history</table>
+    <tablespace>my_tablespace</tablespace>
     <locations>
         <location>classpath:migrations1</location>
         <location>migrations2</location>

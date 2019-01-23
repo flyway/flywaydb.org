@@ -63,6 +63,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
             the schema history table is placed in the first schema of the list.
         </td>
     </tr>
+    {% include cfg/tablespace.html %}
     {% include cfg/locations-maven-gradle.html %}
     <tr>
         <td>sqlMigrationPrefix</td>
@@ -340,6 +341,7 @@ flyway {
     initSql = 'SET ROLE \'myuser\''
     schemas = ['schema1', 'schema2', 'schema3']
     table = 'schema_history'
+    tablespace = 'my_tablespace'
     locations = ['classpath:migrations', 'classpath:db/pkg', 'filesystem:/sql-migrations']
     sqlMigrationPrefix = 'Migration-'
     undoSqlMigrationPrefix = 'downgrade'
