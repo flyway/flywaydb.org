@@ -64,6 +64,7 @@ Baselines an existing database, excluding all migrations up to and including `ba
             the schema history table is placed in the first schema of the list.
         </td>
     </tr>
+    {% include cfg/tablespace.html %}
     <tr id="jarDirs">
         <td>jarDirs</td>
         <td>NO</td>
@@ -113,6 +114,7 @@ flyway.connectRetries=10
 flyway.initSql=SET ROLE 'myuser'
 flyway.schemas=schema1,schema2,schema3
 flyway.table=schema_history
+flyway.tablespace=my_tablespace
 flyway.callbacks=com.mycomp.project.CustomCallback,com.mycomp.project.AnotherCallback
 flyway.skipDefaultCallbacks=false
 flyway.baselineVersion=1.0

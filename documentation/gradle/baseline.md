@@ -64,6 +64,7 @@ Baselines an existing database, excluding all migrations up to and including bas
             the schema history table is placed in the first schema of the list.
         </td>
     </tr>
+    {% include cfg/tablespace.html %}
     <tr>
         <td>callbacks</td>
         <td>NO</td>
@@ -108,6 +109,7 @@ flyway {
     initSql = 'SET ROLE \'myuser\''
     schemas = ['schema1', 'schema2', 'schema3']
     table = 'schema_history'
+    tablespace = 'my_tablespace'
     callbacks = ['com.mycompany.proj.CustomCallback', 'com.mycompany.proj.AnotherCallback']
     skipDefaultCallbacks = false
     baselineVersion = 5

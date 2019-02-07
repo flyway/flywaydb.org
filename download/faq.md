@@ -56,8 +56,8 @@ Development, test and staging environments are free and unlimited.
 If you wish to expand your Flyway Pro or Enterprise Edition schema count beyond your current license, contact us at 
 **sales@flywaydb.org** so we can update your account and let you know how we will bill you.
 
-A site license (unlimited usage for your organization) is available for Flyway Pro Edition for 14,950 USD and
-for Flyway Enterprise Edition for 44,950 USD per year.
+A site license (unlimited usage for your organization) is available for Flyway Pro Edition for 14,500 USD and
+for Flyway Enterprise Edition for 44,500 USD per year.
 
 ## What exactly is a schema?
 
@@ -101,6 +101,17 @@ Flyway-generated dry run scripts must be counted.
 Our prices do not include VAT or sales tax. In some countries, like the EU or Norway for example, VAT gets added to the
 price at the time of purchase. You can remove the VAT by clicking the "Enter VAT ID" link in the store and entering your
 company's VAT ID. After the VAT is removed the price will once again match the advertised one. 
+
+## Is there a discount if I pay for multiple years upfront?
+
+Yes, there is for Flyway Enterprise Edition. When you pay for multiple years upfront we do offer you a 5% discount
+on the price for year 2, 10% for year 3, 15% for year 4 and 20% for year 5 and all subsequent years.
+
+For example, if you choose to license Flyway Enterprise Edition (10 schemas):
+- the price for 1 year is 2,950 USD
+- the price for 3 years is 8,407.5 USD = 2,950 USD + (2,950 USD x 0.95) + (2,950 USD x 0.90). Yearly average: 2,802.5 USD (5% discount) 
+- the price for 5 years is 13,275 USD = price for 3 years + (2,950 USD x 0.85) + (2,950 USD x 0.80). Yearly average: 2,655 USD (10% discount) 
+- the price for 10 years is 25,075 USD = price for 5 years + 5 x (2,950 USD x 0.80). Yearly average: 2,655 USD (15% discount) 
 
 ## Can I upgrade from Flyway Pro Edition to Flyway Enterprise Edition?
 
