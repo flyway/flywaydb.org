@@ -58,7 +58,7 @@ Choose your Flyway edition based on the features and support level you require
 Any questions regarding the Flyway Pro Edition and Flyway Enterprise Edition licensing?<br>
 Read the [**Commercial Licensing FAQ**](/download/faq)
 
-We also offer site licenses and redistributable licenses.<br>
+We also offer site licenses, discounts for multi-year upfront payments and redistributable licenses.<br>
 Contact us for more information at **sales@flywaydb.org**.
 
 <hr class="soften">
