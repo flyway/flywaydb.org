@@ -62,7 +62,7 @@ The following environment variables are supported:
     </tr>
     <tr id="FLYWAY_TABLE">
         <td>FLYWAY_TABLE</td>
-        <td>The name of Flyway&#x27;s schema history table.<br/>By
+        <td>The name of Flyway's schema history table.<br/>By
             default (single-schema mode) the schema history table is placed in the default schema for the connection
             provided by the datasource.<br/>When the <i>flyway.schemas</i> property is set (multi-schema mode),
             the schema history table is placed in the first schema of the list.

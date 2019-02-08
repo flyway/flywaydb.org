@@ -76,7 +76,7 @@ END FUNCTION
          "and a part id number";
 
 -- Placeholder
-INSERT INTO ${tableName} (name) VALUES (&#x27;Mr. T&#x27;);
+INSERT INTO ${tableName} (name) VALUES ('Mr. T');
 ```
 
 ## Limitations

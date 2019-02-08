@@ -71,7 +71,7 @@ comment
 -- Sql-style comment
 
 -- Placeholder
-INSERT INTO ${tableName} (name) VALUES (&#x27;Mr. T&#x27;);
+INSERT INTO ${tableName} (name) VALUES ('Mr. T');
 
 CREATE TRIGGER update_customer_address UPDATE OF address ON customers
   BEGIN

@@ -74,12 +74,12 @@ comment
 -- PL/SQL block
 CREATE TRIGGER test_trig AFTER insert ON test_user
 BEGIN
-   UPDATE test_user SET name = CONCAT(name, &#x27; triggered&#x27;);
+   UPDATE test_user SET name = CONCAT(name, ' triggered');
 END;
 /
 
 -- Placeholder
-INSERT INTO ${tableName} (name) VALUES (&#x27;Mr. T&#x27;);</pre>
+INSERT INTO ${tableName} (name) VALUES ('Mr. T');</pre>
 
 ## SQL*Plus commands 
 {% include pro.html %}

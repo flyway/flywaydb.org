@@ -64,7 +64,7 @@ comment
 -- Sql-style comment
 
 -- Placeholder
-INSERT INTO ${tableName} (name) VALUES (&#x27;Mr. T&#x27;);
+INSERT INTO ${tableName} (name) VALUES ('Mr. T');
 
 CREATE TRIGGER uniqueidx_trigger BEFORE INSERT ON usertable
 	REFERENCING NEW ROW AS newrow

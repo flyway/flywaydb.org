@@ -17,6 +17,7 @@ subtitle: Release Notes
         {% include issue.html id="2167" title="Allow versioned migration names like V12.sql (no separator, no description)" %}
         {% include issue.html id="2178" title="PostgreSQL 11 support" pr="2194" %}
         {% include issue.html id="2189" title="Gradle 5.0 support" %}
+        {% include issue.html id="2300" title="MariaDB 10.4 support" %}
     </ul>
 
     <h3>Changes</h3>
@@ -3642,7 +3643,7 @@ subtitle: Release Notes
             ignore abstract classes
         </li>
         <li><a href="http://code.google.com/p/flyway/issues/detail?id=300">Issue 300</a> flyway:clean
-            doesn&#x27;t remove Schema-level triggers on Oracle
+            doesn't remove Schema-level triggers on Oracle
         </li>
         <li>
             <a href="http://code.google.com/p/flyway/issues/detail?id=303">Issue 303</a>
@@ -3780,7 +3781,7 @@ subtitle: Release Notes
             fails to clean db2 when using views with materialized query tables
         </li>
         <li><a href="http://code.google.com/p/flyway/issues/detail?id=272">Issue 272</a> Flyway clean
-            doesn&#x27;t drop DB2 aliases
+            doesn't drop DB2 aliases
         </li>
         <li><a href="http://code.google.com/p/flyway/issues/detail?id=279">Issue 279</a> Migrate fails on
             .sql files with utf-8 signature
@@ -3798,7 +3799,7 @@ subtitle: Release Notes
     <h3>Bug Fixes</h3>
     <ul>
         <li><a href="http://code.google.com/p/flyway/issues/detail?id=239">Issue 239</a> Flyway 1.6
-            classpath scanner does not find files unless baseDir has trailing &#x27;/&#x27; </li>
+            classpath scanner does not find files unless baseDir has trailing '/' </li>
         <li><a href="http://code.google.com/p/flyway/issues/detail?id=241">Issue 241</a> 1.6 ant task no
             longer works with sql migrations
         </li>
@@ -3828,7 +3829,7 @@ subtitle: Release Notes
     </ul>
     <h3>Bug Fixes</h3>
     <ul>
-        <li><a href="http://code.google.com/p/flyway/issues/detail?id=79">Issue 79</a> Migrations don&#x27;t
+        <li><a href="http://code.google.com/p/flyway/issues/detail?id=79">Issue 79</a> Migrations don't
             support semicolons within quotes
         </li>
         <li><a href="http://code.google.com/p/flyway/issues/detail?id=184">Issue 184</a> Huge SQL
@@ -3838,7 +3839,7 @@ subtitle: Release Notes
             getBaseDir method of Flyway class is not consistent with implementation.
         </li>
         <li><a href="http://code.google.com/p/flyway/issues/detail?id=192">Issue 192</a> Regression in
-            1.5 -- Oracle parsing of SQL Script fails due to fieldname &#x27;Function&#x27; </li>
+            1.5 -- Oracle parsing of SQL Script fails due to fieldname 'Function' </li>
         <li><a href="http://code.google.com/p/flyway/issues/detail?id=200">Issue 200</a> Cannot invoke
             setDataSource() multiple times
         </li>
@@ -3932,13 +3933,13 @@ subtitle: Release Notes
             database object types during a Clean (Oracle)
         </li>
         <li><a href="http://code.google.com/p/flyway/issues/detail?id=161">Issue 161</a> Maven validate
-            goal doesn&#x27;t validate
+            goal doesn't validate
         </li>
-        <li><a href="http://code.google.com/p/flyway/issues/detail?id=162">Issue 162</a> Migrations won&#x27;t
+        <li><a href="http://code.google.com/p/flyway/issues/detail?id=162">Issue 162</a> Migrations won't
             work on MS SQL Server with case sensitive collation
         </li>
         <li><a href="http://code.google.com/p/flyway/issues/detail?id=168">Issue 168</a> flyway:clean
-            doesn&#x27;t work in PostgreSQL on tables with child tables
+            doesn't work in PostgreSQL on tables with child tables
         </li>
         <li><a href="http://code.google.com/p/flyway/issues/detail?id=170">Issue 170</a> Must not apply
             migration if migration pattern is violated

@@ -101,7 +101,7 @@ END
 GO
 
 -- Placeholder
-INSERT INTO ${tableName} (name) VALUES (&#x27;Mr. T&#x27;);</pre>
+INSERT INTO ${tableName} (name) VALUES ('Mr. T');</pre>
 
 ## Limitations
 

@@ -5,7 +5,7 @@ subtitle: Articles
 ---
 # Articles
 
-<p>This is a collection of <strong>articles about Flyway</strong> from around them web. <br/> If you&#x27;ve
+<p>This is a collection of <strong>articles about Flyway</strong> from around them web. <br/> If you've
     written an article about Flyway and would like it listed here, or simply found one you liked that we missed, <a
             href="https://github.com/flyway/flywaydb.org">send a Pull Request!</a></p>
 
