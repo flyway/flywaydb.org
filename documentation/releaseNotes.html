@@ -14,6 +14,7 @@ subtitle: Release Notes
     <ul>
         {% include issue.html id="865" title="Custom tablespace for schema history table" %}
         {% include issue.html id="1062" title="API: Make it possible to use pre-instantiated Java-based migrations" %}
+        {% include issue.html id="2120" title="Add new oracle.sqlplusWarn setting" pro=true %}
         {% include issue.html id="2167" title="Allow versioned migration names like V12.sql (no separator, no description)" %}
         {% include issue.html id="2178" title="PostgreSQL 11 support" pr="2194" %}
         {% include issue.html id="2189" title="Gradle 5.0 support" %}
@@ -28,6 +29,7 @@ subtitle: Release Notes
 
     <h3>Incompatible changes</h3>
     <ul>
+        {% include issue.html id="2120" title="Unsupported Oracle SQL*Plus now throw an error by default" pro=true %}
         {% include issue.html id="2188" title="Discontinue Java 6 support" enterprise=true %}
         {% include issue.html id="2218" title="Remove deprecated APIs and settings" %}
     </ul>

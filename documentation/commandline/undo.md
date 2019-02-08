@@ -244,6 +244,7 @@ subtitle: 'Command-line: undo'
             Omit to use the default mode of executing the SQL statements directly against the database.</td>
     </tr>
     {% include cfg/oracleSqlplus.html %}
+    {% include cfg/oracleSqlplusWarn.html %}
     {% include cfg/licenseKey.html %}
     </tbody>
 </table>
@@ -284,6 +285,8 @@ flyway.ignoreFutureMigrations=false
 flyway.installedBy=my-user
 flyway.errorOverrides=99999:17110:E,42001:42001:W
 flyway.dryRunOutput=/my/sql/dryrun-outputfile.sql
+flyway.oracle.sqlplus=true
+flyway.oracle.sqlplusWarn=true
 ```
 
 ## Sample output

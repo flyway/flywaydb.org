@@ -229,6 +229,7 @@ subtitle: 'gradle flywayUndo'
             Omit to use the default mode of executing the SQL statements directly against the database.</td>
     </tr>
     {% include cfg/oracleSqlplus.html %}
+    {% include cfg/oracleSqlplusWarn.html %}
     {% include cfg/licenseKey.html %}
     </tbody>
 </table>
@@ -271,6 +272,8 @@ flyway {
     installedBy = "my-user"
     errorOverrides = ['99999:17110:E', '42001:42001:W']
     dryRunOutput = '/my/sql/dryrun-outputfile.sql'
+    oracleSqlplus = true 
+    oracleSqlplusWarn = true 
 }
 ```
 

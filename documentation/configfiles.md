@@ -71,11 +71,13 @@ flyway.url=
 # flyway.initSql=
 
 # Comma-separated list of schemas managed by Flyway. These schema names are case-sensitive.
-# (default: The default schema for the datasource connection)
 # Consequences:
+# - Flyway will automatically attempt to create all these schemas, unless the first one already exists.
 # - The first schema in the list will be automatically set as the default one during the migration.
 # - The first schema in the list will also be the one containing the schema history table.
 # - The schemas will be cleaned in the order of this list.
+# - If Flyway created them, the schemas themselves will as be dropped when cleaning.
+# (default: The default schema for the database connection)
 # flyway.schemas=
 
 # Name of Flyway's schema history table (default: flyway_schema_history)
@@ -84,6 +86,11 @@ flyway.url=
 # When the flyway.schemas property is set (multi-schema mode), the schema history table is placed in the first
 # schema of the list.
 # flyway.table=
+
+# The tablespace where to create the schema history table that will be used by Flyway.
+# This setting is only relevant for databases that do support the notion of tablespaces. It's value is simply
+# ignored for all others. (default: The default tablespace for the database connection)
+# flyway.tablespace=
 
 # Comma-separated list of locations to scan recursively for migrations. (default: filesystem:<<INSTALL-DIR>>/sql)
 # The location type is determined by its prefix.
@@ -263,13 +270,23 @@ flyway.url=
 # <<blank>> for the current database user of the connection. (default: <<blank>>).
 # flyway.installedBy=
 
-# Rules for the built-in error handling that lets you override specific SQL states and errors codes from error to
-# warning or from warning to error.
-# Each error override has the following format: STATE:12345:W. It is a 5 character SQL state, a colon, the SQL
-# error code, a colon and finally the desired behavior that should override the initial one. The following
-# behaviors are accepted: W to force a warning and E to force an error.
-# For example, to force Oracle stored procedure compilation issues to produce errors instead of warnings,
-# the following errorOverride can be used: 99999:17110:E
+# Rules for the built-in error handler that let you override specific SQL states and errors codes in order to
+# force specific errors or warnings to be treated as debug messages, info messages, warnings or errors.
+# Each error override has the following format: STATE:12345:W. It is a 5 character SQL state, a colon, the
+# SQL error code, a colon and finally the desired behavior that should override the initial one.
+# The following behaviors are accepted:
+# - D to force a debug message
+# - D- to force a debug message, but do not show the original sql state and error code
+# - I to force an info message
+# - I- to force an info message, but do not show the original sql state and error code
+# - W to force a warning
+# - W- to force a warning, but do not show the original sql state and error code
+# - E to force an error
+# - E- to force an error, but do not show the original sql state and error code
+# Example 1: to force Oracle stored procedure compilation issues to produce
+# errors instead of warnings, the following errorOverride can be used: 99999:17110:E
+# Example 2: to force SQL Server PRINT messages to be displayed as info messages (without SQL state and error
+# code details) instead of warnings, the following errorOverride can be used: S0001:0:I-
 # Flyway Pro and Flyway Enterprise only
 # flyway.errorOverrides=
 
@@ -283,7 +300,14 @@ flyway.url=
 # Flyway Pro and Flyway Enterprise only
 # flyway.oracle.sqlplus=
 
-# Flyway's license key.
+# Whether Flyway should issue a warning instead of an error whenever it encounters an Oracle SQL*Plus
+# statement it doesn't yet support. (default: false)
+# Flyway Pro and Flyway Enterprise only
+# flyway.oracle.sqlplusWarn=
+
+# Your Flyway license key (FL01...). Not yet a Flyway Pro or Enterprise Edition customer?
+# Request your Flyway trial license key st https://flywaydb.org/download/
+# to try out Flyway Pro and Enterprise Edition features free for 30 days.
 # Flyway Pro and Flyway Enterprise only
 # flyway.licenseKey=
 ```

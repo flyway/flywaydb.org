@@ -307,6 +307,10 @@ The following environment variables are supported:
         <td>FLYWAY_ORACLE_SQLPLUS {% include pro.html %}</td>
         <td>Enable Flyway's support for <a href="/documentation/database/oracle#sqlplus-commands">Oracle SQL*Plus commands</a></td>
     </tr>
+    <tr id="FLYWAY_ORACLE_SQLPLUS_WARN">
+        <td>FLYWAY_ORACLE_SQLPLUS_WARN {% include pro.html %}</td>
+        <td>Whether Flyway should issue a warning instead of an error whenever it encounters an Oracle SQL*Plus statement it doesn't yet support.</td>
+    </tr>
     <tr id="FLYWAY_LICENSE_KEY">
         <td>FLYWAY_LICENSE_KEY {% include pro.html %}</td>
         <td>Your Flyway license key (FL01...). Not yet a Flyway Pro or Enterprise Edition customer? Request your <a href="" data-toggle="modal" data-target="#flyway-trial-license-modal">Flyway trial license key</a> to try out Flyway Pro and Enterprise Edition features free for 30 days.</td>

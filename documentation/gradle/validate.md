@@ -237,6 +237,8 @@ Validation fails if
             warning is logged and Flyway continues normally. This is useful for situations where one must be able to redeploy
             an older version of the application after the database has been migrated by a newer one.</td>
     </tr>
+    {% include cfg/oracleSqlplus.html %}
+    {% include cfg/oracleSqlplusWarn.html %}
     {% include cfg/licenseKey.html %}
     </tbody>
 </table>
@@ -278,6 +280,8 @@ flyway {
     ignoreIgnoredMigrations = false
     ignorePendingMigrations = false
     ignoreFutureMigrations = false
+    oracleSqlplus = true 
+    oracleSqlplusWarn = true 
 }
 ```
 

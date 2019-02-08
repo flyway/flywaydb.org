@@ -325,6 +325,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
             Omit to use the default mode of executing the SQL statements directly against the database.</td>
     </tr>
     {% include cfg/oracleSqlplus.html %}
+    {% include cfg/oracleSqlplusWarn.html %}
     {% include cfg/licenseKey.html %}
     </tbody>
 </table>
@@ -379,6 +380,7 @@ flyway {
     errorOverrides = ['99999:17110:E', '42001:42001:W']
     dryRunOutput = '/my/sql/dryrun-outputfile.sql'
     oracleSqlplus = true 
+    oracleSqlplusWarn = true 
 }
 ```
 

@@ -260,6 +260,7 @@ subtitle: 'mvn flyway:undo'
             Omit to use the default mode of executing the SQL statements directly against the database.</td>
     </tr>
     {% include cfg/oracleSqlplus.html %}
+    {% include cfg/oracleSqlplusWarn.html %}
     {% include cfg/licenseKey.html %}
     </tbody>
 </table>
@@ -328,6 +329,8 @@ subtitle: 'mvn flyway:undo'
         <errorOverride>42001:42001:W</errorOverride>
     </errorOverrides>
     <dryRunOutput>/my/sql/dryrun-outputfile.sql</dryRunOutput>
+    <oracle.sqlplus>true</oracle.sqlplus>
+    <oracle.sqlplusWarn>true</oracle.sqlplusWarn>
 </configuration>
 ```
 
