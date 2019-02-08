@@ -127,6 +127,7 @@ The following commands are fully supported and can be used just like any regular
 - `UNDEFINE`
 - `WHENEVER SQLERROR CONTINUE`
 - `WHENEVER SQLERROR EXIT FAILURE`
+- `WHENEVER SQLERROR EXIT SQL.SQLCODE`
 
 The short form of these commands is also supported. 
 
