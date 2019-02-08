@@ -7,6 +7,7 @@ subtitle: SQL Server
 
 ## Supported Versions
 
+- `2019`
 - `2017`
 - `2016`
 - `2014` {% include pro.html %}
