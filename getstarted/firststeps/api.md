@@ -44,7 +44,7 @@ Let's add Flyway and H2 to our new `pom.xml`:
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
-            <version>1.3.170</version>
+            <version>1.4.197</version>
         </dependency>
         ...
     </dependencies>

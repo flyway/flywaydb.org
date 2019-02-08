@@ -49,7 +49,7 @@ Let's integrate Flyway and the H2 database into our new `pom.xml` and configure 
                     <dependency>
                         <groupId>com.h2database</groupId>
                         <artifactId>h2</artifactId>
-                        <version>1.4.191</version>
+                        <version>1.4.197</version>
                     </dependency>
                 </dependencies>
             </plugin>
