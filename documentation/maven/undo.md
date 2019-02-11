@@ -185,6 +185,7 @@ subtitle: 'mvn flyway:undo'
         <td><i>previous version</i></td>
         <td>The target version up to which Flyway should undo migrations. Migrations with a lower version number will be ignored.</td>
     </tr>
+    {% include cfg/cleanOnValidationError.html %}
     <tr>
         <td>ignoreMissingMigrations</td>
         <td>NO</td>
@@ -314,6 +315,7 @@ subtitle: 'mvn flyway:undo'
     <target>1.1</target>
     <mixed>false</mixed>
     <group>false</group>
+    <cleanOnValidationError>false</cleanOnValidationError>
     <ignoreMissingMigrations>false</ignoreMissingMigrations>
     <ignoreIgnoredMigrations>false</ignoreIgnoredMigrations>
     <ignoreFutureMigrations>false</ignoreFutureMigrations>

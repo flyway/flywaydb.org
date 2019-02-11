@@ -189,6 +189,7 @@ subtitle: 'Command-line: undo'
         <td><i>previous version</i></td>
         <td>The target version up to which Flyway should undo migrations. Migrations with a lower version number will be ignored.</td>
     </tr>
+    {% include cfg/cleanOnValidationError.html %}
     <tr>
         <td>ignoreMissingMigrations</td>
         <td>NO</td>
@@ -279,6 +280,7 @@ flyway.skipDefaultCallbacks=false
 flyway.target=5.1
 flyway.mixed=false
 flyway.group=false
+flyway.cleanOnValidationError=false
 flyway.ignoreMissingMigrations=false
 flyway.ignoreIgnoredMigrations=false
 flyway.ignoreFutureMigrations=false
