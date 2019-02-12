@@ -21,46 +21,117 @@ running on **Java 8**, **Java 9**, **Java 10** or **Java 11**. The Flyway Enterp
     </ul>
     <div class="tab-content">
         <div class="tab-pane active" id="tab-community">
+            <table class="table">
+                <tr>
+                    <th>Official Release (recommended)</th>
+                    <td>Preview Release</td>
+                </tr>    
+                <tr>
+                    <td>
 <pre class="prettyprint">plugins {
     id "org.flywaydb.flyway" version "{{ site.flywayVersion }}"
 }</pre>
+                    </td>
+                    <td>
+<pre class="prettyprint">plugins {
+    id "org.flywaydb.flyway" version "{{ site.flywayPreviewVersion }}"
+}</pre>
+                    </td>
+                </tr>
+            </table>
         </div>
         <div class="tab-pane" id="tab-pro">
-        <pre class="prettyprint">buildscript {
-    repositories {
-        maven {
-            url "https://repo.flywaydb.org/repo"
-            credentials {
-                username '<a href="" data-toggle="modal" data-target="#flyway-trial-license-modal"><i>your-flyway-license-key</i></a>'
-                password 'flyway'
-            }
-        }
+            <table class="table">
+                <tr>
+                    <th>Official Release (recommended)</th>
+                    <td>Preview Release</td>
+                </tr>    
+                <tr>
+                    <td>
+        <pre class="prettyprint" style="font-size: 80%">buildscript {
+  repositories {
+    maven {
+      url "https://repo.flywaydb.org/repo"
+      credentials {
+        username '<a href="" data-toggle="modal" data-target="#flyway-trial-license-modal"><i>your-flyway-license-key</i></a>'
+        password 'flyway'
+      }
     }
-    dependencies {
-        classpath "org.flywaydb<strong>.pro</strong>:flyway-gradle-plugin:{{ site.flywayVersion }}"
-    }
+  }
+  dependencies {
+    classpath "org.flywaydb<strong>.pro</strong>:flyway-gradle-plugin:{{ site.flywayVersion }}"
+  }
 }
 
 apply plugin: 'org.flywaydb.flyway'</pre>
+                    </td>
+                    <td>
+        <pre class="prettyprint" style="font-size: 80%">buildscript {
+  repositories {
+    maven {
+      url "https://repo.flywaydb.org/repo"
+      credentials {
+        username '<a href="" data-toggle="modal" data-target="#flyway-trial-license-modal"><i>your-flyway-license-key</i></a>'
+        password 'flyway'
+      }
+    }
+  }
+  dependencies {
+    classpath "org.flywaydb<strong>.pro</strong>:flyway-gradle-plugin:{{ site.flywayPreviewVersion }}"
+  }
+}
+
+apply plugin: 'org.flywaydb.flyway'</pre>
+                    </td>
+                </tr>
+            </table>
         </div>
         <div class="tab-pane" id="tab-enterprise">
-        <pre class="prettyprint">buildscript {
-    repositories {
-        maven {
-            url "https://repo.flywaydb.org/repo"
-            credentials {
-                username '<a href="" data-toggle="modal" data-target="#flyway-trial-license-modal"><i>your-flyway-license-key</i></a>'
-                password 'flyway'
-            }
-        }
+            <table class="table">
+                <tr>
+                    <th>Official Release (recommended)</th>
+                    <td>Preview Release</td>
+                </tr>    
+                <tr>
+                    <td>
+        <pre class="prettyprint" style="font-size: 80%">buildscript {
+  repositories {
+    maven {
+      url "https://repo.flywaydb.org/repo"
+      credentials {
+        username '<a href="" data-toggle="modal" data-target="#flyway-trial-license-modal"><i>your-flyway-license-key</i></a>'
+        password 'flyway'
+      }
     }
-    dependencies {
-        classpath "org.flywaydb<strong>.enterprise</strong>:flyway-gradle-plugin:{{ site.flywayVersion }}"
-    }
+  }
+  dependencies {
+    classpath "org.flywaydb<strong>.enterprise</strong>:flyway-gradle-plugin:{{ site.flywayVersion }}"
+  }
 }
 
 apply plugin: 'org.flywaydb.flyway'</pre>
-                </div>
+                    </td>
+                    <td>
+        <pre class="prettyprint" style="font-size: 80%">buildscript {
+  repositories {
+    maven {
+      url "https://repo.flywaydb.org/repo"
+      credentials {
+        username '<a href="" data-toggle="modal" data-target="#flyway-trial-license-modal"><i>your-flyway-license-key</i></a>'
+        password 'flyway'
+      }
+    }
+  }
+  dependencies {
+    classpath "org.flywaydb<strong>.enterprise</strong>:flyway-gradle-plugin:{{ site.flywayPreviewVersion }}"
+  }
+}
+
+apply plugin: 'org.flywaydb.flyway'</pre>
+                    </td>
+                </tr>
+            </table>
+        </div>
     </div>
 </div>
                 

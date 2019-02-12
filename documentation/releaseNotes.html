@@ -8,6 +8,67 @@ subtitle: Release Notes
 <p>Thank you all for reporting all these issues and contributing fixes!</p>
 
 <div class="release">
+    <h2 id="6.0.0-beta">Flyway 6.0.0-beta (2019-02-12)</h2>
+
+    <h3>New features</h3>
+    <ul>
+        {% include issue.html id="865" title="Custom tablespace for schema history table" %}
+        {% include issue.html id="1062" title="API: Make it possible to use pre-instantiated Java-based migrations" %}
+        {% include issue.html id="2120" title="Add new oracle.sqlplusWarn setting" pro=true %}
+        {% include issue.html id="2167" title="Allow versioned migration names like V12.sql (no separator, no description)" %}
+        {% include issue.html id="2178" title="PostgreSQL 11 support" pr="2194" %}
+        {% include issue.html id="2189" title="Gradle 5.0 support" %}
+        {% include issue.html id="2216" title="CockroachDB 2.1 support" %}
+        {% include issue.html id="2300" title="MariaDB 10.4 support" %}
+        {% include issue.html id="2301" title="Command-line: Upgrade MariaDB JDBC driver to 2.4.0" %}
+        {% include issue.html id="2302" title="Oracle SQL*Plus: support WHENEVER SQLERROR EXIT SQL.SQLCODE" pro=true %}
+        {% include issue.html id="2303" title="SQL Server 2019 support" %}
+        {% include issue.html id="2304" title="Command-line: Upgrade SQL Server JDBC driver to 7.2.0" %}
+    </ul>
+
+    <h3>Changes</h3>
+    <ul>
+        {% include issue.html id="2223" title="Database support timeline guarantees" %}
+    </ul>
+
+    <h3>Incompatible changes</h3>
+    <ul>
+        {% include issue.html id="2120" title="Unsupported Oracle SQL*Plus now throw an error by default" pro=true %}
+        {% include issue.html id="2188" title="Discontinue Java 6 support" enterprise=true %}
+        {% include issue.html id="2218" title="Remove deprecated APIs and settings" %}
+    </ul>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        {% include issue.html id="63" title="Support trailing single line comments" %}
+        {% include issue.html id="558" title="MySQL statement not recognized due to multiple comment directives on a single line" %}
+        {% include issue.html id="1706" title="Parser does not support multiple statements per line" %}
+        {% include issue.html id="2198" title="Flyway fails to find resources in Felix 6.0.1 environment" %}
+        {% include issue.html id="2228" title="NullPointerException with PostgreSQL multi-statement CREATE RULE" %}
+        {% include issue.html id="2232" title="Clean tries to drop a table from an extension and fails" %}
+        {% include issue.html id="2236" title="canExecuteInTransaction is not respected by JavaMigration" %}
+        {% include issue.html id="2242" title="CREATE FULLTEXT CATALOG statement cannot be used inside a user transaction" %}
+        {% include issue.html id="2252" title="Oracle: Parser fails on VIEW ... WITH not followed by PL/SQL" %}
+        {% include issue.html id="2263" title="Oracle: cleaning type fails with object does not exist" %}
+        {% include issue.html id="2266" title="Flyway does not clean sequences in MariaDB" %}
+        {% include issue.html id="2275" title="Unable to override error S00011:15404" %}
+        {% include issue.html id="2280" title="Dry-run file contains statements with invalid syntax" %}
+        {% include issue.html id="2281" title="Sybase ASE: parsing error with double-quoted string literals" %}
+        {% include issue.html id="2284" title="Documentation Typo" pr="2285" %}
+        {% include issue.html id="2287" title="DB2: Clean excludes views whose names end with _V" %}
+        {% include issue.html id="2288" title="Unable to discard a migration after undoing it" %}
+        {% include issue.html id="2289" title="MariaDB not recognized with MariaDB JDBC driver 2.4.0" %}
+        {% include issue.html id="2298" title="The procedures 'sp_serveroption' and 'sp_droplinkedsrvlogin' cannot be executed within a transaction" %}
+    </ul>
+
+    <p>
+        Thanks to AlBa231, armondoortega, asamonov, CobraFlow, esauser, Evan J. Ercolano, Gerd Behrmann,
+        Guy Brand, jankoh, Jason Turim, Jonas Kongslund, jutoft, Lochan08, Renat Sabitov, Sabine Heimsath,
+        smrutikanta-cog, svpace, tinybarks and tomas-silhavy for reporting these issues and contributing fixes.
+    </p>
+</div>
+
+<div class="release">
     <h2 id="5.2.4">Flyway 5.2.4 (2018-12-04)</h2>
 
     <h3>Bug fixes</h3>

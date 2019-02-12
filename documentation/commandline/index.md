@@ -15,26 +15,77 @@ Select the platform that you need. Each download contains all editions (communit
 
 #### <i class="fa fa-windows"></i> Windows
 
-Download <a href="/download/thankyou?dl=https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-windows-x64.zip">flyway-commandline-{{site.flywayVersion}}-windows-x64.zip</a>
-<a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-windows-x64.zip.md5">md5</a>
-<a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-windows-x64.zip.sha1">sha1</a><br/>
+<table class="table">
+    <tr>
+        <th>Official Release (recommended)</th>
+        <td>Preview Release</td>
+    </tr>    
+    <tr>
+        <td>
+            <a class="btn btn-primary btn-download" href="/download/thankyou?dl=https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-windows-x64.zip">flyway-commandline-{{site.flywayVersion}}-windows-x64.zip</a>
+            <a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-windows-x64.zip.md5">md5</a>
+            <a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-windows-x64.zip.sha1">sha1</a><br/>
 
-Then extract it and simply add the new `flyway-{{site.flywayVersion}}` directory to the `PATH` to make the `flyway` command available from anywhere on your system.<br/><br/>
+            <p class="note"><br/>Extract the archive and simply add the new <code>flyway-{{site.flywayVersion}}</code> directory to the <code>PATH</code> to make the <code>flyway</code> command available from anywhere on your system.</p>
+        </td>
+        <td>
+            <a class="btn btn-primary btn-download" href="/download/thankyou?dl=https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayPreviewVersion}}/flyway-commandline-{{site.flywayPreviewVersion}}-windows-x64.zip">flyway-commandline-{{site.flywayPreviewVersion}}-windows-x64.zip</a>
+            <a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayPreviewVersion}}/flyway-commandline-{{site.flywayPreviewVersion}}-windows-x64.zip.md5">md5</a>
+            <a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayPreviewVersion}}/flyway-commandline-{{site.flywayPreviewVersion}}-windows-x64.zip.sha1">sha1</a><br/>
+
+            <p class="note"><br/>Extract the archive and simply add the new <code>flyway-{{site.flywayPreviewVersion}}</code> directory to the <code>PATH</code> to make the <code>flyway</code> command available from anywhere on your system.</p>
+        </td>
+    </tr>
+</table>
 
 #### <i class="fa fa-apple"></i> macOS
 
-Download <a href="/download/thankyou?dl=https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-macosx-x64.tar.gz">flyway-commandline-{{site.flywayVersion}}-macosx-x64.tar.gz</a>
-<a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-macosx-x64.tar.gz.md5">md5</a>
-<a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-macosx-x64.tar.gz.sha1">sha1</a><br/><br/>
+<table class="table">
+    <tr>
+        <th>Official Release (recommended)</th>
+        <td>Preview Release</td>
+    </tr>    
+    <tr>
+        <td>
+            <a class="btn btn-primary btn-download" href="/download/thankyou?dl=https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-macosx-x64.tar.gz">flyway-commandline-{{site.flywayVersion}}-macosx-x64.tar.gz</a>
+            <a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-macosx-x64.tar.gz.md5">md5</a>
+            <a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-macosx-x64.tar.gz.sha1">sha1</a><br/><br/>
+        </td>
+        <td>
+            <a class="btn btn-primary btn-download" href="/download/thankyou?dl=https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayPreviewVersion}}/flyway-commandline-{{site.flywayPreviewVersion}}-macosx-x64.tar.gz">flyway-commandline-{{site.flywayPreviewVersion}}-macosx-x64.tar.gz</a>
+            <a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayPreviewVersion}}/flyway-commandline-{{site.flywayPreviewVersion}}-macosx-x64.tar.gz.md5">md5</a>
+            <a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayPreviewVersion}}/flyway-commandline-{{site.flywayPreviewVersion}}-macosx-x64.tar.gz.sha1">sha1</a><br/><br/>
+        </td>
+    </tr>
+</table>
 
 #### <i class="fa fa-linux"></i> Linux
 
 Download, extract and install by adding to `PATH` (requires `sudo` permissions):
 <pre class="console" style="overflow-x: auto"><span>$</span> wget -qO- https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/<strong>flyway-commandline-{{site.flywayVersion}}-linux-x64.tar.gz</strong> | tar xvz && sudo ln -s `pwd`/flyway-{{site.flywayVersion}}/flyway /usr/local/bin </pre> 
 
-Or simply download the <a href="/download/thankyou?dl=https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-linux-x64.tar.gz">flyway-commandline-{{site.flywayVersion}}-linux-x64.tar.gz</a>
-<a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-linux-x64.tar.gz.md5">md5</a>
-<a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-linux-x64.tar.gz.sha1">sha1</a><br/><br/>
+Or simply download the archive:
+ 
+<table class="table">
+    <tr>
+        <th>Official Release (recommended)</th>
+        <td>Preview Release</td>
+    </tr>    
+    <tr>
+        <td>
+            <a class="btn btn-primary btn-download" href="/download/thankyou?dl=https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-linux-x64.tar.gz">flyway-commandline-{{site.flywayVersion}}-linux-x64.tar.gz</a>
+            <a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-linux-x64.tar.gz.md5">md5</a>
+            <a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-linux-x64.tar.gz.sha1">sha1</a><br/><br/>
+        </td>
+        <td>
+            <a class="btn btn-primary btn-download" href="/download/thankyou?dl=https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayPreviewVersion}}/flyway-commandline-{{site.flywayPreviewVersion}}-linux-x64.tar.gz">flyway-commandline-{{site.flywayPreviewVersion}}-linux-x64.tar.gz</a>
+            <a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayPreviewVersion}}/flyway-commandline-{{site.flywayPreviewVersion}}-linux-x64.tar.gz.md5">md5</a>
+            <a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayPreviewVersion}}/flyway-commandline-{{site.flywayPreviewVersion}}-linux-x64.tar.gz.sha1">sha1</a><br/><br/>
+        </td>
+    </tr>
+</table>
+
+
 
 #### <img title="Docker" style="height: 12px;margin-top: -4px;" src="/assets/logos/docker.png"> Docker
 
@@ -44,7 +95,21 @@ Or simply download the <a href="/download/thankyou?dl=https://repo1.maven.org/ma
 
 (All platforms) Or simply download the image:
 
-<pre class="console"><span>&gt;</span> docker pull <strong>boxfuse/flyway:{{site.flywayVersion}}</strong></pre>
+<table class="table" style="margin-bottom: 0">
+    <tr>
+        <th>Official Release (recommended)</th>
+        <td>Preview Release</td>
+    </tr>    
+    <tr>
+        <td>
+            <pre style="display: inline-block" class="console"><span>&gt;</span> docker pull <strong>boxfuse/flyway:{{site.flywayVersion}}</strong></pre>
+        </td>
+        <td>
+            <pre style="display: inline-block" class="console"><span>&gt;</span> docker pull <strong>boxfuse/flyway:{{site.flywayPreviewVersion}}</strong></pre>
+        </td>
+    </tr>
+</table>
+
 Go to Docker Hub for <a href="https://hub.docker.com/r/boxfuse/flyway/">detailed usage instructions</a>.<br/><br/>
 
 
