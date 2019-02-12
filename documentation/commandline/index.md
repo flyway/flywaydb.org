@@ -18,7 +18,7 @@ Select the platform that you need. Each download contains all editions (communit
 <table class="table">
     <tr>
         <th>Official Release (recommended)</th>
-        <td>Preview Release</td>
+        <td>Early-Access Preview</td>
     </tr>    
     <tr>
         <td>
@@ -43,7 +43,7 @@ Select the platform that you need. Each download contains all editions (communit
 <table class="table">
     <tr>
         <th>Official Release (recommended)</th>
-        <td>Preview Release</td>
+        <td>Early-Access Preview</td>
     </tr>    
     <tr>
         <td>
@@ -69,7 +69,7 @@ Or simply download the archive:
 <table class="table">
     <tr>
         <th>Official Release (recommended)</th>
-        <td>Preview Release</td>
+        <td>Early-Access Preview</td>
     </tr>    
     <tr>
         <td>
@@ -98,7 +98,7 @@ Or simply download the archive:
 <table class="table" style="margin-bottom: 0">
     <tr>
         <th>Official Release (recommended)</th>
-        <td>Preview Release</td>
+        <td>Early-Access Preview</td>
     </tr>    
     <tr>
         <td>

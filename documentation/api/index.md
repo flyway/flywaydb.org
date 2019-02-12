@@ -37,7 +37,7 @@ be migrated to a state the rest of the code can work with.
     <tr>
         <th></th>
         <th>Official Release (recommended)</th>
-        <td>Preview Release</td>
+        <td>Early-Access Preview</td>
     </tr>    
     <tr>
         <th>Maven</th>
@@ -99,7 +99,7 @@ be migrated to a state the rest of the code can work with.
     <tr>
         <th></th>
         <th>Official Release (recommended)</th>
-        <td>Preview Release</td>
+        <td>Early-Access Preview</td>
     </tr>    
     <tr>
         <th>Maven</th>
@@ -230,7 +230,7 @@ dependencies {
     <tr>
         <th></th>
         <th>Official Release (recommended)</th>
-        <td>Preview Release</td>
+        <td>Early-Access Preview</td>
     </tr>    
     <tr>
         <th>Maven</th>

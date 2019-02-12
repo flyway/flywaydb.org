@@ -5,7 +5,7 @@ subtitle: Gradle Plugin
 ---
 # Gradle Plugin
 
-The Flyway Community Edition and Flyway Pro Edition Gradle plugin support **Gradle 3.x** and **Gradle 4.x** 
+The Flyway Community Edition and Flyway Pro Edition Gradle plugins support **Gradle 3.x** and **Gradle 4.x** 
 running on **Java 8**, **Java 9**, **Java 10** or **Java 11**. The Flyway Enterprise Gradle plugin also supports **Java 7**.
 
 ## Installation
@@ -24,7 +24,7 @@ running on **Java 8**, **Java 9**, **Java 10** or **Java 11**. The Flyway Enterp
             <table class="table">
                 <tr>
                     <th>Official Release (recommended)</th>
-                    <td>Preview Release</td>
+                    <td>Early-Access Preview</td>
                 </tr>    
                 <tr>
                     <td>
@@ -44,7 +44,7 @@ running on **Java 8**, **Java 9**, **Java 10** or **Java 11**. The Flyway Enterp
             <table class="table">
                 <tr>
                     <th>Official Release (recommended)</th>
-                    <td>Preview Release</td>
+                    <td>Early-Access Preview</td>
                 </tr>    
                 <tr>
                     <td>
@@ -90,7 +90,7 @@ apply plugin: 'org.flywaydb.flyway'</pre>
             <table class="table">
                 <tr>
                     <th>Official Release (recommended)</th>
-                    <td>Preview Release</td>
+                    <td>Early-Access Preview</td>
                 </tr>    
                 <tr>
                     <td>
