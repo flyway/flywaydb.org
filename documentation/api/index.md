@@ -34,6 +34,11 @@ be migrated to a state the rest of the code can work with.
         <div class="tab-pane active" id="tab-community">
 <table class="table">
     <tr>
+        <th></th>
+        <th>Official Release (recommended)</th>
+        <td>Early-Access Preview</td>
+    </tr>    
+    <tr>
         <th>Maven</th>
         <td>
             <pre class="prettyprint">&lt;dependency&gt;
@@ -42,11 +47,21 @@ be migrated to a state the rest of the code can work with.
     &lt;version&gt;{{ site.flywayVersion }}&lt;/version&gt;
 &lt;/dependency&gt;</pre>
         </td>
+        <td>
+            <pre class="prettyprint">&lt;dependency&gt;
+    &lt;groupId&gt;org.flywaydb&lt;/groupId&gt;
+    &lt;artifactId&gt;flyway-core&lt;/artifactId&gt;
+    &lt;version&gt;{{ site.flywayPreviewVersion }}&lt;/version&gt;
+&lt;/dependency&gt;</pre>
+        </td>
     </tr>
     <tr>
         <th>Gradle</th>
         <td>
             <pre class="prettyprint">compile "org.flywaydb:flyway-core:{{ site.flywayVersion }}"</pre>
+        </td>
+        <td>
+            <pre class="prettyprint">compile "org.flywaydb:flyway-core:{{ site.flywayPreviewVersion }}"</pre>
         </td>
     </tr>
     <tr>
@@ -56,6 +71,11 @@ be migrated to a state the rest of the code can work with.
             <a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-core/{{site.flywayVersion}}/flyway-core-{{site.flywayVersion}}.jar.md5">md5</a>
             <a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-core/{{site.flywayVersion}}/flyway-core-{{site.flywayVersion}}.jar.sha1">sha1</a>
         </td>
+        <td>
+            <a class="btn btn-primary btn-download" href="/download/thankyou?dl=https://repo1.maven.org/maven2/org/flywaydb/flyway-core/{{site.flywayPreviewVersion}}/flyway-core-{{site.flywayPreviewVersion}}.jar"><i class="fa fa-download"></i> flyway-core-{{site.flywayPreviewVersion}}.jar</a>
+            <a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-core/{{site.flywayPreviewVersion}}/flyway-core-{{site.flywayPreviewVersion}}.jar.md5">md5</a>
+            <a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-core/{{site.flywayPreviewVersion}}/flyway-core-{{site.flywayPreviewVersion}}.jar.sha1">sha1</a>
+        </td>
     </tr>
     <tr>
         <th>Sources</th>
@@ -64,6 +84,11 @@ be migrated to a state the rest of the code can work with.
             <a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-core/{{site.flywayVersion}}/flyway-core-{{site.flywayVersion}}-sources.jar.md5">md5</a>
             <a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-core/{{site.flywayVersion}}/flyway-core-{{site.flywayVersion}}-sources.jar.sha1">sha1</a>
         </td>
+        <td>
+            <a class="btn btn-primary btn-download" href="/download/thankyou?dl=https://repo1.maven.org/maven2/org/flywaydb/flyway-core/{{site.flywayPreviewVersion}}/flyway-core-{{site.flywayPreviewVersion}}-sources.jar"><i class="fa fa-download"></i> flyway-core-{{site.flywayPreviewVersion}}-sources.jar</a>
+            <a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-core/{{site.flywayPreviewVersion}}/flyway-core-{{site.flywayPreviewVersion}}-sources.jar.md5">md5</a>
+            <a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-core/{{site.flywayPreviewVersion}}/flyway-core-{{site.flywayPreviewVersion}}-sources.jar.sha1">sha1</a>
+        </td>
     </tr>
 </table>
 <p class="note">Older versions are available from <a href="https://repo1.maven.org/maven2/org/flywaydb/flyway-core">Maven Central</a></p>
@@ -71,10 +96,15 @@ be migrated to a state the rest of the code can work with.
         <div class="tab-pane" id="tab-pro">
 <table class="table">
     <tr>
+        <th></th>
+        <th>Official Release (recommended)</th>
+        <td>Early-Access Preview</td>
+    </tr>    
+    <tr>
         <th>Maven</th>
         <td>
             <code>&lt;project-dir&gt;/pom.xml</code>
-            <pre class="prettyprint">&lt;repositories&gt;
+            <pre class="prettyprint" style="font-size: 80%">&lt;repositories&gt;
     &lt;repository&gt;
         &lt;id&gt;flyway-repo&lt;/id&gt;
         &lt;url&gt;https://repo.flywaydb.org/repo&lt;/url&gt;
@@ -91,7 +121,37 @@ be migrated to a state the rest of the code can work with.
     ...
 &lt;/dependencies&gt;</pre>
             <code>&lt;user-home&gt;/.m2/settings.xml</code>
-            <pre class="prettyprint">&lt;settings&gt;
+            <pre class="prettyprint" style="font-size: 80%">&lt;settings&gt;
+    &lt;servers&gt;
+        &lt;server&gt;
+            &lt;id&gt;flyway-repo&lt;/id&gt;
+            &lt;username&gt;<a href="" data-toggle="modal" data-target="#flyway-trial-license-modal"><i>your-flyway-license-key</i></a>&lt;/username&gt;
+            &lt;password&gt;flyway&lt;/password&gt;
+        &lt;/server&gt;
+    &lt;/servers&gt;
+    ...
+&lt;/settings&gt;</pre>
+        </td>
+        <td>
+            <code>&lt;project-dir&gt;/pom.xml</code>
+            <pre class="prettyprint" style="font-size: 80%">&lt;repositories&gt;
+    &lt;repository&gt;
+        &lt;id&gt;flyway-repo&lt;/id&gt;
+        &lt;url&gt;https://repo.flywaydb.org/repo&lt;/url&gt;
+    &lt;/repository&gt;
+    ...
+&lt;/repositories&gt;
+
+&lt;dependencies&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.flywaydb<strong>.pro</strong>&lt;/groupId&gt;
+        &lt;artifactId&gt;flyway-core&lt;/artifactId&gt;
+        &lt;version&gt;{{ site.flywayPreviewVersion }}&lt;/version&gt;
+    &lt;/dependency&gt;
+    ...
+&lt;/dependencies&gt;</pre>
+            <code>&lt;user-home&gt;/.m2/settings.xml</code>
+            <pre class="prettyprint" style="font-size: 80%">&lt;settings&gt;
     &lt;servers&gt;
         &lt;server&gt;
             &lt;id&gt;flyway-repo&lt;/id&gt;
@@ -106,7 +166,7 @@ be migrated to a state the rest of the code can work with.
     <tr>
         <th>Gradle</th>
         <td>
-            <pre class="prettyprint">repositories {
+            <pre class="prettyprint" style="font-size: 80%">repositories {
     maven {
         url "https://repo.flywaydb.org/repo"
         credentials {
@@ -120,6 +180,21 @@ dependencies {
     compile "org.flywaydb<strong>.pro</strong>:flyway-core:{{ site.flywayVersion }}"
 }</pre>
         </td>
+        <td>
+            <pre class="prettyprint" style="font-size: 80%">repositories {
+    maven {
+        url "https://repo.flywaydb.org/repo"
+        credentials {
+            username '<a href="" data-toggle="modal" data-target="#flyway-trial-license-modal"><i>your-flyway-license-key</i></a>'
+            password 'flyway'
+        }
+    }
+}
+
+dependencies {
+    compile "org.flywaydb<strong>.pro</strong>:flyway-core:{{ site.flywayPreviewVersion }}"
+}</pre>
+        </td>
     </tr>
     <tr>
         <th>Binary</th>
@@ -127,6 +202,11 @@ dependencies {
             <a class="btn btn-primary btn-download" href="/download/thankyou?dl=https://repo.flywaydb.org/repo/org/flywaydb/pro/flyway-core/{{site.flywayVersion}}/flyway-core-{{site.flywayVersion}}.jar"><i class="fa fa-download"></i> flyway-core-{{site.flywayVersion}}.jar</a>
             <a class="note" href="https://repo.flywaydb.org/repo/org/flywaydb/pro/flyway-core/{{site.flywayVersion}}/flyway-core-{{site.flywayVersion}}.jar.md5">md5</a>
             <a class="note" href="https://repo.flywaydb.org/repo/org/flywaydb/pro/flyway-core/{{site.flywayVersion}}/flyway-core-{{site.flywayVersion}}.jar.sha1">sha1</a>
+        </td>
+        <td>
+            <a class="btn btn-primary btn-download" href="/download/thankyou?dl=https://repo.flywaydb.org/repo/org/flywaydb/pro/flyway-core/{{site.flywayPreviewVersion}}/flyway-core-{{site.flywayPreviewVersion}}.jar"><i class="fa fa-download"></i> flyway-core-{{site.flywayPreviewVersion}}.jar</a>
+            <a class="note" href="https://repo.flywaydb.org/repo/org/flywaydb/pro/flyway-core/{{site.flywayPreviewVersion}}/flyway-core-{{site.flywayPreviewVersion}}.jar.md5">md5</a>
+            <a class="note" href="https://repo.flywaydb.org/repo/org/flywaydb/pro/flyway-core/{{site.flywayPreviewVersion}}/flyway-core-{{site.flywayPreviewVersion}}.jar.sha1">sha1</a>
         </td>
     </tr>
     <tr>
@@ -136,16 +216,26 @@ dependencies {
             <a class="note" href="https://repo.flywaydb.org/repo/org/flywaydb/pro/flyway-core/{{site.flywayVersion}}/flyway-core-{{site.flywayVersion}}-sources.jar.md5">md5</a>
             <a class="note" href="https://repo.flywaydb.org/repo/org/flywaydb/pro/flyway-core/{{site.flywayVersion}}/flyway-core-{{site.flywayVersion}}-sources.jar.sha1">sha1</a>
         </td>
+        <td>
+            <a class="btn btn-primary btn-download" href="/download/thankyou?dl=https://repo.flywaydb.org/repo/org/flywaydb/pro/flyway-core/{{site.flywayPreviewVersion}}/flyway-core-{{site.flywayPreviewVersion}}-sources.jar"><i class="fa fa-download"></i> flyway-core-{{site.flywayPreviewVersion}}-sources.jar</a>
+            <a class="note" href="https://repo.flywaydb.org/repo/org/flywaydb/pro/flyway-core/{{site.flywayPreviewVersion}}/flyway-core-{{site.flywayPreviewVersion}}-sources.jar.md5">md5</a>
+            <a class="note" href="https://repo.flywaydb.org/repo/org/flywaydb/pro/flyway-core/{{site.flywayPreviewVersion}}/flyway-core-{{site.flywayPreviewVersion}}-sources.jar.sha1">sha1</a>
+        </td>
     </tr>
 </table>
         </div>
         <div class="tab-pane" id="tab-enterprise">
 <table class="table">
     <tr>
+        <th></th>
+        <th>Official Release (recommended)</th>
+        <td>Early-Access Preview</td>
+    </tr>    
+    <tr>
         <th>Maven</th>
         <td>
             <code>&lt;project-dir&gt;/pom.xml</code>
-            <pre class="prettyprint">&lt;repositories&gt;
+            <pre class="prettyprint" style="font-size: 80%">&lt;repositories&gt;
     &lt;repository&gt;
         &lt;id&gt;flyway-repo&lt;/id&gt;
         &lt;url&gt;https://repo.flywaydb.org/repo&lt;/url&gt;
@@ -162,7 +252,37 @@ dependencies {
     ...
 &lt;/dependencies&gt;</pre>
             <code>&lt;user-home&gt;/.m2/settings.xml</code>
-            <pre class="prettyprint">&lt;settings&gt;
+            <pre class="prettyprint" style="font-size: 80%">&lt;settings&gt;
+    &lt;servers&gt;
+        &lt;server&gt;
+            &lt;id&gt;flyway-repo&lt;/id&gt;
+            &lt;username&gt;<a href="" data-toggle="modal" data-target="#flyway-trial-license-modal"><i>your-flyway-license-key</i></a>&lt;/username&gt;
+            &lt;password&gt;flyway&lt;/password&gt;
+        &lt;/server&gt;
+    &lt;/servers&gt;
+    ...
+&lt;/settings&gt;</pre>
+        </td>
+        <td>
+            <code>&lt;project-dir&gt;/pom.xml</code>
+            <pre class="prettyprint" style="font-size: 80%">&lt;repositories&gt;
+    &lt;repository&gt;
+        &lt;id&gt;flyway-repo&lt;/id&gt;
+        &lt;url&gt;https://repo.flywaydb.org/repo&lt;/url&gt;
+    &lt;/repository&gt;
+    ...
+&lt;/repositories&gt;
+
+&lt;dependencies&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.flywaydb<strong>.enterprise</strong>&lt;/groupId&gt;
+        &lt;artifactId&gt;flyway-core&lt;/artifactId&gt;
+        &lt;version&gt;{{ site.flywayPreviewVersion }}&lt;/version&gt;
+    &lt;/dependency&gt;
+    ...
+&lt;/dependencies&gt;</pre>
+            <code>&lt;user-home&gt;/.m2/settings.xml</code>
+            <pre class="prettyprint" style="font-size: 80%">&lt;settings&gt;
     &lt;servers&gt;
         &lt;server&gt;
             &lt;id&gt;flyway-repo&lt;/id&gt;
@@ -177,7 +297,7 @@ dependencies {
     <tr>
         <th>Gradle</th>
         <td>
-            <pre class="prettyprint">repositories {
+            <pre class="prettyprint" style="font-size: 80%">repositories {
     maven {
         url "https://repo.flywaydb.org/repo"
         credentials {
@@ -191,6 +311,21 @@ dependencies {
     compile "org.flywaydb<strong>.enterprise</strong>:flyway-core:{{ site.flywayVersion }}"
 }</pre>
         </td>
+        <td>
+            <pre class="prettyprint" style="font-size: 80%">repositories {
+    maven {
+        url "https://repo.flywaydb.org/repo"
+        credentials {
+            username '<a href="" data-toggle="modal" data-target="#flyway-trial-license-modal"><i>your-flyway-license-key</i></a>'
+            password 'flyway'
+        }
+    }
+}
+
+dependencies {
+    compile "org.flywaydb<strong>.enterprise</strong>:flyway-core:{{ site.flywayPreviewVersion }}"
+}</pre>
+        </td>
     </tr>
     <tr>
         <th>Binary</th>
@@ -199,6 +334,11 @@ dependencies {
             <a class="note" href="https://repo.flywaydb.org/repo/org/flywaydb/enterprise/flyway-core/{{site.flywayVersion}}/flyway-core-{{site.flywayVersion}}.jar.md5">md5</a>
             <a class="note" href="https://repo.flywaydb.org/repo/org/flywaydb/enterprise/flyway-core/{{site.flywayVersion}}/flyway-core-{{site.flywayVersion}}.jar.sha1">sha1</a>
         </td>
+        <td>
+            <a class="btn btn-primary btn-download" href="/download/thankyou?dl=https://repo.flywaydb.org/repo/org/flywaydb/enterprise/flyway-core/{{site.flywayPreviewVersion}}/flyway-core-{{site.flywayPreviewVersion}}.jar"><i class="fa fa-download"></i> flyway-core-{{site.flywayPreviewVersion}}.jar</a>
+            <a class="note" href="https://repo.flywaydb.org/repo/org/flywaydb/enterprise/flyway-core/{{site.flywayPreviewVersion}}/flyway-core-{{site.flywayPreviewVersion}}.jar.md5">md5</a>
+            <a class="note" href="https://repo.flywaydb.org/repo/org/flywaydb/enterprise/flyway-core/{{site.flywayPreviewVersion}}/flyway-core-{{site.flywayPreviewVersion}}.jar.sha1">sha1</a>
+        </td>
     </tr>
     <tr>
         <th>Sources</th>
@@ -206,6 +346,11 @@ dependencies {
             <a class="btn btn-primary btn-download" href="/download/thankyou?dl=https://repo.flywaydb.org/repo/org/flywaydb/enterprise/flyway-core/{{site.flywayVersion}}/flyway-core-{{site.flywayVersion}}-sources.jar"><i class="fa fa-download"></i> flyway-core-{{site.flywayVersion}}-sources.jar</a>
             <a class="note" href="https://repo.flywaydb.org/repo/org/flywaydb/enterprise/flyway-core/{{site.flywayVersion}}/flyway-core-{{site.flywayVersion}}-sources.jar.md5">md5</a>
             <a class="note" href="https://repo.flywaydb.org/repo/org/flywaydb/enterprise/flyway-core/{{site.flywayVersion}}/flyway-core-{{site.flywayVersion}}-sources.jar.sha1">sha1</a>
+        </td>
+        <td>
+            <a class="btn btn-primary btn-download" href="/download/thankyou?dl=https://repo.flywaydb.org/repo/org/flywaydb/enterprise/flyway-core/{{site.flywayPreviewVersion}}/flyway-core-{{site.flywayPreviewVersion}}-sources.jar"><i class="fa fa-download"></i> flyway-core-{{site.flywayPreviewVersion}}-sources.jar</a>
+            <a class="note" href="https://repo.flywaydb.org/repo/org/flywaydb/enterprise/flyway-core/{{site.flywayPreviewVersion}}/flyway-core-{{site.flywayPreviewVersion}}-sources.jar.md5">md5</a>
+            <a class="note" href="https://repo.flywaydb.org/repo/org/flywaydb/enterprise/flyway-core/{{site.flywayPreviewVersion}}/flyway-core-{{site.flywayPreviewVersion}}-sources.jar.sha1">sha1</a>
         </td>
     </tr>
 </table>
