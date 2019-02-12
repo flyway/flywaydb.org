@@ -105,7 +105,7 @@ be migrated to a state the rest of the code can work with.
         <th>Maven</th>
         <td>
             <code>&lt;project-dir&gt;/pom.xml</code>
-            <pre class="prettyprint">&lt;repositories&gt;
+            <pre class="prettyprint" style="font-size: 80%">&lt;repositories&gt;
     &lt;repository&gt;
         &lt;id&gt;flyway-repo&lt;/id&gt;
         &lt;url&gt;https://repo.flywaydb.org/repo&lt;/url&gt;
@@ -122,7 +122,7 @@ be migrated to a state the rest of the code can work with.
     ...
 &lt;/dependencies&gt;</pre>
             <code>&lt;user-home&gt;/.m2/settings.xml</code>
-            <pre class="prettyprint">&lt;settings&gt;
+            <pre class="prettyprint" style="font-size: 80%">&lt;settings&gt;
     &lt;servers&gt;
         &lt;server&gt;
             &lt;id&gt;flyway-repo&lt;/id&gt;
@@ -135,7 +135,7 @@ be migrated to a state the rest of the code can work with.
         </td>
         <td>
             <code>&lt;project-dir&gt;/pom.xml</code>
-            <pre class="prettyprint">&lt;repositories&gt;
+            <pre class="prettyprint" style="font-size: 80%">&lt;repositories&gt;
     &lt;repository&gt;
         &lt;id&gt;flyway-repo&lt;/id&gt;
         &lt;url&gt;https://repo.flywaydb.org/repo&lt;/url&gt;
@@ -152,7 +152,7 @@ be migrated to a state the rest of the code can work with.
     ...
 &lt;/dependencies&gt;</pre>
             <code>&lt;user-home&gt;/.m2/settings.xml</code>
-            <pre class="prettyprint">&lt;settings&gt;
+            <pre class="prettyprint" style="font-size: 80%">&lt;settings&gt;
     &lt;servers&gt;
         &lt;server&gt;
             &lt;id&gt;flyway-repo&lt;/id&gt;
@@ -167,7 +167,7 @@ be migrated to a state the rest of the code can work with.
     <tr>
         <th>Gradle</th>
         <td>
-            <pre class="prettyprint">repositories {
+            <pre class="prettyprint" style="font-size: 80%">repositories {
     maven {
         url "https://repo.flywaydb.org/repo"
         credentials {
@@ -182,7 +182,7 @@ dependencies {
 }</pre>
         </td>
         <td>
-            <pre class="prettyprint">repositories {
+            <pre class="prettyprint" style="font-size: 80%">repositories {
     maven {
         url "https://repo.flywaydb.org/repo"
         credentials {
@@ -236,7 +236,7 @@ dependencies {
         <th>Maven</th>
         <td>
             <code>&lt;project-dir&gt;/pom.xml</code>
-            <pre class="prettyprint">&lt;repositories&gt;
+            <pre class="prettyprint" style="font-size: 80%">&lt;repositories&gt;
     &lt;repository&gt;
         &lt;id&gt;flyway-repo&lt;/id&gt;
         &lt;url&gt;https://repo.flywaydb.org/repo&lt;/url&gt;
@@ -253,7 +253,7 @@ dependencies {
     ...
 &lt;/dependencies&gt;</pre>
             <code>&lt;user-home&gt;/.m2/settings.xml</code>
-            <pre class="prettyprint">&lt;settings&gt;
+            <pre class="prettyprint" style="font-size: 80%">&lt;settings&gt;
     &lt;servers&gt;
         &lt;server&gt;
             &lt;id&gt;flyway-repo&lt;/id&gt;
@@ -266,7 +266,7 @@ dependencies {
         </td>
         <td>
             <code>&lt;project-dir&gt;/pom.xml</code>
-            <pre class="prettyprint">&lt;repositories&gt;
+            <pre class="prettyprint" style="font-size: 80%">&lt;repositories&gt;
     &lt;repository&gt;
         &lt;id&gt;flyway-repo&lt;/id&gt;
         &lt;url&gt;https://repo.flywaydb.org/repo&lt;/url&gt;
@@ -283,7 +283,7 @@ dependencies {
     ...
 &lt;/dependencies&gt;</pre>
             <code>&lt;user-home&gt;/.m2/settings.xml</code>
-            <pre class="prettyprint">&lt;settings&gt;
+            <pre class="prettyprint" style="font-size: 80%">&lt;settings&gt;
     &lt;servers&gt;
         &lt;server&gt;
             &lt;id&gt;flyway-repo&lt;/id&gt;
@@ -298,7 +298,7 @@ dependencies {
     <tr>
         <th>Gradle</th>
         <td>
-            <pre class="prettyprint">repositories {
+            <pre class="prettyprint" style="font-size: 80%">repositories {
     maven {
         url "https://repo.flywaydb.org/repo"
         credentials {
@@ -313,7 +313,7 @@ dependencies {
 }</pre>
         </td>
         <td>
-            <pre class="prettyprint">repositories {
+            <pre class="prettyprint" style="font-size: 80%">repositories {
     maven {
         url "https://repo.flywaydb.org/repo"
         credentials {
