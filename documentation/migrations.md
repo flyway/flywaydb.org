@@ -345,13 +345,11 @@ import java.sql.PreparedStatement;
  */
 public class V1_2__Another_user extends BaseJavaMigration {
     public void migrate(Context context) throws Exception {
-        PreparedStatement statement =
-            context.getConnection().prepareStatement("INSERT INTO test_user (name) VALUES ('Obelix')");
-
-        try {
+        try (PreparedStatement statement = 
+                 context
+                     .getConnection()
+                     .prepareStatement("INSERT INTO test_user (name) VALUES ('Obelix')")) {
             statement.execute();
-        } finally {
-            statement.close();
         }
     }
 }
