@@ -11,6 +11,8 @@ subtitle: Articles
 
 <h2>English</h2>
 
+<p><strong><a href="https://hashnode.com/post/handling-database-migrations-with-flywaydb-cjsw00smm006r9ts2nsziq1xk">Handling Database Migrations With FlywayDB</a></strong> by Amos Omondi<br/></p>
+
 <p><strong><a href="http://www.methodsandtools.com/tools/flyway.php">Flyway - Database Java Migration Open Source
     Framework</a></strong> by Axel Fontaine<br/></p>
 
