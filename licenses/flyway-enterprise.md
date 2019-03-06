@@ -28,7 +28,7 @@ The Licensee is granted the following rights to the source code of the software:
 - b) If, while a valid license for the software is in effect, insolvency proceedings have been opened on the assets of the Licensor or the opening of such proceedings has been rejected due to lack of assets, the Licensee shall be entitled to edit the software more extensively for the purpose of adapting the software to changing software environments, thus ensuring its continued operability.
 - c) The Licensee is not permitted to disclose the source code.
 
-These rights are granted without any territorial limitation. The license is valid for the duration of one year as of the initial acquisition by the Licensee, except for the rights following Section 3. b) above, which are perpetual. The rights are granted as non-exclusive rights, which may be exercised in any hardware and software environment of Licensee, for all currently known types of use.
+These rights are granted without any territorial limitation. The license is valid for the duration of one year as of the initial acquisition by the Licensee, except for the rights following Section 5. b) above, which are perpetual. The rights are granted as non-exclusive rights, which may be exercised in any hardware and software environment of Licensee, for all currently known types of use.
 The rights are non-transferable. Sub-licensing is not allowed.
 
 ## 6. Support
