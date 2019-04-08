@@ -29,6 +29,7 @@ and much more.
     {% include plugin.html name="NPM" logo="npm.svg" url="https://www.npmjs.com/package/flywaydb-cli" info="Package manager for JavaScript" %}
     {% include plugin.html name="Play" logo="play.png" url="/documentation/plugins/play" info="High velocity web framework for Java and Scala" %}
     {% include plugin.html name="PowerShell" logo="powershell.svg" url="https://github.com/cdavid15/flyway-ps-cli" info="Windows command-line shell designed especially for system administrators" %}
+    {% include plugin.html name="Quarkus" logo="quarkus.png" url="https://quarkus.io/guides/flyway-guide" info="Kubernetes Native Java stack tailored for GraalVM & OpenJDK HotSpot" %}
     {% include plugin.html name="SBT" logo="sbt.svg" url="/documentation/plugins/sbt" info="Build tool for Scala projects" %}
     {% include plugin.html name="Spring Boot" logo="springboot.png" url="/documentation/plugins/springboot" info="Framework for production-ready Spring applications" %}
     {% include plugin.html name="Topia" logo="topia.png" url="http://topia.nuiton.org/documentation/flyway_integration.html" info="Tools for Portable and Independent Architecture" %}
