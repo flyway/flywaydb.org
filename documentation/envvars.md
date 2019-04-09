@@ -281,7 +281,7 @@ The following environment variables are supported:
     <tr id="FLYWAY_ERROR_OVERRIDES">
         <td>FLYWAY_ERROR_OVERRIDES {% include pro.html %}</td>
         <td>Comma-sparated list of rules for the built-in error handler that let you override specific SQL states and errors codes in order to force specific errors or warnings to be treated as debug messages, info messages, warnings or errors.
-            <p>Each error override has the following format: <code>STATE:12345:W</code>. It is a 5 character SQL state, a colon, the SQL error code, a colon and finally the desired behavior that should override the initial one.</p>
+            <p>Each error override has the following format: <code>STATE:12345:W</code>. It is a 5 character SQL state (or <code>*</code> to match all SQL states), a colon, the SQL error code (or <code>*</code> to match all SQL error codes), a colon and finally the desired behavior that should override the initial one.</p>
             <p>The following behaviors are accepted:</p>
             <ul>
               <li><code>D</code> to force a debug message</li>
@@ -295,6 +295,7 @@ The following environment variables are supported:
             </ul>
             <p>Example 1: to force Oracle stored procedure compilation issues to produce errors instead of warnings, the following errorOverride can be used: <code>99999:17110:E</code></p>
             <p>Example 2: to force SQL Server PRINT messages to be displayed as info messages (without SQL state and error code details) instead of warnings, the following errorOverride can be used: <code>S0001:0:I-</code></p>
+            <p>Example 3: to force all errors with SQL error code 123 to be treated as warnings instead, the following errorOverride can be used: <code>*:123:W</code></p>
        </td>
     </tr>
     <tr id="FLYWAY_DRYRUN_OUTPUT">
