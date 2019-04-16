@@ -72,7 +72,7 @@ INSERT INTO ${tableName} (name) VALUES ('Mr. T');</pre>
 
 ## Limitations
 
-Due to Redshift limitations `DROP TABLE` for external tables cannot run within a transaction, yet Flyway doesn't
+Due to Redshift limitations `ALTER TABLE` and `DROP TABLE` for **external tables** cannot run within a transaction, yet Flyway doesn't
 autodetect this. You can work around this limitation and successfully execute such a statement by including a `VACUUM`
 statement in the same SQL file as this will force Flyway to run the entire migration without a transaction.
 
