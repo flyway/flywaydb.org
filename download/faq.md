@@ -111,7 +111,7 @@ For example, if you choose to license Flyway Enterprise Edition (10 schemas):
 - the price for 1 year is 2,950 USD
 - the price for 3 years is 8,407.5 USD = 2,950 USD + (2,950 USD x 0.95) + (2,950 USD x 0.90). Yearly average: 2,802.5 USD (5% discount) 
 - the price for 5 years is 13,275 USD = price for 3 years + (2,950 USD x 0.85) + (2,950 USD x 0.80). Yearly average: 2,655 USD (10% discount) 
-- the price for 10 years is 25,075 USD = price for 5 years + 5 x (2,950 USD x 0.80). Yearly average: 2,655 USD (15% discount) 
+- the price for 10 years is 25,075 USD = price for 5 years + 5 x (2,950 USD x 0.80). Yearly average: 2,507.5 USD (15% discount) 
 
 ## Can I upgrade from Flyway Pro Edition to Flyway Enterprise Edition?
 
