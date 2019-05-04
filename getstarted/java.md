@@ -109,7 +109,7 @@ public class V3__Anonymize extends BaseJavaMigration {
                 while (rows.next()) {
                     int id = rows.getInt(1);
                     String anonymizedName = "Anonymous" + id;
-                    try (Statement update = connection.createStatement()) {
+                    try (Statement update = context.getConnection().createStatement()) {
                         update.execute("UPDATE person SET name='" + anonymizedName + "' WHERE id=" + id);
                     }
                 }
