@@ -79,6 +79,8 @@ SET TERM ;#
 ## Limitations
 
 - Dialect 1 is not supported due to lack of support for quoted identifiers
+- Mixing DDL and DML involving the same tables in a single migration will not work as Firebird disallows DDL changes to be used by DML in the same transaction, you
+need to use separate migrations
 - `SET TRANSACTION` and `COMMIT [WORK]` are not supported in migrations, `COMMIT RETAIN` can be used, but this will only allow partial rollback of a migration (only statements after the last `COMMIT RETAIN` can be rolled back)
 - Migrations modifying or dropping objects while the database is in use can result in long delays or "object X is in use" errors as Firebird uses existence locks on metadata objects when they are in use, it may be necessary to shutdown the database and run the migration with exclusive access.
 
