@@ -66,6 +66,7 @@ With schema we mean the container for database objects commonly referred to as "
 - HSQLDB: `SCHEMA`
 - Derby: `SCHEMA`
 - SQLite: `DATABASE` (no schema support)
+- Firebird: `DATABASE` (no schema support)
 
 ## How are schemas counted?
 

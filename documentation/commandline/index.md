@@ -210,6 +210,7 @@ Flyway ships with JDBC drivers for the following databases by default:
 - Aurora PostgreSQL
 - CockroachDB
 - Derby
+- Firebird
 - H2
 - HSQLDB
 - MariaDB

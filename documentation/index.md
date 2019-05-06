@@ -63,8 +63,9 @@ title: Documentation
     <a href="/documentation/database/informix">Informix</a>,
     <a href="/documentation/database/h2">H2</a>,
     <a href="/documentation/database/hsqldb">HSQLDB</a>,
-    <a href="/documentation/database/derby">Derby</a> and
-    <a href="/documentation/database/sqlite">SQLite</a>.</p>
+    <a href="/documentation/database/derby">Derby</a>,
+    <a href="/documentation/database/sqlite">SQLite</a> and
+    <a href="/documentation/database/firebird">Firebird</a>.</p>
 
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/migrations">Migrations <i class="fa fa-arrow-right"></i></a>
