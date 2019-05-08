@@ -427,7 +427,7 @@ When the migration *succeeds* it is marked as **success** in Flyway's *schema hi
 When the migration *fails* and the database supports *DDL transactions*, the migration is *rolled back* and
 nothing is recorded in the schema history table.
 
-When the migration *fails* and the database doesn't supports *DDL transactions*, the migration
+When the migration *fails* and the database doesn't support *DDL transactions*, the migration
 is marked as **failed** in the schema history table, indicating manual database cleanup may be required.
 
 Versioned migrations whose effects have been undone by an undo migration are marked as **undone**.
