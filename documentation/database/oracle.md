@@ -7,6 +7,7 @@ subtitle: Oracle
 
 ## Supported Versions
 
+- `19.3`
 - `18.3`
 - `12.2`
 - `12.1` {% include enterprise.html %}
