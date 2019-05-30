@@ -8,6 +8,53 @@ subtitle: Release Notes
 <p>Thank you all for reporting all these issues and contributing fixes!</p>
 
 <div class="release">
+    <div class="release">
+        <h2 id="6.0.0-beta2">Flyway 6.0.0-beta2 (2019-05-30)</h2>
+
+        <h3>New features</h3>
+        <ul>
+            {% include issue.html id="2318" title="Wildcards in errorOverrides" pro=true %}
+            {% include issue.html id="2326" title="Command-line: Update H2 to 1.4.199" %}
+            {% include issue.html id="2354" title="Java 12 support" %}
+            {% include issue.html id="2357" title="Command-line: Upgrade built-in JRE to OpenJDK 11" %}
+            {% include issue.html id="2371" title="SQL*Plus SET/SHOW ECHO/TERMOUT/TIME/TIMING support" pro=true %}
+            {% include issue.html id="2393" title="Oracle 19c support" %}
+        </ul>
+
+        <h3>Bug fixes</h3>
+        <ul>
+            {% include issue.html id="2243" title="When running multiple instances of the app, baselineOnMigrate is not working properly" %}
+            {% include issue.html id="2245" title="Dependent jars for Java migrations not on class path, same as in issue #783" %}
+            {% include issue.html id="2267" title="Windows: CLI fails with CLASSPATH env var set to a value containing brackets" %}
+            {% include issue.html id="2270" title="LogFactory not initialized with the right classloader if first log is from the Flyway class" %}
+            {% include issue.html id="2307" title="SQL Server: Incorrect syntax error using GOTO and Labels" %}
+            {% include issue.html id="2308" title="Empty placeholders no longer work in 6.0.0-Beta" %}
+            {% include issue.html id="2310" title="SQL*Plus parsing fails when statement is immediately preceded by comment" %}
+            {% include issue.html id="2317" title="H2: Concurrent migration of empty database fails" %}
+            {% include issue.html id="2325" title="Update H2Schema to work with DATABASE_TO_UPPER=false" pr="2325" %}
+            {% include issue.html id="2329" title="Cannot execute PostgreSQL migration that contains ? operator for jsonb" %}
+            {% include issue.html id="2334" title="Enable configFiles configuration for maven plugin" pr="2334" %}
+            {% include issue.html id="2335" title="H2: clean does not remove function alias" %}
+            {% include issue.html id="2338" title="Create stored procedure for MySql and MariaDB fails" %}
+            {% include issue.html id="2341" title="MySQL: Reset SQL_SAFE_UPDATES and FOREIGN_KEY_CHECKS after each migration" %}
+            {% include issue.html id="2347" title="Feature 'Display query results' doesn't give output in 5.2.4 Pro for Oracle" %}
+            {% include issue.html id="2363" title="Undoable migrations not shown as undoable in flyway info" %}
+            {% include issue.html id="2368" title="SQLPlusDefineSqlStatement should not depend on SLF4J" %}
+            {% include issue.html id="2374" title="Dry run doesn't intercept UPDATE run with executeQuery()" %}
+            {% include issue.html id="2379" title="DB2Parser struggles with block depth count" %}
+            {% include issue.html id="2383" title="SQL*Plus @ with file path fails to load correct file" %}
+            {% include issue.html id="2395" title="DB2: Clean excludes user-defined functions based on new classifications" %}
+            {% include issue.html id="2397" title="SQL Server: clean doesn't work for system-versioned temporal tables" %}
+        </ul>
+
+        <p>
+            Thanks to alexander-semenets-dev, armondoortega, Cristina Petri, Ernst-Udo Wallenborn,
+            Jeremy Fleischman, Joe Barnett, Josh Wheeler, KiruthikaSS, kwood612, Lucas Persson, Mária Jurčovičová,
+            Me1gireesh, pvhors, Richard Glidden,
+            Sofoklis Papasofokli, swanym, tcat2 and Tomáš Poledný  for reporting these issues and contributing fixes.
+        </p>
+    </div>
+
     <h2 id="6.0.0-beta">Flyway 6.0.0-beta (2019-02-12)</h2>
 
     <h3>New features</h3>
