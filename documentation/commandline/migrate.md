@@ -131,12 +131,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
             reference data, as this can dramatically reduce the network overhead. This is supported for INSERT, UPDATE,
             DELETE, MERGE and UPSERT statements. All other statements are automatically executed without batching.</td>
     </tr>
-    <tr id="mixed">
-        <td>mixed</td>
-        <td>NO</td>
-        <td>false</td>
-        <td>Whether to allow mixing transactional and non-transactional statements within the same migration</td>
-    </tr>
+    {% include cfg/mixed.html %}
     <tr id="group">
         <td>group</td>
         <td>NO</td>
