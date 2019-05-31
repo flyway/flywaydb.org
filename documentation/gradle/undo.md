@@ -97,12 +97,7 @@ subtitle: 'gradle flywayUndo'
             Multiple suffixes (like .sql,.pkg,.pkb) can be specified for easier compatibility with other tools such as
             editors with specific file associations.</td>
     </tr>
-    <tr>
-        <td>mixed</td>
-        <td>NO</td>
-        <td>false</td>
-        <td>Whether to allow mixing transactional and non-transactional statements within the same migration</td>
-    </tr>
+    {% include cfg/mixed.html %}
     <tr id="group">
         <td>group</td>
         <td>NO</td>
