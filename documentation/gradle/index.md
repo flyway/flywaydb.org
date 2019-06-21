@@ -146,8 +146,9 @@ task migrateDatabase2(type: org.flywaydb.gradle.task.FlywayMigrateTask) {
 
 ### Extending the default classpath
 
-By default the Flyway Gradle plugin uses a classpath consisting of the `compile`, `runtime`, `testCompile` and `testRuntime`
-Gradle configurations for loading drivers, migrations, resolvers, callbacks, etc.
+By default the Flyway Gradle plugin uses a classpath consisting of the following Gradle configurations for loading drivers, migrations, resolvers, callbacks, etc.:
+ - **Gradle 4.x and newer:**  `compileClasspath`, `runtimeClasspath`, `testCompileClasspath` and `testRuntimeClasspath`
+ - **Gradle 3.x:**  `compileClasspath`, `runtime`, `testCompileClasspath` and `testRuntime`
 
 You can optionally extend this default classpath with your own custom configurations in `build.gradle` as follows:
 
@@ -173,7 +174,7 @@ flyway {
         'otherplaceholder': 'value123'
     ]
     // Include your custom configuration here in addition to any default ones you want included
-    configurations = [ 'compile', 'flywayMigration' ]
+    configurations = [ 'compileClasspath', 'flywayMigration' ]
 }
 ```
 

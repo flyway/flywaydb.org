@@ -19,6 +19,7 @@ subtitle: Release Notes
     <h3>Bug fixes</h3>
     <ul>
         {% include issue.html id="2260" title="Callback output doesn't match execution order" %}
+        {% include issue.html id="2272" title="Gradle plugin does not resolve `implementation`-scoped artifacts, only `compile`" %}
         {% include issue.html id="2352" title="Typo in MigrationType Javadoc" pr="2353" %}
         {% include issue.html id="2355" title="gradle flywayMigrate failing on missing postgresql CopyManager" %}
         {% include issue.html id="2392" title="Mixed scripts above target trigger error when mixed=false" %}
@@ -29,7 +30,8 @@ subtitle: Release Notes
     </ul>
 
     <p>
-        Thanks to beyondlov1, Christian Swan, esauser, François Guillot, JohnEgan91, Richard Glidden
+        Thanks to beyondlov1, Christian Swan, esauser, François Guillot, JohnEgan91,
+        Kirill Vergun, Richard Glidden
         Ryan McElroy and sdwarwick for reporting these issues.
     </p>
 </div>
