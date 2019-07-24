@@ -66,11 +66,6 @@ All levels come with unlimited database schemas in dev and test
 <td>29,500 USD per year<br><span class="note">less than 25 USD per schema per month</span></td>
 <td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-enterprise-10-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
 </tr>
-<tr>
-<td><strong>unlimited</strong></td>
-<td>44,500 USD per year</td>
-<td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-enterprise-site-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
-</tr>
 </table>
 
 Any questions regarding the Flyway Enterprise Edition licensing?<br>
