@@ -11,6 +11,7 @@ subtitle: DB2
 
 ## Supported Versions
 
+- `11.5`
 - `11.1`
 - `10.5` {% include enterprise.html %}
 - `10.1` {% include enterprise.html %}
