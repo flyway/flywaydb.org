@@ -19,15 +19,13 @@ support older databases and Java runtimes and provide additional support options
 ## How long are database releases supported in each edition of Flyway?
 
 The different editions of Flyway come with different support timeline guarantees for database releases. For Flyway
-Community Edition a database release is guaranteed to be supported for 3 years from its GA (General Availability)
-release date. Flyway Pro Edition extends this guaranteed support to 5 years and Flyway Enterprise Edition gives you
-even stronger guarantees by extending it to a full 10 years. Each edition gives you the strong predictability you
+Community and Pro Editions a database release is guaranteed to be supported for 5 years from its GA (General Availability)
+release date. Flyway Enterprise Edition gives you
+stronger guarantees by extending it to a full 10 years. Each edition gives you the strong predictability you
 need to be able to manage your database upgrade cycles at the pace you require.
 
-Example: Oracle 12.2 went GA in March 2017. It is guaranteed to be compatible with Flyway Community Edition until at
-least March 2020. After that date support will be retired from the Community Edition. With Flyway Pro Edition this
-support then remains available until at least March 2022. After that date it will be retired from the Pro Edition, but
-it is guaranteed to still remain available until at least March 2027 with Flyway Enterprise Edition. 
+Example: Oracle 12.2 went GA in March 2017. It is guaranteed to be compatible with Flyway Community and Pro Editions until at
+least March 2022. After that date support will be retired from the Community and Pro Editions, but it is guaranteed to still remain available until at least March 2027 with Flyway Enterprise Edition. 
 
 ## Is there a trial version?
 

@@ -10,7 +10,7 @@ subtitle: SQL Server
 - `2019`
 - `2017`
 - `2016`
-- `2014` {% include pro.html %}
+- `2014` {% include enterprise.html %}
 - `2012` {% include enterprise.html %}
 - `2008 R2` {% include enterprise.html %}
 - `2008` {% include enterprise.html %}

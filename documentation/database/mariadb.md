@@ -10,7 +10,7 @@ subtitle: MariaDB
 - `10.4`
 - `10.3`
 - `10.2`
-- `10.1` {% include pro.html %}
+- `10.1` {% include enterprise.html %}
 - `10.0` {% include enterprise.html %}
 - `5.5` {% include enterprise.html %}
 - `5.3` {% include enterprise.html %}
