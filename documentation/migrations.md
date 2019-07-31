@@ -355,6 +355,9 @@ public class V1_2__Another_user extends BaseJavaMigration {
 }
 ```
 
+Take care that your Java migration does not close the database connection, either explicitly or as a
+result of a try-with-resources statement.
+
 ### Spring
 
 If your application already uses Spring and you do not want to use JDBC directly you can easily use Spring JDBC's
