@@ -391,6 +391,11 @@ within a single transaction by setting the [`group`](/documentation/commandline/
 If Flyway detects that a specific statement cannot be run within a transaction due to technical limitations of your
 database, it won't run that migration within a transaction. Instead it will be marked as *non-transactional*.
 
+For Java migrations, the `JavaMigration` interface has a method `canExecuteInTransaction`. This determines whether the execution
+should take place inside a transaction. It's recommended that you rely on `BaseJavaMigration`'s default behavior to return `true`.
+However, if necessary, you can override `canExecuteInTransaction` to execute certain migrations outside a transaction by returning
+`false`. This is useful for databases like PostgreSQL and SQL Server where certain statements can only execute outside a transaction.
+
 By default transactional and non-transactional statements cannot be mixed within a migration run. You can however allow
 this by setting the [`mixed`](/documentation/commandline/migrate#mixed) property to `true`. Note that this is only
 applicable for PostgreSQL, Aurora PostgreSQL, SQL Server and SQLite which all have statements that do not run at all
