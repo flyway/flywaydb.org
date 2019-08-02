@@ -27,6 +27,7 @@ subtitle: Release Notes
 
     <h3>Bug fixes</h3>
     <ul>
+        {% include issue.html id="2224" title="Allow to specify target migrate version to match the default behavior" %}
         {% include issue.html id="2260" title="Callback output doesn't match execution order" %}
         {% include issue.html id="2272" title="Gradle plugin does not resolve `implementation`-scoped artifacts, only `compile`" %}
         {% include issue.html id="2352" title="Typo in MigrationType Javadoc" pr="2353" %}
@@ -39,15 +40,15 @@ subtitle: Release Notes
         {% include issue.html id="2414" title="Incorrect detection of GO keyword inside identifiers" %}
         {% include issue.html id="2417" title="SQLite clean fails due to violated foreign key constraints" %}
         {% include issue.html id="2438" title="Redshift ALTER TABLE ALTER COLUMN isn't executed in transaction" %}
+        {% include issue.html id="2441" title="Output latest supported DB version with warning" %}
         {% include issue.html id="2442" title="HSQLDB parser: IF EXISTS causes incorrect block depth count" %}
         {% include issue.html id="2446" title="Migration files with hard spaces don't work anymore" %}
         {% include issue.html id="2447" title="Flyway clean doesn't remove partition schemes and functions" %}
-        {% include issue.html id="2441" title="Output latest supported DB version with warning" %}
     </ul>
 
     <p>
         Thanks to AigleeK, Árpád Egyed, beyondlov1, Christian Swan, esauser, François Guillot, JohnEgan91,
-        Kirill Vergun, krite, mpe85, Richard Glidden, anjo-swe, dnk8n
+        Kirill Vergun, krite, mpe85, Richard Glidden, anjo-swe, dnk8n, voronaam
         Ryan McElroy and sdwarwick for reporting these issues.
     </p>
 </div>
