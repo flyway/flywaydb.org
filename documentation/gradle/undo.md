@@ -163,12 +163,7 @@ subtitle: 'gradle flywayUndo'
         <td>false</td>
         <td>Whether default built-in callbacks (sql) should be skipped. If true, only custom callbacks are used.</td>
     </tr>
-    <tr>
-        <td>target</td>
-        <td>NO</td>
-        <td><i>previous version</i></td>
-        <td>The target version up to which Flyway should undo migrations. Migrations with a lower version number will be ignored.</td>
-    </tr>
+    {% include cfg/target-previous.html %}
     {% include cfg/cleanOnValidationError.html %}
     <tr>
         <td>ignoreMissingMigrations</td>

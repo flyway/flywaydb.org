@@ -186,8 +186,12 @@ The following environment variables are supported:
     </tr>
     <tr id="FLYWAY_TARGET">
         <td>FLYWAY_TARGET</td>
-        <td>The target version up to which Flyway should consider migrations. Migrations with a higher version number will be ignored. The special value <code>current</code> designates the current version of the schema.
-        </td>
+        <td>The target version up to which Flyway should consider migrations. Migrations with a higher version number will be ignored.<br />
+Special values:
+<ul>
+  <li><code>current</code>: designates the current version of the schema</li>
+  <li><code>latest</code>: the latest version of the schema, as defined by the migration with the highest version</li>
+</ul></td>
     </tr>
     <tr id="FLYWAY_OUT_OF_ORDER">
         <td>FLYWAY_OUT_OF_ORDER</td>
