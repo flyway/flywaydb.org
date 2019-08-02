@@ -9,9 +9,12 @@ So Flyway has joined the Redgate stable...
 
 A quick word of introduction - I’m [Julia Hayward](https://twitter.com/Julia_Hayward), I’ve been a software engineer for 26 years, four of those at Redgate, and I’ll be looking after Flyway. This is my first blog on flywaydb.org, and after a week of learning my way around the whole of Flyway’s code, I’m realising just what a hard act Axel will be to follow. I first came across Flyway at a hackathon week a few years ago and recall being impressed by how easy it was to get up and running, and how many databases it worked with that I’d never even heard of at the time. To now be taking the reins at this exciting time is a real privilege.
 
-Flyway will have its own dedicated team to continue Axel’s awesome work. [Jonny Roberts](https://twitter.com/jonny_robots) will be running all the business aspects of Flyway, [Tey Peryie](https://twitter.com/tey247) will be      while [Alex Tercete](https://twitter.com/alextercete), [Mikiel Agutu](https://twitter.com/mikielagutu) and I are software engineers at various stages of our careers who all have experience working on database tools both within Redgate and elsewhere. We have a range of other people to call on for their expertise in other areas, as well as Axel himself for the months ahead before he heads off for a very well earned rest.
+Flyway will have its own dedicated team to continue Axel’s awesome work. [Jonny Roberts](https://twitter.com/jonny_robots) will be running all the business aspects of Flyway, [Tey Peryie](https://twitter.com/tey247) will be looking after marketing Flyway, while [Alex Tercete](https://twitter.com/alextercete), [Mikiel Agutu](https://twitter.com/mikielagutu) and I are software engineers at various stages of our careers who all have experience working on database tools both within Redgate and elsewhere. We have a range of other people to call on for their expertise in other areas, as well as Axel himself for the months ahead before he heads off for a very well earned rest.
 
-![Axel with the new Flyway Team](/assets/posts/meet-the-team/the-team.png)
+| ![Axel with the new Flyway Team](/assets/posts/meet-the-team/the-team.png) |
+|:--:|
+| *At Redgate Towers: Julia, Jonny, Tey (back), Mikiel, Alex, and Axel (front)* |
+| |
 
 Observers might naturally expect that Flyway will have to earn its keep amongst the many other Redgate products, and, given Redgate’s history in the SQL Server market, that we will concentrate on our one “favourite” database to the exclusion of others. However, we are determined that we will not fall into this trap! Flyway has succeeded by catering for a wide range of databases, and we’re committed to sticking to that principle. And on a personal level the most important factor that attracted me to the team was the ability to venture well outside my technical comfort zone and work with unfamiliar technology. We decided that our intention would be:
 
