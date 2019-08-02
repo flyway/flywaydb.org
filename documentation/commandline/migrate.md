@@ -197,13 +197,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
         <td>false</td>
         <td>Whether default built-in callbacks (sql) should be skipped. If true, only custom callbacks are used.</td>
     </tr>
-    <tr id="target">
-        <td>target</td>
-        <td>NO</td>
-        <td><i>latest version</i></td>
-        <td>The target version up to which Flyway should consider migrations. Migrations with a higher version number will be ignored. The special value <code>current</code> designates the current version of the schema.
-        </td>
-    </tr>
+    {% include cfg/target-latest.html %}
     <tr id="outOfOrder">
         <td>outOfOrder</td>
         <td>NO</td>
