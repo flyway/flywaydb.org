@@ -172,7 +172,8 @@ flyway.url=
 # Suffix of every placeholder (default: } )
 # flyway.placeholderSuffix=
 
-# Target version up to which Flyway should consider migrations. (default: <<latest version>>)
+# Target version up to which Flyway should consider migrations.
+# Defaults to 'latest'
 # Special values:
 # - 'current': designates the current version of the schema
 # - 'latest': the latest version of the schema, as defined by the migration with the highest version
