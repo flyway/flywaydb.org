@@ -249,6 +249,10 @@ They will then automatically be taken into account when launching Flyway. This i
 
 All debug, info and warning output is sent to `stdout`. All errors are sent to `stderr`.
 
+### Colors
+
+The ouput is colorized using ANSI escape codes. Colors are suppressed if `stdout` is not associated with a terminal.
+
 ### Debug output
 
 Add `-X` to the argument list to also print debug output.
