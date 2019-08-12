@@ -183,7 +183,7 @@ flyway.url=
 # flyway.validateOnMigrate=
 
 # Whether to automatically call clean or not when a validation error occurs. (default: false)
-# This is exclusively intended as a convenience for development. Even though we
+# This is exclusively intended as a convenience for development. even though we
 # strongly recommend not to change migration scripts once they have been checked into SCM and run, this provides a
 # way of dealing with this case in a smooth manner. The database will be wiped clean automatically, ensuring that
 # the next migration will bring you back to the state checked into SCM.
@@ -212,6 +212,10 @@ flyway.url=
 # If you already have versions 1 and 3 applied, and now a version 2 is found,
 # it will be applied too instead of being ignored.
 # flyway.outOfOrder=
+
+# Whether Flyway should output a table with the results of queries when executing migrations (default: true).
+# Flyway Pro and Flyway Enterprise only
+# flyway.outputQueryResults=
 
 # This allows you to tie in custom code and logic to the Flyway lifecycle notifications (default: empty).
 # Set this to a comma-separated list of fully qualified class names of org.flywaydb.core.api.callback.Callback
