@@ -24,9 +24,15 @@ headaches of side-by-side installations. And for testing, you may prefer to spin
 your tests, and then destroy it, in order both to minimise resource use and be absolutely sure you start each time from a consistent
 point. That led us to look at adding a new verb: `flyway provision`.
 
+![flyway provision](/assets/balsamiq/command-provision.png)
+
 One obvious implementation was to provision our database from a Docker image. Indeed, we test Flyway against a large collection of 
 Docker images, each with a different database version and `flyway provision` could simplify that process. Most database vendors offer
-at least some versions of their software in standard Docker images and it's not hard to create others. A second implementation that
+at least some versions of their software in standard Docker images and it's not hard to create others. To make configuration easier,
+we also returned the resulting database connection URL from the `provision` command so that it could be immediately used in a
+`migrate`.
+
+A second implementation that
 we tried was to restore a database from a known backup file. This was more tricky, in that each database has its own quirks around
 restores, and in the end the time constraints meant that the team picked the one they were most familiar with - SQL Server - to 
 use. And finally, our implementation was designed so that it was as configurable as possible, with extension points open for contributors to
