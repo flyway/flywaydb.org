@@ -129,6 +129,10 @@ to set any environment variable at all:
         <td>Validates the applied migrations against the ones available on the classpath</td>
     </tr>
     <tr>
+        <td><a href="/documentation/commandline/undo">undo</a> <a href="/download" class="label label-primary" title="Supported by Flyway Pro and Enterprise Edition only">Flyway Pro</a></td>
+        <td>Undoes the most recently applied versioned migrations</td>
+    </tr>
+    <tr>
         <td><a href="/documentation/commandline/baseline">baseline</a></td>
         <td>Baselines an existing database, excluding all migrations up to and including baselineVersion</td>
     </tr>

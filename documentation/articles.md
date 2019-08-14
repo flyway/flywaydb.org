@@ -113,7 +113,7 @@ subtitle: Articles
 
 <h2>Polish</h2>
 
-<p><strong><a href="http://javista.xyz/2017/04/database-migration-fast-and-easy-with-flyway-and-spring-boot/">
+<p><strong><a href="https://www.lukaszkuzio.pl/2017/04/database-migration-fast-and-easy-with-flyway-and-spring-boot/">
     Database migration - fast and easy with Flyway and Spring Boot</a></strong> by Lukasz Kuzio</p>
 
 <p class="next-steps">
