@@ -194,6 +194,12 @@ The following environment variables are supported:
             </ul>
         </td>
     </tr>
+    <tr id="FLYWAY_OUTPUT_QUERY_RESULTS">
+        <td>FLYWAY_OUTPUT_QUERY_RESULTS</td>
+        <td>
+        Controls whether Flyway should output a table with the results of queries when executing migrations. 
+        </td>
+    </tr>
     <tr id="FLYWAY_OUT_OF_ORDER">
         <td>FLYWAY_OUT_OF_ORDER</td>
         <td>Allows migrations to be run "out of order".
