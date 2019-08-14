@@ -85,5 +85,5 @@ CREATE TRIGGER update_customer_address UPDATE OF address ON customers
 - No support for `CREATE TRANSACTION` and `COMMIT` statements within a migration, as SQLite doesn't support nested transactions
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/existing">Existing database setup <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/database/firebird">Firebird <i class="fa fa-arrow-right"></i></a>
 </p>
