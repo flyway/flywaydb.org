@@ -420,7 +420,7 @@ the need to visually inspect the result of SQL queries.
 
 There are however some scenarios where such manual inspection makes sense, and therefore Flyway Pro and Enterprise
 Edition also display query results in the usual tabular form when a `SELECT` statement (or any other statement that
-returns results) is executed. 
+returns results) is executed.
 
 ## Schema History Table
 

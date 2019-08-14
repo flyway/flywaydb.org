@@ -163,6 +163,9 @@ subtitle: 'gradle flywayUndo'
         <td>false</td>
         <td>Whether default built-in callbacks (sql) should be skipped. If true, only custom callbacks are used.</td>
     </tr>
+    <tr>
+    {% include cfg/outputQueryResults.html %}>
+    </tr>
     {% include cfg/target-previous.html %}
     {% include cfg/cleanOnValidationError.html %}
     <tr>
@@ -254,6 +257,7 @@ flyway {
     skipDefaultResolvers = false
     callbacks = ['com.mycompany.proj.CustomCallback', 'com.mycompany.proj.AnotherCallback']
     skipDefaultCallbacks = false
+    outputQueryResults = false
     target = '1.1'
     mixed = false
     group = false
