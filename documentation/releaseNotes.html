@@ -8,11 +8,12 @@ subtitle: Release Notes
 <p>Thank you all for reporting all these issues and contributing fixes!</p>
 
 <div class="release">
-    <h2 id="6.0.0">Flyway 6.0.0 (unreleased)</h2>
+    <h2 id="6.0.0">Flyway 6.0.0</h2>
 
     <h3>New features</h3>
     <ul>
-        {% include issue.html id="441, 1889, 2376" title="Firebird 3.0, 4.0 support" %}
+        {% include issue.html id="441" title="Firebird 3.0, 4.0 support" %}
+        {% include issue.html id="1871" title="Colourised output" %}
         {% include issue.html id="2069" title="Validate migration encoding" %}
         {% include issue.html id="2276" title="Suppress Select Output" %}
         {% include issue.html id="2398" title="PostgreSQL 12 support" %}
@@ -41,10 +42,11 @@ subtitle: Release Notes
         {% include issue.html id="2413" title="UTF-8 BOM stripping no longer works in 6.0.0-beta2" %}
         {% include issue.html id="2414" title="Incorrect detection of GO keyword inside identifiers" %}
         {% include issue.html id="2417" title="SQLite clean fails due to violated foreign key constraints" %}
+        {% include issue.html id="2424" title="slf4j <code>loggerNameMismatch</code> warning disabled" %}
         {% include issue.html id="2425" title="Dry run failing on JDBC defined data types (see also 2462)" %}
-        {% include issue.html id="2438" title="Redshift ALTER TABLE ALTER COLUMN isn't executed in transaction" %}
+        {% include issue.html id="2438" title="Redshift <code>ALTER TABLE ALTER COLUMN</code> isn't executed in transaction" %}
         {% include issue.html id="2441" title="Output latest supported DB version with warning" %}
-        {% include issue.html id="2442" title="HSQLDB parser: IF EXISTS causes incorrect block depth count" %}
+        {% include issue.html id="2442" title="HSQLDB parser: <code>IF EXISTS</code> causes incorrect block depth count" %}
         {% include issue.html id="2446" title="Migration files with hard spaces don't work anymore" %}
         {% include issue.html id="2447" title="Flyway clean doesn't remove partition schemes and functions" %}
     </ul>
@@ -64,7 +66,7 @@ subtitle: Release Notes
         {% include issue.html id="2326" title="Command-line: Update H2 to 1.4.199" %}
         {% include issue.html id="2354" title="Java 12 support" %}
         {% include issue.html id="2357" title="Command-line: Upgrade built-in JRE to OpenJDK 11" %}
-        {% include issue.html id="2371" title="SQL*Plus SET/SHOW ECHO/TERMOUT/TIME/TIMING support" pro=true %}
+        {% include issue.html id="2371" title="SQL*Plus <code>SET/SHOW ECHO/TERMOUT/TIME/TIMING</code> support" pro=true %}
         {% include issue.html id="2393" title="Oracle 19c support" %}
     </ul>
 
@@ -78,17 +80,17 @@ subtitle: Release Notes
         {% include issue.html id="2308" title="Empty placeholders no longer work in 6.0.0-Beta" %}
         {% include issue.html id="2310" title="SQL*Plus parsing fails when statement is immediately preceded by comment" %}
         {% include issue.html id="2317" title="H2: Concurrent migration of empty database fails" %}
-        {% include issue.html id="2325" title="Update H2Schema to work with DATABASE_TO_UPPER=false" pr="2325" %}
+        {% include issue.html id="2325" title="Update H2Schema to work with <code>DATABASE_TO_UPPER=false</code>" pr="2325" %}
         {% include issue.html id="2329" title="Cannot execute PostgreSQL migration that contains ? operator for jsonb" %}
         {% include issue.html id="2334" title="Enable configFiles configuration for maven plugin" pr="2334" %}
         {% include issue.html id="2335" title="H2: clean does not remove function alias" %}
         {% include issue.html id="2338" title="Create stored procedure for MySql and MariaDB fails" %}
-        {% include issue.html id="2341" title="MySQL: Reset SQL_SAFE_UPDATES and FOREIGN_KEY_CHECKS after each migration" %}
+        {% include issue.html id="2341" title="MySQL: Reset <code>SQL_SAFE_UPDATES</code> and <code>FOREIGN_KEY_CHECKS</code> after each migration" %}
         {% include issue.html id="2347" title="Feature 'Display query results' doesn't give output in 5.2.4 Pro for Oracle" %}
         {% include issue.html id="2363" title="Undoable migrations not shown as undoable in flyway info" %}
         {% include issue.html id="2368" title="SQLPlusDefineSqlStatement should not depend on SLF4J" %}
         {% include issue.html id="2370" title="Debug level does not work for enterprise option" %}
-        {% include issue.html id="2374" title="Dry run doesn't intercept UPDATE run with executeQuery()" %}
+        {% include issue.html id="2374" title="Dry run doesn't intercept UPDATE run with <code>executeQuery()</code>" %}
         {% include issue.html id="2379" title="DB2Parser struggles with block depth count" %}
         {% include issue.html id="2383" title="SQL*Plus @ with file path fails to load correct file" %}
         {% include issue.html id="2395" title="DB2: Clean excludes user-defined functions based on new classifications" %}
