@@ -59,7 +59,7 @@ comment
 */
  -- Sql-style comment
  -- Placeholder
-INSERT INTO ${tableName} (name) VALUES ('Mr. T');
+ALTER TABLE ${tableName} ADD id INT NOT NULL;
  -- Terminator changes
 SET TERM #;
 CREATE OR ALTER PROCEDURE SHIP_ORDER (
