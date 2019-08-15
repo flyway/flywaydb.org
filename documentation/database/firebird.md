@@ -15,7 +15,7 @@ subtitle: Firebird
 <table class="table">
 <tr>
 <th>URL format</th>
-<td><code>jdbc:firebirdsql://<i>host</i>/<i>port</i>:<i>database</i></code></td>
+<td><code>jdbc:firebirdsql://<i>host</i>:<i>port</i>/<i>database</i></code></td>
 </tr>
 <tr>
 <th>Ships with Flyway Command-line</th>
