@@ -15,7 +15,7 @@ subtitle: Release Notes
         {% include issue.html id="441" title="Firebird 3.0, 4.0 support" pr="2376" %}
         {% include issue.html id="1871" title="Colorized output" %}
         {% include issue.html id="2069" title="Validate migration encoding" %}
-        {% include issue.html id="2276" title="Suppress Select Output" %}
+        {% include issue.html id="2276" title="Toggle display of query results" pro=true %}
         {% include issue.html id="2398" title="PostgreSQL 12 support" %}
         {% include issue.html id="2426" title="Command-line: Update MySQL driver to 8.0.16" %}
         {% include issue.html id="2435" title="DB2 11.5 support" %}
@@ -26,6 +26,11 @@ subtitle: Release Notes
     <h3>Changes</h3>
     <ul>
         {% include issue.html id="2450" title="Unify database support policy in Enterprise edition" enterprise=true %}
+    </ul>
+
+    <h3>Incompatible changes</h3>
+    <ul>
+        {% include issue.html id="2276" title="Query results are now also displayed in Flyway Community Edition when using <code>SELECT</code> statements" %}
     </ul>
 
     <h3>Bug fixes</h3>
