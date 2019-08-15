@@ -413,14 +413,16 @@ issuing an implicit commit before and after every DDL statement), Flyway won't b
 case of failure and will instead mark the migration as failed, indicating that some manual cleanup may be required. 
 
 ## Query Results
-{% include pro.html %}
 
 Migrations are primarily meant to be executed as part of release and deployment automation processes and there is rarely
 the need to visually inspect the result of SQL queries.
 
-There are however some scenarios where such manual inspection makes sense, and therefore Flyway Pro and Enterprise
-Edition also display query results in the usual tabular form when a `SELECT` statement (or any other statement that
-returns results) is executed. 
+There are however some scenarios where such manual inspection makes sense, and therefore Flyway will display query results in the usual tabular form when a `SELECT` statement (or any other statement that returns results) is executed.
+
+### Toggling query results
+{% include pro.html %}
+
+To prevent Flyway from displaying query results, set the configuration option [`outputQueryResults`](/documentation/commandline/migrate#outputQueryResults) to `false`.
 
 ## Schema History Table
 

@@ -15,7 +15,7 @@ subtitle: Firebird
 <table class="table">
 <tr>
 <th>URL format</th>
-<td><code>jdbc:firebirdsql://<i>host</i>:<i>port</i>/<i>database</i></code></td>
+<td><code>jdbc:firebirdsql://<i>host</i>/<i>port</i>:<i>database</i></code></td>
 </tr>
 <tr>
 <th>Ships with Flyway Command-line</th>
@@ -59,7 +59,7 @@ comment
 */
  -- Sql-style comment
  -- Placeholder
-INSERT INTO ${tableName} (name) VALUES ('Mr. T');
+ALTER TABLE ${tableName} ADD id INT NOT NULL;
  -- Terminator changes
 SET TERM #;
 CREATE OR ALTER PROCEDURE SHIP_ORDER (

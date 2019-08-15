@@ -174,6 +174,7 @@ subtitle: 'mvn flyway:undo'
         <td>false</td>
         <td>Whether default built-in callbacks (sql) should be skipped. If true, only custom callbacks are used.</td>
     </tr>
+    {% include cfg/outputQueryResults.html %}
     {% include cfg/target-previous.html %}
     {% include cfg/cleanOnValidationError.html %}
     <tr>
@@ -302,6 +303,7 @@ subtitle: 'mvn flyway:undo'
         <callback>com.mycompany.project.AnotherCallback</callback>
     </callbacks>
     <skipDefaultCallbacks>false</skipDefaultCallbacks>
+    <outputQueryResults>false</outputQueryResults>
     <target>1.1</target>
     <mixed>false</mixed>
     <group>false</group>

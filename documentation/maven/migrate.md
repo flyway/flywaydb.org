@@ -215,6 +215,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
                 it will be applied too instead of being ignored.</p>
         </td>
     </tr>
+    {% include cfg/outputQueryResults.html %}
     <tr>
         <td>validateOnMigrate</td>
         <td>NO</td>
@@ -392,6 +393,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
     <skipDefaultCallbacks>false</skipDefaultCallbacks>
     <target>1.1</target>
     <outOfOrder>false</outOfOrder>
+    <outputQueryResults>false</outputQueryResults>
     <validateOnMigrate>true</validateOnMigrate>
     <cleanOnValidationError>false</cleanOnValidationError>
     <mixed>false</mixed>

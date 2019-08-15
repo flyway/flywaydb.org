@@ -178,9 +178,8 @@ subtitle: 'Command-line: undo'
         <td>false</td>
         <td>Whether default built-in callbacks (sql) should be skipped. If true, only custom callbacks are used.</td>
     </tr>
-    <tr>
-   {% include cfg/target-previous.html %}
-    </tr>
+    {% include cfg/outputQueryResults.html %}
+    {% include cfg/target-previous.html %}
     {% include cfg/cleanOnValidationError.html %}
     <tr>
         <td>ignoreMissingMigrations</td>
@@ -269,6 +268,7 @@ flyway.resolvers=com.mycomp.project.CustomResolver,com.mycomp.project.AnotherRes
 flyway.skipDefaultCallResolvers=false
 flyway.callbacks=com.mycomp.project.CustomCallback,com.mycomp.project.AnotherCallback
 flyway.skipDefaultCallbacks=false
+flyway.outputQueryResults=false
 flyway.target=5.1
 flyway.mixed=false
 flyway.group=false
