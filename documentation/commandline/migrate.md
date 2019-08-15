@@ -207,9 +207,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
                 it will be applied too instead of being ignored.</p>
         </td>
     </tr>
-    <tr id="outputQueryResults">
-    {% include cfg/outputQueryResults.html %}>
-    </tr>
+    {% include cfg/outputQueryResults.html %}
     <tr id="validateOnMigrate">
         <td>validateOnMigrate</td>
         <td>NO</td>
