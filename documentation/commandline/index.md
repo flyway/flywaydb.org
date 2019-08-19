@@ -42,7 +42,7 @@ Or simply download the archive:
 
 (Linux only) Download, extract and install by adding to `PATH` (requires `sudo` permissions):
 
-<pre class="console"><span>$</span> sudo sh -c 'echo "docker run --rm <strong>boxfuse/flyway:{{site.flywayVersion}}</strong>" > /usr/local/bin/flyway && chmod +x /usr/local/bin/flyway'</pre>
+<pre class="console"><span>$</span> sudo sh -c 'echo "docker run --rm <strong>boxfuse/flyway:{{site.flywayVersion}} $*</strong>" > /usr/local/bin/flyway && chmod +x /usr/local/bin/flyway'</pre>
 
 (All platforms) Or simply download the image:
 
