@@ -8,6 +8,10 @@ subtitle: Video Tutorials
 We have selected a few video tutorials from around the internet that give you a good overview of Flyway.
 Topics range from beginner to advanced and should help you get started and progress quickly and easily.
 
+## Getting Started with Flyway & Version-Based Migration
+by **[Thorben Janssen](https://twitter.com/thjanssen123)** (2018-27-03)
+<iframe width="670" height="377" src="https://www.youtube.com/embed/ovG1wgEqE10" frameborder="0" allowfullscreen></iframe>
+
 ## Come fly with me: Database Migrations Patterns with Flyway
 by **[Joris Kuipers](https://twitter.com/jkuipers)** (2017-11-02)
 <iframe width="670" height="377" src="https://www.youtube.com/embed/x7U3zBV5DyQ" frameborder="0" allowfullscreen></iframe>
