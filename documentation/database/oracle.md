@@ -7,6 +7,7 @@ subtitle: Oracle
 
 ## Supported Versions
 
+- `19.3`
 - `18.3`
 - `12.2`
 - `12.1` {% include enterprise.html %}
@@ -74,12 +75,12 @@ comment
 -- PL/SQL block
 CREATE TRIGGER test_trig AFTER insert ON test_user
 BEGIN
-   UPDATE test_user SET name = CONCAT(name, &#x27; triggered&#x27;);
+   UPDATE test_user SET name = CONCAT(name, ' triggered');
 END;
 /
 
 -- Placeholder
-INSERT INTO ${tableName} (name) VALUES (&#x27;Mr. T&#x27;);</pre>
+INSERT INTO ${tableName} (name) VALUES ('Mr. T');</pre>
 
 ## SQL*Plus commands 
 {% include pro.html %}
@@ -100,6 +101,7 @@ The following commands are fully supported and can be used just like any regular
 - `PROMPT`
 - `REMARK`
 - `SET DEFINE`
+- `SET ECHO`
 - `SET ESCAPE`
 - `SET FEEDBACK`
 - `SET FLAGGER`
@@ -109,24 +111,34 @@ The following commands are fully supported and can be used just like any regular
 - `SET SCAN`
 - `SET SERVEROUTPUT`
 - `SET SUFFIX`
+- `SET TERMOUT`
+- `SET TIME`
+- `SET TIMING`
 - `SET VERIFY`
 - `SHOW CON_ID`
 - `SHOW DEFINE`
+- `SHOW ECHO`
 - `SHOW EDITION`
 - `SHOW ERRORS`
 - `SHOW ESCAPE`
 - `SHOW FEEDBACK`
+- `SHOW HEADING`
 - `SHOW LINESIZE`
 - `SHOW NULL`
 - `SHOW RELEASE`
+- `SHOW SCAN`
 - `SHOW SERVEROUTPUT`
 - `SHOW SUFFIX`
+- `SHOW TERMOUT`
+- `SHOW TIME`
+- `SHOW TIMING`
 - `SHOW USER`
 - `SHOW VERIFY`
 - `START` (only files, no URLs)
 - `UNDEFINE`
 - `WHENEVER SQLERROR CONTINUE`
 - `WHENEVER SQLERROR EXIT FAILURE`
+- `WHENEVER SQLERROR EXIT SQL.SQLCODE`
 
 The short form of these commands is also supported. 
 

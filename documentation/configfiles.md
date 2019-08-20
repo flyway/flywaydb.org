@@ -38,6 +38,7 @@ These are the settings supported via config files:
 # CockroachDB       : jdbc:postgresql://<host>:<port>/<database>?<key1>=<value1>&<key2>=<value2>...
 # DB2*              : jdbc:db2://<host>:<port>/<database>
 # Derby             : jdbc:derby:<subsubprotocol>:<database><;attribute=value>
+# Firebird          : jdbc:firebirdsql://<host>[:<port>]/<database>?<key1>=<value1>&<key2>=<value2>...
 # H2                : jdbc:h2:<file>
 # HSQLDB            : jdbc:hsqldb:file:<file>
 # Informix*         : jdbc:informix-sqli://<host>:<port>/<database>:informixserver=dev
@@ -71,11 +72,13 @@ flyway.url=
 # flyway.initSql=
 
 # Comma-separated list of schemas managed by Flyway. These schema names are case-sensitive.
-# (default: The default schema for the datasource connection)
 # Consequences:
+# - Flyway will automatically attempt to create all these schemas, unless the first one already exists.
 # - The first schema in the list will be automatically set as the default one during the migration.
 # - The first schema in the list will also be the one containing the schema history table.
 # - The schemas will be cleaned in the order of this list.
+# - If Flyway created them, the schemas themselves will as be dropped when cleaning.
+# (default: The default schema for the database connection)
 # flyway.schemas=
 
 # Name of Flyway's schema history table (default: flyway_schema_history)
@@ -84,6 +87,11 @@ flyway.url=
 # When the flyway.schemas property is set (multi-schema mode), the schema history table is placed in the first
 # schema of the list.
 # flyway.table=
+
+# The tablespace where to create the schema history table that will be used by Flyway.
+# This setting is only relevant for databases that do support the notion of tablespaces. It's value is simply
+# ignored for all others. (default: The default tablespace for the database connection)
+# flyway.tablespace=
 
 # Comma-separated list of locations to scan recursively for migrations. (default: filesystem:<<INSTALL-DIR>>/sql)
 # The location type is determined by its prefix.
@@ -166,14 +174,17 @@ flyway.url=
 # flyway.placeholderSuffix=
 
 # Target version up to which Flyway should consider migrations.
-# The special value 'current' designates the current version of the schema. (default: <<latest version>>)
+# Defaults to 'latest'
+# Special values:
+# - 'current': designates the current version of the schema
+# - 'latest': the latest version of the schema, as defined by the migration with the highest version
 # flyway.target=
 
 # Whether to automatically call validate or not when running migrate. (default: true)
 # flyway.validateOnMigrate=
 
 # Whether to automatically call clean or not when a validation error occurs. (default: false)
-# This is exclusively intended as a convenience for development. Even tough we
+# This is exclusively intended as a convenience for development. even though we
 # strongly recommend not to change migration scripts once they have been checked into SCM and run, this provides a
 # way of dealing with this case in a smooth manner. The database will be wiped clean automatically, ensuring that
 # the next migration will bring you back to the state checked into SCM.
@@ -202,6 +213,10 @@ flyway.url=
 # If you already have versions 1 and 3 applied, and now a version 2 is found,
 # it will be applied too instead of being ignored.
 # flyway.outOfOrder=
+
+# Whether Flyway should output a table with the results of queries when executing migrations (default: true).
+# Flyway Pro and Flyway Enterprise only
+# flyway.outputQueryResults=
 
 # This allows you to tie in custom code and logic to the Flyway lifecycle notifications (default: empty).
 # Set this to a comma-separated list of fully qualified class names of org.flywaydb.core.api.callback.Callback
@@ -269,13 +284,27 @@ flyway.url=
 # <<blank>> for the current database user of the connection. (default: <<blank>>).
 # flyway.installedBy=
 
-# Rules for the built-in error handling that lets you override specific SQL states and errors codes from error to
-# warning or from warning to error.
-# Each error override has the following format: STATE:12345:W. It is a 5 character SQL state, a colon, the SQL
-# error code, a colon and finally the desired behavior that should override the initial one. The following
-# behaviors are accepted: W to force a warning and E to force an error.
-# For example, to force Oracle stored procedure compilation issues to produce errors instead of warnings,
-# the following errorOverride can be used: 99999:17110:E
+# Rules for the built-in error handler that let you override specific SQL states and errors codes in order to
+# force specific errors or warnings to be treated as debug messages, info messages, warnings or errors.
+# Each error override has the following format: STATE:12345:W.
+# It is a 5 character SQL state (or * to match all SQL states), a colon,
+# the SQL error code (or * to match all SQL error codes), a colon and finally
+# the desired behavior that should override the initial one.
+# The following behaviors are accepted:
+# - D to force a debug message
+# - D- to force a debug message, but do not show the original sql state and error code
+# - I to force an info message
+# - I- to force an info message, but do not show the original sql state and error code
+# - W to force a warning
+# - W- to force a warning, but do not show the original sql state and error code
+# - E to force an error
+# - E- to force an error, but do not show the original sql state and error code
+# Example 1: to force Oracle stored procedure compilation issues to produce
+# errors instead of warnings, the following errorOverride can be used: 99999:17110:E
+# Example 2: to force SQL Server PRINT messages to be displayed as info messages (without SQL state and error
+# code details) instead of warnings, the following errorOverride can be used: S0001:0:I-
+# Example 3: to force all errors with SQL error code 123 to be treated as warnings instead,
+# the following errorOverride can be used: *:123:W
 # Flyway Pro and Flyway Enterprise only
 # flyway.errorOverrides=
 
@@ -289,7 +318,14 @@ flyway.url=
 # Flyway Pro and Flyway Enterprise only
 # flyway.oracle.sqlplus=
 
-# Flyway's license key.
+# Whether Flyway should issue a warning instead of an error whenever it encounters an Oracle SQL*Plus
+# statement it doesn't yet support. (default: false)
+# Flyway Pro and Flyway Enterprise only
+# flyway.oracle.sqlplusWarn=
+
+# Your Flyway license key (FL01...). Not yet a Flyway Pro or Enterprise Edition customer?
+# Request your Flyway trial license key st https://flywaydb.org/download/
+# to try out Flyway Pro and Enterprise Edition features free for 30 days.
 # Flyway Pro and Flyway Enterprise only
 # flyway.licenseKey=
 ```

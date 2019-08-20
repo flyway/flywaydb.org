@@ -68,7 +68,7 @@ subtitle: 'mvn flyway:undo'
         <td>table</td>
         <td>NO</td>
         <td>flyway_schema_history</td>
-        <td>The name of Flyway&#x27;s schema history table.<br/>By
+        <td>The name of Flyway's schema history table.<br/>By
             default (single-schema mode) the schema history table is placed in the default schema for the connection
             provided by the datasource.<br/>When the <i>flyway.schemas</i> property is set (multi-schema mode),
             the schema history table is placed in the first schema of the list.
@@ -174,12 +174,9 @@ subtitle: 'mvn flyway:undo'
         <td>false</td>
         <td>Whether default built-in callbacks (sql) should be skipped. If true, only custom callbacks are used.</td>
     </tr>
-    <tr>
-        <td>target</td>
-        <td>NO</td>
-        <td><i>previous version</i></td>
-        <td>The target version up to which Flyway should undo migrations. Migrations with a lower version number will be ignored.</td>
-    </tr>
+    {% include cfg/outputQueryResults.html %}
+    {% include cfg/target-previous.html %}
+    {% include cfg/cleanOnValidationError.html %}
     <tr>
         <td>ignoreMissingMigrations</td>
         <td>NO</td>
@@ -255,6 +252,7 @@ subtitle: 'mvn flyway:undo'
             Omit to use the default mode of executing the SQL statements directly against the database.</td>
     </tr>
     {% include cfg/oracleSqlplus.html %}
+    {% include cfg/oracleSqlplusWarn.html %}
     {% include cfg/licenseKey.html %}
     </tbody>
 </table>
@@ -305,9 +303,11 @@ subtitle: 'mvn flyway:undo'
         <callback>com.mycompany.project.AnotherCallback</callback>
     </callbacks>
     <skipDefaultCallbacks>false</skipDefaultCallbacks>
+    <outputQueryResults>false</outputQueryResults>
     <target>1.1</target>
     <mixed>false</mixed>
     <group>false</group>
+    <cleanOnValidationError>false</cleanOnValidationError>
     <ignoreMissingMigrations>false</ignoreMissingMigrations>
     <ignoreIgnoredMigrations>false</ignoreIgnoredMigrations>
     <ignoreFutureMigrations>false</ignoreFutureMigrations>
@@ -323,6 +323,8 @@ subtitle: 'mvn flyway:undo'
         <errorOverride>42001:42001:W</errorOverride>
     </errorOverrides>
     <dryRunOutput>/my/sql/dryrun-outputfile.sql</dryRunOutput>
+    <oracle.sqlplus>true</oracle.sqlplus>
+    <oracle.sqlplusWarn>true</oracle.sqlplusWarn>
 </configuration>
 ```
 

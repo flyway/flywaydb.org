@@ -64,7 +64,7 @@ Validation fails if
         <td>table</td>
         <td>NO</td>
         <td>flyway_schema_history</td>
-        <td>The name of Flyway&#x27;s schema history table.<br/>By
+        <td>The name of Flyway's schema history table.<br/>By
             default (single-schema mode) the schema history table is placed in the default schema for the connection
             provided by the datasource.<br/>When the <i>flyway.schemas</i> property is set (multi-schema mode),
             the schema history table is placed in the first schema of the list.
@@ -176,13 +176,7 @@ Validation fails if
         <td>false</td>
         <td>Whether default built-in callbacks (sql) should be skipped. If true, only custom callbacks are used.</td>
     </tr>
-    <tr id="target">
-        <td>target</td>
-        <td>NO</td>
-        <td><i>latest version</i></td>
-        <td>The target version up to which Flyway should consider migrations. Migrations with a higher version number will be ignored. The special value <code>current</code> designates the current version of the schema.
-        </td>
-    </tr>
+    {% include cfg/target-latest.html %}
     <tr>
         <td>outOfOrder</td>
         <td>NO</td>
@@ -192,18 +186,7 @@ Validation fails if
                 it will be applied too instead of being ignored.</p>
         </td>
     </tr>
-    <tr>
-        <td>cleanOnValidationError</td>
-        <td>NO</td>
-        <td>false</td>
-        <td>Whether to automatically call clean or not when a validation error occurs.<br/><br/>
-            This is exclusively intended as a convenience for development. Even tough we
-            strongly recommend not to change migration scripts once they have been checked into SCM and run, this
-            provides a way of dealing with this case in a smooth manner. The database will be wiped clean
-            automatically, ensuring that the next migration will bring you back to the state checked into
-            SCM.<br/><br/><strong>Warning ! Do not enable in production !</strong>
-        </td>
-    </tr>
+    {% include cfg/cleanOnValidationError.html %}
     <tr>
         <td>ignoreMissingMigrations</td>
         <td>NO</td>
@@ -242,6 +225,8 @@ Validation fails if
             warning is logged and Flyway continues normally. This is useful for situations where one must be able to redeploy
             an older version of the application after the database has been migrated by a newer one.</td>
     </tr>
+    {% include cfg/oracleSqlplus.html %}
+    {% include cfg/oracleSqlplusWarn.html %}
     {% include cfg/licenseKey.html %}
     </tbody>
 </table>
@@ -280,6 +265,8 @@ flyway.ignoreMissingMigrations=false
 flyway.ignoreIgnoredMigrations=false
 flyway.ignorePendingMigrations=false
 flyway.ignoreFutureMigrations=false
+flyway.oracle.sqlplus=true
+flyway.oracle.sqlplusWarn=true
 ```
 
 ## Sample output

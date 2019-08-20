@@ -65,7 +65,7 @@ DELIMITER //
 CREATE PROCEDURE AddData()
  BEGIN
    # MySQL-style single line comment
-   INSERT INTO test_data (value) VALUES (&#x27;Hello&#x27;);
+   INSERT INTO test_data (value) VALUES ('Hello');
  END //
 DELIMITER;
 
@@ -76,7 +76,7 @@ CALL AddData();
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 
 -- Placeholder
-INSERT INTO ${tableName} (name) VALUES (&#x27;Mr. T&#x27;);</pre>
+INSERT INTO ${tableName} (name) VALUES ('Mr. T');</pre>
 
 ## Limitations
 

@@ -183,6 +183,8 @@ The file name consists of the following parts:
 - **Description**: Underscores or spaces separate the words
 - **Suffix**: `.sql` ([configurable](/documentation/commandline/migrate#sqlMigrationSuffixes))
 
+Optionally versioned SQL migrations can also omit both the separator and the description.
+
 ### Discovery
 
 Flyway discovers SQL-based migrations both on the **filesystem** and on the Java **classpath**. 
@@ -389,6 +391,11 @@ within a single transaction by setting the [`group`](/documentation/commandline/
 If Flyway detects that a specific statement cannot be run within a transaction due to technical limitations of your
 database, it won't run that migration within a transaction. Instead it will be marked as *non-transactional*.
 
+For Java migrations, the `JavaMigration` interface has a method `canExecuteInTransaction`. This determines whether the execution
+should take place inside a transaction. It's recommended that you rely on `BaseJavaMigration`'s default behavior to return `true`.
+However, if necessary, you can override `canExecuteInTransaction` to execute certain migrations outside a transaction by returning
+`false`. This is useful for databases like PostgreSQL and SQL Server where certain statements can only execute outside a transaction.
+
 By default transactional and non-transactional statements cannot be mixed within a migration run. You can however allow
 this by setting the [`mixed`](/documentation/commandline/migrate#mixed) property to `true`. Note that this is only
 applicable for PostgreSQL, Aurora PostgreSQL, SQL Server and SQLite which all have statements that do not run at all
@@ -406,14 +413,16 @@ issuing an implicit commit before and after every DDL statement), Flyway won't b
 case of failure and will instead mark the migration as failed, indicating that some manual cleanup may be required. 
 
 ## Query Results
-{% include pro.html %}
 
 Migrations are primarily meant to be executed as part of release and deployment automation processes and there is rarely
 the need to visually inspect the result of SQL queries.
 
-There are however some scenarios where such manual inspection makes sense, and therefore Flyway Pro and Enterprise
-Edition also display query results in the usual tabular form when a `SELECT` statement (or any other statement that
-returns results) is executed. 
+There are however some scenarios where such manual inspection makes sense, and therefore Flyway will display query results in the usual tabular form when a `SELECT` statement (or any other statement that returns results) is executed.
+
+### Toggling query results
+{% include pro.html %}
+
+To prevent Flyway from displaying query results, set the configuration option [`outputQueryResults`](/documentation/commandline/migrate#outputQueryResults) to `false`.
 
 ## Schema History Table
 

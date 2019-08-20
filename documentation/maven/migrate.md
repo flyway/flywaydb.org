@@ -72,12 +72,13 @@ Migrates the schema to the latest version. Flyway will create the schema history
         <td>table</td>
         <td>NO</td>
         <td>flyway_schema_history</td>
-        <td>The name of Flyway&#x27;s schema history table.<br/>By
+        <td>The name of Flyway's schema history table.<br/>By
             default (single-schema mode) the schema history table is placed in the default schema for the connection
             provided by the datasource.<br/>When the <i>flyway.schemas</i> property is set (multi-schema mode),
             the schema history table is placed in the first schema of the list.
         </td>
     </tr>
+    {% include cfg/tablespace.html %}
     {% include cfg/locations-maven-gradle.html %}
     <tr>
         <td>sqlMigrationPrefix</td>
@@ -204,16 +205,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
         <td>false</td>
         <td>Whether default built-in callbacks (sql) should be skipped. If true, only custom callbacks are used.</td>
     </tr>
-    <tr>
-        <td>target</td>
-        <td>NO</td>
-        <td><i>latest version</i></td>
-        <td>The target version up to which Flyway should run
-            migrations. Migrations with a higher version number will not be applied. The string 'current' will be
-            interpreted as MigrationVersion.CURRENT, a placeholder for the latest version that has been applied to the
-            database.
-        </td>
-    </tr>
+    {% include cfg/target-latest.html %}
     <tr>
         <td>outOfOrder</td>
         <td>NO</td>
@@ -223,6 +215,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
                 it will be applied too instead of being ignored.</p>
         </td>
     </tr>
+    {% include cfg/outputQueryResults.html %}
     <tr>
         <td>validateOnMigrate</td>
         <td>NO</td>
@@ -232,18 +225,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
             when the sql script is executed. The validate mechanism checks if the sql migration in the classpath
             still has the same checksum as the sql migration already executed in the database.<br/></td>
     </tr>
-    <tr id="cleanOnValidationError">
-        <td>cleanOnValidationError</td>
-        <td>NO</td>
-        <td>false</td>
-        <td>Whether to automatically call clean or not when a validation error occurs.<br/><br/>
-            This is exclusively intended as a convenience for development. Even tough we
-            strongly recommend not to change migration scripts once they have been checked into SCM and run, this
-            provides a way of dealing with this case in a smooth manner. The database will be wiped clean
-            automatically, ensuring that the next migration will bring you back to the state checked into
-            SCM.<br/><br/><strong>Warning ! Do not enable in production !</strong>
-        </td>
-    </tr>
+    {% include cfg/cleanOnValidationError.html %}
     <tr>
         <td>ignoreMissingMigrations</td>
         <td>NO</td>
@@ -354,6 +336,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
             Omit to use the default mode of executing the SQL statements directly against the database.</td>
     </tr>
     {% include cfg/oracleSqlplus.html %}
+    {% include cfg/oracleSqlplusWarn.html %}
     {% include cfg/licenseKey.html %}
     </tbody>
 </table>
@@ -373,6 +356,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
         <schema>schema3</schema>
     </schemas>
     <table>schema_history</table>
+    <tablespace>my_tablespace</tablespace>
     <locations>
         <location>classpath:migrations1</location>
         <location>migrations2</location>
@@ -409,6 +393,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
     <skipDefaultCallbacks>false</skipDefaultCallbacks>
     <target>1.1</target>
     <outOfOrder>false</outOfOrder>
+    <outputQueryResults>false</outputQueryResults>
     <validateOnMigrate>true</validateOnMigrate>
     <cleanOnValidationError>false</cleanOnValidationError>
     <mixed>false</mixed>
@@ -433,6 +418,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
     </errorOverrides>
     <dryRunOutput>/my/sql/dryrun-outputfile.sql</dryRunOutput>
     <oracle.sqlplus>true</oracle.sqlplus>
+    <oracle.sqlplusWarn>true</oracle.sqlplusWarn>
 </configuration>
 ```
 

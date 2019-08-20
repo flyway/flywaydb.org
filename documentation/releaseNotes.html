@@ -8,6 +8,61 @@ subtitle: Release Notes
 <p>Thank you all for reporting all these issues and contributing fixes!</p>
 
 <div class="release">
+    <h2 id="6.0.0">Flyway 6.0.0</h2>
+
+    <h3>New features</h3>
+    <ul>
+        {% include issue.html id="441" title="Firebird 3.0, 4.0 support" pr="2376" %}
+        {% include issue.html id="1871" title="Colorized output" %}
+        {% include issue.html id="2069" title="Validate migration encoding" %}
+        {% include issue.html id="2276" title="Toggle display of query results" pro=true %}
+        {% include issue.html id="2398" title="PostgreSQL 12 support" %}
+        {% include issue.html id="2426" title="Command-line: Update MySQL driver to 8.0.16" %}
+        {% include issue.html id="2435" title="DB2 11.5 support" %}
+        {% include issue.html id="2449" title="HSQLDB 2.5 support" %}
+        {% include issue.html id="2449" title="Command-line: Update HSQLDB to 2.5.0" %}
+    </ul>
+
+    <h3>Changes</h3>
+    <ul>
+        {% include issue.html id="2450" title="Unify database support policy in Enterprise edition" enterprise=true %}
+    </ul>
+
+    <h3>Incompatible changes</h3>
+    <ul>
+        {% include issue.html id="2276" title="Query results are now also displayed in Flyway Community Edition when using <code>SELECT</code> statements" %}
+    </ul>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        {% include issue.html id="2224" title="Allow to specify target migrate version to match the default behavior" %}
+        {% include issue.html id="2260" title="Callback output doesn't match execution order" %}
+        {% include issue.html id="2272" title="Gradle plugin does not resolve `implementation`-scoped artifacts, only `compile`" %}
+        {% include issue.html id="2352" title="Typo in MigrationType Javadoc" pr="2353" %}
+        {% include issue.html id="2355" title="gradle flywayMigrate failing on missing postgresql CopyManager" %}
+        {% include issue.html id="2384" title="JavaUtilLog doesn't need to be instantiated with ClassUtils" pr="2384" %}
+        {% include issue.html id="2392" title="Mixed scripts above target trigger error when mixed=false" %}
+        {% include issue.html id="2409" title="Flyway fails as SQLDroid misreports SQLite version as 0.0" %}
+        {% include issue.html id="2410" title="MariaDB: clean fails when event scheduler is disabled" %}
+        {% include issue.html id="2413" title="UTF-8 BOM stripping no longer works in 6.0.0-beta2" %}
+        {% include issue.html id="2414" title="Incorrect detection of GO keyword inside identifiers" %}
+        {% include issue.html id="2417" title="SQLite clean fails due to violated foreign key constraints" %}
+        {% include issue.html id="2424" title="slf4j <code>loggerNameMismatch</code> warning disabled" %}
+        {% include issue.html id="2425" title="Dry run failing on JDBC defined data types (see also 2462)" %}
+        {% include issue.html id="2438" title="Redshift <code>ALTER TABLE ALTER COLUMN</code> isn't executed in transaction" %}
+        {% include issue.html id="2441" title="Output latest supported DB version with warning" %}
+        {% include issue.html id="2442" title="HSQLDB parser: <code>IF EXISTS</code> causes incorrect block depth count" %}
+        {% include issue.html id="2446" title="Migration files with hard spaces don't work anymore" %}
+        {% include issue.html id="2447" title="Flyway clean doesn't remove partition schemes and functions" %}
+    </ul>
+
+    <p>
+        Thanks to AigleeK, anjo-swe, Árpád Egyed, beyondlov1, Christian Swan, dnk8n, esauser, François Guillot, JohnEgan91,
+        Kirill Vergun, krite, mpe85, Richard Glidden, Ryan McElroy, sdwarwick and voronaam for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
     <h2 id="6.0.0-beta2">Flyway 6.0.0-beta2 (2019-05-30)</h2>
 
     <h3>New features</h3>
@@ -16,7 +71,7 @@ subtitle: Release Notes
         {% include issue.html id="2326" title="Command-line: Update H2 to 1.4.199" %}
         {% include issue.html id="2354" title="Java 12 support" %}
         {% include issue.html id="2357" title="Command-line: Upgrade built-in JRE to OpenJDK 11" %}
-        {% include issue.html id="2371" title="SQL*Plus SET/SHOW ECHO/TERMOUT/TIME/TIMING support" pro=true %}
+        {% include issue.html id="2371" title="SQL*Plus <code>SET/SHOW ECHO/TERMOUT/TIME/TIMING</code> support" pro=true %}
         {% include issue.html id="2393" title="Oracle 19c support" %}
     </ul>
 
@@ -30,16 +85,17 @@ subtitle: Release Notes
         {% include issue.html id="2308" title="Empty placeholders no longer work in 6.0.0-Beta" %}
         {% include issue.html id="2310" title="SQL*Plus parsing fails when statement is immediately preceded by comment" %}
         {% include issue.html id="2317" title="H2: Concurrent migration of empty database fails" %}
-        {% include issue.html id="2325" title="Update H2Schema to work with DATABASE_TO_UPPER=false" pr="2325" %}
+        {% include issue.html id="2325" title="Update H2Schema to work with <code>DATABASE_TO_UPPER=false</code>" pr="2325" %}
         {% include issue.html id="2329" title="Cannot execute PostgreSQL migration that contains ? operator for jsonb" %}
         {% include issue.html id="2334" title="Enable configFiles configuration for maven plugin" pr="2334" %}
         {% include issue.html id="2335" title="H2: clean does not remove function alias" %}
         {% include issue.html id="2338" title="Create stored procedure for MySql and MariaDB fails" %}
-        {% include issue.html id="2341" title="MySQL: Reset SQL_SAFE_UPDATES and FOREIGN_KEY_CHECKS after each migration" %}
+        {% include issue.html id="2341" title="MySQL: Reset <code>SQL_SAFE_UPDATES</code> and <code>FOREIGN_KEY_CHECKS</code> after each migration" %}
         {% include issue.html id="2347" title="Feature 'Display query results' doesn't give output in 5.2.4 Pro for Oracle" %}
         {% include issue.html id="2363" title="Undoable migrations not shown as undoable in flyway info" %}
         {% include issue.html id="2368" title="SQLPlusDefineSqlStatement should not depend on SLF4J" %}
-        {% include issue.html id="2374" title="Dry run doesn't intercept UPDATE run with executeQuery()" %}
+        {% include issue.html id="2370" title="Debug level does not work for enterprise option" %}
+        {% include issue.html id="2374" title="Dry run doesn't intercept UPDATE run with <code>executeQuery()</code>" %}
         {% include issue.html id="2379" title="DB2Parser struggles with block depth count" %}
         {% include issue.html id="2383" title="SQL*Plus @ with file path fails to load correct file" %}
         {% include issue.html id="2395" title="DB2: Clean excludes user-defined functions based on new classifications" %}
@@ -50,7 +106,7 @@ subtitle: Release Notes
         Thanks to alexander-semenets-dev, armondoortega, Cristina Petri, Ernst-Udo Wallenborn,
         Jeremy Fleischman, Joe Barnett, Josh Wheeler, KiruthikaSS, kwood612, Lucas Persson, Mária Jurčovičová,
         Me1gireesh, pvhors, Richard Glidden,
-        Sofoklis Papasofokli, swanym, tcat2 and Tomáš Poledný  for reporting these issues and contributing fixes.
+        Sofoklis Papasofokli, swanym, tcat2 and Tomáš Poledný for reporting these issues and contributing fixes.
     </p>
 </div>
 

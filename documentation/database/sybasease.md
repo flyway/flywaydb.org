@@ -8,7 +8,7 @@ subtitle: Sybase ASE
 ## Supported Versions
 
 - `16.0`
-- `15.7`
+- `15.7` {% include enterprise.html %}
 
 ## Drivers
 
@@ -101,7 +101,7 @@ END
 GO
 
 -- Placeholder
-INSERT INTO ${tableName} (name) VALUES (&#x27;Mr. T&#x27;);</pre>
+INSERT INTO ${tableName} (name) VALUES ('Mr. T');</pre>
 
 ## Limitations
 

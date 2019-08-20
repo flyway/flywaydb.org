@@ -19,6 +19,31 @@ however should inherit from the convenience class [`BaseJavaMigration`](/documen
 instead as it encourages Flyway's default naming convention, enabling Flyway to automatically extract the version and
 the description from the class name.
 
+### Java-based migrations as Spring Beans
+
+By default Java-based migrations discovered through classpath scanning and instantiated by Flyway. In a dependency
+injection container it is sometimes useful to let the container instantiate the class and wire up its dependencies for you.
+
+The Flyway API lets you pass pre-instantiated Java-based migrations using the `javaMigrations` property.
+
+Spring users can use this to automatically use all `JavaMigration` Spring beans with Flyway:
+
+```java
+import org.flywaydb.core.Flyway;
+import org.flywaydb.core.api.migration.JavaMigration;
+import org.springframework.context.ApplicationContext;
+
+...
+ApplicationContext applicationContext = ...; // obtain a reference to Spring's ApplicationContext.
+
+Flyway flyway = Flyway.configure()
+    .dataSource(url, user, password)
+    // Add all Spring-instantiated JavaMigration beans
+    .javaMigrations(applicationContext.getBeansOfType(JavaMigration.class).values().toArray(new JavaMigration[0]))
+    .load();
+flyway.migrate();
+```
+
 ## Java-based Callbacks
 
 Building upon that are the Java-based [Callbacks](/documentation/callbacks)

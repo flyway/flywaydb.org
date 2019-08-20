@@ -13,8 +13,19 @@ If you can't find the answer to your question here, please contact us at **sales
 
 ## What are Flyway Pro Edition and Flyway Enterprise Edition?
 
-Flyway Pro Edition and Flyway Enterprise Edition are supersets of Flyway Community Edition which add more functionality, support older databases and Java runtimes
-and provide additional support options for customers.
+Flyway Pro Edition and Flyway Enterprise Edition are supersets of Flyway Community Edition which add more functionality,
+support older databases and Java runtimes and provide additional support options for customers.
+
+## How long are database releases supported in each edition of Flyway?
+
+The different editions of Flyway come with different support timeline guarantees for database releases. For Flyway
+Community and Pro Editions a database release is guaranteed to be supported for 5 years from its GA (General Availability)
+release date. Flyway Enterprise Edition gives you
+stronger guarantees by extending it to a full 10 years. Each edition gives you the strong predictability you
+need to be able to manage your database upgrade cycles at the pace you require.
+
+Example: Oracle 12.2 went GA in March 2017. It is guaranteed to be compatible with Flyway Community and Pro Editions until at
+least March 2022. After that date support will be retired from the Community and Pro Editions, but it is guaranteed to still remain available until at least March 2027 with Flyway Enterprise Edition. 
 
 ## Is there a trial version?
 
@@ -63,6 +74,7 @@ With schema we mean the container for database objects commonly referred to as "
 - HSQLDB: `SCHEMA`
 - Derby: `SCHEMA`
 - SQLite: `DATABASE` (no schema support)
+- Firebird: `DATABASE` (no schema support)
 
 ## How are schemas counted?
 

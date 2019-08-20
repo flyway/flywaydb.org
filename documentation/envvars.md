@@ -62,10 +62,16 @@ The following environment variables are supported:
     </tr>
     <tr id="FLYWAY_TABLE">
         <td>FLYWAY_TABLE</td>
-        <td>The name of Flyway&#x27;s schema history table.<br/>By
+        <td>The name of Flyway's schema history table.<br/>By
             default (single-schema mode) the schema history table is placed in the default schema for the connection
             provided by the datasource.<br/>When the <i>flyway.schemas</i> property is set (multi-schema mode),
             the schema history table is placed in the first schema of the list.
+        </td>
+    </tr>
+    <tr id="FLYWAY_TABLESPACE">
+        <td>FLYWAY_TABLESPACE</td>
+        <td>The tablespace where to create the schema history table that will be used by Flyway.
+            This setting is only relevant for databases that do support the notion of tablespaces. It's value is simply ignored for all others.
         </td>
     </tr>
     <tr id="FLYWAY_LOCATIONS">
@@ -180,7 +186,18 @@ The following environment variables are supported:
     </tr>
     <tr id="FLYWAY_TARGET">
         <td>FLYWAY_TARGET</td>
-        <td>The target version up to which Flyway should consider migrations. Migrations with a higher version number will be ignored. The special value <code>current</code> designates the current version of the schema.
+        <td>The target version up to which Flyway should consider migrations. Migrations with a higher version number will be ignored.<br />
+            Special values:
+            <ul>
+                <li><code>current</code>: designates the current version of the schema</li>
+                <li><code>latest</code>: the latest version of the schema, as defined by the migration with the highest version</li>
+            </ul>
+        </td>
+    </tr>
+    <tr id="FLYWAY_OUTPUT_QUERY_RESULTS">
+        <td>FLYWAY_OUTPUT_QUERY_RESULTS</td>
+        <td>
+        Controls whether Flyway should output a table with the results of queries when executing migrations. 
         </td>
     </tr>
     <tr id="FLYWAY_OUT_OF_ORDER">
@@ -200,7 +217,7 @@ The following environment variables are supported:
     <tr id="FLYWAY_CLEAN_ON_VALIDATION_ERROR">
         <td>FLYWAY_CLEAN_ON_VALIDATION_ERROR</td>
         <td>Whether to automatically call clean or not when a validation error occurs.<br/><br/>
-            This is exclusively intended as a convenience for development. Even tough we
+            This is exclusively intended as a convenience for development. Even though we
             strongly recommend not to change migration scripts once they have been checked into SCM and run, this
             provides a way of dealing with this case in a smooth manner. The database will be wiped clean
             automatically, ensuring that the next migration will bring you back to the state checked into
@@ -275,7 +292,7 @@ The following environment variables are supported:
     <tr id="FLYWAY_ERROR_OVERRIDES">
         <td>FLYWAY_ERROR_OVERRIDES {% include pro.html %}</td>
         <td>Comma-sparated list of rules for the built-in error handler that let you override specific SQL states and errors codes in order to force specific errors or warnings to be treated as debug messages, info messages, warnings or errors.
-            <p>Each error override has the following format: <code>STATE:12345:W</code>. It is a 5 character SQL state, a colon, the SQL error code, a colon and finally the desired behavior that should override the initial one.</p>
+            <p>Each error override has the following format: <code>STATE:12345:W</code>. It is a 5 character SQL state (or <code>*</code> to match all SQL states), a colon, the SQL error code (or <code>*</code> to match all SQL error codes), a colon and finally the desired behavior that should override the initial one.</p>
             <p>The following behaviors are accepted:</p>
             <ul>
               <li><code>D</code> to force a debug message</li>
@@ -289,6 +306,7 @@ The following environment variables are supported:
             </ul>
             <p>Example 1: to force Oracle stored procedure compilation issues to produce errors instead of warnings, the following errorOverride can be used: <code>99999:17110:E</code></p>
             <p>Example 2: to force SQL Server PRINT messages to be displayed as info messages (without SQL state and error code details) instead of warnings, the following errorOverride can be used: <code>S0001:0:I-</code></p>
+            <p>Example 3: to force all errors with SQL error code 123 to be treated as warnings instead, the following errorOverride can be used: <code>*:123:W</code></p>
        </td>
     </tr>
     <tr id="FLYWAY_DRYRUN_OUTPUT">
@@ -300,6 +318,10 @@ The following environment variables are supported:
     <tr id="FLYWAY_ORACLE_SQLPLUS">
         <td>FLYWAY_ORACLE_SQLPLUS {% include pro.html %}</td>
         <td>Enable Flyway's support for <a href="/documentation/database/oracle#sqlplus-commands">Oracle SQL*Plus commands</a></td>
+    </tr>
+    <tr id="FLYWAY_ORACLE_SQLPLUS_WARN">
+        <td>FLYWAY_ORACLE_SQLPLUS_WARN {% include pro.html %}</td>
+        <td>Whether Flyway should issue a warning instead of an error whenever it encounters an Oracle SQL*Plus statement it doesn't yet support.</td>
     </tr>
     <tr id="FLYWAY_LICENSE_KEY">
         <td>FLYWAY_LICENSE_KEY {% include pro.html %}</td>

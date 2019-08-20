@@ -59,7 +59,7 @@ subtitle: 'Command-line: undo'
         <td>table</td>
         <td>NO</td>
         <td>flyway_schema_history</td>
-        <td>The name of Flyway&#x27;s schema history table.<br/>By
+        <td>The name of Flyway's schema history table.<br/>By
             default (single-schema mode) the schema history table is placed in the default schema for the connection
             provided by the datasource.<br/>When the <i>flyway.schemas</i> property is set (multi-schema mode),
             the schema history table is placed in the first schema of the list.
@@ -178,12 +178,9 @@ subtitle: 'Command-line: undo'
         <td>false</td>
         <td>Whether default built-in callbacks (sql) should be skipped. If true, only custom callbacks are used.</td>
     </tr>
-    <tr>
-        <td>target</td>
-        <td>NO</td>
-        <td><i>previous version</i></td>
-        <td>The target version up to which Flyway should undo migrations. Migrations with a lower version number will be ignored.</td>
-    </tr>
+    {% include cfg/outputQueryResults.html %}
+    {% include cfg/target-previous.html %}
+    {% include cfg/cleanOnValidationError.html %}
     <tr>
         <td>ignoreMissingMigrations</td>
         <td>NO</td>
@@ -239,6 +236,7 @@ subtitle: 'Command-line: undo'
             Omit to use the default mode of executing the SQL statements directly against the database.</td>
     </tr>
     {% include cfg/oracleSqlplus.html %}
+    {% include cfg/oracleSqlplusWarn.html %}
     {% include cfg/licenseKey.html %}
     </tbody>
 </table>
@@ -270,15 +268,19 @@ flyway.resolvers=com.mycomp.project.CustomResolver,com.mycomp.project.AnotherRes
 flyway.skipDefaultCallResolvers=false
 flyway.callbacks=com.mycomp.project.CustomCallback,com.mycomp.project.AnotherCallback
 flyway.skipDefaultCallbacks=false
+flyway.outputQueryResults=false
 flyway.target=5.1
 flyway.mixed=false
 flyway.group=false
+flyway.cleanOnValidationError=false
 flyway.ignoreMissingMigrations=false
 flyway.ignoreIgnoredMigrations=false
 flyway.ignoreFutureMigrations=false
 flyway.installedBy=my-user
 flyway.errorOverrides=99999:17110:E,42001:42001:W
 flyway.dryRunOutput=/my/sql/dryrun-outputfile.sql
+flyway.oracle.sqlplus=true
+flyway.oracle.sqlplusWarn=true
 ```
 
 ## Sample output

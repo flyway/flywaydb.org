@@ -7,11 +7,12 @@ subtitle: MariaDB
 
 ## Supported Versions
 
+- `10.4`
 - `10.3`
 - `10.2`
-- `10.1`
-- `10.0`
-- `5.5`
+- `10.1` {% include enterprise.html %}
+- `10.0` {% include enterprise.html %}
+- `5.5` {% include enterprise.html %}
 - `5.3` {% include enterprise.html %}
 - `5.2` {% include enterprise.html %}
 - `5.1` {% include enterprise.html %}
@@ -30,7 +31,7 @@ subtitle: MariaDB
 </tr>
 <tr>
 <th>Maven Central coordinates</th>
-<td><code>org.mariadb.jdbc:mariadb-java-client:2.3.0</code></td>
+<td><code>org.mariadb.jdbc:mariadb-java-client:2.4.0</code></td>
 </tr>
 <tr>
 <th>Supported versions</th>
@@ -57,7 +58,8 @@ subtitle: MariaDB
 
 ### Example
 
-<pre class="prettyprint">/* Single line comment */
+```sql
+/* Single line comment */
 CREATE TABLE test_data (
  value VARCHAR(25) NOT NULL,
  PRIMARY KEY(value)
@@ -73,7 +75,7 @@ DELIMITER //
 CREATE PROCEDURE AddData()
  BEGIN
    # MySQL-style single line comment
-   INSERT INTO test_data (value) VALUES (&#x27;Hello&#x27;);
+   INSERT INTO test_data (value) VALUES ('Hello');
  END //
 DELIMITER;
 
@@ -84,13 +86,8 @@ CALL AddData();
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 
 -- Placeholder
-INSERT INTO ${tableName} (name) VALUES (&#x27;Mr. T&#x27;);</pre>
-
-## Limitations
-
-- [Issue 558](https://github.com/flyway/flyway/issues/558)
-        The parser currently doesn't support multiple comment directives on a single line.<br/>
-        Example: /*!50003 CREATE*/ /*!50017 DEFINER=`...`*/ /*!50003 TRIGGER EntityBeforeInsert ...
+INSERT INTO ${tableName} (name) VALUES ('Mr. T');
+```
 
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/database/xtradb">Percona XtraDB Cluster <i class="fa fa-arrow-right"></i></a>

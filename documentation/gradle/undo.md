@@ -57,7 +57,7 @@ subtitle: 'gradle flywayUndo'
         <td>table</td>
         <td>NO</td>
         <td>flyway_schema_history</td>
-        <td>The name of Flyway&#x27;s schema history table.<br/>By
+        <td>The name of Flyway's schema history table.<br/>By
             default (single-schema mode) the schema history table is placed in the default schema for the connection
             provided by the datasource.<br/>When the <i>flyway.schemas</i> property is set (multi-schema mode),
             the schema history table is placed in the first schema of the list.
@@ -163,12 +163,9 @@ subtitle: 'gradle flywayUndo'
         <td>false</td>
         <td>Whether default built-in callbacks (sql) should be skipped. If true, only custom callbacks are used.</td>
     </tr>
-    <tr>
-        <td>target</td>
-        <td>NO</td>
-        <td><i>previous version</i></td>
-        <td>The target version up to which Flyway should undo migrations. Migrations with a lower version number will be ignored.</td>
-    </tr>
+    {% include cfg/target-previous.html %}
+    {% include cfg/outputQueryResults.html %}
+    {% include cfg/cleanOnValidationError.html %}
     <tr>
         <td>ignoreMissingMigrations</td>
         <td>NO</td>
@@ -224,6 +221,7 @@ subtitle: 'gradle flywayUndo'
             Omit to use the default mode of executing the SQL statements directly against the database.</td>
     </tr>
     {% include cfg/oracleSqlplus.html %}
+    {% include cfg/oracleSqlplusWarn.html %}
     {% include cfg/licenseKey.html %}
     </tbody>
 </table>
@@ -257,15 +255,19 @@ flyway {
     skipDefaultResolvers = false
     callbacks = ['com.mycompany.proj.CustomCallback', 'com.mycompany.proj.AnotherCallback']
     skipDefaultCallbacks = false
+    outputQueryResults = false
     target = '1.1'
     mixed = false
     group = false
+    cleanOnValidationError = false
     ignoreMissingMigrations = false
     ignoreIgnoredMigrations = false
     ignoreFutureMigrations = false
     installedBy = "my-user"
     errorOverrides = ['99999:17110:E', '42001:42001:W']
     dryRunOutput = '/my/sql/dryrun-outputfile.sql'
+    oracleSqlplus = true 
+    oracleSqlplusWarn = true 
 }
 ```
 

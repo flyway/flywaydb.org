@@ -11,8 +11,9 @@ subtitle: DB2
 
 ## Supported Versions
 
+- `11.5`
 - `11.1`
-- `10.5`
+- `10.5` {% include enterprise.html %}
 - `10.1` {% include enterprise.html %}
 - `9.8` {% include enterprise.html %}
 - `9.7` {% include enterprise.html %}
@@ -69,7 +70,7 @@ comment
 */
 
 -- Placeholder
-INSERT INTO ${tableName} (name) VALUES (&#x27;Mr. T&#x27;);
+INSERT INTO ${tableName} (name) VALUES ('Mr. T');
 
 -- SQL-PL
 CREATE TRIGGER uniqueidx_trigger BEFORE INSERT ON usertable

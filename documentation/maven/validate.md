@@ -77,7 +77,7 @@ Validation fails if
         <td>table</td>
         <td>NO</td>
         <td>flyway_schema_history</td>
-        <td>The name of Flyway&#x27;s schema history table.<br/>By
+        <td>The name of Flyway's schema history table.<br/>By
             default (single-schema mode) the schema history table is placed in the default schema for the connection
             provided by the datasource.<br/>When the <i>flyway.schemas</i> property is set (multi-schema mode),
             the schema history table is placed in the first schema of the list.
@@ -184,13 +184,7 @@ Validation fails if
         <td>false</td>
         <td>Whether default built-in callbacks (sql) should be skipped. If true, only custom callbacks are used.</td>
     </tr>
-    <tr>
-        <td>target</td>
-        <td>NO</td>
-        <td><i>latest version</i></td>
-        <td>The target version up to which Flyway should consider migrations. Migrations with a higher version number will be ignored. The special value <code>current</code> designates the current version of the schema.
-        </td>
-    </tr>
+    {% include cfg/target-latest.html %}
     <tr>
         <td>outOfOrder</td>
         <td>NO</td>
@@ -200,18 +194,7 @@ Validation fails if
                 it will be applied too instead of being ignored.</p>
         </td>
     </tr>
-    <tr>
-        <td>cleanOnValidationError</td>
-        <td>NO</td>
-        <td>false</td>
-        <td>Whether to automatically call clean or not when a validation error occurs.<br/><br/>
-            This is exclusively intended as a convenience for development. Even tough we
-            strongly recommend not to change migration scripts once they have been checked into SCM and run, this
-            provides a way of dealing with this case in a smooth manner. The database will be wiped clean
-            automatically, ensuring that the next migration will bring you back to the state checked into
-            SCM.<br/><br/><strong>Warning ! Do not enable in production !</strong>
-        </td>
-    </tr>
+    {% include cfg/cleanOnValidationError.html %}
     <tr>
         <td>ignoreMissingMigrations</td>
         <td>NO</td>
@@ -270,6 +253,8 @@ Validation fails if
         <td><i>project.basedir</i> (where the POM resides)</td>
         <td>The working directory to consider when dealing with relative paths for both config files and locations.</td>
     </tr>
+    {% include cfg/oracleSqlplus.html %}
+    {% include cfg/oracleSqlplusWarn.html %}
     {% include cfg/licenseKey.html %}
     </tbody>
 </table>
@@ -329,6 +314,8 @@ Validation fails if
     <ignoreIgnoredMigrations>false</ignoreIgnoredMigrations>
     <ignorePendingMigrations>false</ignorePendingMigrations>
     <ignoreFutureMigrations>false</ignoreFutureMigrations>
+    <oracle.sqlplus>true</oracle.sqlplus>
+    <oracle.sqlplusWarn>true</oracle.sqlplusWarn>
     <skip>false</skip>
     <configFiles>
         <configFile>myConfig.conf</configFile>

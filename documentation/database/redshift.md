@@ -55,11 +55,11 @@ CREATE TABLE test_data (
 Multi-line
 comment
 */
-INSERT INTO test_data (value) VALUES (&#x27;Hello&#x27;);
+INSERT INTO test_data (value) VALUES ('Hello');
 
 CREATE VIEW value_only AS SELECT value FROM test_data;
 
-CREATE TABLE another_table AS SELECT &#x27;some-data&#x27; as name;
+CREATE TABLE another_table AS SELECT 'some-data' as name;
 
 CREATE FUNCTION add(integer, integer) RETURNS integer
      IMMUTABLE
@@ -68,7 +68,7 @@ CREATE FUNCTION add(integer, integer) RETURNS integer
 $$ LANGUAGE sql;
 
 -- Placeholder
-INSERT INTO ${tableName} (name) VALUES (&#x27;Mr. T&#x27;);</pre>
+INSERT INTO ${tableName} (name) VALUES ('Mr. T');</pre>
 
 ## Limitations
 

@@ -7,9 +7,10 @@ subtitle: SQL Server
 
 ## Supported Versions
 
+- `2019`
 - `2017`
 - `2016`
-- `2014`
+- `2014` {% include enterprise.html %}
 - `2012` {% include enterprise.html %}
 - `2008 R2` {% include enterprise.html %}
 - `2008` {% include enterprise.html %}
@@ -27,7 +28,7 @@ subtitle: SQL Server
 </tr>
 <tr>
 <th>Maven Central coordinates</th>
-<td><code>com.microsoft.sqlserver:mssql-jdbc:7.0.0.jre8</code></td>
+<td><code>com.microsoft.sqlserver:mssql-jdbc:7.2.0.jre8</code></td>
 </tr>
 <tr>
 <th>Supported versions</th>

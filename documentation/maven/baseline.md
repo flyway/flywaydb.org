@@ -73,6 +73,7 @@ Baselines an existing database, excluding all migrations up to and including bas
             the schema history table is placed in the first schema of the list.
         </td>
     </tr>
+    {% include cfg/tablespace.html %}
     <tr>
         <td>callbacks</td>
         <td>NO</td>
@@ -141,6 +142,7 @@ Baselines an existing database, excluding all migrations up to and including bas
         <schema>schema3</schema>
     </schemas>
     <table>schema_history</table>
+    <tablespace>my_tablespace</tablespace>
     <callbacks>
         <callback>com.mycompany.project.CustomCallback</callback>
         <callback>com.mycompany.project.AnotherCallback</callback>

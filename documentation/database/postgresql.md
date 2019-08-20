@@ -7,11 +7,12 @@ subtitle: PostgreSQL
 
 ## Supported Versions
 
+- `11`
 - `10`
 - `9.6`
 - `9.5`
-- `9.4`
-- `9.3`
+- `9.4` 
+- `9.3` {% include enterprise.html %}
 - `9.2` {% include enterprise.html %}
 - `9.1` {% include enterprise.html %}
 - `9.0` {% include enterprise.html %}
@@ -70,7 +71,7 @@ comment
 CREATE FUNCTION AddData() RETURNS INTEGER
 AS $$
    BEGIN
-    INSERT INTO test_data (value) VALUES (&#x27;Hello&#x27;);
+    INSERT INTO test_data (value) VALUES ('Hello');
     RETURN 1;
   END;
 $$ LANGUAGE plpgsql;
@@ -83,7 +84,7 @@ CREATE FUNCTION add(integer, integer) RETURNS integer
    AS $_$select $1 + $2;$_$;
 
 -- Placeholder
-INSERT INTO ${tableName} (name) VALUES (&#x27;Mr. T&#x27;);
+INSERT INTO ${tableName} (name) VALUES ('Mr. T');
 
 -- COPY ... FROM STDIN
 COPY copy_test (c1, c2, c3) FROM stdin;

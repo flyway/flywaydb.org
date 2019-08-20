@@ -13,12 +13,12 @@ be migrated to a state the rest of the code can work with.
 
 ## Supported Java Versions
 
+- `Java 12`
 - `Java 11`
 - `Java 10`
 - `Java 9`
 - `Java 8`
 - `Java 7` {% include enterprise.html %}
-- `Java 6` {% include enterprise.html %}
 
 ## Download
 
@@ -366,7 +366,7 @@ The central piece of Flyway's database migration infrastructure is the
 class. It is your **one-stop shop** for working with Flyway programmatically. It serves both as a
 **configuration** and a **launching** point for all of Flyway's functions.
 
-## Programmatic Configuration (Java)
+### Programmatic Configuration (Java)
 
 Flyway is super easy to use programmatically:
 
@@ -385,7 +385,7 @@ flyway.migrate();
     instance (both locally and on AWS), Flyway will automatically use the JDBC url, user and password
     <a href="https://boxfuse.com/docs/databases#envvars">provided by Boxfuse</a>.</div>
 
-## Programmatic Configuration (Android)
+### Programmatic Configuration (Android)
 
 In order to use Flyway on Android you have to add flyway-core as well as SQLDroid as dependencies. 
 There are two things to keep in mind with Android: First, you have to load the migrations as *assets*, not *resources* 
@@ -433,7 +433,7 @@ Flyway flyway = Flyway.configure().dataSource(dataSource).load();
 flyway.migrate();
 ```
 
-## Spring Configuration
+### Spring Configuration
 
 As an alternative to the programmatic configuration, here is how you can configure and start Flyway in a classic
 Spring application using XML bean configuration:
