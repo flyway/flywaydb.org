@@ -139,7 +139,7 @@ application you need a redistributable license. See the previous question: [Can 
 
 If you do not install Flyway on your customer's hardware, but do either run Flyway from your own machines or use
 Flyway-generated dry run scripts to manage your customer's databases, each schema managed this way must be accounted
-for as if it were a production schema within your own datacenter. See the previous question: [How are schemas counted?](how-are-schemas-counted)
+for as if it were a production schema within your own datacenter. See the previous question: [How are schemas counted?](#how-are-schemas-counted)
 
 ## Can I pay via invoice and purchase order?
 
