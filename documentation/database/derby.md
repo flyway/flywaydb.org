@@ -46,9 +46,7 @@ subtitle: Derby
     
 - DDL exported by Derby can be used unchanged in a Flyway migration
 - Any Derby SQL script executed by Flyway, can be executed by the Derby tools (after the placeholders have been replaced)
-- We do not ship the Derby 10.15 driver by default. This is available from Maven Central as normal, but comes as three separate
-files (`derbyclient`, `derbytools` and `derbyshared`), and requires Java 9+. Flyway users who are constrained
-to use Java 8 should **not** upgrade to Derby 10.15.
+- The Derby 10.15 driver requires Java 9+. Flyway users who are constrained to use Java 8 should **not** upgrade to Derby 10.15.
 
 ### Example
 
