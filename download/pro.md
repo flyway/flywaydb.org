@@ -67,7 +67,7 @@ All levels come with unlimited database schemas in dev and test
 <td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-pro-10-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
 </tr>
 <tr>
-<td><strong>unlimited</strong></td>
+<td><strong>More than 100 schemas</strong></td>
 <td><strong><a href="mailto:sales@flywaydb.org">Contact us</a> for details</strong></td>
 <td></td>
 </tr>
