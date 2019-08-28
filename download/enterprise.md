@@ -68,8 +68,8 @@ All levels come with unlimited database schemas in dev and test
 </tr>
 <tr>
 <td><strong>unlimited</strong></td>
-<td>44,500 USD per year</td>
-<td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-enterprise-site-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
+<td><strong><a href="mailto:sales@flywaydb.org">Contact us</a> for details</strong></td>
+<td></td>
 </tr>
 </table>
 
