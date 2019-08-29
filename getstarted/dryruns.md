@@ -63,7 +63,7 @@ Now let's preview the database changes of this migration by doing a dry run:
 
 <pre class="console"><span>flyway-{{ site.flywayVersion }}&gt;</span> flyway migrate <strong>-dryRunOutput=dryrun.sql</strong></pre>
 
-This will produce a file called `dryrun.txt` which contains all SQL statements that Flyway would have executed against
+This will produce a file called `dryrun.sql` which contains all SQL statements that Flyway would have executed against
 the database in case of a regular migration. See for yourself: 
 
 ```sql
@@ -104,11 +104,11 @@ using the usual `migrate` command:
 
 <pre class="console"><span>flyway-{{ site.flywayVersion }}&gt;</span> flyway <strong>migrate</strong></pre>
 
-Alternatively you can also for example use H2's built-in support for running SQL scripts to do so:
+Alternatively, you can also apply the migration using your database's built-in support for running SQL scripts. For example, using H2:
 
 <pre class="console"><span>flyway-{{ site.flywayVersion }}&gt;</span> java -cp drivers/* org.h2.tools.RunScript -url jdbc:h2:file:./foobardb -script <strong>dryrun.sql</strong></pre>
 
-Either of these approaches yields the same result as you can see using
+Either one of these approaches yields the same result as you can see using:
 
 <pre class="console"><span>flyway-{{ site.flywayVersion }}&gt;</span> flyway <strong>info</strong></pre>
 
