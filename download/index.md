@@ -39,7 +39,7 @@ Choose your Flyway edition based on the features and support level you require
 <tr><td>License</td><td><a href="/licenses/flyway-community">Apache v2</a></td><td><a href="/licenses/flyway-pro">Commercial</a></td><td><a href="/licenses/flyway-enterprise">Commercial</a></td></tr>
 <tr><td>Maven Repository</td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td>Source Code included</td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
-<tr><td>Support</td><td>Community</td><td>Email (best effort)<br><span class="note">English</span></td><td>Email (2 business days)<br><span class="note">English, German, French, Dutch, Spanish</span></td></tr>
+<tr><td>Support</td><td>Community</td><td>Email (best effort)</td><td>Email (2 business days)</td></tr>
 <tr><td>Price</td><td>Free</td><td>950 USD per year<br><span class="note">per 10 schemas in production<br>(less than 8 USD per schema per month)<br>unlimited for dev and test</span></td><td>2950 USD per year<br><span class="note">per 10 schemas in production<br>(less than 25 USD per schema per month)<br>unlimited for dev and test</span></td></tr>
 <tr><td>Automatic renewal</td><td></td><td><i class="fa fa-check"></i></td><td>optional</td></tr>
 <tr><td>Payment methods accepted</td><td></td><td>Credit card</td><td>Credit card, wire transfer, purchase order</td></tr>

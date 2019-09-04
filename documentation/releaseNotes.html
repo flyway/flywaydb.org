@@ -8,6 +8,27 @@ subtitle: Release Notes
 <p>Thank you all for reporting all these issues and contributing fixes!</p>
 
 <div class="release">
+    <h2 id="6.0.1">Flyway 6.0.1</h2>
+    <h3>New features</h3>
+    <ul>
+        {% include issue.html id="2470" title="Derby 10.15 support (see <a href='/documentation/database/derby'>Derby documentation</a> for compatibility notes)" %}
+    </ul>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        {% include issue.html id="2467" title="Unable to create H2Database instance" %}
+        {% include issue.html id="2481" title="Getting unsupported error with correct versions?" %}
+        {% include issue.html id="2484" title="Parsing inline comments for SQL*Plus <code>DEFINE</code> statements fixed" pro=true %}
+        {% include issue.html id="2486" title="SQL Azure incorrectly detected as SQL Server 2014" %}
+        {% include issue.html id="2487" title="Flyway 6.0 clean migrate command is throwing an 'eName' is not recognized as an internal or external command error on PostgreSQL 11" %}
+    </ul>
+
+    <p>
+        Thanks to 123Haynes, Kevin George, Morshed Daud, pcable, Piotrek Żygieło, Simon Stelling, Tauri28, and terje2001 for reporting these issues and submitting pull requests.
+    </p>
+</div>
+
+<div class="release">
     <h2 id="6.0.0">Flyway 6.0.0</h2>
 
     <h3>New features</h3>

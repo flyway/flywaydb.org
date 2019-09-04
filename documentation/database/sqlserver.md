@@ -111,7 +111,8 @@ INSERT INTO ${tableName} (name) VALUES ('Mr. T');
 
 ## Limitations
 
-- When setting `flyway.schemas`, the first schema is not set as the default as SQL Server is unable to change the default schema for a session 
+- When setting `flyway.schemas`, the first schema is not set as the default as SQL Server is unable to change the default schema for a session.
+[Placeholders](https://flywaydb.org/documentation/migrations#placeholder-replacement) can be used to work around this limitation. 
 
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/database/db2">DB2 <i class="fa fa-arrow-right"></i></a>

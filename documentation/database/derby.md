@@ -7,8 +7,9 @@ subtitle: Derby
 
 ## Supported Versions
 
+- `10.15` (Important: see 'Compatibility' below)
 - `10.14`
-- `10.13` {% include enterprise.html %}
+- `10.13` 
 - `10.12` {% include enterprise.html %}
 - `10.11` {% include enterprise.html %}
 
@@ -45,6 +46,7 @@ subtitle: Derby
     
 - DDL exported by Derby can be used unchanged in a Flyway migration
 - Any Derby SQL script executed by Flyway, can be executed by the Derby tools (after the placeholders have been replaced)
+- The Derby 10.15 driver requires Java 9+. Flyway users who are constrained to use Java 8 should **not** upgrade to Derby 10.15.
 
 ### Example
 
