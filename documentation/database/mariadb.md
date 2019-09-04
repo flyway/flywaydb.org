@@ -23,7 +23,7 @@ subtitle: MariaDB
 <table class="table">
 <tr>
 <th>URL format</th>
-<td><code>jdbc:mariadb://<i>host</i>:<i>port</i>/<i>database</i></code></td>
+<td><code>jdbc:(mysql|mariadb)://<i>host</i>:<i>port</i>/<i>database</i></code></td>
 </tr>
 <tr>
 <th>Ships with Flyway Command-line</th>
