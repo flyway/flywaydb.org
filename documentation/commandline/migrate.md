@@ -366,7 +366,7 @@ flyway.oracle.sqlplusWarn=true
 
 <pre class="console">&gt; flyway migrate
 
-Flyway {{ site.flywayVersion }} by Boxfuse
+Flyway {{ site.flywayVersion }} by Redgate
 
 Database: jdbc:h2:file:flyway.db (H2 1.3)
 Successfully validated 5 migrations (execution time 00:00.010s)

@@ -15,7 +15,7 @@ title: Documentation
 
 <p class="center"><img src="/assets/logo/flyway-logo-tm.png" alt="Flyway" usemap="#logomap" style="padding-bottom: 10px"/>
     <map name="logomap">
-        <area shape="rect" coords="130,260,370,330" href="https://boxfuse.com" alt="Boxfuse">
+        <area shape="rect" coords="130,260,370,330" href="https://red-gate.com" alt="Redgate">
     </map>
 </p>
 
