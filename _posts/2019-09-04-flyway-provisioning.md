@@ -19,7 +19,7 @@ involved with, where we investigated the practicality of coupling Flyway to a da
 
 The background to this idea was as follows: `flyway clean` is very useful in that it reverts an existing database to its original state
 by dropping database objects. However, your migrations may have made changes to objects which you don't want to, or can't, drop. You
-may want to spin a database from a different pre-determined state, or spin up a range of versions of a given database without the
+may want to spin up a database from a different pre-determined state, or spin up a range of versions of a given database without the
 headaches of side-by-side installations. And for testing, you may prefer to spin up an empty database, do
 your tests, and then destroy it, in order both to minimise resource use and be absolutely sure you start each time from a consistent
 point. That led us to look at adding a new verb: `flyway provision`.
