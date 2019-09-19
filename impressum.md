@@ -6,9 +6,9 @@ subtitle : ''
 # Impressum
 
 **Boxfuse GmbH**
-Baubergerstraße 59
-80992 München
-Deutschland
+Scwedenstr 9/Gebäude 1
+13359 Berlin
+Germany
 
 +49 151 5560 2935<br/>
 hello@boxfuse.com
