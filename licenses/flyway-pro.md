@@ -7,7 +7,7 @@ title: Flyway Pro Edition License and Support Agreement
 
 Any use of the Flyway Pro Edition software is subject to the terms of this license agreement (“Agreement”).  Please read the full Agreement carefully.  This License and Support Agreement relates to purchases of the Flyway Pro Edition Software made on or after 2nd August 2019.
 
-This Agreement  sets out the conditions under which and the extent to which the end user (referred to as “Licensee” below) is granted the right to use the “Flyway Pro Edition” software (referred to as “Software” below) provided by Boxfuse GmbH, Baubergerstaße 59, 80992 Müchen, Deutschland  (referred to as “Licensor” below).
+This Agreement  sets out the conditions under which and the extent to which the end user (referred to as “Licensee” below) is granted the right to use the “Flyway Pro Edition” software (referred to as “Software” below) provided by : Boxfuse GmbH, Scwedenstr. 9/Gebäude 1, 13359 Berlin, Germany (referred to as “Licensor” below).
 
 The Licensee confirms that it accepts and agrees to be legally bound by all terms and conditions of this Agreement by downloading and/or installing and/or using the Software.  If you do not accept these terms, do not download, install or use the Software.
 
