@@ -335,6 +335,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
             directory, Flyway will create all directories and parent directories as needed.
             Omit to use the default mode of executing the SQL statements directly against the database.</td>
     </tr>
+    {% include cfg/errorOnScanFailure.html %}
     {% include cfg/oracleSqlplus.html %}
     {% include cfg/oracleSqlplusWarn.html %}
     {% include cfg/licenseKey.html %}
@@ -416,6 +417,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
         <errorOverride>99999:17110:E</errorOverride>
         <errorOverride>42001:42001:W</errorOverride>
     </errorOverrides>
+    <errorOnScanFailure>true</errorOnScanFailure>
     <dryRunOutput>/my/sql/dryrun-outputfile.sql</dryRunOutput>
     <oracle.sqlplus>true</oracle.sqlplus>
     <oracle.sqlplusWarn>true</oracle.sqlplusWarn>
