@@ -315,10 +315,6 @@ The following environment variables are supported:
             directory, Flyway will create all directories and parent directories as needed.
             Omit to use the default mode of executing the SQL statements directly against the database.</td>
     </tr>
-    <tr id="FLYWAY_ERROR_ON_SCAN_FAILURE">
-      <td>FLYWAY_ERROR_ON_SCAN_FAILURE</td>
-      <td>Whether Flyway should produce an error if a resource cannot be found. For instance, if a non-existent directory is supplied in the locations config option.</td>
-    </tr>
     <tr id="FLYWAY_ORACLE_SQLPLUS">
         <td>FLYWAY_ORACLE_SQLPLUS {% include pro.html %}</td>
         <td>Enable Flyway's support for <a href="/documentation/database/oracle#sqlplus-commands">Oracle SQL*Plus commands</a></td>
