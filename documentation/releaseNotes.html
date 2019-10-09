@@ -8,22 +8,26 @@ subtitle: Release Notes
 <p>Thank you all for reporting all these issues and contributing fixes!</p>
 
 <div class="release">
-    <h2 id="6.0.5">Flyway 6.0.5 (2019-??-??)</h2>
+    <h2 id="6.0.5">Flyway 6.0.5 (2019-10-09)</h2>
 
     <h3>New features</h3>
     <ul>
         {% include issue.html id="2445" title="Cockroach 19.1 support" %}
     </ul>
 
+    <h3>Changes</h3>
+    <ul>
+        <li>Minor-version updates to some third-party dependencies</li>
+    </ul>
+
     <h3>Bug fixes</h3>
     <ul>
-        {% include issue.html id="982" title="Flyway will not scan classpath locations if they contains a dot in directory name " %}
+        {% include issue.html id="982" title="Flyway will not scan classpath locations if they contain a dot in a directory name" %}
         {% include issue.html id="2183" title="Fail-fast when errorOverrides are used with batch=true" %}
         {% include issue.html id="2511" title="Support backtick as an identifier quote for H2 database running in MySql mode" %}
         {% include issue.html id="2512" title="Null placeholder value no longer works for H2 database running in MySql mode" %}
         {% include issue.html id="2522" title="Parser error when SQL*Plus <code>SET</code> statement is preceded by comments</code>" pro=true %}
         {% include issue.html id="2523" title="Error when SQL*Plus <code>SERVEROUTPUT</code> is set to <code>WORD_WRAPPED</code>" pro=true %}
-        <li>Minor-version updates to some third-party dependencies</li>
     </ul>
 
     <p>
