@@ -8,6 +8,16 @@ subtitle: Release Notes
 <p>Thank you all for reporting all these issues and contributing fixes!</p>
 
 <div class="release">
+    <h2 id="6.0.7">Flyway 6.0.7 (2019-10-09)</h2>
+    <h3>Bug fixes</h3>
+    <ul>
+        {% include issue.html id="2531" title="Workround for Azure MariaDB Database incorrectly reporting version" %}
+    </ul>
+
+    <p>
+        Thanks to bramant for reporting these issues and/or submitting pull requests.
+    </p>
+
     <h2 id="6.0.6">Flyway 6.0.6 (2019-10-09)</h2>
 
     <h3>New features</h3>
@@ -25,6 +35,7 @@ subtitle: Release Notes
         {% include issue.html id="2183" title="Fail-fast when errorOverrides are used with batch=true" %}
         {% include issue.html id="2511" title="Support backtick as an identifier quote for H2 database running in MySql mode" %}
         {% include issue.html id="2512" title="Null placeholder value no longer works for H2 database running in MySql mode" %}
+        {% include issue.html id="2519" title="Workround for Azure MySQL Database incorrectly reporting version" %}
         {% include issue.html id="2522" title="Parser error when SQL*Plus <code>SET</code> statement is preceded by comments</code>" pro=true %}
         {% include issue.html id="2523" title="Error when SQL*Plus <code>SERVEROUTPUT</code> is set to <code>WORD_WRAPPED</code>" pro=true %}
     </ul>
