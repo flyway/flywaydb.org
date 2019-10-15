@@ -109,6 +109,20 @@ GO
 INSERT INTO ${tableName} (name) VALUES ('Mr. T');
 ```
 
+## Windows Authentication
+
+SQL Server JDBC connections support Windows Authentication. However, for Windows Authentication to work with Flyway you must manually install a driver to your environment:
+
+- Go to the <a href="https://docs.microsoft.com/en-us/sql/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server?view=sql-server-ver15">'Download Microsoft JDBC Driver for SQL Server' page</a>
+- Download the <code>.tar.gz</code> file for the JDBC version used by Flyway
+  - The version can be seen in the 'Maven Central coordinates' url under the <a href="http://localhost:4000/documentation/database/sqlserver#driver">Driver section</a> at the top of this page
+- Extract the contents of the file
+- Look for <code>sqljdbc_auth.dll</code>, under <code>sqljdbc_{version}\enu\auth\x64</code>
+- Copy <code>sqljdbc_auth.dll</code> to an accessible location in your environment (e.g. <code>C:\jdbc-drivers\</code>)
+- Add the location of <code>sqljdbc_auth.dll</code> to your <code>PATH</code> environment variable
+
+Finally, amend your JDBC connection string to set <code>integratedSecurity=true</code>. For instance: <code>jdbc:sqlserver://<i>host</i>:<i>port</i>;databaseName=<i>database</i>;integratedSecurity=true</code>.
+
 ## Limitations
 
 - When setting `flyway.schemas`, the first schema is not set as the default as SQL Server is unable to change the default schema for a session.
