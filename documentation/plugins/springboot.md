@@ -7,7 +7,7 @@ subtitle: 'Spring Boot'
 
 <img src="/assets/logos/springboot.png" style="margin-bottom: 20px">
 
-Spring Boot comes with out-of-the-box <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/howto-database-initialization.html#howto-execute-flyway-database-migrations-on-startup">integration for Flyway</a>.
+Spring Boot comes with out-of-the-box <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/howto.html#howto-execute-flyway-database-migrations-on-startup">integration for Flyway</a>.
 
 All you need to do is add `flyway-core` to either your `pom.xml`:
 ```xml
