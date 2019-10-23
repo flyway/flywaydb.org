@@ -22,6 +22,16 @@ flyway.schemas=schema1,schema2
 flyway.placeholders.keyABC=valueXYZ
 ```
 
+### Environment variable substitution
+
+Environment variables in config files are substituted:
+
+```properties
+flyway.placeholders.abc=${ABC}
+```
+
+If an environment variable isn't set, an empty value is assumed.
+
 ## Reference
 
 These are the settings supported via config files:
