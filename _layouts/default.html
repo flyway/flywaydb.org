@@ -207,12 +207,23 @@
 
         var company = $("#trial_form #inputCompany").val();
         var email = $("#trial_form #inputEmail").val();
+        var newsletterWanted = $("#trial_form #newsletterWanted").is(':checked');
 
         $.ajax({
             type: "POST",
             url: 'https://repo.flywaydb.org/license/trial',
-            data: {"licensedTo":company,"email":email}
+            data: {"licensedTo":company,"email":email},
+            dataType: 'jsonp'
         });
+
+        if (newsletterWanted) {
+            $.ajax({
+                type: "POST",
+                url: 'https://boxfuse.us9.list-manage.com/subscribe/post?u=0e72f61962b6b47f78568d56c&id=e1046edb96',
+                data: {"EMAIL":email},
+                dataType: 'jsonp'
+            });
+        }
 
         $('#flyway-trial-license-modal').modal('hide');
     }
