@@ -171,6 +171,8 @@ flyway.url=
 # flyway.encoding=
 
 # Whether placeholders should be replaced. (default: true)
+# Special values:
+# - 'CURRENT_SCHEMA': gets the schema specified in the JDBC connection (gets the default schema if none set)
 # flyway.placeholderReplacement=
 
 # Placeholders to replace in Sql migrations
