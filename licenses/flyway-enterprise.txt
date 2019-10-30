@@ -14,6 +14,7 @@ IMPORTANT NOTICES:
 
 1. Grant of rights
 ------------------
+
 1.1	Evaluation.  Licensee is entitled to a 30 day free trial of the Software for the purposes of deciding whether or not the Software meets Licensee’s requirement.  (“Evaluation Period”) During the Evaluation Period the following terms apply:
     1.1.1	During the Evaluation Period, Licensee hereby agrees that the Software is provided AS IS with no representation, guarantee or warranty of any kind as to its functionality, quality, performance, suitability or fitness for purpose.  All other terms, conditions, representations and warranties expressed or implied whether by statute or otherwise are hereby expressly excluded.
     1.1.2	Licensor shall not be liable for any claim, damages or other liability arising from or in connection with Licensee’s use of the Software during the Evaluation Period.
@@ -68,8 +69,8 @@ IMPORTANT NOTICES:
     6.1.2	If, while a valid Subscription for the Software is in effect, insolvency proceedings have been opened on the assets of the Licensor or the opening of such proceedings has been rejected due to lack of assets, the Licensee shall be entitled to edit the software more extensively for the purpose of adapting the software to changing software environments, thus ensuring its continued operability.
     6.1.3	The Licensee is not permitted to disclose the source code.
 
-7.Support
----------
+7. Support
+----------
 
 7.1	The Subscription entitles the Licensee to technical support by e-mail for a period of one year, starting with the acquisition of the license. The Licensor agrees to provide the Licensee technical support at no charge.
 7.2	Support requests must be sent by e-mail to support@flywaydb.org and shall be answered by email within 2 business days.
@@ -99,7 +100,7 @@ IMPORTANT NOTICES:
     11.1.1	Licensor owns the Intellectual Property Rights in the Software and/or have the right to grant a licence to Licensee;
     11.1.2	in creating the Software, Licensor has not knowingly infringed the intellectual property rights of third parties; and
     11.1.3	for a period of 90 days from the first installation of the Software (or, if applicable, 90 days from the end of the Evaluation Period if Licensee continues to use the Subscription Software) the Software shall operate substantially in accordance with its description. However, Licensee acknowledges that the Software is of such a complexity that there will be inherent defects and that therefore the Licensor can give no warranty that the Software is free from error or defect or that operation of the Software shall be uninterrupted.
-11.2	Other than as provided for in clause 11.1 above, Licensor does not offer any warranty related to the Software provided, either express or implied, including but not limited to implied warranties of fitness for purpose or satisfactory quality. The Software has been developed as a standard product for use by a wide variety of users and so Licensor is unable to warrant that the Software will meet any particular user needs. Licensor shall take full responsibility for ensuring that the Software is suitable for Licensee’s intended purposes and to facilitate investigation into such suitability, Licensor offers a free Evaluation Period.
+11.2	Other than as provided for in clause 11.1 above, Licensor does not offer any warranty related to the Software provided, either express or implied, including but not limited to implied warranties of fitness for purpose or satisfactory quality. The Software has been developed as a standard product for use by a wide variety of users and so Licensor is unable to warrant that the Software will meet any particular user needs. Licensee shall take full responsibility for ensuring that the Software is suitable for Licensee’s intended purposes and to facilitate investigation into such suitability, Licensor offers a free Evaluation Period.
 
 12. Agreement Term
 ------------------
@@ -130,5 +131,5 @@ IMPORTANT NOTICES:
 15.4	No waiver. No failure or delay by any party to exercise any right, power or remedy will operate as a waiver of it, nor will any partial exercise preclude any further exercise of the same, or of some other right, power or remedy.
 15.5	No third party rights. Licensor and Licensee do not intend that any of this Agreement will be enforceable by virtue of the Contracts (Rights of Third Parties) Act 1999 by any person not a party to it and all rights by virtue of the Contracts (Rights of Third Parties) Act 1999 are hereby excluded.
 15.6	Entire agreement. This Agreement contains all the terms which the parties have agreed in relation to the subject matter of this Agreement and supersedes any prior oral agreements, representations or understandings between the parties in relation to such subject matter.
-15.7	Consumer regulations. This clause applies to Consumers only. Licensee shall have the right to cancel this Agreement 14 days from the date Licensee agrees to be obliged to pay for the Software under this Agreement. Should Licensee wish to cancel this Agreement under this clause 15.7, Licensee must notify Licensor of Licensee’s decision to cancel by either sending Licensor an email clearly confirming its decision to: invoices@flywaydb.org. If Licensee has any complaints about this Agreement, including complaints about the Software, please raise these with Boxfuse GmbH using  sales@flywaydb.org.
+15.7	Consumer regulations. This clause applies to Consumers only. Licensee shall have the right to cancel this Agreement 14 days from the date Licensee agrees to be obliged to pay for the Software under this Agreement. Should Licensee wish to cancel this Agreement under this clause 15.7, Licensee must notify Licensor of Licensee’s decision to cancel by sending Licensor an email clearly confirming its decision to: invoices@flywaydb.org. If Licensee has any complaints about this Agreement, including complaints about the Software, please raise these with Boxfuse GmbH using  sales@flywaydb.org.
 
