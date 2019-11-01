@@ -184,6 +184,10 @@ The following environment variables are supported:
         <td>FLYWAY_SKIP_DEFAULT_CALLBACKS</td>
         <td>Whether default built-in callbacks (sql) should be skipped. If true, only custom callbacks are used.</td>
     </tr>
+    <tr id="FLYWAY_SKIP_VERSIONS">
+        <td>FLYWAY_SKIP_VERSIONS</td>
+        <td>For use with the skip command. Comma separated list of migration versions to skip. Skipped migrations will be ignored on next migrate. If no versions are specified, all pending migrations will be marked to be skipped.</td>
+    </tr>
     <tr id="FLYWAY_TARGET">
         <td>FLYWAY_TARGET</td>
         <td>The target version up to which Flyway should consider migrations. Migrations with a higher version number will be ignored.<br />
