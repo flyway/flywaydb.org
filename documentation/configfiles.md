@@ -24,6 +24,8 @@ flyway.placeholders.keyABC=valueXYZ
 
 ### Environment variable substitution
 
+{% include experimental.html %}
+
 Environment variables in config files are substituted:
 
 ```properties
