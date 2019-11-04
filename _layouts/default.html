@@ -214,8 +214,7 @@
         $.ajax({
             type: "POST",
             url: 'https://repo.flywaydb.org/license/trial',
-            data: {"licensedTo":company,"email":email},
-            dataType: 'jsonp'
+            data: {"licensedTo":company,"email":email}
         });
 
         if (newsletterWanted) {
