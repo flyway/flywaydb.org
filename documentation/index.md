@@ -64,6 +64,7 @@ title: Documentation
     <a href="/documentation/database/h2">H2</a>,
     <a href="/documentation/database/hsqldb">HSQLDB</a>,
     <a href="/documentation/database/derby">Derby</a>,
+    <a href="/documentation/database/snowflake">Snowflake</a>,
     <a href="/documentation/database/sqlite">SQLite</a> and
     <a href="/documentation/database/firebird">Firebird</a>.</p>
 

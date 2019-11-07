@@ -72,5 +72,5 @@ INSERT INTO ${tableName} (name) VALUES ('Mr. T');
 - *None*
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/database/sqlite">SQLite <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/database/snowflake">Snowflake <i class="fa fa-arrow-right"></i></a>
 </p>
