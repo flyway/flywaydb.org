@@ -11,6 +11,7 @@ subtitle: Release Notes
     <h2 id="6.1.0">Flyway 6.1 (unreleased)</h2>
     <h3>New features</h3>
     <ul>
+        {% include issue.html id="1384" title="Special automatically-populated <code>FLYWAY.CURRENT_SCHEMA</code> placeholder" %}
         {% include issue.html id="1479" title="Environment variable substitution in config files" %}
         {% include issue.html id="1735" title="Snowflake support" %}
         {% include issue.html id="2532" title="H2 1.4.200 support" %}
@@ -19,7 +20,9 @@ subtitle: Release Notes
     <h3>Bug fixes</h3>
     <ul>
         {% include issue.html id="1466" title="Classpath scanning results are cached between migrate runs" %}
-        {% include issue.html id="2535" title="CREATE TABLE ... AS SELECT not allowed in MySQL when enforcing GTID consistency" %}
+        {% include issue.html id="2535" title="</code>CREATE TABLE ... AS SELECT</code> not allowed in MySQL when enforcing GTID consistency" %}
+        {% include issue.html id="2550" title="Oracle SQL*Plus: </code>SET ECHO ON</code> should echo to Flyway's output" %}
+        {% include issue.html id="2553" title="Error message improved when script is incorrectly named" %}
     </ul>
 
     <p>
@@ -33,7 +36,7 @@ subtitle: Release Notes
     <h3>Bug fixes</h3>
     <ul>
         {% include issue.html id="2537" title="Unexpected error re. non-empty schemas" %}
-        {% include issue.html id="2539" title="HSQLDB: Unable to parse `DROP INDEX IF EXISTS` statement" %}
+        {% include issue.html id="2539" title="HSQLDB: Unable to parse </code>DROP INDEX IF EXISTS</code> statement" %}
         {% include issue.html id="2542" title="MS-SQL stored proc calls cause non-transactional statement error." %}
         {% include issue.html id="2493" title="Regression with forward-slash as division operator within PL/SQL" %}
     </ul>
