@@ -103,7 +103,7 @@ flyway.cleanDisabled=false
 ## Sample output
 <pre class="console">&gt; flyway clean
 
-Flyway {{ site.flywayVersion }} by Boxfuse
+Flyway {{ site.flywayVersion }} by Redgate
 
 Cleaned database schema 'PUBLIC' (execution time 00:00.014s)</pre>
 
