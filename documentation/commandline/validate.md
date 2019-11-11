@@ -273,7 +273,7 @@ flyway.oracle.sqlplusWarn=true
 
 <pre class="console">&gt; flyway validate
 
-Flyway {{ site.flywayVersion }} by Boxfuse
+Flyway {{ site.flywayVersion }} by Redgate
 
 No migrations applied yet. No validation necessary.</pre>
 

@@ -287,7 +287,7 @@ flyway.oracle.sqlplusWarn=true
 
 <pre class="console">&gt; flyway undo
 
-Flyway {{ site.flywayVersion }} by Boxfuse
+Flyway {{ site.flywayVersion }} by Redgate
 
 Database: jdbc:h2:file:C:\Programs\flyway-0-SNAPSHOT\flyway.db (H2 1.3)
 Current version of schema "PUBLIC": 1

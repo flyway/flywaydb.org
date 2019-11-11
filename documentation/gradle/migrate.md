@@ -361,8 +361,9 @@ flyway {
 }
 ```
 
-<h2>Sample output</h2>
-<pre class="console">&gt; gradle flywayMigrate -i
+## Sample output
+
+<pre class="console">> gradle flywayMigrate -i
 
 Current schema version: 0
 Migrating to version 1
