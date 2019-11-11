@@ -210,7 +210,7 @@ flyway.skipDefaultCallbacks=false
 
 <pre class="console">&gt; flyway repair
 
-Flyway {{ site.flywayVersion }} by Boxfuse
+Flyway {{ site.flywayVersion }} by Redgate
 
 Repair not necessary. No failed migration detected.</pre>
 

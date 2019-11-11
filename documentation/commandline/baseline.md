@@ -124,7 +124,7 @@ flyway.baselineDescription=Base Migration
 ## Sample output
 <pre class="console">&gt; flyway baseline
 
-Flyway {{ site.flywayVersion }} by Boxfuse
+Flyway {{ site.flywayVersion }} by Redgate
 
 Creating schema history table: "PUBLIC"."flyway_schema_history"
 Schema baselined with version: 1</pre>
