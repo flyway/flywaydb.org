@@ -28,8 +28,8 @@ title: Documentation
     <a href="/documentation/command/info">Info</a>,
     <a href="/documentation/command/validate">Validate</a>,
     <a href="/documentation/command/undo">Undo</a>,
-    <a href="/documentation/command/baseline">Baseline</a> and
-    <a href="/documentation/command/repair">Repair</a>.
+    <a href="/documentation/command/baseline">Baseline</a>,
+    <a href="/documentation/command/repair">Repair</a> and
     <a href="/documentation/command/skip">Skip</a>.
 </p>
 

@@ -5,9 +5,13 @@ subtitle: 'Command-line: skip'
 ---
 # Command-line: skip
 
-Mark versioned migrations to skip in the schema history table. Skipped migrations will be ignored on next migrate. Migrations to skip configured with the `skipVersions` configuration option.
+Mark versioned migrations to skip in the schema history table. Skipped migrations will be ignored for every subsequent `migrate`. The migrations to skip are configured with the `skipVersions` configuration option.
 
 <a href="/documentation/command/skip"><img src="/assets/balsamiq/command-skip.png" alt="skip"></a>
+
+Skip is useful in situations where you have applied ad-hoc changes to a production database. You may then write a migration 
+that reproduces these changes and apply them with Flyway in your development and test environments; marking them as
+skipped on the production database prevents them being re-applied.
 
 ## Usage
 
@@ -106,15 +110,17 @@ flyway.callbacks=com.mycomp.project.CustomCallback,com.mycomp.project.AnotherCal
 flyway.skipDefaultCallbacks=false
 flyway.baselineVersion=1.0
 flyway.baselineDescription=Base Migration
+flyway.skipVersions=1.0.1,1.0.2
 ```
 
 ## Sample output
-<pre class="console">&gt; flyway baseline
+<pre class="console">&gt; flyway skip
 
 Flyway {{ site.flywayVersion }} by Boxfuse
 
-Creating schema history table: "PUBLIC"."flyway_schema_history"
-Schema baselined with version: 1</pre>
+Skipping version 1.0.1 - View
+Skipping version 1.0.2 - Another View
+Successfully skipped 2 migrations on schema "PUBLIC" (execution time 00:00.030s). </pre>
 
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/commandline/repair">Command-line: repair <i class="fa fa-arrow-right"></i></a>

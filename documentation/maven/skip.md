@@ -5,9 +5,13 @@ subtitle: 'mvn flyway:skip'
 ---
 # Maven Goal: Skip
 
-Mark versioned migrations to skip in the schema history table. Skipped migrations will be ignored on next migrate. Migrations to skip configured with the `skipVersions` configuration option.
+Mark versioned migrations to skip in the schema history table. Skipped migrations will be ignored for every subsequent `migrate`. The migrations to skip are configured with the `skipVersions` configuration option.
 
 <a href="/documentation/command/skip"><img src="/assets/balsamiq/command-skip.png" alt="skip"></a>
+
+Skip is useful in situations where you have applied ad-hoc changes to a production database. You may then write a migration 
+that reproduces these changes and apply them with Flyway in your development and test environments; marking them as
+skipped on the production database prevents them being re-applied.
 
 ## Usage
 
@@ -149,6 +153,7 @@ Mark versioned migrations to skip in the schema history table. Skipped migration
         <callback>com.mycompany.project.AnotherCallback</callback>
     </callbacks>
     <skipDefaultCallbacks>false</skipDefaultCallbacks>
+    <skipVersions>1.0.1,1.0.2</skipVersions>    
     <baselineVersion>1.0</baselineVersion>
     <baselineDescription>Base Migration</baselineDescription>
     <skip>false</skip>
@@ -162,11 +167,12 @@ Mark versioned migrations to skip in the schema history table. Skipped migration
 
 ## Sample output
 
-<pre class="console">&gt; mvn flyway:baseline
+<pre class="console">&gt; mvn flyway:skip
 
 [INFO] [flyway:baseline {execution: default-cli}]
-[INFO] Creating schema history table: "PUBLIC"."flyway_schema_history"
-[INFO] Schema baselined with version: 1</pre>
+[INFO] Skipping version 1.0.1 - View
+[INFO] Skipping version 1.0.2 - Another `View
+[INFO] Successfully skipped 2 migrations on schema "PUBLIC"</pre>
 
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/maven/repair">Maven: repair <i class="fa fa-arrow-right"></i></a>

@@ -140,6 +140,10 @@ to set any environment variable at all:
         <td><a href="/documentation/commandline/repair">repair</a></td>
         <td>Repairs the schema history table</td>
     </tr>
+    <tr>
+        <td><a href="/documentation/commandline/skip">skip</a></td>
+        <td>Marks versioned migrations to be skipped</td>
+    </tr>
     </tbody>
 </table>
 

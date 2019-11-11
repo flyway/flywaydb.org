@@ -5,9 +5,13 @@ subtitle: 'gradle flywaySkip'
 ---
 # Gradle Task: flywaySkip
 
-Mark versioned migrations to skip in the schema history table. Skipped migrations will be ignored on next migrate. Migrations to skip configured with the `skipVersions` configuration option.
+Mark versioned migrations to skip in the schema history table. Skipped migrations will be ignored for every subsequent `migrate`. The migrations to skip are configured with the `skipVersions` configuration option.
 
 <a href="/documentation/command/skip"><img src="/assets/balsamiq/command-skip.png" alt="skip"></a>
+
+Skip is useful in situations where you have applied ad-hoc changes to a production database. You may then write a migration 
+that reproduces these changes and apply them with Flyway in your development and test environments; marking them as
+skipped on the production database prevents them being re-applied.
 
 ## Usage
 
@@ -101,15 +105,17 @@ flyway {
     skipDefaultCallbacks = false
     baselineVersion = 5
     baselineDescription = "Let's go!"
+    skipVersions="1.0.1,1.0.2"
 }
 ```
 
 ## Sample output
 
-<pre class="console">&gt; gradle flywayBaseline -i
+<pre class="console">&gt; gradle flywaySkip
 
-Creating schema history table: "PUBLIC"."flyway_schema_history"
-Schema baselined with version: 1</pre>
+Skipping version 1.0.1 - View
+Skipping version 1.0.2 - Another View
+Successfully skipped 2 migrations on schema "PUBLIC"</pre>
 
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/gradle/repair">Gradle: repair <i class="fa fa-arrow-right"></i></a>
