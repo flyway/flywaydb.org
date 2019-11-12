@@ -94,9 +94,9 @@
 <div class="container">
     <hr class="soften"/>
     <div id="footer">
-        {% if page.footerform != false %}
+        {% unless page.hideNewsletterFooterForm %}
         {% include newsletter.html %}
-        {% endif %}
+        {% endunless %}
 
         {% if page.tab != "community" %}
         <p>&nbsp;</p>
