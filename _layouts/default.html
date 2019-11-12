@@ -66,9 +66,9 @@
                 <li
                 {% if layout.tab == 'blog' %} class="active" {% endif %}>
                 <a href="/blog">BLOG</a></li>
-                <li><a href="https://github.com/flyway/flyway" style="padding-bottom: 7px" title="Source Code on GitHub" target="_blank"><i class="fa fa-github" style="font-size: 150%"></i></a></li>
-                <li><a href="http://stackoverflow.com/questions/tagged/flyway" style="padding-bottom: 7px" title="Flyway questions on StackOverflow"><i class="fa fa-stack-overflow" style="font-size: 150%"></i></a></li>
-                <li><a href="https://twitter.com/flywaydb" style="padding-bottom: 7px" title="@flywaydb on Twitter" target="_blank"><i class="fa fa-twitter" style="font-size: 150%"></i></a></li>
+                <li
+                {% if page.tab == 'community' %} class="active" {% endif %}>
+                <a href="/community">COMMUNITY</a></li>
             </ul>
         </div>
     </div>
@@ -94,37 +94,24 @@
 <div class="container">
     <hr class="soften"/>
     <div id="footer">
-        {% if page.footerform != 'no' %}
-        <!-- Begin MailChimp Signup Form -->
-        <h3 style="color: #888">Stay updated with our newsletter</h3>
-        <form action="//boxfuse.us9.list-manage.com/subscribe/post?u=0e72f61962b6b47f78568d56c&amp;id=e1046edb96" method="post" id="mc-embedded-subscribe-form-footer" name="mc-embedded-subscribe-form-footer" class="validate form-inline" target="_blank" novalidate>
-            <div>
-                <div class="input-group">
-                    <input type="email" value="" name="EMAIL" required="required" class="form-control" id="mce-EMAIL-footer" placeholder="Your email address">
-                    <span class="input-group-btn">
-                        <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe-footer" class="btn btn-primary">
-                        </span>
-                </div>
-                <div id="mce-responses-footer" class="clear form-control-feedback">
-                    <div class="response" id="mce-error-response" style="display:none"></div>
-                    <div class="response" id="mce-success-response" style="display:none"></div>
-                </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                <div style="position: absolute; left: -5000px;"><input type="text" name="b_0e72f61962b6b47f78568d56c_e1046edb96" tabindex="-1" value=""></div>
-            </div>
-        </form>
-        <!--End mc_embed_signup-->
-        {% endif %}
+        {% unless page.hideNewsletterFooterForm %}
+        {% include newsletter.html %}
+        {% endunless %}
 
+        {% if page.tab != "community" %}
         <p>&nbsp;</p>
-        <h3 style="color: #888">Join us for our Open Office Hours sessions</h3>
-        <h4>Alternate Wednesdays at 3pm UK time - follow us on Twitter for session links</h4>
+        <h3 style="color: #888">
+            <a href="/community">
+                Join us for our community Office Hours
+            </a>
+        </h3>
         <p id="social">
             <a href="https://github.com/flyway/flyway" title="Source Code on GitHub"><i class="fa fa-github"></i></a>
             <a href="http://stackoverflow.com/questions/tagged/flyway" title="Flyway questions on StackOverflow"><i class="fa fa-stack-overflow"></i></a>
             <a href="https://twitter.com/flywaydb" title="@flywaydb on Twitter"><i class="fa fa-twitter"></i></a>
         </p>
-
         <p>&nbsp;</p>
+        {% endif %}
 
         <p>
             &copy; 2010-2019 <a href="https://boxfuse.com">Boxfuse GmbH</a>, owned by <a href="https://www.red-gate.com">Redgate</a>. Made with <i class="fa fa-heart"></i> in Cambridge.
