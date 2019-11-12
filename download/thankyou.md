@@ -2,7 +2,7 @@
 layout: default
 tab: download
 title: "Thank you for downloading Flyway!"
-footerform: 'no'
+footerform: no
 ---
 # Thank you for downloading Flyway!
 
