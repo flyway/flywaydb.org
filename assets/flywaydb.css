@@ -797,3 +797,21 @@ a.download:hover, a.download:focus {
         margin-top: 0;
     }
 }
+
+#community .title {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+#community .panel-heading h3 {
+    margin: 0;
+}
+
+#community .panel-heading i {
+    margin-right: 7px;
+}
+
+#community .panel-embed .panel-body {
+    padding: 0;
+    text-align: center;
+}

@@ -66,9 +66,9 @@
                 <li
                 {% if layout.tab == 'blog' %} class="active" {% endif %}>
                 <a href="/blog">BLOG</a></li>
-                <li><a href="https://github.com/flyway/flyway" style="padding-bottom: 7px" title="Source Code on GitHub" target="_blank"><i class="fa fa-github" style="font-size: 150%"></i></a></li>
-                <li><a href="http://stackoverflow.com/questions/tagged/flyway" style="padding-bottom: 7px" title="Flyway questions on StackOverflow"><i class="fa fa-stack-overflow" style="font-size: 150%"></i></a></li>
-                <li><a href="https://twitter.com/flywaydb" style="padding-bottom: 7px" title="@flywaydb on Twitter" target="_blank"><i class="fa fa-twitter" style="font-size: 150%"></i></a></li>
+                <li
+                {% if page.tab == 'community' %} class="active" {% endif %}>
+                <a href="/community">COMMUNITY</a></li>
             </ul>
         </div>
     </div>
