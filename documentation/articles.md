@@ -14,6 +14,10 @@ subtitle: Articles
 <p><strong><a href="https://msdn.microsoft.com/magazine/mt833522">Hybrid Database Migrations with EF Core and Flyway</a>
 </strong> by Julie Lerman<br/></p>
 
+<p><strong><a href="https://info.michael-simons.eu/2016/10/31/take-control-of-your-development-databases-evolution/">
+    Take Control of your Development Database's Evolution</a>
+</strong> by Michael Simons<br/></p>
+
 <p><strong><a href="https://hashnode.com/post/handling-database-migrations-with-flywaydb-cjsw00smm006r9ts2nsziq1xk">Handling 
 Database Migrations With FlywayDB</a></strong> by Amos Omondi<br/></p>
 
@@ -37,9 +41,6 @@ Database Migrations With FlywayDB</a></strong> by Amos Omondi<br/></p>
 
 <p><strong><a href="http://lwandersonmusings.blogspot.de/2012/06/using-maven-to-integrate.html">Using
     Maven to Integrate Flyway Migrations in an Existing Database</a></strong> by Lyle Anderson<br/></p>
-
-<p><strong><a href="http://maciejmadej.blogspot.de/2012/01/flyway-java-framework-to-manage.html">Flyway
-    - Java framework to manage database migrations</a></strong> by Maciej Madej<br/></p>
 
 <p><strong><a href="http://kaczanowscy.pl/tomek/2012-05/flyway-first-impressions">Flyway - first
     impressions</a></strong> by Tomek Kaczanowski<br/></p>
@@ -67,6 +68,9 @@ Database Migrations With FlywayDB</a></strong> by Amos Omondi<br/></p>
         >Flyway and jOOQ for Unbeatable SQL Development Productivity</a></strong> by Lukas Eder<br/></p>
 
 <h2>German</h2>
+
+<p><strong><a href="https://www.sandra-parsick.de/publication/cdbi-flyway/">Continuous Database Integration mit Flyway</a></strong>
+by Sandra Parsick<br/></p>
 
 <p><strong><a
         href="http://it-republik.de/jaxenter/java-magazin-ausgaben/Cool-Tools-000518.html"
