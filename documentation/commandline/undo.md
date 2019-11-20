@@ -66,6 +66,7 @@ subtitle: 'Command-line: undo'
         </td>
     </tr>
     {% include cfg/locations-commandline.html %}
+    {% include cfg/log-file.html %}
     <tr id="jarDirs">
         <td>jarDirs</td>
         <td>NO</td>

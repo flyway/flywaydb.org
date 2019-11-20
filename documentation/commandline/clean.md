@@ -55,6 +55,7 @@ The schemas are cleaned in the order specified by the `schemas` property.
     {% include cfg/connectRetries.html %}
     {% include cfg/initSql.html %}
     {% include cfg/schemas-commandline.html %}
+    {% include cfg/log-file.html %}
     <tr id="jarDirs">
         <td>jarDirs</td>
         <td>NO</td>
