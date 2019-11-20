@@ -18,7 +18,7 @@ subtitle: Existing Database Setup
         database. </p>
 
     <p>This script will form your base migration. Save it on the classpath in the directory you configured with baseDir.
-        Give it a relevant version number and description such as V1__Base_version.sql.
+        Give it a relevant version number and description such as <code>V1__initial.sql</code>.
     </p>
 
     <h3>Clean all databases containing data you don't mind losing</h3>
@@ -36,14 +36,14 @@ subtitle: Existing Database Setup
         production exactly. This step is important, as all scripts destined for production will be applied here first.
         For the scripts to succeed, the objects they migrate must be identical to what is present in production. </p>
 
-    <h3>Give these databases a baseline version</h3>
+    <h3>Skip the initial version</h3>
 
-    <p>Now comes the time to baseline the databases that contain data (including production) with a baseline version.
-        Use the same version and description you used for the production extract script created above. </p>
+    <p>The <code>V1__initial.sql</code> migration contains changes which already exist in your enviornments.
+      It won't need to be run in these enviornments, so you should mark it as 'skipped'.
 
     <p>You can accomplish it like this: </p>
-    <pre class="console">&gt; flyway baseline</pre>
-    <p>You must perform this step for each database that hasn't been cleaned. </p>
+    <pre class="console">&gt; flyway skip</pre>
+    <p>You must perform this step for each database that hasn't been cleaned.</p>
 
     <h3>Done !</h3>
 

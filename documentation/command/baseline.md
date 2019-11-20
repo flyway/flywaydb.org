@@ -5,6 +5,8 @@ subtitle: Baseline
 ---
 # Baseline
 
+**The Baseline command is deprecated. It will be removed in Flyway version 7. Use the [Skip](./skip) command to ignore migrations.**
+
 Baselines an existing database, excluding all migrations up to and including baselineVersion.
 
 ![Baseline](/assets/balsamiq/command-baseline.png)
