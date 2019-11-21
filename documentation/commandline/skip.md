@@ -5,8 +5,9 @@ subtitle: 'Command-line: skip'
 ---
 # Command-line: skip
 
-Mark versioned migrations to skip in the schema history table. Skipped migrations will be ignored for every subsequent `migrate`. The migrations to skip are configured with the `skipVersions` configuration option.
-If no versions are specified, all pending migrations will be marked to be skipped.
+Mark all pending versioned migrations to skip in the schema history table. Skipped migrations will be ignored on next `migrate`.
+
+Note that the pending migrations are determined by the `target` configuration option.
 
 <a href="/documentation/command/skip"><img src="/assets/balsamiq/command-skip.png" alt="skip"></a>
 
@@ -56,7 +57,6 @@ skipped on the production database prevents them being re-applied.
         <td></td>
         <td>The password to use to connect to the database</td>
     </tr>
-    {% include cfg/skipVersions.html %}
     {% include cfg/connectRetries.html %}
     {% include cfg/initSql.html %}
     {% include cfg/schemas-commandline.html %}
@@ -111,7 +111,6 @@ flyway.callbacks=com.mycomp.project.CustomCallback,com.mycomp.project.AnotherCal
 flyway.skipDefaultCallbacks=false
 flyway.baselineVersion=1.0
 flyway.baselineDescription=Base Migration
-flyway.skipVersions=1.0.1,1.0.2
 ```
 
 ## Sample output

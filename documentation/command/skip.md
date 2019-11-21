@@ -5,9 +5,7 @@ subtitle: Skip
 ---
 # Skip
 
-Mark versioned migrations to skip in the schema history table. Skipped migrations will be ignored for every subsequent `migrate`.
-
-The migrations to skip are configured with the `skipVersions` configuration option. If no `skipVersions` are specified, all pending migrations will be skipped.
+Mark all pending versioned migrations to skip in the schema history table. Skipped migrations will be ignored on next `migrate`.
 
 Note that the pending migrations are determined by the `target` configuration option.
 

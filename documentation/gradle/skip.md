@@ -5,8 +5,9 @@ subtitle: 'gradle flywaySkip'
 ---
 # Gradle Task: flywaySkip
 
-Mark versioned migrations to skip in the schema history table. Skipped migrations will be ignored for every subsequent `migrate`. The migrations to skip are configured with the `skipVersions` configuration option.
-If no versions are specified, all pending migrations will be marked to be skipped.
+Mark all pending versioned migrations to skip in the schema history table. Skipped migrations will be ignored on next `migrate`.
+
+Note that the pending migrations are determined by the `target` configuration option.
 
 <a href="/documentation/command/skip"><img src="/assets/balsamiq/command-skip.png" alt="skip"></a>
 
@@ -56,7 +57,6 @@ skipped on the production database prevents them being re-applied.
         <td></td>
         <td>The password to use to connect to the database</td>
     </tr>
-    {% include cfg/skipVersions.html %}
     {% include cfg/connectRetries.html %}
     {% include cfg/initSql.html %}
     {% include cfg/schemas-maven-gradle.html %}
@@ -106,7 +106,6 @@ flyway {
     skipDefaultCallbacks = false
     baselineVersion = 5
     baselineDescription = "Let's go!"
-    skipVersions="1.0.1,1.0.2"
 }
 ```
 
