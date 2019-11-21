@@ -133,8 +133,8 @@ to set any environment variable at all:
         <td>Undoes the most recently applied versioned migrations</td>
     </tr>
     <tr>
-        <td><a href="/documentation/commandline/baseline">baseline</a></td>
-        <td>Baselines an existing database, excluding all migrations up to and including baselineVersion</td>
+        <td><a href="/documentation/commandline/skip">skip</a></td>
+        <td>Mark all pending versioned migrations to skip in the schema history table. Skipped migrations will be ignored on next Migrate</td>
     </tr>
     <tr>
         <td><a href="/documentation/commandline/repair">repair</a></td>

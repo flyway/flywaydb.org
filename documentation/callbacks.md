@@ -133,19 +133,6 @@ These are the events Flyway supports:
     </tr>
     <tr><td></td><td></td></tr>
     <tr>
-        <td>beforeBaseline</td>
-        <td>Before Baseline runs</td>
-    </tr>
-    <tr>
-        <td>afterBaseline</td>
-        <td>After successful Baseline runs</td>
-    </tr>
-    <tr>
-        <td>afterBaselineError</td>
-        <td>After failed Baseline runs</td>
-    </tr>
-    <tr><td></td><td></td></tr>
-    <tr>
         <td>beforeRepair</td>
         <td>Before Repair runs</td>
     </tr>

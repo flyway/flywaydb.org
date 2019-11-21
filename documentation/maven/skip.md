@@ -95,20 +95,6 @@ skipped on the production database prevents them being re-applied.
         <td>Whether default built-in callbacks (sql) should be skipped. If true, only custom callbacks are used.</td>
     </tr>
     <tr>
-        <td>baselineVersion</td>
-        <td>NO</td>
-        <td>1</td>
-        <td>The version to tag an existing schema with when executing baseline</td>
-    </tr>
-    <tr>
-        <td>baselineDescription</td>
-        <td>NO</td>
-        <td>
-            <nobr>&lt;&lt; Flyway Baseline &gt;&gt;</nobr>
-        </td>
-        <td>The description to tag an existing schema with when executing baseline</td>
-    </tr>
-    <tr>
         <td>skip</td>
         <td>NO</td>
         <td>false</td>
@@ -154,8 +140,6 @@ skipped on the production database prevents them being re-applied.
         <callback>com.mycompany.project.AnotherCallback</callback>
     </callbacks>
     <skipDefaultCallbacks>false</skipDefaultCallbacks>
-    <baselineVersion>1.0</baselineVersion>
-    <baselineDescription>Base Migration</baselineDescription>
     <skip>false</skip>
     <configFiles>
         <configFile>myConfig.conf</configFile>
@@ -169,7 +153,7 @@ skipped on the production database prevents them being re-applied.
 
 <pre class="console">&gt; mvn flyway:skip
 
-[INFO] [flyway:baseline {execution: default-cli}]
+[INFO] [flyway:skip {execution: default-cli}]
 [INFO] Skipping version 1.0.1 - View
 [INFO] Skipping version 1.0.2 - Another `View
 [INFO] Successfully skipped 2 migrations on schema "PUBLIC"</pre>

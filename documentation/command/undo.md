@@ -43,5 +43,5 @@ technology of your underlying storage solution. Especially for larger data volum
 several orders of magnitude faster than traditional backups and restores.
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/command/baseline">Baseline <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/command/Skip">Skip <i class="fa fa-arrow-right"></i></a>
 </p>

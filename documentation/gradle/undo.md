@@ -285,5 +285,5 @@ When using Spring JDBC migrations, you must declare a dependency on `org.springf
 in Gradle's `buildScript` block to avoid being hit with a `java.lang.LinkageError`.
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/gradle/baseline">Gradle: baseline <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/gradle/skip">Gradle: skip <i class="fa fa-arrow-right"></i></a>
 </p>

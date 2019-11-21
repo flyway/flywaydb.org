@@ -34,5 +34,5 @@ The equivalent behavior can be achieved with Skip:
 Baseline allowed any version as the `baselineVersion`, whether or not a migration existed for that version. Skip requires a migration to exist in order for it to be marked as skipped. Therefore, for a deployment against an existing database, migrations that represent the 'baseline' must exist in order for them to be marked as skipped.
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/commandline/">Command-line <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/command/repair">Repair <i class="fa fa-arrow-right"></i></a>
 </p>

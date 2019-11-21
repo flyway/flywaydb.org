@@ -109,8 +109,6 @@ flyway.table=schema_history
 flyway.tablespace=my_tablespace
 flyway.callbacks=com.mycomp.project.CustomCallback,com.mycomp.project.AnotherCallback
 flyway.skipDefaultCallbacks=false
-flyway.baselineVersion=1.0
-flyway.baselineDescription=Base Migration
 ```
 
 ## Sample output

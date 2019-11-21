@@ -268,27 +268,6 @@ The following environment variables are supported:
         <td>FLYWAY_CLEAN_DISABLED</td>
         <td>Whether to disable clean. This is especially useful for production environments where running clean can be quite a career limiting move.</td>
     </tr>
-    <tr id="FLYWAY_BASELINE_ON_MIGRATE">
-        <td>FLYWAY_BASELINE_ON_MIGRATE</td>
-        <td>Whether to automatically call baseline when migrate is executed against a non-empty schema with no metadata
-            table.
-            This schema will then be baselined with the <code>baselineVersion</code> before executing the migrations.
-            Only migrations above <code>baselineVersion</code> will then be applied.<br/>
-
-            <p>This is useful for initial Flyway production deployments on projects with an existing DB.</p>
-
-            <p>Be careful when enabling this as it removes the safety net that ensures Flyway does not migrate the wrong
-                database in case of a configuration mistake!</p>
-        </td>
-    </tr>
-    <tr id="FLYWAY_BASELINE_VERSION">
-        <td>FLYWAY_BASELINE_VERSION</td>
-        <td>The version to tag an existing schema with when executing baseline</td>
-    </tr>
-    <tr id="FLYWAY_BASELINE_DESCRIPTION">
-        <td>FLYWAY_BASELINE_DESCRIPTION</td>
-        <td>The description to tag an existing schema with when executing baseline</td>
-    </tr>
     <tr id="FLYWAY_INSTALLED_BY">
         <td>FLYWAY_INSTALLED_BY</td>
         <td>The username that will be recorded in the schema history table as having applied the migration</td>

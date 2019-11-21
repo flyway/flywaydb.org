@@ -95,8 +95,8 @@ apply plugin: 'org.flywaydb.flyway'</pre>
         <td>Undoes the most recently applied versioned migration</td>
     </tr>
     <tr>
-        <td><a href="/documentation/gradle/baseline">flywayBaseline</a></td>
-        <td>Baselines an existing database, excluding all migrations up to and including baselineVersion</td>
+        <td><a href="/documentation/gradle/skip">flywaySkip</a></td>
+        <td>Mark all pending versioned migrations to skip in the schema history table. Skipped migrations will be ignored on next Migrate</td>
     </tr>
     <tr>
         <td><a href="/documentation/gradle/repair">flywayRepair</a></td>

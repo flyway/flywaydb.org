@@ -207,20 +207,6 @@ flyway.url=
 # This is especially useful for production environments where running clean can be quite a career limiting move.
 # flyway.cleanDisabled=
 
-# The version to tag an existing schema with when executing baseline. (default: 1)
-# flyway.baselineVersion=
-
-# The description to tag an existing schema with when executing baseline. (default: << Flyway Baseline >>)
-# flyway.baselineDescription=
-
-# Whether to automatically call baseline when migrate is executed against a non-empty schema with no schema history
-# table. This schema will then be initialized with the baselineVersion before executing the migrations.
-# Only migrations above baselineVersion will then be applied.
-# This is useful for initial Flyway production deployments on projects with an existing DB.
-# Be careful when enabling this as it removes the safety net that ensures
-# Flyway does not migrate the wrong database in case of a configuration mistake! (default: false)
-# flyway.baselineOnMigrate=
-
 # Allows migrations to be run "out of order" (default: false).
 # If you already have versions 1 and 3 applied, and now a version 2 is found,
 # it will be applied too instead of being ignored.

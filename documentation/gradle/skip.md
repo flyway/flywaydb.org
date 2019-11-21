@@ -104,8 +104,6 @@ flyway {
     tablespace = 'my_tablespace'
     callbacks = ['com.mycompany.proj.CustomCallback', 'com.mycompany.proj.AnotherCallback']
     skipDefaultCallbacks = false
-    baselineVersion = 5
-    baselineDescription = "Let's go!"
 }
 ```
 

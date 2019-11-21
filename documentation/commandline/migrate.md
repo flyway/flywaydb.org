@@ -264,35 +264,6 @@ Migrates the schema to the latest version. Flyway will create the schema history
         <td>false</td>
         <td>Whether to disable clean. This is especially useful for production environments where running clean can be quite a career limiting move.</td>
     </tr>
-    <tr id="baselineOnMigrate">
-        <td>baselineOnMigrate</td>
-        <td>NO</td>
-        <td>false</td>
-        <td>Whether to automatically call baseline when migrate is executed against a non-empty schema with no metadata
-            table.
-            This schema will then be baselined with the <code>baselineVersion</code> before executing the migrations.
-            Only migrations above <code>baselineVersion</code> will then be applied.<br/>
-
-            <p>This is useful for initial Flyway production deployments on projects with an existing DB.</p>
-
-            <p>Be careful when enabling this as it removes the safety net that ensures Flyway does not migrate the wrong
-                database in case of a configuration mistake!</p>
-        </td>
-    </tr>
-    <tr>
-        <td>baselineVersion</td>
-        <td>NO</td>
-        <td>1</td>
-        <td>The version to tag an existing schema with when executing baseline</td>
-    </tr>
-    <tr>
-        <td>baselineDescription</td>
-        <td>NO</td>
-        <td>
-            <nobr>&lt;&lt; Flyway Baseline &gt;&gt;</nobr>
-        </td>
-        <td>The description to tag an existing schema with when executing baseline</td>
-    </tr>
     <tr>
         <td>installedBy</td>
         <td>NO</td>
@@ -355,7 +326,6 @@ flyway.ignoreMissingMigrations=false
 flyway.ignoreIgnoredMigrations=false
 flyway.ignoreFutureMigrations=false
 flyway.cleanDisabled=false
-flyway.baselineOnMigrate=false
 flyway.installedBy=my-user
 flyway.errorOverrides=99999:17110:E,42001:42001:W
 flyway.dryRunOutput=/my/sql/dryrun-outputfile.sql
