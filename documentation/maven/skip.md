@@ -66,6 +66,8 @@ skipped on the production database prevents them being re-applied.
         <td></td>
         <td>The password to use to connect to the database</td>
     </tr>
+    {% include cfg/skipVersion.html %}
+    {% include cfg/skipOnMigrate.html %}
     {% include cfg/connectRetries.html %}
     {% include cfg/initSql.html %}
     {% include cfg/schemas-maven-gradle.html %}

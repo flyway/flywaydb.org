@@ -57,6 +57,8 @@ skipped on the production database prevents them being re-applied.
         <td></td>
         <td>The password to use to connect to the database</td>
     </tr>
+    {% include cfg/skipVersion.html %}
+    {% include cfg/skipOnMigrate.html %}
     {% include cfg/connectRetries.html %}
     {% include cfg/initSql.html %}
     {% include cfg/schemas-commandline.html %}
@@ -109,6 +111,7 @@ flyway.table=schema_history
 flyway.tablespace=my_tablespace
 flyway.callbacks=com.mycomp.project.CustomCallback,com.mycomp.project.AnotherCallback
 flyway.skipDefaultCallbacks=false
+flyway.skipVersion=1.01
 ```
 
 ## Sample output
