@@ -33,6 +33,14 @@ The equivalent behavior can be achieved with Skip:
 
 Baseline allowed any version as the `baselineVersion`, whether or not a migration existed for that version. Skip requires a migration to exist in order for it to be marked as skipped. Therefore, for a deployment against an existing database, migrations that represent the 'baseline' must exist in order for them to be marked as skipped.
 
+### Baseline on migrate
+
+The `baselineOnMigrate` option was deprecated along with the Baseline command.
+
+For Skip, a new option has been introduced, `skipOnMigrate`.
+
+`skipOnMigrate` determines whether to automatically call skip when migrate is executed against a non-empty schema with no schema history table. This schema will then be initialized with the `skipVersion` before executing the migrations. Only migrations above `skipVersion` will then be applied.
+
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/command/repair">Repair <i class="fa fa-arrow-right"></i></a>
 </p>
