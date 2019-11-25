@@ -393,17 +393,30 @@ within a single transaction by setting the [`group`](/documentation/commandline/
 If Flyway detects that a specific statement cannot be run within a transaction due to technical limitations of your
 database, it won't run that migration within a transaction. Instead it will be marked as *non-transactional*.
 
-For Java migrations, the `JavaMigration` interface has a method `canExecuteInTransaction`. This determines whether the execution
-should take place inside a transaction. It's recommended that you rely on `BaseJavaMigration`'s default behavior to return `true`.
-However, if necessary, you can override `canExecuteInTransaction` to execute certain migrations outside a transaction by returning
-`false`. This is useful for databases like PostgreSQL and SQL Server where certain statements can only execute outside a transaction.
-
 By default transactional and non-transactional statements cannot be mixed within a migration run. You can however allow
 this by setting the [`mixed`](/documentation/commandline/migrate#mixed) property to `true`. Note that this is only
 applicable for PostgreSQL, Aurora PostgreSQL, SQL Server and SQLite which all have statements that do not run at all
 within a transaction. This is not to be confused with implicit transaction, as they occur in MySQL or Oracle, where even
 though a DDL statement was run within within a transaction, the database will issue an implicit commit before and after
 its execution.
+
+### Manual override
+
+If necessary, you can manually determine whether or not to execute a migration in a transaction. This is useful for
+databases like PostgreSQL and SQL Server where certain statements can only execute outside a transaction.
+
+For Java migrations, the `JavaMigration` interface has a method `canExecuteInTransaction`. This determines whether the execution
+should take place inside a transaction. You can rely on `BaseJavaMigration`'s default behavior to return `true` or override
+`canExecuteInTransaction` to execute certain migrations outside a transaction by returning `false`.
+
+For SQL migrations, you can create a script configuration file alongside the migration and set the `executeInTransaction` property
+to the desired value. The script configuration file name must match the migration file name, but with the `.conf` suffix added.
+For example, a migration file `V2__Non_transactional.sql` would have a script configuration file `V2__Non_transactional.sql.conf`
+with the following contents:
+
+```properties
+executeInTransaction=false
+```
 
 ### Important Note
 
