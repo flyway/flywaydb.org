@@ -1,7 +1,8 @@
 ---
-layout: documentation
+layout: configuration
 menu: envvars
-subtitle: Environment Variables
+subtitle: Environment variables
+pill: envvars
 ---
 # Environment Variables
 
