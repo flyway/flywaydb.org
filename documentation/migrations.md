@@ -441,5 +441,5 @@ When Flyway discovers an applied versioned migration with a version that is high
 (this happens typically when a newer version of the software has migrated that schema), that migration is marked as **future**.
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/callbacks">Callbacks <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/migrations">Migrations <i class="fa fa-arrow-right"></i></a>
 </p>

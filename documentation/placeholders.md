@@ -35,3 +35,6 @@ GRANT SELECT ON SCHEMA ${flyway:defaultSchema} TO ${flyway:user};
 -- User defined placeholder
 INSERT INTO ${tableName} (name) VALUES ('Mr. T');
 ```
+<p class="next-steps">
+  <a class="btn btn-primary" href="/documentation/scriptconfig">Script Config Files <i class="fa fa-arrow-right"></i></a>
+</p>
