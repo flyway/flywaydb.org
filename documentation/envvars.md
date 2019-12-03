@@ -1,7 +1,7 @@
 ---
 layout: configuration
-menu: envvars
-subtitle: Environment variables
+menu: configuration
+subtitle: Environment Variables
 pill: envvars
 ---
 # Environment Variables

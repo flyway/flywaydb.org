@@ -1,6 +1,6 @@
 ---
 layout: configuration
-menu: scriptconfig
+menu: configuration
 subtitle: Script Config Files
 pill: scriptconfig
 ---

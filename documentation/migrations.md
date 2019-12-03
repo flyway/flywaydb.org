@@ -1,6 +1,6 @@
 ---
 layout: documentation
-menu: migrations
+menu: configuration
 subtitle: Migrations
 ---
 # Migrations
