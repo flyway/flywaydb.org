@@ -1,0 +1,19 @@
+---
+layout: documentation
+menu: configuration
+---
+<div>
+    <div id="pills">
+    <ul class="nav nav-pills">
+        <li
+        {% if page.pill == 'overview' %} class="active" {% endif %}>
+        <a href="/documentation/configuration">Overview</a></li>
+        <li
+    </ul>
+    </div>
+    
+    {{ content }}
+
+</div>
+
+{% include trialpopup.html %}
