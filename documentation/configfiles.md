@@ -1,7 +1,8 @@
 ---
-layout: documentation
-menu: configfiles
+layout: configuration
+menu: configuration
 subtitle: Config Files
+pill: configFiles
 ---
 # Config Files
 
