@@ -6,7 +6,7 @@ pill: configFiles
 ---
 # Config Files
 
-Flyway optionally supports loading configuration via config files.
+Flyway supports loading configuration via config files.
 
 ## Structure
 
