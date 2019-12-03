@@ -4,7 +4,7 @@ menu: configuration
 subtitle: Script Config Files
 pill: scriptconfig
 ---
-# Script config
+# Script config Files
 
 It's possible to configure SQL migrations on a per-script basis.
 
