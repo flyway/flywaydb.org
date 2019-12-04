@@ -3,7 +3,7 @@ layout: documentation
 menu: scriptconfigfiles
 subtitle: Script Config Files
 ---
-# Script config Files
+# Script Config Files
 
 It's possible to configure SQL migrations on a per-script basis.
 
