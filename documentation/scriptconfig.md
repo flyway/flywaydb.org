@@ -1,8 +1,7 @@
 ---
-layout: configuration
-menu: configuration
+layout: documentation
+menu: scriptconfig
 subtitle: Script Config Files
-pill: scriptconfig
 ---
 # Script config Files
 
