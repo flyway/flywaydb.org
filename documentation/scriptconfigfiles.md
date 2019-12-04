@@ -1,6 +1,6 @@
 ---
 layout: documentation
-menu: scriptconfig
+menu: scriptconfigfiles
 subtitle: Script Config Files
 ---
 # Script config Files

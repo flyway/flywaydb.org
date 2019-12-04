@@ -388,7 +388,7 @@ For Java migrations, the `JavaMigration` interface has a method `canExecuteInTra
 should take place inside a transaction. You can rely on `BaseJavaMigration`'s default behavior to return `true` or override
 `canExecuteInTransaction` to execute certain migrations outside a transaction by returning `false`.
 
-For SQL migrations, you can specify the script configuration property `executeInTransaction`. See [Script config](documentation/scriptconfig).
+For SQL migrations, you can specify the script configuration property `executeInTransaction`. See [Script config](documentation/scriptconfigfiles).
 ### Important Note
 
 If your database cleanly supports DDL statements within a transaction, failed migrations will always be rolled back
