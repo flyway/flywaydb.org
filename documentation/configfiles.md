@@ -1,11 +1,11 @@
 ---
 layout: documentation
-menu: configfiles
+menu: configFiles
 subtitle: Config Files
 ---
 # Config Files
 
-Flyway optionally supports loading configuration via config files.
+Flyway supports loading configuration via config files.
 
 ## Structure
 
@@ -341,5 +341,5 @@ flyway.url=
 ```
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/articles">Articles <i class="fa fa-arrow-right"></i></a>
+  <a class="btn btn-primary" href="/documentation/envvars">Environment Variables <i class="fa fa-arrow-right"></i></a>
 </p>

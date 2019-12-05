@@ -229,33 +229,7 @@ Additionally in the case of Oracle, Flyway also supports [SQL*Plus commands](/do
 In addition to regular SQL syntax, Flyway also supports placeholder replacement with configurable pre- and suffixes.
 By default it looks for Ant-style placeholders like `${myplaceholder}`. This can be very useful to abstract differences between environments.
 
-Flyway also provides default placeholders, whose values are automatically populated:
-
-- `${flyway:defaultSchema}`
-- `${flyway:user}`
-- `${flyway:database}`
-
-### Example
-Here is a small example of the supported syntax:
-
-```sql
-/* Single line comment */
-CREATE TABLE test_user (
-  name VARCHAR(25) NOT NULL,
-  PRIMARY KEY(name)
-);
-
-/*
-Multi-line
-comment
-*/
-
--- Default placeholders
-GRANT SELECT ON SCHEMA ${flyway:defaultSchema} TO ${flyway:user};
-
--- User defined placeholder
-INSERT INTO ${tableName} (name) VALUES ('Mr. T');
-```
+See [Placeholders](/documentation/placeholders).
 
 ## Java-based migrations
 
@@ -414,15 +388,7 @@ For Java migrations, the `JavaMigration` interface has a method `canExecuteInTra
 should take place inside a transaction. You can rely on `BaseJavaMigration`'s default behavior to return `true` or override
 `canExecuteInTransaction` to execute certain migrations outside a transaction by returning `false`.
 
-For SQL migrations, you can create a script configuration file alongside the migration and set the `executeInTransaction` property
-to the desired value. The script configuration file name must match the migration file name, but with the `.conf` suffix added.
-For example, a migration file `V2__Non_transactional.sql` would have a script configuration file `V2__Non_transactional.sql.conf`
-with the following contents:
-
-```properties
-executeInTransaction=false
-```
-
+For SQL migrations, you can specify the script configuration property `executeInTransaction`. See [Script config](documentation/scriptconfigfiles).
 ### Important Note
 
 If your database cleanly supports DDL statements within a transaction, failed migrations will always be rolled back
@@ -475,5 +441,5 @@ When Flyway discovers an applied versioned migration with a version that is high
 (this happens typically when a newer version of the software has migrated that schema), that migration is marked as **future**.
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/callbacks">Callbacks <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/configuration">Configuration <i class="fa fa-arrow-right"></i></a>
 </p>

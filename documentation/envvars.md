@@ -6,7 +6,7 @@ subtitle: Environment Variables
 # Environment Variables
 
 The Flyway [command-line tool](/documentation/commandline), [Maven plugin](/documentation/maven) and
-[Gradle plugin](/documentation/gradle) optionally support loading configuration via environment variables.
+[Gradle plugin](/documentation/gradle) support loading configuration via environment variables.
 This also possible using the Flyway API by calling the `envVars()` method on the configuration.
 
 ## Reference
@@ -331,7 +331,7 @@ The following environment variables are supported:
 </table>
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/configfiles">Config Files <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/placeholders">Placeholders <i class="fa fa-arrow-right"></i></a>
 </p>
 
 {% include trialpopup.html %}
