@@ -74,7 +74,10 @@ SET TERM ;#
 ## Limitations
 
 - Mixing DDL and DML involving the same tables in a single migration is not supported. Firebird disallows DDL changes to 
-be used by DML in the same transaction, so separate migrations are necessary.
+be used by DML in the same transaction, so one of the following is necessary:
+  - separate migrations for DML / DDL, or
+  - a [per-script override](https://flywaydb.org/documentation/scriptconfigfiles) of <code>executeInTransaction</code>
+
 - `SET TRANSACTION` and `COMMIT [WORK]` are not supported in migrations. `COMMIT RETAIN` can be used, but this will only 
 allow partial rollback of a migration; only statements after the last `COMMIT RETAIN` can be rolled back.
 - Migrations modifying or dropping objects while the database is in use can result in long delays or "object X is in use" 
