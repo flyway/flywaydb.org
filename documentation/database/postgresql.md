@@ -30,7 +30,7 @@ subtitle: PostgreSQL
 </tr>
 <tr>
 <th>Maven Central coordinates</th>
-<td><code>org.postgresql:postgresql:42.2.5</code></td>
+<td><code>org.postgresql:postgresql:42.2.8[.jre6]</code></td>
 </tr>
 <tr>
 <th>Supported versions</th>
@@ -53,6 +53,9 @@ subtitle: PostgreSQL
 - DDL exported by pg_dump can be used unchanged in a Flyway migration.
 - Any PostgreSQL sql script executed by Flyway, can be executed by the PostgreSQL command-line tool and other
         PostgreSQL-compatible tools (after the placeholders have been replaced).
+- The driver shipped by default with the Flyway command line is <code>postgresql-42.2.8.jre6.jar</code>. This does
+not support SCRAM authentication. To use SCRAM, you will need to use Java 8 as a minimum and 
+should download the <code>postgresql-42.2.8.jar</code> driver instead. 
 
 ### Example
 
