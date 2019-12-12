@@ -67,7 +67,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
     </tr>
     {% include cfg/tablespace.html %}
     {% include cfg/locations-commandline.html %}
-    {% include cfg/log-file.html %}
+    {% include cfg/output-file.html %}
     <tr id="jarDirs">
         <td>jarDirs</td>
         <td>NO</td>
