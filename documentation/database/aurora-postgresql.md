@@ -7,6 +7,8 @@ subtitle: Aurora PostgreSQL
 
 ## Supported Versions
 
+- `11.4`
+- `10.x`
 - `9.6`
 
 ## Driver
