@@ -18,7 +18,7 @@ Script config files have the following structure:
 
 ```properties
 # Settings are simple key-value pairs
-flyway.key=value
+key=value
 ```
 
 ## Reference
