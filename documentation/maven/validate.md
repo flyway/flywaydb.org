@@ -125,6 +125,7 @@ Validation fails if
             Multiple suffixes (like .sql,.pkg,.pkb) can be specified for easier compatibility with other tools such as
             editors with specific file associations.</td>
     </tr>
+     {% include cfg/ignoreInvalidMigrationNames.html %}
     <tr>
         <td>encoding</td>
         <td>NO</td>
