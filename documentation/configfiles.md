@@ -275,6 +275,11 @@ flyway.url=
 # true to continue normally and log a warning, false to fail fast with an exception. (default: true)
 # flyway.ignoreFutureMigrations=
 
+# Ignore migrations and callbacks whose scripts do not obey the correct naming convention. A failure can be
+# useful to check that errors such as case sensitivity in migration prefixes have been corrected.
+# true to continue normally, false to fail fast with an exception (default: true)
+# flyway.ignoreInvalidMigrationNames=
+
 # Whether to allow mixing transactional and non-transactional statements within the same migration. Enabling this
 # automatically causes the entire affected migration to be run without a transaction.
 # Note that this is only applicable for PostgreSQL, Aurora PostgreSQL, SQL Server and SQLite which all have
