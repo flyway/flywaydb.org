@@ -266,6 +266,10 @@ Add `-X` to the argument list to also print debug output.
 
 Add `-q` to the argument list to suppress all output, except for errors and warnings.
 
+### Writing to a file
+
+Add `-outputFile=/my/output.txt` to the argument list to also write output to the specified file.
+
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/commandline/migrate">Command-line: migrate <i
             class="fa fa-arrow-right"></i></a>
