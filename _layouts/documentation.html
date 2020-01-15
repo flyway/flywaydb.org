@@ -160,13 +160,17 @@ title: Documentation
                     {% if page.menu == 'contribute' %} class="active" {% endif %}>
                     <a href="/documentation/contribute">Contributing to Flyway</a></li>
                     <li
+                        {% if page.menu == 'addDatabaseSupport' %} class="active" {% endif %}>
+                        <a href="/documentation/contribute/addDatabaseSupport">Adding database support</a>
+                    </li>
+                    <li
                     {% if layout.menu == 'website' %} class="active" {% endif %}>
                     <a href="/documentation/contribute/website">Website</a></li>
                     <li
                     {% if layout.menu == 'code' %} class="active" {% endif %}>
                     <a href="/documentation/contribute/code">Code</a></li>
                     <li
-                            {% if page.menu == 'hallOfFame' %} class="active" {% endif %}>
+                    {% if page.menu == 'hallOfFame' %} class="active" {% endif %}>
                     <a href="/documentation/contribute/hallOfFame">Hall Of Fame</a></li>
                 </ul>
             </div>

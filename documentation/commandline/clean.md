@@ -82,7 +82,7 @@ The schemas are cleaned in the order specified by the `schemas` property.
         <td>false</td>
         <td>Whether to disable clean. This is especially useful for production environments where running clean can be quite a career limiting move.</td>
     </tr>
-    {% include cfg/ignoreInvalidMigrationNames.html %}
+    {% include cfg/validateMigrationNaming.html %}
     {% include cfg/licenseKey.html %}
     </tbody>
 </table>
