@@ -266,6 +266,10 @@ Add `-X` to the argument list to also print debug output.
 
 Add `-q` to the argument list to suppress all output, except for errors and warnings.
 
+### JSON
+
+Add `-json` to the argument list to print JSON instead of human-readable output. Errors are included in the JSON payload instead of being sent to `stderr`.
+
 ### Writing to a file
 
 Add `-outputFile=/my/output.txt` to the argument list to also write output to the specified file.
