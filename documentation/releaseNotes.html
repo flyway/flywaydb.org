@@ -14,6 +14,19 @@ subtitle: Release Notes
     <ul>
         {% include issue.html id="2186" title="New option to explicitly validate SQL migration/callback script names" %}
         {% include issue.html id="2620" title="Migrations with no description causing issues in Oracle and Sybase" %}
+        {% include issue.html id="2590" title="Flyway output not colored in jenkins when using ansiColors plugin" %}
+        {% include issue.html id="2621" title="Re-add the CLI option to disable colorization." %}
+    </ul>
+
+    <h3>Changes</h3>
+    <ul>
+      {% include issue.html id="2177" title="Repeatable Migration not executed after changing Placeholder Value" %}
+      {% include issue.html id="1328" title="In multiple managed schema scenario, if one of the schemas already exists, no other schema is created" %}
+    </ul>
+
+    <h3>Bug fixes</h3>
+    <ul>
+      {% include issue.html id="2620" title="Scripts with empty description fail on Oracle" %}
     </ul>
 
     <h3>Java compatibility</h3>
@@ -22,7 +35,7 @@ subtitle: Release Notes
     </ul>
 
     <p>
-        Thanks to esauser for reporting these issues and/or submitting pull requests.
+        Thanks to allenatdecisiv, esauser, and morl-la for reporting these issues and/or submitting pull requests.
     </p>
 </div>
 
