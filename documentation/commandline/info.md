@@ -65,8 +65,7 @@ Prints the details and status information about all the migrations.
         </td>
     </tr>
     {% include cfg/locations-commandline.html %}
-    {% include cfg/output-file.html %}
-    {% include cfg/json.html %}
+    {% include cfg/color.html %}
     <tr id="jarDirs">
         <td>jarDirs</td>
         <td>NO</td>

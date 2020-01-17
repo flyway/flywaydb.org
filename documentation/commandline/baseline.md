@@ -54,7 +54,7 @@ Baselines an existing database, excluding all migrations up to and including `ba
     {% include cfg/connectRetries.html %}
     {% include cfg/initSql.html %}
     {% include cfg/schemas-commandline.html %}
-    {% include cfg/output-file.html %}
+    {% include cfg/color.html %}
     <tr>
         <td>table</td>
         <td>NO</td>

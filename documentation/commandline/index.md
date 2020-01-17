@@ -256,7 +256,13 @@ All debug, info and warning output is sent to `stdout`. All errors are sent to `
 
 ### Colors
 
-The ouput is colorized using ANSI escape codes. Colors are suppressed if `stdout` is not associated with a terminal.
+By default the output is automatically colorized if `stdout` is associated with a terminal.
+
+You can override this behavior with the `-color` option. Possible values:
+
+- `auto` (default) : Colorize output, unless `stdout` is not associated with a terminal
+- `always` : Always colorize output
+- `never` : Never colorize output
 
 ### Debug output
 
@@ -265,6 +271,14 @@ Add `-X` to the argument list to also print debug output.
 ### Quiet mode
 
 Add `-q` to the argument list to suppress all output, except for errors and warnings.
+
+### JSON
+
+Add `-json` to the argument list to print JSON instead of human-readable output. Errors are included in the JSON payload instead of being sent to `stderr`.
+
+### Writing to a file
+
+Add `-outputFile=/my/output.txt` to the argument list to also write output to the specified file.
 
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/commandline/migrate">Command-line: migrate <i

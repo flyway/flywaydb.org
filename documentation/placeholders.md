@@ -13,6 +13,8 @@ Flyway also provides default placeholders, whose values are automatically popula
 - `${flyway:user}`
 - `${flyway:database}`
 
+Changes to placeholder values will cause repeatable migrations to be considered 'outdated'. This means they'll be executed on next migrate.
+
 ### Example
 Here is a small example of the supported syntax:
 
