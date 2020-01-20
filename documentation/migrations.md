@@ -396,7 +396,9 @@ If your database cleanly supports DDL statements within a transaction, failed mi
 
 If on the other hand your database does NOT cleanly supports DDL statements within a transaction (by for example
 issuing an implicit commit before and after every DDL statement), Flyway won't be able to perform a clean rollback in
-case of failure and will instead mark the migration as failed, indicating that some manual cleanup may be required. 
+case of failure and will instead mark the migration as failed, indicating that some manual cleanup may be required.
+You may also need to run [repair](/documentation/command/repair) to remove the failed migration entry from the [schema
+history table](#schema-history-table).
 
 ## Query Results
 
