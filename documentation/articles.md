@@ -11,6 +11,12 @@ subtitle: Articles
 
 <h2>English</h2>
 
+<p><strong><a href="http://www.mastertheboss.com/other/flyway/performing-a-flyway-migration-with-quarkus-and-thorntail">Performing a FlyWay migration with Quarkus and Thorntail </a>
+</strong> by Francesco Marchioni<br/></p>
+
+<p><strong><a href="http://www.mastertheboss.com/other/flyway/getting-started-with-flyway">Getting started with Flyway Migrations</a>
+</strong> by Francesco Marchioni<br/></p>
+
 <p><strong><a href="https://msdn.microsoft.com/magazine/mt833522">Hybrid Database Migrations with EF Core and Flyway</a>
 </strong> by Julie Lerman<br/></p>
 
