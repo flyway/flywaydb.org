@@ -1,51 +1,55 @@
 ---
 layout: documentation
-menu: addDatabaseSupport
-subtitle: Adding Database Support
+menu: contributingDatabaseSupport
+subtitle: Contributing Database Support
 ---
 <div id="addDatbaseSupport">
-    <h1>Adding Database Support to Flyway</h1>
+    <h1>Contributing Database Support to Flyway</h1>
 
+    <p>
+      Flyway follows an Open Source model for the Community edition. We welcome code contributions through Pull Requests on the
+      <a href="github.com/flyway/flyway">Flyway GitHub page</a>. This article will provide help with contribting code to make Flywyay support a new database platform.
+    </p>
     <p>Flyway supports migrations for a large number of database platforms in a unified and consistent way. It does
         this by abstracting away the details of each database into a set of classes for each platform, plus factory
         classes that construct the appropriate objects for the database at hand; all communication with the database is
         done through a JDBC connection. The advantage of this approach is that JDBC is a widely adopted standard; with
         little more than a JDBC driver and knowledge of the SQL dialect used by a database it is possible to add Flyway support.
-        The Flyway community codebase at <a href="github.com/flyway/flyway">github.com/flyway/flyway</a> is the
-        starting point for adding your own database support.
     </p>
 
-    <h2>Why doesn’t Flyway support my favourite databases?</h2>
+    <h2>Why doesn’t Flyway accept all database support contributions?</h2>
 
-    <p>We welcome pull requests for database support, but not all requests are automatically accepted. Once support for
-        one database enters the mainstream Flyway release we obviously then take on the responsibility of ongoing
-        maintenance, which has to be balanced against other priorities for Flyway. We then need to be able to test the
-        support effectively, which requires access to an instance without excessive ongoing cost – this generally takes
-        the form of a Docker image per version for on-premise databases, or a test account with a cloud provider; these
-        are not always available to us. Finally, contributions need to be based on a recent fork with no merge conflicts,
+    <p>We welcome pull requests for database support, but not all requests are automatically accepted. Once support for a
+        new datbase platform is introduced, we become responsible for ongoing maintenance. Maintenance of a database platform has a cost,
+        which has to be balanced against our other priorities for Flyway.<br/>
+        Before we can support a database platform, we need an effective way of testing against an instance of that platform. 
+        This generally takes the form of a Docker image per version for on-premise databases, or a test account with a cloud provider.
+        Unfortunately, it's not always possible to access a test instance without excessive cost.<br/>
+        Finally, contributions need to be based on a recent fork of the Flyway repository with no merge conflicts,
         and also meet the high bar we set for Flyway’s code standard – we can provide advice and code review.
     </p>
 
     <h2>You will need...</h2>
 
     <ul>
-        <li>A JDBC driver for your database. Please let us know if you would be willing to authorise us to ship the JDBC
-        driver with Flyway, as this helps us deliver a more frictionless out-of-the-box experience for end users. If
-        you follow step 2 below, this will happen automatically.</li>
+        <li>A JDBC driver for your database.</li>
         <li>A Java IDE that builds with Java 8 or higher. We use and recommend IntelliJ
         </li>
     </ul>
 
+    <strong>Note for organisations:</strong> let us know whether you will allow us to ship your JDBC driver with Flyway. This helps us deliver
+    a more frictionless out-of-the-box experience for end users. If you follow step 2 below, this will happen automatically.
+
     <h2>Getting started</h2>
 
-    <p>Fork the Flyway repo. If you’re using IntelliJ, you should be able to open the Flyway top level folder and see a
-        number of projects. Copy the file /flyway-commandline/src/main/assembly/flyway.conf to a scratch area; use this
-        copy to set up the following properties:
+    <p>Fork the <a href="github.com/flyway/flyway">Flyway</a> repo. If you’re using IntelliJ, you should be able to open the Flyway top level folder and see a
+        number of projects. Copy the file <code>/flyway-commandline/src/main/assembly/flyway.conf</code> to an accessible location on your machine. This location will be a 
+        temporary 'scratch' area for testing. Use this copy to set up the following properties:
         <ul>
             <li><code>flyway.url</code>	- the JDBC URL of your development database</li>
             <li><code>flyway.user</code> - the user account</li>
             <li><code>flyway.password</code> - the password to the database</li>
-            <li><code>flyway.locations</code> - to point to a folder in your scratch area where you can put test migrations.</li>
+            <li><code>flyway.locations</code> - to point to an accessible folder where you can put test migrations.</li>
         </ul>
     </p>
 
@@ -53,17 +57,18 @@ subtitle: Adding Database Support
         configuration:
         <ul>
             <li>Main class: <code>org.flywaydb.commandline.Main</code></li>
-            <li>Program arguments: <code>info -X -configFiles=&lt;scratch area&gt;\flyway.conf</code></li>
+            <li>Program arguments: <code>info -X -configFiles=&lt;scratch location&gt;\flyway.conf</code></li>
             <li>Classpath of module: <code>flyway-commandline</code></li>
         </ul>
     </p>
 
-    <p>Flyway itself should start, and as Flyway doesn’t yet support your database you should see a message like:</p>
+    <p>Flyway itself should start. Since Flyway doesn’t yet support your database you should see a message like:</p>
 
     <p><code>org.flywaydb.core.api.FlywayException: Unable to autodetect JDBC driver for url: jdbc:mydatabase://&lt;host&gt;:&lt;port&gt;/&lt;databasename&gt;</code></p>
 
-    <p>You’re now ready to start adding that database support. We’re going to assume your database is called <b>Foo</b>
-        – do change the obvious naming conventions to suit your database.
+    <p>
+      You’re now ready to start adding that database support. We’re going to assume your database platform is called <b>FooDb</b>.
+      Change the obvious naming conventions to suit your database.
     </p>
 
     <h2>Let's code!</h2>
@@ -71,14 +76,14 @@ subtitle: Adding Database Support
     <p>
     Here are all the changes and additions you'll need to make:
         <ol>
-            <li>Add an optional dependency to your JDBC driver to the top-level .pom
+            <li>Add an optional dependency to your JDBC driver to the top-level <code>.pom</code>
             </li>
             <li>
-                Add a dependency of your JDBC driver to the flyway-commandline .pom if you wish the driver to be
+                Add a dependency of your JDBC driver to the flyway-commandline <code>.pom</code> if you wish the driver to be
                 automatically shipped with the Flyway product.
             </li>
             <li>
-                In flyway.conf, document the format of the JDBC connection url for your database. This is not
+                In <code>flyway.conf</code>, document the format of the JDBC connection url for your database. This is not
                 necessary to make Flyway work but it will help adoption of your database!
             </li>
             <li>
@@ -108,11 +113,12 @@ subtitle: Adding Database Support
                 that construct these two objects. We will come back to override methods on these classes later.
             </li>
             <li>
-                Create class <code>FooConnection</code> subclassed from Connection&lt;FooDatabase&gt; using the
+                Create class <code>FooConnection</code> subclassed from <code>Connection&lt;FooDatabase&gt;</code> using the
                 canonical signature. This represents a JDBC connection to your database. You probably won’t use it in
-                isolation but it is an important component of a JdbcTemplate, which provides numerous convenience
-                methods for running queries on your database. In the constructor of <code>FooConnection</code>, you can
-                use the jdbcTemplate field of Connection to query for any database properties that you need to acquire
+                isolation but it is an important component of a <code>JdbcTemplate</code>, which provides numerous convenience
+                methods for running queries on your database.<br/>
+                In the constructor of <code>FooConnection</code>, you can
+                use the <code>jdbcTemplate</code> field of <code>Connection</code> to query for any database properties that you need to acquire
                 immediately and maintain as part of the state of the connection. You will need to override the following
                 methods as a minimum:
                 <ul>
@@ -160,8 +166,8 @@ subtitle: Adding Database Support
                 <ul>
                     <li>The constructor should call the superclass constructor with a peek depth. This determines how
                         far in advance the parser looks to determine the nature of various symbols. 2 is a reasonable
-                        start, unless you know you have two-character entities like Snowflake’s <code>$$</code> as a
-                        javascript delimiter in which case start at 3.</li>
+                        start, unless you know your database has two-character entities (like Snowflake DB’s <code>$$</code> for
+                        javascript delimiters) in which case start at 3.</li>
                     <li>Override <code>getDefaultDelimiter()</code> if your database uses something other than a
                         semicolon to delimit separate statements</li>
                     <li>Override <code>getIdentifierQuote()</code> if your database uses something other than a
@@ -210,9 +216,9 @@ subtitle: Adding Database Support
         Congratulations! You have got a basic implementation up and running. You can now start creating migration
         scripts and running <code>flyway migrate</code> on them.</p>
 
-    <p>Basic SQL scripts should run with few problems, but you may find more edge cases, particularly in the Parser.
-        The existing classes for a variety of platforms provide plenty of examples of how to deal with them. If you
-        find you need to make more invasive changes in the core of Flyway, please do contact us for advice – and
-        obviously we will need to test such changes thoroughly against all our test instances before we can accept them.</p>
+    <p>Basic SQL scripts should run with few problems, but you may find more edge cases, particularly in <code>Parser</code>.
+        Look at the existing overrides for existing platforms for examples of how to deal with them. If you
+        find you need to make more invasive changes in the core of Flyway, please do contact us for advice.
+        We will need to test bigger changes ourselves against all our test instances before we can accept them.</p>
 
 </div>
