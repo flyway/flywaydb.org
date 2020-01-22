@@ -7,6 +7,7 @@ subtitle: PostgreSQL
 
 ## Supported Versions
 
+- `12`
 - `11`
 - `10`
 - `9.6`
