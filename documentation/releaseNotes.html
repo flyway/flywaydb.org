@@ -8,7 +8,7 @@ subtitle: Release Notes
 <p>Thank you all for reporting all these issues and contributing fixes!</p>
 
 <div class="release">
-    <h2 id="6.2">Flyway 6.2 (unreleased)</h2>
+    <h2 id="6.2.0">Flyway 6.2.0 (2020-01-22)</h2>
 
     <h3>New features</h3>
     <ul>
@@ -25,7 +25,10 @@ subtitle: Release Notes
     <h3>Bug fixes</h3>
     <ul>
       {% include issue.html id="2620" title="Scripts with empty description causing issues in Oracle and Sybase" %}
+      {% include issue.html id="2624" title="Error parsing <code>CASE...END</code> in SAP HANA" %}
+      {% include issue.html id="2626" title="Support for MariaDB enterprise version numbering" %}
       {% include issue.html id="2634" title="Deadlock on some instances of Postgres" %}
+      {% include issue.html id="2637" title="Add environment variable for defaultSchema" %}
     </ul>
 
     <h3>Java compatibility</h3>
@@ -34,7 +37,7 @@ subtitle: Release Notes
     </ul>
 
     <p>
-        Thanks to allenatdecisiv, esauser, Roman Dubinin, and morl-la for reporting these issues and/or submitting pull requests.
+        Thanks to allenatdecisiv, esauser, Roman Dubinin, stesix and morl-la for reporting these issues and/or submitting pull requests.
     </p>
 </div>
 
