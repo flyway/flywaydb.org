@@ -53,11 +53,21 @@ The following environment variables are supported:
         <td>FLYWAY_INIT_SQL</td>
         <td>The SQL statements to run to initialize a new database connection immediately after opening it.</td>
     </tr>
+    <tr id="FLYWAY_DEFAULT_SCHEMA">
+            <td>FLYWAY_DEFAULT_SCHEMA</td>
+            <td>The default schema managed by Flyway. This schema will be the one containing the schema history table.
+            This schema will also be the default for the database connection (provided the database supports this concept).
+            <br/>
+                If not specified, but FLYWAY_SCHEMAS is, the default schema is the first in that list.
+            </td>
+        </tr>
     <tr id="FLYWAY_SCHEMAS">
         <td>FLYWAY_SCHEMAS</td>
-        <td>Comma-separated case-sensitive list of schemas managed by Flyway.<br/>
-            The first schema in the list will be automatically set as the default one during
-            the migration. It will also be the one containing the schema history table.
+        <td>Comma-separated case-sensitive list of schemas managed by Flyway. Flyway will attempt to create these
+        schemas if they do not already exist, and will clean them in the order of this list. If Flyway created
+        them, then the schemas themselves will be dropped when cleaning.<br/>
+            <br/>
+            If the default schema is not specified, the first is this list also acts as default schema.
         </td>
     </tr>
     <tr id="FLYWAY_TABLE">
@@ -71,7 +81,7 @@ The following environment variables are supported:
     <tr id="FLYWAY_TABLESPACE">
         <td>FLYWAY_TABLESPACE</td>
         <td>The tablespace where to create the schema history table that will be used by Flyway.
-            This setting is only relevant for databases that do support the notion of tablespaces. It's value is simply ignored for all others.
+            This setting is only relevant for databases that do support the notion of tablespaces. Its value is simply ignored for all others.
         </td>
     </tr>
     <tr id="FLYWAY_LOCATIONS">
@@ -118,6 +128,12 @@ The following environment variables are supported:
             Multiple suffixes (like .sql,.pkg,.pkb) can be specified for easier compatibility with other tools such as
                 editors with specific file associations.</td>
     </tr>
+    <tr id="FLYWAY_IGNORE_INVALID_MIGRATION_NAMES">
+            <td>FLYWAY_IGNORE_INVALID_MIGRATION_NAMES</td>
+            <td>Whether to ignore migrations and callbacks whose scripts do not obey the correct naming convention. 
+            A failure can be useful to check that errors such as case sensitivity in migration prefixes have been corrected.
+            If false, Flyway fails fast with an exception.</td>
+        </tr>
     <tr id="FLYWAY_STREAM">
         <td>FLYWAY_STREAM {% include pro.html %}</td>
         <td>Whether to stream SQL migrations when executing them. Streaming doesn't load the entire migration in memory at

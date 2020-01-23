@@ -256,7 +256,13 @@ All debug, info and warning output is sent to `stdout`. All errors are sent to `
 
 ### Colors
 
-The ouput is colorized using ANSI escape codes. Colors are suppressed if `stdout` is not associated with a terminal.
+By default the output is automatically colorized if `stdout` is associated with a terminal.
+
+You can override this behavior with the `-color` option. Possible values:
+
+- `auto` (default) : Colorize output, unless `stdout` is not associated with a terminal
+- `always` : Always colorize output
+- `never` : Never colorize output
 
 ### Debug output
 

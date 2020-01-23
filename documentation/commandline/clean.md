@@ -55,6 +55,7 @@ The schemas are cleaned in the order specified by the `schemas` property.
     {% include cfg/connectRetries.html %}
     {% include cfg/initSql.html %}
     {% include cfg/schemas-commandline.html %}
+    {% include cfg/color.html %}
     <tr id="jarDirs">
         <td>jarDirs</td>
         <td>NO</td>
@@ -81,6 +82,7 @@ The schemas are cleaned in the order specified by the `schemas` property.
         <td>false</td>
         <td>Whether to disable clean. This is especially useful for production environments where running clean can be quite a career limiting move.</td>
     </tr>
+    {% include cfg/validateMigrationNaming.html %}
     {% include cfg/licenseKey.html %}
     </tbody>
 </table>

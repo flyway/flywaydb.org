@@ -67,6 +67,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
     </tr>
     {% include cfg/tablespace.html %}
     {% include cfg/locations-commandline.html %}
+    {% include cfg/color.html %}
     <tr id="jarDirs">
         <td>jarDirs</td>
         <td>NO</td>
@@ -114,6 +115,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
             Multiple suffixes (like .sql,.pkg,.pkb) can be specified for easier compatibility with other tools such as
                 editors with specific file associations.</td>
     </tr>
+    {% include cfg/validateMigrationNaming.html %}
     <tr id="stream">
         <td>stream {% include pro.html %}</td>
         <td>NO</td>

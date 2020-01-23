@@ -71,6 +71,7 @@ Validation fails if
         </td>
     </tr>
     {% include cfg/locations-commandline.html %}
+    {% include cfg/color.html %}
     <tr id="jarDirs">
         <td>jarDirs</td>
         <td>NO</td>
@@ -118,6 +119,7 @@ Validation fails if
             Multiple suffixes (like .sql,.pkg,.pkb) can be specified for easier compatibility with other tools such as
             editors with specific file associations.</td>
     </tr>
+     {% include cfg/validateMigrationNaming.html %}
     <tr>
         <td>encoding</td>
         <td>NO</td>

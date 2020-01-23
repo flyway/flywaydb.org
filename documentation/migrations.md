@@ -185,6 +185,10 @@ The file name consists of the following parts:
 
 Optionally versioned SQL migrations can also omit both the separator and the description.
 
+The configuration option <code>validateMigrationNaming</code> determines how Flyway handles files that do not correspond with
+the naming pattern when carrying out a migration: if true then Flyway will simply ignore all such files, if false then 
+Flyway will fail fast and list all files which need to be corrected.
+
 ### Discovery
 
 Flyway discovers SQL-based migrations both on the **filesystem** and on the Java **classpath**. 
@@ -274,7 +278,7 @@ the description from the class name. To be able to do so, the class name must co
     </div>
 </div>
 
-The file name consists of the following parts:
+The class name consists of the following parts:
 - **Prefix**: `V` for versioned migrations, `U` for undo migrations, `R` for repeatable migrations
 - **Version**: Underscores (automatically replaced by dots at runtime) separate as many parts as you like (Not for repeatable migrations)
 - **Separator**: `__` (two underscores)

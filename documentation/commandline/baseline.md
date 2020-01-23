@@ -54,6 +54,7 @@ Baselines an existing database, excluding all migrations up to and including `ba
     {% include cfg/connectRetries.html %}
     {% include cfg/initSql.html %}
     {% include cfg/schemas-commandline.html %}
+    {% include cfg/color.html %}
     <tr>
         <td>table</td>
         <td>NO</td>
@@ -99,6 +100,7 @@ Baselines an existing database, excluding all migrations up to and including `ba
         </td>
         <td>The description to tag an existing schema with when executing baseline</td>
     </tr>
+    {% include cfg/validateMigrationNaming.html %}
     {% include cfg/licenseKey.html %}
     </tbody>
 </table>

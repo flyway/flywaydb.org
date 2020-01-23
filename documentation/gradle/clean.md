@@ -74,6 +74,7 @@ Drops all objects (tables, views, procedures, triggers, ...) in the configured s
         <td>false</td>
         <td>Whether to disable clean. This is especially useful for production environments where running clean can be quite a career limiting move.</td>
     </tr>
+     {% include cfg/validateMigrationNaming.html %}
     {% include cfg/licenseKey.html %}
     </tbody>
 </table>
