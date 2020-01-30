@@ -109,6 +109,8 @@ flyway.url=
 # both SQL and Java-based migrations.
 # Locations starting with filesystem: point to a directory on the filesystem, may only
 # contain SQL migrations and are only scanned recursively down non-hidden directories.
+# Locations starting with s3: point to a bucket in AWS S3, may only contain SQL migrations, and are scanned
+# recursively. They are in the format s3:<bucket>(/optionalfolder/subfolder)
 # flyway.locations=
 
 # Comma-separated list of fully qualified class names of custom MigrationResolver to use for resolving migrations.

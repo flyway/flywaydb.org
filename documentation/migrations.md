@@ -196,6 +196,8 @@ Migrations reside in one or more directories referenced by the **[`locations`](/
 property.
 
 Locations with the `filesystem:` prefix target the file system.<br>
+Locations with the `s3:` prefix target AWS S3 storage. See the 
+[AWS documentation](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/credentials.html) for authentication options.<br>
 Unprefixed locations or locations with the `classpath:` prefix target the Java classpath.
 
 <pre class="filetree"><i class="fa fa-folder-open"></i> my-project

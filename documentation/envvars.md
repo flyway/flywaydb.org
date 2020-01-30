@@ -90,7 +90,9 @@ The following environment variables are supported:
             Unprefixed locations or locations starting with <code>classpath:</code> point to a package on the
             classpath and may contain both SQL and Java-based migrations.<br/>
             Locations starting with <code>filesystem:</code> point to a directory on the filesystem, may only
-            contain SQL migrations and are only scanned recursively down non-hidden directories.
+            contain SQL migrations and are only scanned recursively down non-hidden directories.<br/>
+            Locations starting with s3: point to a bucket in AWS S3, may only contain SQL migrations, and are scanned
+            recursively. They are in the format s3:&lt;bucket&gt;(/optionalfolder/subfolder)
         </td>
     </tr>
     <tr id="FLYWAY_JAR_DIRS">
