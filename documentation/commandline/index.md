@@ -252,7 +252,18 @@ They will then automatically be taken into account when launching Flyway. This i
 
 ## Output
 
-All debug, info and warning output is sent to `stdout`. All errors are sent to `stderr`.
+By default, all debug, info and warning output is sent to `stdout`. All errors are sent to `stderr`.
+
+Flyway will automatically detect and use any logger class that it finds on its classpath that derives from any of the 
+following:
+ - the Apache Commons Logging framework <code>org.apache.commons.logging.Log</code> 
+ - SLF4J <code>org.slf4j.Logger</code>
+ - the Android builtin log <code>android.util.Log</code>
+ 
+For example, if you wished to use <b>log4j</b> with the Flyway command line, you would achieve this by placing the 
+relevant jar file <code>jog4j-&lt;version&gt;.jar</code> into Flyway's <code>lib</code> folder, and the corresponding
+configuration file <code>log4j.xml</code> into the top level Flyway folder. If you are building Flyway into a larger
+application, this means you do not need to explicitly wire up any logging if you use one of these frameworks. 
 
 ### Colors
 
