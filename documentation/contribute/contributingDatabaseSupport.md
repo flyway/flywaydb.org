@@ -5,7 +5,7 @@ subtitle: Contributing Database Support
 ---
 # Contributing Database Support to Flyway
 
-Flyway follows an Open Source model for the Community edition. We welcome code contributions through Pull Requests on the [Flyway GitHub page](github.com/flyway/flyway). This article will provide help with contributing code to make Flyway support a new database platform.
+Flyway follows an Open Source model for the Community edition. We welcome code contributions through Pull Requests on the [Flyway GitHub page](https://github.com/flyway/flyway). This article will provide help with contributing code to make Flyway support a new database platform.
 
 Flyway supports migrations for a large number of database platforms in a unified and consistent way. It does this by abstracting away the details of each database into a set of classes for each platform, plus factory classes that construct the appropriate objects for the database at hand; all communication with the database is done through a JDBC connection. The advantage of this approach is that JDBC is a widely adopted standard; with little more than a JDBC driver and knowledge of the SQL dialect used by a database it is possible to add Flyway support.
 
@@ -24,7 +24,7 @@ Finally, contributions need to be based on a recent fork of the Flyway repositor
 
 ## Getting started
 
-Fork the [Flyway](github.com/flyway/flyway) repo. If you’re using IntelliJ, you should be able to open the Flyway top level folder and see a number of projects. Copy the file `/flyway-commandline/src/main/assembly/flyway.conf` to an accessible location on your machine. This location will be a temporary 'scratch' area for testing. Use this copy to set up the following properties:
+Fork the [Flyway](https://github.com/flyway/flyway) repo. If you’re using IntelliJ, you should be able to open the Flyway top level folder and see a number of projects. Copy the file `/flyway-commandline/src/main/assembly/flyway.conf` to an accessible location on your machine. This location will be a temporary 'scratch' area for testing. Use this copy to set up the following properties:
 
 *   `flyway.url` - the JDBC URL of your development database
 *   `flyway.user` - the user account
