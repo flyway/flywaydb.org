@@ -8,10 +8,10 @@ subtitle: Release Notes
 <p>Thank you all for reporting all these issues and contributing fixes!</p>
 
 <div class="release">
-    <h2 id="6.2.1">Flyway 6.2.1 (unreleased)</h2>
+<h2 id="6.2.1">Flyway 6.2.1 (2020-01-30)</h2>
     <h3>Database compatibility</h3>
     <ul>
-        {% include issue.html id="2642" title="Oracle JDBC driver now shipped with Flyway commandline" %}
+        {% include issue.html id="2645" title="Support for Snowflake 4.2 verified" %}
     </ul>
 
     <h3>Bug fixes</h3>
@@ -19,10 +19,12 @@ subtitle: Release Notes
         {% include issue.html id="2567" title="Undo + ErrorOverride throws exception but fails to record in schema_history table" %}
         {% include issue.html id="2612" title="Oracle: Package body initialization section with implicit END" %}
         {% include issue.html id="2643" title="<code>clean</code> fails on SQL Server 2014 and older" %}
+        {% include issue.html id="2638" title="Add comment to select statement for schema history to disable load balancing on Pgpool-II" %}
+        {% include issue.html id="2649" title="Ensure flyway cleans partition functions on azure sql server version 12" %}
     </ul>
 
     <p>
-        Thanks to Lyeeedar for reporting these issues and/or submitting pull requests.
+        Thanks to KiruthikaSS, Kindrat, filiprichtarik, LukeLaz, romaindup, and codicuz for reporting these issues and/or submitting pull requests.
     </p>
 </div>
 
