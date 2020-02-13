@@ -29,17 +29,15 @@ All editions are supported, including XE.
 </tr>
 <tr>
 <th>Ships with Flyway Command-line</th>
-<td>No</td>
+<td>Yes</td>
 </tr>
 <tr>
-<th>Download</th>
-<td>Download the latest version of both <code>ojdbc8.jar</code> and <code>orai18n.jar</code> from
- <a href="http://www.oracle.com/technetwork/database/features/jdbc/index.html">oracle.com</a> 
- and place them in Flyway's <code>drivers</code> directory</td>
+<th>Maven Central coordinates</th>
+<td><code>com.oracle.jdbc:ojdbc8:jar:18.3.0.0</code></td>
 </tr>
 <tr>
 <th>Supported versions</th>
-<td><code>11.2</code> and later</td>
+<td><code>18.3.0.0</code> and later</td>
 </tr>
 <tr>
 <th>Default Java class</th>
