@@ -8,15 +8,23 @@ subtitle: Release Notes
 <p>Thank you all for reporting all these issues and contributing fixes!</p>
 
 <div class="release">
-    <h2 id="6.2.3">Flyway 6.2.3 (unreleased)</h2>
+    <h2 id="6.2.3">Flyway 6.2.3 (2020-02-13)</h2>
 
+    <h3>Changes</h3>
+    <ul>
+        {% include issue.html id="2642" title="Package Oracle drivers" %}
+    </ul>
     <h3>Bug fixes</h3>
     <ul>
         {% include issue.html id="2650" title="MariaDB with MaxScale is unable to determine version" %}
+        {% include issue.html id="2665" title="Dryrun scripts for CockroachDB are invalid" %}
+        {% include issue.html id="2666" title="Support control flow keywords in MySQL" %}
+        {% include issue.html id="2669" title="Oracle package parsing bug" %}
+        {% include issue.html id="2673" title="DB2 parsing bug" %}
     </ul>
 
     <p>
-        Thanks to mbreevoort for reporting this issue.
+        Thanks to marcobehler, mbreevoort, wjtkp for reporting these issues.
     </p>
 </div>
 
