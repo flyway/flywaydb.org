@@ -64,6 +64,22 @@ comment
 INSERT INTO ${tableName} (name) VALUES ('Mr. T');
 </pre>
 
+## Key-based Authentication
+
+Snowflake JDBC supports key-based authentication. To use this, you will need to:
+
+- ensure you are using at least v3.11 of the Snowflake JDBC driver (Flyway currently ships with this version)
+- generate a public/private key pair
+- assign the public key to the relevant Snowflake user account using <code>ALTER USER</code> - for complete
+instructions on these steps, refer to [Snowflake's documentation](https://docs.snowflake.net/manuals/user-guide/jdbc-configure.html#using-key-pair-authentication)
+
+Finally, amend your JDBC connection string with the extra parameters to enable key-based auth and to refer to the 
+location of the private key: 
+<code>authenticator=snowflake_jwt&private_key_file=&lt;absolute-location-of-pem-file&gt;</code>.
+
+You will still need to provide a password but it can be set to a dummy value.
+
+
 ## Limitations
 
 - *None*
