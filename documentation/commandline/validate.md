@@ -229,6 +229,7 @@ Validation fails if
     </tr>
     {% include cfg/oracleSqlplus.html %}
     {% include cfg/oracleSqlplusWarn.html %}
+    {% include cfg/workingDirectory.html %}
     {% include cfg/licenseKey.html %}
     </tbody>
 </table>
@@ -269,6 +270,7 @@ flyway.ignorePendingMigrations=false
 flyway.ignoreFutureMigrations=false
 flyway.oracle.sqlplus=true
 flyway.oracle.sqlplusWarn=true
+flyway.workingDirectory=C:/myProject
 ```
 
 ## Sample output

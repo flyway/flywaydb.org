@@ -239,6 +239,7 @@ subtitle: 'Command-line: undo'
     </tr>
     {% include cfg/oracleSqlplus.html %}
     {% include cfg/oracleSqlplusWarn.html %}
+    {% include cfg/workingDirectory.html %}
     {% include cfg/licenseKey.html %}
     </tbody>
 </table>
@@ -283,6 +284,7 @@ flyway.errorOverrides=99999:17110:E,42001:42001:W
 flyway.dryRunOutput=/my/sql/dryrun-outputfile.sql
 flyway.oracle.sqlplus=true
 flyway.oracle.sqlplusWarn=true
+flyway.workingDirectory=C:/myProject
 ```
 
 ## Sample output

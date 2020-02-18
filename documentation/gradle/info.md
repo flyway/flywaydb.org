@@ -175,6 +175,8 @@ Prints the details and status information about all the migrations.
                 it will be applied too instead of being ignored.</p>
         </td>
     </tr>
+    {% include cfg/validateMigrationNaming.html %}
+    {% include cfg/workingDirectory.html %}
     {% include cfg/licenseKey.html %}
     </tbody>
 </table>
@@ -211,6 +213,7 @@ flyway {
     skipDefaultCallbacks = false
     target = '1.1'
     outOfOrder = false
+    workingDirectory = 'C:/myproject'
 }
 ```
 

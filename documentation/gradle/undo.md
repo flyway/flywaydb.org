@@ -223,6 +223,7 @@ subtitle: 'gradle flywayUndo'
     </tr>
     {% include cfg/oracleSqlplus.html %}
     {% include cfg/oracleSqlplusWarn.html %}
+    {% include cfg/workingDirectory.html %}
     {% include cfg/licenseKey.html %}
     </tbody>
 </table>
@@ -269,6 +270,7 @@ flyway {
     dryRunOutput = '/my/sql/dryrun-outputfile.sql'
     oracleSqlplus = true 
     oracleSqlplusWarn = true 
+    workingDirectory = 'C:/myproject'
 }
 ```
 
