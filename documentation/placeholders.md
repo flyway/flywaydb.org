@@ -7,6 +7,8 @@ subtitle: Placeholders
 In addition to regular SQL syntax, Flyway also supports placeholder replacement with configurable pre- and suffixes.
 By default it looks for Ant-style placeholders like `${myplaceholder}`. This can be very useful to abstract differences between environments.
 
+Changing the value of placeholders will cause repeatable migrations to be re-applied on next migrate.
+
 Flyway also provides default placeholders, whose values are automatically populated:
 
 - `${flyway:defaultSchema}`

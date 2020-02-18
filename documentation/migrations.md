@@ -443,7 +443,7 @@ is marked as **failed** in the schema history table, indicating manual database 
 Versioned migrations whose effects have been undone by an undo migration are marked as **undone**.
 
 Repeatable migrations whose checksum has changed since they are last applied are marked as **outdated** until
-they are executed again.
+they are executed again. Note also that changing the value of placeholders will cause repeatable migrations to be considered **outdated**.
 
 When Flyway discovers an applied versioned migration with a version that is higher than the highest known version
 (this happens typically when a newer version of the software has migrated that schema), that migration is marked as **future**.
