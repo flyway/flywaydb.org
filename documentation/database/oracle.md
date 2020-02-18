@@ -132,6 +132,7 @@ The following commands are fully supported and can be used just like any regular
 - `SHOW TIMING`
 - `SHOW USER`
 - `SHOW VERIFY`
+- `SPOOL`
 - `START` (only files, no URLs)
 - `UNDEFINE`
 - `WHENEVER SQLERROR CONTINUE`
