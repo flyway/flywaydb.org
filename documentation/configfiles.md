@@ -70,7 +70,8 @@ flyway.url=
 # User to use to connect to the database. Flyway will prompt you to enter it if not specified.
 # flyway.user=
 
-# Password to use to connect to the database. Flyway will prompt you to enter it if not specified.
+# Password to use to connect to the database. Flyway will prompt you to enter it if not specified, and if the JDBC
+# connection is not using a password-less method of authentication.
 # flyway.password=
 
 # The maximum number of retries when attempting to connect to the database. After each failed attempt,
