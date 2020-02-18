@@ -16,6 +16,11 @@ Config files have the following structure:
 flyway.key=value
 # Single line comment start with a hash
 
+# Long properties can be split over multiple lines by ending each line with a backslash
+flyway.locations=filesystem:my/really/long/path/folder1,\
+filesystem:my/really/long/path/folder2,\
+filesystem:my/really/long/path/folder3
+
 # These are some example settings
 flyway.url=jdbc:mydb://mydatabaseurl
 flyway.schemas=schema1,schema2
