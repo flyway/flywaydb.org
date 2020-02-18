@@ -77,8 +77,6 @@ Finally, amend your JDBC connection string with the extra parameters to enable k
 location of the private key: 
 <code>authenticator=snowflake_jwt&private_key_file=&lt;absolute-location-of-pem-file&gt;</code>.
 
-You will still need to provide a password but it can be set to a dummy value.
-
 
 ## Limitations
 
