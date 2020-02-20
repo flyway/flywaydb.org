@@ -8,16 +8,21 @@ subtitle: Release Notes
 <p>Thank you all for reporting all these issues and contributing fixes!</p>
 
 <div class="release">
-    <h2 id="6.2.4">Flyway 6.2.4 (unreleased)</h2>
+    <h2 id="6.2.4">Flyway 6.2.4 (2020-02-20)</h2>
 
     <h3>Bug fixes</h3>
     <ul>
         {% include issue.html id="2674" title="Oracle SQL*Plus parsing extended to support <code>SPOOL</code>" %}
+        {% include issue.html id="2675" title="MySQL parsing bug" %}
+        {% include issue.html id="2676" title="MySQL CREATE TABLE IF EXISTS parsing bug" %}
         {% include issue.html id="2677" title="Snowflake no longer needs dummy password if using key-based authentication" %}
+        {% include issue.html id="2679" title="Password prompt for SQL Server integration auth" %}
+        {% include issue.html id="2681" title="NullPointerException when running flyway info -json" %}
+        {% include issue.html id="2682" title="Print Flyway version in 'productVersion' property with -json" %}
     </ul>
 
     <p>
-        Thanks to emarcellus and Sreejith Madhavan for reporting these issues.
+        Thanks to emarcellus, Jonathan Putney, Slaiman Ahmdshah, Sreejith Madhavan, and Valdemar Grange for reporting these issues.
     </p>
 </div>
 
