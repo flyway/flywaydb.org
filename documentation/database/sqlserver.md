@@ -115,7 +115,7 @@ SQL Server JDBC connections support Windows Authentication. However, for Windows
 
 - Go to the <a href="https://docs.microsoft.com/en-us/sql/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server?view=sql-server-ver15">'Download Microsoft JDBC Driver for SQL Server' page</a>
 - Download the <code>.tar.gz</code> file for the JDBC version used by Flyway
-  - The version can be seen in the 'Maven Central coordinates' url under the <a href="http://localhost:4000/documentation/database/sqlserver#driver">Driver section</a> at the top of this page
+  - The version can be seen in the 'Maven Central coordinates' url under the <a href="https://flywaydb.org/documentation/database/sqlserver#driver">Driver section</a> at the top of this page
 - Extract the contents of the file
 - Look for <code>sqljdbc_auth.dll</code>, under <code>sqljdbc_{version}\enu\auth\x64</code>
 - Copy <code>sqljdbc_auth.dll</code> to an accessible location in your environment (e.g. <code>C:\jdbc-drivers\</code>)
