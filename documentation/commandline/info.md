@@ -183,6 +183,7 @@ Prints the details and status information about all the migrations.
                 it will be applied too instead of being ignored.</p>
         </td>
     </tr>
+    {% include cfg/workingDirectory.html %}
     {% include cfg/licenseKey.html %}
     </tbody>
 </table>
@@ -216,6 +217,7 @@ flyway.callbacks=com.mycomp.project.CustomCallback,com.mycomp.project.AnotherCal
 flyway.skipDefaultCallbacks=false
 flyway.target=5.1
 flyway.outOfOrder=false
+flyway.workingDirectory=C:/myProject
 ```
 
 ## Sample output
