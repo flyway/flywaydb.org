@@ -16,6 +16,11 @@ Config files have the following structure:
 flyway.key=value
 # Single line comment start with a hash
 
+# Long properties can be split over multiple lines by ending each line with a backslash
+flyway.locations=filesystem:my/really/long/path/folder1,\
+filesystem:my/really/long/path/folder2,\
+filesystem:my/really/long/path/folder3
+
 # These are some example settings
 flyway.url=jdbc:mydb://mydatabaseurl
 flyway.schemas=schema1,schema2
@@ -70,7 +75,8 @@ flyway.url=
 # User to use to connect to the database. Flyway will prompt you to enter it if not specified.
 # flyway.user=
 
-# Password to use to connect to the database. Flyway will prompt you to enter it if not specified.
+# Password to use to connect to the database. Flyway will prompt you to enter it if not specified, and if the JDBC
+# connection is not using a password-less method of authentication.
 # flyway.password=
 
 # The maximum number of retries when attempting to connect to the database. After each failed attempt,

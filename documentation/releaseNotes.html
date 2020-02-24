@@ -8,15 +8,62 @@ subtitle: Release Notes
 <p>Thank you all for reporting all these issues and contributing fixes!</p>
 
 <div class="release">
-    <h2 id="6.2.3">Flyway 6.2.3 (unreleased)</h2>
+    <h2 id="6.3">Flyway 6.3 (unreleased)</h2>
+    <h3>New features</h3>
+    <ul>
+        {% include issue.html id="2022" title="Support for <code>workingDirectory</code> parameter added to clients which didn't already have it" %}
+        {% include issue.html id="2177/2685" title="Repeatable migrations with placeholders re-run when placeholder value changes" %}
+        {% include issue.html id="2555" title="Support for multiple lines in <code>flyway.conf</code>" %}
+    </ul>
 
     <h3>Bug fixes</h3>
     <ul>
-        {% include issue.html id="2650" title="MariaDB with MaxScale is unable to determine version" %}
+        {% include issue.html id="2527" title="Baselining with empty history table now throws error" %}
+        {% include issue.html id="2605" title="Flyway not able to create the schema history in Sybase with <code>DDL IN TRAN = OFF</code>" %}
     </ul>
 
     <p>
-        Thanks to mbreevoort for reporting this issue.
+        Thanks to bjornhilstad, esauser, jaa2261, kippm and philci52 for reporting this issue.
+    </p>
+</div>
+
+<div class="release">
+    <h2 id="6.2.4">Flyway 6.2.4 (2020-02-20)</h2>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        {% include issue.html id="2674" title="Oracle SQL*Plus parsing extended to support <code>SPOOL</code>" %}
+        {% include issue.html id="2675" title="MySQL parsing bug" %}
+        {% include issue.html id="2676" title="MySQL CREATE TABLE IF EXISTS parsing bug" %}
+        {% include issue.html id="2677" title="Snowflake no longer needs dummy password if using key-based authentication" %}
+        {% include issue.html id="2679" title="Password prompt for SQL Server integration auth" %}
+        {% include issue.html id="2681" title="NullPointerException when running flyway info -json" %}
+        {% include issue.html id="2682" title="Print Flyway version in 'productVersion' property with -json" %}
+    </ul>
+
+    <p>
+        Thanks to emarcellus, Jonathan Putney, Slaiman Ahmdshah, Sreejith Madhavan, and Valdemar Grange for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
+    <h2 id="6.2.3">Flyway 6.2.3 (2020-02-13)</h2>
+
+    <h3>Changes</h3>
+    <ul>
+        {% include issue.html id="2642" title="Package Oracle drivers" %}
+    </ul>
+    <h3>Bug fixes</h3>
+    <ul>
+        {% include issue.html id="2650" title="MariaDB with MaxScale is unable to determine version" %}
+        {% include issue.html id="2665" title="Dryrun scripts for CockroachDB are invalid" %}
+        {% include issue.html id="2666" title="Support control flow keywords in MySQL" %}
+        {% include issue.html id="2669" title="Oracle package parsing bug" %}
+        {% include issue.html id="2673" title="DB2 parsing bug" %}
+    </ul>
+
+    <p>
+        Thanks to marcobehler, mbreevoort, and wjtkp for reporting these issues.
     </p>
 </div>
 

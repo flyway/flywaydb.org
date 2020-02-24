@@ -37,7 +37,7 @@ All editions are supported, including XE.
 </tr>
 <tr>
 <th>Supported versions</th>
-<td><code>11.2</code> and later</td>
+<td><code>18.3.0.0</code> and later</td>
 </tr>
 <tr>
 <th>Default Java class</th>
@@ -132,6 +132,7 @@ The following commands are fully supported and can be used just like any regular
 - `SHOW TIMING`
 - `SHOW USER`
 - `SHOW VERIFY`
+- `SPOOL`
 - `START` (only files, no URLs)
 - `UNDEFINE`
 - `WHENEVER SQLERROR CONTINUE`
@@ -153,6 +154,14 @@ Use of these placeholders can be disabled in the usual way using the `SET DEFINE
 ### Unsupported commands
 
 All other SQL*Plus commands are gracefully ignored with a warning message.
+
+## Oracle Wallet
+
+You can supply credentials using Oracle Wallet by specfiying properties on the JDBC url. For example:
+
+`jdbc:oracle:thin:@dbname_high?TNS_ADMIN=/Users/test/wallet_dbname`
+
+[See the Oracle documentation for more details](https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/user/connect-jdbc-thin-wallet.html#GUID-20656D84-4D79-4EE9-B55F-333053948966).
 
 ## Limitations
 
