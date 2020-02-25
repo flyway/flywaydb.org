@@ -109,9 +109,25 @@ GO
 INSERT INTO ${tableName} (name) VALUES ('Mr. T');
 ```
 
-## Windows Authentication
+# Authentication types
 
-SQL Server JDBC connections support Windows Authentication. However, for Windows Authentication to work with Flyway you must manually install a driver to your environment:
+SQL Server supports several methods of authentication. These include:
+
+- SQL Server Authentication
+- Windows Authentication
+- Azure Active Directory
+
+SQL Server Authentication works 'out-of-the-box' with Flyway, whereas Windows Authentication and Azure Active Directory require extra manual setup.
+
+The instructions provided here are adapted from the [Microsoft JDBC Driver for SQL Server documentation](https://docs.microsoft.com/en-us/sql/connect/jdbc/microsoft-jdbc-driver-for-sql-server?view=sql-server-ver15). Refer to this when troubleshooting authentication problems.
+
+## SQL Server Authentication
+
+This uses a straightforward username and password to authenticate. Provide these with the `user` and `password` configuration options.
+
+## Windows Authentication & Azure Active Directory
+
+Windows Authentication and Azure Active Directory require an extra driver to be installed:
 
 - Go to the <a href="https://docs.microsoft.com/en-us/sql/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server?view=sql-server-ver15">'Download Microsoft JDBC Driver for SQL Server' page</a>
 - Download the <code>.tar.gz</code> file for the JDBC version used by Flyway
@@ -121,7 +137,29 @@ SQL Server JDBC connections support Windows Authentication. However, for Windows
 - Copy <code>sqljdbc_auth.dll</code> to an accessible location in your environment (e.g. <code>C:\jdbc-drivers\</code>)
 - Add the location of <code>sqljdbc_auth.dll</code> to your <code>PATH</code> environment variable
 
-Finally, amend your JDBC connection string to set <code>integratedSecurity=true</code>. For instance: <code>jdbc:sqlserver://<i>host</i>:<i>port</i>;databaseName=<i>database</i>;integratedSecurity=true</code>.
+### Windows Authentication
+
+[Windows Authentication, also known as Integrated Security](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/authentication-in-sql-server), is enabled by amending your JDBC connection string to set <code>integratedSecurity=true</code>.
+
+Example: <code>jdbc:sqlserver://<i>host</i>:<i>port</i>;databaseName=<i>database</i>;integratedSecurity=true</code>.
+
+### Azure Active Directory
+
+There are several types of Azure Active Directory authentication:
+- Azure Active Directory with MFA (not supported)*
+- Azure Active Directory Integrated
+- Azure Active Directory MSI
+- Azure Active Directory with Password
+
+To enable these authentication types, amend your JDBC URL to set an `authentication` parameter.
+
+For instance, to enable `ActiveDirectoryIntegrated` in your JDBC connection string to set <code>authentication=ActiveDirectoryIntegrated</code>.
+
+Example: <code>jdbc:sqlserver://<i>host</i>:<i>port</i>;databaseName=<i>database</i>;authentication=ActiveDirectoryIntegrated</code>.
+
+[The Microsoft documentation has complete details about how these work with JDBC URLs](https://docs.microsoft.com/en-us/sql/connect/jdbc/connecting-using-azure-active-directory-authentication?view=sql-server-ver15).
+
+*Flyway doesn't support Azure Active Directory with MFA, as it is [not supported by the Microsoft JDBC drivers](https://github.com/microsoft/mssql-jdbc/issues/1053).
 
 ## Limitations
 
