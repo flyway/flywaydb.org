@@ -11,9 +11,10 @@ Changing the value of placeholders will cause repeatable migrations to be re-app
 
 Flyway also provides default placeholders, whose values are automatically populated:
 
-- `${flyway:defaultSchema}`
-- `${flyway:user}`
-- `${flyway:database}`
+- `${flyway:defaultSchema}` = The default schema for Flyway
+- `${flyway:user}` = The user Flyway will use to connect to the database
+- `${flyway:database}` = The name of the database from the connection url
+- `${flyway:timestamp}` = The time that Flyway parsed the migration, formatted as 'yyyy-MM-dd HH:mm:ss'
 
 ### Example
 Here is a small example of the supported syntax:
