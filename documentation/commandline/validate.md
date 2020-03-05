@@ -229,6 +229,7 @@ Validation fails if
     </tr>
     {% include cfg/oracleSqlplus.html %}
     {% include cfg/oracleSqlplusWarn.html %}
+    {% include cfg/workingDirectory.html %}
     {% include cfg/licenseKey.html %}
     </tbody>
 </table>
@@ -244,7 +245,7 @@ flyway.connectRetries=10
 flyway.initSql=SET ROLE 'myuser'
 flyway.schemas=schema1,schema2,schema3
 flyway.table=schema_history
-flyway.locations=classpath:com.mycomp.migration,database/migrations,filesystem:/sql-migrations
+flyway.locations=classpath:com.mycomp.migration,database/migrations,filesystem:/sql-migrations,s3:mybucket/sql-migrations
 flyway.sqlMigrationPrefix=Migration-
 flyway.undoSqlMigrationPrefix=downgrade
 flyway.repeatableSqlMigrationPrefix=RRR
@@ -269,6 +270,7 @@ flyway.ignorePendingMigrations=false
 flyway.ignoreFutureMigrations=false
 flyway.oracle.sqlplus=true
 flyway.oracle.sqlplusWarn=true
+flyway.workingDirectory=C:/myProject
 ```
 
 ## Sample output

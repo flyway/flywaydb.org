@@ -175,6 +175,8 @@ Prints the details and status information about all the migrations.
                 it will be applied too instead of being ignored.</p>
         </td>
     </tr>
+    {% include cfg/validateMigrationNaming.html %}
+    {% include cfg/workingDirectory.html %}
     {% include cfg/licenseKey.html %}
     </tbody>
 </table>
@@ -191,7 +193,7 @@ flyway {
     initSql = 'SET ROLE \'myuser\''
     schemas = ['schema1', 'schema2', 'schema3']
     table = 'schema_history'
-    locations = ['classpath:migrations1', 'migrations2', 'filesystem:/sql-migrations']
+    locations = ['classpath:migrations1', 'migrations2', 'filesystem:/sql-migrations', 's3:mybucket/sql-migrations']
     sqlMigrationPrefix = 'Migration-'
     undoSqlMigrationPrefix = 'downgrade'
     repeatableSqlMigrationPrefix = 'RRR'
@@ -211,6 +213,7 @@ flyway {
     skipDefaultCallbacks = false
     target = '1.1'
     outOfOrder = false
+    workingDirectory = 'C:/myproject'
 }
 ```
 

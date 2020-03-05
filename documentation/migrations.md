@@ -196,6 +196,8 @@ Migrations reside in one or more directories referenced by the **[`locations`](/
 property.
 
 Locations with the `filesystem:` prefix target the file system.<br>
+Locations with the `s3:` prefix target AWS S3 storage. See the 
+[AWS documentation](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/credentials.html) for authentication options.<br>
 Unprefixed locations or locations with the `classpath:` prefix target the Java classpath.
 
 <pre class="filetree"><i class="fa fa-folder-open"></i> my-project
@@ -441,7 +443,7 @@ is marked as **failed** in the schema history table, indicating manual database 
 Versioned migrations whose effects have been undone by an undo migration are marked as **undone**.
 
 Repeatable migrations whose checksum has changed since they are last applied are marked as **outdated** until
-they are executed again.
+they are executed again. Note also that changing the value of placeholders will cause repeatable migrations to be considered **outdated**.
 
 When Flyway discovers an applied versioned migration with a version that is higher than the highest known version
 (this happens typically when a newer version of the software has migrated that schema), that migration is marked as **future**.

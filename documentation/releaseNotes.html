@@ -8,6 +8,38 @@ subtitle: Release Notes
 <p>Thank you all for reporting all these issues and contributing fixes!</p>
 
 <div class="release">
+    <h2 id="6.3.0">Flyway 6.3.0 (2020-03-05)</h2>
+
+    <h3>New features</h3>
+    <ul>
+        {% include issue.html id="1780" title="Flyway api load configuration files from the default locations" %}
+        {% include issue.html id="2022" title="Support for <code>workingDirectory</code> parameter added to clients which didn't already have it" %}
+        {% include issue.html id="2177/2685" title="Repeatable migrations with placeholders re-run when placeholder value changes" %}
+        {% include issue.html id="2555" title="Support for multiple lines in <code>flyway.conf</code>" %}
+        {% include issue.html id="2700" title="Add support for a timestamp placeholder" %}
+    </ul>
+
+    <h3>Changes</h3>
+    <ul>
+        {% include issue.html id="2527" title="Baselining with empty history table now throws error" %}
+        {% include issue.html id="2692" title="Providing a license key to the community edition is now a warning instead of an error" %}
+    </ul>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        {% include issue.html id="2605" title="Flyway not able to create the schema history in Sybase with <code>DDL IN TRAN = OFF</code>" %}
+        {% include issue.html id="2684" title="Fix cleaning a Redshift schema containing procedures" %}
+        {% include issue.html id="2687" title="Fix mysql parser comment before DROP IF EXISTS" %}
+        {% include issue.html id="2689" title="Support putting comments and newlines within the package definition" %}
+        {% include issue.html id="2693" title="Add support for TEMPORARY TABLE in the mysql parser" %}
+    </ul>
+
+    <p>
+        Thanks to Komurugesan, artjomsimon, bjornhilstad, fumal4evr, goranpaues-tradedoubler, jakaarl, esauser, jaa2261, kippm, philci52, shadowmanos, and vitas for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
     <h2 id="6.2.4">Flyway 6.2.4 (2020-02-20)</h2>
 
     <h3>Bug fixes</h3>

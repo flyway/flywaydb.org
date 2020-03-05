@@ -223,6 +223,7 @@ subtitle: 'gradle flywayUndo'
     </tr>
     {% include cfg/oracleSqlplus.html %}
     {% include cfg/oracleSqlplusWarn.html %}
+    {% include cfg/workingDirectory.html %}
     {% include cfg/licenseKey.html %}
     </tbody>
 </table>
@@ -239,7 +240,7 @@ flyway {
     initSql = 'SET ROLE \'myuser\''
     schemas = ['schema1', 'schema2', 'schema3']
     table = 'schema_history'
-    locations = ['classpath:migrations', 'classpath:db/pkg', 'filesystem:/sql-migrations']
+    locations = ['classpath:migrations', 'classpath:db/pkg', 'filesystem:/sql-migrations', 's3:mybucket/sql-migrations']
     sqlMigrationPrefix = 'Migration-'
     undoSqlMigrationPrefix = 'downgrade'
     sqlMigrationSeparator = '__'
@@ -269,6 +270,7 @@ flyway {
     dryRunOutput = '/my/sql/dryrun-outputfile.sql'
     oracleSqlplus = true 
     oracleSqlplusWarn = true 
+    workingDirectory = 'C:/myproject'
 }
 ```
 

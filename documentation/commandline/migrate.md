@@ -311,6 +311,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
     </tr>
     {% include cfg/oracleSqlplus.html %}
     {% include cfg/oracleSqlplusWarn.html %}
+    {% include cfg/workingDirectory.html %}
     {% include cfg/licenseKey.html %}
     </tbody>
 </table>
@@ -328,7 +329,7 @@ flyway.defaultSchema=schema1
 flyway.schemas=schema1,schema2,schema3
 flyway.table=schema_history
 flyway.tablespace=my_tablespace
-flyway.locations=classpath:com.mycomp.migration,database/migrations,filesystem:/sql-migrations
+flyway.locations=classpath:com.mycomp.migration,database/migrations,filesystem:/sql-migrations,s3:mybucket/sql-migrations
 flyway.sqlMigrationPrefix=Migration-
 flyway.undoSqlMigrationPrefix=downgrade
 flyway.repeatableSqlMigrationPrefix=RRR
@@ -363,6 +364,7 @@ flyway.errorOverrides=99999:17110:E,42001:42001:W
 flyway.dryRunOutput=/my/sql/dryrun-outputfile.sql
 flyway.oracle.sqlplus=true
 flyway.oracle.sqlplusWarn=true
+flyway.workingDirectory=C:/myProject
 ```
 
 ## Sample output

@@ -166,6 +166,7 @@ Repairs the Flyway schema history table. This will perform the following actions
         <td>false</td>
         <td>Whether default built-in callbacks (sql) should be skipped. If true, only custom callbacks are used.</td>
     </tr>
+    {% include cfg/workingDirectory.html %}
     {% include cfg/licenseKey.html %}
 </table>
 
@@ -181,7 +182,7 @@ flyway {
     initSql = 'SET ROLE \'myuser\''
     schemas = ['schema1', 'schema2', 'schema3']
     table = 'schema_history'
-    locations = ['classpath:migrations1', 'migrations2', 'filesystem:/sql-migrations']
+    locations = ['classpath:migrations1', 'migrations2', 'filesystem:/sql-migrations', 's3:mybucket/sql-migrations']
     sqlMigrationPrefix = 'Migration-'
     undoSqlMigrationPrefix = 'downgrade'
     repeatableSqlMigrationPrefix = 'RRR'
@@ -199,6 +200,7 @@ flyway {
     skipDefaultResolvers = false
     callbacks = ['com.mycompany.proj.CustomCallback', 'com.mycompany.proj.AnotherCallback']
     skipDefaultCallbacks = false
+    workingDirectory = 'C:/myproject'
 }
 ```
 

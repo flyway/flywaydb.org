@@ -33,7 +33,7 @@ All editions are supported, including XE.
 </tr>
 <tr>
 <th>Maven Central coordinates</th>
-<td><code>com.oracle.jdbc:ojdbc8:jar:18.3.0.0</code></td>
+<td><code>com.oracle.ojdbc:ojdbc8:19.3.0.0</code></td>
 </tr>
 <tr>
 <th>Supported versions</th>

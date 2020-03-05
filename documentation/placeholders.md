@@ -7,11 +7,14 @@ subtitle: Placeholders
 In addition to regular SQL syntax, Flyway also supports placeholder replacement with configurable pre- and suffixes.
 By default it looks for Ant-style placeholders like `${myplaceholder}`. This can be very useful to abstract differences between environments.
 
+Changing the value of placeholders will cause repeatable migrations to be re-applied on next migrate.
+
 Flyway also provides default placeholders, whose values are automatically populated:
 
-- `${flyway:defaultSchema}`
-- `${flyway:user}`
-- `${flyway:database}`
+- `${flyway:defaultSchema}` = The default schema for Flyway
+- `${flyway:user}` = The user Flyway will use to connect to the database
+- `${flyway:database}` = The name of the database from the connection url
+- `${flyway:timestamp}` = The time that Flyway parsed the migration, formatted as 'yyyy-MM-dd HH:mm:ss'
 
 ### Example
 Here is a small example of the supported syntax:

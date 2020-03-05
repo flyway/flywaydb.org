@@ -101,6 +101,7 @@ Baselines an existing database, excluding all migrations up to and including `ba
         <td>The description to tag an existing schema with when executing baseline</td>
     </tr>
     {% include cfg/validateMigrationNaming.html %}
+    {% include cfg/workingDirectory.html %}
     {% include cfg/licenseKey.html %}
     </tbody>
 </table>
@@ -121,6 +122,7 @@ flyway.callbacks=com.mycomp.project.CustomCallback,com.mycomp.project.AnotherCal
 flyway.skipDefaultCallbacks=false
 flyway.baselineVersion=1.0
 flyway.baselineDescription=Base Migration
+flyway.workingDirectory=C:/myProject
 ```
 
 ## Sample output

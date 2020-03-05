@@ -59,11 +59,12 @@ These are the settings supported via config files:
 # Informix*         : jdbc:informix-sqli://<host>:<port>/<database>:informixserver=dev
 # MariaDB           : jdbc:mariadb://<host>:<port>/<database>?<key1>=<value1>&<key2>=<value2>...
 # MySQL             : jdbc:mysql://<host>:<port>/<database>?<key1>=<value1>&<key2>=<value2>...
-# Oracle*           : jdbc:oracle:thin:@//<host>:<port>/<service>
-# Oracle* (TNS)**   : jdbc:oracle:thin:@<tns_entry>
+# Oracle            : jdbc:oracle:thin:@//<host>:<port>/<service>
+# Oracle (TNS)**    : jdbc:oracle:thin:@<tns_entry>
 # PostgreSQL        : jdbc:postgresql://<host>:<port>/<database>?<key1>=<value1>&<key2>=<value2>...
 # SAP HANA*         : jdbc:sap://<host>:<port>/?databaseName=<database>
-# SQL Server        : jdbc:sqlserver:////<host>:<port>;databaseName=<database>
+# Snowflake*        : jdbc:snowflake://<account>.snowflakecomputing.com/?db=<database>&warehouse=<warehouse>&role=<role>...
+# SQL Server        : jdbc:sqlserver://<host>:<port>;databaseName=<database>
 # SQLite            : jdbc:sqlite:<database>
 # Sybase ASE        : jdbc:jtds:sybase://<host>:<port>/<database>
 # Redshift*         : jdbc:redshift://<host>:<port>/<database>
@@ -72,7 +73,8 @@ flyway.url=
 # Fully qualified classname of the JDBC driver (autodetected by default based on flyway.url)
 # flyway.driver=
 
-# User to use to connect to the database. Flyway will prompt you to enter it if not specified.
+# User to use to connect to the database. Flyway will prompt you to enter it if not specified, and if the JDBC
+# connection is not using a password-less method of authentication.
 # flyway.user=
 
 # Password to use to connect to the database. Flyway will prompt you to enter it if not specified, and if the JDBC
@@ -87,14 +89,20 @@ flyway.url=
 # The SQL statements to run to initialize a new database connection immediately after opening it. (default: none)
 # flyway.initSql=
 
-# Comma-separated list of schemas managed by Flyway. These schema names are case-sensitive.
+# The default schema managed by Flyway. This schema name is case-sensitive. If not specified, but <i>flyway.schemas</i> is, Flyway uses the first schema
+# in that list. If that is also not specified, Flyway uses the default schema for the database connection.
 # Consequences:
-# - Flyway will automatically attempt to create all these schemas, unless the first one already exists.
-# - The first schema in the list will be automatically set as the default one during the migration.
-# - The first schema in the list will also be the one containing the schema history table.
+# - This schema will be the one containing the schema history table.
+# - This schema will be the default for the database connection (provided the database supports this concept).
+# flyway.defaultSchema=
+
+# Comma-separated list of schemas managed by Flyway. These schema names are case-sensitive. If not specified, Flyway uses
+# the default schema for the database connection. If <i>flyway.defaultSchema</i> is not specified, then the first of
+# this list also acts as default schema.
+# Consequences:
+# - Flyway will automatically attempt to create all these schemas, unless they already exist.
 # - The schemas will be cleaned in the order of this list.
-# - If Flyway created them, the schemas themselves will as be dropped when cleaning.
-# (default: The default schema for the database connection)
+# - If Flyway created them, the schemas themselves will be dropped when cleaning.
 # flyway.schemas=
 
 # Name of Flyway's schema history table (default: flyway_schema_history)
@@ -104,9 +112,10 @@ flyway.url=
 # schema of the list.
 # flyway.table=
 
-# The tablespace where to create the schema history table that will be used by Flyway.
-# This setting is only relevant for databases that do support the notion of tablespaces. It's value is simply
-# ignored for all others. (default: The default tablespace for the database connection)
+# The tablespace where to create the schema history table that will be used by Flyway. If not specified, Flyway uses
+# the default tablespace for the database connection.
+# This setting is only relevant for databases that do support the notion of tablespaces. Its value is simply
+# ignored for all others.
 # flyway.tablespace=
 
 # Comma-separated list of locations to scan recursively for migrations. (default: filesystem:<<INSTALL-DIR>>/sql)
@@ -173,7 +182,8 @@ flyway.url=
 # Flyway Pro and Flyway Enterprise only
 # flyway.batch=
 
-# Encoding of SQL migrations (default: UTF-8)
+# Encoding of SQL migrations (default: UTF-8). Caution: changing the encoding after migrations have been run
+# will invalidate the calculated checksums and require a `flyway repair`.
 # flyway.encoding=
 
 # Whether placeholders should be replaced. (default: true)
@@ -207,7 +217,7 @@ flyway.url=
 # Warning ! Do not enable in production !
 # flyway.cleanOnValidationError=
 
-# Whether to disabled clean. (default: false)
+# Whether to disable clean. (default: false)
 # This is especially useful for production environments where running clean can be quite a career limiting move.
 # flyway.cleanDisabled=
 
@@ -281,7 +291,7 @@ flyway.url=
 # true to continue normally and log a warning, false to fail fast with an exception. (default: true)
 # flyway.ignoreFutureMigrations=
 
-# Whether to ignore migrations and callbacks whose scripts do not obey the correct naming convention. A failure can be
+# Whether to validate migrations and callbacks whose scripts do not obey the correct naming convention. A failure can be
 # useful to check that errors such as case sensitivity in migration prefixes have been corrected.
 # false to continue normally, true to fail fast with an exception (default: false)
 # flyway.validateMigrationNaming=
