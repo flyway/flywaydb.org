@@ -8,7 +8,7 @@ subtitle: 'mvn flyway:repair'
 Repairs the Flyway schema history table. This will perform the following actions:
 - Remove any failed migrations on databases without DDL transactions<br/>
   (User objects left behind must still be cleaned up manually)
-- Realign the checksums, descriptions and types of the applied migrations with the ones of the available migrations</li>
+- Realign the checksums, descriptions and types of the applied migrations with the ones of the available migrations
 
 <a href="/documentation/command/repair"><img src="/assets/balsamiq/command-repair.png" alt="repair"></a>
 
