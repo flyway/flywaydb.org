@@ -163,8 +163,15 @@ Example: <code>jdbc:sqlserver://<i>host</i>:<i>port</i>;databaseName=<i>database
 
 ## Limitations
 
-- When setting `flyway.schemas`, the first schema is not set as the default as SQL Server is unable to change the default schema for a session.
-[Placeholders](https://flywaydb.org/documentation/migrations#placeholder-replacement) can be used to work around this limitation. 
+- SQL Server is unable to change the default schema for a session. Therefore, setting the `flyway.defaultSchema` property
+has no value, unless used for a [Placeholder](https://flywaydb.org/documentation/migrations#placeholder-replacement) in
+your sql scripts. If you decide to use `flyway.defaultSchema`, it also must exist in `flyway.schemas`.
+- By default, the flyway schema history table will try to write to the default schema for the database connection. You may
+specify which schema to write this table to by setting `flyway.schemas=custom_schema`, as the first entry will become the
+default schema if `flyway.defaultSchema` itself is not set.
+- With these limitations in mind, please refer to the properties or
+[Options](https://flywaydb.org/documentation/commandline/migrate#defaultSchema) mentioned here for descriptions / 
+consequences.
 
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/database/db2">DB2 <i class="fa fa-arrow-right"></i></a>
