@@ -8,18 +8,25 @@ subtitle: Release Notes
 <p>Thank you all for reporting all these issues and contributing fixes!</p>
 
 <div class="release">
-    <h2 id="6.3.1">Flyway 6.3.1 (unreleased)</h2>
+    <h2 id="6.3.1">Flyway 6.3.1 (2020-03-13)</h2>
+
+    <h3>Changes</h3>
+    <ul>
+        {% include issue.html id="2709" title="flyway.url must be set when running command but already set in flyway.conf" %}
+        {% include issue.html id="2447" title="Cleaning dry-runs" %}
+    </ul>
 
     <h3>Bug fixes</h3>
     <ul>
-        {% include issue.html id="2699" title="Change to sample <code>flyway.conf</code> so that simply pasting parameters at top doesn't result in error" %}
+        {% include issue.html id="2699" title="Default placeholder is not populated" %}
+        {% include issue.html id="2702" title="Building against enterprise flyway command line with gradle fails" %}
+        {% include issue.html id="2707" title="Flyway does not execute SQL in a migration to create a MySQL procedure when it contains <code>DROP TABLE IF EXISTS</code>" %}
+        {% include issue.html id="2715" title="Flyway parsing bug: unable to decrease block depth below 0 in version 6.3.0" %}
     </ul>
-
     <p>
-        Thanks to Nick Edwards for reporting these issues and/or submitting pull requests.
+        Thanks to AigleeK, feoktant, James Ball, Nick Edwards, Rafael Trevisan, for reporting these issues and/or submitting pull requests.
     </p>
 </div>
-
 
 <div class="release">
     <h2 id="6.3.0">Flyway 6.3.0 (2020-03-05)</h2>
