@@ -121,6 +121,8 @@ SQL Server Authentication works 'out-of-the-box' with Flyway, whereas Windows Au
 
 The instructions provided here are adapted from the [Microsoft JDBC Driver for SQL Server documentation](https://docs.microsoft.com/en-us/sql/connect/jdbc/microsoft-jdbc-driver-for-sql-server?view=sql-server-ver15). Refer to this when troubleshooting authentication problems.
 
+**Note** These instructions may be incomplete. Flyway depends on Microsoft's JDBC drivers, which in turn have many environmental dependencies to enable different authentication types. You may have to perform your own research to get the JDBC driver working for the different authentication types.
+
 ## SQL Server Authentication
 
 This uses a straightforward username and password to authenticate. Provide these with the `user` and `password` configuration options.
@@ -157,7 +159,9 @@ For instance, to enable `ActiveDirectoryIntegrated` in your JDBC connection stri
 
 Example: <code>jdbc:sqlserver://<i>host</i>:<i>port</i>;databaseName=<i>database</i>;authentication=ActiveDirectoryIntegrated</code>.
 
-[The Microsoft documentation has complete details about how these work with JDBC URLs](https://docs.microsoft.com/en-us/sql/connect/jdbc/connecting-using-azure-active-directory-authentication?view=sql-server-ver15).
+You may also need to add ADAL4J and its dependencies to your classpath. See [the ADAL4J GitHub page](https://github.com/AzureAD/azure-activedirectory-library-for-java).
+
+[The Microsoft documentation has more details about how these work with JDBC URLs](https://docs.microsoft.com/en-us/sql/connect/jdbc/connecting-using-azure-active-directory-authentication?view=sql-server-ver15).
 
 *Flyway doesn't support Azure Active Directory with MFA, as it is [not supported by the Microsoft JDBC drivers](https://github.com/microsoft/mssql-jdbc/issues/1053).
 
