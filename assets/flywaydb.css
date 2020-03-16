@@ -815,3 +815,86 @@ a.download:hover, a.download:focus {
     padding: 0;
     text-align: center;
 }
+
+/* Newsletter sign up 
+   Make the Marketo form look like MailChimp */
+#newsletter-sign-up .mktoForm {
+    width: auto !important;
+    text-align: center;
+}
+
+#newsletter-sign-up .mktoForm * {
+    float: none;
+    text-align: inherit;
+}
+
+#newsletter-sign-up label,
+#newsletter-sign-up .mktoGutter,
+#newsletter-sign-up .mktoOffset {
+    display: none;
+}
+
+#newsletter-sign-up .mktoForm {
+    display: inline-table;
+    vertical-align: middle;
+}
+
+#newsletter-sign-up .mktoForm > div {
+    display: table-cell;
+}
+
+#newsletter-sign-up .mktoButtonWrap {
+    margin-left: 0 !important;
+}
+
+#newsletter-sign-up input[type="email"],
+#newsletter-sign-up [type="submit"] {
+    border-radius: 6px;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    position: relative;
+}
+
+body.home #newsletter-sign-up input[type="email"],
+body.home #newsletter-sign-up [type="submit"] {
+    height: 46px;
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+}
+
+#newsletter-sign-up input[type="email"] {
+    border: 1px solid #ccc;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 172px !important;
+    color: #555;
+    background-color: #fff;
+    text-align: left;
+}
+
+body.home #newsletter-sign-up input[type="email"] {
+    width: 222px !important;
+}
+
+#newsletter-sign-up [type="submit"] {
+    border-color: #2e6da4;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background-color: #0166AE;
+    color: #FFF;
+    left: -2px;
+}
+
+#newsletter-sign-up [type="submit"]:hover {
+    background-color: #286090;
+    border-color: #204d74;
+}
+
+#newsletter-sign-up p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+}
