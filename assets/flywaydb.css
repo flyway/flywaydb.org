@@ -818,6 +818,11 @@ a.download:hover, a.download:focus {
 
 /* Newsletter sign up 
    Make the Marketo form look like MailChimp */
+body.download #newsletter-sign-up {
+    margin-top: 0;
+    text-align: left;
+}
+
 #newsletter-sign-up .mktoForm {
     width: auto !important;
     text-align: center;
@@ -897,4 +902,8 @@ body.home #newsletter-sign-up input[type="email"] {
     font-size: 16px;
     font-weight: bold;
     color: #555;
+}
+
+body.download #newsletter-sign-up h3 {
+    display: none;
 }
