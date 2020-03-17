@@ -65,8 +65,6 @@ We also use third-party services to help us identify visitors to our website to 
 
 We rely on the lawful basis of legitimate interests to process this data.
 
-Our website search is powered by Google. Search queries and results are logged anonymously to help us improve our website and search functionality. No user-specific data is collected by either Redgate or any third party.
-
 ### How we use cookies
 
 Your web browser allows you to control whether cookies can be stored by our websites. However, disabling cookies will prevent certain parts of our websites from working correctly. Your web browser’s documentation has more information on controlling cookie behavior.
