@@ -220,6 +220,20 @@ Finally, Flyway can also be configured by passing arguments directly from the co
 
 <pre class="console"><span>&gt;</span> flyway -user=myuser -schemas=schema1,schema2 -placeholders.keyABC=valueXYZ migrate</pre>
 
+### A note on escaping command-line arguments
+
+Some command-line arguments will need care as specific characters may be interpreted differently depending on the
+shell you are working in. The `url` parameter is particularly affected when it contains extra parameters with
+equals `=` and ampersands `&`. For example:
+
+**bash** and **Windows cmd**: use double-quotes:
+
+<pre class="console"><span>&gt;</span> flyway info -url="jdbc:snowflake://ab12345.snowflakecomputing.com/?db=demo_db&user=foo&password=bar"</pre>
+
+**Powershell**: use double-quotes inside single-quotes:
+
+<pre class="console"><span>&gt;</span> ./flyway info -url='"jdbc:snowflake://ab12345.snowflakecomputing.com/?db=demo_db&user=foo&password=bar"'</pre>
+ 
 ### Overriding order
 
 The Flyway command-line tool has been carefully designed to load and override configuration in a sensible order.
