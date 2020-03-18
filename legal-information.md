@@ -57,16 +57,21 @@ This privacy notice tells you what to expect when Boxfuse collects personal info
 
 ### Visiting our websites
 
-When you visit one of our websites, we collect standard internet log information and details of visitor behaviour patterns, including using third-party analytics services (such as Google Analytics). 
+When you visit one of our websites, we collect standard internet log information and details of visitor behavior patterns, including through the use of third-party analytics services (such as Google Analytics). We do this to understand how people are using our websites, to manage their operation and to diagnose any problems. We retain these logs for up to three months.
 
-We do this to understand how people are using our websites, to manage their operation and to diagnose any problems.
+We use Marketo to track your engagement with our website, and help give you the most relevant information on our products and solutions. This data is visible to our sales and marketing teams. We keep data you have provided to us, for example if you fill out a form on our website, for the duration of our commercial relationship with you.
+
+We also use third-party services to help us identify visitors to our website to improve the way we offer our products and services.
+
+We rely on the lawful basis of legitimate interests to process this data.
 
 ### How we use cookies
 
-Your web browser allows you to control whether cookies can be stored by our websites. Your web browser’s documentation has more information on controlling cookie behaviour.
+Your web browser allows you to control whether cookies can be stored by our websites. However, disabling cookies will prevent certain parts of our websites from working correctly. Your web browser’s documentation has more information on controlling cookie behavior.
 
 We use cookies on our websites to:
 
+- Track the success of our marketing and advertising campaigns
 - Analyze the way people use our websites
 - Gather data on how our websites are performing
 
@@ -115,7 +120,9 @@ If you choose not to include diagnostic data with an error report, an anonymous 
 
 ### Sharing your information with third parties
 
-Boxfuse uses select third parties to help us process data which helps us deliver our products and services to you. We do not sell any data regarding your use of our products or services except as part of a reorganization or a sale of the assets of Boxfuse, and we will ensure that your privacy continues to be protected.
+Redgate uses select organizations to help us process data which helps us deliver our products and services to you. We will not sell any data regarding your use of our products or services except as part of a reorganization or a sale of the assets of Redgate, and we will ensure that your privacy continues to be protected.
+
+If you're a customer, potential customer, or you otherwise have a commercial relationship with Redgate, you can find the current list of organizations [here](https://www.red-gate.com/website/third-parties).
 
 ### Transferring your information outside of the European Economic Area
 
