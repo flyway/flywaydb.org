@@ -995,3 +995,7 @@ body.download #newsletter-sign-up h3 {
     background-color: #286090;
     border-color: #204d74;
 }
+
+#flyway-trial-license-modal .mktoForm .mktoRequiredField label:after {
+    content: ' (required)';
+}
