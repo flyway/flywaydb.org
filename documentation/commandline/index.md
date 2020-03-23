@@ -273,11 +273,42 @@ following:
  - the Apache Commons Logging framework <code>org.apache.commons.logging.Log</code> 
  - SLF4J <code>org.slf4j.Logger</code>
  - the Android builtin log <code>android.util.Log</code>
- 
+
+The simplest pattern to achieve this is to put all the necessary jar files in Flyway's `lib` folder and any 
+configuration in the FLyway root folder. 
 For example, if you wished to use <b>log4j</b> with the Flyway command line, you would achieve this by placing the 
-relevant jar file <code>jog4j-&lt;version&gt;.jar</code> into Flyway's <code>lib</code> folder, and the corresponding
-configuration file <code>log4j.xml</code> into the top level Flyway folder. If you are building Flyway into a larger
-application, this means you do not need to explicitly wire up any logging if you use one of these frameworks. 
+log4j jar file <code>log4j-&lt;version&gt;.jar</code> and the corresponding
+configuration file <code>log4j.xml</code> like this: 
+
+<pre class="filetree"><i class="fa fa-folder-open"></i> flyway-{{site.flywayVersion}}
+  <i class="fa fa-folder"></i> conf
+  <i class="fa fa-folder"></i> drivers        
+  <i class="fa fa-folder"></i> jars           
+  <i class="fa fa-folder"></i> jre
+  <i class="fa fa-folder-open"></i> lib
+    <span><i class="fa fa-file-text"></i> log4j-2.13.1.jar</span>          <i class="fa fa-long-arrow-left"></i> log4j jar
+  <i class="fa fa-folder"></i> licenses
+  <i class="fa fa-folder"></i> sql            
+  <span><i class="fa fa-file"></i> log4j.xml</span>                   <i class="fa fa-long-arrow-left"></i> log4j configuration
+</pre>
+
+Similarly, to use <b>Logback</b> add the relevant files like this:
+
+<pre class="filetree"><i class="fa fa-folder-open"></i> flyway-{{site.flywayVersion}}
+  <i class="fa fa-folder"></i> conf
+  <i class="fa fa-folder"></i> drivers        
+  <i class="fa fa-folder"></i> jars           
+  <i class="fa fa-folder"></i> jre
+  <i class="fa fa-folder-open"></i> lib
+    <span><i class="fa fa-file-text"></i> logback-classic.1.1.7.jar</span> <i class="fa fa-long-arrow-left"></i> Logback jar
+    <span><i class="fa fa-file-text"></i> logback-core-1.1.7.jar</span>    <i class="fa fa-long-arrow-left"></i> Logback jar
+    <span><i class="fa fa-file-text"></i> slf4j-api-1.7.21.jar</span>      <i class="fa fa-long-arrow-left"></i> Logback dependency
+  <i class="fa fa-folder"></i> licenses
+  <i class="fa fa-folder"></i> sql            
+  <span><i class="fa fa-file"></i> logback.xml</span>                 <i class="fa fa-long-arrow-left"></i> Logback configuration
+</pre>
+
+If you are building Flyway into a larger application, this means you do not need to explicitly wire up any logging if you use one of these frameworks. 
 
 ### Colors
 
