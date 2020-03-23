@@ -12,10 +12,15 @@ subtitle: Release Notes
 
     <h3>Bug fixes</h3>
     <ul>
-        {% include issue.html id="2132" title="Support user and passwird in PostgreSQL JDBC URL" %}
+        {% include issue.html id="2132" title="Command line should not prompt for values if user and/or password are in PostgreSQL JDBC URL" %}
+        {% include issue.html id="2720" title="MySQL parser: block depth error with IF NOT EXISTS" %}
+        {% include issue.html id="2724" title="SAP HANA parser: error on creating function" %}
+        {% include issue.html id="2726" title="MySQL parser: error when delimiter changed inside statement" %}
+        {% include issue.html id="2727" title="Flyway shouldn't try to colorize output when no `System.console()`" %}
+        {% include issue.html id="2733" title="SAP HANA parser: error on CASE ... END; IF ..." %}
     </ul>
     <p>
-        Thanks to Al Johri for reporting these issues.
+        Thanks to Al Johri, Damjan Vujnovic, James Ball, Jonas Karlsson and stesix for reporting these issues.
     </p>
 </div>
 
