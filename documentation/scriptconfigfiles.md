@@ -12,6 +12,8 @@ the migration file name, with the `.conf` suffix added.
 
 For example, a migration file `V2__my_script.sql` would have a script configuration file `V2__my_script.sql.conf`.
 
+Script Config Files have a separate set of options from the other ways of configuring Flyway (e.g. `flyway.conf`). See the Reference at the bottom of the page for the complete list of options.
+
 ## Structure
 
 Script config files have the following structure:
