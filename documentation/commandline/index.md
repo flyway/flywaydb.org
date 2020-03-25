@@ -226,7 +226,7 @@ Some command-line arguments will need care as specific characters may be interpr
 shell you are working in. The `url` parameter is particularly affected when it contains extra parameters with
 equals `=` and ampersands `&`. For example:
 
-**bash** and **Windows cmd**: use double-quotes:
+**bash**, **macOS terminal** and **Windows cmd**: use double-quotes:
 
 <pre class="console"><span>&gt;</span> flyway info -url="jdbc:snowflake://ab12345.snowflakecomputing.com/?db=demo_db&user=foo&password=bar"</pre>
 
