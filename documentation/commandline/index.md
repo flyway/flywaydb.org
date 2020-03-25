@@ -228,11 +228,11 @@ equals `=` and ampersands `&`. For example:
 
 **bash**, **macOS terminal** and **Windows cmd**: use double-quotes:
 
-<pre class="console"><span>&gt;</span> flyway info -url="jdbc:snowflake://ab12345.snowflakecomputing.com/?db=demo_db&user=foo&password=bar"</pre>
+<pre class="console"><span>&gt;</span> flyway info -url="jdbc:snowflake://ab12345.snowflakecomputing.com/?db=demo_db&user=foo"</pre>
 
 **Powershell**: use double-quotes inside single-quotes:
 
-<pre class="console"><span>&gt;</span> ./flyway info -url='"jdbc:snowflake://ab12345.snowflakecomputing.com/?db=demo_db&user=foo&password=bar"'</pre>
+<pre class="console"><span>&gt;</span> ./flyway info -url='"jdbc:snowflake://ab12345.snowflakecomputing.com/?db=demo_db&user=foo"'</pre>
  
 ### Overriding order
 
