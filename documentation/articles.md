@@ -11,6 +11,9 @@ subtitle: Articles
 
 <h2>English</h2>
 
+<p><strong><a href="https://community.snowflake.com/s/article/Snowflake-CI-CD-using-Flyway-and-Azure-DevOps-Pipeline-Part-1">
+Snowflake CI/CD using Flyway and Azure Devops Pipeline</a></strong> by Yong Ji</p>
+
 <p><strong><a href="http://www.mastertheboss.com/other/flyway/performing-a-flyway-migration-with-quarkus-and-thorntail">Performing a FlyWay migration with Quarkus and Thorntail </a>
 </strong> by Francesco Marchioni<br/></p>
 
