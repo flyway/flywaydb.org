@@ -1,38 +1,34 @@
-<script src="//content.red-gate.com/js/forms2/js/forms2.min.js"></script>
-
 <div class="modal fade" id="flyway-trial-license-modal" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">License Agreement</h4>
-            </div>
-            <div class="modal-body">
-                <p>Complete the form to receive a trial license key for your organisation. </p>
-                <form id="mktoForm_2819"></form>
-            </div>
+            <form id="trial_form" action="javascript:hideAndSubmitTrialForm();">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">License Agreement</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Complete the form to receive a trial license key for your organisation. </p>
+                    <div class="form-group">
+                        <label for="inputCompany">Organisation name (required)</label>
+                        <input type="text" class="form-control" id="inputCompany" placeholder="My Company, Inc" required autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail">Email address (required)</label>
+                        <input type="email" class="form-control" id="inputEmail" placeholder="email@mycompany.com" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" id="newsletterWanted">
+                        <b>Sign me up to the newsletter for getting-started guides and product update information</b>
+                    </div>
+                    <p>By submitting this form you confirm that you have read and agree to the terms of the edition you wish to use:
+                        <a href="/licenses/flyway-pro.txt" target="_blank">Flyway Pro license</a> /
+                        <a href="/licenses/flyway-enterprise.txt" target="_blank">Flyway Enterprise license</a>.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">I do not agree</button>
+                    <button type="submit" class="btn btn-primary">I agree, email me the license key</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
-
-<script>MktoForms2.loadForm("//content.red-gate.com", "808-ITG-788", 2819, function(marketoForm) {
-
-    // Update the checkbox label(s).
-    var form = marketoForm.getFormElem().get(0);
-    var checkboxes = form.querySelectorAll('[type="checkbox"]');
-    for (var i=0; i<checkboxes.length; i++) {
-        var checkbox = checkboxes[i];
-        var labels = form.querySelectorAll('label[for="' + checkbox.getAttribute('name') + '"]');
-        var labelText = labels[0].innerText.replace('*', '');
-        for (var l=0; l<labels.length; l++) {
-            labels[l].innerText = labelText;
-        }
-        labels[0].parentElement.removeChild(labels[0]);
-    }
-
-    // On a successful submission, hide and submit trial form.
-    marketoForm.onSuccess(function(formData) {
-        hideAndSubmitTrialForm(formData);
-        return false;
-    });
-});</script>
