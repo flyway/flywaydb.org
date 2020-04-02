@@ -175,17 +175,24 @@ Placeholder replacement works just like it does for <a href="/documentation/migr
 Optionally the callback may also include a description. In that case the callback name is composed of the event name,
 the separator, the description and the suffix. Example: `beforeRepair__vacuum.sql`.
 
-When multiple SQL callbacks for the same event are found, they are executed in the order of their description.
-
 **Note:** Flyway will also honor any `sqlMigrationSuffixes` you have configured, when scanning for SQL callbacks.
 
 ## Java Callbacks
 
 If SQL Callbacks aren't flexible enough for you, you have the option to implement the
 [**Callback**](/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback)
-interface yourself. You can even hook multiple Callback implementations in the lifecycle.
+interface yourself. You can even hook multiple Callback implementations in the lifecycle. Java callbacks have the
+additional flexibility that a single Callback implementation can handle multiple lifecycle events, and are
+therefore not bound by the SQL callback naming convention.
 
 **More info:** [Java-based Callbacks](/documentation/api/hooks#callsbacks)
+
+## Callback ordering
+
+When multiple callbacks for the same event are found, they are executed in the following order:
+
+- Java callbacks, in the order in which they are specified in the `callbacks` configuration property
+- SQL callbacks, in alphabetic order of their description.
 
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/erroroverrides">Error Overrides <i class="fa fa-arrow-right"></i></a>
