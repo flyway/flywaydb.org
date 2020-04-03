@@ -32,7 +32,12 @@
 
     // On a successful submission, hide and submit trial form.
     marketoForm.onSuccess(function(formData) {
-        hideAndSubmitTrialForm(formData);
+        // Wait a second to give Marketo time to enter the person into the database
+        // before doing the POST request in hideAndSubmitTrialForm().
+        window.setTimeout(function(){
+            hideAndSubmitTrialForm(formData);
+        }, 1000);
+        
         return false;
     });
 });</script>
