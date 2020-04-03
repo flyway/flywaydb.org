@@ -85,14 +85,14 @@ Contact us for more information at **sales@flywaydb.org**.
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">License Agreement</h4>
+        <h4 class="modal-title" id="myModalLabel">Webshop maintenance</h4>
       </div>
       <div class="modal-body">
-        By downloading the Flyway Pro Edition you confirm to have read and that you agree to the terms of the <a href="/licenses/flyway-pro" target="_blank">Flyway Pro Edition License</a>.
+        <p>⚠️ The Flyway webshop will be unavailable from 17:00 GMT on Friday 3rd April 2020 until 10:00 GMT on Monday 6th April.</p> 
+        <p>If you have a sales enquiry during this time, please contact <a href="mailto:sales@flywaydb.org?subject=Flyway Pro enquiry" title="Enquire about Flyway Pro">sales@flywaydb.org</a>.</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">I do not agree</button>
-        <a data-fsc-action="Reset,Add,Update,Checkout" data-fsc-item-path-value="flyway-pro-2017" data-fsc-item-quantity-value="1" data-dismiss="modal" class="btn btn-primary" href="javascript:$('#flyway-pro-1-license-modal').modal('hide');">I agree</a>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
       </div>
     </div>
   </div>
@@ -103,14 +103,14 @@ Contact us for more information at **sales@flywaydb.org**.
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">License Agreement</h4>
+        <h4 class="modal-title" id="myModalLabel">Webshop maintenance</h4>
       </div>
       <div class="modal-body">
-        By downloading the Flyway Pro Edition you confirm to have read and that you agree to the terms of the <a href="/licenses/flyway-pro" target="_blank">Flyway Pro Edition License</a>.
+        <p>⚠️ The Flyway webshop will be unavailable from 17:00 GMT on Friday 3rd April 2020 until 10:00 GMT on Monday 6th April.</p> 
+        <p>If you have a sales enquiry during this time, please contact <a href="mailto:sales@flywaydb.org?subject=Flyway Pro enquiry" title="Enquire about Flyway Pro">sales@flywaydb.org</a>.</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">I do not agree</button>
-        <a data-fsc-action="Reset,Add,Update,Checkout" data-fsc-item-path-value="flyway-pro-2017" data-fsc-item-quantity-value="2" data-dismiss="modal" class="btn btn-primary" href="javascript:$('#flyway-pro-2-license-modal').modal('hide');">I agree</a>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
       </div>
     </div>
   </div>
@@ -121,14 +121,14 @@ Contact us for more information at **sales@flywaydb.org**.
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">License Agreement</h4>
+        <h4 class="modal-title" id="myModalLabel">Webshop maintenance</h4>
       </div>
       <div class="modal-body">
-        By downloading the Flyway Pro Edition you confirm to have read and that you agree to the terms of the <a href="/licenses/flyway-pro" target="_blank">Flyway Pro Edition License</a>.
+        <p>⚠️ The Flyway webshop will be unavailable from 17:00 GMT on Friday 3rd April 2020 until 10:00 GMT on Monday 6th April.</p> 
+        <p>If you have a sales enquiry during this time, please contact <a href="mailto:sales@flywaydb.org?subject=Flyway Pro enquiry" title="Enquire about Flyway Pro">sales@flywaydb.org</a>.</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">I do not agree</button>
-        <a data-fsc-action="Reset,Add,Update,Checkout" data-fsc-item-path-value="flyway-pro-2017" data-fsc-item-quantity-value="3" data-dismiss="modal" class="btn btn-primary" href="javascript:$('#flyway-pro-3-license-modal').modal('hide');">I agree</a>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
       </div>
     </div>
   </div>
@@ -139,14 +139,14 @@ Contact us for more information at **sales@flywaydb.org**.
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">License Agreement</h4>
+        <h4 class="modal-title" id="myModalLabel">Webshop maintenance</h4>
       </div>
       <div class="modal-body">
-        By downloading the Flyway Pro Edition you confirm to have read and that you agree to the terms of the <a href="/licenses/flyway-pro" target="_blank">Flyway Pro Edition License</a>.
+        <p>⚠️ The Flyway webshop will be unavailable from 17:00 GMT on Friday 3rd April 2020 until 10:00 GMT on Monday 6th April.</p> 
+        <p>If you have a sales enquiry during this time, please contact <a href="mailto:sales@flywaydb.org?subject=Flyway Pro enquiry" title="Enquire about Flyway Pro">sales@flywaydb.org</a>.</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">I do not agree</button>
-        <a data-fsc-action="Reset,Add,Update,Checkout" data-fsc-item-path-value="flyway-pro-2017" data-fsc-item-quantity-value="4" data-dismiss="modal" class="btn btn-primary" href="javascript:$('#flyway-pro-4-license-modal').modal('hide');">I agree</a>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
       </div>
     </div>
   </div>
@@ -157,14 +157,14 @@ Contact us for more information at **sales@flywaydb.org**.
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">License Agreement</h4>
+        <h4 class="modal-title" id="myModalLabel">Webshop maintenance</h4>
       </div>
       <div class="modal-body">
-        By downloading the Flyway Pro Edition you confirm to have read and that you agree to the terms of the <a href="/licenses/flyway-pro" target="_blank">Flyway Pro Edition License</a>.
+        <p>⚠️ The Flyway webshop will be unavailable from 17:00 GMT on Friday 3rd April 2020 until 10:00 GMT on Monday 6th April.</p> 
+        <p>If you have a sales enquiry during this time, please contact <a href="mailto:sales@flywaydb.org?subject=Flyway Pro enquiry" title="Enquire about Flyway Pro">sales@flywaydb.org</a>.</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">I do not agree</button>
-        <a data-fsc-action="Reset,Add,Update,Checkout" data-fsc-item-path-value="flyway-pro-2017" data-fsc-item-quantity-value="5" data-dismiss="modal" class="btn btn-primary" href="javascript:$('#flyway-pro-5-license-modal').modal('hide');">I agree</a>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
       </div>
     </div>
   </div>
@@ -175,14 +175,14 @@ Contact us for more information at **sales@flywaydb.org**.
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">License Agreement</h4>
+        <h4 class="modal-title" id="myModalLabel">Webshop maintenance</h4>
       </div>
       <div class="modal-body">
-        By downloading the Flyway Pro Edition you confirm to have read and that you agree to the terms of the <a href="/licenses/flyway-pro" target="_blank">Flyway Pro Edition License</a>.
+        <p>⚠️ The Flyway webshop will be unavailable from 17:00 GMT on Friday 3rd April 2020 until 10:00 GMT on Monday 6th April.</p> 
+        <p>If you have a sales enquiry during this time, please contact <a href="mailto:sales@flywaydb.org?subject=Flyway Pro enquiry" title="Enquire about Flyway Pro">sales@flywaydb.org</a>.</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">I do not agree</button>
-        <a data-fsc-action="Reset,Add,Update,Checkout" data-fsc-item-path-value="flyway-pro-2017" data-fsc-item-quantity-value="6" data-dismiss="modal" class="btn btn-primary" href="javascript:$('#flyway-pro-6-license-modal').modal('hide');">I agree</a>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
       </div>
     </div>
   </div>
@@ -193,14 +193,14 @@ Contact us for more information at **sales@flywaydb.org**.
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">License Agreement</h4>
+        <h4 class="modal-title" id="myModalLabel">Webshop maintenance</h4>
       </div>
       <div class="modal-body">
-        By downloading the Flyway Pro Edition you confirm to have read and that you agree to the terms of the <a href="/licenses/flyway-pro" target="_blank">Flyway Pro Edition License</a>.
+        <p>⚠️ The Flyway webshop will be unavailable from 17:00 GMT on Friday 3rd April 2020 until 10:00 GMT on Monday 6th April.</p> 
+        <p>If you have a sales enquiry during this time, please contact <a href="mailto:sales@flywaydb.org?subject=Flyway Pro enquiry" title="Enquire about Flyway Pro">sales@flywaydb.org</a>.</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">I do not agree</button>
-        <a data-fsc-action="Reset,Add,Update,Checkout" data-fsc-item-path-value="flyway-pro-2017" data-fsc-item-quantity-value="7" data-dismiss="modal" class="btn btn-primary" href="javascript:$('#flyway-pro-7-license-modal').modal('hide');">I agree</a>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
       </div>
     </div>
   </div>
@@ -211,14 +211,14 @@ Contact us for more information at **sales@flywaydb.org**.
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">License Agreement</h4>
+        <h4 class="modal-title" id="myModalLabel">Webshop maintenance</h4>
       </div>
       <div class="modal-body">
-        By downloading the Flyway Pro Edition you confirm to have read and that you agree to the terms of the <a href="/licenses/flyway-pro" target="_blank">Flyway Pro Edition License</a>.
+        <p>⚠️ The Flyway webshop will be unavailable from 17:00 GMT on Friday 3rd April 2020 until 10:00 GMT on Monday 6th April.</p> 
+        <p>If you have a sales enquiry during this time, please contact <a href="mailto:sales@flywaydb.org?subject=Flyway Pro enquiry" title="Enquire about Flyway Pro">sales@flywaydb.org</a>.</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">I do not agree</button>
-        <a data-fsc-action="Reset,Add,Update,Checkout" data-fsc-item-path-value="flyway-pro-2017" data-fsc-item-quantity-value="8" data-dismiss="modal" class="btn btn-primary" href="javascript:$('#flyway-pro-8-license-modal').modal('hide');">I agree</a>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
       </div>
     </div>
   </div>
@@ -229,14 +229,14 @@ Contact us for more information at **sales@flywaydb.org**.
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">License Agreement</h4>
+        <h4 class="modal-title" id="myModalLabel">Webshop maintenance</h4>
       </div>
       <div class="modal-body">
-        By downloading the Flyway Pro Edition you confirm to have read and that you agree to the terms of the <a href="/licenses/flyway-pro" target="_blank">Flyway Pro Edition License</a>.
+        <p>⚠️ The Flyway webshop will be unavailable from 17:00 GMT on Friday 3rd April 2020 until 10:00 GMT on Monday 6th April.</p> 
+        <p>If you have a sales enquiry during this time, please contact <a href="mailto:sales@flywaydb.org?subject=Flyway Pro enquiry" title="Enquire about Flyway Pro">sales@flywaydb.org</a>.</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">I do not agree</button>
-        <a data-fsc-action="Reset,Add,Update,Checkout" data-fsc-item-path-value="flyway-pro-2017" data-fsc-item-quantity-value="9" data-dismiss="modal" class="btn btn-primary" href="javascript:$('#flyway-pro-9-license-modal').modal('hide');">I agree</a>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
       </div>
     </div>
   </div>
@@ -247,14 +247,14 @@ Contact us for more information at **sales@flywaydb.org**.
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">License Agreement</h4>
+        <h4 class="modal-title" id="myModalLabel">Webshop maintenance</h4>
       </div>
       <div class="modal-body">
-        By downloading the Flyway Pro Edition you confirm to have read and that you agree to the terms of the <a href="/licenses/flyway-pro" target="_blank">Flyway Pro Edition License</a>.
+        <p>⚠️ The Flyway webshop will be unavailable from 17:00 GMT on Friday 3rd April 2020 until 10:00 GMT on Monday 6th April.</p> 
+        <p>If you have a sales enquiry during this time, please contact <a href="mailto:sales@flywaydb.org?subject=Flyway Pro enquiry" title="Enquire about Flyway Pro">sales@flywaydb.org</a>.</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">I do not agree</button>
-        <a data-fsc-action="Reset,Add,Update,Checkout" data-fsc-item-path-value="flyway-pro-2017" data-fsc-item-quantity-value="10" data-dismiss="modal" class="btn btn-primary" href="javascript:$('#flyway-pro-9-license-modal').modal('hide');">I agree</a>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
       </div>
     </div>
   </div>
@@ -265,14 +265,14 @@ Contact us for more information at **sales@flywaydb.org**.
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">License Agreement</h4>
+        <h4 class="modal-title" id="myModalLabel">Webshop maintenance</h4>
       </div>
       <div class="modal-body">
-        By downloading the Flyway Pro Edition you confirm to have read and that you agree to the terms of the <a href="/licenses/flyway-pro" target="_blank">Flyway Pro Edition License</a>.
+        <p>⚠️ The Flyway webshop will be unavailable from 17:00 GMT on Friday 3rd April 2020 until 10:00 GMT on Monday 6th April.</p> 
+        <p>If you have a sales enquiry during this time, please contact <a href="mailto:sales@flywaydb.org?subject=Flyway Pro enquiry" title="Enquire about Flyway Pro">sales@flywaydb.org</a>.</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">I do not agree</button>
-        <a data-fsc-action="Reset,Add,Update,Checkout" data-fsc-item-path-value="flyway-pro-site-2019" data-dismiss="modal" class="btn btn-primary" href="javascript:$('#flyway-pro-site-license-modal').modal('hide');">I agree</a>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
       </div>
     </div>
   </div>
