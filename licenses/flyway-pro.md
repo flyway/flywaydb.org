@@ -145,7 +145,7 @@ The Licensee confirms that it accepts and agrees to be legally bound by all term
 
 ## 13. Data collection and Privacy Policy
 
-13.1	Information on the data Licensor collects about Licensee and how Licensor treats that data is set out in Licensor’s Privacy Policy, which can be viewed at:  [https://flywaydb.org/legal-information](https://flywaydb.org/legal-information).
+13.1	Information on the data Licensor collects about Licensee and how Licensor treats that data is set out in Licensor’s Privacy Policy, which can be viewed at:  [https://www.red-gate.com/website/legal](https://www.red-gate.com/website/legal).
 
 ## 14. Third party claims
 
