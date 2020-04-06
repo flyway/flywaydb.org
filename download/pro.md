@@ -18,52 +18,52 @@ All levels come with unlimited database schemas in dev and test
 </thead>
 <tr>
 <td>10 schemas</td>
-<td>950 USD per year<br><span class="note">less than 8 USD per schema per month</span></td>
+<td>960 USD per year<br><span class="note">8 USD per schema per month</span></td>
 <td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-pro-10-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
 </tr>
 <tr>
 <td>20 schemas</td>
-<td>1,900 USD per year<br><span class="note">less than 8 USD per schema per month</span></td>
+<td>1,920 USD per year<br><span class="note">8 USD per schema per month</span></td>
 <td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-pro-20-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
 </tr>
 <tr>
 <td>30 schemas</td>
-<td>2,850 USD per year<br><span class="note">less than 8 USD per schema per month</span></td>
+<td>2,880 USD per year<br><span class="note">8 USD per schema per month</span></td>
 <td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-pro-30-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
 </tr>
 <tr>
 <td>40 schemas</td>
-<td>3,800 USD per year<br><span class="note">less than 8 USD per schema per month</span></td>
+<td>3,840 USD per year<br><span class="note">8 USD per schema per month</span></td>
 <td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-pro-40-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
 </tr>
 <tr>
 <td>50 schemas</td>
-<td>4,750 USD per year<br><span class="note">less than 8 USD per schema per month</span></td>
+<td>4,800 USD per year<br><span class="note">8 USD per schema per month</span></td>
 <td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-pro-50-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
 </tr>
 <tr>
 <td>60 schemas</td>
-<td>5,700 USD per year<br><span class="note">less than 8 USD per schema per month</span></td>
+<td>5,760 USD per year<br><span class="note">8 USD per schema per month</span></td>
 <td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-pro-60-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
 </tr>
 <tr>
 <td>70 schemas</td>
-<td>6,650 USD per year<br><span class="note">less than 8 USD per schema per month</span></td>
+<td>6,720 USD per year<br><span class="note">8 USD per schema per month</span></td>
 <td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-pro-70-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
 </tr>
 <tr>
 <td>80 schemas</td>
-<td>7,600 USD per year<br><span class="note">less than 8 USD per schema per month</span></td>
+<td>7,680 USD per year<br><span class="note">8 USD per schema per month</span></td>
 <td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-pro-80-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
 </tr>
 <tr>
 <td>90 schemas</td>
-<td>8,550 USD per year<br><span class="note">less than 8 USD per schema per month</span></td>
+<td>8,640 USD per year<br><span class="note">8 USD per schema per month</span></td>
 <td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-pro-90-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
 </tr>
 <tr>
 <td>100 schemas</td>
-<td>9,500 USD per year<br><span class="note">less than 8 USD per schema per month</span></td>
+<td>9,600 USD per year<br><span class="note">8 USD per schema per month</span></td>
 <td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-pro-100-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
 </tr>
 <tr>
