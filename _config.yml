@@ -7,3 +7,7 @@ url: https://flywaydb.org
 kramdown:
   input: GFM
   syntax_highlighter: rouge
+plugins:
+  - jekyll-redirect-from
+whitelist:
+  - jekyll-redirect-from
