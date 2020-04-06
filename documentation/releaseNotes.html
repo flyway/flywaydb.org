@@ -8,6 +8,23 @@ subtitle: Release Notes
 <p>Thank you all for reporting all these issues and contributing fixes!</p>
 
 <div class="release">
+    <h2 id="6.3.3">Flyway 6.3.3 (2020-04-06)</h2>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        {% include issue.html id="2701" title="Oracle parser: Improve support for oracle statements separated by a /" %}
+        {% include issue.html id="2716" title="Oracle parser: Don't suppress comments after Sqlplus PROMPT" %}
+        {% include issue.html id="2737" title="MySQL parser: Fix support for block statements with multiple cases denoted by THEN" %}
+        {% include issue.html id="2743" title="Fix memory leak" %}
+        {% include issue.html id="2748" title="DB2 parser: Support CREATE IF NOT EXISTS and DROP IF EXISTS" %}
+    </ul>
+
+    <p>
+        Thanks to JFNGO, JamesGuthrie, SamuraiPrinciple, netsrotr, rafael-trevisan, and sergey-selivanov for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
     <h2 id="6.3.2">Flyway 6.3.2 (2020-03-24)</h2>
 
     <h3>Bug fixes</h3>
