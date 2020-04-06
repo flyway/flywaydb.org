@@ -18,52 +18,52 @@ All levels come with unlimited database schemas in dev and test
 </thead>
 <tr>
 <td>10 schemas</td>
-<td>2,950 USD per year<br><span class="note">less than 25 USD per schema per month</span></td>
+<td>3,000 USD per year<br><span class="note">25 USD per schema per month</span></td>
 <td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-enterprise-10-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
 </tr>
 <tr>
 <td>20 schemas</td>
-<td>5,900 USD per year<br><span class="note">less than 25 USD per schema per month</span></td>
+<td>6,000 USD per year<br><span class="note">25 USD per schema per month</span></td>
 <td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-enterprise-20-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
 </tr>
 <tr>
 <td>30 schemas</td>
-<td>8,850 USD per year<br><span class="note">less than 25 USD per schema per month</span></td>
+<td>9,000 USD per year<br><span class="note">25 USD per schema per month</span></td>
 <td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-enterprise-30-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
 </tr>
 <tr>
 <td>40 schemas</td>
-<td>11,800 USD per year<br><span class="note">less than 25 USD per schema per month</span></td>
+<td>12,000 USD per year<br><span class="note">25 USD per schema per month</span></td>
 <td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-enterprise-40-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
 </tr>
 <tr>
 <td>50 schemas</td>
-<td>14,750 USD per year<br><span class="note">less than 25 USD per schema per month</span></td>
+<td>15,000 USD per year<br><span class="note">25 USD per schema per month</span></td>
 <td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-enterprise-50-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
 </tr>
 <tr>
 <td>60 schemas</td>
-<td>17,700 USD per year<br><span class="note">less than 25 USD per schema per month</span></td>
+<td>18,000 USD per year<br><span class="note">25 USD per schema per month</span></td>
 <td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-enterprise-60-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
 </tr>
 <tr>
 <td>70 schemas</td>
-<td>20,650 USD per year<br><span class="note">less than 25 USD per schema per month</span></td>
+<td>21,000 USD per year<br><span class="note">25 USD per schema per month</span></td>
 <td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-enterprise-70-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
 </tr>
 <tr>
 <td>80 schemas</td>
-<td>23,600 USD per year<br><span class="note">less than 25 USD per schema per month</span></td>
+<td>24,000 USD per year<br><span class="note">25 USD per schema per month</span></td>
 <td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-enterprise-80-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
 </tr>
 <tr>
 <td>90 schemas</td>
-<td>26,550 USD per year<br><span class="note">less than 25 USD per schema per month</span></td>
+<td>27,000 USD per year<br><span class="note">25 USD per schema per month</span></td>
 <td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-enterprise-90-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
 </tr>
 <tr>
 <td>100 schemas</td>
-<td>29,500 USD per year<br><span class="note">less than 25 USD per schema per month</span></td>
+<td>30,000 USD per year<br><span class="note">25 USD per schema per month</span></td>
 <td><button class="btn btn-success btn-download" data-toggle="modal" data-target="#flyway-enterprise-100-license-modal"><strong><i class="fa fa-credit-card"></i> Buy now</strong></button></td>
 </tr>
 <tr>
