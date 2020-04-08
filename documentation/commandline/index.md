@@ -322,7 +322,20 @@ You can override this behavior with the `-color` option. Possible values:
 
 ### Debug output
 
-Add `-X` to the argument list to also print debug output.
+Add `-X` to the argument list to also print debug output. If this gives you too much information, you can filter it
+with normal command-line tools, for example:
+
+**bash, macOS terminal**
+
+<pre class="console"><span>&gt;</span> flyway migrate -X <strong>| grep -v 'term-to-filter-out'</strong></pre>
+
+**Powershell**
+
+<pre class="console"><span>&gt;</span> flyway migrate -X <strong>| sls -Pattern 'term-to-filter-out' -NoMatch</strong></pre>
+
+**Windows cmd**
+
+<pre class="console"><span>&gt;</span> flyway migrate -X <strong>| findstr /v /c:"term-to-filter-out"</strong></pre>
 
 ### Quiet mode
 
