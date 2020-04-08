@@ -97,6 +97,35 @@ The `event` argument tells you which [`Event`](/documentation/api/javadoc/org/fl
 (`beforeClean`, `afterMigrate`, ...) is being handled and the `context` argument gives you access to things
 like the database connection and the Flyway configuration.
 
+It is possible for a Java callback to handle multiple events; for example, if you wanted to write a callback to
+fire off a notification to a third party service at the end of a migration, whether successful or not, and didn't 
+want to duplicate the code, then you could achieve this by handling both `afterMigrate` and `afterMigrateError`:
+
+```java
+class MyNotifierCallback implements Callback {
+    
+    // Ensures that this callback handles both events
+    boolean supports(Event event, Context context) {
+        return (event.equals(Event.AFTER_MIGRATE) || event.equals(Event.AFTER_MIGRATE_ERROR));
+    }
+    
+    // Not relevant if we don't interact with the database
+    boolean canHandleInTransaction(Event event, Context context) {
+        return true;
+    }
+    
+    // Send a notification when either event happens.
+    void handle(Event event, Context context) {
+        String notification = (event.equals(Event.AFTER_MIGRATE)) ? "Success" : "Failed";
+        // ... Notification logic ...
+        notificationService.send(notification);
+    }
+}
+``` 
+
+In order to be picked up by Flyway, Java-based Callbacks must implement the Callback interface. They also need to be
+specified in the `flyway.callbacks` configuration property.
+
 ## Custom Migration resolvers &amp; executors
 
 For those that need more than what the SQL and Java-based migrations offer, you also have the possibility to
