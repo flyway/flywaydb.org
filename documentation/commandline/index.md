@@ -220,7 +220,7 @@ Finally, Flyway can also be configured by passing arguments directly from the co
 
 <pre class="console"><span>&gt;</span> flyway -user=myuser -schemas=schema1,schema2 -placeholders.keyABC=valueXYZ migrate</pre>
 
-### A note on escaping command-line arguments
+#### A note on escaping command-line arguments
 
 Some command-line arguments will need care as specific characters may be interpreted differently depending on the
 shell you are working in. The `url` parameter is particularly affected when it contains extra parameters with
@@ -233,6 +233,42 @@ equals `=` and ampersands `&`. For example:
 **Powershell**: use double-quotes inside single-quotes:
 
 <pre class="console"><span>&gt;</span> ./flyway info -url='"jdbc:snowflake://ab12345.snowflakecomputing.com/?db=demo_db&user=foo"'</pre>
+
+### Piped input
+
+You can pipe configuration options to the Standard Input. Flyway will expect such configuration to be in the same format as a configuration file.
+
+This allows you to compose Flyway with other operations. For instance, you can decrypt a config file containing login credentials straight into Flyway.
+
+#### Examples
+
+Read a single option from `echo`:
+<pre class="console">
+<span>&gt;</span> echo $'flyway.url=jdbc:h2:mem:mydb' | flyway info
+</pre>
+
+
+Read multiple options from `echo`, delimited by newlines:
+<pre class="console">
+<span>&gt;</span> echo $'flyway.url=jdbc:h2:mem:mydb\nflyway.user=sa' | flyway info
+</pre>
+
+Use `cat` to read a config file and pipe it directly into Flyway:
+<pre class="console">
+<span>&gt;</span> cat flyway.conf | flyway migrate
+</pre>
+
+Use `gpg` to encrypt a config file, then pipe it into Flyway.
+
+Encrypt the config file:
+<pre class="console">
+<span>&gt;</span> gpg -e -r "Your Name" flyway.conf
+</pre>
+
+Decrypt the file and pipe it to Flyway:
+<pre class="console">
+<span>&gt;</span> gpg -q -a flyway.conf.gpg | flyway info
+</pre>
  
 ### Overriding order
 
