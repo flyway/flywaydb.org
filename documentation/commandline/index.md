@@ -252,12 +252,16 @@ the command-line argument will take precedence and be used.
 
 ### Credentials
 
-If you do not supply a database `user` or `password` via any of the means above, you will be prompted to enter them:
+If you do not supply a database `user` or `password` via any of the means above, you will be 
+prompted to enter them:
 <pre class="console">Database user: myuser
 Database password:</pre>
 
 If you want Flyway to connect to your database without a user or password, you can suppress prompting by adding
 the `-n` flag.
+
+There are exceptions, where the credentials are passed in the JDBC URL or where a password-less method of
+authentication is being used.
 
 ### Java Arguments
 

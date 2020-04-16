@@ -109,7 +109,7 @@ GO
 INSERT INTO ${tableName} (name) VALUES ('Mr. T');
 ```
 
-# Authentication types
+## Authentication
 
 SQL Server supports several methods of authentication. These include:
 
@@ -123,11 +123,11 @@ The instructions provided here are adapted from the [Microsoft JDBC Driver for S
 
 **Note** These instructions may be incomplete. Flyway depends on Microsoft's JDBC drivers, which in turn have many environmental dependencies to enable different authentication types. You may have to perform your own research to get the JDBC driver working for the different authentication types.
 
-## SQL Server Authentication
+### SQL Server Authentication
 
 This uses a straightforward username and password to authenticate. Provide these with the `user` and `password` configuration options.
 
-## Windows Authentication & Azure Active Directory
+### Windows Authentication & Azure Active Directory
 
 Windows Authentication and Azure Active Directory require an extra driver to be installed:
 

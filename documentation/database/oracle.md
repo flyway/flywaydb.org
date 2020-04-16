@@ -161,7 +161,17 @@ Use of these placeholders can be disabled in the usual way using the `SET DEFINE
 
 All other SQL*Plus commands are gracefully ignored with a warning message.
 
-## Oracle Wallet
+## Authentication
+
+### JDBC
+
+Oracle supports user and password being provided in the JDBC URL, in the form
+
+`jdbc:oracle:thin:<user>/<password>@//<host>:<port>/<database>`
+
+In this case, they do not need to be passed separately in configuration and the Flyway commandline will not prompt for them.
+
+### Oracle Wallet
 
 You can supply credentials using Oracle Wallet by specfiying properties on the JDBC url. For example:
 

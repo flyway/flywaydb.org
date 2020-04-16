@@ -31,7 +31,7 @@ subtitle: SQLite
 </tr>
 <tr>
 <th>Maven Central coordinates</th>
-<td><code>org.xerial:sqlite-jdbc:3.23.1</code></td>
+<td><code>org.xerial:sqlite-jdbc:3.30.1</code></td>
 <td><code>org.sqldroid:sqldroid:1.1.0-rc1</code></td>
 </tr>
 <tr>

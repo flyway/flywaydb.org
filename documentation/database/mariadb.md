@@ -31,7 +31,7 @@ subtitle: MariaDB
 </tr>
 <tr>
 <th>Maven Central coordinates</th>
-<td><code>org.mariadb.jdbc:mariadb-java-client:2.4.0</code></td>
+<td><code>org.mariadb.jdbc:mariadb-java-client:2.6.0</code></td>
 </tr>
 <tr>
 <th>Supported versions</th>
