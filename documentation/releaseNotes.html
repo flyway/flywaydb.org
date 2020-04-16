@@ -8,6 +8,40 @@ subtitle: Release Notes
 <p>Thank you all for reporting all these issues and contributing fixes!</p>
 
 <div class="release">
+  <h2 id="6.4">Flyway 6.4 (2020-04-20)</h2>
+
+  <h3>New features</h3>
+  <ul>
+    {% include issue.html id="1192" title="allow wildcard in flyway.locations" %}
+    {% include issue.html id="2695" title="Enable piping of config files to command line" %}
+    {% include issue.html id="2182" title="PostgreSQL: Parse search_path to determine name of first non-existing schema to create" %}
+  </ul>
+
+  <h3>Changes</h3>
+  <ul>
+    {% include issue.html id="2756" title="Fix performance issue with the MySQLSchema doEmpty() call" %}
+    {% include issue.html id="2769" title="Don't prompt for user+password for Azure passwordless auth" %}
+    {% include issue.html id="2754" title="Baseline doesn't work if flyway_schema_history table exists " %}
+    {% include issue.html id="2678" title="Parameters in JDBC URL" %}
+  </ul>
+
+  <h3>Bug fixes</h3>
+  <ul>
+      {% include issue.html id="2773" title="Flyway parsing bug: unable to decrease block depth below 0 " %}
+      {% include issue.html id="2772" title="unable to decrease block depth below 0" %}
+      {% include issue.html id="2768" title="unable to decrease block depth below 0" %}
+      {% include issue.html id="2762" title="Flyway parsing bug: unable to decrease block depth below 0" %}
+      {% include issue.html id="2758" title="Block Depth Below 0 - MySQL 5.7 CREATE PROCEDURE" %}
+      {% include issue.html id="2770" title="No schema history found in dry run" %}
+      {% include issue.html id="2759" title="Failure to obtain Postgres 11 advisory lock" %}
+  </ul>
+
+  <p>
+      Thanks to Ali Ustek, Jörg Hohwiller, Alexis Deschamps, Ben Manes, Ben Manes, Jonas Natten, Jacquers, Damjan Vujnovic, Matteo Quintiliani, Chris Borckholder, and ln0v for reporting these issues.
+  </p>
+</div>
+
+<div class="release">
     <h2 id="6.3.3">Flyway 6.3.3 (2020-04-06)</h2>
 
     <h3>Bug fixes</h3>
