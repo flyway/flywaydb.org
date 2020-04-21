@@ -220,7 +220,7 @@ Finally, Flyway can also be configured by passing arguments directly from the co
 
 <pre class="console"><span>&gt;</span> flyway -user=myuser -schemas=schema1,schema2 -placeholders.keyABC=valueXYZ migrate</pre>
 
-### A note on escaping command-line arguments
+#### A note on escaping command-line arguments
 
 Some command-line arguments will need care as specific characters may be interpreted differently depending on the
 shell you are working in. The `url` parameter is particularly affected when it contains extra parameters with
@@ -233,6 +233,42 @@ equals `=` and ampersands `&`. For example:
 **Powershell**: use double-quotes inside single-quotes:
 
 <pre class="console"><span>&gt;</span> ./flyway info -url='"jdbc:snowflake://ab12345.snowflakecomputing.com/?db=demo_db&user=foo"'</pre>
+
+### Configuration from standard input
+
+You can provide configuration options to the standard input of the Flyway command line. Flyway will expect such configuration to be in the same format as a configuration file.
+
+This allows you to compose Flyway with other operations. For instance, you can decrypt a config file containing login credentials and pipe it straight into Flyway.
+
+#### Examples
+
+Read a single option from `echo`:
+<pre class="console">
+<span>&gt;</span> echo $'flyway.url=jdbc:h2:mem:mydb' | flyway info
+</pre>
+
+
+Read multiple options from `echo`, delimited by newlines:
+<pre class="console">
+<span>&gt;</span> echo $'flyway.url=jdbc:h2:mem:mydb\nflyway.user=sa' | flyway info
+</pre>
+
+Use `cat` to read a config file and pipe it directly into Flyway:
+<pre class="console">
+<span>&gt;</span> cat flyway.conf | flyway migrate
+</pre>
+
+Use `gpg` to encrypt a config file, then pipe it into Flyway.
+
+Encrypt the config file:
+<pre class="console">
+<span>&gt;</span> gpg -e -r "Your Name" flyway.conf
+</pre>
+
+Decrypt the file and pipe it to Flyway:
+<pre class="console">
+<span>&gt;</span> gpg -q -a flyway.conf.gpg | flyway info
+</pre>
  
 ### Overriding order
 
@@ -240,12 +276,13 @@ The Flyway command-line tool has been carefully designed to load and override co
 
 Settings are loaded in the following order (higher items in the list take precedence over lower ones):
 1. Command-line arguments
-2. Environment variables
-3. Custom config files
-4. `<current-dir>/flyway.conf`
-5. `<user-home>/flyway.conf`
-6. `<install-dir>/conf/flyway.conf`
-7. Flyway command-line defaults
+1. Environment variables
+1. Standard input
+1. Custom config files
+1. `<current-dir>/flyway.conf`
+1. `<user-home>/flyway.conf`
+1. `<install-dir>/conf/flyway.conf`
+1. Flyway command-line defaults
 
 The means that if for example `flyway.url` is both present in a config file and passed as `-url=` from the command-line,
 the command-line argument will take precedence and be used.  

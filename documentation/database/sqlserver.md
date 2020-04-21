@@ -153,13 +153,17 @@ There are several types of Azure Active Directory authentication:
 - Azure Active Directory MSI
 - Azure Active Directory with Password
 
-To enable these authentication types, amend your JDBC URL to set an `authentication` parameter.
+For MSI and Integrated, amend your JDBC URL to set the `authentication` parameter:
 
-For instance, to enable `ActiveDirectoryIntegrated` in your JDBC connection string to set <code>authentication=ActiveDirectoryIntegrated</code>.
+- For Active Directory Integrated set `authentication=ActiveDirectoryIntegrated`
+  - e.g: <code>jdbc:sqlserver://<i>host</i>:<i>port</i>;databaseName=<i>database</i>;authentication=ActiveDirectoryIntegrated</code>
+- For Active Directory MSI set `authentication=ActiveDirectoryMSI`
+  - e.g: <code>jdbc:sqlserver://<i>host</i>:<i>port</i>;databaseName=<i>database</i>;authentication=ActiveDirectoryMSI</code>
+- For Active Directory With Password set `authentication=ActiveDirectoryPassword`
+  - e.g: <code>jdbc:sqlserver://<i>host</i>:<i>port</i>;databaseName=<i>database</i>;authentication=ActiveDirectoryPassword</code>
+  - You must also supply a username and password with Flyway's `user` and `password` configuration options
 
-Example: <code>jdbc:sqlserver://<i>host</i>:<i>port</i>;databaseName=<i>database</i>;authentication=ActiveDirectoryIntegrated</code>.
-
-You may also need to add ADAL4J and its dependencies to your classpath. See [the ADAL4J GitHub page](https://github.com/AzureAD/azure-activedirectory-library-for-java).
+**Note:** You may also need to add ADAL4J and its dependencies to your classpath. See [the ADAL4J GitHub page](https://github.com/AzureAD/azure-activedirectory-library-for-java).
 
 [The Microsoft documentation has more details about how these work with JDBC URLs](https://docs.microsoft.com/en-us/sql/connect/jdbc/connecting-using-azure-active-directory-authentication?view=sql-server-ver15).
 

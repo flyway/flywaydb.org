@@ -193,7 +193,7 @@ flyway {
     initSql = 'SET ROLE \'myuser\''
     schemas = ['schema1', 'schema2', 'schema3']
     table = 'schema_history'
-    locations = ['classpath:migrations1', 'migrations2', 'filesystem:/sql-migrations', 's3:mybucket/sql-migrations']
+    locations = ['classpath:migrations1', 'migrations2', 'filesystem:/sql-migrations']
     sqlMigrationPrefix = 'Migration-'
     undoSqlMigrationPrefix = 'downgrade'
     repeatableSqlMigrationPrefix = 'RRR'
