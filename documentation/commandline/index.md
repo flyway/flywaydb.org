@@ -234,11 +234,11 @@ equals `=` and ampersands `&`. For example:
 
 <pre class="console"><span>&gt;</span> ./flyway info -url='"jdbc:snowflake://ab12345.snowflakecomputing.com/?db=demo_db&user=foo"'</pre>
 
-### Piped input
+### Configuration from standard input
 
-You can pipe configuration options to the Standard Input. Flyway will expect such configuration to be in the same format as a configuration file.
+You can provide configuration options to the standard input of the Flyway command line. Flyway will expect such configuration to be in the same format as a configuration file.
 
-This allows you to compose Flyway with other operations. For instance, you can decrypt a config file containing login credentials straight into Flyway.
+This allows you to compose Flyway with other operations. For instance, you can decrypt a config file containing login credentials and pipe it straight into Flyway.
 
 #### Examples
 
@@ -276,12 +276,13 @@ The Flyway command-line tool has been carefully designed to load and override co
 
 Settings are loaded in the following order (higher items in the list take precedence over lower ones):
 1. Command-line arguments
-2. Environment variables
-3. Custom config files
-4. `<current-dir>/flyway.conf`
-5. `<user-home>/flyway.conf`
-6. `<install-dir>/conf/flyway.conf`
-7. Flyway command-line defaults
+1. Environment variables
+1. Standard input
+1. Custom config files
+1. `<current-dir>/flyway.conf`
+1. `<user-home>/flyway.conf`
+1. `<install-dir>/conf/flyway.conf`
+1. Flyway command-line defaults
 
 The means that if for example `flyway.url` is both present in a config file and passed as `-url=` from the command-line,
 the command-line argument will take precedence and be used.  
