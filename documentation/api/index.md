@@ -415,6 +415,11 @@ flyway.migrate();
     instance (both locally and on AWS), Flyway will automatically use the JDBC url, user and password
     <a href="https://boxfuse.com/docs/databases#envvars">provided by Boxfuse</a>.</div>
 
+### JDBC Drivers
+
+You will need to include the relevant JDBC driver for your chosen database as a dependency in your Java project. 
+For instance in your `pom.xml` for a Maven project. The version of the JDBC driver supported for each database is specified in the 'Supported Databases' list in the left hand side navigation menu.
+
 ### Programmatic Configuration (Android)
 
 **Note: Android integration may not work correctly due to a bug in the SQLDroid driver. [See this GitHub issue](https://github.com/flyway/flyway/issues/970#issuecomment-543209484).**
