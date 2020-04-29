@@ -417,6 +417,8 @@ flyway.migrate();
 
 ### Programmatic Configuration (Android)
 
+**Note: Android integration may not work correctly due to a bug in the SQLDroid driver. [See this GitHub issue](https://github.com/flyway/flyway/issues/970#issuecomment-543209484).**
+
 In order to use Flyway on Android you have to add flyway-core as well as SQLDroid as dependencies. 
 There are two things to keep in mind with Android: First, you have to load the migrations as *assets*, not *resources* 
 and second, you have to let Flyway know your Android context, by calling `ContextHolder.setContext()`.
