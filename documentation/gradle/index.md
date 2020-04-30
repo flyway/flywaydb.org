@@ -26,44 +26,21 @@ running on **Java 8**, **Java 9**, **Java 10**, **Java 11** or **Java 12**. The 
 }</pre>
         </div>
         <div class="tab-pane" id="tab-pro">
-        <pre class="prettyprint">buildscript {
-    repositories {
-        maven {
-            url "https://repo.flywaydb.org/repo"
-            credentials {
-                username '<a href="" data-toggle="modal" data-target="#flyway-trial-license-modal"><i>your-flyway-license-key</i></a>'
-                password 'flyway'
-            }
-        }
-    }
-    dependencies {
-        classpath "org.flywaydb<strong>.pro</strong>:flyway-gradle-plugin:{{ site.flywayVersion }}"
-    }
-}
-
-apply plugin: 'org.flywaydb.flyway'</pre>
+<pre class="prettyprint">plugins {
+    id "org.flywaydb.flyway<strong>.pro</strong>" version "{{ site.flywayVersion }}"
+}</pre>
         </div>
         <div class="tab-pane" id="tab-enterprise">
-        <pre class="prettyprint">buildscript {
-    repositories {
-        maven {
-            url "https://repo.flywaydb.org/repo"
-            credentials {
-                username '<a href="" data-toggle="modal" data-target="#flyway-trial-license-modal"><i>your-flyway-license-key</i></a>'
-                password 'flyway'
-            }
-        }
-    }
-    dependencies {
-        classpath "org.flywaydb<strong>.enterprise</strong>:flyway-gradle-plugin:{{ site.flywayVersion }}"
-    }
-}
-
-apply plugin: 'org.flywaydb.flyway'</pre>
+<pre class="prettyprint">plugins {
+    id "org.flywaydb.flyway<strong>.enterprise</strong>" version "{{ site.flywayVersion }}"
+}</pre>
                 </div>
     </div>
 </div>
-                
+<p class="note">
+  For older versions see <a href="/documentation/olderversions">Accessing Older versions of Flyway</a>
+</p>
+
 ## Tasks
 
 <table class="table table-bordered table-hover">
@@ -104,6 +81,7 @@ apply plugin: 'org.flywaydb.flyway'</pre>
     </tr>
     </tbody>
 </table>
+
 
 ## Configuration
 

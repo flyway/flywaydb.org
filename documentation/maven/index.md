@@ -20,79 +20,100 @@ The Flyway Enterprise Edition Maven plugin also supports **Java 7**.
         </li>
     </ul>
     <div class="tab-content">
+    <code>pom.xml</code>
         <div class="tab-pane active" id="tab-community">
-            <code>pom.xml</code>
+<table class="table">
+    {% if site.flywayPreviewVersion %}
+    <tr>
+        <th></th>
+        <th>Official Release (recommended)</th>
+        <td>Early-Access Preview</td>
+    </tr>    
+    {% endif %}
+    <tr>
+        <td>
             <pre class="prettyprint">&lt;plugin&gt;
     &lt;groupId&gt;org.flywaydb&lt;/groupId&gt;
     &lt;artifactId&gt;flyway-maven-plugin&lt;/artifactId&gt;
     &lt;version&gt;{{ site.flywayVersion }}&lt;/version&gt;
 &lt;/plugin&gt;</pre>
-            <p class="note">Older versions are available from <a href="https://repo1.maven.org/maven2/org/flywaydb/flyway-maven-plugin">Maven Central</a></p>
+        </td>
+        {% if site.flywayPreviewVersion %}
+        <td>
+            <pre class="prettyprint">&lt;plugin&gt;
+    &lt;groupId&gt;org.flywaydb&lt;/groupId&gt;
+    &lt;artifactId&gt;flyway-maven-plugin&lt;/artifactId&gt;
+    &lt;version&gt;{{ site.flywayPreviewVersion }}&lt;/version&gt;
+&lt;/plugin&gt;</pre>
+        </td>
+        {% endif %}
+    </tr>
+</table>
         </div>
         <div class="tab-pane" id="tab-pro">
-            <code>&lt;project-dir&gt;/pom.xml</code>
-            <pre class="prettyprint">&lt;pluginRepositories&gt;
-    &lt;pluginRepository&gt;
-        &lt;id&gt;flyway-repo&lt;/id&gt;
-        &lt;url&gt;https://repo.flywaydb.org/repo&lt;/url&gt;
-    &lt;/pluginRepository&gt;
-    ...
-&lt;/pluginRepositories&gt;
-        
-&lt;build&gt;
-    &lt;plugins&gt;
-        &lt;plugin&gt;
-            &lt;groupId&gt;org.flywaydb<strong>.pro</strong>&lt;/groupId&gt;
-            &lt;artifactId&gt;flyway-maven-plugin&lt;/artifactId&gt;
-            &lt;version&gt;{{ site.flywayVersion }}&lt;/version&gt;
-        &lt;/plugin&gt;
-    &lt;/plugins&gt;
-&lt;/build&gt;</pre>
-            <code>&lt;user-home&gt;/.m2/settings.xml</code>
-            <pre class="prettyprint">&lt;settings&gt;
-    &lt;servers&gt;
-        &lt;server&gt;
-            &lt;id&gt;flyway-repo&lt;/id&gt;
-            &lt;username&gt;<a href="" data-toggle="modal" data-target="#flyway-trial-license-modal"><i>your-flyway-license-key</i></a>&lt;/username&gt;
-            &lt;password&gt;flyway&lt;/password&gt;
-        &lt;/server&gt;
-    &lt;/servers&gt;
-    ...
-&lt;/settings&gt;</pre>
+<table class="table">
+    {% if site.flywayPreviewVersion %}
+    <tr>
+        <th></th>
+        <th>Official Release (recommended)</th>
+        <td>Early-Access Preview</td>
+    </tr>    
+    {% endif %}
+    <tr>
+        <td>
+            <pre class="prettyprint">&lt;plugin&gt;
+    &lt;groupId&gt;org.flywaydb<strong>.pro</strong>&lt;/groupId&gt;
+    &lt;artifactId&gt;flyway-maven-plugin&lt;/artifactId&gt;
+    &lt;version&gt;{{ site.flywayVersion }}&lt;/version&gt;
+&lt;/plugin&gt;</pre>
+        </td>
+        {% if site.flywayPreviewVersion %}
+        <td>
+            <pre class="prettyprint">&lt;plugin&gt;
+    &lt;groupId&gt;org.flywaydb<strong>.pro</strong>&lt;/groupId&gt;
+    &lt;artifactId&gt;flyway-maven-plugin&lt;/artifactId&gt;
+    &lt;version&gt;{{ site.flywayPreviewVersion }}&lt;/version&gt;
+&lt;/plugin&gt;</pre>
+        </td>
+        {% endif %}
+    </tr>
+</table>
         </div>
-        <div class="tab-pane" id="tab-enterprise">
-            <code>&lt;project-dir&gt;/pom.xml</code>
-            <pre class="prettyprint">&lt;pluginRepositories&gt;
-    &lt;pluginRepository&gt;
-        &lt;id&gt;flyway-repo&lt;/id&gt;
-        &lt;url&gt;https://repo.flywaydb.org/repo&lt;/url&gt;
-    &lt;/pluginRepository&gt;
-    ...
-&lt;/pluginRepositories&gt;
-        
-&lt;build&gt;
-    &lt;plugins&gt;
-        &lt;plugin&gt;
-            &lt;groupId&gt;org.flywaydb<strong>.enterprise</strong>&lt;/groupId&gt;
-            &lt;artifactId&gt;flyway-maven-plugin&lt;/artifactId&gt;
-            &lt;version&gt;{{ site.flywayVersion }}&lt;/version&gt;
-        &lt;/plugin&gt;
-    &lt;/plugins&gt;
-&lt;/build&gt;</pre>
-            <code>&lt;user-home&gt;/.m2/settings.xml</code>
-            <pre class="prettyprint">&lt;settings&gt;
-    &lt;servers&gt;
-        &lt;server&gt;
-            &lt;id&gt;flyway-repo&lt;/id&gt;
-            &lt;username&gt;<a href="" data-toggle="modal" data-target="#flyway-trial-license-modal"><i>your-flyway-license-key</i></a>&lt;/username&gt;
-            &lt;password&gt;flyway&lt;/password&gt;
-        &lt;/server&gt;
-    &lt;/servers&gt;
-    ...
-&lt;/settings&gt;</pre>
+                <div class="tab-pane" id="tab-enterprise">
+<table class="table">
+    {% if site.flywayPreviewVersion %}
+    <tr>
+        <th></th>
+        <th>Official Release (recommended)</th>
+        <td>Early-Access Preview</td>
+    </tr>    
+    {% endif %}
+    <tr>
+        <td>
+            <pre class="prettyprint">&lt;plugin&gt;
+    &lt;groupId&gt;org.flywaydb<strong>.enterprise</strong>&lt;/groupId&gt;
+    &lt;artifactId&gt;flyway-maven-plugin&lt;/artifactId&gt;
+    &lt;version&gt;{{ site.flywayVersion }}&lt;/version&gt;
+&lt;/plugin&gt;</pre>
+        </td>
+        {% if site.flywayPreviewVersion %}
+        <td>
+            <pre class="prettyprint">&lt;plugin&gt;
+    &lt;groupId&gt;org.flywaydb<strong>.enterprise</strong>&lt;/groupId&gt;
+    &lt;artifactId&gt;flyway-maven-plugin&lt;/artifactId&gt;
+    &lt;version&gt;{{ site.flywayPreviewVersion }}&lt;/version&gt;
+&lt;/plugin&gt;</pre>
+        </td>
+        {% endif %}
+    </tr>
+</table>
         </div>
     </div>
 </div>
+
+<p class="note">
+  For older versions see <a href="/documentation/olderversions">Accessing Older versions of Flyway</a>
+</p>
 
 ## Goals
 <table class="table table-bordered table-hover">
