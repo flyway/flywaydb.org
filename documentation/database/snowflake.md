@@ -20,7 +20,7 @@ subtitle: Snowflake
 </tr>
 <tr>
 <th>Ships with Flyway Command-line</th>
-<td>No</td>
+<td>Yes</td>
 </tr>
 <tr>
 <th>Maven Central coordinates</th>
