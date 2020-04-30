@@ -8,6 +8,29 @@ subtitle: Release Notes
 <p>Thank you all for reporting all these issues and contributing fixes!</p>
 
 <div class="release">
+  <h2 id="6.4.1">Flyway 6.4.1 (2020-04-30)</h2>
+
+  <h3>Changes</h3>
+  <ul>
+      {% include issue.html id="2588" title="Ship Snowflake drivers" %}
+  </ul>
+
+  <h3>Bug fixes</h3>
+  <ul>
+      {% include issue.html id="2795" title="Unable to decrease block depth below 0 error in version 6.4.0" %}
+      {% include issue.html id="2794" title="ADD COLUMN IF NOT EXISTS in MariaDB generates a Flyway Parsing Error" %}
+      {% include issue.html id="2796" title="Parse error using MySQL 8 since flyway 6.3" %}
+      {% include issue.html id="2781" title="Delimiter changed inside statement" %}
+      {% include issue.html id="2786" title="Delimiter changed inside statement on delimiter change right after comment" %}
+      {% include issue.html id="2774" title="Parser issue for Sybase ASE for keyword GOTO" %}
+  </ul>
+
+  <p>
+      Thanks to ChristianFischerJena, Nathan Ginther, Marc Bennewitz, Frank Huster, Damjan Vujnovic, Andreas Müller, laurentgrangier, and Wesley Leung for reporting these issues.
+  </p>
+</div>
+
+<div class="release">
   <h2 id="6.4">Flyway 6.4 (2020-04-21)</h2>
 
   <h3>New features</h3>
