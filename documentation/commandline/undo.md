@@ -54,7 +54,7 @@ subtitle: 'Command-line: undo'
     </tr>
     {% include cfg/connectRetries.html %}
     {% include cfg/initSql.html %}
-    {% include cfg/schemas-commandline.html %}
+    {% include cfg/schemas.html %}
     <tr>
         <td>table</td>
         <td>NO</td>

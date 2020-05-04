@@ -72,7 +72,7 @@ Validation fails if
     </tr>
     {% include cfg/connectRetries.html %}
     {% include cfg/initSql.html %}
-    {% include cfg/schemas-maven-gradle.html %}
+    {% include cfg/schemas.html %}
     <tr>
         <td>table</td>
         <td>NO</td>
