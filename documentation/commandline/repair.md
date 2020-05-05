@@ -56,7 +56,7 @@ Repairs the Flyway schema history table. This will perform the following actions
     </tr>
     {% include cfg/connectRetries.html %}
     {% include cfg/initSql.html %}
-    {% include cfg/schemas-commandline.html %}
+    {% include cfg/schemas.html %}
     <tr>
         <td>table</td>
         <td>NO</td>
