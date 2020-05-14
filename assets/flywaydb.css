@@ -999,3 +999,21 @@ body.download #newsletter-sign-up h3 {
 #flyway-trial-license-modal .mktoForm .mktoRequiredField label:after {
     content: ' (required)';
 }
+
+.oh-notification {
+    background: #0166AE; 
+    text-align: center;
+    padding: 16px 10px 10px;
+}
+
+.oh-notification p {
+    color: #ffffff;
+}
+
+.oh-notification a {
+    background: #ffffff;
+    padding: 6px;
+    margin: 2px 4px 0px;
+    border-radius: 5px;
+}
+
