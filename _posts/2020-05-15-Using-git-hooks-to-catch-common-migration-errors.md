@@ -11,7 +11,7 @@ application takes off and you find you have a team working on migrations simulta
 distributed source control system such as `git`, then there is a risk of running into problems as the developers
 work on the same database migration code at the same time.
 
-## Problem One: Numbering conflicts
+## Problem one: Numbering conflicts
 
 Let's say you've been asked to add a new feature to your application, and this needs a new column to be added to the
 database. The database schema is currently at v4; so the natural thing to do is create a script `V5__MyNewColumn.sql`
@@ -22,7 +22,7 @@ as he's concerned, all appears good too. When the two sets of changes make it in
 for testing and deployment, source control will see them as two unrelated files and therefore will not detect any
 problem. However, Flyway will see two files with the same schema version number and will fail validation. 
 
-## Problem Two: Ordering conflicts
+## Problem two: Ordering conflicts
 
 So you decide to sidestep the above problem by agreeing in advance that you will write script `V5.sql` and your colleague
 will write `V6.sql`. You add your new column to the database in your script, and once again all is good. However,
@@ -31,7 +31,7 @@ old definition of the table you've altered - for example an `INSERT INTO ...` wh
 new column. Once again, as far as he's concerned, all appears good too. But when the scripts are run, his script will
 fail.
 
-## Problem Three: Timing
+## Problem three: Timing
 
 So you go one step further and warn your colleague about what you plan to do. He writes his script defensively. His 
 changes get through code review more quickly than yours and by the time you come to merge, his changes are in production.
