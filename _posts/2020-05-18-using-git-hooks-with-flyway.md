@@ -1,7 +1,7 @@
 ---
 layout: blog
-subtitle: Using git hooks to catch common migration errors
-permalink: /blog/using-git-hooks.html
+subtitle: Using git hooks with Flyway
+permalink: /blog/using-git-hooks-with-flyway.html
 author: julia
 ---
 
