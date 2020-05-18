@@ -17,24 +17,24 @@ Let's say you've been asked to add a new feature to your application, and this n
 database. The database schema is currently at v4; so the natural thing to do is create a script `V5__MyNewColumn.sql`
 and check it into source control. So far, all is good.
 
-Meanwhile, one of your colleagues is also working on a new feature and has added a script `V5__MyNewTable.sql`. As far
-as he's concerned, all appears good too. When the two sets of changes make it into the master branch ready
+Meanwhile, your colleagues are also working on a new feature and have added a script `V5__MyNewTable.sql`. As far
+as they're concerned, all appears good too. When the two sets of changes make it into the master branch ready
 for testing and deployment, source control will see them as two unrelated files and therefore will not detect any
 problem. However, Flyway will see two files with the same schema version number and will fail validation. 
 
 ## Problem two: Ordering conflicts
 
 So you decide to sidestep the above problem by agreeing in advance that you will write script `V5__MyNewColumn.sql` and 
-your colleague will write `V6__MyNewTable.sql`. You add your new column to the database in your script, and once again 
-all is good. However, your colleague working on his local branch can't see your change and he adds some SQL in his script 
+your colleagues will write `V6__MyNewTable.sql`. You add your new column to the database in your script, and once again 
+all is good. However, a colleague working on his local branch can't see your change and as a result adds some SQL into a script 
 that depends on the old definition of the table you've altered - for example an `INSERT INTO ...` which fails to specify 
-a value for your new column. Once again, as far as he's concerned, all appears good too. But when the scripts are merged 
-and run, his script will fail.
+a value for your new column. Once again, all appears good too. But when the scripts are merged 
+and run, the second script will fail.
 
 ## Problem three: Timing
 
-So you go one step further and warn your colleague about what you plan to do. He writes his script defensively. His 
-changes get through code review more quickly than yours and by the time you come to merge, his changes are in production.
+So you go one step further and warn your colleagues about what you plan to do. They write their scripts defensively, and 
+get their changes through code review more quickly than yours. By the time you come to merge, the other changes are in production.
 Again, everything seems to be good locally but when your changes are merged, Flyway sees a new script that is numbered
 lower than the current schema version and errors.
 
