@@ -8,8 +8,8 @@ author: julia
 When you're on your own developing a simple application, managing your migration scripts is not a demanding task; each
 time you add a script, it gets the next version number in whatever sequence you've decided on using. When your
 application takes off and you find you have a team working on migrations simultaneously, sharing code via a
-distributed source control system such as `git`, then there is a risk of running into problems as the developers
-work on the same database migration code at the same time.
+distributed source control system such as `git`, then there is an increased risk of running into problems as the 
+developers work on the same database migration code at the same time.
 
 ## Problem one: Numbering conflicts
 
@@ -24,12 +24,13 @@ problem. However, Flyway will see two files with the same schema version number 
 
 ## Problem two: Ordering conflicts
 
-So you decide to sidestep the above problem by agreeing in advance that you will write script `V5.sql` and your colleague
-will write `V6.sql`. You add your new column to the database in your script, and once again all is good. However,
+So you decide to sidestep the above problem by agreeing in advance that you will write script `V5__MyNewColumn.sql` and 
+your colleague
+will write `V6__MyNewTable.sql`. You add your new column to the database in your script, and once again all is good. However,
 your colleague working on his local branch can't see your change and he adds some SQL in his script that depends on the
 old definition of the table you've altered - for example an `INSERT INTO ...` which fails to specify a value for your
-new column. Once again, as far as he's concerned, all appears good too. But when the scripts are run, his script will
-fail.
+new column. Once again, as far as he's concerned, all appears good too. But when the scripts are merged and run, his 
+script will fail.
 
 ## Problem three: Timing
 
@@ -91,6 +92,7 @@ These checks are local ones, and we can invoke them at times when errors are lik
 to committing a new script; `post-merge` just after pulling new files from the remote repository or merging a
 branch which might have conflicting scripts in; and `pre-push` prior to submitting back to the remote repo. We
 can also set up our remote repository as a gatekeeper with a `pre-receive` hook that rejects attempts to push
-a script that wouldn't update a copy of the production database correctly.
+a script that wouldn't update a copy of the production database correctly. By using these judiciously, we can
+trap most common problems early, and fix them while it's still easy to do so.
 
 \- Julia
