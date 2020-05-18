@@ -36,9 +36,6 @@ Database Migrations With FlywayDB</a></strong> by Amos Omondi<br/></p>
 <p><strong><a href="http://blog.trifork.com/2014/12/09/integrating-flywaydb-in-a-spring-framework-application/">Integrating flyway 
     in a spring framework application</a></strong> by Dadepo Aderemi</p>
 
-<p><strong><a href="http://www.roufa.com/articles/flywaydb-super-simple-migrations/articles.md">FlywayDB
-    -- super-simple forward-only raw SQL database migrations for Java</a></strong> by Michael Roufa</p>
-
 <p><strong><a href="http://www.hascode.com/2013/04/easy-database-migrations-using-flyway-java-ee-6-and-glassfish/">Easy
     Database Migrations using Flyway, Java EE 6 and GlassFish</a></strong> by Micha Kops<br/></p>
 
