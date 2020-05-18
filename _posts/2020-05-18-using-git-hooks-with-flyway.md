@@ -25,12 +25,11 @@ problem. However, Flyway will see two files with the same schema version number 
 ## Problem two: Ordering conflicts
 
 So you decide to sidestep the above problem by agreeing in advance that you will write script `V5__MyNewColumn.sql` and 
-your colleague
-will write `V6__MyNewTable.sql`. You add your new column to the database in your script, and once again all is good. However,
-your colleague working on his local branch can't see your change and he adds some SQL in his script that depends on the
-old definition of the table you've altered - for example an `INSERT INTO ...` which fails to specify a value for your
-new column. Once again, as far as he's concerned, all appears good too. But when the scripts are merged and run, his 
-script will fail.
+your colleague will write `V6__MyNewTable.sql`. You add your new column to the database in your script, and once again 
+all is good. However, your colleague working on his local branch can't see your change and he adds some SQL in his script 
+that depends on the old definition of the table you've altered - for example an `INSERT INTO ...` which fails to specify 
+a value for your new column. Once again, as far as he's concerned, all appears good too. But when the scripts are merged 
+and run, his script will fail.
 
 ## Problem three: Timing
 
