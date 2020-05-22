@@ -73,6 +73,7 @@ With schema we mean the container for database objects commonly referred to as "
 - H2: `SCHEMA`
 - HSQLDB: `SCHEMA`
 - Derby: `SCHEMA`
+- Snowflake: `SCHEMA`
 - SQLite: `DATABASE` (no schema support)
 - Firebird: `DATABASE` (no schema support)
 
