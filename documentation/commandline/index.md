@@ -267,7 +267,7 @@ Encrypt the config file:
 
 Decrypt the file and pipe it to Flyway:
 <pre class="console">
-<span>&gt;</span> gpg -q -a flyway.conf.gpg | flyway info
+<span>&gt;</span> gpg -d -q flyway.conf.gpg | flyway info
 </pre>
  
 ### Overriding order
