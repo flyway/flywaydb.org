@@ -1,6 +1,6 @@
 ---
 layout: blog
-subtitle: Using git hooks with Flyway
+subtitle: Using Git Hooks with Flyway
 permalink: /blog/using-git-hooks-with-flyway.html
 author: julia
 ---
