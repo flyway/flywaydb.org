@@ -144,6 +144,30 @@ task migrateDatabase2(type: org.flywaydb.gradle.task.FlywayMigrateTask) {
 }
 ```
 
+### Java migrations and callbacks
+
+When using Java migrations and callbacks with the gradle Flyway plugin, you need to ensure that the classes have been compiled before running the `flywayMigrate` (or `flywayClean` etc) task. 
+
+You can do this by explicitly running the `classes` task before `flywayMigrate` e.g. `gradle classes flywayMigrate`.
+
+Alternatively you can make the `flywayMigrate` task depend on classes.
+
+```groovy
+dependencies {
+    compile "org.flywaydb:flyway-core:${flywayVersion}"
+}
+
+flyway {
+    url = 'jdbc:h2:mem:mydb'
+    user = 'myUsr'
+    password = 'mySecretPwd'
+    locations = ['classpath:db/migration']
+}
+
+// we need to build classes before we can migrate
+flywayMigrate.dependsOn classes
+```
+
 ### Extending the default classpath
 
 By default the Flyway Gradle plugin uses a classpath consisting of the following Gradle configurations for loading drivers, migrations, resolvers, callbacks, etc.:
