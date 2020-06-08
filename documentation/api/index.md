@@ -218,7 +218,7 @@ be migrated to a state the rest of the code can work with.
     </div>
 </div>
 <p class="note">
-  For older versions see <a href="/documentation/olderversions">Accessing Older versions of Flyway</a>
+  For older versions see <a href="/documentation/olderversions">Accessing Older Versions of Flyway</a>
 </p>
 
 ## The Flyway Class

@@ -112,7 +112,7 @@ The Flyway Enterprise Edition Maven plugin also supports **Java 7**.
 </div>
 
 <p class="note">
-  For older versions see <a href="/documentation/olderversions">Accessing Older versions of Flyway</a>
+  For older versions see <a href="/documentation/olderversions">Accessing Older Versions of Flyway</a>
 </p>
 
 ## Goals

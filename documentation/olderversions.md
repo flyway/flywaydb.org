@@ -2,15 +2,17 @@
 layout: documentation
 flywayVersion: 5.2.4
 ---
-# Accessing older versions of Flyway
+# Accessing Older Versions of Flyway
 
-Historically, Flyway Community edition artifacts were uploaded to Maven Central, whereas Pro & Enterprise editions were only available through our own bespoke Maven repository.
+Historically, Flyway Community edition artifacts were uploaded to Maven Central and Gradle Plugins, whereas Pro & Enterprise editions were only available through our own server, repo.flywaydb.org.
 
-Since Flwyay 6.4.1, Pro & Enterprise edition artifacts are uploaded to Maven Central, alongside Community edition. 
+Since Flwyay 6.4.1, Pro & Enterprise edition artifacts are uploaded to Maven Central and Gradle Plugins, alongside Community edition. 
 
-For all versions of Community, and versions of Pro & Enterprise past 6.4.1, [see the Flyway Maven Central listing](https://repo1.maven.org/maven2/org/flywaydb/).
+For all versions of Community, and versions of Pro & Enterprise beyond 6.4.1:
+- [Flyway Maven Central listing](https://mvnrepository.com/artifact/org.flywaydb)
+- [Flyway Gradle Plugins listing](https://plugins.gradle.org/search?term=flyway)
 
-For versions of Pro & Enterprise prior to 6.4.1, you must use the legacy Maven repository.
+For versions of Pro & Enterprise prior to 6.4.1, you must use the legacy repository at repo.flywaydb.org.
 
 For example, to access Flyway {{ page.flywayVersion }}:
 

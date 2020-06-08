@@ -38,7 +38,7 @@ running on **Java 8**, **Java 9**, **Java 10**, **Java 11** or **Java 12**. The 
     </div>
 </div>
 <p class="note">
-  For older versions see <a href="/documentation/olderversions">Accessing Older versions of Flyway</a>
+  For older versions see <a href="/documentation/olderversions">Accessing Older Versions of Flyway</a>
 </p>
 
 ## Tasks
