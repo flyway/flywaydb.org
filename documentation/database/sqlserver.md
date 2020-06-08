@@ -180,6 +180,8 @@ default schema if `flyway.defaultSchema` itself is not set.
 - With these limitations in mind, please refer to the properties or
 [Options](https://flywaydb.org/documentation/commandline/migrate#defaultSchema) mentioned here for descriptions / 
 consequences.
+- If using the JTDS driver, then setting `ANSI_NULLS` or `QUOTED_IDENTIFIER` in a script will cause an error. This is
+a driver limitation, and can be solved by using the Microsoft driver instead.
 
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/database/db2">DB2 <i class="fa fa-arrow-right"></i></a>
