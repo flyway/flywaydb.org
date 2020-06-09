@@ -20,7 +20,7 @@ First let's start by explaining what we mean by wildcards. Wildcards allow for m
 ## Wildcards in practice
 
 ### Release folder based structure
-A common working pattern we have seen is to structure your migrations into 'releases'. Each release is a package of migrations, along with tests for those migrations, probably developed on a branch of the project. When the release is ready the folder is brought into the master project, and Flyway will then pick up those new migrations and apply them.
+A common working pattern we have seen is to structure your migrations into 'releases'. Each release is a package of migrations, along with tests for those migrations, probably developed on a branch of the project. When the release is ready the folder is brought into the trunk project, and Flyway will then pick up those new migrations and apply them.
 <pre class="filetree"><i class="fa fa-folder-open"></i> my-project
   <i class="fa fa-folder-open"></i> release1.0
     <i class="fa fa-folder-open"></i> migrations

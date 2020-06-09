@@ -18,7 +18,7 @@ database. The database schema is currently at v4; so the natural thing to do is 
 and check it into source control. So far, all is good.
 
 Meanwhile, your colleagues are also working on a new feature and have added a script `V5__MyNewTable.sql`. As far
-as they're concerned, all appears good too. When the two sets of changes make it into the master branch ready
+as they're concerned, all appears good too. When the two sets of changes make it into the trunk branch ready
 for testing and deployment, source control will see them as two unrelated files and therefore will not detect any
 problem. However, Flyway will see two files with the same schema version number and will fail validation. 
 
