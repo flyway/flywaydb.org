@@ -12,7 +12,7 @@ the migration file name, with the `.conf` suffix added.
 
 For example, a migration file `V2__my_script.sql` would have a script configuration file `V2__my_script.sql.conf`.
 
-Script Config Files have a separate set of options from the other ways of configuring Flyway (e.g. `flyway.conf`). See the Reference at the bottom of the page for the complete list of options.
+Script Config Files have a subset of the options from the other ways of configuring Flyway (e.g. `flyway.conf`). See the Reference at the bottom of the page for the complete list of options.
 
 ## Structure
 
@@ -26,7 +26,11 @@ key=value
 ## Reference
 
 ```properties
-# Manually determine whether or not to execute a migration in a transaction. This is useful for
+# Encoding of this SQL migration. Caution: changing the encoding after this migration has been run
+# will invalidate the calculated checksum and require a `flyway repair`.
+encoding=ISO_8859_1
+
+# Manually determine whether or not to execute this migration in a transaction. This is useful for
 # databases like PostgreSQL and SQL Server where certain statements can only execute outside a transaction.
 executeInTransaction=false
 ```
