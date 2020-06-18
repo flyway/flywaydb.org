@@ -82,6 +82,7 @@ The schemas are cleaned in the order specified by the `schemas` property.
         <td>false</td>
         <td>Whether to disable clean. This is especially useful for production environments where running clean can be quite a career limiting move.</td>
     </tr>
+    {% include cfg/jdbcProperties.html %}
     {% include cfg/validateMigrationNaming.html %}
     {% include cfg/workingDirectory.html %}
     {% include cfg/licenseKey.html %}
@@ -102,6 +103,7 @@ flyway.callbacks=com.mycomp.project.CustomCallback,com.mycomp.project.AnotherCal
 flyway.skipDefaultCallbacks=false
 flyway.cleanDisabled=false
 flyway.workingDirectory=C:/myProject
+flyway.jdbcProperties.myProperty=value
 ```
 
 ## Sample output
