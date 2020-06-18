@@ -23,6 +23,10 @@ subtitle: SQL Server
 <td><code>jdbc:sqlserver://<i>host</i>:<i>port</i>;databaseName=<i>database</i></code></td>
 </tr>
 <tr>
+<th>SSL support</th>
+<td><a href="https://docs.microsoft.com/en-us/sql/connect/jdbc/connecting-with-ssl-encryption?view=sql-server-ver15">Yes</a> - add <code>;encrypt=true</code></td>
+</tr>
+<tr>
 <th>Ships with Flyway Command-line</th>
 <td>Yes</td>
 </tr>
