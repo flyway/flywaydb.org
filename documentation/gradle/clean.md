@@ -74,6 +74,7 @@ Drops all objects (tables, views, procedures, triggers, ...) in the configured s
         <td>false</td>
         <td>Whether to disable clean. This is especially useful for production environments where running clean can be quite a career limiting move.</td>
     </tr>
+    {% include cfg/jdbcProperties.html %}
     {% include cfg/validateMigrationNaming.html %}
     {% include cfg/workingDirectory.html %}
     {% include cfg/licenseKey.html %}
@@ -95,6 +96,10 @@ flyway {
     skipDefaultCallbacks = false
     cleanDisabled = false
     workingDirectory = 'C:/myproject'
+    jdbcProperties = [
+      'someProperty' : 'someValue',
+      'someOtherProperty' : 'someOtherValue'
+    ]
 }
 ```
 

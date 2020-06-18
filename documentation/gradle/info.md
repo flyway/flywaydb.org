@@ -177,6 +177,7 @@ Prints the details and status information about all the migrations.
                 it will be applied too instead of being ignored.</p>
         </td>
     </tr>
+    {% include cfg/jdbcProperties.html %}
     {% include cfg/validateMigrationNaming.html %}
     {% include cfg/workingDirectory.html %}
     {% include cfg/licenseKey.html %}
@@ -216,6 +217,10 @@ flyway {
     target = '1.1'
     outOfOrder = false
     workingDirectory = 'C:/myproject'
+    jdbcProperties = [
+      'someProperty' : 'someValue',
+      'someOtherProperty' : 'someOtherValue'
+    ]
 }
 ```
 

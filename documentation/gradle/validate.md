@@ -223,6 +223,7 @@ Validation fails if
             warning is logged and Flyway continues normally. This is useful for situations where one must be able to redeploy
             an older version of the application after the database has been migrated by a newer one.</td>
     </tr>
+    {% include cfg/jdbcProperties.html %}
     {% include cfg/oracleSqlplus.html %}
     {% include cfg/oracleSqlplusWarn.html %}
     {% include cfg/workingDirectory.html %}
@@ -270,6 +271,10 @@ flyway {
     oracleSqlplus = true 
     oracleSqlplusWarn = true 
     workingDirectory = 'C:/myproject'
+    jdbcProperties = [
+      'someProperty' : 'someValue',
+      'someOtherProperty' : 'someOtherValue'
+    ]
 }
 ```
 
