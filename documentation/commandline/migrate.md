@@ -312,6 +312,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
             directory, Flyway will create all directories and parent directories as needed.
             Omit to use the default mode of executing the SQL statements directly against the database.</td>
     </tr>
+    {% include cfg/jdbcProperties.html %}
     {% include cfg/oracleSqlplus.html %}
     {% include cfg/oracleSqlplusWarn.html %}
     {% include cfg/workingDirectory.html %}
@@ -369,6 +370,7 @@ flyway.dryRunOutput=/my/sql/dryrun-outputfile.sql
 flyway.oracle.sqlplus=true
 flyway.oracle.sqlplusWarn=true
 flyway.workingDirectory=C:/myProject
+flyway.jdbcProperties.myProperty=value
 ```
 
 ## Sample output

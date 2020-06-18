@@ -176,6 +176,11 @@ The following environment variables are supported:
         <td>FLYWAY_ENCODING</td>
         <td>The encoding of Sql migrations</td>
     </tr>
+    <tr id="FLYWAY_JDBC_PROPERTIES_">
+        <td>FLYWAY_JDBC_PROPERTIES_<i>&lt;NAME&gt;</i></td>
+        <td>JDBC properties to pass to the JDBC driver when establishing a connection.
+        For example to supply a property <code>property1</code> with the value <code>value1</code>, you can set the environment variable <code>FLYWAY_JDBC_PROPERTIES_KEY1</code> to <code>value1</code>. Flyway will then convert the <code>KEY1</code> part to lowercase (<code>key1</code>)
+    </tr>
     <tr id="FLYWAY_PLACEHOLDER_REPLACEMENT">
         <td>FLYWAY_PLACEHOLDER_REPLACEMENT</td>
         <td>Whether placeholders should be replaced</td>

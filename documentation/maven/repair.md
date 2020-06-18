@@ -195,6 +195,7 @@ Repairs the Flyway schema history table. This will perform the following actions
         <td><i>project.basedir</i> (where the POM resides)</td>
         <td>The working directory to consider when dealing with relative paths for both config files and locations.</td>
     </tr>
+    {% include cfg/jdbcProperties.html %}
     {% include cfg/licenseKey.html %}
 </table>
 
@@ -252,6 +253,10 @@ Repairs the Flyway schema history table. This will perform the following actions
         <configFile>other.conf</configFile>
     </configFiles>
     <workingDirectory>/my/working/dir</workingDirectory>
+    <jdbcProperties>
+      <myProperty>myValue</myProperty>
+      <myOtherProperty>myOtherValue</myOtherProperty>
+    </jdbcProperties>
 </configuration>
 ```
 
