@@ -174,6 +174,7 @@ Repairs the Flyway schema history table. This will perform the following actions
         <td>false</td>
         <td>Whether default built-in callbacks (sql) should be skipped. If true, only custom callbacks are used.</td>
     </tr>
+    {% include cfg/jdbcProperties.html %}
     {% include cfg/validateMigrationNaming.html %}
     {% include cfg/licenseKey.html %}
     </tbody>
@@ -207,6 +208,7 @@ flyway.skipDefaultResolvers=false
 flyway.callbacks=com.mycomp.project.CustomCallback,com.mycomp.project.AnotherCallback
 flyway.skipDefaultCallbacks=false
 flyway.workingDirectory=C:/myProject
+flyway.jdbcProperties.myProperty=value
 ```
 
 ## Sample output

@@ -94,6 +94,7 @@ Baselines an existing database, excluding all migrations up to and including bas
         </td>
         <td>The description to tag an existing schema with when executing baseline</td>
     </tr>
+    {% include cfg/jdbcProperties.html %}
     {% include cfg/validateMigrationNaming.html %}
     {% include cfg/workingDirectory.html %}
     {% include cfg/licenseKey.html %}
@@ -119,6 +120,10 @@ flyway {
     baselineVersion = 5
     baselineDescription = "Let's go!"
     workingDirectory = 'C:/myproject'
+    jdbcProperties = [
+      'someProperty' : 'someValue',
+      'someOtherProperty' : 'someOtherValue'
+    ]
 }
 ```
 
