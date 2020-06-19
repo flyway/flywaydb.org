@@ -240,13 +240,14 @@ You can provide configuration options to the standard input of the Flyway comman
 
 This allows you to compose Flyway with other operations. For instance, you can decrypt a config file containing login credentials and pipe it straight into Flyway.
 
+Flyway reads configuration from Standard Input by default. To toggle the behavior, use the `-a` flag.
+
 #### Examples
 
 Read a single option from `echo`:
 <pre class="console">
 <span>&gt;</span> echo $'flyway.url=jdbc:h2:mem:mydb' | flyway info
 </pre>
-
 
 Read multiple options from `echo`, delimited by newlines:
 <pre class="console">
@@ -257,6 +258,12 @@ Use `cat` to read a config file and pipe it directly into Flyway:
 <pre class="console">
 <span>&gt;</span> cat flyway.conf | flyway migrate
 </pre>
+
+Toggle reading from Standard Input:
+<pre class="console">
+<span>&gt;</span> cat flyway.conf | flyway migrate -a
+</pre>
+
 
 Use `gpg` to encrypt a config file, then pipe it into Flyway.
 
