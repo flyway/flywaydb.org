@@ -156,6 +156,7 @@ There are several types of Azure Active Directory authentication:
 - Azure Active Directory Integrated
 - Azure Active Directory MSI
 - Azure Active Directory with Password
+- Access Tokens
 
 For MSI and Integrated, amend your JDBC URL to set the `authentication` parameter:
 
@@ -172,6 +173,18 @@ For MSI and Integrated, amend your JDBC URL to set the `authentication` paramete
 [The Microsoft documentation has more details about how these work with JDBC URLs](https://docs.microsoft.com/en-us/sql/connect/jdbc/connecting-using-azure-active-directory-authentication?view=sql-server-ver15).
 
 *Flyway doesn't support Azure Active Directory with MFA, as it is [not supported by the Microsoft JDBC drivers](https://github.com/microsoft/mssql-jdbc/issues/1053).
+
+#### Azure access tokens
+
+Another way to authenticate using Azure Active Directory is through access tokens. As of the time of writing, the access token property on Microsoft's JDBC driver cannot be supplied through the URL. Therefore you should use Flyway's `jdbcProperties` configuration property.
+
+E.g, in a `flyway.conf` file:
+
+```
+flyway.jdbcProperties.accessToken=my-access-token
+```
+
+This is equivalent to the [process defined on this documentation page](https://docs.microsoft.com/en-us/sql/connect/jdbc/connecting-using-azure-active-directory-authentication?view=sql-server-ver15#connecting-using-access-token).
 
 ## Limitations
 
