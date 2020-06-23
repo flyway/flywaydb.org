@@ -53,6 +53,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
     {% include cfg/connectRetries.html %}
     {% include cfg/initSql.html %}
     {% include cfg/schemas.html %}
+    {% include cfg/createSchemas.html %}
     <tr>
         <td>table</td>
         <td>NO</td>
@@ -319,6 +320,7 @@ flyway {
     connectRetries = 10
     initSql = 'SET ROLE \'myuser\''
     schemas = ['schema1', 'schema2', 'schema3']
+    createSchemas=true
     table = 'schema_history'
     tablespace = 'my_tablespace'
     locations = ['classpath:migrations', 'classpath:db/pkg', 'filesystem:/sql-migrations']

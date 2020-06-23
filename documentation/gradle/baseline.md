@@ -54,6 +54,7 @@ Baselines an existing database, excluding all migrations up to and including bas
     {% include cfg/connectRetries.html %}
     {% include cfg/initSql.html %}
     {% include cfg/schemas.html %}
+    {% include cfg/createSchemas.html %}
     <tr>
         <td>table</td>
         <td>NO</td>
@@ -110,6 +111,7 @@ flyway {
     connectRetries = 10
     initSql = 'SET ROLE \'myuser\''
     schemas = ['schema1', 'schema2', 'schema3']
+    createSchemas=true
     table = 'schema_history'
     tablespace = 'my_tablespace'
     callbacks = ['com.mycompany.proj.CustomCallback', 'com.mycompany.proj.AnotherCallback']
