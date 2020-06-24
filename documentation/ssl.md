@@ -37,8 +37,9 @@ You can also check which certificates have been imported already:
 
 ## Make sure Java can access the truststore
 
-You now need to configure your Java environment to be able to access these stores. If you're using the Flyway 
-command-line, then you can simply set the `JAVA_ARGS` environment variable which the command-line script reads.
+You now need to configure your Java environment to be able to access these stores. This simply requires
+setting a couple of [JVM properties](https://flywaydb.org/blog/jvm-properties). If you're using the Flyway 
+command-line, then you can set the `JAVA_ARGS` environment variable which the command-line script reads.
 
 <pre class="console"><span>&gt;</span> JAVA_ARGS='-Djavax.net.ssl.trustStore="myStorePath" -Djavax.net.ssl.trustStorePassword="myStorePassword"'</pre>
 
