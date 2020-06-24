@@ -5,7 +5,8 @@ subtitle: SSL support
 ---
 # SSL support
 
-In many scenarios, maintaining a secure connection to the database is important. Flyway can easily be configured to
+Maintaining a secure connection to your database is highly desirable in a production environment, even if not already 
+enforced by the database configuration. Flyway can easily be configured to
 use SSL to establish a secure connection as and when required, provided the relevant database and JDBC driver also 
 support SSL. Although details will vary between databases, the process to configure them is as follows:
 
