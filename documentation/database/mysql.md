@@ -29,6 +29,11 @@ subtitle: MySQL
 <td><code>jdbc:mysql://<i>host</i>:<i>port</i>/<i>database</i></code></td>
 </tr>
 <tr>
+<th>SSL support</th>
+<td>Yes - add <code>?useSsl=true</code></td>
+<td>Yes - add <code>?useSsl=true</code></td>
+</tr>
+<tr>
 <th>Ships with Flyway Command-line</th>
 <td>Yes</td>
 <td>Yes</td>

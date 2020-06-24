@@ -26,6 +26,10 @@ subtitle: PostgreSQL
 <td><code>jdbc:postgresql://<i>host</i>:<i>port</i>/<i>database</i></code></td>
 </tr>
 <tr>
+<th>SSL support</th>
+<td>Yes - add <code>?ssl=true</code></td>
+</tr>
+<tr>
 <th>Ships with Flyway Command-line</th>
 <td>Yes</td>
 </tr>

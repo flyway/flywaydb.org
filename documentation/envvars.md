@@ -353,7 +353,7 @@ The following environment variables are supported:
 </table>
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/placeholders">Placeholders <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/ssl">SSL support <i class="fa fa-arrow-right"></i></a>
 </p>
 
 {% include trialpopup.html %}

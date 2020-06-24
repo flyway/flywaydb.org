@@ -21,6 +21,10 @@ subtitle: CockroachDB
 <td><code>jdbc:postgresql://<i>host</i>:<i>port</i>/<i>database</i></code></td>
 </tr>
 <tr>
+<th>SSL support</th>
+<td><a href="https://forum.cockroachlabs.com/t/connecting-to-an-ssl-secure-server-using-jdbc-java-and-client-certificate-authentication/400">Yes</a></td>
+</tr>
+<tr>
 <th>Ships with Flyway Command-line</th>
 <td>Yes</td>
 </tr>

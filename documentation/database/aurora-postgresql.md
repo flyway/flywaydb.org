@@ -19,6 +19,10 @@ subtitle: Aurora PostgreSQL
 <td><code>jdbc:postgresql://<i>instance</i>.<i>region</i>.rds.amazonaws.com:<i>port</i>/<i>database</i></code></td>
 </tr>
 <tr>
+<th>SSL support</th>
+<td>Yes - add <code>?ssl=true</code></td>
+</tr>
+<tr>
 <th>Ships with Flyway Command-line</th>
 <td>Yes</td>
 </tr>
