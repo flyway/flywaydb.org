@@ -240,28 +240,24 @@ You can provide configuration options to the standard input of the Flyway comman
 
 This allows you to compose Flyway with other operations. For instance, you can decrypt a config file containing login credentials and pipe it straight into Flyway.
 
-Flyway reads configuration from Standard Input by default. To toggle the behavior, use the `-a` flag.
+To read a configuration file from standard in provide `-` as the config file path.
+<pre class="console"><span>&gt;</span> ./flyway info -configFiles=-</pre>
 
 #### Examples
 
 Read a single option from `echo`:
 <pre class="console">
-<span>&gt;</span> echo $'flyway.url=jdbc:h2:mem:mydb' | flyway info
+<span>&gt;</span> echo $'flyway.url=jdbc:h2:mem:mydb' | flyway info -configFiles=-
 </pre>
 
 Read multiple options from `echo`, delimited by newlines:
 <pre class="console">
-<span>&gt;</span> echo $'flyway.url=jdbc:h2:mem:mydb\nflyway.user=sa' | flyway info
+<span>&gt;</span> echo $'flyway.url=jdbc:h2:mem:mydb\nflyway.user=sa' | flyway info -configFiles=-
 </pre>
 
 Use `cat` to read a config file and pipe it directly into Flyway:
 <pre class="console">
-<span>&gt;</span> cat flyway.conf | flyway migrate
-</pre>
-
-Toggle reading from Standard Input:
-<pre class="console">
-<span>&gt;</span> cat flyway.conf | flyway migrate -a
+<span>&gt;</span> cat flyway.conf | flyway migrate -configFiles=-
 </pre>
 
 
@@ -274,7 +270,7 @@ Encrypt the config file:
 
 Decrypt the file and pipe it to Flyway:
 <pre class="console">
-<span>&gt;</span> gpg -d -q flyway.conf.gpg | flyway info
+<span>&gt;</span> gpg -d -q flyway.conf.gpg | flyway info -configFiles=-
 </pre>
  
 ### Overriding order
@@ -284,7 +280,6 @@ The Flyway command-line tool has been carefully designed to load and override co
 Settings are loaded in the following order (higher items in the list take precedence over lower ones):
 1. Command-line arguments
 1. Environment variables
-1. Standard input
 1. Custom config files
 1. `<current-dir>/flyway.conf`
 1. `<user-home>/flyway.conf`
