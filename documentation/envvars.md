@@ -70,6 +70,10 @@ The following environment variables are supported:
             If the default schema is not specified, the first is this list also acts as default schema.
         </td>
     </tr>
+      <tr id="FLYWAY_CREATE_SCHEMAS">
+        <td>FLYWAY_CREATE_SCHEMAS</td>
+        <td>Whether Flyway should attempt to create the schemas specified in the schemas property</td>
+    </tr>
     <tr id="FLYWAY_TABLE">
         <td>FLYWAY_TABLE</td>
         <td>The name of Flyway's schema history table.<br/>By

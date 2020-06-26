@@ -63,6 +63,7 @@ Baselines an existing database, excluding all migrations up to and including bas
     {% include cfg/connectRetries.html %}
     {% include cfg/initSql.html %}
     {% include cfg/schemas.html %}
+    {% include cfg/createSchemas.html %}
     <tr>
         <td>table</td>
         <td>NO</td>
@@ -142,6 +143,7 @@ Baselines an existing database, excluding all migrations up to and including bas
         <schema>schema2</schema>
         <schema>schema3</schema>
     </schemas>
+    <createSchemas>true</createSchemas>
     <table>schema_history</table>
     <tablespace>my_tablespace</tablespace>
     <callbacks>
