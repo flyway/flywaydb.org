@@ -54,6 +54,7 @@ Baselines an existing database, excluding all migrations up to and including `ba
     {% include cfg/connectRetries.html %}
     {% include cfg/initSql.html %}
     {% include cfg/schemas.html %}
+    {% include cfg/createSchemas.html %}
     {% include cfg/color.html %}
     <tr>
         <td>table</td>
@@ -123,6 +124,7 @@ flyway.skipDefaultCallbacks=false
 flyway.baselineVersion=1.0
 flyway.baselineDescription=Base Migration
 flyway.workingDirectory=C:/myProject
+flyway.createSchemas=true
 ```
 
 ## Sample output

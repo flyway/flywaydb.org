@@ -424,6 +424,54 @@ performed against the schema. It also tracks migration checksums and whether or 
 
 Read more about this in our getting started guide on [how Flyway works](/getstarted/how).
 
+## Toggle schema creation
+
+By default, Flyway will attempt to create the schemas provided by the `schemas` and `defaultSchema` configuration options. This behavior can be toggled with the `createSchemas` configuration option.
+
+This might be useful when you want complete control over how schemas are created.
+
+### The `createSchemas` option and the Schema History Table
+
+Flyway requires a schema for the schema history table to reside in before running a migration. When `createSchemas` is `false`, it will be impossible for the schema history table to be created, unless a schema already exists for it to reside in.
+
+So, given a configuration like this:
+
+```
+flyway.createSchemas=false
+flyway.schemas=my_schema
+```
+
+The following can happen if `createSchemas` is `false`:
+
+- Run migrate
+- `my_schema` *is not* created by Flyway
+- Because `my_schema` is the default schema, Flyway attempts to create the schema history table in `my_schema`
+- `my_schema` does not exist, so the operation fails
+
+Therefore, when toggling `createSchemas` to `false`, the following setup is recommended:
+
+- Set the default schema to `flyway_history_schema`
+  - Either by setting `defaultSchema`, or placing it first in the `schemas` configuration option
+- Set `initSql` to create `flyway_history_schema` if it doesn't exist
+- Place your other schemas in the `schemas` property
+
+So, given a configuration like this:
+
+```
+flyway.createSchemas=false
+flyway.initSql=CREATE IF NOT EXISTS flyway_history_schema
+flyway.schemas=flyway_history_schema,my_schema
+```
+
+The following will happen:
+
+- Run migrate
+- `initSql` is executed, so `flyway_history_schema` is created
+- Because `flyway_history_schema` is the default schema, Flyway attempts to create the schema history table in `flyway_history_schema`
+- `my_schema` *is not* created by Flyway
+- Migrations run as normal
+- Migrations are free to control creation of `my_schema`
+
 ## Migration States
 
 Migrations are either *resolved* or *applied*. Resolved migrations have been detected by Flyway's filesystem
