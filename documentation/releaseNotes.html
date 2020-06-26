@@ -8,6 +8,30 @@ subtitle: Release Notes
 <p>Thank you all for reporting all these issues and contributing fixes!</p>
 
 <div class="release">
+    <h2 id="6.5.0">Flyway 6.5.0 (2020-06-25)</h2>
+
+    <h3>New features</h3>
+    <ul>
+        {% include issue.html id="2350" title="Added a config option to disable automatic schema creation" %}
+        {% include issue.html id="2766" title="Allow script encoding to be set on a per-script basis" %}
+        {% include issue.html id="2838" title="Make ResourceProvider and ClassProvider configurable" %}
+    </ul>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        {% include issue.html id="2853" title="Fix MySQL support for multiline IF statements" %}
+        {% include issue.html id="2854" title="Fix MariaDB support for ROW END" %}
+        {% include issue.html id="2856" title="Improve DB2 module clean" %}
+        {% include issue.html id="2860" title="Fix Oracle parsing issue" %}
+        {% include issue.html id="2861" title="Fix MySQL support for IF with AS" %}
+    </ul>
+
+    <p>
+        Thanks to Sourav1407, XhstormR, geoand, htto, lwasylow, mikhailRo, monmallonga, and wkiszka for reporting these issues and/or submitting pull requests.
+    </p>
+</div>
+
+<div class="release">
     <h2 id="6.4.4">Flyway 6.4.4 (2020-06-10)</h2>
 
     <h3>Bug fixes</h3>
