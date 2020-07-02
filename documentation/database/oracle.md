@@ -33,7 +33,7 @@ All editions are supported, including XE.
 </tr>
 <tr>
 <th>Maven Central coordinates</th>
-<td><code>com.oracle.ojdbc:ojdbc8:19.3.0.0</code></td>
+<td><code>com.oracle.database.jdbc:ojdbc8:19.6.0.0</code></td>
 </tr>
 <tr>
 <th>Supported versions</th>
@@ -46,12 +46,6 @@ All editions are supported, including XE.
 </table>
 
 \* `TNS_ADMIN` environment variable must point to the directory of where `tnsnames.ora` resides
-
-## Oracle drivers with Maven
-
-The `com.oracle.ojdbc:ojdbc8:19.3.0.0` driver is only available through Oracle's Maven repository. You'll need to configure your Maven project to look there if you require the drivers.
-
-See the [Oracle website](https://docs.oracle.com/middleware/1213/core/MAVEN/config_maven_repo.htm#MAVEN9010) for more information.
 
 ## SQL Script Syntax
 
