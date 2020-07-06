@@ -35,7 +35,7 @@ subtitle: PostgreSQL
 </tr>
 <tr>
 <th>Maven Central coordinates</th>
-<td><code>org.postgresql:postgresql:42.2.12[.jre6]</code></td>
+<td><code>org.postgresql:postgresql:42.2.14</code></td>
 </tr>
 <tr>
 <th>Supported versions</th>
@@ -58,9 +58,6 @@ subtitle: PostgreSQL
 - DDL exported by pg_dump can be used unchanged in a Flyway migration.
 - Any PostgreSQL sql script executed by Flyway, can be executed by the PostgreSQL command-line tool and other
         PostgreSQL-compatible tools (after the placeholders have been replaced).
-- The driver shipped by default with the Flyway command line is <code>postgresql-42.2.8.jre6.jar</code>. This does
-not support SCRAM authentication. To use SCRAM, you will need to use Java 8 as a minimum and 
-should download the <code>postgresql-42.2.8.jar</code> driver instead. 
 
 ## Authentication
 
@@ -69,6 +66,8 @@ PostgreSQL supports user and password being provided in the JDBC URL, in the for
 `jdbc:postgresql://<host>:<port>/<database>?user=myUsername&password=myPassword&<key1>=<value1>&<key2>=<value2>...`
 
 In this case, they do not need to be passed separately in configuration and the Flyway commandline will not prompt for them.
+Flyway supports SCRAM authentication encryption transparently using the current driver (42.2.14) - note that 
+`.jre6` and `.jre7` versions of the driver for older JREs do not support it. 
 
 ### Example
 
