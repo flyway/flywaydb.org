@@ -424,7 +424,7 @@ performed against the schema. It also tracks migration checksums and whether or 
 
 Read more about this in our getting started guide on [how Flyway works](/getstarted/how).
 
-## Toggle schema creation
+## Schema creation
 
 By default, Flyway will attempt to create the schemas provided by the `schemas` and `defaultSchema` configuration options. This behavior can be toggled with the `createSchemas` configuration option.
 
