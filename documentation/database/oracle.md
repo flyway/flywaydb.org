@@ -145,11 +145,21 @@ The short form of these commands is also supported.
 
 When `SET SERVEROUTPUT ON` is invoked output produced by `DBMS_OUTPUT.PUT_LINE` will be shown in the console.
 
-### Placeholders
+### Variable substitution
 
-By default SQL\*Plus placeholder support is enabled. `&VAR`-style placeholders will automatically be replaced with the
-matching value supplied by either Flyway's regular placeholder configuration or a `DEFINE` command. 
-Use of these placeholders can be disabled in the usual way using the `SET DEFINE OFF` command. 
+By default SQL\*Plus variable substitution support is enabled. `&VAR`-style variables will automatically be replaced 
+with the matching value supplied by either Flyway's regular placeholder configuration or a `DEFINE` command. 
+Use of these variables can be disabled in the usual way using the `SET DEFINE OFF` command. 
+
+While SQL\*Plus is interactive and will prompt for missing variable values, Flyway does not; it is an error not
+to provide a value for all variables that need to be substituted. 
+
+Statements which contain a `&VAR`-style expression which is not intended to be substituted, such as in a
+literal string, will either require `SET DEFINE OFF` beforehand, or some alternative construct to avoid use of
+the ampersand.
+
+For more information, see the 
+[SQL\*Plus documentation](https://blogs.oracle.com/opal/sqlplus-101-substitution-variables#2)
 
 ### Unsupported commands
 
