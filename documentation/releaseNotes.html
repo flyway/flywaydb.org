@@ -10,6 +10,20 @@ subtitle: Release Notes
 <div class="release">
     <h2 id="7.0.0">Flyway 7 beta (unreleased)</h2>
 
+    <h3>Database compatibility</h3>
+    <ul>
+        {% include issue.html id="2466" title="Support for several older databases moved into Enterprise" %}
+    </ul>
+
+    <p>The databases that are only supported in Enterprise starting with v7 are:
+    <ul>
+        <li>HSQLDB 2.3 (2010)</li>
+        <li>PostgreSQL 9.4 (2014)</li>
+        <li>Sybase ASE 16.0 (2014)</li>
+        <li>Sybase ASE 16.1 (2015)</li>
+    </ul>
+    </p>
+
     <h3>New features</h3>
     <ul>
         {% include issue.html id="2594" title="Postgres driver updated to support SCRAM authentication" %}
