@@ -60,8 +60,8 @@ package org.flywaydb.core.api.callback;
  */
 public interface Callback {
     /**
-     * Whether this callback supports this event or not. This is primarily meant as a way to optimize event 
-     * handling by avoiding unnecessary connection state setups for events that will not be handled anyway.
+     * Whether this callback supports this event or not. This is primarily meant as a way to optimize event handling
+     * by avoiding unnecessary connection state setups for events that will not be handled anyway.
      *
      * @param event   The event to check.
      * @param context The context for this event.
@@ -70,16 +70,16 @@ public interface Callback {
     boolean supports(Event event, Context context);
 
     /**
-     * Whether this event can be handled in a transaction or whether it must be handled outside a transaction
-     * instead. In the vast majority of the cases the answer will be {@code true}. Only in the rare cases where
-     * non-transactional statements are executed should this return {@code false}.
-     * This method is called before {@link #handle(Event, Context)} in order to determine in advance whether a 
-     * transaction can be used or not.
+     * Whether this event can be handled in a transaction or whether it must be handled outside a transaction instead.
+     * In the vast majority of the cases the answer will be
+     * {@code true}. Only in the rare cases where non-transactional statements are executed should this return {@code false}.
+     * This method is called before {@link #handle(Event, Context)} in order to determine in advance whether a transaction
+     * can be used or not.
      *
      * @param event   The event to check.
      * @param context The context for this event.
-     * @return {@code true} if it can be handled within a transaction (almost all cases). {@code false} if it
-     * must be handled outside a transaction instead (very rare).
+     * @return {@code true} if it can be handled within a transaction (almost all cases). {@code false} if it must be
+     * handled outside a transaction instead (very rare).
      */
     boolean canHandleInTransaction(Event event, Context context);
 
@@ -102,21 +102,24 @@ fire off a notification to a third party service at the end of a migration, whet
 want to duplicate the code, then you could achieve this by handling both `afterMigrate` and `afterMigrateError`:
 
 ```java
-class MyNotifierCallback implements Callback {
+public class MyNotifierCallback implements Callback {
     
     // Ensures that this callback handles both events
-    boolean supports(Event event, Context context) {
-        return (event.equals(Event.AFTER_MIGRATE) || event.equals(Event.AFTER_MIGRATE_ERROR));
+    @Override
+    public boolean supports(Event event, Context context) {
+        return event.equals(Event.AFTER_MIGRATE) || event.equals(Event.AFTER_MIGRATE_ERROR);
     }
     
     // Not relevant if we don't interact with the database
-    boolean canHandleInTransaction(Event event, Context context) {
+    @Override
+    public boolean canHandleInTransaction(Event event, Context context) {
         return true;
     }
     
     // Send a notification when either event happens.
-    void handle(Event event, Context context) {
-        String notification = (event.equals(Event.AFTER_MIGRATE)) ? "Success" : "Failed";
+    @Override
+    public void handle(Event event, Context context) {
+        String notification = event.equals(Event.AFTER_MIGRATE) ? "Success" : "Failed";
         // ... Notification logic ...
         notificationService.send(notification);
     }
