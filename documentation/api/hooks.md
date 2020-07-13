@@ -102,21 +102,24 @@ fire off a notification to a third party service at the end of a migration, whet
 want to duplicate the code, then you could achieve this by handling both `afterMigrate` and `afterMigrateError`:
 
 ```java
-class MyNotifierCallback implements Callback {
+public class MyNotifierCallback implements Callback {
     
     // Ensures that this callback handles both events
-    boolean supports(Event event, Context context) {
-        return (event.equals(Event.AFTER_MIGRATE) || event.equals(Event.AFTER_MIGRATE_ERROR));
+    @Override
+    public boolean supports(Event event, Context context) {
+        return event.equals(Event.AFTER_MIGRATE) || event.equals(Event.AFTER_MIGRATE_ERROR);
     }
     
     // Not relevant if we don't interact with the database
-    boolean canHandleInTransaction(Event event, Context context) {
+    @Override
+    public boolean canHandleInTransaction(Event event, Context context) {
         return true;
     }
     
     // Send a notification when either event happens.
-    void handle(Event event, Context context) {
-        String notification = (event.equals(Event.AFTER_MIGRATE)) ? "Success" : "Failed";
+    @Override
+    public void handle(Event event, Context context) {
+        String notification = event.equals(Event.AFTER_MIGRATE) ? "Success" : "Failed";
         // ... Notification logic ...
         notificationService.send(notification);
     }
