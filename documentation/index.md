@@ -43,7 +43,7 @@ title: Documentation
     Alternatively, you can also use the <a href="/documentation/maven">Maven plugin</a>
     or <a href="/documentation/gradle">Gradle plugin</a>.</p>
 
-<p>And if that not enough, there are <a href="/documentation/plugins">plugins</a>
+<p>And if that's not enough, there are <a href="/documentation/plugins">plugins</a>
     available for Spring Boot, Dropwizard, Grails, Play, SBT, Ant, Griffon, Grunt, Ninja and more!</p>
 
 <p>Supported databases are
