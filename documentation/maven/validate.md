@@ -280,6 +280,7 @@ Validation fails if
         <location>classpath:migrations1</location>
         <location>migrations2</location>
         <location>filesystem:/sql-migrations</location>
+        <location>s3:migrationsBucket</location>    
     </locations>
     <sqlMigrationPrefix>Migration-</sqlMigrationPrefix>
     <undoSqlMigrationPrefix>downgrade</undoSqlMigrationPrefix>

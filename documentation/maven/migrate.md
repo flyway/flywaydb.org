@@ -364,6 +364,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
         <location>classpath:migrations1</location>
         <location>migrations2</location>
         <location>filesystem:/sql-migrations</location>
+        <location>s3:migrationsBucket</location>
     </locations>
     <sqlMigrationPrefix>Migration-</sqlMigrationPrefix>
     <undoSqlMigrationPrefix>downgrade</undoSqlMigrationPrefix>
