@@ -191,7 +191,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
         <td>skipDefaultResolvers</td>
         <td>NO</td>
         <td>false</td>
-        <td>Whether default built-in resolvers (sql, jdbc and spring-jdbc) should be skipped. If true, only custom resolvers are used.</td>
+        <td>Whether default built-in resolvers (sql and jdbc) should be skipped. If true, only custom resolvers are used.</td>
     </tr>
     <tr>
         <td>callbacks</td>
