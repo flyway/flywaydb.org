@@ -176,7 +176,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
         <td>skipDefaultResolvers</td>
         <td>NO</td>
         <td>false</td>
-        <td>Whether default built-in resolvers (sql, jdbc and spring-jdbc) should be skipped. If true, only custom resolvers are used.</td>
+        <td>Whether default built-in resolvers (sql and jdbc) should be skipped. If true, only custom resolvers are used.</td>
     </tr>
     <tr>
         <td>callbacks</td>
@@ -376,11 +376,6 @@ Migrating to version 1.1
 Migrating to version 1.2
 Migrating to version 1.3
 Successfully applied 4 migrations (execution time 00:00.091s).</pre>
-
-## Important Note
-
-When using Spring JDBC migrations, you must declare a dependency on `org.springframework:spring-jdbc:${springVersion}`
-in Gradle's `buildScript` block to avoid being hit with a `java.lang.LinkageError`.
 
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/gradle/clean">Gradle: clean <i class="fa fa-arrow-right"></i></a>

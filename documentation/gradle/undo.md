@@ -148,7 +148,7 @@ subtitle: 'gradle flywayUndo'
         <td>skipDefaultResolvers</td>
         <td>NO</td>
         <td>false</td>
-        <td>Whether default built-in resolvers (sql, jdbc and spring-jdbc) should be skipped. If true, only custom resolvers are used.</td>
+        <td>Whether default built-in resolvers (sql and jdbc) should be skipped. If true, only custom resolvers are used.</td>
     </tr>
     <tr>
         <td>callbacks</td>
@@ -281,11 +281,6 @@ Database: jdbc:h2:file:C:\Programs\flyway-0-SNAPSHOT\flyway.db (H2 1.3)
 Current version of schema "PUBLIC": 1
 Undoing migration of schema "PUBLIC" to version 1 - First
 Successfully undid 1 migration to schema "PUBLIC" (execution time 00:00.024s).</pre>
-
-## Important Note
-
-When using Spring JDBC migrations, you must declare a dependency on `org.springframework:spring-jdbc:${springVersion}`
-in Gradle's `buildScript` block to avoid being hit with a `java.lang.LinkageError`.
 
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/gradle/baseline">Gradle: baseline <i class="fa fa-arrow-right"></i></a>
