@@ -203,7 +203,7 @@ The following environment variables are supported:
     </tr>
     <tr id="FLYWAY_SKIP_DEFAULT_RESOLVERS">
         <td>FLYWAY_SKIP_DEFAULT_RESOLVERS</td>
-        <td>Whether default built-in resolvers (sql, jdbc and spring-jdbc) should be skipped. If true, only custom resolvers are used.</td>
+        <td>Whether default built-in resolvers (sql and jdbc) should be skipped. If true, only custom resolvers are used.</td>
     </tr>
     <tr id="FLYWAY_CALLBACKS">
         <td>FLYWAY_CALLBACKS</td>
