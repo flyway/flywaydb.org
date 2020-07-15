@@ -8,7 +8,7 @@ subtitle: HSQLDB
 ## Supported Versions
 
 - `2.4`
-- `2.3`
+- `2.3` {% include enterprise.html %}
 - `2.2` {% include enterprise.html %}
 - `2.0` {% include enterprise.html %}
 - `1.8` {% include enterprise.html %}
