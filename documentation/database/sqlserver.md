@@ -175,6 +175,10 @@ For MSI and Integrated, amend your JDBC URL to set the `authentication` paramete
 
 ## Limitations
 
+- Flyway's automatic detection for whether SQL statements are valid in transactions does not apply to 
+<code>CREATE/ALTER/DROP</code> statements acting on in-memory tables (that is, those created with 
+<code>WITH (MEMORY_OPTIMIZED = ON)</code>). You will need to override the `executeInTransaction` setting to be false,
+either on a [per-script basis](https://flywaydb.org/documentation/scriptconfigfiles) or globally.
 - SQL Server is unable to change the default schema for a session. Therefore, setting the `flyway.defaultSchema` property
 has no value, unless used for a [Placeholder](https://flywaydb.org/documentation/migrations#placeholder-replacement) in
 your sql scripts. If you decide to use `flyway.defaultSchema`, it also must exist in `flyway.schemas`.
