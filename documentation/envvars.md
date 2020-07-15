@@ -107,6 +107,11 @@ The following environment variables are supported:
                 <li><code>*</code> : Matches any 0 or more non-separator characters. (e.g. <code>db/release1.*</code> will match <code>db/release1.0</code>, <code>db/release1.1</code>, <code>db/release1.123</code> but not <code>db/release2.0</code>)</li>
                 <li><code>?</code> : Matches any 1 non-separator character. (e.g. <code>db/release1.?</code> will match <code>db/release1.0</code>, <code>db/release1.1</code> but not <code>db/release1.11</code>)</li>
             </ul>
+            <br/>
+            Locations starting with <code>s3:</code> point to a bucket in AWS S3, may only contain SQL migrations, and are scanned
+            recursively. They are in the format s3:&lt;bucket&gt;(/optionalfolder/subfolder). Wildcards are not supported. To use
+            AWS S3, the AWS environment variables <code>AWS_REGION</code>, <code>AWS_ACCESS_KEY_ID</code> and
+            <code>AWS_SECRET_ACCESS_KEY</code> need to be set to the appropriate values for your S3 account.
         </td>
     </tr>
     <tr id="FLYWAY_JAR_DIRS">
