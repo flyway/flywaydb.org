@@ -81,7 +81,7 @@ Flyway flyway = Flyway.configure()
 flyway.migrate();
 ```
 
-We've defined a `LoadableResource` object which points to a single migration `V1__migration.sql`. We call `.resourceProvider` when configuring Flyway to return that `LoadableResource`.
+We've defined a `LoadableResource` object which points to a single migration `V1__migration.sql`. We call `.resourceProvider` when setting up the configuration to give Flyway a custom `ResourceProvider`, which in turn provides a `LoadableResource`.
 
 This is a trivial example, but it demonstrates the principle. Given that we allow you to inject a plain Java object there are many possibilities. For instance, you could read resources from a cloud storage provider, parse a bespoke configuration file format, or perhaps even prompt for user input.
 
