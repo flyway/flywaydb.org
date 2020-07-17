@@ -394,3 +394,61 @@ Add `-outputFile=/my/output.txt` to the argument list to also write output to th
     <a class="btn btn-primary" href="/documentation/commandline/migrate">Command-line: migrate <i
             class="fa fa-arrow-right"></i></a>
 </p>
+
+{% include downloadpopup.html name="Windows" id="windows" url="/download/thankyou?dl=https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/__VERSION__/flyway-commandline-__VERSION__-windows-x64.zip" %}
+{% include downloadpopup.html name="Mac OSX" id="macosx" url="/download/thankyou?dl=https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/__VERSION__/flyway-commandline-__VERSION__-macosx-x64.tar.gz" %}
+{% include downloadpopup.html name="Linux" id="linux" url="/download/thankyou?dl=https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/__VERSION__/flyway-commandline-__VERSION__-linux-x64.tar.gz" %}
+
+<script src="//content.red-gate.com/js/forms2/js/forms2.min.js"></script>
+<script>MktoForms2.loadForm("//content.red-gate.com", "808-ITG-788", 2997, function(marketoForm) {
+
+    marketoForm.onValidate(function(successful) {
+        if (!successful) {
+            marketoForm.submittable(false);
+        } else {
+
+            // Do some custom validation.
+
+            // Get the fields and their values from the form.
+            var fields = marketoForm.vals();
+
+            // Custom object for storing info about the fail.
+            var fail = {
+                isFail: false,
+                message: '',
+                element: null,
+            };
+
+            // Email validation.
+            if (typeof fields.Email !== 'undefined') {
+
+                // Email regex provided by https://regex101.com/r/L9Z2N0/1.
+                // Check that the format is {something}@{something}.{something}.
+                var emailRegex = /\S+@\S+\.\S+/;
+
+                if (emailRegex.test(fields.Email) === false) {
+                    fail.isFail = true;
+                    fail.message = 'Please enter a valid email address.';
+                    fail.element = marketoForm.getFormElem().find('input[name="Email"]');
+                }
+            }
+
+            // If form validation fails.
+            if (fail.isFail) {
+
+                // Stop the form from being submittable.
+                marketoForm.submittable(false);
+
+                // Show an error message against the invalid field.
+                marketoForm.showErrorMessage(fail.message, fail.element);
+
+                // Display the field as invalid using the Marketo class.
+                fail.element.get(0).classList.add('mktoInvalid');
+            } else {
+
+                // All is good, continue as normal.
+                marketoForm.submittable(true);
+            }
+        }
+    });
+});</script>
