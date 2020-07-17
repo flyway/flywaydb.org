@@ -15,7 +15,7 @@ Select the platform that you need. Each download contains all editions (communit
 
 #### <i class="fa fa-windows"></i> Windows
 
-<a class="btn btn-primary btn-download" href="/download/thankyou?dl=https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-windows-x64.zip">flyway-commandline-{{site.flywayVersion}}-windows-x64.zip</a>
+<button class="btn btn-primary btn-download" data-toggle="modal" data-target="#download-email-modal-windows">flyway-commandline-{{site.flywayVersion}}-windows-x64.zip</button>
 <a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-windows-x64.zip.md5">md5</a>
 <a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-windows-x64.zip.sha1">sha1</a><br/>
 
@@ -23,7 +23,7 @@ Select the platform that you need. Each download contains all editions (communit
 
 #### <i class="fa fa-apple"></i> macOS
 
-<a class="btn btn-primary btn-download" href="/download/thankyou?dl=https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-macosx-x64.tar.gz">flyway-commandline-{{site.flywayVersion}}-macosx-x64.tar.gz</a>
+<button class="btn btn-primary btn-download" data-toggle="modal" data-target="#download-email-modal-macosx">flyway-commandline-{{site.flywayVersion}}-macosx-x64.tar.gz</button>
 <a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-macosx-x64.tar.gz.md5">md5</a>
 <a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-macosx-x64.tar.gz.sha1">sha1</a><br/><br/>
 
@@ -34,7 +34,7 @@ Download, extract and install by adding to `PATH` (requires `sudo` permissions):
 
 Or simply download the archive:
  
-<a class="btn btn-primary btn-download" href="/download/thankyou?dl=https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-linux-x64.tar.gz">flyway-commandline-{{site.flywayVersion}}-linux-x64.tar.gz</a>
+<button class="btn btn-primary btn-download" data-toggle="modal" data-target="#download-email-modal-linux">flyway-commandline-{{site.flywayVersion}}-linux-x64.tar.gz</button>
 <a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-linux-x64.tar.gz.md5">md5</a>
 <a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-linux-x64.tar.gz.sha1">sha1</a><br/><br/>
 
