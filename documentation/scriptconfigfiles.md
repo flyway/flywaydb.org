@@ -7,12 +7,14 @@ subtitle: Script Config Files
 
 It's possible to configure SQL migrations on a per-script basis.
 
-This is achieved by creating a script configuration file alongside the migration. The script configuration file name must match
-the migration file name, with the `.conf` suffix added.
+This is achieved by creating a script configuration file in the same folder as the migration. The script configuration 
+file name must match the migration file name, with the `.conf` suffix added. Script configuration files do **not**
+need to be explicitly listed in the main configuration, or the command line.
 
-For example, a migration file `V2__my_script.sql` would have a script configuration file `V2__my_script.sql.conf`.
+For example, a migration file `sql/V2__my_script.sql` would have a script configuration file `sql/V2__my_script.sql.conf`.
 
-Script Config Files have a subset of the options from the other ways of configuring Flyway (e.g. `flyway.conf`). See the Reference at the bottom of the page for the complete list of options.
+Script Config Files have a subset of the options from the other ways of configuring Flyway (e.g. `flyway.conf`). See 
+the Reference at the bottom of the page for the complete list of options.
 
 ## Structure
 
