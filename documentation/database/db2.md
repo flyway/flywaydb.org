@@ -31,12 +31,12 @@ subtitle: DB2
 <td>No</td>
 </tr>
 <tr>
-<th>Download</th>
-<td>Follow instructuctions on <a href="http://www-01.ibm.com/support/docview.wss?uid=swg21363866">ibm.com</a></td>
+<th>Maven Central coordinates</th>
+<td><code>com.ibm.db2.jcc:11.5.0.0</code></td>
 </tr>
 <tr>
 <th>Supported versions</th>
-<td><code>4.16.53</code> and later</td>
+<td><code>4.16.53</code> and later. For versions prior to 11.5, follow instructions on <a href="http://www-01.ibm.com/support/docview.wss?uid=swg21363866">ibm.com</a></td>
 </tr>
 <tr>
 <th>Default Java class</th>
