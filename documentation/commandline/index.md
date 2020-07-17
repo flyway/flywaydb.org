@@ -398,7 +398,6 @@ Add `-outputFile=/my/output.txt` to the argument list to also write output to th
 {% include downloadpopup.html %}
 <script>
     if (typeof updateModalVersion !== 'undefined') {   
-        window.console.log('Function exists!');
         var downloadButtons = document.querySelectorAll('.download-modal-button');
         for (var i=0; i<downloadButtons.length; i++) {
             downloadButtons[i].addEventListener('click', updateModalVersion);
