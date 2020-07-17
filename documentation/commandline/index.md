@@ -15,7 +15,7 @@ Select the platform that you need. Each download contains all editions (communit
 
 #### <i class="fa fa-windows"></i> Windows
 
-<button class="btn btn-primary btn-download" data-toggle="modal" data-target="#download-email-modal-windows">flyway-commandline-{{site.flywayVersion}}-windows-x64.zip</button>
+<button class="btn btn-primary btn-download download-modal-button" data-toggle="modal" data-target="#download-email-modal" data-download-url="/download/thankyou?dl=https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-windows-x64.zip">flyway-commandline-{{site.flywayVersion}}-windows-x64.zip</button>
 <a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-windows-x64.zip.md5">md5</a>
 <a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-windows-x64.zip.sha1">sha1</a><br/>
 
@@ -23,7 +23,7 @@ Select the platform that you need. Each download contains all editions (communit
 
 #### <i class="fa fa-apple"></i> macOS
 
-<button class="btn btn-primary btn-download" data-toggle="modal" data-target="#download-email-modal-macosx">flyway-commandline-{{site.flywayVersion}}-macosx-x64.tar.gz</button>
+<button class="btn btn-primary btn-download download-modal-button" data-toggle="modal" data-target="#download-email-modal" data-download-url="/download/thankyou?dl=https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-macosx-x64.tar.gz">flyway-commandline-{{site.flywayVersion}}-macosx-x64.tar.gz</button>
 <a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-macosx-x64.tar.gz.md5">md5</a>
 <a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-macosx-x64.tar.gz.sha1">sha1</a><br/><br/>
 
@@ -34,7 +34,7 @@ Download, extract and install by adding to `PATH` (requires `sudo` permissions):
 
 Or simply download the archive:
  
-<button class="btn btn-primary btn-download" data-toggle="modal" data-target="#download-email-modal-linux">flyway-commandline-{{site.flywayVersion}}-linux-x64.tar.gz</button>
+<button class="btn btn-primary btn-download download-modal-button" data-toggle="modal" data-target="#download-email-modal" data-download-url="/download/thankyou?dl=https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-linux-x64.tar.gz">flyway-commandline-{{site.flywayVersion}}-linux-x64.tar.gz</button>
 <a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-linux-x64.tar.gz.md5">md5</a>
 <a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-linux-x64.tar.gz.sha1">sha1</a><br/><br/>
 
@@ -395,60 +395,13 @@ Add `-outputFile=/my/output.txt` to the argument list to also write output to th
             class="fa fa-arrow-right"></i></a>
 </p>
 
-{% include downloadpopup.html name="Windows" id="windows" url="/download/thankyou?dl=https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/__VERSION__/flyway-commandline-__VERSION__-windows-x64.zip" %}
-{% include downloadpopup.html name="Mac OSX" id="macosx" url="/download/thankyou?dl=https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/__VERSION__/flyway-commandline-__VERSION__-macosx-x64.tar.gz" %}
-{% include downloadpopup.html name="Linux" id="linux" url="/download/thankyou?dl=https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/__VERSION__/flyway-commandline-__VERSION__-linux-x64.tar.gz" %}
-
-<script src="//content.red-gate.com/js/forms2/js/forms2.min.js"></script>
-<script>MktoForms2.loadForm("//content.red-gate.com", "808-ITG-788", 2997, function(marketoForm) {
-
-    marketoForm.onValidate(function(successful) {
-        if (!successful) {
-            marketoForm.submittable(false);
-        } else {
-
-            // Do some custom validation.
-
-            // Get the fields and their values from the form.
-            var fields = marketoForm.vals();
-
-            // Custom object for storing info about the fail.
-            var fail = {
-                isFail: false,
-                message: '',
-                element: null,
-            };
-
-            // Email validation.
-            if (typeof fields.Email !== 'undefined') {
-
-                // Email regex provided by https://regex101.com/r/L9Z2N0/1.
-                // Check that the format is {something}@{something}.{something}.
-                var emailRegex = /\S+@\S+\.\S+/;
-
-                if (emailRegex.test(fields.Email) === false) {
-                    fail.isFail = true;
-                    fail.message = 'Please enter a valid email address.';
-                    fail.element = marketoForm.getFormElem().find('input[name="Email"]');
-                }
-            }
-
-            // If form validation fails.
-            if (fail.isFail) {
-
-                // Stop the form from being submittable.
-                marketoForm.submittable(false);
-
-                // Show an error message against the invalid field.
-                marketoForm.showErrorMessage(fail.message, fail.element);
-
-                // Display the field as invalid using the Marketo class.
-                fail.element.get(0).classList.add('mktoInvalid');
-            } else {
-
-                // All is good, continue as normal.
-                marketoForm.submittable(true);
-            }
+{% include downloadpopup.html %}
+<script>
+    if (typeof updateModalVersion !== 'undefined') {   
+        window.console.log('Function exists!');
+        var downloadButtons = document.querySelectorAll('.download-modal-button');
+        for (var i=0; i<downloadButtons.length; i++) {
+            downloadButtons[i].addEventListener('click', updateModalVersion);
         }
-    });
-});</script>
+    }
+</script>
