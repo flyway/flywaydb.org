@@ -192,7 +192,8 @@ To pass in multiple files, separate their names with commas:
 
 <pre class="console"><span>&gt;</span> flyway <strong>-configFiles</strong>=path/to/myAlternativeConfig.conf,other.conf migrate</pre>
 
-Relative paths are relative to the current working directory. 
+Relative paths are relative to the current working directory. The special option `-configFiles=-` reads from 
+standard input.
 
 Alternatively you can also use the `FLYWAY_CONFIG_FILES` environment variable for this.
 When set it will take preference over the command-line parameter.
@@ -236,26 +237,28 @@ equals `=` and ampersands `&`. For example:
 
 ### Configuration from standard input
 
-You can provide configuration options to the standard input of the Flyway command line. Flyway will expect such configuration to be in the same format as a configuration file.
+You can provide configuration options to the standard input of the Flyway command line, using the 
+` -configFiles=-` option. Flyway will expect such configuration to be in the same format as a configuration file.
 
-This allows you to compose Flyway with other operations. For instance, you can decrypt a config file containing login credentials and pipe it straight into Flyway.
+This allows you to compose Flyway with other operations. For instance, you can decrypt a config file containing 
+login credentials and pipe it straight into Flyway.
 
 #### Examples
 
 Read a single option from `echo`:
 <pre class="console">
-<span>&gt;</span> echo $'flyway.url=jdbc:h2:mem:mydb' | flyway info
+<span>&gt;</span> echo $'flyway.url=jdbc:h2:mem:mydb' | flyway info -configFiles=-
 </pre>
 
 
 Read multiple options from `echo`, delimited by newlines:
 <pre class="console">
-<span>&gt;</span> echo $'flyway.url=jdbc:h2:mem:mydb\nflyway.user=sa' | flyway info
+<span>&gt;</span> echo $'flyway.url=jdbc:h2:mem:mydb\nflyway.user=sa' | flyway info -configFiles=-
 </pre>
 
 Use `cat` to read a config file and pipe it directly into Flyway:
 <pre class="console">
-<span>&gt;</span> cat flyway.conf | flyway migrate
+<span>&gt;</span> cat flyway.conf | flyway migrate -configFiles=-
 </pre>
 
 Use `gpg` to encrypt a config file, then pipe it into Flyway.
@@ -267,7 +270,7 @@ Encrypt the config file:
 
 Decrypt the file and pipe it to Flyway:
 <pre class="console">
-<span>&gt;</span> gpg -d -q flyway.conf.gpg | flyway info
+<span>&gt;</span> gpg -d -q flyway.conf.gpg | flyway info -configFiles=-
 </pre>
  
 ### Overriding order
