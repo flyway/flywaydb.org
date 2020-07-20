@@ -11,6 +11,12 @@ subtitle: Articles
 
 <h2>English</h2>
 
+<p><strong><a href="https://chrisunwin.home.blog/2020/07/20/flyway-and-tsqlt-migrating-to-warmer-test-climates/">
+Flyway and tSQLt - migrating to warmer test climates</a></strong> by Chris Unwin</p>
+
+<p><strong><a href="https://chrisunwin.home.blog/2020/07/07/xrdbms-database-continuous-integration-with-flyway-azure-devops-and-docker-the-simple-way/">
+xRDBMS Database Continuous Integration with Flyway, Azure DevOps and Docker… the simple way</a></strong> by Chris Unwin</p>
+
 <p><strong><a href="https://community.snowflake.com/s/article/Snowflake-CI-CD-using-Flyway-and-Azure-DevOps-Pipeline-Part-1">
 Snowflake CI/CD using Flyway and Azure Devops Pipeline</a></strong> by Yong Ji</p>
 
