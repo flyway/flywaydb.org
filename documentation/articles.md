@@ -9,6 +9,9 @@ subtitle: Articles
 
 <h2>English</h2>
 
+<p><strong><a href="https://aws.amazon.com/blogs/database/building-a-cross-account-continuous-delivery-pipeline-for-database-migrations/">
+Building a cross-account continuous delivery pipeline for database migrations [in AWS with Flyway]</a></strong> by Pierre Petersson</p>
+
 <p><strong><a href="https://chrisunwin.home.blog/2020/07/20/flyway-and-tsqlt-migrating-to-warmer-test-climates/">
 Flyway and tSQLt - migrating to warmer test climates</a></strong> by Chris Unwin</p>
 
