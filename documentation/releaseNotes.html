@@ -8,6 +8,23 @@ subtitle: Release Notes
 <p>Thank you all for reporting all these issues and contributing fixes!</p>
 
 <div class="release">
+    <h2 id="6.5.2">Flyway 6.5.2 (2020-07-22)</h2>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        {% include issue.html id="2865" title="Remove unhelpful warning re. MariaDB driver / MySQL server following driver update" %}
+        {% include issue.html id="2875" title="Migration fails when placeholder value is much shorter than its name" %}
+        {% include issue.html id="2879" title="Documentation update to clarify script config file location" %}
+        {% include issue.html id="2883" title="Percona XtraDB: support strict mode MASTER similarly to ENFORCING" %}
+        {% include issue.html id="2884" title="Oracle parser: failure parsing package with no trailing /" %}
+    </ul>
+
+    <p>
+        Thanks to anake1, ankos, Mauro Molinari and t-kwasniewski for reporting these issues and/or submitting pull requests.
+    </p>
+</div>
+
+<div class="release">
     <h2 id="6.5.1">Flyway 6.5.1 (2020-07-13)</h2>
 
     <h3>Bug fixes</h3>
