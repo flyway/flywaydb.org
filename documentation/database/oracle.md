@@ -141,6 +141,15 @@ The following commands are fully supported and can be used just like any regular
 
 The short form of these commands is also supported. 
 
+### Support for `login.sql` and `glogin.sql`
+
+`login.sql` and `glogin.sql` are files used to execute statements before every script run (per-user and global,
+respectively), and are typically used to configure the session in a consistent manner by calling SQL*Plus commands 
+such as `SET FEEDBACK` and `SET DEFINE`.
+
+Flyway will look for either of these files in all the valid migration locations, and failing that, it will
+look for `glogin.sql` in `$ORACLE_HOME$/sqlplus/admin/glogin.sql` (if `$ORACLE_HOME$` is defined).
+
 ### Output
 
 When `SET SERVEROUTPUT ON` is invoked output produced by `DBMS_OUTPUT.PUT_LINE` will be shown in the console.
