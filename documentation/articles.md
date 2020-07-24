@@ -5,11 +5,12 @@ subtitle: Articles
 ---
 # Articles
 
-<p>This is a collection of <strong>articles about Flyway</strong> from around them web. <br/> If you've
-    written an article about Flyway and would like it listed here, or simply found one you liked that we missed, <a
-            href="https://github.com/flyway/flywaydb.org">send a Pull Request!</a></p>
+<p>This is a collection of <strong>articles about Flyway</strong> from around the web. <br/> If you've written an article about Flyway and would like it listed here, or simply found one you liked that we missed, <a href="https://github.com/flyway/flywaydb.org">send a Pull Request!</a></p>
 
 <h2>English</h2>
+
+<p><strong><a href="https://aws.amazon.com/blogs/database/building-a-cross-account-continuous-delivery-pipeline-for-database-migrations/">
+Building a cross-account continuous delivery pipeline for database migrations [in AWS with Flyway]</a></strong> by Pierre Petersson</p>
 
 <p><strong><a href="https://chrisunwin.home.blog/2020/07/20/flyway-and-tsqlt-migrating-to-warmer-test-climates/">
 Flyway and tSQLt - migrating to warmer test climates</a></strong> by Chris Unwin</p>
