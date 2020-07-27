@@ -31,6 +31,12 @@ subtitle: Release Notes
         {% include issue.html id="2594" title="Postgres: driver updated to support SCRAM authentication" %}
     </ul>
 
+    <h3>Breaking changes</h3>
+    <ul>
+        {% include issue.html id="" title="Deprecated command-line argument <code>-logFile</code> removed (see <code>-outputFile</code> for replacement)" %}
+        {% include issue.html id="" title="Deprecated migration types <code>SPRING_JDBC, UNDO_SPRING_JDBC</code> removed (use <code>JDBC, UNDO_JDBC</code> instead)" %}
+    </ul>
+
     <h3>Bug fixes</h3>
     <ul>
     </ul>
@@ -419,7 +425,7 @@ subtitle: Release Notes
     <h3>Bug fixes</h3>
     <ul>
         {% include issue.html id="2519" title="Previous fix also needed for Azure MySQL Database v8" %}
-        {% include issue.html id="2582" title="Combining -json and -logFile yields no logFiler" %}
+        {% include issue.html id="2582" title="Combining -json and -logFile yields no logFile" %}
         {% include issue.html id="2591" title="Oracle: invalid delimiter (not alone on line) ignored " %}
         {% include issue.html id="2596" title="Snowflake stored procedure issues in <code>migrate</code> and <code>clean</code>" %}
         {% include issue.html id="2597" title="Parenthesis depth affects interpretation of <code>LOOP</code> in Oracle parser" %}
