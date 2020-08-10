@@ -50,11 +50,19 @@ Here are all the changes and additions you'll need to make:
 1.  Add an optional dependency to your JDBC driver to the top-level `.pom`
 1.  Add a dependency of your JDBC driver to the flyway-commandline `.pom` if you wish the driver to be automatically shipped with the Flyway product.
 1.  In `flyway.conf`, document the format of the JDBC connection url for your database. This is not necessary to make Flyway work but it will help adoption of your database!
-1.  Add an element to the `DriverDataSource.DriverType` enumeration for your database. You will need to specify the JDBC url prefix and the driver class it should instantiate.
-1.  Add an element to the `DatabaseType` enumeration for your database. You will need to specify the JDBC type used to represent NULL in prepared statements for your database, and whether the database supports read-only transactions. Then add a case to `DatabaseType.fromProductNameAndVersion()` which should return this DatabaseType when the JDBC connection metadata contains a specific database name. Once you have done this, Flyway can select the correct JDBC driver and other classes for this configuration.
-1.  Create classes `FooDatabase` (subclassed from Database), `FooSchema` (subclassed from Schema), and `FooTable` (subclassed from Table), using the canonical signatures. These classes make up Flyway’s internal representation of the parts of your database that it works on.
+1.  Create a new folder `Foo` in `org.flywaydb.core.internal.database` to contain your new classes.
+1.  In the folder create classes `FooDatabase` (subclassed from Database), `FooSchema` (subclassed from Schema), and `FooTable` (subclassed from Table), using the canonical signatures. These classes make up Flyway’s internal representation of the parts of your database that it works on.
 1.  Create class `FooParser` (subclassed from Parser) using the canonical signature. This represents a simplified version of a parser for your database’s dialect of SQL. When finished it will be able to decompose a migration script into separate statements and report on serious errors, but it does not need to fully understand them.
-1.  In `DatabaseFactory`, add cases to `createDatabase()` and `createParser()` that construct these two objects. We will come back to override methods on these classes later.
+1.  Create a class `FooDatabaseType` subclassed from `DatabaseType` in the folder your created. This class acts as the collation class that brings together all the classes you created before. Implement the required methods. There are also some optional methods you can override to customize the behavior.
+    *   `createSqlScriptFactory` - To use a custom SqlScriptFactory
+    *   `createSqlScriptExecutorFactory` - To use a custom SqlScriptExecutorFactory
+    *   `createExecutionStrategy` - To use a custom DatabaseExecutionStrategy
+    *   `createTransactionalExecutionTemplate` - To use a custom ExecutionTemplate
+    *   `setDefaultConnectionProps` - To set custom default connection properties
+    *   `shutdownDatabase` - To run any necessary code to cleanup the database on shutdown
+    *   `detectUserRequiredByUrl` - To skip prompting for user if the URL contains user information (e.g. user property, login file)
+    *   `detectPasswordRequiredByUrl` - To skip prompting for password if the URL contains password information (e.g. key file, or password property)
+1.  In `DatabaseTypeRegister.registerForDatabaseTypes` add a `registeredDatabaseTypes.add(new FooDatabaseType(classLoader));` line.
 1.  Create class `FooConnection` subclassed from `Connection<FooDatabase>` using the canonical signature. This represents a JDBC connection to your database. You probably won’t use it in isolation but it is an important component of a `JdbcTemplate`, which provides numerous convenience methods for running queries on your database.  
     In the constructor of `FooConnection`, you can use the `jdbcTemplate` field of `Connection` to query for any database properties that you need to acquire immediately and maintain as part of the state of the connection. You will need to override the following methods as a minimum:
     *   `doRestoreOriginalState()` – to reset anything that a migration may have changed
