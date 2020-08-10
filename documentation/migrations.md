@@ -494,6 +494,10 @@ they are executed again. Note also that changing the value of placeholders will 
 When Flyway discovers an applied versioned migration with a version that is higher than the highest known version
 (this happens typically when a newer version of the software has migrated that schema), that migration is marked as **future**.
 
+When a migration is not found on disk, but is found in the schema history, it is marked as **missing**. By default these will cause *validate* to fail, however they can be marked as **deleted** by using *repair*. See [repair](/documentation/command/repair) for more details.
+
+When a migration has had its state changed to deleted by *repair* it is marked as **deleted**.
+
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/callbacks">Callbacks <i class="fa fa-arrow-right"></i></a>
 </p>
