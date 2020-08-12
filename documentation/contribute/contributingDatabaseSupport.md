@@ -69,7 +69,7 @@ Here are all the changes and additions you'll need to make:
     *   `getCurrentSchemaNameOrSearchPath()` – to return the current database schema for the connection, if this is a concept in your database, or the default schema name if not.
     *   `doChangeCurrentSchemaOrSearchPath()` – to change the current database schema, if this is a concept in your database. If not, use the default which is a no-op.
     *   `getSchema()` – to return a constructed `FooSchema` object.
-1.  Add overrides for `FooDatabase` to customized it to fit the SQL conventions of your database:
+1.  Add overrides for `FooDatabase` to customize it to fit the SQL conventions of your database:
     *   `doGetConnection()` - to return a new `FooConnection`
     *   `ensureSupported()` - to determine which versions of your database will be supported by Flyway. During development, you can leave this as a no-op.
     *   `getRawCreateScript()` - to return SQL appropriate for your database to create the schema history table. Refer to an existing database type to see the column types needed. The table name will be provided by the table argument. If the baseline argument is true, this method should also insert a row for the baseline migration.
@@ -81,7 +81,7 @@ Here are all the changes and additions you'll need to make:
     *   `getBooleanTrue()` and `getBooleanFalse()` – to return string representations of the Boolean values as used in your database’s dialect of SQL. Typically these are "true" and "false", but could be, for example, "1" and "0"
     *   `doQuote()` - to return an escaped version of an identifier for use in SQL. Typically this is the provided value with a double-quote added either side, but could be, for example, square brackets either side as in SQL Server.
     *   `catalogIsSchema()` – to return true if the database uses a catalog to represent a single schema (eg. MySQL, SQLite); false if a catalog is a collection of schemas.
-1.  Add overrides for `FooParser` to customized it to fit the SQL dialect your database uses:
+1.  Add overrides for `FooParser` to customize it to fit the SQL dialect your database uses:
     *   The constructor should call the superclass constructor with a peek depth. This determines how far in advance the parser looks to determine the nature of various symbols. 2 is a reasonable start, unless you know your database has two-character entities (like Snowflake DB’s `$$` for javascript delimiters) in which case start at 3.
     *   Override `getDefaultDelimiter()` if your database uses something other than a semicolon to delimit separate statements
     *   Override `getIdentifierQuote()` if your database uses something other than a double-quote to escape identifiers (eg. MySQL uses backticks)
@@ -89,7 +89,7 @@ Here are all the changes and additions you'll need to make:
     *   Override `getAlternativeStringLiteralQuote()` if your database has a second way to mark string literals in addition to single-quotes (eg. MySql allows double-quotes)
     *   Override `getValidKeywords()` if your database has a different set of valid keywords to the standard ones. It's not strictly necessary to include keywords that cannot be found in migration scripts.
     *   There are other overrides available for handling more complex SQL; contact us for advice in these cases as it is beyond the scope of this guide.
-1.  Add overrides for `FooSchema` to customized it to fit the SQL dialect your database uses:
+1.  Add overrides for `FooSchema` to customize it to fit the SQL dialect your database uses:
     *   `doExists()` – to query whether the schema described exists in the database
     *   `doEmpty()` – to query whether the schema contains any sub-objects eg. tables, views, procedures.
     *   `getObjectCount()` – to query the number of objects of a given type that exist in the schema
@@ -98,7 +98,7 @@ Here are all the changes and additions you'll need to make:
     *   `doClean()` – to drop all the objects that exist in the schema
     *   `doAllTables()` – to query for all the tables in the schema and return a populated array of `FooTable` objects
     *   `getTable()` – to return a `FooTable` object for the given name
-1.  Add overrides for `FooTable` to customized it to fit the SQL dialect your database uses:
+1.  Add overrides for `FooTable` to customize it to fit the SQL dialect your database uses:
     *   `doDrop()` – to drop the table
     *   `doExists()` – to query whether the table described exists in the database
     *   `doLock()` – to lock the table with a read/write pessimistic lock until the end of the current transaction. This is used to prevent concurrent reads and writes to the schema history while a migration is underway. If your database doesn’t support table-level locks, do nothing.
