@@ -166,6 +166,7 @@ Prints the details and status information about all the migrations.
         <td>Whether default built-in callbacks (sql) should be skipped. If true, only custom callbacks are used.</td>
     </tr>
     {% include cfg/target-latest.html %}
+    {% include cfg/cherryPick.html %}
     <tr>
         <td>outOfOrder</td>
         <td>NO</td>
