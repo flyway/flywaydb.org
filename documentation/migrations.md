@@ -512,6 +512,8 @@ When a migration is not found on disk, but is found in the schema history, it is
 
 When a migration has had its state changed to deleted by *repair* it is marked as **deleted**.
 
+When using [cherryPick](/documentation/commandline/migrate#cherryPick), if the migration is not in the cherry picked list then it is marked as **ignored**.
+
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/callbacks">Callbacks <i class="fa fa-arrow-right"></i></a>
 </p>

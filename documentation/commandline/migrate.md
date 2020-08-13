@@ -201,6 +201,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
         <td>Whether default built-in callbacks (sql) should be skipped. If true, only custom callbacks are used.</td>
     </tr>
     {% include cfg/target-latest.html %}
+    {% include cfg/cherryPick.html %}
     <tr id="outOfOrder">
         <td>outOfOrder</td>
         <td>NO</td>
