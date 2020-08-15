@@ -26,6 +26,7 @@ Once that is done, configure Flyway by editing `/conf/flyway.conf` like this:
 flyway.url=jdbc:h2:file:./foobardb
 flyway.user=SA
 flyway.password=
+flyway.locations=filesystem:./sql
 ```
 
 ## Creating the first migration
