@@ -20,7 +20,7 @@ Let's jump into our new directory:
 
 ## Configuring Flyway
 
-Once that is done, configure Flyway by editing `/conf/flyway.conf` like this:
+Once that is done, configure Flyway by editing `./flyway.conf` like this:
 
 ```properties
 flyway.url=jdbc:h2:file:./foobardb
@@ -31,7 +31,7 @@ flyway.locations=filesystem:./sql
 
 ## Creating the first migration
 
-Now create a first migration in the `/sql` directory called `V1__Create_person_table.sql`:
+Now create a first migration in the `./sql` directory called `V1__Create_person_table.sql`:
 
 ```sql
 create table PERSON (
@@ -57,7 +57,7 @@ Successfully applied 1 migration to schema "PUBLIC" (execution time 00:00.033s)<
 
 ## Adding a second migration
 
-If you now add a second migration to the <code>/sql</code> directory called <code>V2__Add_people.sql</code>:
+If you now add a second migration to the `./sql` directory called `V2__Add_people.sql`:
 
 <pre class="prettyprint">insert into PERSON (ID, NAME) values (1, 'Axel');
 insert into PERSON (ID, NAME) values (2, 'Mr. Foo');
