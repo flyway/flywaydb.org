@@ -192,5 +192,5 @@ consequences.
 a driver limitation, and can be solved by using the Microsoft driver instead.
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/database/db2">DB2 <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/database/azuresynapse">Azure Synapse <i class="fa fa-arrow-right"></i></a>
 </p>
