@@ -68,7 +68,7 @@ These are the settings supported via config files:
 # SQLite            : jdbc:sqlite:<database>
 # Sybase ASE        : jdbc:jtds:sybase://<host>:<port>/<database>
 # Redshift*         : jdbc:redshift://<host>:<port>/<database>
-flyway.url=
+# flyway.url=
 
 # Fully qualified classname of the JDBC driver (autodetected by default based on flyway.url)
 # flyway.driver=
