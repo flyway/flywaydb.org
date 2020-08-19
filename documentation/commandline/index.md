@@ -169,9 +169,9 @@ database.
 
 ## Configuration
 
-The Flyway Command-line tool can be configured in a wide variety of ways. You can use 
-config files, environment variables and command-line parameters.
-These different means of configuration can be combined at will.
+The Flyway Command-line tool can be configured in a wide variety of ways. You can use config files, environment 
+variables and command-line parameters (except for `FLYWAY_EDITION`, which is not available in config files and
+should be used as specified above). These different means of configuration can be combined at will.
 
 ### Config files
 

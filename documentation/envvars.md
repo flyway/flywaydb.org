@@ -21,6 +21,12 @@ The following environment variables are supported:
     </tr>
     </thead>
     <tbody>
+    <tr id="FLYWAY_EDITION">
+        <td>FLYWAY_EDITION</td>
+        <td>The edition of Flyway to use. Must be one of <code>community</code>, 
+        <code>pro</code> or <code>enterprise</code>. <b>Only applies to the Flyway command-line. This
+        option is not settable via configuration files.</b></td>
+    </tr>
     <tr id="FLYWAY_CONFIG_FILES">
         <td>FLYWAY_CONFIG_FILES</td>
         <td>Comma-separated list of configuration files to load</td>
