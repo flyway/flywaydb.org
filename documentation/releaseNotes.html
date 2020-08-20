@@ -34,12 +34,17 @@ subtitle: Release Notes
     <h3>Changes</h3>
     <ul>
         {% include issue.html id="2808" title="Placeholder names are now case insensitive" %}
+        {% include issue.html id="2805" title="The CLI default flyway.conf now specifies the location filesystem:sql" %}
+        {% include issue.html id="" title="Non existent locations now display an error in the output" %}
     </ul>
 
     <h3>Breaking changes</h3>
     <ul>
         {% include issue.html id="" title="Deprecated command-line argument <code>-logFile</code> removed (see <code>-outputFile</code> for replacement)" %}
         {% include issue.html id="" title="Deprecated migration types <code>SPRING_JDBC, UNDO_SPRING_JDBC</code> removed (use <code>JDBC, UNDO_JDBC</code> instead)" %}
+        {% include issue.html id="" title="Deprecated dots as location path separators" %}
+        {% include issue.html id="2859" title="Only load from std in when a config file with the name '-' is given" %}
+        {% include issue.html id="2324" title="Invalid targets now cause an error" %}
     </ul>
 
     <h3>Bug fixes</h3>
@@ -52,7 +57,7 @@ subtitle: Release Notes
     </ul>
 
     <p>
-        Thanks to radzimir for reporting these issues and/or submitting pull requests.
+        Thanks to belugabehr, qoomon, Me1gireesh, hdgarrood, fkoehler, JonLally, radzimir for reporting these issues and/or submitting pull requests.
     </p>
 </div>
 
