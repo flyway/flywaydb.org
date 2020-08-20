@@ -34,11 +34,14 @@ software easy, reliable and undoable - that is, to make your organisation's metr
 But it would be even better if you and your organisation can visualise these metrics easily;
 Flyway stores historic intelligence about deployments in its history tables, and providing a way
 to see this will both give you insight into your deployment process, as well as potentially helping
-us to understand our end-users - you - better and meet your needs.
+us to understand our end-users - you - better and meet your needs. The database, of course, is not the
+only component of your systems, but the frequency with which you do migrations, and the times at
+which you use undo scripts on a production database, are useful proxies for the overall metrics.
 
 We started off by surveying a number of you to gauge what interest there might be. Two thirds of
-you are deploying weekly or faster - great! Topics that featured heavily were providing information
-for audit purposes and assessing failure rates and the need for rollbacks. 
+you are comfortably deploying database changes weekly or faster - that's great! Topics that featured 
+heavily were providing information for audit purposes and assessing failure rates and the need for 
+rollbacks. 
 
 We decided that Flightpath would not be a part of Flyway itself, but a separate plugin that can be
 dropped in much like a callback. This means Flightpath is entirely optional, doesn't affect the 
