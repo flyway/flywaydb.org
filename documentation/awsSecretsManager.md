@@ -7,7 +7,8 @@ subtitle: AWS Secrets Manager support
 
 A problem that organizations often encounter is where to store the credentials for connecting to the database. 
 [AWS Secrets Manager](https://aws.amazon.com/secrets-manager) offers a solution to the problem.
-Secrets can be stored in the manager (such as username and password), and then accessed via an id by only authorized users. This keeps sensitive credentials out of SCM.
+Secrets such as usernames and passwords can be stored in the Secrets Manager, and then be accessed via an id 
+known to authorized users. This keeps sensitive credentials out of application configuration.
 
 ## Driver
 <table class="table">
@@ -26,14 +27,14 @@ Secrets can be stored in the manager (such as username and password), and then a
 </table>
 
 ## Supported databases
-Secrets manager support is currently provided by the library [AWS Secrets Manager JDBC Library](https://github.com/aws/aws-secretsmanager-jdbc) for the following databases:
+Secrets Manager support is currently provided by the [AWS Secrets Manager JDBC Library](https://github.com/aws/aws-secretsmanager-jdbc) for the following databases:
 - MariaDB
 - MySQL
 - Oracle
 - PostgreSQL
 - SQL Server
 
-## Configuring flyway
+## Configuring Flyway
 To make Flyway pull credentials from the Secrets Manager, you need to perform the following steps:
 - Ensure the AWS CLI is installed and configured to be able to access the Secrets Manager.
 - Add the driver to your project dependencies, or add it to the drivers folder if using the CLI.
@@ -43,7 +44,7 @@ To make Flyway pull credentials from the Secrets Manager, you need to perform th
 - Change the `flyway.user` configuration property to contain the secret id.
 - Remove the `flyway.password` configuration property.
 
-Now you can run `migrate`, `info`, etc and the credentials will be pulled out of the Secrets manager.
+Now you can run `migrate`, `info`, etc and the credentials will be pulled out of the Secrets Manager.
 
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/placeholders">Placeholders <i class="fa fa-arrow-right"></i></a>
