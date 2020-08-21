@@ -49,6 +49,7 @@ title: Documentation
 <p>Supported databases are
     <a href="/documentation/database/oracle">Oracle</a>,
     <a href="/documentation/database/sqlserver">SQL Server (including Amazon RDS and Azure SQL Database)</a>,
+    <a href="/documentation/database/azuresynapse">Azure Synapse (Formerly Data Warehouse)</a>,
     <a href="/documentation/database/db2">DB2</a>,
     <a href="/documentation/database/mysql">MySQL</a> (including Amazon RDS, Azure Database &amp; Google Cloud SQL),
     <a href="/documentation/database/aurora-mysql">Aurora MySQL</a>,
