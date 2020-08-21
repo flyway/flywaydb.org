@@ -24,6 +24,10 @@ These are the events Flyway supports:
         <td>Before Migrate runs</td>
     </tr>
     <tr>
+        <td>beforeRepeatables</td>
+        <td>Before all repeatable migrations during Migrate</td>
+    </tr>
+    <tr>
         <td>beforeEachMigrate</td>
         <td>Before every single migration during Migrate</td>
     </tr>
@@ -50,6 +54,10 @@ These are the events Flyway supports:
     <tr>
         <td>afterMigrate</td>
         <td>After successful Migrate runs</td>
+    </tr>
+    <tr>
+        <td>afterVersioned</td>
+        <td>After all versioned migrations during Migrate</td>
     </tr>
     <tr>
         <td>afterMigrateError</td>
