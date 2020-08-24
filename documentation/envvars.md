@@ -209,7 +209,7 @@ The following environment variables are supported:
         <td>FLYWAY_CALLBACKS</td>
         <td>Comma-separated list of fully qualified class names of
             <a href="/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback">Callback</a>
-            implementations to use to hook into the Flyway lifecycle.</td>
+            implementations to use to hook into the Flyway lifecycle, or packages to scan for these classes.</td>
     </tr>
     <tr id="FLYWAY_SKIP_DEFAULT_CALLBACKS">
         <td>FLYWAY_SKIP_DEFAULT_CALLBACKS</td>

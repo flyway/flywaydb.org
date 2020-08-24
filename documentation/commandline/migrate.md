@@ -192,7 +192,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
         <td></td>
         <td>Comma-separated list of fully qualified class names of
             <a href="/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback">Callback</a>
-            implementations to use to hook into the Flyway lifecycle.</td>
+            implementations to use to hook into the Flyway lifecycle, or packages to scan for these classes.</td>
     </tr>
     <tr id="skipDefaultCallbacks">
         <td>skipDefaultCallbacks</td>

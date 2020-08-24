@@ -257,7 +257,7 @@ flyway.url=
 
 # This allows you to tie in custom code and logic to the Flyway lifecycle notifications (default: empty).
 # Set this to a comma-separated list of fully qualified class names of org.flywaydb.core.api.callback.Callback
-# implementations.
+# implementations, or packages to scan for these classes.
 # flyway.callbacks=
 
 # If set to true, default built-in callbacks (sql) are skipped and only custom callback as
