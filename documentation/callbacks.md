@@ -197,10 +197,7 @@ therefore not bound by the SQL callback naming convention.
 
 ## Callback ordering
 
-When multiple callbacks for the same event are found, they are executed in the following order:
-
-- Java callbacks, in the order in which they are specified in the `callbacks` configuration property
-- SQL callbacks, in alphabetic order of their description.
+When multiple callbacks for the same event are found, they are executed in the alphabetical order.
 
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/erroroverrides">Error Overrides <i class="fa fa-arrow-right"></i></a>
