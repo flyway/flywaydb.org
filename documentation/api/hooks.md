@@ -90,6 +90,12 @@ public interface Callback {
      * @param context The context for this event.
      */
     void handle(Event event, Context context);
+
+    /**
+     * The callback name, Flyway will use this to sort the callbacks alphabetically before executing them
+     * @return The callback name
+     */
+    String getCallbackName();
 }
 ```
 
@@ -123,11 +129,15 @@ public class MyNotifierCallback implements Callback {
         // ... Notification logic ...
         notificationService.send(notification);
     }
+
+    String getCallbackName() {
+        return "MyNotifier";
+    }
 }
 ``` 
 
-In order to be picked up by Flyway, Java-based Callbacks must implement the Callback interface. They also need to be
-specified in the `flyway.callbacks` configuration property.
+In order to be picked up by Flyway, Java-based Callbacks must implement the Callback interface. 
+Flyway will automatically scan for and load all callbacks found in the `db/callback` package. Additional callback classes or scan locations can be specified by the `flyway.callbacks` configuration property.
 
 ## Custom Migration resolvers &amp; executors
 
