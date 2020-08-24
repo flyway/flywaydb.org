@@ -387,7 +387,7 @@ Add `-q` to the argument list to suppress all output, except for errors and warn
 
 ### Machine-readable output
 
-Add `-output=json` to the argument list to print JSON instead of human-readable output. Errors are included in the JSON payload instead of being sent to `stderr`.
+Add `-outputType=json` to the argument list to print JSON instead of human-readable output. Errors are included in the JSON payload instead of being sent to `stderr`.
 
 ### Writing to a file
 
