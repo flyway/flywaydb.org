@@ -167,7 +167,7 @@ Repairs the Flyway schema history table. This will perform the following actions
         <td></td>
         <td>Comma-separated list of fully qualified class names of
             <a href="/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback">Callback</a>
-            implementations to use to hook into the Flyway lifecycle.</td>
+            implementations to use to hook into the Flyway lifecycle, or packages to scan for these classes.</td>
     </tr>
     <tr>
         <td>skipDefaultCallbacks</td>
