@@ -9,6 +9,9 @@ subtitle: Articles
 
 <h2>English</h2>
 
+<p><strong><a href="http://www.masterspringboot.com/various/various/flyway-tutorial-for-spring-boot-users/">
+Flyway migrations for Spring Boot users</a></strong> by Francesco Marchioni</p>
+
 <p><strong><a href="https://aws.amazon.com/blogs/database/building-a-cross-account-continuous-delivery-pipeline-for-database-migrations/">
 Building a cross-account continuous delivery pipeline for database migrations [in AWS with Flyway]</a></strong> by Pierre Petersson</p>
 
