@@ -15,54 +15,76 @@ We welcome pull requests for database support, but not all requests are automati
 Before we can support a database platform, we need an effective way of testing against an instance of that platform. This generally takes the form of a Docker image per version for on-premise databases, or a test account with a cloud provider. Unfortunately, it's not always possible to access a test instance without excessive cost.  
 Finally, contributions need to be based on a recent fork of the Flyway repository with no merge conflicts, and also meet the high bar we set for Flyway’s code standard – we can provide advice and code review.
 
-## You will need...
+
+## Community database support
+
+Flyway supports loading database support from the `db/database` package from any of the loaded jars. This means that database support can be provided by the community, without requiring us to officially commit to support. Simply follow the steps in the next section to get started with developing custom database support.
+
+### You will need...
 
 *   A JDBC driver for your database.
 *   A Java IDE that builds with Java 8 or higher. We use and recommend IntelliJ
 
 **Note for organizations:** let us know whether you will allow us to ship your JDBC driver with Flyway. This helps us deliver a more frictionless out-of-the-box experience for end users. If you follow step 2 below, this will happen automatically.
 
-## Getting started
+### Getting started
 
-Fork the [Flyway](https://github.com/flyway/flyway) repo. If you’re using IntelliJ, you should be able to open the Flyway top level folder and see a number of projects. Copy the file `/flyway-commandline/src/main/assembly/flyway.conf` to an accessible location on your machine. This location will be a temporary 'scratch' area for testing. Use this copy to set up the following properties:
+This guide will show you how to develop database support with gradle. It may be helpful to refer to the database support in Flyway itself. This can be found in the [Flyway](https://github.com/flyway/flyway) repo in the folder `flyway-core/src/main/java/org/flywaydb/core/internal/database`.
 
-*   `flyway.url` - the JDBC URL of your development database
-*   `flyway.user` - the user account
-*   `flyway.password` - the password to the database
-*   `flyway.locations` - to point to an accessible folder where you can put test migrations.
+### Setting up gradle
 
-You can now set up a run configuration in your IDE that will compile Flyway and run using your newly created configuration:
+Create a new blank gradle project in the IDE of your choice. 
 
-*   Main class: `org.flywaydb.commandline.Main`
-*   Program arguments: `info -X -configFiles=<scratch location>\flyway.conf`
-*   Classpath of module: `flyway-commandline`
+To begin developing database support you simply have to add a dependency on `org.flywaydb:flyway-core` and the jdbc driver you intend to use. However, to more easily allow for testing we will also add buildscript dependencies on the `flyway-gradle-plugin` so we can invoke the flyway commands from gradle.
+A sample gradle file can be seen below.
 
-Flyway itself should start. Since Flyway doesn’t yet support your database you should see a message like:
+```
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.flywaydb:flyway-gradle-plugin:${flywayVersion}"
+        classpath "${jdbcDriverDependency}"
+    }
+}
 
-`org.flywaydb.core.api.FlywayException: Unable to autodetect JDBC driver for url: jdbc:mydatabase://<host>:<port>/<databasename>`
+apply plugin: 'org.flywaydb.flyway'
+apply plugin: 'java'
 
-You’re now ready to start adding that database support. We’re going to assume your database platform is called **FooDb**. Change the obvious naming conventions to suit your database.
+repositories {
+    mavenCentral()
+}
 
-## Let's code!
+dependencies {
+    compile "org.flywaydb:flyway-core:${flywayVersion}"
+    compile "${jdbcDriverDependency}"
+}
 
-Here are all the changes and additions you'll need to make:
+flyway {
+    url = "${databaseUrl}"
+    user = "${databaseUser}"
+    password = "${databasePassword}"
+    locations = ["classpath:db/migration"]
+}
 
-1.  Add an optional dependency to your JDBC driver to the top-level `.pom`
-1.  Add a dependency of your JDBC driver to the flyway-commandline `.pom` if you wish the driver to be automatically shipped with the Flyway product.
-1.  In `flyway.conf`, document the format of the JDBC connection url for your database. This is not necessary to make Flyway work but it will help adoption of your database!
-1.  Create a new folder `Foo` in `org.flywaydb.core.internal.database` to contain your new classes.
+flywayInfo.dependsOn classes
+flywayClean.dependsOn classes
+flywayMigrate.dependsOn classes
+```
+
+You will need to fill in the `${flywayVersion}` with the latest version of flyway, `${jdbcDriverDependency}` with the jdbc driver dependency you wish to use, and everything in the `flyway` block with the url and credentials of your database.
+
+At this point you can run `flywayMigrate` (either via `./gradlew flywayMigrate` or via the IDE), and gradle should fail with a message like `No database found to handle ${databaseUrl}`.
+
+Now we are ready to begin developing the actual database support.
+
+### Developing support
+
+We’re going to assume your database platform is called **FooDb**. Change the obvious naming conventions to suit your database.
+1. Flyway automatically scans the `db/database` package for classes that inherit from `DatabaseType`. Therefore in the `src/main/java` folder create a new package called something like `db/database/foodb`.
 1.  In the folder create classes `FooDatabase` (subclassed from Database), `FooSchema` (subclassed from Schema), and `FooTable` (subclassed from Table), using the canonical signatures. These classes make up Flyway’s internal representation of the parts of your database that it works on.
 1.  Create class `FooParser` (subclassed from Parser) using the canonical signature. This represents a simplified version of a parser for your database’s dialect of SQL. When finished it will be able to decompose a migration script into separate statements and report on serious errors, but it does not need to fully understand them.
-1.  Create a class `FooDatabaseType` subclassed from `DatabaseType` in the folder your created. This class acts as the collation class that brings together all the classes you created before. Implement the required methods. There are also some optional methods you can override to customize the behavior.
-    *   `createSqlScriptFactory` - To use a custom SqlScriptFactory
-    *   `createSqlScriptExecutorFactory` - To use a custom SqlScriptExecutorFactory
-    *   `createExecutionStrategy` - To use a custom DatabaseExecutionStrategy
-    *   `createTransactionalExecutionTemplate` - To use a custom ExecutionTemplate
-    *   `setDefaultConnectionProps` - To set custom default connection properties
-    *   `shutdownDatabase` - To run any necessary code to cleanup the database on shutdown
-    *   `detectUserRequiredByUrl` - To skip prompting for user if the URL contains user information (e.g. user property, login file)
-    *   `detectPasswordRequiredByUrl` - To skip prompting for password if the URL contains password information (e.g. key file, or password property)
-1.  In `DatabaseTypeRegister.registerForDatabaseTypes` add a `registeredDatabaseTypes.add(new FooDatabaseType(classLoader));` line.
 1.  Create class `FooConnection` subclassed from `Connection<FooDatabase>` using the canonical signature. This represents a JDBC connection to your database. You probably won’t use it in isolation but it is an important component of a `JdbcTemplate`, which provides numerous convenience methods for running queries on your database.  
     In the constructor of `FooConnection`, you can use the `jdbcTemplate` field of `Connection` to query for any database properties that you need to acquire immediately and maintain as part of the state of the connection. You will need to override the following methods as a minimum:
     *   `doRestoreOriginalState()` – to reset anything that a migration may have changed
@@ -102,9 +124,25 @@ Here are all the changes and additions you'll need to make:
     *   `doDrop()` – to drop the table
     *   `doExists()` – to query whether the table described exists in the database
     *   `doLock()` – to lock the table with a read/write pessimistic lock until the end of the current transaction. This is used to prevent concurrent reads and writes to the schema history while a migration is underway. If your database doesn’t support table-level locks, do nothing.
+1.  Create a class `FooDatabaseType` subclassed from `DatabaseType` in the folder your created. This class acts as the collation class that brings together all the classes you created before. Implement the required methods. There are also some optional methods you can override to customize the behavior.
+    *   `createSqlScriptFactory` - To use a custom SqlScriptFactory
+    *   `createSqlScriptExecutorFactory` - To use a custom SqlScriptExecutorFactory
+    *   `createExecutionStrategy` - To use a custom DatabaseExecutionStrategy
+    *   `createTransactionalExecutionTemplate` - To use a custom ExecutionTemplate
+    *   `setDefaultConnectionProps` - To set custom default connection properties
+    *   `shutdownDatabase` - To run any necessary code to cleanup the database on shutdown
+    *   `detectUserRequiredByUrl` - To skip prompting for user if the URL contains user information (e.g. user property, login file)
+    *   `detectPasswordRequiredByUrl` - To skip prompting for password if the URL contains password information (e.g. key file, or password property)
+1.  Create a folder called `src/main/resources/db/migration`. In here add some sample migrations. When you run the `flywayMigrate` task these are the migration Flyway will attempt to execute.
 
-# Try it!
+### Try it!
 
-You should at this point be able to run the `flyway info` build configuration and see an empty version history. Congratulations! You have got a basic implementation up and running. You can now start creating migration scripts and running `flyway migrate` on them.
+You should at this point be able to run `flywayMigrate` and have Flyway execute the script against your database. Congratulations! You have got a basic implementation up and running. Now you can continue with trying to `flywayClean`, `flywayInfo`, and suchlike.
 
-Basic SQL scripts should run with few problems, but you may find more edge cases, particularly in `Parser`. Look at the existing overrides for existing platforms for examples of how to deal with them. If you find you need to make more invasive changes in the core of Flyway, please do contact us for advice. We will need to test bigger changes ourselves against all our test instances before we can accept them.
+Basic SQL scripts should run with few problems, but you may find more edge cases, particularly in `Parser`. Look at the existing overrides for existing platforms for examples of how to deal with them.
+
+### Sharing your code
+
+Once support is developed, you can begin to share this support with the community. The first step of which is publishing your package somewhere like maven central. Once you have done this you can share the artifact location with others in the community.
+
+You can also add a link to your plugin on this website, on the [plugins](/documentation/plugins) page. Simply checkout the [flywaydb.org](https://github.com/flyway/flywaydb.org) repo, then create a new entry in the `documentation/plugins` folder, and add it to the `documentation/plugins/index.md` file. Then submit a PR.
