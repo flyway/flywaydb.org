@@ -180,6 +180,7 @@ Validation fails if
     </tr>
     {% include cfg/target-latest.html %}
     {% include cfg/cherryPick.html %}
+    {% include cfg/skipExecutingMigrations.html %}
     <tr>
         <td>outOfOrder</td>
         <td>NO</td>

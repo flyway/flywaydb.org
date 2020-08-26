@@ -175,6 +175,7 @@ Prints the details and status information about all the migrations.
     </tr>
     {% include cfg/target-latest.html %}
     {% include cfg/cherryPick.html %}
+    {% include cfg/skipExecutingMigrations.html %}
     <tr>
         <td>outOfOrder</td>
         <td>NO</td>
