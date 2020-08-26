@@ -1,0 +1,9 @@
+{% include cfg/_cfg.html name="skipExecutingMigrations" enterprise=true required=false default="" description="
+<p>
+    Whether Flyway should skip actually executing the contents of the migrations and only update the schema history table.
+</p>
+    
+<p>
+    This should be used when you have applied a migration manually (via executing the sql yourself, or via an ide), and
+    just want the schema history table to reflect this.
+</p>" %}

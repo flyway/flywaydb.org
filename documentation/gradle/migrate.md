@@ -194,6 +194,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
     </tr>
     {% include cfg/target-latest.html %}
     {% include cfg/cherryPick.html %}
+    {% include cfg/skipExecutingMigrations.html %}
     <tr>
         <td>outOfOrder</td>
         <td>NO</td>
