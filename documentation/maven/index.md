@@ -6,7 +6,6 @@ subtitle: Maven Plugin
 # Maven Plugin
 
 The Flyway Community Edition and Pro Edition Maven plugins support **Maven 3.x** running on **Java 8**, **Java 9**, **Java 10**, **Java 11** or **Java 12**.
-The Flyway Enterprise Edition Maven plugin also supports **Java 7**.
 
 ## Installation
 
