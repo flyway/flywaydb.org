@@ -5,8 +5,8 @@ subtitle: Gradle Plugin
 ---
 # Gradle Plugin
 
-The Flyway Community Edition and Flyway Pro Edition Gradle plugins support **Gradle 3.x**, **Gradle 4.x** and **Gradle 5.x** 
-running on **Java 8**, **Java 9**, **Java 10**, **Java 11** or **Java 12**. The Flyway Enterprise Gradle plugin also supports **Java 7**.
+The Flyway Community Edition and Flyway Pro Edition Gradle plugins support **Gradle 3.x**, **Gradle 4.x**, **Gradle 5.x**, and **Gradle 6.x** 
+running on **Java 8**, **Java 9**, **Java 10**, **Java 11** or **Java 12**.
 
 ## Installation
 
