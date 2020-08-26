@@ -36,7 +36,7 @@ This guide will show you how to develop database support with gradle. It may be 
 Create a new blank gradle project in the IDE of your choice. 
 
 To begin developing database support you simply have to add a dependency on `org.flywaydb:flyway-core` and the jdbc driver you intend to use. However, to more easily allow for testing we will also add buildscript dependencies on the `flyway-gradle-plugin` so we can invoke the flyway commands from gradle.
-A sample gradle file can be seen below.
+A sample `build.gradle` file can be seen below.
 
 ```
 buildscript {
@@ -134,6 +134,27 @@ We’re going to assume your database platform is called **FooDb**. Change the o
     *   `detectUserRequiredByUrl` - To skip prompting for user if the URL contains user information (e.g. user property, login file)
     *   `detectPasswordRequiredByUrl` - To skip prompting for password if the URL contains password information (e.g. key file, or password property)
 1.  Create a folder called `src/main/resources/db/migration`. In here add some sample migrations. When you run the `flywayMigrate` task these are the migration Flyway will attempt to execute.
+
+At this point your folder structure should look a little like this:
+<pre class="filetree"><i class="fa fa-folder-open"></i> my-project
+  <i class="fa fa-folder-open"></i> src
+    <i class="fa fa-folder-open"></i> main
+      <i class="fa fa-folder-open"></i> java
+        <i class="fa fa-folder-open"></i> db 
+          <i class="fa fa-folder-open"></i> database
+            <i class="fa fa-folder-open"></i> foodb
+              <i class="fa fa-file-text"></i> FooConnection
+              <i class="fa fa-file-text"></i> FooDatabase
+              <i class="fa fa-file-text"></i> FooDatabaseType
+              <i class="fa fa-file-text"></i> FooParser
+              <i class="fa fa-file-text"></i> FooSchema
+              <i class="fa fa-file-text"></i> FooTable
+      <i class="fa fa-folder-open"></i> resources
+        <i class="fa fa-folder-open"></i> db 
+          <i class="fa fa-folder-open"></i> migration
+            <i class="fa fa-file-text"></i> V1__first
+            <i class="fa fa-file-text"></i> V2__second
+  <i class="fa fa-file-text"></i> build.gradle</pre>
 
 ### Try it!
 
