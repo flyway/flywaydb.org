@@ -325,7 +325,7 @@ flyway {
     createSchemas=true
     table = 'schema_history'
     tablespace = 'my_tablespace'
-    locations = ['classpath:migrations', 'classpath:db/pkg', 'filesystem:/sql-migrations', 's3:migrationsBucket']
+    locations = ['classpath:migrations', 'classpath:db/pkg', 'filesystem:/sql-migrations', 's3:migrationsBucket', 'gcs:migrationsBucket']
     sqlMigrationPrefix = 'Migration-'
     undoSqlMigrationPrefix = 'downgrade'
     repeatableSqlMigrationPrefix = 'RRR'
