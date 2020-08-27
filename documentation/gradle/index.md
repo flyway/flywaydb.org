@@ -182,6 +182,17 @@ flyway {
 
 For details on how to setup and use custom Gradle configurations, see the [official Gradle documentation](https://docs.gradle.org/current/dsl/org.gradle.api.artifacts.ConfigurationContainer.html).
 
+### Working directory
+
+Some databases can take a relative path inside the JDBC url (such as to specify a file to write to). When running the Flyway gradle plugin, this is relative to `~/.gradle/` not the configuration location. This may not be what you expected, so you may want to specify the path more explicitly such as in the following example:
+
+```
+flyway {
+    url = "jdbc:h2:file:${System.getProperty('user.dir')}/<database>"
+    user = <user>
+}
+```
+
 ### Gradle properties
 
 The plugin can also be configured using Gradle properties. Their can be passed either directly via the command-line:
