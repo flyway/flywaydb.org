@@ -191,12 +191,12 @@ Flyway will fail fast and list all files which need to be corrected.
 
 ### Discovery
 
-Flyway discovers SQL-based migrations both on the **filesystem** and on the Java **classpath**. 
-Migrations reside in one or more directories referenced by the **[`locations`](/documentation/commandline/migrate#locations)**
+Flyway discovers SQL-based migrations from one or more directories referenced by the **[`locations`](/documentation/commandline/migrate#locations)**
 property.
-
-Locations with the `filesystem:` prefix target the file system.<br>
-Unprefixed locations or locations with the `classpath:` prefix target the Java classpath.
+- Unprefixed locations or locations with the `classpath:` prefix target the Java classpath.
+- Locations with the `filesystem:` prefix search the file system.
+- Locations with the `s3:` prefix search AWS S3 buckets. To use AWS S3, the AWS environment variables <code>AWS_REGION</code>, <code>AWS_ACCESS_KEY_ID</code> and <code>AWS_SECRET_ACCESS_KEY</code> need to be set to the appropriate values for your S3 account.
+- Locations with the `gcs:` prefix search Google Cloud Storage buckets. To use GCS, the [GCS library](https://search.maven.org/artifact/com.google.cloud/google-cloud-storage/1.111.2/jar) must be included, and the GCS environment variable <code>GOOGLE_APPLICATION_CREDENTIALS</code> must be set to the credentials file for the service account that has access to the bucket.
 
 <pre class="filetree"><i class="fa fa-folder-open"></i> my-project
   <i class="fa fa-folder-open"></i> src
