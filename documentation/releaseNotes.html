@@ -19,14 +19,12 @@ subtitle: Release Notes
     <h3>Database compatibility</h3>
     <ul>
         {% include issue.html id="2466" title="Support for several older databases moved into Enterprise" %}
-    </ul>
-
-    <h3>Enterprise-only databases</h3>
-    <ul>
-        <li>HSQLDB 2.3 (2010)</li>
-        <li>PostgreSQL 9.4 (2014)</li>
-        <li>Sybase ASE 16.0 (2014)</li>
-        <li>Sybase ASE 16.1 (2015)</li>
+        <ul>
+            <li>HSQLDB 2.3 (2010)</li>
+            <li>PostgreSQL 9.4 (2014)</li>
+            <li>Sybase ASE 16.0 (2014)</li>
+            <li>Sybase ASE 16.1 (2015)</li>
+        </ul>
     </ul>
 
     <h3>New features</h3>
@@ -79,10 +77,10 @@ subtitle: Release Notes
 
     <h3>Changes</h3>
     <ul>
-        {% include issue.html id="2808" title="Placeholder names are now case insensitive" %}
+        {% include issue.html id=""     title="Command-line option `-json` superseded by `-outputType=json`" %}
         {% include issue.html id="2805" title="The CLI default flyway.conf now specifies the location filesystem:sql" %}
-        {% include issue.html id="" title="Non existent locations now display an error in the output" %}
-        {% include issue.html id="" title="Command-line option `-json` superseded by `-outputType=json`" %}
+        {% include issue.html id="2808" title="Placeholder names are now case insensitive" %}
+        {% include issue.html id="1801" title="Ignore hidden directories on the classpath when finding resources" %}
     </ul>
 
     <h3>Breaking changes</h3>
