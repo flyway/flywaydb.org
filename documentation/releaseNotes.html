@@ -16,17 +16,6 @@ subtitle: Release Notes
         <li>Make validate messages suggest actions</li>
     </ul>
 
-    <h3>Database compatibility</h3>
-    <ul>
-        {% include issue.html id="2466" title="Support for several older databases moved into Enterprise" %}
-        <ul>
-            <li>HSQLDB 2.3 (2010)</li>
-            <li>PostgreSQL 9.4 (2014)</li>
-            <li>Sybase ASE 16.0 (2014)</li>
-            <li>Sybase ASE 16.1 (2015)</li>
-        </ul>
-    </ul>
-
     <h3>New features</h3>
     <ul>
         {% include issue.html id="2507" title="Add machine readable output for all commands" %}
@@ -77,13 +66,15 @@ subtitle: Release Notes
 
     <h3>Changes</h3>
     <ul>
+        {% include issue.html id="-1"   title="Update gradle plugin to 6.1.1" %}
         {% include issue.html id=""     title="Command-line option `-json` superseded by `-outputType=json`" %}
         {% include issue.html id="2805" title="The CLI default flyway.conf now specifies the location filesystem:sql" %}
         {% include issue.html id="2808" title="Placeholder names are now case insensitive" %}
         {% include issue.html id="1801" title="Ignore hidden directories on the classpath when finding resources" %}
+        {% include issue.html id="2785" title="Allow loading callbacks by scanning a provided package" %}
     </ul>
 
-    <h3>Breaking changes</h3>
+    <h3>Database compatibility</h3>
     <ul>
         {% include issue.html id="2324" title="Invalid targets now cause an error" %}
         {% include issue.html id="2859" title="Only load from std in when a config file with the name '-' is given" %}
