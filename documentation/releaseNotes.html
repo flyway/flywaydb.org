@@ -10,8 +10,43 @@ subtitle: Release Notes
 <div class="release">
     <h2 id="7.0.0-beta1">Flyway 7.0.0-beta1 (2020-09-02)</h2>
 
+    <h3>New features</h3>
+    <ul>
+        {% include issue.html id="1986" title="Allow skipping the execution of a migration" %}
+        {% include issue.html id="2458" title="Support for SQL migrations in AWS S3 storage" %}
+        {% include issue.html id="-1"   title="Support for SQL migrations in Google Cloud Storage" %}
+        {% include issue.html id=""     title="Oracle SQL*Plus support for <code>login.sql</code>" %}
+        {% include issue.html id="2594" title="Postgres driver updated to support SCRAM authentication" %}
+        {% include issue.html id=""     title="Allow cherry picking which migrations to run" %}
+        {% include issue.html id=""     title="Support deleting migrations" %}
+        {% include issue.html id="2133" title="Add new callbacks `beforeRepeatables` and `afterVersioned`" %}
+        {% include issue.html id="2688" title="Enable passing JDBC properties through to clients" %}
+    </ul>
+
+    <h3>Breaking changes</h3>
+    <ul>
+        {% include issue.html id=""     title="Non existent migration locations now display an error in the output" %}
+        {% include issue.html id="2324" title="Invalid targets now cause an error" %}
+        {% include issue.html id="2859" title="Only load from std in when a config file with the name '-' is given" %}
+        {% include issue.html id=""     title="Deprecated command-line argument <code>-logFile</code> removed (see <code>-outputFile</code> for replacement)" %}
+        {% include issue.html id=""     title="Deprecated migration types <code>SPRING_JDBC, UNDO_SPRING_JDBC</code> removed (use <code>JDBC, UNDO_JDBC</code> instead)" %}
+        {% include issue.html id=""     title="Deprecated dots as location path separators" %}
+    </ul>
+
+    <h3>Changes</h3>
+    <ul>
+        {% include issue.html id="-1"   title="Update gradle plugin to 6.1.1" %}
+        {% include issue.html id=""     title="Command-line option `-json` superseded by `-outputType=json`" %}
+        {% include issue.html id="2805" title="The CLI default flyway.conf now specifies the location filesystem:sql" %}
+        {% include issue.html id="2808" title="Placeholder names are now case insensitive" %}
+        {% include issue.html id="1801" title="Ignore hidden directories on the classpath when finding resources" %}
+        {% include issue.html id="2785" title="Allow loading callbacks by scanning a provided package" %}
+    </ul>
+
     <h3>Database compatibility</h3>
     <ul>
+        {% include issue.html id="2776" title="Add support for Google Cloud Spanner" %}
+        {% include issue.html id="2806" title="Add support for Azure Synapse" %}
         {% include issue.html id="2466" title="Support for several older databases moved into Enterprise" %}
         <ul>
             <li>HSQLDB 2.3 (2010)</li>
@@ -21,41 +56,13 @@ subtitle: Release Notes
         </ul>
     </ul>
 
-    <h3>New features</h3>
-    <ul>
-        {% include issue.html id="1986" title="Allow skipping the execution of a migration" %}
-        {% include issue.html id="2458" title="Support for SQL migrations in AWS S3 storage" %}
-        {% include issue.html id="-1"   title="Support for SQL migrations in Google Cloud Storage" %}
-        {% include issue.html id=""     title="Oracle SQL*Plus support for <code>login.sql</code>" %}
-        {% include issue.html id="2594" title="Postgres driver updated to support SCRAM authentication" %}
-    </ul>
-
-    <h3>Changes</h3>
-    <ul>
-        {% include issue.html id=""     title="Command-line option `-json` superseded by `-outputType=json`" %}
-        {% include issue.html id="2805" title="The CLI default flyway.conf now specifies the location filesystem:sql" %}
-        {% include issue.html id="2808" title="Placeholder names are now case insensitive" %}
-        {% include issue.html id="1801" title="Ignore hidden directories on the classpath when finding resources" %}
-    </ul>
-
-    <h3>Breaking changes</h3>
-    <ul>
-        {% include issue.html id="-1"   title="Update gradle plugin to 6.1.1" %}
-        {% include issue.html id=""     title="Non existent migration locations now display an error in the output" %}
-        {% include issue.html id="2324" title="Invalid targets now cause an error" %}
-        {% include issue.html id="2859" title="Only load from std in when a config file with the name '-' is given" %}
-        {% include issue.html id=""     title="Deprecated command-line argument <code>-logFile</code> removed (see <code>-outputFile</code> for replacement)" %}
-        {% include issue.html id=""     title="Deprecated migration types <code>SPRING_JDBC, UNDO_SPRING_JDBC</code> removed (use <code>JDBC, UNDO_JDBC</code> instead)" %}
-        {% include issue.html id=""     title="Deprecated dots as location path separators" %}
-    </ul>
-
     <h3>Docker images</h3>
     <ul>
         {% include issue.html id="" title="Docker images updated to be based on JDK 12: respectively <code>adoptopenjdk:12-jre-hotspot</code> and <code>openjdk:12-alpine</code>" %}
     </ul>
 
     <p>
-        Thanks to JonLally, KrzysztofMadejski, Me1gireesh, PetterKraabol, belugabehr, fkoehler, hdgarrood, leoherbie, nelvadas, qoomon, and radzimir for reporting these issues and/or submitting pull requests.
+        Thanks to JonLally, KrzysztofMadejski, Me1gireesh, PetterKraabol, belugabehr, fkoehler, hdgarrood, leoherbie, nelvadas, qoomon, stankiewicz, olavloite, laurentgrangier, jitu1983, and radzimir for reporting these issues and/or submitting pull requests.
     </p>
 </div>
 
