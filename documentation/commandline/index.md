@@ -313,6 +313,7 @@ Flyway will automatically detect and use any logger class that it finds on its c
 following:
  - the Apache Commons Logging framework <code>org.apache.commons.logging.Log</code> 
  - SLF4J <code>org.slf4j.Logger</code>
+ - Log4j 2 <code>org.apache.logging.log4j.Logger</code>
  - the Android builtin log <code>android.util.Log</code>
 
 The simplest pattern to achieve this is to put all the necessary jar files in Flyway's `lib` folder and any 
