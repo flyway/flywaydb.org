@@ -4,6 +4,7 @@ menu: aswSecretsManager
 subtitle: AWS Secrets Manager support
 ---
 # AWS Secrets Manager support
+{% include enterprise.html %}
 
 A problem that organizations often encounter is where to store the credentials for connecting to the database. 
 [AWS Secrets Manager](https://aws.amazon.com/secrets-manager) offers a solution to the problem.
