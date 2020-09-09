@@ -13,7 +13,7 @@ subtitle: TestContainers
 </tr>
 <tr>
 <th>Ships with Flyway Command-line</th>
-<td>Yes</td>
+<td>No</td>
 </tr>
 <tr>
 <th>Maven Central coordinates</th>
