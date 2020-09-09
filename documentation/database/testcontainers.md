@@ -54,7 +54,7 @@ jdbc:tc:postgresql:11-alpine://localhost:5432/databasename
 
 ## Limitations
 
-- If Flyway doesn't ship with the JAR for your chosen database, you will still need to provide it in order to use it with TestContainers
+- If Flyway doesn't ship with a database driver for your chosen database, you will still need to provide one in order to use it with TestContainers. For example, if you want to connect to a DB2 database with TestContainers you will still need to provide a DB2 driver whose Maven Central coordinates are <code>com.ibm.db2.jcc:11.5.0.0</code>
 
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/database/postgresql">PostgreSQL <i class="fa fa-arrow-right"></i></a>
