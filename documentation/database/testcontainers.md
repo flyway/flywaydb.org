@@ -17,7 +17,18 @@ subtitle: TestContainers
 </tr>
 <tr>
 <th>Maven Central coordinates</th>
-<td><code>org.testcontainers:jdbc:jar:1.14.3</code></td>
+<td>Database specific JARs: <br/>
+<code>org.testcontainers:cockroachdb:jar:1.14.3</code> <br/>
+<code>org.testcontainers:db2:jar:1.14.3</code> <br/>
+<code>org.testcontainers:mariadb:jar:1.14.3</code> <br/>
+<code>org.testcontainers:mssqlserver:jar:1.14.3</code> <br/>
+<code>org.testcontainers:mysql:jar:1.14.3</code> <br/>
+<code>org.testcontainers:oracle-xe:jar:1.14.3</code> <br/>
+<code>org.testcontainers:postgresql:jar:1.14.3</code> <br/>
+Dependencies: <br/>
+<code>org.testcontainers:jdbc:jar:1.14.3</code> <br/>
+<code>org.testcontainers:database-commons:jar:1.14.3</code> <br/>
+<code>org.testcontainers:testcontainers:jar:1.14.3</code></td>
 </tr>
 <tr>
 <th>Supported versions</th>
