@@ -1,8 +1,7 @@
 <tr id="{{ include.name }}">
     <td>
         {{ include.name }}
-        {% if include.pro %} {% include pro.html %}{% endif %}
-        {% if include.enterprise %} {% include enterprise.html %}{% endif %}
+        {% if include.teams %} {% include teams.html %}{% endif %}
     </td>
     <td>{% if include.required %}YES{% else %}NO{% endif %}</td>
     <td>{{ include.default }}</td>

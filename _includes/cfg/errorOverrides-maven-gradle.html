@@ -1,4 +1,4 @@
-{% include cfg/_cfg.html name="errorOverrides" pro=true required=false default="<i>none</i>" description='Rules for the built-in error handler that let you override specific SQL states and errors codes in order to force specific errors or warnings to be treated as debug messages, info messages, warnings or errors.
+{% include cfg/_cfg.html name="errorOverrides" teams=true required=false default="<i>none</i>" description='Rules for the built-in error handler that let you override specific SQL states and errors codes in order to force specific errors or warnings to be treated as debug messages, info messages, warnings or errors.
 <p>Each error override has the following format: <code>STATE:12345:W</code>. It is a 5 character SQL state (or <code>*</code> to match all SQL states), a colon, the SQL error code (or <code>*</code> to match all SQL error codes), a colon and finally the desired behavior that should override the initial one.</p>
 <p>The following behaviors are accepted:</p>
 <ul>
