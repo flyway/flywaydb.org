@@ -16,7 +16,7 @@ There are however situations where you may want to
 - submit the SQL statements for review to a DBA before applying them
 - use Flyway to determine what needs updating, yet use a different tool to apply the actual database changes
 
-Flyway Pro and Enterprise Edition give you a way to achieve all these scenarios using **Dry Runs**.
+Flyway Teams Edition give you a way to achieve all these scenarios using **Dry Runs**.
 
 ## Implementation
 

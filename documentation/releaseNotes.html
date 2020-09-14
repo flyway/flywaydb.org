@@ -591,7 +591,7 @@ subtitle: Release Notes
     <h3>Bug fixes</h3>
     <ul>
         {% include issue.html id="2537" title="Unexpected error re. non-empty schemas" %}
-        {% include issue.html id="2561" title="Improve parsing of Oracle SQL*Plus <code>PROMPT</code> statement" pro=true %}
+        {% include issue.html id="2561" title="Improve parsing of Oracle SQL*Plus <code>PROMPT</code> statement" teams=true %}
         {% include issue.html id="2604" title="Block depth issue with Oracle <code>END CASE</code> statement" %}
         {% include issue.html id="2607" title="Block depth issue with Oracle <code>CREATE JAVA</code> statement" %}
     </ul>
@@ -697,7 +697,7 @@ subtitle: Release Notes
     <h2 id="6.0.7">Flyway 6.0.7 (2019-10-17)</h2>
     <h3>Bug fixes</h3>
     <ul>
-        {% include issue.html id="2432" title="<code>&</code> in comments should not trigger SQL*Plus placeholder replacement" pro=true %}
+        {% include issue.html id="2432" title="<code>&</code> in comments should not trigger SQL*Plus placeholder replacement" teams=true %}
         {% include issue.html id="2519" title="Workround for Azure MySQL Database (Basic Edition) incorrectly reporting version" %}
         {% include issue.html id="2530" title="Empty line after <code>/</code> delimiter causes migration to fail" %}
         {% include issue.html id="2531" title="Workround for Azure MariaDB Database incorrectly reporting version" %}
@@ -727,8 +727,8 @@ subtitle: Release Notes
         {% include issue.html id="2511" title="Support backtick as an identifier quote for H2 database running in MySql mode" %}
         {% include issue.html id="2512" title="Null placeholder value no longer works for H2 database running in MySql mode" %}
         {% include issue.html id="2519" title="Workround for Azure MySQL Database incorrectly reporting version" %}
-        {% include issue.html id="2522" title="Parser error when SQL*Plus <code>SET</code> statement is preceded by comments</code>" pro=true %}
-        {% include issue.html id="2523" title="Error when SQL*Plus <code>SERVEROUTPUT</code> is set to <code>WORD_WRAPPED</code>" pro=true %}
+        {% include issue.html id="2522" title="Parser error when SQL*Plus <code>SET</code> statement is preceded by comments</code>" teams=true %}
+        {% include issue.html id="2523" title="Error when SQL*Plus <code>SERVEROUTPUT</code> is set to <code>WORD_WRAPPED</code>" teams=true %}
     </ul>
 
     <p>
@@ -760,7 +760,7 @@ subtitle: Release Notes
   <h3>New features</h3>
   <ul>
       {% include issue.html id="2482" title="Warn about invalid Java migrations" %}
-      {% include issue.html id="2462" title="Dry runs: handle more JDBC types" pro=true %}
+      {% include issue.html id="2462" title="Dry runs: handle more JDBC types" teams=true %}
   </ul>
 
   <h3>Changes</h3>
@@ -807,7 +807,7 @@ subtitle: Release Notes
     <ul>
         {% include issue.html id="2467" title="Unable to create H2Database instance" %}
         {% include issue.html id="2481" title="Getting unsupported error with correct versions?" %}
-        {% include issue.html id="2484" title="Parsing inline comments for SQL*Plus <code>DEFINE</code> statements fixed" pro=true %}
+        {% include issue.html id="2484" title="Parsing inline comments for SQL*Plus <code>DEFINE</code> statements fixed" teams=true %}
         {% include issue.html id="2486" title="SQL Azure incorrectly detected as SQL Server 2014" %}
         {% include issue.html id="2487" title="Flyway 6.0 clean migrate command is throwing an 'eName' is not recognized as an internal or external command error on PostgreSQL 11" %}
     </ul>
@@ -825,7 +825,7 @@ subtitle: Release Notes
         {% include issue.html id="441" title="Firebird 3.0, 4.0 support" pr="2376" %}
         {% include issue.html id="1871" title="Colorized output" %}
         {% include issue.html id="2069" title="Validate migration encoding" %}
-        {% include issue.html id="2276" title="Toggle display of query results" pro=true %}
+        {% include issue.html id="2276" title="Toggle display of query results" teams=true %}
         {% include issue.html id="2398" title="PostgreSQL 12 support" %}
         {% include issue.html id="2426" title="Command-line: Update MySQL driver to 8.0.16" %}
         {% include issue.html id="2435" title="DB2 11.5 support" %}
@@ -877,11 +877,11 @@ subtitle: Release Notes
 
     <h3>New features</h3>
     <ul>
-        {% include issue.html id="2318" title="Wildcards in errorOverrides" pro=true %}
+        {% include issue.html id="2318" title="Wildcards in errorOverrides" teams=true %}
         {% include issue.html id="2326" title="Command-line: Update H2 to 1.4.199" %}
         {% include issue.html id="2354" title="Java 12 support" %}
         {% include issue.html id="2357" title="Command-line: Upgrade built-in JRE to OpenJDK 11" %}
-        {% include issue.html id="2371" title="SQL*Plus <code>SET/SHOW ECHO/TERMOUT/TIME/TIMING</code> support" pro=true %}
+        {% include issue.html id="2371" title="SQL*Plus <code>SET/SHOW ECHO/TERMOUT/TIME/TIMING</code> support" teams=true %}
         {% include issue.html id="2393" title="Oracle 19c support" %}
     </ul>
 
@@ -927,14 +927,14 @@ subtitle: Release Notes
     <ul>
         {% include issue.html id="865" title="Custom tablespace for schema history table" %}
         {% include issue.html id="1062" title="API: Make it possible to use pre-instantiated Java-based migrations" %}
-        {% include issue.html id="2120" title="Add new oracle.sqlplusWarn setting" pro=true %}
+        {% include issue.html id="2120" title="Add new oracle.sqlplusWarn setting" teams=true %}
         {% include issue.html id="2167" title="Allow versioned migration names like V12.sql (no separator, no description)" %}
         {% include issue.html id="2178" title="PostgreSQL 11 support" pr="2194" %}
         {% include issue.html id="2189" title="Gradle 5.0 support" %}
         {% include issue.html id="2216" title="CockroachDB 2.1 support" %}
         {% include issue.html id="2300" title="MariaDB 10.4 support" %}
         {% include issue.html id="2301" title="Command-line: Upgrade MariaDB JDBC driver to 2.4.0" %}
-        {% include issue.html id="2302" title="Oracle SQL*Plus: support WHENEVER SQLERROR EXIT SQL.SQLCODE" pro=true %}
+        {% include issue.html id="2302" title="Oracle SQL*Plus: support WHENEVER SQLERROR EXIT SQL.SQLCODE" teams=true %}
         {% include issue.html id="2303" title="SQL Server 2019 support" %}
         {% include issue.html id="2304" title="Command-line: Upgrade SQL Server JDBC driver to 7.2.0" %}
     </ul>
@@ -946,7 +946,7 @@ subtitle: Release Notes
 
     <h3>Incompatible changes</h3>
     <ul>
-        {% include issue.html id="2120" title="Unsupported Oracle SQL*Plus now throw an error by default" pro=true %}
+        {% include issue.html id="2120" title="Unsupported Oracle SQL*Plus now throw an error by default" teams=true %}
         {% include issue.html id="2188" title="Discontinue Java 6 support" enterprise=true %}
         {% include issue.html id="2218" title="Remove deprecated APIs and settings. See issue for full details" %}
     </ul>
@@ -1016,8 +1016,8 @@ subtitle: Release Notes
 
     <h3>New features</h3>
     <ul>
-        {% include issue.html id="2210" title="SQL*Plus: Add support for SHOW/SET FEEDBACK/VERIFY" pro=true %}
-        {% include issue.html id="2212" title="Additional D and I behaviors for errorOverrides to turn specific errors and warnings into debug or info messages"  pro=true %}
+        {% include issue.html id="2210" title="SQL*Plus: Add support for SHOW/SET FEEDBACK/VERIFY" teams=true %}
+        {% include issue.html id="2212" title="Additional D and I behaviors for errorOverrides to turn specific errors and warnings into debug or info messages"  teams=true %}
     </ul>
 
     <h3>Changes</h3>
@@ -1065,19 +1065,19 @@ subtitle: Release Notes
 
     <h3>New features</h3>
     <ul>
-        {% include issue.html id="705" title="Oracle SQL*Plus: Add support for executing external scripts using @other_script.sql" pro=true %}
-        {% include issue.html id="1289" title="Statement-level callbacks: before, after and after error" pro=true %}
+        {% include issue.html id="705" title="Oracle SQL*Plus: Add support for executing external scripts using @other_script.sql" teams=true %}
+        {% include issue.html id="1289" title="Statement-level callbacks: before, after and after error" teams=true %}
         {% include issue.html id="1324" title="Add initSql for all clients" %}
         {% include issue.html id="1556" title="Percona XtraDB Cluster support" %}
         {% include issue.html id="2033" title="Automatically set application name to easily identify Flyway connections" %}
-        {% include issue.html id="2043" title="Introduce license key" pro=true %}
+        {% include issue.html id="2043" title="Introduce license key" teams=true %}
         {% include issue.html id="2044" title="Flyway Command-line downloads now include all Flyway editions" %}
         {% include issue.html id="2068" title="MariaDB 10.3 support" %}
         {% include issue.html id="2093" title="Oracle 18c support" %}
         {% include issue.html id="2100" title="Aurora MySQL support" %}
         {% include issue.html id="2101" title="Aurora PostgreSQL support" %}
         {% include issue.html id="2106" title="Introduce single statement configuration and deprecate old configuration methods on Flyway class" %}
-        {% include issue.html id="2119" title="SQL*Plus: Support SET LINESIZE" pro=true %}
+        {% include issue.html id="2119" title="SQL*Plus: Support SET LINESIZE" teams=true %}
         {% include issue.html id="2124" title="Introduce connectRetries setting" %}
         {% include issue.html id="2128" title="Add an 'ignorePendingMigrations' configuration option" pr="2129" %}
         {% include issue.html id="2144" title="Command-line: Bundle MySQL JDBC driver" %}
@@ -1139,7 +1139,7 @@ subtitle: Release Notes
 
     <h3>New features</h3>
     <ul>
-        {% include issue.html id="2054" title="Additional SQL*Plus SET commands support (ESCAPE, FLAGGER, HEADING)" pro=true %}
+        {% include issue.html id="2054" title="Additional SQL*Plus SET commands support (ESCAPE, FLAGGER, HEADING)" teams=true %}
         {% include issue.html id="2059" title="Warn about MariaDB driver usage when connection to MySQL 5.5+" %}
     </ul>
 

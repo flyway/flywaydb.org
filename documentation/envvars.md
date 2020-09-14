@@ -363,7 +363,7 @@ The following environment variables are supported:
     </tr>
     <tr id="FLYWAY_LICENSE_KEY">
         <td>FLYWAY_LICENSE_KEY {% include pro.html %}</td>
-        <td>Your Flyway license key (FL01...). Not yet a Flyway Pro or Enterprise Edition customer? Request your <a href="" data-toggle="modal" data-target="#flyway-trial-license-modal">Flyway trial license key</a> to try out Flyway Pro and Enterprise Edition features free for 30 days.</td>
+        <td>Your Flyway license key (FL01...). Not yet a Flyway Teams Edition customer? Request your <a href="" data-toggle="modal" data-target="#flyway-trial-license-modal">Flyway trial license key</a> to try out Flyway Teams Edition features free for 30 days.</td>
     </tr>
     </tbody>
 </table>
