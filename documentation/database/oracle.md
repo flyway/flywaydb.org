@@ -83,7 +83,7 @@ INSERT INTO ${tableName} (name) VALUES ('Mr. T');</pre>
 ## SQL*Plus commands 
 {% include pro.html %}
 
-In addition to the regular Oracle SQL syntax, Flyway Pro and Flyway Enterprise also come with support for Oracle 
+In addition to the regular Oracle SQL syntax, Flyway Teams also comes with support for Oracle 
 SQL*Plus commands.
 
 This support is disabled by default and must be activated using the [`oracle.sqlplus`](/documentation/commandline/migrate#oracle.sqlplus) flag.

@@ -11,7 +11,7 @@ into their applications nor having to install a build tool.
 
 ## Download and installation
 
-Select the platform that you need. Each download contains all editions (community, pro, enterprise) of Flyway.<br/><br/>
+Select the platform that you need. Each download contains all editions of Flyway.<br/><br/>
 
 #### <i class="fa fa-windows"></i> Windows
 
@@ -76,7 +76,7 @@ The Flyway download, once extracted, now becomes a directory with the following 
 ## Flyway editions
 
 The Flyway Command-line tool distribution ships with all editions of Flyway. It defaults to Flyway Community Edition.
-It can however easily be configured to run the [Flyway Pro or Enterprise Edition](/download) instead.  
+It can however easily be configured to run the [paid editions](/download) instead.
 
 ### Environment variable
 
@@ -85,8 +85,7 @@ executing Flyway to any of the following values:
 
 <table class="table table-striped">
 <tr><td><code>community</code></td><td>Select the Flyway Community Edition (default)</td></tr> 
-<tr><td><code>pro</code></td><td>Select the Flyway Pro Edition</td></tr> 
-<tr><td><code>enterprise</code></td><td>Select the Flyway Enterprise Edition</td></tr> 
+<tr><td><code>teams</code></td><td>Select the Flyway Teams Edition</td></tr> 
 </table> 
 
 ### Edition-selecting flags
@@ -98,8 +97,7 @@ to set any environment variable at all:
 
 <table class="table table-striped">
 <tr><td><code>-community</code></td><td>Select the Flyway Community Edition</td></tr> 
-<tr><td><code>-pro</code></td><td>Select the Flyway Pro Edition</td></tr> 
-<tr><td><code>-enterprise</code></td><td>Select the Flyway Enterprise Edition</td></tr> 
+<tr><td><code>-teams</code></td><td>Select the Flyway Teams Edition</td></tr> 
 </table> 
 
 ## Commands
@@ -129,7 +127,7 @@ to set any environment variable at all:
         <td>Validates the applied migrations against the ones available on the classpath</td>
     </tr>
     <tr>
-        <td><a href="/documentation/commandline/undo">undo</a> <a href="/download" class="label label-primary" title="Supported by Flyway Pro and Enterprise Edition only">Flyway Pro</a></td>
+        <td><a href="/documentation/commandline/undo">undo</a> <a href="/download" class="label label-primary" title="Supported by Flyway Teams Edition only">Flyway Teams</a></td>
         <td>Undoes the most recently applied versioned migrations</td>
     </tr>
     <tr>

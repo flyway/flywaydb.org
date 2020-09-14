@@ -14,9 +14,7 @@ running on **Java 8**, **Java 9**, **Java 10**, **Java 11** or **Java 12**.
     <ul class="nav nav-tabs">
         <li class="active marketing-item"><a href="#tab-community" data-toggle="tab">Community Edition</a>
         </li>
-        <li class="marketing-item"><a href="#tab-pro" data-toggle="tab">Pro Edition</a>
-        </li>
-        <li class="marketing-item"><a href="#tab-enterprise" data-toggle="tab">Enterprise Edition</a>
+        <li class="marketing-item"><a href="#tab-teams" data-toggle="tab">Teams Edition</a>
         </li>
     </ul>
     <div class="tab-content">
@@ -25,12 +23,7 @@ running on **Java 8**, **Java 9**, **Java 10**, **Java 11** or **Java 12**.
     id "org.flywaydb.flyway" version "{{ site.flywayVersion }}"
 }</pre>
         </div>
-        <div class="tab-pane" id="tab-pro">
-<pre class="prettyprint">plugins {
-    id "org.flywaydb.flyway<strong>.pro</strong>" version "{{ site.flywayVersion }}"
-}</pre>
-        </div>
-        <div class="tab-pane" id="tab-enterprise">
+        <div class="tab-pane" id="tab-teams">
 <pre class="prettyprint">plugins {
     id "org.flywaydb.flyway<strong>.enterprise</strong>" version "{{ site.flywayVersion }}"
 }</pre>

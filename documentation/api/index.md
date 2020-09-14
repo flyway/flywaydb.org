@@ -26,9 +26,7 @@ be migrated to a state the rest of the code can work with.
     <ul class="nav nav-tabs">
         <li class="active marketing-item"><a href="#tab-community" data-toggle="tab">Community Edition</a>
         </li>
-        <li class="marketing-item"><a href="#tab-pro" data-toggle="tab">Pro Edition</a>
-        </li>
-        <li class="marketing-item"><a href="#tab-enterprise" data-toggle="tab">Enterprise Edition</a>
+        <li class="marketing-item"><a href="#tab-teams" data-toggle="tab">Teams Edition</a>
         </li>
     </ul>
     <div class="tab-content">
@@ -103,63 +101,7 @@ be migrated to a state the rest of the code can work with.
     </tr>
 </table>
         </div>
-        <div class="tab-pane" id="tab-pro">
-<table class="table">
-    {% if site.flywayPreviewVersion %}
-    <tr>
-        <th></th>
-        <th>Official Release (recommended)</th>
-        <td>Early-Access Preview</td>
-    </tr>    
-    {% endif %}
-    <tr>
-        <th>Maven</th>
-        <td>
-            <pre class="prettyprint">&lt;dependency&gt;
-    &lt;groupId&gt;org.flywaydb<strong>.pro</strong>&lt;/groupId&gt;
-    &lt;artifactId&gt;flyway-core&lt;/artifactId&gt;
-    &lt;version&gt;{{ site.flywayVersion }}&lt;/version&gt;
-&lt;/dependency&gt;</pre>
-        </td>
-        {% if site.flywayPreviewVersion %}
-        <td>
-            <pre class="prettyprint">&lt;dependency&gt;
-    &lt;groupId&gt;org.flywaydb<strong>.pro</strong>&lt;/groupId&gt;
-    &lt;artifactId&gt;flyway-core&lt;/artifactId&gt;
-    &lt;version&gt;{{ site.flywayPreviewVersion }}&lt;/version&gt;
-&lt;/dependency&gt;</pre>
-        </td>
-        {% endif %}
-    </tr>
-    <tr>
-        <th>Gradle</th>
-        <td>
-            <pre class="prettyprint">compile "org.flywaydb<strong>.pro</strong>:flyway-core:{{ site.flywayVersion }}"</pre>
-        </td>
-        {% if site.flywayPreviewVersion %}
-        <td>
-            <pre class="prettyprint">compile "org.flywaydb<strong>.pro</strong>:flyway-core:{{ site.flywayVersion }}"</pre>
-        </td>
-        {% endif %}
-    </tr>
-    <tr>
-        <th>Binary</th>
-        <td>
-            <a class="btn btn-primary btn-download" href="/download/thankyou?dl=https://repo1.maven.org/maven2/org/flywaydb/pro/flyway-core/{{site.flywayVersion}}/flyway-core-{{site.flywayVersion}}.jar"><i class="fa fa-download"></i> flyway-core-{{site.flywayVersion}}.jar</a>
-            <a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/pro/flyway-core/{{site.flywayVersion}}/flyway-core-{{site.flywayVersion}}.jar.md5">md5</a>
-            <a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/pro/flyway-core/{{site.flywayVersion}}/flyway-core-{{site.flywayVersion}}.jar.sha1">sha1</a>
-        </td>
-        {% if site.flywayPreviewVersion %}
-        <td>
-            <a class="btn btn-primary btn-download" href="/download/thankyou?dl=https://repo1.maven.org/maven2/org/flywaydb/pro/flyway-core/{{site.flywayPreviewVersion}}/flyway-core-{{site.flywayPreviewVersion}}.jar"><i class="fa fa-download"></i> flyway-core-{{site.flywayPreviewVersion}}.jar</a>
-            <a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/pro/flyway-core/{{site.flywayPreviewVersion}}/flyway-core-{{site.flywayPreviewVersion}}.jar.md5">md5</a>
-            <a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/pro/flyway-core/{{site.flywayPreviewVersion}}/flyway-core-{{site.flywayPreviewVersion}}.jar.sha1">sha1</a>
-        </td>
-        {% endif %}
-    </tr>
-</table>
-        </div>
-                <div class="tab-pane" id="tab-enterprise">
+<div class="tab-pane" id="tab-teams">
 <table class="table">
     {% if site.flywayPreviewVersion %}
     <tr>
