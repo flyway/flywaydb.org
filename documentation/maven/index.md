@@ -13,9 +13,7 @@ The Flyway Community Edition and Pro Edition Maven plugins support **Maven 3.x**
     <ul class="nav nav-tabs">
         <li class="active marketing-item"><a href="#tab-community" data-toggle="tab">Community Edition</a>
         </li>
-        <li class="marketing-item"><a href="#tab-pro" data-toggle="tab">Pro Edition</a>
-        </li>
-        <li class="marketing-item"><a href="#tab-enterprise" data-toggle="tab">Enterprise Edition</a>
+        <li class="marketing-item"><a href="#tab-teams" data-toggle="tab">Teams Edition</a>
         </li>
     </ul>
     <div class="tab-content">
@@ -49,36 +47,7 @@ The Flyway Community Edition and Pro Edition Maven plugins support **Maven 3.x**
     </tr>
 </table>
         </div>
-        <div class="tab-pane" id="tab-pro">
-<table class="table">
-    {% if site.flywayPreviewVersion %}
-    <tr>
-        <th></th>
-        <th>Official Release (recommended)</th>
-        <td>Early-Access Preview</td>
-    </tr>    
-    {% endif %}
-    <tr>
-        <td>
-            <pre class="prettyprint">&lt;plugin&gt;
-    &lt;groupId&gt;org.flywaydb<strong>.pro</strong>&lt;/groupId&gt;
-    &lt;artifactId&gt;flyway-maven-plugin&lt;/artifactId&gt;
-    &lt;version&gt;{{ site.flywayVersion }}&lt;/version&gt;
-&lt;/plugin&gt;</pre>
-        </td>
-        {% if site.flywayPreviewVersion %}
-        <td>
-            <pre class="prettyprint">&lt;plugin&gt;
-    &lt;groupId&gt;org.flywaydb<strong>.pro</strong>&lt;/groupId&gt;
-    &lt;artifactId&gt;flyway-maven-plugin&lt;/artifactId&gt;
-    &lt;version&gt;{{ site.flywayPreviewVersion }}&lt;/version&gt;
-&lt;/plugin&gt;</pre>
-        </td>
-        {% endif %}
-    </tr>
-</table>
-        </div>
-                <div class="tab-pane" id="tab-enterprise">
+                <div class="tab-pane" id="tab-teams">
 <table class="table">
     {% if site.flywayPreviewVersion %}
     <tr>

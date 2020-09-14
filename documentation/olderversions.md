@@ -6,9 +6,11 @@ flywayVersion: 5.2.4
 
 Historically, Flyway Community edition artifacts were uploaded to Maven Central and Gradle Plugins, whereas Pro & Enterprise editions were only available through our own server, repo.flywaydb.org.
 
-Since Flwyay 6.4.1, Pro & Enterprise edition artifacts are uploaded to Maven Central and Gradle Plugins, alongside Community edition. 
+Since Flwyay 6.4.1, Pro & Enterprise edition artifacts are uploaded to Maven Central and Gradle Plugins, alongside Community edition.
 
-For all versions of Community, and versions of Pro & Enterprise beyond 6.4.1:
+Since Flyway 7.0, Flyway Pro & Enterprise editions are renamed to Flyway Teams.
+
+For all versions of Community, and versions of paid editions beyond 6.4.1:
 - [Flyway Maven Central listing](https://mvnrepository.com/artifact/org.flywaydb)
 - [Flyway Gradle Plugins listing](https://plugins.gradle.org/search?term=flyway)
 

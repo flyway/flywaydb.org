@@ -18,8 +18,7 @@ should have been taken care of for you.
 
 ## JDK
 
-Even though Flyway Community Edition and Flyway Pro Edition depend on JDK 8 or later and Flyway Enterprise Edition 
-depends on JDK 6 or later, Flyway is built using OpenJDK 11.
+Even though Flyway depends on JDK 8 or later, Flyway is built using OpenJDK 11.
 
 So grab the latest version from the [AdoptOpenJDK website](https://adoptopenjdk.net/releases.html?variant=openjdk11).
 
