@@ -12,11 +12,11 @@ subtitle: PostgreSQL
 - `10`
 - `9.6`
 - `9.5`
-- `9.4` {% include enterprise.html %}
-- `9.3` {% include enterprise.html %}
-- `9.2` {% include enterprise.html %}
-- `9.1` {% include enterprise.html %}
-- `9.0` {% include enterprise.html %}
+- `9.4` {% include teams.html %}
+- `9.3` {% include teams.html %}
+- `9.2` {% include teams.html %}
+- `9.1` {% include teams.html %}
+- `9.0` {% include teams.html %}
 
 ## Driver
 

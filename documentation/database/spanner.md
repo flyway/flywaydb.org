@@ -7,7 +7,7 @@ subtitle: Goodle Cloud Spanner
 
 ## Supported Versions
 
-- `Latest` {% include enterprise.html %}
+- `Latest` {% include teams.html %}
 
 ## Drivers
 

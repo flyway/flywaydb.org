@@ -13,10 +13,10 @@ subtitle: DB2
 
 - `11.5`
 - `11.1`
-- `10.5` {% include enterprise.html %}
-- `10.1` {% include enterprise.html %}
-- `9.8` {% include enterprise.html %}
-- `9.7` {% include enterprise.html %}
+- `10.5` {% include teams.html %}
+- `10.1` {% include teams.html %}
+- `9.8` {% include teams.html %}
+- `9.7` {% include teams.html %}
 
 
 ## Driver
