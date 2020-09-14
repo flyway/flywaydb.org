@@ -7,7 +7,7 @@ subtitle: Azure Synapse
 
 ## Supported Versions
 
-- `Latest` {% include enterprise.html %}
+- `Latest` {% include teams.html %}
 
 ## Driver
 <table class="table">
