@@ -61,7 +61,7 @@ running on **Java 8**, **Java 9**, **Java 10**, **Java 11** or **Java 12**.
         <td>Validates the applied migrations against the ones available on the classpath</td>
     </tr>
     <tr>
-        <td><a href="/documentation/gradle/undo">flywayUndo</a> {% include pro.html %}</td>
+        <td><a href="/documentation/gradle/undo">flywayUndo</a> {% include teams.html %}</td>
         <td>Undoes the most recently applied versioned migration</td>
     </tr>
     <tr>

@@ -4,7 +4,7 @@ menu: dryruns
 subtitle: 'Tutorial: Dry Runs'
 ---
 # Tutorial: Dry Runs
-{% include pro.html %}
+{% include teams.html %}
 
 This tutorial assumes you have successfully completed the [**First Steps: Command-line**](/getstarted/firststeps/commandline)
 tutorial. **If you have not done so, please do so first.** This tutorial picks up where that one left off.

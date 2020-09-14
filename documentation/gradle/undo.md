@@ -4,7 +4,7 @@ pill: undo
 subtitle: 'gradle flywayUndo'
 ---
 # Gradle Task: flywayUndo
-{% include pro.html %}
+{% include teams.html %}
 
 [Undoes](/documentation/command/undo) the most recently applied versioned migration.
 

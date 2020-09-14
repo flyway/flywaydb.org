@@ -73,7 +73,7 @@ all these versions are valid versioned migration versions:
 Versioned migrations are applied in the order of their versions. Versions are sorted numerically as you would normally expect.
 
 ## Undo Migrations
-{% include pro.html %}
+{% include teams.html %}
 
 **Undo migrations** are the opposite of regular versioned migrations. An undo migration is responsible for undoing the effects
 of the versioned migration with the same version. Undo migrations are optional and not required to run regular versioned migrations.
@@ -426,7 +426,7 @@ the need to visually inspect the result of SQL queries.
 There are however some scenarios where such manual inspection makes sense, and therefore Flyway will display query results in the usual tabular form when a `SELECT` statement (or any other statement that returns results) is executed.
 
 ### Toggling query results
-{% include pro.html %}
+{% include teams.html %}
 
 To prevent Flyway from displaying query results, set the configuration option [`outputQueryResults`](/documentation/commandline/migrate#outputQueryResults) to `false`.
 

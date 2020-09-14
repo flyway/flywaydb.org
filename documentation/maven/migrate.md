@@ -90,7 +90,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
                 which using the defaults translates to V1.1__My_description.sql</td>
     </tr>
     <tr>
-        <td>undoSqlMigrationPrefix {% include pro.html %}</td>
+        <td>undoSqlMigrationPrefix {% include teams.html %}</td>
         <td>NO</td>
         <td>U</td>
         <td><p>The file name prefix for undo SQL migrations.</p>
@@ -124,7 +124,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
     </tr>
      {% include cfg/validateMigrationNaming.html %}
     <tr id="stream">
-        <td>stream {% include pro.html %}</td>
+        <td>stream {% include teams.html %}</td>
         <td>NO</td>
         <td>false</td>
         <td>Whether to stream SQL migrations when executing them. Streaming doesn't load the entire migration in memory at
@@ -132,7 +132,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
             composed of multiple MB or even GB of reference data, as this dramatically reduces Flyway's memory consumption.</td>
     </tr>
     <tr id="batch">
-        <td>batch {% include pro.html %}</td>
+        <td>batch {% include teams.html %}</td>
         <td>NO</td>
         <td>false</td>
         <td>Whether to batch SQL statements when executing them. Batching can save up to 99 percent of network roundtrips by
@@ -332,7 +332,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
     </tr>
     {% include cfg/errorOverrides-maven-gradle.html %}
     <tr id="dryRunOutput">
-        <td>dryRunOutput {% include pro.html %}</td>
+        <td>dryRunOutput {% include teams.html %}</td>
         <td>NO</td>
         <td><i>Execute directly against the database</i></td>
         <td>The file where to output the SQL statements of a migration dry run. If the file specified is in a non-existent
