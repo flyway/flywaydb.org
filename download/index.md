@@ -14,7 +14,7 @@ Choose your Flyway edition based on the features and support level you require
 <th></th>
 <th>Community Edition</th>
 <th>Pro Edition</th>
-<th>Enterprise Edition</th>
+<th>Teams Edition</th>
 </tr>
 </thead>
 <tr><td><a href="/documentation/migrations#sql-based-migrations">SQL-based migrations</a></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
