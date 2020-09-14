@@ -4,7 +4,7 @@ menu: erroroverrides
 subtitle: 'Tutorial: Error Overrides'
 ---
 # Tutorial: Error Overrides
-{% include pro.html %}
+{% include teams.html %}
 
 This tutorial assumes you have successfully completed the [**First Steps: Maven**](/getstarted/firststeps/maven)
 tutorial. **If you have not done so, please do so first.** This tutorial picks up where that one left off.
