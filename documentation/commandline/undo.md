@@ -4,7 +4,7 @@ pill: undo
 subtitle: 'Command-line: undo'
 ---
 # Command-line: undo
-{% include pro.html %}
+{% include teams.html %}
 
 [Undoes](/documentation/command/undo) the most recently applied versioned migration.
 

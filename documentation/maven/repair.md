@@ -83,7 +83,7 @@ Repairs the Flyway schema history table. This will perform the following actions
             which using the defaults translates to V1.1__My_description.sql</td>
     </tr>
     <tr>
-        <td>undoSqlMigrationPrefix {% include pro.html %}</td>
+        <td>undoSqlMigrationPrefix {% include teams.html %}</td>
         <td>NO</td>
         <td>U</td>
         <td><p>The file name prefix for undo SQL migrations.</p>

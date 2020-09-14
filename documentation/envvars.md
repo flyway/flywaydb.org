@@ -120,7 +120,7 @@ The following environment variables are supported:
                 which using the defaults translates to V1.1__My_description.sql</td>
     </tr>
     <tr id="FLYWAY_UNDO_SQL_MIGRATION_PREFIX">
-        <td>FLYWAY_UNDO_SQL_MIGRATION_PREFIX {% include pro.html %}</td>
+        <td>FLYWAY_UNDO_SQL_MIGRATION_PREFIX {% include teams.html %}</td>
         <td><p>The file name prefix for undo SQL migrations.</p>
             <p>Undo SQL migrations are responsible for undoing the effects of the versioned migration with the same version.</p>
             They have the following file name structure: prefixVERSIONseparatorDESCRIPTIONsuffix ,
@@ -151,13 +151,13 @@ The following environment variables are supported:
             If false, Flyway fails fast with an exception.</td>
         </tr>
     <tr id="FLYWAY_STREAM">
-        <td>FLYWAY_STREAM {% include pro.html %}</td>
+        <td>FLYWAY_STREAM {% include teams.html %}</td>
         <td>Whether to stream SQL migrations when executing them. Streaming doesn't load the entire migration in memory at
             once. Instead each statement is loaded individually. This is particularly useful for very large SQL migrations
             composed of multiple MB or even GB of reference data, as this dramatically reduces Flyway's memory consumption.</td>
     </tr>
     <tr id="FLYWAY_BATCH">
-        <td>FLYWAY_BATCH {% include pro.html %}</td>
+        <td>FLYWAY_BATCH {% include teams.html %}</td>
         <td>Whether to batch SQL statements when executing them. Batching can save up to 99 percent of network roundtrips by
             sending up to 100 statements at once over the network to the database, instead of sending each statement
             individually. This is particularly useful for very large SQL migrations composed of multiple MB or even GB of
@@ -322,7 +322,7 @@ The following environment variables are supported:
         <td>The username that will be recorded in the schema history table as having applied the migration</td>
     </tr>
     <tr id="FLYWAY_ERROR_OVERRIDES">
-        <td>FLYWAY_ERROR_OVERRIDES {% include pro.html %}</td>
+        <td>FLYWAY_ERROR_OVERRIDES {% include teams.html %}</td>
         <td>Comma-sparated list of rules for the built-in error handler that let you override specific SQL states and errors codes in order to force specific errors or warnings to be treated as debug messages, info messages, warnings or errors.
             <p>Each error override has the following format: <code>STATE:12345:W</code>. It is a 5 character SQL state (or <code>*</code> to match all SQL states), a colon, the SQL error code (or <code>*</code> to match all SQL error codes), a colon and finally the desired behavior that should override the initial one.</p>
             <p>The following behaviors are accepted:</p>
@@ -342,21 +342,21 @@ The following environment variables are supported:
        </td>
     </tr>
     <tr id="FLYWAY_DRYRUN_OUTPUT">
-        <td>FLYWAY_DRYRUN_OUTPUT {% include pro.html %}</td>
+        <td>FLYWAY_DRYRUN_OUTPUT {% include teams.html %}</td>
         <td>The file where to output the SQL statements of a migration dry run. If the file specified is in a non-existent
             directory, Flyway will create all directories and parent directories as needed.
             Omit to use the default mode of executing the SQL statements directly against the database.</td>
     </tr>
     <tr id="FLYWAY_ORACLE_SQLPLUS">
-        <td>FLYWAY_ORACLE_SQLPLUS {% include pro.html %}</td>
+        <td>FLYWAY_ORACLE_SQLPLUS {% include teams.html %}</td>
         <td>Enable Flyway's support for <a href="/documentation/database/oracle#sqlplus-commands">Oracle SQL*Plus commands</a></td>
     </tr>
     <tr id="FLYWAY_ORACLE_SQLPLUS_WARN">
-        <td>FLYWAY_ORACLE_SQLPLUS_WARN {% include pro.html %}</td>
+        <td>FLYWAY_ORACLE_SQLPLUS_WARN {% include teams.html %}</td>
         <td>Whether Flyway should issue a warning instead of an error whenever it encounters an Oracle SQL*Plus statement it doesn't yet support.</td>
     </tr>
     <tr id="FLYWAY_LICENSE_KEY">
-        <td>FLYWAY_LICENSE_KEY {% include pro.html %}</td>
+        <td>FLYWAY_LICENSE_KEY {% include teams.html %}</td>
         <td>Your Flyway license key (FL01...). Not yet a Flyway Teams Edition customer? Request your <a href="" data-toggle="modal" data-target="#flyway-trial-license-modal">Flyway trial license key</a> to try out Flyway Teams Edition features free for 30 days.</td>
     </tr>
     </tbody>

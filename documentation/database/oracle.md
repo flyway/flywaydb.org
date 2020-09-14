@@ -81,7 +81,7 @@ END;
 INSERT INTO ${tableName} (name) VALUES ('Mr. T');</pre>
 
 ## SQL*Plus commands 
-{% include pro.html %}
+{% include teams.html %}
 
 In addition to the regular Oracle SQL syntax, Flyway Teams also comes with support for Oracle 
 SQL*Plus commands.
