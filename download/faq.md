@@ -11,28 +11,34 @@ Here are the answers to the most frequently asked questions regarding commercial
 
 If you can't find the answer to your question here, please contact us at **sales@flywaydb.org** and we'll be happy to help you.
 
-## What are Flyway Pro Edition and Flyway Enterprise Edition?
+## What is Flyway Teams Edition?
 
-Flyway Pro Edition and Flyway Enterprise Edition are supersets of Flyway Community Edition which add more functionality,
-support older databases and Java runtimes and provide additional support options for customers.
+Flyway Teams Edition is a superset of Flyway Community Edition which adds more functionality,
+supports older databases, and provides additional support options for customers.
+
+## What happened to Flyway Pro and Enterprise Edition?
+
+Historically Flyway had two paid for editions called Pro and Enterprise. As of Flyway's version 7.0 release, these two editions have been combined into a new edition called Flyway Teams. Flyway Teams provides the extra functionality that Enterprise Edition once did.
+
+Existing Pro and Enterprise license keys will continue to work with Flyway Teams Edition for as long as they are valid. Pro Edition customers are essentially 'upgraded' to Teams.
 
 ## How long are database releases supported in each edition of Flyway?
 
 The different editions of Flyway come with different support timeline guarantees for database releases. For Flyway
-Community and Pro Editions a database release is guaranteed to be supported for 5 years from its GA (General Availability)
-release date. Flyway Enterprise Edition gives you
+Community a database release is guaranteed to be supported for 5 years from its GA (General Availability)
+release date. Flyway Teams Edition gives you
 stronger guarantees by extending it to a full 10 years. Each edition gives you the strong predictability you
 need to be able to manage your database upgrade cycles at the pace you require.
 
-Example: Oracle 12.2 went GA in March 2017. It is guaranteed to be compatible with Flyway Community and Pro Editions until at
-least March 2022. After that date support will be retired from the Community and Pro Editions, but it is guaranteed to still remain available until at least March 2027 with Flyway Enterprise Edition. 
+Example: Oracle 12.2 went GA in March 2017. It is guaranteed to be compatible with Flyway Community until at
+least March 2022. After that date support will be retired from Community Edition, but it is guaranteed to still remain available until at least March 2027 with Flyway Teams Edition. 
 
 ## Is there a trial version?
 
 Yes there is. All you need to do is <a href="" data-toggle="modal" data-target="#flyway-trial-license-modal">request a trial license key</a>.
-This license key is valid for 30 days and can be used with either Flyway Pro or Enterprise Edition. After 30 days
-you must either upgrade to a full Flyway Pro Edition or Flyway Enterprise Edition license or downgrade to
-Flyway Community Edition. The trial comes with the full functionality of the Flyway Pro or Enterprise Edition,
+This license key is valid for 30 days and can be used with Flyway Teams. After 30 days
+you must either upgrade to a full Flyway Teams Edition license or downgrade to
+Flyway Community Edition. The trial comes with the full functionality of the Flyway Teams Edition,
 except for the source code, which is only available to paying customers.
 
 ## Do I have to set up a license server or open ports in my firewall?
@@ -41,17 +47,17 @@ No. Flyway does not need a license server and Flyway does not call home.
 
 ## What is the license?
 
-Here is the [Flyway Pro Edition license](/licenses/flyway-pro) and here is the [Flyway Enterprise Edition license](/licenses/flyway-enterprise).
+Here is the [Flyway Teams Edition license](/licenses/flyway-teams).
 
-## How does Flyway Pro and Enterprise Edition licensing work?
+## How does Flyway Teams Edition licensing work?
 
-Every organization running Flyway Pro or Enterprise Edition to manage databases on its own servers or cloud accounts
+Every organization running Flyway Teams Edition to manage databases on its own servers or cloud accounts
 must have a license.
-The price is based on the numbers of schemas in production managed by Flyway. You can use Flyway Pro or Enterprise with any
+The price is based on the numbers of schemas in production managed by Flyway. You can use Flyway Teams with any
 number of schemas as long as the number of schemas **in production** is smaller or equal to the licensed amount.
 Development, test and staging environments are free and unlimited.
 
-If you wish to expand your Flyway Pro or Enterprise Edition schema count beyond your current license, contact us at 
+If you wish to expand your Flyway Teams Edition schema count beyond your current license, contact us at 
 **sales@flywaydb.org** so we can update your account and let you know how we will bill you.
 
 ## What exactly is a schema?
@@ -111,33 +117,28 @@ For example, if you choose to license Flyway Enterprise Edition (10 schemas):
 - the price for 5 years is 13,275 USD = price for 3 years + (2,950 USD x 0.85) + (2,950 USD x 0.80). Yearly average: 2,655 USD (10% discount) 
 - the price for 10 years is 25,075 USD = price for 5 years + 5 x (2,950 USD x 0.80). Yearly average: 2,507.5 USD (15% discount) 
 
-## Can I upgrade from Flyway Pro Edition to Flyway Enterprise Edition?
-
-Yes, contact us at **sales@flywaydb.org** so we can update your account and let you know how we will bill you.
-
-## Can I distribute Flyway Pro Edition or Flyway Enterprise Edition to my customers?
+## Can I distribute Flyway Teams Edition to my customers?
 
 This is a common requirement for "on-site installs" or "appliances" sold to large corporations.
 
 The standard license is only appropriate for SaaS usage as it does not allow distribution.
 
 If you only have 10 customers or less, the most cost effective approach is to have each of your customers
-acquire their own Flyway Pro or Enterprise Edition license.
+acquire their own Flyway Teams Edition license.
 
-If this is not an option, or if you have more customers, Flyway Pro Edition and Flyway Enterprise Edition have a
-Redistributable license option. The [Redistributable license](/licenses/flyway-pro-redistributable) is 9,500 USD per
-year for Flyway Pro Edition and 29,500 USD per year for Flyway Enterprise Edition.
-This license allows you to distribute the Pro or Enterprise Edition as part of your application to your
-customers. One licence enables each of your customers to run Flyway Pro or Enterprise Edition to manage up
+If this is not an option, or if you have more customers, Flyway Teams Edition has a
+Redistributable license option. The [Redistributable license](/licenses/flyway-pro-redistributable) is 29,500 USD per year for Flyway Teams Edition.
+This license allows you to distribute the Teams Edition as part of your application to your
+customers. One licence enables each of your customers to run Flyway Teams Edition to manage up
 to 10 schemas in production (and an unlimited number of schemas in test) as part of your application only.
 There is no limit to the number of customers.
 
 Email **sales@flywaydb.org** to purchase.
 
-## Can I use Flyway Pro or Enterprise Edition to manage my customers' databases?
+## Can I use Flyway Teams Edition to manage my customers' databases?
 
-Yes you can. If you want to install Flyway Pro or Enterprise Edition on your customer's machines along with your
-application you need a redistributable license. See the previous question: [Can I distribute Flyway Pro Edition or Flyway Enterprise Edition to my customers?](#can-i-distribute-flyway-pro-edition-or-flyway-enterprise-edition-to-my-customers)
+Yes you can. If you want to install Flyway Teams on your customer's machines along with your
+application you need a redistributable license. See the previous question: [Can I distribute Flyway Teams to my customers?](#can-i-distribute-flyway-teams-edition-to-my-customers)
 
 If you do not install Flyway on your customer's hardware, but do either run Flyway from your own machines or use
 Flyway-generated dry run scripts to manage your customer's databases, each schema managed this way must be accounted
@@ -145,9 +146,6 @@ for as if it were a production schema within your own datacenter. See the previo
 
 ## Can I pay via invoice and purchase order?
 
-Flyway Pro Edition is credit card only, except for the unlimited-schemas tier.
-
-Flyway Enterprise Edition customers can pay via invoice and get NET15 payment terms.
-
+Flyway Teams Edition customers can pay via invoice and get NET15 payment terms.
 
 {% include trialpopup.html %}
