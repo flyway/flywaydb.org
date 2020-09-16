@@ -217,6 +217,14 @@ Flyway {{ site.flywayVersion }} by Redgate
 
 Repair not necessary. No failed migration detected.</pre>
 
+## Sample JSON output
+
+<pre class="console">&gt; flyway repair -outputType=json
+
+Flyway {{ site.flywayVersion }} by Redgate
+
+Repair not necessary. No failed migration detected.</pre>
+
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/api">API <i class="fa fa-arrow-right"></i></a>
 </p>

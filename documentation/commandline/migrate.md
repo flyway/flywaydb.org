@@ -385,6 +385,38 @@ Migrating schema "PUBLIC" to version 1 - First
 Migrating schema "PUBLIC" to version 1.1 - View
 Successfully applied 2 migrations to schema "PUBLIC" (execution time 00:00.030s).</pre>
 
+## Sample JSON output
+
+<pre class="console">&gt; flyway migrate -outputType=json
+
+{
+  "initialSchemaVersion": null,
+  "targetSchemaVersion": "1",
+  "schemaName": "public",
+  "migrations": [
+    {
+      "category": "Versioned",
+      "version": "1",
+      "description": "first",
+      "type": "SQL",
+      "filepath": "C:\\flyway\\sql\\V1__first.sql",
+      "executionTime": 0
+    },
+    {
+      "category": "Repeatable",
+      "version": "",
+      "description": "repeatable",
+      "type": "SQL",
+      "filepath": "C:\\flyway\\sql\\R__repeatable.sql",
+      "executionTime": 0
+    }
+  ],
+  "migrationsExecuted": 2,
+  "flywayVersion": "7.0.0",
+  "database": "testdb",
+  "warnings": []
+}</pre>
+
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/commandline/clean">Command-line: clean <i class="fa fa-arrow-right"></i></a>
 </p>
