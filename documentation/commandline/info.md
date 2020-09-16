@@ -238,6 +238,44 @@ Database: jdbc:h2:file:flyway.db (H2 1.3)
 | Versioned  | 1.2     | Populate table | SQL  |                     | Pending | No       |
 +------------+---------+----------------+------+---------------------+---------+----------+</pre>
 
+## Sample JSON output
+
+<pre class="console">&gt; flyway info -outputType=json
+
+{
+  "schemaVersion": null,
+  "schemaName": "public",
+  "migrations": [
+    {
+      "category": "Versioned",
+      "version": "1",
+      "description": "first",
+      "type": "SQL",
+      "installedOn": "",
+      "state": "Pending",
+      "undoable": "No",
+      "filepath": "C:\\flyway\\sql\\V1__first.sql",
+      "installedBy": "",
+      "executionTime": 0
+    },
+    {
+      "category": "Repeatable",
+      "version": "",
+      "description": "repeatable",
+      "type": "SQL",
+      "installedOn": "",
+      "state": "Pending",
+      "undoable": "",
+      "filepath": "C:\\flyway\\sql\\R__repeatable.sql",
+      "installedBy": "",
+      "executionTime": 0
+    }
+  ],
+  "flywayVersion": "7.0.0",
+  "database": "testdb",
+  "warnings": []
+}</pre>
+
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/commandline/validate">Command-line: validate <i class="fa fa-arrow-right"></i></a>
 </p>
