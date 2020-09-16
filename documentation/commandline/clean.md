@@ -111,6 +111,20 @@ Flyway {{ site.flywayVersion }} by Redgate
 
 Cleaned database schema 'PUBLIC' (execution time 00:00.014s)</pre>
 
+## Sample JSON output
+
+<pre class="console">&gt; flyway clean -outputType=json
+
+{
+  "schemasCleaned": [
+    "public"
+  ],
+  "schemasDropped": [],
+  "flywayVersion": "7.0.0",
+  "database": "testdb",
+  "warnings": []
+}</pre>
+
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/commandline/info">Command-line: info <i class="fa fa-arrow-right"></i></a>
 </p>

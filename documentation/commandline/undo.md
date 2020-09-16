@@ -298,6 +298,27 @@ Current version of schema "PUBLIC": 1
 Undoing migration of schema "PUBLIC" to version 1 - First
 Successfully undid 1 migration to schema "PUBLIC" (execution time 00:00.024s).</pre>
 
+## Sample JSON output
+
+<pre class="console">&gt; flyway undo -outputType=json
+
+{
+  "initialSchemaVersion": "1",
+  "targetSchemaVersion": null,
+  "schemaName": "public",
+  "undoneMigrations": [
+    {
+      "version": "1",
+      "description": "undoFirst",
+      "filepath": "C:\\flyway\\sql\\U1__undoFirst.sql"
+    }
+  ],
+  "migrationsUndone": 1,
+  "flywayVersion": "7.0.0",
+  "database": "testdb",
+  "warnings": []
+}</pre>
+
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/commandline/baseline">Command-line: baseline <i class="fa fa-arrow-right"></i></a>
 </p>
