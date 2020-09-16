@@ -283,6 +283,19 @@ Flyway {{ site.flywayVersion }} by Redgate
 
 No migrations applied yet. No validation necessary.</pre>
 
+## Sample JSON output
+
+<pre class="console">&gt; flyway validate -outputType=json
+
+{
+  "validationError": null,
+  "validationSuccessful": true,
+  "validateCount": 2,
+  "flywayVersion": "7.0.0",
+  "database": "testdb",
+  "warnings": []
+}</pre>
+
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/commandline/undo">Command-line: undo <i class="fa fa-arrow-right"></i></a>
 </p>

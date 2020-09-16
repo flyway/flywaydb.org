@@ -135,6 +135,18 @@ Flyway {{ site.flywayVersion }} by Redgate
 Creating schema history table: "PUBLIC"."flyway_schema_history"
 Schema baselined with version: 1</pre>
 
+## Sample JSON output
+
+<pre class="console">&gt; flyway baseline -outputType=json
+
+{
+  "successfullyBaselined": true,
+  "baselineVersion": "1",
+  "flywayVersion": "7.0.0",
+  "database": "testdb",
+  "warnings": []
+}</pre>
+
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/commandline/repair">Command-line: repair <i class="fa fa-arrow-right"></i></a>
 </p>
