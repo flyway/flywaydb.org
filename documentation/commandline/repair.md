@@ -222,9 +222,23 @@ Repair not necessary. No failed migration detected.</pre>
 
 <pre class="console">&gt; flyway repair -outputType=json
 
-Flyway {{ site.flywayVersion }} by Redgate
-
-Repair not necessary. No failed migration detected.</pre>
+{
+  "repairActions": [
+    "ALIGNED APPLIED MIGRATION CHECKSUMS"
+  ],
+  "migrationsRemoved": [],
+  "migrationsDeleted": [],
+  "migrationsAligned": [
+    {
+      "version": "1",
+      "description": "first",
+      "filepath": "C:\\flyway\\sql\\V1__first.sql"
+    }
+  ],
+  "flywayVersion": "7.0.0",
+  "database": "testdb",
+  "warnings": []
+}</pre>
 
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/api">API <i class="fa fa-arrow-right"></i></a>
