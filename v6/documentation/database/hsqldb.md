@@ -1,5 +1,5 @@
 ---
-layout: documentationv6
+layout: documentation
 menu: hsqldb
 subtitle: HSQLDB
 ---
@@ -40,7 +40,7 @@ subtitle: HSQLDB
 
 ## SQL Script Syntax
 
-- [Standard SQL syntax](v6/documentation/migrations#sql-based-migrations#syntax) with statement delimiter **;**
+- [Standard SQL syntax](/documentation/migrations#sql-based-migrations#syntax) with statement delimiter **;**
 - Triggers with `BEGIN ATOMIC ... END;` block
 
 ### Compatibility
@@ -81,5 +81,5 @@ CREATE TRIGGER uniqueidx_trigger BEFORE INSERT ON usertable
 - No concurrent migration support (to make Flyway cluster-safe) with HSQLDB 1.8, as this version does not properly support `SELECT ... FOR UPDATE` locking
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="v6/documentation/database/derby">Derby <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/database/derby">Derby <i class="fa fa-arrow-right"></i></a>
 </p>

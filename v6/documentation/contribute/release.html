@@ -1,5 +1,5 @@
 ---
-layout: documentationv6
+layout: documentation
 menu: release
 subtitle: Releasing Flyway
 ---
@@ -62,10 +62,10 @@ subtitle: Releasing Flyway
         <li>We select <strong>Staging Repositories</strong> on the left and tick the checkbox in front of the open <strong>org.flywaydb</strong> repository</li>
         <li>We then close it (without message) and release it (without message)</li>
         <li>The site must be now be updated by putting the new version number in <strong>_config.yml</strong> of flywaydb.org</li>
-        <li>We also update the <a href="v6/documentation/releaseNotes">Release Notes</a> by changing the Unreleased Version in the new version with the date of today</li>
-        <li>The newly released version should also be removed from the <a href="v6/documentation/roadmap">Roadmap</a></li>
-        <li>Remove the old javadoc from the site by deleting everything under v6/documentation/api/javadoc</li>
-        <li>Copy the new javadoc from flyway-release/flyway/flyway-core/target/apidocs to v6/documentation/api/javadoc</li>
+        <li>We also update the <a href="/documentation/releaseNotes">Release Notes</a> by changing the Unreleased Version in the new version with the date of today</li>
+        <li>The newly released version should also be removed from the <a href="/documentation/roadmap">Roadmap</a></li>
+        <li>Remove the old javadoc from the site by deleting everything under /documentation/api/javadoc</li>
+        <li>Copy the new javadoc from flyway-release/flyway/flyway-core/target/apidocs to /documentation/api/javadoc</li>
         <li>Copy the new sbt plugin from flyway-release/flyway/flyway-sbt/target/scala-2.10/sbt-0.13 to /repo/org/flywaydb/flyway-sbt_2.10_0.13/&lt;&lt;version&gt;&gt;</li>
         <li>Any remaining documentation changes to reflect changes in the code, must now be made to the site</li>
         <li>Write a release announcement for the blog</li>

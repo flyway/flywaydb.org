@@ -1,5 +1,5 @@
 ---
-layout: documentationv6
+layout: documentation
 menu: contributingDatabaseSupport
 subtitle: Contributing Database Support
 ---

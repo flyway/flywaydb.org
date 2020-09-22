@@ -1,5 +1,5 @@
 ---
-layout: documentationv6
+layout: documentation
 menu: validate
 subtitle: Validate
 ---
@@ -14,5 +14,5 @@ Validate helps you verify that the migrations applied to the database match the 
 This is very useful to detect accidental changes that may prevent you from reliably recreating the schema.
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="v6/documentation/command/undo">Undo <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/command/undo">Undo <i class="fa fa-arrow-right"></i></a>
 </p>

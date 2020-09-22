@@ -1,5 +1,5 @@
 ---
-layout: documentationv6
+layout: documentation
 menu: callbacks
 subtitle: Callbacks
 ---
@@ -170,7 +170,7 @@ in the configured locations following a certain naming convention: the event nam
 Using the default settings, Flyway looks in its default locations (&lt;install_dir&gt;/sql) for the Command-line tool)
 for SQL files like `beforeMigrate.sql`, `beforeEachMigrate.sql`, `afterEachMigrate.sql`, ...
 
-Placeholder replacement works just like it does for <a href="v6/documentation/migrations#sql-based-migrations">SQL migrations</a>.
+Placeholder replacement works just like it does for <a href="/documentation/migrations#sql-based-migrations">SQL migrations</a>.
 
 Optionally the callback may also include a description. In that case the callback name is composed of the event name,
 the separator, the description and the suffix. Example: `beforeRepair__vacuum.sql`.
@@ -180,12 +180,12 @@ the separator, the description and the suffix. Example: `beforeRepair__vacuum.sq
 ## Java Callbacks
 
 If SQL Callbacks aren't flexible enough for you, you have the option to implement the
-[**Callback**](v6/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback)
+[**Callback**](/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback)
 interface yourself. You can even hook multiple Callback implementations in the lifecycle. Java callbacks have the
 additional flexibility that a single Callback implementation can handle multiple lifecycle events, and are
 therefore not bound by the SQL callback naming convention.
 
-**More info:** [Java-based Callbacks](v6/documentation/api/hooks#callsbacks)
+**More info:** [Java-based Callbacks](/documentation/api/hooks#callsbacks)
 
 ## Callback ordering
 
@@ -195,5 +195,5 @@ When multiple callbacks for the same event are found, they are executed in the f
 - SQL callbacks, in alphabetic order of their description.
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="v6/documentation/erroroverrides">Error Overrides <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/erroroverrides">Error Overrides <i class="fa fa-arrow-right"></i></a>
 </p>

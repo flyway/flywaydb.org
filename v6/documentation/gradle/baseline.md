@@ -7,7 +7,7 @@ subtitle: 'gradle flywayBaseline'
 
 Baselines an existing database, excluding all migrations up to and including baselineVersion.
 
-<a href="v6/documentation/command/baseline"><img src="/assets/balsamiq/command-baseline.png" alt="baseline"></a>
+<a href="/documentation/command/baseline"><img src="/assets/balsamiq/command-baseline.png" alt="baseline"></a>
 
 ## Usage
 
@@ -51,10 +51,10 @@ Baselines an existing database, excluding all migrations up to and including bas
         <td></td>
         <td>The password to use to connect to the database</td>
     </tr>
-    {% include v6/cfg/connectRetries.html %}
-    {% include v6/cfg/initSql.html %}
-    {% include v6/cfg/schemas.html %}
-    {% include v6/cfg/createSchemas.html %}
+    {% include cfg/connectRetries.html %}
+    {% include cfg/initSql.html %}
+    {% include cfg/schemas.html %}
+    {% include cfg/createSchemas.html %}
     <tr>
         <td>table</td>
         <td>NO</td>
@@ -65,13 +65,13 @@ Baselines an existing database, excluding all migrations up to and including bas
             the schema history table is placed in the first schema of the list.
         </td>
     </tr>
-    {% include v6/cfg/tablespace.html %}
+    {% include cfg/tablespace.html %}
     <tr>
         <td>callbacks</td>
         <td>NO</td>
         <td></td>
         <td>Fully qualified class names of
-            <a href="v6/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback">Callback</a>
+            <a href="/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback">Callback</a>
             implementations to use to hook into the Flyway lifecycle.</td>
     </tr>
     <tr>
@@ -94,9 +94,9 @@ Baselines an existing database, excluding all migrations up to and including bas
         </td>
         <td>The description to tag an existing schema with when executing baseline</td>
     </tr>
-    {% include v6/cfg/validateMigrationNaming.html %}
-    {% include v6/cfg/workingDirectory.html %}
-    {% include v6/cfg/licenseKey.html %}
+    {% include cfg/validateMigrationNaming.html %}
+    {% include cfg/workingDirectory.html %}
+    {% include cfg/licenseKey.html %}
     </tbody>
 </table>
 
@@ -130,5 +130,5 @@ Creating schema history table: "PUBLIC"."flyway_schema_history"
 Schema baselined with version: 1</pre>
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="v6/documentation/gradle/repair">Gradle: repair <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/gradle/repair">Gradle: repair <i class="fa fa-arrow-right"></i></a>
 </p>

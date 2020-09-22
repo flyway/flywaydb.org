@@ -38,7 +38,7 @@ running on **Java 8**, **Java 9**, **Java 10**, **Java 11** or **Java 12**. The 
     </div>
 </div>
 <p class="note">
-  For older versions see <a href="v6/documentation/olderversions">Accessing Older Versions of Flyway</a>
+  For older versions see <a href="/documentation/olderversions">Accessing Older Versions of Flyway</a>
 </p>
 
 ## Tasks
@@ -52,31 +52,31 @@ running on **Java 8**, **Java 9**, **Java 10**, **Java 11** or **Java 12**. The 
     </thead>
     <tbody>
     <tr>
-        <td><a href="v6/documentation/gradle/migrate">flywayMigrate</a></td>
+        <td><a href="/documentation/gradle/migrate">flywayMigrate</a></td>
         <td>Migrates the database</td>
     </tr>
     <tr>
-        <td><a href="v6/documentation/gradle/clean">flywayClean</a></td>
+        <td><a href="/documentation/gradle/clean">flywayClean</a></td>
         <td>Drops all objects in the configured schemas</td>
     </tr>
     <tr>
-        <td><a href="v6/documentation/gradle/info">flywayInfo</a></td>
+        <td><a href="/documentation/gradle/info">flywayInfo</a></td>
         <td>Prints the details and status information about all the migrations</td>
     </tr>
     <tr>
-        <td><a href="v6/documentation/gradle/validate">flywayValidate</a></td>
+        <td><a href="/documentation/gradle/validate">flywayValidate</a></td>
         <td>Validates the applied migrations against the ones available on the classpath</td>
     </tr>
     <tr>
-        <td><a href="v6/documentation/gradle/undo">flywayUndo</a> {% include pro.html %}</td>
+        <td><a href="/documentation/gradle/undo">flywayUndo</a> {% include pro.html %}</td>
         <td>Undoes the most recently applied versioned migration</td>
     </tr>
     <tr>
-        <td><a href="v6/documentation/gradle/baseline">flywayBaseline</a></td>
+        <td><a href="/documentation/gradle/baseline">flywayBaseline</a></td>
         <td>Baselines an existing database, excluding all migrations up to and including baselineVersion</td>
     </tr>
     <tr>
-        <td><a href="v6/documentation/gradle/repair">flywayRepair</a></td>
+        <td><a href="/documentation/gradle/repair">flywayRepair</a></td>
         <td>Repairs the schema history table</td>
     </tr>
     </tbody>
@@ -211,7 +211,7 @@ project.ext['flyway.placeholders.otherplaceholder']='value123'</pre>
 ### Environment Variables
 
 To make it ease to work with cloud and containerized environments, Flyway also supports configuration via
-[environment variables](v6/documentation/envvars). Check out the [Flyway environment variable reference](v6/documentation/envvars) for details.
+[environment variables](/documentation/envvars). Check out the [Flyway environment variable reference](/documentation/envvars) for details.
 
 ### System properties
 
@@ -221,8 +221,8 @@ Configuration can also be supplied directly via the command-line using JVM syste
 
 ### Config files
 
-[Config files](v6/documentation/configfiles) are supported by the Flyway Gradle plugin. If you are not familiar with them,
-check out the [Flyway config file structure and settings reference](v6/documentation/configfiles) first.
+[Config files](/documentation/configfiles) are supported by the Flyway Gradle plugin. If you are not familiar with them,
+check out the [Flyway config file structure and settings reference](/documentation/configfiles) first.
 
 Flyway will search for and automatically load the `<user-home>/flyway.conf` config file if present.
 
@@ -270,5 +270,5 @@ The means that if for example `flyway.url` is both present in a config file and 
 the JVM system property passed in via the command-line will take precedence and be used.  
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="v6/documentation/gradle/migrate">Gradle: migrate <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/gradle/migrate">Gradle: migrate <i class="fa fa-arrow-right"></i></a>
 </p>

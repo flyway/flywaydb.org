@@ -1,5 +1,5 @@
 ---
-layout: documentationv6
+layout: documentation
 menu: sqlServer
 subtitle: SQL Server
 ---
@@ -46,7 +46,7 @@ subtitle: SQL Server
 
 ## SQL Script Syntax
 
-- [Standard SQL syntax](v6/documentation/migrations#sql-based-migrations#syntax) with statement delimiter **GO**
+- [Standard SQL syntax](/documentation/migrations#sql-based-migrations#syntax) with statement delimiter **GO**
 - T-SQL
 
 ### Compatibility
@@ -137,7 +137,7 @@ Windows Authentication and Azure Active Directory require an extra driver to be 
 
 - Go to the <a href="https://docs.microsoft.com/en-us/sql/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server?view=sql-server-ver15">'Download Microsoft JDBC Driver for SQL Server' page</a>
 - Download the <code>.tar.gz</code> file for the JDBC version used by Flyway
-  - The version can be seen in the 'Maven Central coordinates' url under the <a href="https://flywaydb.orgv6/documentation/database/sqlserver#driver">Driver section</a> at the top of this page
+  - The version can be seen in the 'Maven Central coordinates' url under the <a href="https://flywaydb.org/documentation/database/sqlserver#driver">Driver section</a> at the top of this page
 - Extract the contents of the file
 - Look for <code>sqljdbc_auth.dll</code>, under <code>sqljdbc_{version}\enu\auth\x64</code>
 - Copy <code>sqljdbc_auth.dll</code> to an accessible location in your environment (e.g. <code>C:\jdbc-drivers\</code>)
@@ -178,19 +178,19 @@ For MSI and Integrated, amend your JDBC URL to set the `authentication` paramete
 - Flyway's automatic detection for whether SQL statements are valid in transactions does not apply to 
 <code>CREATE/ALTER/DROP</code> statements acting on memory-optimised tables (that is, those created with 
 <code>WITH (MEMORY_OPTIMIZED = ON)</code>). You will need to override the `executeInTransaction` setting to be false,
-either on a [per-script basis](https://flywaydb.orgv6/documentation/scriptconfigfiles) or globally.
+either on a [per-script basis](https://flywaydb.org/documentation/scriptconfigfiles) or globally.
 - SQL Server is unable to change the default schema for a session. Therefore, setting the `flyway.defaultSchema` property
-has no value, unless used for a [Placeholder](https://flywaydb.orgv6/documentation/migrations#placeholder-replacement) in
+has no value, unless used for a [Placeholder](https://flywaydb.org/documentation/migrations#placeholder-replacement) in
 your sql scripts. If you decide to use `flyway.defaultSchema`, it also must exist in `flyway.schemas`.
 - By default, the flyway schema history table will try to write to the default schema for the database connection. You may
 specify which schema to write this table to by setting `flyway.schemas=custom_schema`, as the first entry will become the
 default schema if `flyway.defaultSchema` itself is not set.
 - With these limitations in mind, please refer to the properties or
-[Options](https://flywaydb.orgv6/documentation/commandline/migrate#defaultSchema) mentioned here for descriptions / 
+[Options](https://flywaydb.org/documentation/commandline/migrate#defaultSchema) mentioned here for descriptions / 
 consequences.
 - If using the JTDS driver, then setting `ANSI_NULLS` or `QUOTED_IDENTIFIER` in a script will cause an error. This is
 a driver limitation, and can be solved by using the Microsoft driver instead.
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="v6/documentation/database/db2">DB2 <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/database/db2">DB2 <i class="fa fa-arrow-right"></i></a>
 </p>

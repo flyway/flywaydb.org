@@ -6,9 +6,9 @@ subtitle: 'Command-line: undo'
 # Command-line: undo
 {% include pro.html %}
 
-[Undoes](v6/documentation/command/undo) the most recently applied versioned migration.
+[Undoes](/documentation/command/undo) the most recently applied versioned migration.
 
-<a href="v6/documentation/command/undo"><img src="/assets/balsamiq/command-undo.png" alt="undo"></a>
+<a href="/documentation/command/undo"><img src="/assets/balsamiq/command-undo.png" alt="undo"></a>
 
 ## Usage
 
@@ -52,9 +52,9 @@ subtitle: 'Command-line: undo'
         <td></td>
         <td>The password to use to connect to the database</td>
     </tr>
-    {% include v6/cfg/connectRetries.html %}
-    {% include v6/cfg/initSql.html %}
-    {% include v6/cfg/schemas.html %}
+    {% include cfg/connectRetries.html %}
+    {% include cfg/initSql.html %}
+    {% include cfg/schemas.html %}
     <tr>
         <td>table</td>
         <td>NO</td>
@@ -65,8 +65,8 @@ subtitle: 'Command-line: undo'
             the schema history table is placed in the first schema of the list.
         </td>
     </tr>
-    {% include v6/cfg/locations-commandline.html %}
-    {% include v6/cfg/color.html %}
+    {% include cfg/locations-commandline.html %}
+    {% include cfg/color.html %}
     <tr id="jarDirs">
         <td>jarDirs</td>
         <td>NO</td>
@@ -114,8 +114,8 @@ subtitle: 'Command-line: undo'
             Multiple suffixes (like .sql,.pkg,.pkb) can be specified for easier compatibility with other tools such as
                 editors with specific file associations.</td>
     </tr>
-     {% include v6/cfg/validateMigrationNaming.html %}
-    {% include v6/cfg/mixed.html %}
+     {% include cfg/validateMigrationNaming.html %}
+    {% include cfg/mixed.html %}
     <tr id="group">
         <td>group</td>
         <td>NO</td>
@@ -157,7 +157,7 @@ subtitle: 'Command-line: undo'
         <td>NO</td>
         <td></td>
         <td>Comma-separated list of fully qualified class names of custom
-            <a href="v6/documentation/api/javadoc/org/flywaydb/core/api/resolver/MigrationResolver">MigrationResolver</a>
+            <a href="/documentation/api/javadoc/org/flywaydb/core/api/resolver/MigrationResolver">MigrationResolver</a>
             implementations to be used in addition to the built-in ones for resolving Migrations to apply.</td>
     </tr>
     <tr>
@@ -171,7 +171,7 @@ subtitle: 'Command-line: undo'
         <td>NO</td>
         <td></td>
         <td>Comma-separated list of fully qualified class names of
-            <a href="v6/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback">Callback</a>
+            <a href="/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback">Callback</a>
             implementations to use to hook into the Flyway lifecycle.</td>
     </tr>
     <tr>
@@ -180,9 +180,9 @@ subtitle: 'Command-line: undo'
         <td>false</td>
         <td>Whether default built-in callbacks (sql) should be skipped. If true, only custom callbacks are used.</td>
     </tr>
-    {% include v6/cfg/outputQueryResults.html %}
-    {% include v6/cfg/target-previous.html %}
-    {% include v6/cfg/cleanOnValidationError.html %}
+    {% include cfg/outputQueryResults.html %}
+    {% include cfg/target-previous.html %}
+    {% include cfg/cleanOnValidationError.html %}
     <tr>
         <td>ignoreMissingMigrations</td>
         <td>NO</td>
@@ -228,7 +228,7 @@ subtitle: 'Command-line: undo'
         <td><i>Current database user</i></td>
         <td>The username that will be recorded in the schema history table as having applied the migration</td>
     </tr>
-    {% include v6/cfg/errorOverrides-commandline.html %}
+    {% include cfg/errorOverrides-commandline.html %}
     <tr>
         <td>dryRunOutput</td>
         <td>NO</td>
@@ -237,10 +237,10 @@ subtitle: 'Command-line: undo'
             directory, Flyway will create all directories and parent directories as needed.
             Omit to use the default mode of executing the SQL statements directly against the database.</td>
     </tr>
-    {% include v6/cfg/oracleSqlplus.html %}
-    {% include v6/cfg/oracleSqlplusWarn.html %}
-    {% include v6/cfg/workingDirectory.html %}
-    {% include v6/cfg/licenseKey.html %}
+    {% include cfg/oracleSqlplus.html %}
+    {% include cfg/oracleSqlplusWarn.html %}
+    {% include cfg/workingDirectory.html %}
+    {% include cfg/licenseKey.html %}
     </tbody>
 </table>
 
@@ -299,5 +299,5 @@ Undoing migration of schema "PUBLIC" to version 1 - First
 Successfully undid 1 migration to schema "PUBLIC" (execution time 00:00.024s).</pre>
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="v6/documentation/commandline/baseline">Command-line: baseline <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/commandline/baseline">Command-line: baseline <i class="fa fa-arrow-right"></i></a>
 </p>

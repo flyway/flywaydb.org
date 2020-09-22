@@ -1,5 +1,5 @@
 ---
-layout: documentationv6
+layout: documentation
 menu: informix
 subtitle: Informix
 ---
@@ -36,7 +36,7 @@ subtitle: Informix
 
 ## SQL Script Syntax
 
-- [Standard SQL syntax](v6/documentation/migrations#sql-based-migrations#syntax) with statement delimiter **GO**
+- [Standard SQL syntax](/documentation/migrations#sql-based-migrations#syntax) with statement delimiter **GO**
 - SPL
 
 ### Compatibility
@@ -85,5 +85,5 @@ INSERT INTO ${tableName} (name) VALUES ('Mr. T');
 - No Support for DDL transactions due to Informix limitations.
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="v6/documentation/database/h2">H2 <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/database/h2">H2 <i class="fa fa-arrow-right"></i></a>
 </p>

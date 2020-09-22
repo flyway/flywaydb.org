@@ -1,5 +1,5 @@
 ---
-layout: documentationv6
+layout: documentation
 menu: migrations
 subtitle: Migrations
 ---
@@ -7,7 +7,11 @@ subtitle: Migrations
 
 <div id="toc"></div>
 
+sdfuiouijhgyfetrdqwfegrhtiyopithjdsfa
+
 ## Overview
+
+dfkdsgkfjsdgkjgdskjfgdksjgf
 
 With Flyway all changes to the database are called **migrations**. Migrations can be either *versioned* or
 *repeatable*. Versioned migrations come in 2 forms: regular and *undo*.
@@ -24,8 +28,8 @@ Optionally their effect can be undone by supplying an **undo migration** with th
 Within a single migration run, repeatable migrations are always applied last, after all pending versioned migrations 
 have been executed. Repeatable migrations are applied in the order of their description.
 
-By default both versioned and repeatable migrations can be written either in **[SQL](v6/documentation/migrations#sql-based-migrations)**
-or in **[Java](v6/documentation/migrations#java-based-migrations)** and can consist of multiple statements.
+By default both versioned and repeatable migrations can be written either in **[SQL](/documentation/migrations#sql-based-migrations)**
+or in **[Java](/documentation/migrations#java-based-migrations)** and can consist of multiple statements.
 
 Flyway automatically discovers migrations on the *filesystem* and on the Java *classpath*.
 
@@ -175,13 +179,13 @@ In order to be picked up by Flyway, SQL migrations must comply with the followin
 </div>
 
 The file name consists of the following parts:
-- **Prefix**: `V` for versioned ([configurable](v6/documentation/commandline/migrate#sqlMigrationPrefix)),
-`U` for undo ([configurable](v6/documentation/commandline/migrate#undoSqlMigrationPrefix)) and
-`R` for repeatable migrations ([configurable](v6/documentation/commandline/migrate#repeatableSqlMigrationPrefix))
+- **Prefix**: `V` for versioned ([configurable](/documentation/commandline/migrate#sqlMigrationPrefix)),
+`U` for undo ([configurable](/documentation/commandline/migrate#undoSqlMigrationPrefix)) and
+`R` for repeatable migrations ([configurable](/documentation/commandline/migrate#repeatableSqlMigrationPrefix))
 - **Version**: Version with dots or underscores separate as many parts as you like (Not for repeatable migrations)
-- **Separator**: `__` (two underscores) ([configurable](v6/documentation/commandline/migrate#sqlMigrationSeparator))
+- **Separator**: `__` (two underscores) ([configurable](/documentation/commandline/migrate#sqlMigrationSeparator))
 - **Description**: Underscores or spaces separate the words
-- **Suffix**: `.sql` ([configurable](v6/documentation/commandline/migrate#sqlMigrationSuffixes))
+- **Suffix**: `.sql` ([configurable](/documentation/commandline/migrate#sqlMigrationSuffixes))
 
 Optionally versioned SQL migrations can also omit both the separator and the description.
 
@@ -192,7 +196,7 @@ Flyway will fail fast and list all files which need to be corrected.
 ### Discovery
 
 Flyway discovers SQL-based migrations both on the **filesystem** and on the Java **classpath**. 
-Migrations reside in one or more directories referenced by the **[`locations`](v6/documentation/commandline/migrate#locations)**
+Migrations reside in one or more directories referenced by the **[`locations`](/documentation/commandline/migrate#locations)**
 property.
 
 Locations with the `filesystem:` prefix target the file system.<br>
@@ -215,7 +219,7 @@ Unprefixed locations or locations with the `classpath:` prefix target the Java c
     <i class="fa fa-file-text"></i> V1.2__Add_constraints.sql</pre>
     
 New SQL-based migrations are **discovered automatically** through filesystem and Java classpath scanning at runtime.
-Once you have configured the [`locations`](v6/documentation/commandline/migrate#locations) you want to use, Flyway will
+Once you have configured the [`locations`](/documentation/commandline/migrate#locations) you want to use, Flyway will
 automatically pick up any new SQL migrations as long as they conform to the configured *naming convention*.
 
 This scanning is recursive. All migrations in non-hidden directories below the specified ones are also picked up.
@@ -227,13 +231,13 @@ Flyway supports all regular SQL syntax elements including:
 - Single- (--) or Multi-line (/* */) comments spanning complete lines
 - Database-specific SQL syntax extensions (PL/SQL, T-SQL, ...) typically used to define stored procedures, packages, ...
 
-Additionally in the case of Oracle, Flyway also supports [SQL*Plus commands](v6/documentation/database/oracle#sqlplus-commands).
+Additionally in the case of Oracle, Flyway also supports [SQL*Plus commands](/documentation/database/oracle#sqlplus-commands).
 
 ### Placeholder Replacement
 In addition to regular SQL syntax, Flyway also supports placeholder replacement with configurable pre- and suffixes.
 By default it looks for Ant-style placeholders like `${myplaceholder}`. This can be very useful to abstract differences between environments.
 
-See [Placeholders](v6/documentation/placeholders).
+See [Placeholders](/documentation/placeholders).
 
 ## Java-based migrations
 
@@ -246,8 +250,8 @@ These would typically be things like
 ### Naming
 
 In order to be picked up by Flyway, Java-based Migrations must implement the
-[`JavaMigration`](v6/documentation/api/javadoc/org/flywaydb/core/api/migration/JavaMigration) interface. Most users
-however should inherit from the convenience class [`BaseJavaMigration`](v6/documentation/api/javadoc/org/flywaydb/core/api/migration/BaseJavaMigration)
+[`JavaMigration`](/documentation/api/javadoc/org/flywaydb/core/api/migration/JavaMigration) interface. Most users
+however should inherit from the convenience class [`BaseJavaMigration`](/documentation/api/javadoc/org/flywaydb/core/api/migration/BaseJavaMigration)
 instead as it encourages Flyway's default naming convention, enabling Flyway to automatically extract the version and
 the description from the class name. To be able to do so, the class name must comply with the following naming pattern:
 
@@ -285,7 +289,7 @@ The class name consists of the following parts:
 - **Description**: Underscores (automatically replaced by spaces at runtime) separate the words
 
 If you need more control over the class name, you can override the default convention by implementing the
-[`JavaMigration`](v6/documentation/api/javadoc/org/flywaydb/core/api/migration/JavaMigration) interface directly.
+[`JavaMigration`](/documentation/api/javadoc/org/flywaydb/core/api/migration/JavaMigration) interface directly.
 
 This will allow you to name your class as you wish. Version, description and migration category are provided by
 implementing the respective methods.
@@ -293,7 +297,7 @@ implementing the respective methods.
 ### Discovery
 
 Flyway discovers Java-based migrations on the Java classpath in the packages referenced by the
-[`locations`](v6/documentation/commandline/migrate#locations) property.
+[`locations`](/documentation/commandline/migrate#locations) property.
 
 <pre class="filetree"><i class="fa fa-folder-open"></i> my-project
   <i class="fa fa-folder-open"></i> src
@@ -371,13 +375,13 @@ public class V1_2__Another_user extends BaseJavaMigration {
 By default, Flyway always wraps the execution of an entire migration within a single transaction.
 
 Alternatively you can also configure Flyway to wrap the entire execution of all migrations of a single migration run
-within a single transaction by setting the [`group`](v6/documentation/commandline/migrate#group) property to `true`.
+within a single transaction by setting the [`group`](/documentation/commandline/migrate#group) property to `true`.
 
 If Flyway detects that a specific statement cannot be run within a transaction due to technical limitations of your
 database, it won't run that migration within a transaction. Instead it will be marked as *non-transactional*.
 
 By default transactional and non-transactional statements cannot be mixed within a migration run. You can however allow
-this by setting the [`mixed`](v6/documentation/commandline/migrate#mixed) property to `true`. Note that this is only
+this by setting the [`mixed`](/documentation/commandline/migrate#mixed) property to `true`. Note that this is only
 applicable for PostgreSQL, Aurora PostgreSQL, SQL Server and SQLite which all have statements that do not run at all
 within a transaction. This is not to be confused with implicit transaction, as they occur in MySQL or Oracle, where even
 though a DDL statement was run within within a transaction, the database will issue an implicit commit before and after
@@ -392,7 +396,7 @@ For Java migrations, the `JavaMigration` interface has a method `canExecuteInTra
 should take place inside a transaction. You can rely on `BaseJavaMigration`'s default behavior to return `true` or override
 `canExecuteInTransaction` to execute certain migrations outside a transaction by returning `false`.
 
-For SQL migrations, you can specify the script configuration property `executeInTransaction`. See [Script config](v6/documentation/scriptconfigfiles).
+For SQL migrations, you can specify the script configuration property `executeInTransaction`. See [Script config](/documentation/scriptconfigfiles).
 ### Important Note
 
 If your database cleanly supports DDL statements within a transaction, failed migrations will always be rolled back
@@ -401,7 +405,7 @@ If your database cleanly supports DDL statements within a transaction, failed mi
 If on the other hand your database does NOT cleanly supports DDL statements within a transaction (by for example
 issuing an implicit commit before and after every DDL statement), Flyway won't be able to perform a clean rollback in
 case of failure and will instead mark the migration as failed, indicating that some manual cleanup may be required.
-You may also need to run [repair](v6/documentation/command/repair) to remove the failed migration entry from the [schema
+You may also need to run [repair](/documentation/command/repair) to remove the failed migration entry from the [schema
 history table](#schema-history-table).
 
 ## Query Results
@@ -414,7 +418,7 @@ There are however some scenarios where such manual inspection makes sense, and t
 ### Toggling query results
 {% include pro.html %}
 
-To prevent Flyway from displaying query results, set the configuration option [`outputQueryResults`](v6/documentation/commandline/migrate#outputQueryResults) to `false`.
+To prevent Flyway from displaying query results, set the configuration option [`outputQueryResults`](/documentation/commandline/migrate#outputQueryResults) to `false`.
 
 ## Schema History Table
 
@@ -495,5 +499,5 @@ When Flyway discovers an applied versioned migration with a version that is high
 (this happens typically when a newer version of the software has migrated that schema), that migration is marked as **future**.
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="v6/documentation/callbacks">Callbacks <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/callbacks">Callbacks <i class="fa fa-arrow-right"></i></a>
 </p>

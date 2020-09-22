@@ -1,5 +1,5 @@
 ---
-layout: documentationv6
+layout: documentation
 menu: placeholders
 subtitle: Placeholders
 ---
@@ -39,5 +39,5 @@ INSERT INTO ${tableName} (name) VALUES ('Mr. T');
 ```
 
 <p class="next-steps">
-  <a class="btn btn-primary" href="v6/documentation/scriptconfigfiles">Script Config Files <i class="fa fa-arrow-right"></i></a>
+  <a class="btn btn-primary" href="/documentation/scriptconfigfiles">Script Config Files <i class="fa fa-arrow-right"></i></a>
 </p>

@@ -1,5 +1,5 @@
 ---
-layout: documentationv6
+layout: documentation
 menu: grails
 subtitle: 'Grails'
 ---
@@ -19,5 +19,5 @@ You can then configure a good number of Flyway properties <a href="https://docs.
 <a class="inline-cta" href="https://boxfuse.com/blog/grails-aws"><i class="fa fa-cloud"></i> Want to deploy your Grails 3 apps effortlessly to AWS? Follow our <strong>5 minute</strong> tutorial using <img src="/assets/logo/boxfuse-logo-nano-blue.png"> Boxfuse <i class="fa fa-arrow-right"></i></a>
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="v6/documentation/database/oracle">Oracle <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/database/oracle">Oracle <i class="fa fa-arrow-right"></i></a>
 </p>

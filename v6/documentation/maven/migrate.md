@@ -8,7 +8,7 @@ subtitle: 'mvn flyway:migrate'
 Migrates the schema to the latest version. Flyway will create the schema history table automatically if it doesn't
     exist.
 
-<a href="v6/documentation/command/migrate"><img src="/assets/balsamiq/command-migrate.png" alt="migrate"></a>
+<a href="/documentation/command/migrate"><img src="/assets/balsamiq/command-migrate.png" alt="migrate"></a>
 
 ## Default Phase
 
@@ -65,10 +65,10 @@ Migrates the schema to the latest version. Flyway will create the schema history
         <td></td>
         <td>The password to use to connect to the database</td>
     </tr>
-    {% include v6/cfg/connectRetries.html %}
-    {% include v6/cfg/initSql.html %}
-    {% include v6/cfg/schemas.html %}
-    {% include v6/cfg/createSchemas.html %}
+    {% include cfg/connectRetries.html %}
+    {% include cfg/initSql.html %}
+    {% include cfg/schemas.html %}
+    {% include cfg/createSchemas.html %}
     <tr>
         <td>table</td>
         <td>NO</td>
@@ -79,8 +79,8 @@ Migrates the schema to the latest version. Flyway will create the schema history
             the schema history table is placed in the first schema of the list.
         </td>
     </tr>
-    {% include v6/cfg/tablespace.html %}
-    {% include v6/cfg/locations-maven-gradle.html %}
+    {% include cfg/tablespace.html %}
+    {% include cfg/locations-maven-gradle.html %}
     <tr>
         <td>sqlMigrationPrefix</td>
         <td>NO</td>
@@ -122,7 +122,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
             Multiple suffixes (like .sql,.pkg,.pkb) can be specified for easier compatibility with other tools such as
             editors with specific file associations.</td>
     </tr>
-     {% include v6/cfg/validateMigrationNaming.html %}
+     {% include cfg/validateMigrationNaming.html %}
     <tr id="stream">
         <td>stream {% include pro.html %}</td>
         <td>NO</td>
@@ -141,7 +141,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
             reference data, as this can dramatically reduce the network overhead. This is supported for INSERT, UPDATE,
             DELETE, MERGE and UPSERT statements. All other statements are automatically executed without batching.</td>
     </tr>
-    {% include v6/cfg/mixed.html %}
+    {% include cfg/mixed.html %}
     <tr id="group">
         <td>group</td>
         <td>NO</td>
@@ -184,7 +184,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
         <td>NO</td>
         <td></td>
         <td>Fully qualified class names of custom
-            <a href="v6/documentation/api/javadoc/org/flywaydb/core/api/resolver/MigrationResolver">MigrationResolver</a>
+            <a href="/documentation/api/javadoc/org/flywaydb/core/api/resolver/MigrationResolver">MigrationResolver</a>
             implementations to be used in addition to the built-in ones for resolving Migrations to apply.</td>
     </tr>
     <tr>
@@ -198,7 +198,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
         <td>NO</td>
         <td></td>
         <td>Fully qualified class names of
-            <a href="v6/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback">Callback</a>
+            <a href="/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback">Callback</a>
             implementations to use to hook into the Flyway lifecycle.</td>
     </tr>
     <tr>
@@ -207,7 +207,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
         <td>false</td>
         <td>Whether default built-in callbacks (sql) should be skipped. If true, only custom callbacks are used.</td>
     </tr>
-    {% include v6/cfg/target-latest.html %}
+    {% include cfg/target-latest.html %}
     <tr>
         <td>outOfOrder</td>
         <td>NO</td>
@@ -217,7 +217,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
                 it will be applied too instead of being ignored.</p>
         </td>
     </tr>
-    {% include v6/cfg/outputQueryResults.html %}
+    {% include cfg/outputQueryResults.html %}
     <tr>
         <td>validateOnMigrate</td>
         <td>NO</td>
@@ -227,7 +227,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
             when the sql script is executed. The validate mechanism checks if the sql migration in the classpath
             still has the same checksum as the sql migration already executed in the database.<br/></td>
     </tr>
-    {% include v6/cfg/cleanOnValidationError.html %}
+    {% include cfg/cleanOnValidationError.html %}
     <tr>
         <td>ignoreMissingMigrations</td>
         <td>NO</td>
@@ -328,7 +328,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
         <td><i>project.basedir</i> (where the POM resides)</td>
         <td>The working directory to consider when dealing with relative paths for both config files and locations.</td>
     </tr>
-    {% include v6/cfg/errorOverrides-maven-gradle.html %}
+    {% include cfg/errorOverrides-maven-gradle.html %}
     <tr id="dryRunOutput">
         <td>dryRunOutput {% include pro.html %}</td>
         <td>NO</td>
@@ -337,9 +337,9 @@ Migrates the schema to the latest version. Flyway will create the schema history
             directory, Flyway will create all directories and parent directories as needed.
             Omit to use the default mode of executing the SQL statements directly against the database.</td>
     </tr>
-    {% include v6/cfg/oracleSqlplus.html %}
-    {% include v6/cfg/oracleSqlplusWarn.html %}
-    {% include v6/cfg/licenseKey.html %}
+    {% include cfg/oracleSqlplus.html %}
+    {% include cfg/oracleSqlplusWarn.html %}
+    {% include cfg/licenseKey.html %}
     </tbody>
 </table>
 
@@ -442,5 +442,5 @@ The new database version number is exposed in the `flyway.current` Maven propert
 [INFO] Successfully applied 4 migrations (execution time 00:00.091s).</pre>
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="v6/documentation/maven/clean">Maven: clean <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/maven/clean">Maven: clean <i class="fa fa-arrow-right"></i></a>
 </p>

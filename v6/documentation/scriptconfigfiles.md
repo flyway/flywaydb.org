@@ -1,5 +1,5 @@
 ---
-layout: documentationv6
+layout: documentation
 menu: scriptconfigfiles
 subtitle: Script Config Files
 ---
@@ -36,5 +36,5 @@ executeInTransaction=false
 ```
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="v6/documentation/callbacks">Callbacks <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/callbacks">Callbacks <i class="fa fa-arrow-right"></i></a>
 </p>

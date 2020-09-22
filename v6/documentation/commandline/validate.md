@@ -13,7 +13,7 @@ Validation fails if
 - versions have been applied that aren't resolved locally anymore
 - versions have been resolved that haven't been applied yet
 
-<a href="v6/documentation/command/validate"><img src="/assets/balsamiq/command-validate.png" alt="validate"></a>
+<a href="/documentation/command/validate"><img src="/assets/balsamiq/command-validate.png" alt="validate"></a>
 
 ## Usage
 
@@ -57,9 +57,9 @@ Validation fails if
         <td></td>
         <td>The password to use to connect to the database</td>
     </tr>
-    {% include v6/cfg/connectRetries.html %}
-    {% include v6/cfg/initSql.html %}
-    {% include v6/cfg/schemas.html %}
+    {% include cfg/connectRetries.html %}
+    {% include cfg/initSql.html %}
+    {% include cfg/schemas.html %}
     <tr>
         <td>table</td>
         <td>NO</td>
@@ -70,8 +70,8 @@ Validation fails if
             the schema history table is placed in the first schema of the list.
         </td>
     </tr>
-    {% include v6/cfg/locations-commandline.html %}
-    {% include v6/cfg/color.html %}
+    {% include cfg/locations-commandline.html %}
+    {% include cfg/color.html %}
     <tr id="jarDirs">
         <td>jarDirs</td>
         <td>NO</td>
@@ -119,7 +119,7 @@ Validation fails if
             Multiple suffixes (like .sql,.pkg,.pkb) can be specified for easier compatibility with other tools such as
             editors with specific file associations.</td>
     </tr>
-     {% include v6/cfg/validateMigrationNaming.html %}
+     {% include cfg/validateMigrationNaming.html %}
     <tr>
         <td>encoding</td>
         <td>NO</td>
@@ -155,7 +155,7 @@ Validation fails if
         <td>NO</td>
         <td></td>
         <td>Comma-separated list of fully qualified class names of custom
-            <a href="v6/documentation/api/javadoc/org/flywaydb/core/api/resolver/MigrationResolver">MigrationResolver</a>
+            <a href="/documentation/api/javadoc/org/flywaydb/core/api/resolver/MigrationResolver">MigrationResolver</a>
             implementations to be used in addition to the built-in ones for resolving Migrations to apply.</td>
     </tr>
     <tr>
@@ -169,7 +169,7 @@ Validation fails if
         <td>NO</td>
         <td></td>
         <td>Comma-separated list of fully qualified class names of
-            <a href="v6/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback">Callback</a>
+            <a href="/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback">Callback</a>
             implementations to use to hook into the Flyway lifecycle.</td>
     </tr>
     <tr>
@@ -178,7 +178,7 @@ Validation fails if
         <td>false</td>
         <td>Whether default built-in callbacks (sql) should be skipped. If true, only custom callbacks are used.</td>
     </tr>
-    {% include v6/cfg/target-latest.html %}
+    {% include cfg/target-latest.html %}
     <tr>
         <td>outOfOrder</td>
         <td>NO</td>
@@ -188,7 +188,7 @@ Validation fails if
                 it will be applied too instead of being ignored.</p>
         </td>
     </tr>
-    {% include v6/cfg/cleanOnValidationError.html %}
+    {% include cfg/cleanOnValidationError.html %}
     <tr>
         <td>ignoreMissingMigrations</td>
         <td>NO</td>
@@ -215,7 +215,7 @@ Validation fails if
             development of older versions.
         </td>
     </tr>
-    {% include v6/cfg/ignorePendingMigrations.html %}
+    {% include cfg/ignorePendingMigrations.html %}
     <tr>
         <td>ignoreFutureMigrations</td>
         <td>NO</td>
@@ -227,10 +227,10 @@ Validation fails if
             warning is logged and Flyway continues normally. This is useful for situations where one must be able to redeploy
             an older version of the application after the database has been migrated by a newer one.</td>
     </tr>
-    {% include v6/cfg/oracleSqlplus.html %}
-    {% include v6/cfg/oracleSqlplusWarn.html %}
-    {% include v6/cfg/workingDirectory.html %}
-    {% include v6/cfg/licenseKey.html %}
+    {% include cfg/oracleSqlplus.html %}
+    {% include cfg/oracleSqlplusWarn.html %}
+    {% include cfg/workingDirectory.html %}
+    {% include cfg/licenseKey.html %}
     </tbody>
 </table>
 
@@ -282,5 +282,5 @@ Flyway {{ site.flywayVersion }} by Redgate
 No migrations applied yet. No validation necessary.</pre>
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="v6/documentation/commandline/undo">Command-line: undo <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/commandline/undo">Command-line: undo <i class="fa fa-arrow-right"></i></a>
 </p>

@@ -1,5 +1,5 @@
 ---
-layout: documentationv6
+layout: documentation
 menu: knownparserlimitations
 subtitle: Known Parser Limitations
 ---

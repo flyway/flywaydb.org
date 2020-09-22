@@ -1,0 +1,10 @@
+{% assign base = ''
+%}{% assign split = page.url | split: '/'
+%}{% assign firstBit = split[1]
+%}{% assign firstChar = firstBit | slice: 0
+%}{% if firstChar == 'v' 
+%}{% assign base = firstBit | append: "/"
+%}{% else
+%}{% assign base = ''
+%}{% endif 
+%}

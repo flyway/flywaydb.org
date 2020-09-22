@@ -1,5 +1,5 @@
 ---
-layout: documentationv6
+layout: documentation
 menu: articles
 subtitle: Articles
 ---
@@ -146,5 +146,5 @@ by Sandra Parsick<br/></p>
     Database migration - fast and easy with Flyway and Spring Boot</a></strong> by Lukasz Kuzio</p>
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="v6/documentation/videos">Videos <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/videos">Videos <i class="fa fa-arrow-right"></i></a>
 </p>

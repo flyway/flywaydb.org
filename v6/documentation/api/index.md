@@ -218,13 +218,13 @@ be migrated to a state the rest of the code can work with.
     </div>
 </div>
 <p class="note">
-  For older versions see <a href="v6/documentation/olderversions">Accessing Older Versions of Flyway</a>
+  For older versions see <a href="/documentation/olderversions">Accessing Older Versions of Flyway</a>
 </p>
 
 ## The Flyway Class
 
 The central piece of Flyway's database migration infrastructure is the 
-**[org.flywaydb.core.Flyway](v6/documentation/api/javadoc/org/flywaydb/core/Flyway)**
+**[org.flywaydb.core.Flyway](/documentation/api/javadoc/org/flywaydb/core/Flyway)**
 class. It is your **one-stop shop** for working with Flyway programmatically. It serves both as a
 **configuration** and a **launching** point for all of Flyway's functions.
 
@@ -325,7 +325,7 @@ Spring application using XML bean configuration:
 ```
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="v6/documentation/api/hooks">API: Hooks <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/api/hooks">API: Hooks <i class="fa fa-arrow-right"></i></a>
 </p>
 
 {% include trialpopup.html %}

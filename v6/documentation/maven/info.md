@@ -7,7 +7,7 @@ subtitle: 'mvn flyway:info'
 
 Prints the details and status information about all the migrations.
 
-<a href="v6/documentation/command/info"><img src="/assets/balsamiq/command-info.png" alt="info"></a>
+<a href="/documentation/command/info"><img src="/assets/balsamiq/command-info.png" alt="info"></a>
 
 ## Usage
 
@@ -60,9 +60,9 @@ Prints the details and status information about all the migrations.
         <td></td>
         <td>The password to use to connect to the database</td>
     </tr>
-    {% include v6/cfg/connectRetries.html %}
-    {% include v6/cfg/initSql.html %}
-    {% include v6/cfg/schemas.html %}
+    {% include cfg/connectRetries.html %}
+    {% include cfg/initSql.html %}
+    {% include cfg/schemas.html %}
     <tr>
         <td>table</td>
         <td>NO</td>
@@ -73,7 +73,7 @@ Prints the details and status information about all the migrations.
             the schema history table is placed in the first schema of the list.
         </td>
     </tr>
-    {% include v6/cfg/locations-maven-gradle.html %}
+    {% include cfg/locations-maven-gradle.html %}
     <tr>
         <td>sqlMigrationPrefix</td>
         <td>NO</td>
@@ -115,7 +115,7 @@ Prints the details and status information about all the migrations.
             Multiple suffixes (like .sql,.pkg,.pkb) can be specified for easier compatibility with other tools such as
             editors with specific file associations.</td>
     </tr>
-     {% include v6/cfg/validateMigrationNaming.html %}
+     {% include cfg/validateMigrationNaming.html %}
     <tr>
         <td>encoding</td>
         <td>NO</td>
@@ -151,7 +151,7 @@ Prints the details and status information about all the migrations.
         <td>NO</td>
         <td></td>
         <td>Fully qualified class names of custom
-            <a href="v6/documentation/api/javadoc/org/flywaydb/core/api/resolver/MigrationResolver">MigrationResolver</a>
+            <a href="/documentation/api/javadoc/org/flywaydb/core/api/resolver/MigrationResolver">MigrationResolver</a>
             implementations to be used in addition to the built-in ones for resolving Migrations to apply.</td>
     </tr>
     <tr>
@@ -165,7 +165,7 @@ Prints the details and status information about all the migrations.
         <td>NO</td>
         <td></td>
         <td>Fully qualified class names of
-            <a href="v6/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback">Callback</a>
+            <a href="/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback">Callback</a>
             implementations to use to hook into the Flyway lifecycle.</td>
     </tr>
     <tr>
@@ -174,7 +174,7 @@ Prints the details and status information about all the migrations.
         <td>false</td>
         <td>Whether default built-in callbacks (sql) should be skipped. If true, only custom callbacks are used.</td>
     </tr>
-    {% include v6/cfg/target-latest.html %}
+    {% include cfg/target-latest.html %}
     <tr>
         <td>outOfOrder</td>
         <td>NO</td>
@@ -204,7 +204,7 @@ Prints the details and status information about all the migrations.
         <td><i>project.basedir</i> (where the POM resides)</td>
         <td>The working directory to consider when dealing with relative paths for both config files and locations.</td>
     </tr>
-    {% include v6/cfg/licenseKey.html %}
+    {% include cfg/licenseKey.html %}
     </tbody>
 </table>
 
@@ -282,5 +282,5 @@ Prints the details and status information about all the migrations.
 [INFO] +-------------+------------------------+---------------------+---------+</pre>
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="v6/documentation/maven/validate">Maven: validate <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/maven/validate">Maven: validate <i class="fa fa-arrow-right"></i></a>
 </p>

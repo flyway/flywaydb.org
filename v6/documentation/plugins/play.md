@@ -1,5 +1,5 @@
 ---
-layout: documentationv6
+layout: documentation
 menu: play
 subtitle: 'Play'
 ---
@@ -20,5 +20,5 @@ Both sites contain instructions on how to get started quickly as well as compreh
 <a class="inline-cta" href="https://boxfuse.com/blog/playframework-aws"><i class="fa fa-cloud"></i> Want to deploy your Play apps effortlessly to AWS? Follow our <strong>5 minute</strong> tutorial using <img src="/assets/logo/boxfuse-logo-nano-blue.png"> Boxfuse <i class="fa fa-arrow-right"></i></a>
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="v6/documentation/database/oracle">Oracle <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/database/oracle">Oracle <i class="fa fa-arrow-right"></i></a>
 </p>

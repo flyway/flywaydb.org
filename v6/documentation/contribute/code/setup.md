@@ -88,6 +88,6 @@ by invoking
 -Dfile=OpenJDK11U-jre_x64_mac_hotspot_11.0.2_9.tar.gz</pre>
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="v6/documentation/contribute/code/submit">Submit your changes <i
+    <a class="btn btn-primary" href="/documentation/contribute/code/submit">Submit your changes <i
             class="fa fa-arrow-right"></i></a>
 </p>

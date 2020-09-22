@@ -3673,7 +3673,7 @@ ZipEntries.prototype = {
 
             if (isGarbage) {
                 throw new Error("Can't find end of central directory : is this a zip file ? " +
-                                "If it is, see https://stuk.github.io/jszipv6/documentation/howto/read_zip.html");
+                                "If it is, see https://stuk.github.io/jszip/documentation/howto/read_zip.html");
             } else {
                 throw new Error("Corrupted zip: can't find end of central directory");
             }

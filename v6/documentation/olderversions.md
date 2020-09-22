@@ -1,5 +1,5 @@
 ---
-layout: documentationv6
+layout: documentation
 flywayVersion: 5.2.4
 ---
 # Accessing Older Versions of Flyway

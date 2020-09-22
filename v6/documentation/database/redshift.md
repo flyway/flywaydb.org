@@ -1,5 +1,5 @@
 ---
-layout: documentationv6
+layout: documentation
 menu: redshift
 subtitle: Redshift
 ---
@@ -32,7 +32,7 @@ subtitle: Redshift
 
 ## SQL Script Syntax
 
-- [Standard SQL syntax](v6/documentation/migrations#sql-based-migrations#syntax) with statement delimiter **;**
+- [Standard SQL syntax](/documentation/migrations#sql-based-migrations#syntax) with statement delimiter **;**
 - Stored procedures (CREATE FUNCTION with $$ escapes)
 
 ### Compatibility
@@ -77,5 +77,5 @@ autodetect this. You can work around this limitation and successfully execute su
 statement in the same SQL file as this will force Flyway to run the entire migration without a transaction.
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="v6/documentation/database/cockroachdb">CockroachDB <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/database/cockroachdb">CockroachDB <i class="fa fa-arrow-right"></i></a>
 </p>

@@ -1,5 +1,5 @@
 ---
-layout: documentationv6
+layout: documentation
 menu: clean
 subtitle: Clean
 ---
@@ -15,5 +15,5 @@ Clean is a great help in development and test. It will effectively give you a fr
 Needless to say: **do not use against your production DB!**
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="v6/documentation/command/info">Info <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/command/info">Info <i class="fa fa-arrow-right"></i></a>
 </p>

@@ -1,5 +1,5 @@
 ---
-layout: documentationv6
+layout: documentation
 menu: springboot
 subtitle: 'Spring Boot'
 ---
@@ -28,12 +28,12 @@ Spring Boot will then automatically autowire Flyway with its DataSource and invo
 
 You can then configure a good number of Flyway properties [directly from your `application.properties` or `application.yml` file](https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html).
 Spring Boot also lets you configure Flyway using [environment variables](https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-external-config.html).
-Just be aware that the names of these environment variables differ from [Flyway's native environment variables](https://flywaydb.orgv6/documentation/envvars).
+Just be aware that the names of these environment variables differ from [Flyway's native environment variables](https://flywaydb.org/documentation/envvars).
 
 Note that if you are using Spring Boot's dependency management feature, you do not need to specify a version number for Flyway. Read more on the [Spring Boot documentation](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#using-boot-dependency-management).
 
 <a class="inline-cta" href="https://boxfuse.com/blog/spring-boot-ec2"><i class="fa fa-cloud"></i> Want to deploy your Spring Boot apps effortlessly to AWS? Follow our <strong>5 minute</strong> tutorial using <img src="/assets/logo/boxfuse-logo-nano-blue.png"> Boxfuse <i class="fa fa-arrow-right"></i></a>
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="v6/documentation/database/oracle">Oracle <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/database/oracle">Oracle <i class="fa fa-arrow-right"></i></a>
 </p>

@@ -1,5 +1,5 @@
 ---
-layout: documentationv6
+layout: documentation
 menu: oracle
 subtitle: Oracle
 ---
@@ -49,7 +49,7 @@ All editions are supported, including XE.
 
 ## SQL Script Syntax
 
-- [Standard SQL syntax](v6/documentation/migrations#sql-based-migrations#syntax) with statement delimiter **;**
+- [Standard SQL syntax](/documentation/migrations#sql-based-migrations#syntax) with statement delimiter **;**
 - PL/SQL blocks starting with DECLARE or BEGIN and finishing with END; /
 
 ### Compatibility
@@ -86,7 +86,7 @@ INSERT INTO ${tableName} (name) VALUES ('Mr. T');</pre>
 In addition to the regular Oracle SQL syntax, Flyway Pro and Flyway Enterprise also come with support for Oracle 
 SQL*Plus commands.
 
-This support is disabled by default and must be activated using the [`oracle.sqlplus`](v6/documentation/commandline/migrate#oracle.sqlplus) flag.
+This support is disabled by default and must be activated using the [`oracle.sqlplus`](/documentation/commandline/migrate#oracle.sqlplus) flag.
 
 ### Supported commands
 
@@ -188,5 +188,5 @@ You can supply credentials using Oracle Wallet by specfiying properties on the J
 - SPATIAL EXTENSIONS: sdo_geom_metadata can only be cleaned for the user currently logged in
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="v6/documentation/database/sqlserver">SQL Server <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/database/sqlserver">SQL Server <i class="fa fa-arrow-right"></i></a>
 </p>

@@ -1,5 +1,5 @@
 ---
-layout: documentationv6
+layout: documentation
 menu: videos
 subtitle: Video Tutorials
 ---
@@ -29,5 +29,5 @@ by **[Axel Fontaine](https://twitter.com/axelfontaine)** (2013-09-11)
 <iframe src="https://player.vimeo.com/video/74437803" width="670" height="377" frameborder="0" allowfullscreen></iframe>
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="v6/documentation/releaseNotes">Release Notes <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/releaseNotes">Release Notes <i class="fa fa-arrow-right"></i></a>
 </p>

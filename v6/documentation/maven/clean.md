@@ -8,7 +8,7 @@ subtitle: 'mvn flyway:clean'
 Drops all objects (tables, views, procedures, triggers, ...) in the configured schemas.<br/>
 The schemas are cleaned in the order specified by the <code>schemas</code> property.
 
-<a href="v6/documentation/command/clean"><img src="/assets/balsamiq/command-clean.png" alt="clean"></a>
+<a href="/documentation/command/clean"><img src="/assets/balsamiq/command-clean.png" alt="clean"></a>
 
 ## Default Phase
 
@@ -65,15 +65,15 @@ The schemas are cleaned in the order specified by the <code>schemas</code> prope
         <td></td>
         <td>The password to use to connect to the database</td>
     </tr>
-    {% include v6/cfg/connectRetries.html %}
-    {% include v6/cfg/initSql.html %}
-    {% include v6/cfg/schemas.html %}
+    {% include cfg/connectRetries.html %}
+    {% include cfg/initSql.html %}
+    {% include cfg/schemas.html %}
     <tr>
         <td>callbacks</td>
         <td>NO</td>
         <td></td>
         <td>Fully qualified class names of
-            <a href="v6/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback">Callback</a>
+            <a href="/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback">Callback</a>
             implementations to use to hook into the Flyway lifecycle.</td>
     </tr>
     <tr>
@@ -108,8 +108,8 @@ The schemas are cleaned in the order specified by the <code>schemas</code> prope
         <td><i>project.basedir</i> (where the POM resides)</td>
         <td>The working directory to consider when dealing with relative paths for both config files and locations.</td>
     </tr>
-     {% include v6/cfg/validateMigrationNaming.html %}
-    {% include v6/cfg/licenseKey.html %}
+     {% include cfg/validateMigrationNaming.html %}
+    {% include cfg/licenseKey.html %}
     </tbody>
 </table>
 
@@ -151,5 +151,5 @@ The schemas are cleaned in the order specified by the <code>schemas</code> prope
 [INFO] Cleaned database schema 'PUBLIC' (execution time 00:00.016s)</pre>
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="v6/documentation/maven/info">Maven: info <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/maven/info">Maven: info <i class="fa fa-arrow-right"></i></a>
 </p>

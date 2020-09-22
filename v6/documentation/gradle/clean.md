@@ -7,7 +7,7 @@ Gradle Task: flywayClean
 
 Drops all objects (tables, views, procedures, triggers, ...) in the configured schemas.
 
-<a href="v6/documentation/command/clean"><img src="/assets/balsamiq/command-clean.png" alt="clean"></a>
+<a href="/documentation/command/clean"><img src="/assets/balsamiq/command-clean.png" alt="clean"></a>
 
 ## Usage
 
@@ -51,15 +51,15 @@ Drops all objects (tables, views, procedures, triggers, ...) in the configured s
         <td></td>
         <td>The password to use to connect to the database</td>
     </tr>
-    {% include v6/cfg/connectRetries.html %}
-    {% include v6/cfg/initSql.html %}
-    {% include v6/cfg/schemas.html %}
+    {% include cfg/connectRetries.html %}
+    {% include cfg/initSql.html %}
+    {% include cfg/schemas.html %}
     <tr>
         <td>callbacks</td>
         <td>NO</td>
         <td></td>
         <td>Fully qualified class names of
-            <a href="v6/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback">Callback</a>
+            <a href="/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback">Callback</a>
             implementations to use to hook into the Flyway lifecycle.</td>
     </tr>
     <tr>
@@ -74,9 +74,9 @@ Drops all objects (tables, views, procedures, triggers, ...) in the configured s
         <td>false</td>
         <td>Whether to disable clean. This is especially useful for production environments where running clean can be quite a career limiting move.</td>
     </tr>
-    {% include v6/cfg/validateMigrationNaming.html %}
-    {% include v6/cfg/workingDirectory.html %}
-    {% include v6/cfg/licenseKey.html %}
+    {% include cfg/validateMigrationNaming.html %}
+    {% include cfg/workingDirectory.html %}
+    {% include cfg/licenseKey.html %}
     </tbody>
 </table>
 
@@ -105,5 +105,5 @@ flyway {
 Cleaned database schema 'PUBLIC' (execution time 00:00.016s)</pre>
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="v6/documentation/gradle/info">Gradle: info <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/gradle/info">Gradle: info <i class="fa fa-arrow-right"></i></a>
 </p>
