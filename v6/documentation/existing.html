@@ -1,0 +1,62 @@
+---
+layout: documentationv6
+menu: existing
+subtitle: Existing Database Setup
+---
+<div id="databaseSetupExisting">
+    <h1>Existing database setup</h1>
+
+    <p>These are the steps to follow to successfully integrate Flyway in a project with an existing database. </p>
+
+    <h3>Take a DDL and reference data extract from production</h3>
+
+    <p>First start by taking a snapshot of your most important database: production. This will be the starting point for
+        migrations. </p>
+
+    <p>Generate a sql script that includes the entire DDL (including indexes, triggers, procedures, ...) of the
+        production database. To do this you will need to add insert statements for all the reference data present in the
+        database. </p>
+
+    <p>This script will form your base migration. Save it on the classpath in the directory you configured with baseDir.
+        Give it a relevant version number and description such as V1__Base_version.sql.
+    </p>
+
+    <h3>Clean all databases containing data you don't mind losing</h3>
+
+    <p>Now comes the point where we have to make sure that the migrations meant for production will work
+        everywhere.</p>
+
+    <p>For all databases with unimportant data you don't mind losing, perform</p>
+    <pre class="console">&gt; flyway clean</pre>
+    <p>to completely remove their contents. </p>
+
+    <h3>Align the remaining databases with production</h3>
+
+    <p>Check all remaining databases. You must make sure that their structure (DDL) and reference data matches
+        production exactly. This step is important, as all scripts destined for production will be applied here first.
+        For the scripts to succeed, the objects they migrate must be identical to what is present in production. </p>
+
+    <h3>Give these databases a baseline version</h3>
+
+    <p>Now comes the time to baseline the databases that contain data (including production) with a baseline version.
+        Use the same version and description you used for the production extract script created above. </p>
+
+    <p>You can accomplish it like this: </p>
+    <pre class="console">&gt; flyway baseline</pre>
+    <p>You must perform this step for each database that hasn't been cleaned. </p>
+
+    <h3>Done !</h3>
+
+    <p>Congratulations ! You are now ready. </p>
+
+    <p>When you execute</p>
+
+    <pre class="console">&gt; flyway migrate</pre>
+
+    <p>the empty databases will be migrated to the state of production and the others will be left as is.<br/> As soon
+        as you add a new migration, it will be applied identically to all databases.</p>
+
+    <p class="next-steps">
+        <a class="btn btn-primary" href="v6/documentation/envvars">Environment Variables <i class="fa fa-arrow-right"></i></a>
+    </p>
+</div>
