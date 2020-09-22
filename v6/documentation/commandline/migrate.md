@@ -8,7 +8,7 @@ subtitle: 'Command-line: migrate'
 Migrates the schema to the latest version. Flyway will create the schema history table automatically if it doesn't
     exist.
 
-<a href="/documentation/command/migrate"><img src="/assets/balsamiq/command-migrate.png" alt="migrate"></a>
+<a href="/v6/documentation/command/migrate"><img src="/assets/balsamiq/command-migrate.png" alt="migrate"></a>
 
 ## Usage
 
@@ -177,7 +177,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
         <td>NO</td>
         <td></td>
         <td>Comma-separated list of fully qualified class names of custom
-            <a href="/v6/v6/documentation/api/javadoc/org/flywaydb/core/api/resolver/MigrationResolver">MigrationResolver</a>
+            <a href="/v6/documentation/api/javadoc/org/flywaydb/core/api/resolver/MigrationResolver">MigrationResolver</a>
             implementations to be used in addition to the built-in ones for resolving Migrations to apply.</td>
     </tr>
     <tr id="skipDefaultResolvers">
@@ -191,7 +191,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
         <td>NO</td>
         <td></td>
         <td>Comma-separated list of fully qualified class names of
-            <a href="/v6/v6/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback">Callback</a>
+            <a href="/v6/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback">Callback</a>
             implementations to use to hook into the Flyway lifecycle.</td>
     </tr>
     <tr id="skipDefaultCallbacks">
@@ -384,5 +384,5 @@ Migrating schema "PUBLIC" to version 1.1 - View
 Successfully applied 2 migrations to schema "PUBLIC" (execution time 00:00.030s).</pre>
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/commandline/clean">Command-line: clean <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/v6/documentation/commandline/clean">Command-line: clean <i class="fa fa-arrow-right"></i></a>
 </p>

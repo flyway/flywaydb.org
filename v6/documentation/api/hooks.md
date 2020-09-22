@@ -9,7 +9,7 @@ There are three ways you can hook into the Flyway API.
 
 ## Java-based Migrations
 
-The first one is the the most common one: [Java-based Migrations](/documentation/migrations#java-based-migrations)
+The first one is the the most common one: [Java-based Migrations](/v6/documentation/migrations#java-based-migrations)
 when you need more power than SQL can offer you. This is great to for dealing with LOBs or performing advanced
 data transformations.
 
@@ -46,7 +46,7 @@ flyway.migrate();
 
 ## Java-based Callbacks
 
-Building upon that are the Java-based [Callbacks](/documentation/callbacks)
+Building upon that are the Java-based [Callbacks](/v6/documentation/callbacks)
 when you need more power or flexibility in a Callback than SQL can offer you.
 
 They can be created by implementing the [**Callback**](/v6/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback)
@@ -142,5 +142,5 @@ to completely replace the built-in ones (by default, custom resolvers will run i
 built-in ones).
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/api/javadoc">API: Javadoc <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/v6/documentation/api/javadoc">API: Javadoc <i class="fa fa-arrow-right"></i></a>
 </p>

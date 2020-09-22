@@ -37,7 +37,7 @@ subtitle: SAP HANA
 
 ## SQL Script Syntax
 
-- [Standard SQL syntax](/documentation/migrations#sql-based-migrations#syntax) with statement delimiter **;**
+- [Standard SQL syntax](/v6/documentation/migrations#sql-based-migrations#syntax) with statement delimiter **;**
 - `BEGIN .. END;` blocks used for triggers and anonymous do blocks
 
 ### Compatibility
@@ -112,5 +112,5 @@ INSERT INTO ${tableName} (name) VALUES ('Mr. T');</pre>
 - *None*
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/database/sybasease">Sybase ASE <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/v6/documentation/database/sybasease">Sybase ASE <i class="fa fa-arrow-right"></i></a>
 </p>

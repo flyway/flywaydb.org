@@ -113,31 +113,31 @@ to set any environment variable at all:
     </thead>
     <tbody>
     <tr>
-        <td><a href="/documentation/commandline/migrate">migrate</a></td>
+        <td><a href="/v6/documentation/commandline/migrate">migrate</a></td>
         <td>Migrates the database</td>
     </tr>
     <tr>
-        <td><a href="/documentation/commandline/clean">clean</a></td>
+        <td><a href="/v6/documentation/commandline/clean">clean</a></td>
         <td>Drops all objects in the configured schemas</td>
     </tr>
     <tr>
-        <td><a href="/documentation/commandline/info">info</a></td>
+        <td><a href="/v6/documentation/commandline/info">info</a></td>
         <td>Prints the details and status information about all the migrations</td>
     </tr>
     <tr>
-        <td><a href="/documentation/commandline/validate">validate</a></td>
+        <td><a href="/v6/documentation/commandline/validate">validate</a></td>
         <td>Validates the applied migrations against the ones available on the classpath</td>
     </tr>
     <tr>
-        <td><a href="/documentation/commandline/undo">undo</a> <a href="/download" class="label label-primary" title="Supported by Flyway Pro and Enterprise Edition only">Flyway Pro</a></td>
+        <td><a href="/v6/documentation/commandline/undo">undo</a> <a href="/download" class="label label-primary" title="Supported by Flyway Pro and Enterprise Edition only">Flyway Pro</a></td>
         <td>Undoes the most recently applied versioned migrations</td>
     </tr>
     <tr>
-        <td><a href="/documentation/commandline/baseline">baseline</a></td>
+        <td><a href="/v6/documentation/commandline/baseline">baseline</a></td>
         <td>Baselines an existing database, excluding all migrations up to and including baselineVersion</td>
     </tr>
     <tr>
-        <td><a href="/documentation/commandline/repair">repair</a></td>
+        <td><a href="/v6/documentation/commandline/repair">repair</a></td>
         <td>Repairs the schema history table</td>
     </tr>
     </tbody>
@@ -175,8 +175,8 @@ should be used as specified above). These different means of configuration can b
 
 ### Config files
 
-[Config files](/documentation/configfiles) are supported by the Flyway command-line tool. If you are not familiar with them,
-check out the [Flyway config file structure and settings reference](/documentation/configfiles) first.
+[Config files](/v6/documentation/configfiles) are supported by the Flyway command-line tool. If you are not familiar with them,
+check out the [Flyway config file structure and settings reference](/v6/documentation/configfiles) first.
 
 Flyway will search for and automatically load the following config files if present:
 - `<install-dir>/conf/flyway.conf`
@@ -212,7 +212,7 @@ Alternatively you can also use the `FLYWAY_CONFIG_FILE_ENCODING` environment var
 ### Environment Variables
 
 To make it easier to work with cloud and containerized environments, Flyway also supports configuration via
-[environment variables](/documentation/envvars). Check out the [Flyway environment variable reference](/documentation/envvars) for details.
+[environment variables](/v6/documentation/envvars). Check out the [Flyway environment variable reference](/v6/documentation/envvars) for details.
 
 ### Command-line Arguments
 
@@ -391,7 +391,7 @@ Add `-json` to the argument list to print JSON instead of human-readable output.
 Add `-outputFile=/my/output.txt` to the argument list to also write output to the specified file.
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/commandline/migrate">Command-line: migrate <i
+    <a class="btn btn-primary" href="/v6/documentation/commandline/migrate">Command-line: migrate <i
             class="fa fa-arrow-right"></i></a>
 </p>
 

@@ -13,7 +13,7 @@ Validation fails if
 - versions have been applied that aren't resolved locally anymore
 - versions have been resolved that haven't been applied yet
 
-<a href="/documentation/command/validate"><img src="/assets/balsamiq/command-validate.png" alt="validate"></a>
+<a href="/v6/documentation/command/validate"><img src="/assets/balsamiq/command-validate.png" alt="validate"></a>
 
 ## Usage
 
@@ -278,5 +278,5 @@ flyway {
 Validated 5 migrations (execution time 00:00.030s)</pre>
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/gradle/undo">Gradle: undo <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/v6/documentation/gradle/undo">Gradle: undo <i class="fa fa-arrow-right"></i></a>
 </p>

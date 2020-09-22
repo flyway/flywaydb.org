@@ -7,7 +7,7 @@ subtitle: 'Command-line: baseline'
 
 Baselines an existing database, excluding all migrations up to and including `baselineVersion`.
 
-<a href="/documentation/command/baseline"><img src="/assets/balsamiq/command-baseline.png" alt="baseline"></a>
+<a href="/v6/documentation/command/baseline"><img src="/assets/balsamiq/command-baseline.png" alt="baseline"></a>
 
 ## Usage
 
@@ -78,7 +78,7 @@ Baselines an existing database, excluding all migrations up to and including `ba
         <td>NO</td>
         <td></td>
         <td>Comma-separated list of fully qualified class names of
-            <a href="/v6/v6/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback">Callback</a>
+            <a href="/v6/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback">Callback</a>
             implementations to use to hook into the Flyway lifecycle.</td>
     </tr>
     <tr>
@@ -136,5 +136,5 @@ Creating schema history table: "PUBLIC"."flyway_schema_history"
 Schema baselined with version: 1</pre>
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/commandline/repair">Command-line: repair <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/v6/documentation/commandline/repair">Command-line: repair <i class="fa fa-arrow-right"></i></a>
 </p>

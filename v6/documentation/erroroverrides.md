@@ -33,7 +33,7 @@ Flyway Pro and Enterprise Edition give you a way to achieve all these scenarios 
 
 ## Configuration
 
-One or more Errors Overrides can be configured using the [`errorOverrides`](/documentation/commandline/migrate#errorOverrides)
+One or more Errors Overrides can be configured using the [`errorOverrides`](/v6/documentation/commandline/migrate#errorOverrides)
 setting which accepts multiple error override definitions in the following form: `STATE:12345:W`.
                              
 This is a 5 character SQL state, a colon, the SQL error code, a colon and finally the desired
@@ -105,10 +105,10 @@ Done.
 ## Advanced programmatic configuration
 
 As an alternative to the simple declarative syntax presented above, you can also fully customize the behavior of Flyway
-following the execution of a statement by implementing a Java-based [callback](/documentation/callbacks) which listens
+following the execution of a statement by implementing a Java-based [callback](/v6/documentation/callbacks) which listens
 to the `afterEachMigrateStatement`, `afterEachMigrateStatementError`, `afterEachUndoStatement` and
 `afterEachUndoStatementError` events.
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/dryruns">Dry Runs <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/v6/documentation/dryruns">Dry Runs <i class="fa fa-arrow-right"></i></a>
 </p>

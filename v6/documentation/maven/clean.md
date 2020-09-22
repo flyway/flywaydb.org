@@ -8,7 +8,7 @@ subtitle: 'mvn flyway:clean'
 Drops all objects (tables, views, procedures, triggers, ...) in the configured schemas.<br/>
 The schemas are cleaned in the order specified by the <code>schemas</code> property.
 
-<a href="/documentation/command/clean"><img src="/assets/balsamiq/command-clean.png" alt="clean"></a>
+<a href="/v6/documentation/command/clean"><img src="/assets/balsamiq/command-clean.png" alt="clean"></a>
 
 ## Default Phase
 
@@ -151,5 +151,5 @@ The schemas are cleaned in the order specified by the <code>schemas</code> prope
 [INFO] Cleaned database schema 'PUBLIC' (execution time 00:00.016s)</pre>
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/maven/info">Maven: info <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/v6/documentation/maven/info">Maven: info <i class="fa fa-arrow-right"></i></a>
 </p>

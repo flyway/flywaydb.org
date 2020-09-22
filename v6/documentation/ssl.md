@@ -72,7 +72,7 @@ who follows the process through step by step.
 
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/placeholders">Placeholders <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/v6/documentation/placeholders">Placeholders <i class="fa fa-arrow-right"></i></a>
 </p>
 
 {% include trialpopup.html %}

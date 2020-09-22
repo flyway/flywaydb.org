@@ -49,7 +49,7 @@ subtitle: Sybase ASE
 
 ## SQL Script Syntax
 
-- [Standard SQL syntax](/documentation/migrations#sql-based-migrations#syntax) with statement delimiter **GO**
+- [Standard SQL syntax](/v6/documentation/migrations#sql-based-migrations#syntax) with statement delimiter **GO**
 - T-SQL
 
 ### Compatibility
@@ -109,5 +109,5 @@ INSERT INTO ${tableName} (name) VALUES ('Mr. T');</pre>
 - No Support for DDL transactions due to Sybase ASE limitations.
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/database/informix">Informix <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/v6/documentation/database/informix">Informix <i class="fa fa-arrow-right"></i></a>
 </p>

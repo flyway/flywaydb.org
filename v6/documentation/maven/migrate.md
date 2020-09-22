@@ -8,7 +8,7 @@ subtitle: 'mvn flyway:migrate'
 Migrates the schema to the latest version. Flyway will create the schema history table automatically if it doesn't
     exist.
 
-<a href="/documentation/command/migrate"><img src="/assets/balsamiq/command-migrate.png" alt="migrate"></a>
+<a href="/v6/documentation/command/migrate"><img src="/assets/balsamiq/command-migrate.png" alt="migrate"></a>
 
 ## Default Phase
 
@@ -442,5 +442,5 @@ The new database version number is exposed in the `flyway.current` Maven propert
 [INFO] Successfully applied 4 migrations (execution time 00:00.091s).</pre>
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/maven/clean">Maven: clean <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/v6/documentation/maven/clean">Maven: clean <i class="fa fa-arrow-right"></i></a>
 </p>

@@ -6,9 +6,9 @@ subtitle: 'gradle flywayUndo'
 # Gradle Task: flywayUndo
 {% include pro.html %}
 
-[Undoes](/documentation/command/undo) the most recently applied versioned migration.
+[Undoes](/v6/documentation/command/undo) the most recently applied versioned migration.
 
-<a href="/documentation/command/undo"><img src="/assets/balsamiq/command-undo.png" alt="undo"></a>
+<a href="/v6/documentation/command/undo"><img src="/assets/balsamiq/command-undo.png" alt="undo"></a>
 
 ## Usage
 <pre class="console">&gt; gradle flywayUndo</pre>
@@ -288,5 +288,5 @@ When using Spring JDBC migrations, you must declare a dependency on `org.springf
 in Gradle's `buildScript` block to avoid being hit with a `java.lang.LinkageError`.
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/gradle/baseline">Gradle: baseline <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/v6/documentation/gradle/baseline">Gradle: baseline <i class="fa fa-arrow-right"></i></a>
 </p>

@@ -46,7 +46,7 @@ subtitle: SQL Server
 
 ## SQL Script Syntax
 
-- [Standard SQL syntax](/documentation/migrations#sql-based-migrations#syntax) with statement delimiter **GO**
+- [Standard SQL syntax](/v6/documentation/migrations#sql-based-migrations#syntax) with statement delimiter **GO**
 - T-SQL
 
 ### Compatibility
@@ -192,5 +192,5 @@ consequences.
 a driver limitation, and can be solved by using the Microsoft driver instead.
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/database/db2">DB2 <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/v6/documentation/database/db2">DB2 <i class="fa fa-arrow-right"></i></a>
 </p>

@@ -46,7 +46,7 @@ subtitle: DB2
 
 ## SQL Script Syntax
 
-- [Standard SQL syntax](/documentation/migrations#sql-based-migrations#syntax)
+- [Standard SQL syntax](/v6/documentation/migrations#sql-based-migrations#syntax)
 - DB2 SQL-PL
 - Terminator changes
 
@@ -102,5 +102,5 @@ LANGUAGE SQL
 - *None*
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/database/mysql">MySQL<i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/v6/documentation/database/mysql">MySQL<i class="fa fa-arrow-right"></i></a>
 </p>

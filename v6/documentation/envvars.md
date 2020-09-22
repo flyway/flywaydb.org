@@ -5,8 +5,8 @@ subtitle: Environment Variables
 ---
 # Environment Variables
 
-The Flyway [command-line tool](/documentation/commandline), [Maven plugin](/documentation/maven) and
-[Gradle plugin](/documentation/gradle) support loading configuration via environment variables.
+The Flyway [command-line tool](/v6/documentation/commandline), [Maven plugin](/v6/documentation/maven) and
+[Gradle plugin](/v6/documentation/gradle) support loading configuration via environment variables.
 This also possible using the Flyway API by calling the `envVars()` method on the configuration.
 
 ## Reference
@@ -349,7 +349,7 @@ The following environment variables are supported:
     </tr>
     <tr id="FLYWAY_ORACLE_SQLPLUS">
         <td>FLYWAY_ORACLE_SQLPLUS {% include pro.html %}</td>
-        <td>Enable Flyway's support for <a href="/documentation/database/oracle#sqlplus-commands">Oracle SQL*Plus commands</a></td>
+        <td>Enable Flyway's support for <a href="/v6/documentation/database/oracle#sqlplus-commands">Oracle SQL*Plus commands</a></td>
     </tr>
     <tr id="FLYWAY_ORACLE_SQLPLUS_WARN">
         <td>FLYWAY_ORACLE_SQLPLUS_WARN {% include pro.html %}</td>
@@ -363,7 +363,7 @@ The following environment variables are supported:
 </table>
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/ssl">SSL support <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/v6/documentation/ssl">SSL support <i class="fa fa-arrow-right"></i></a>
 </p>
 
 {% include trialpopup.html %}

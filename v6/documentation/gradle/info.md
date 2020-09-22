@@ -7,7 +7,7 @@ subtitle: 'gradle flywayInfo'
 
 Prints the details and status information about all the migrations.
 
-<a href="/documentation/command/info"><img src="/assets/balsamiq/command-info.png" alt="info"></a>
+<a href="/v6/documentation/command/info"><img src="/assets/balsamiq/command-info.png" alt="info"></a>
 
 ## Usage
 
@@ -232,5 +232,5 @@ Database: jdbc:h2:file:flyway.db (H2 1.3)
 +------------+---------+----------------+------+---------------------+---------+----------+</pre>
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/gradle/validate">Gradle: validate <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/v6/documentation/gradle/validate">Gradle: validate <i class="fa fa-arrow-right"></i></a>
 </p>

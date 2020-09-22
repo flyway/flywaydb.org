@@ -17,7 +17,7 @@ single transaction.
 If there is no versioned migration to undo, calling undo has no effect.
 
 There is no undo functionality for repeatable migrations. In that case the repeatable migration should be modified to
-include the older state that one desires and then reapplied using [migrate](/documentation/command/migrate).
+include the older state that one desires and then reapplied using [migrate](/v6/documentation/command/migrate).
 
 ## Important notes
 
@@ -43,5 +43,5 @@ technology of your underlying storage solution. Especially for larger data volum
 several orders of magnitude faster than traditional backups and restores.
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/command/baseline">Baseline <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/v6/documentation/command/baseline">Baseline <i class="fa fa-arrow-right"></i></a>
 </p>

@@ -37,7 +37,7 @@ subtitle: Firebird
 
 ## SQL Script Syntax
 
- - [Standard SQL syntax](/documentation/migrations#syntax)
+ - [Standard SQL syntax](/v6/documentation/migrations#syntax)
 - Terminator changes supported using `SET TERM <i>&lt;new terminator&gt;</i><i>&lt;old terminator&gt;</i>
 - Firebird dialect 3 only
 
@@ -85,5 +85,5 @@ errors as Firebird uses existence locks on metadata objects when they are in use
 database and run the migration with exclusive access.
 
  <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/existing">Existing database setup <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/v6/documentation/existing">Existing database setup <i class="fa fa-arrow-right"></i></a>
 </p>

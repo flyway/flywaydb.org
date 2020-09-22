@@ -40,7 +40,7 @@ subtitle: Derby
 
 ## SQL Script Syntax
 
-- [Standard SQL syntax](/documentation/migrations#sql-based-migrations#syntax) with statement delimiter **;**
+- [Standard SQL syntax](/v6/documentation/migrations#sql-based-migrations#syntax) with statement delimiter **;**
 
 ### Compatibility
     
@@ -72,5 +72,5 @@ INSERT INTO ${tableName} (name) VALUES ('Mr. T');
 - *None*
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/database/snowflake">Snowflake <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/v6/documentation/database/snowflake">Snowflake <i class="fa fa-arrow-right"></i></a>
 </p>

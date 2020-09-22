@@ -48,7 +48,7 @@ subtitle: SQLite
 
 ## SQL Script Syntax
 
-- [Standard SQL syntax](/documentation/migrations#sql-based-migrations#syntax) with statement delimiter **;**
+- [Standard SQL syntax](/v6/documentation/migrations#sql-based-migrations#syntax) with statement delimiter **;**
 - Triggers with `BEGIN ... END;` block
 
 ### Compatibility
@@ -85,5 +85,5 @@ CREATE TRIGGER update_customer_address UPDATE OF address ON customers
 - No support for `CREATE TRANSACTION` and `COMMIT` statements within a migration, as SQLite doesn't support nested transactions
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/database/firebird">Firebird <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/v6/documentation/database/firebird">Firebird <i class="fa fa-arrow-right"></i></a>
 </p>

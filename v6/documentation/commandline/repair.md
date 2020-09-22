@@ -10,7 +10,7 @@ Repairs the Flyway schema history table. This will perform the following actions
             (User objects left behind must still be cleaned up manually)
 - Realign the checksums, descriptions and types of the applied migrations with the ones of the available migrations
 
-<a href="/documentation/command/repair"><img src="/assets/balsamiq/command-repair.png" alt="repair"></a>
+<a href="/v6/documentation/command/repair"><img src="/assets/balsamiq/command-repair.png" alt="repair"></a>
 
 ## Usage
 
@@ -152,7 +152,7 @@ Repairs the Flyway schema history table. This will perform the following actions
         <td>NO</td>
         <td></td>
         <td>Comma-separated list of fully qualified class names of custom
-            <a href="/v6/v6/documentation/api/javadoc/org/flywaydb/core/api/resolver/MigrationResolver">MigrationResolver</a>
+            <a href="/v6/documentation/api/javadoc/org/flywaydb/core/api/resolver/MigrationResolver">MigrationResolver</a>
             implementations to be used in addition to the built-in ones for resolving Migrations to apply.</td>
     </tr>
     <tr>
@@ -166,7 +166,7 @@ Repairs the Flyway schema history table. This will perform the following actions
         <td>NO</td>
         <td></td>
         <td>Comma-separated list of fully qualified class names of
-            <a href="/v6/v6/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback">Callback</a>
+            <a href="/v6/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback">Callback</a>
             implementations to use to hook into the Flyway lifecycle.</td>
     </tr>
     <tr>
@@ -219,5 +219,5 @@ Flyway {{ site.flywayVersion }} by Redgate
 Repair not necessary. No failed migration detected.</pre>
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/api">API <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/v6/documentation/api">API <i class="fa fa-arrow-right"></i></a>
 </p>

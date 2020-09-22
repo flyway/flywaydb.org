@@ -8,7 +8,7 @@ subtitle: 'Command-line: clean'
 Drops all objects (tables, views, procedures, triggers, ...) in the configured schemas.<br/>
 The schemas are cleaned in the order specified by the `schemas` property.
 
-<a href="/documentation/command/clean"><img src="/assets/balsamiq/command-clean.png" alt="clean"></a>
+<a href="/v6/documentation/command/clean"><img src="/assets/balsamiq/command-clean.png" alt="clean"></a>
 
 ## Usage
 
@@ -67,7 +67,7 @@ The schemas are cleaned in the order specified by the `schemas` property.
         <td>NO</td>
         <td></td>
         <td>Comma-separated list of fully qualified class names of
-            <a href="/v6/v6/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback">Callback</a>
+            <a href="/v6/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback">Callback</a>
             implementations to use to hook into the Flyway lifecycle.</td>
     </tr>
     <tr>
@@ -112,5 +112,5 @@ Flyway {{ site.flywayVersion }} by Redgate
 Cleaned database schema 'PUBLIC' (execution time 00:00.014s)</pre>
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/commandline/info">Command-line: info <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/v6/documentation/commandline/info">Command-line: info <i class="fa fa-arrow-right"></i></a>
 </p>

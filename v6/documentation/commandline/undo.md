@@ -6,9 +6,9 @@ subtitle: 'Command-line: undo'
 # Command-line: undo
 {% include pro.html %}
 
-[Undoes](/documentation/command/undo) the most recently applied versioned migration.
+[Undoes](/v6/documentation/command/undo) the most recently applied versioned migration.
 
-<a href="/documentation/command/undo"><img src="/assets/balsamiq/command-undo.png" alt="undo"></a>
+<a href="/v6/documentation/command/undo"><img src="/assets/balsamiq/command-undo.png" alt="undo"></a>
 
 ## Usage
 
@@ -157,7 +157,7 @@ subtitle: 'Command-line: undo'
         <td>NO</td>
         <td></td>
         <td>Comma-separated list of fully qualified class names of custom
-            <a href="/v6/v6/documentation/api/javadoc/org/flywaydb/core/api/resolver/MigrationResolver">MigrationResolver</a>
+            <a href="/v6/documentation/api/javadoc/org/flywaydb/core/api/resolver/MigrationResolver">MigrationResolver</a>
             implementations to be used in addition to the built-in ones for resolving Migrations to apply.</td>
     </tr>
     <tr>
@@ -171,7 +171,7 @@ subtitle: 'Command-line: undo'
         <td>NO</td>
         <td></td>
         <td>Comma-separated list of fully qualified class names of
-            <a href="/v6/v6/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback">Callback</a>
+            <a href="/v6/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback">Callback</a>
             implementations to use to hook into the Flyway lifecycle.</td>
     </tr>
     <tr>
@@ -299,5 +299,5 @@ Undoing migration of schema "PUBLIC" to version 1 - First
 Successfully undid 1 migration to schema "PUBLIC" (execution time 00:00.024s).</pre>
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/commandline/baseline">Command-line: baseline <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/v6/documentation/commandline/baseline">Command-line: baseline <i class="fa fa-arrow-right"></i></a>
 </p>

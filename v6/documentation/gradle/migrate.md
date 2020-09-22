@@ -8,7 +8,7 @@ subtitle: 'gradle flywayMigrate'
 Migrates the schema to the latest version. Flyway will create the schema history table automatically if it doesn't
     exist.
 
-<a href="/documentation/command/migrate"><img src="/assets/balsamiq/command-migrate.png" alt="migrate"></a>
+<a href="/v6/documentation/command/migrate"><img src="/assets/balsamiq/command-migrate.png" alt="migrate"></a>
 
 ## Usage
 <pre class="console">&gt; gradle flywayMigrate</pre>
@@ -383,5 +383,5 @@ When using Spring JDBC migrations, you must declare a dependency on `org.springf
 in Gradle's `buildScript` block to avoid being hit with a `java.lang.LinkageError`.
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/gradle/clean">Gradle: clean <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/v6/documentation/gradle/clean">Gradle: clean <i class="fa fa-arrow-right"></i></a>
 </p>

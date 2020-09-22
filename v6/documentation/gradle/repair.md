@@ -10,7 +10,7 @@ Repairs the Flyway schema history table. This will perform the following actions
   (User objects left behind must still be cleaned up manually)
 - Realign the checksums, descriptions and types of the applied migrations with the ones of the available migrations
 
-<a href="/documentation/command/repair"><img src="/assets/balsamiq/command-repair.png" alt="repair"></a>
+<a href="/v6/documentation/command/repair"><img src="/assets/balsamiq/command-repair.png" alt="repair"></a>
 
 ## Usage
 
@@ -211,5 +211,5 @@ flyway {
 Repair not necessary. No failed migration detected.</pre>
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/plugins">Community Plugins <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/v6/documentation/plugins">Community Plugins <i class="fa fa-arrow-right"></i></a>
 </p>

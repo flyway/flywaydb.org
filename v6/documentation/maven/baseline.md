@@ -7,7 +7,7 @@ subtitle: 'mvn flyway:baseline'
 
 Baselines an existing database, excluding all migrations up to and including baselineVersion.
 
-<a href="/documentation/command/baseline"><img src="/assets/balsamiq/command-baseline.png" alt="baseline"></a>
+<a href="/v6/documentation/command/baseline"><img src="/assets/balsamiq/command-baseline.png" alt="baseline"></a>
 
 ## Usage
 
@@ -171,5 +171,5 @@ Baselines an existing database, excluding all migrations up to and including bas
 [INFO] Schema baselined with version: 1</pre>
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/maven/repair">Maven: repair <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/v6/documentation/maven/repair">Maven: repair <i class="fa fa-arrow-right"></i></a>
 </p>
