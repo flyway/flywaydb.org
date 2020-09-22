@@ -57,9 +57,9 @@ Validation fails if
         <td></td>
         <td>The password to use to connect to the database</td>
     </tr>
-    {% include cfg/connectRetries.html %}
-    {% include cfg/initSql.html %}
-    {% include cfg/schemas.html %}
+    {% include v6/cfg/connectRetries.html %}
+    {% include v6/cfg/initSql.html %}
+    {% include v6/cfg/schemas.html %}
     <tr>
         <td>table</td>
         <td>NO</td>
@@ -70,7 +70,7 @@ Validation fails if
             the schema history table is placed in the first schema of the list.
         </td>
     </tr>
-    {% include cfg/locations-maven-gradle.html %}
+    {% include v6/cfg/locations-maven-gradle.html %}
     <tr>
         <td>sqlMigrationPrefix</td>
         <td>NO</td>
@@ -112,7 +112,7 @@ Validation fails if
             Multiple suffixes (like .sql,.pkg,.pkb) can be specified for easier compatibility with other tools such as
             editors with specific file associations.</td>
     </tr>
-     {% include cfg/validateMigrationNaming.html %}
+     {% include v6/cfg/validateMigrationNaming.html %}
     <tr>
         <td>encoding</td>
         <td>NO</td>
@@ -149,7 +149,7 @@ Validation fails if
         <td>NO</td>
         <td></td>
         <td>Fully qualified class names of custom
-            <a href="/documentation/api/javadoc/org/flywaydb/core/api/resolver/MigrationResolver">MigrationResolver</a>
+            <a href="/v6/documentation/api/javadoc/org/flywaydb/core/api/resolver/MigrationResolver">MigrationResolver</a>
             implementations to be used in addition to the built-in ones for resolving Migrations to apply.</td>
     </tr>
     <tr>
@@ -163,7 +163,7 @@ Validation fails if
         <td>NO</td>
         <td></td>
         <td>Fully qualified class names of
-            <a href="/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback">Callback</a>
+            <a href="/v6/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback">Callback</a>
             implementations to use to hook into the Flyway lifecycle.</td>
     </tr>
     <tr>
@@ -172,7 +172,7 @@ Validation fails if
         <td>false</td>
         <td>Whether default built-in callbacks (sql) should be skipped. If true, only custom callbacks are used.</td>
     </tr>
-    {% include cfg/target-latest.html %}
+    {% include v6/cfg/target-latest.html %}
     <tr>
         <td>outOfOrder</td>
         <td>NO</td>
@@ -182,7 +182,7 @@ Validation fails if
                 it will be applied too instead of being ignored.</p>
         </td>
     </tr>
-    {% include cfg/cleanOnValidationError.html %}
+    {% include v6/cfg/cleanOnValidationError.html %}
     <tr>
         <td>ignoreMissingMigrations</td>
         <td>NO</td>
@@ -209,7 +209,7 @@ Validation fails if
             development of older versions.
         </td>
     </tr>
-    {% include cfg/ignorePendingMigrations.html %}
+    {% include v6/cfg/ignorePendingMigrations.html %}
     <tr>
         <td>ignoreFutureMigrations</td>
         <td>NO</td>
@@ -221,10 +221,10 @@ Validation fails if
             warning is logged and Flyway continues normally. This is useful for situations where one must be able to redeploy
             an older version of the application after the database has been migrated by a newer one.</td>
     </tr>
-    {% include cfg/oracleSqlplus.html %}
-    {% include cfg/oracleSqlplusWarn.html %}
-    {% include cfg/workingDirectory.html %}
-    {% include cfg/licenseKey.html %}
+    {% include v6/cfg/oracleSqlplus.html %}
+    {% include v6/cfg/oracleSqlplusWarn.html %}
+    {% include v6/cfg/workingDirectory.html %}
+    {% include v6/cfg/licenseKey.html %}
     </tbody>
 </table>
 

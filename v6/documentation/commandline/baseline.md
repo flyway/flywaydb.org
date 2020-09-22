@@ -51,11 +51,11 @@ Baselines an existing database, excluding all migrations up to and including `ba
         <td></td>
         <td>The password to use to connect to the database</td>
     </tr>
-    {% include cfg/connectRetries.html %}
-    {% include cfg/initSql.html %}
-    {% include cfg/schemas.html %}
-    {% include cfg/createSchemas.html %}
-    {% include cfg/color.html %}
+    {% include v6/cfg/connectRetries.html %}
+    {% include v6/cfg/initSql.html %}
+    {% include v6/cfg/schemas.html %}
+    {% include v6/cfg/createSchemas.html %}
+    {% include v6/cfg/color.html %}
     <tr>
         <td>table</td>
         <td>NO</td>
@@ -66,7 +66,7 @@ Baselines an existing database, excluding all migrations up to and including `ba
             the schema history table is placed in the first schema of the list.
         </td>
     </tr>
-    {% include cfg/tablespace.html %}
+    {% include v6/cfg/tablespace.html %}
     <tr id="jarDirs">
         <td>jarDirs</td>
         <td>NO</td>
@@ -78,7 +78,7 @@ Baselines an existing database, excluding all migrations up to and including `ba
         <td>NO</td>
         <td></td>
         <td>Comma-separated list of fully qualified class names of
-            <a href="/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback">Callback</a>
+            <a href="/v6/v6/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback">Callback</a>
             implementations to use to hook into the Flyway lifecycle.</td>
     </tr>
     <tr>
@@ -101,9 +101,9 @@ Baselines an existing database, excluding all migrations up to and including `ba
         </td>
         <td>The description to tag an existing schema with when executing baseline</td>
     </tr>
-    {% include cfg/validateMigrationNaming.html %}
-    {% include cfg/workingDirectory.html %}
-    {% include cfg/licenseKey.html %}
+    {% include v6/cfg/validateMigrationNaming.html %}
+    {% include v6/cfg/workingDirectory.html %}
+    {% include v6/cfg/licenseKey.html %}
     </tbody>
 </table>
 

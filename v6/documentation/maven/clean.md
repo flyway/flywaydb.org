@@ -65,15 +65,15 @@ The schemas are cleaned in the order specified by the <code>schemas</code> prope
         <td></td>
         <td>The password to use to connect to the database</td>
     </tr>
-    {% include cfg/connectRetries.html %}
-    {% include cfg/initSql.html %}
-    {% include cfg/schemas.html %}
+    {% include v6/cfg/connectRetries.html %}
+    {% include v6/cfg/initSql.html %}
+    {% include v6/cfg/schemas.html %}
     <tr>
         <td>callbacks</td>
         <td>NO</td>
         <td></td>
         <td>Fully qualified class names of
-            <a href="/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback">Callback</a>
+            <a href="/v6/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback">Callback</a>
             implementations to use to hook into the Flyway lifecycle.</td>
     </tr>
     <tr>
@@ -108,8 +108,8 @@ The schemas are cleaned in the order specified by the <code>schemas</code> prope
         <td><i>project.basedir</i> (where the POM resides)</td>
         <td>The working directory to consider when dealing with relative paths for both config files and locations.</td>
     </tr>
-     {% include cfg/validateMigrationNaming.html %}
-    {% include cfg/licenseKey.html %}
+     {% include v6/cfg/validateMigrationNaming.html %}
+    {% include v6/cfg/licenseKey.html %}
     </tbody>
 </table>
 

@@ -61,9 +61,9 @@ subtitle: 'mvn flyway:undo'
         <td></td>
         <td>The password to use to connect to the database</td>
     </tr>
-    {% include cfg/connectRetries.html %}
-    {% include cfg/initSql.html %}
-    {% include cfg/schemas.html %}
+    {% include v6/cfg/connectRetries.html %}
+    {% include v6/cfg/initSql.html %}
+    {% include v6/cfg/schemas.html %}
     <tr>
         <td>table</td>
         <td>NO</td>
@@ -74,7 +74,7 @@ subtitle: 'mvn flyway:undo'
             the schema history table is placed in the first schema of the list.
         </td>
     </tr>
-    {% include cfg/locations-maven-gradle.html %}
+    {% include v6/cfg/locations-maven-gradle.html %}
     <tr>
         <td>sqlMigrationPrefix</td>
         <td>NO</td>
@@ -108,8 +108,8 @@ subtitle: 'mvn flyway:undo'
             Multiple suffixes (like .sql,.pkg,.pkb) can be specified for easier compatibility with other tools such as
             editors with specific file associations.</td>
     </tr>
-     {% include cfg/validateMigrationNaming.html %}
-    {% include cfg/mixed.html %}
+     {% include v6/cfg/validateMigrationNaming.html %}
+    {% include v6/cfg/mixed.html %}
     <tr id="group">
         <td>group</td>
         <td>NO</td>
@@ -152,7 +152,7 @@ subtitle: 'mvn flyway:undo'
         <td>NO</td>
         <td></td>
         <td>Fully qualified class names of custom
-            <a href="/documentation/api/javadoc/org/flywaydb/core/api/resolver/MigrationResolver">MigrationResolver</a>
+            <a href="/v6/documentation/api/javadoc/org/flywaydb/core/api/resolver/MigrationResolver">MigrationResolver</a>
             implementations to be used in addition to the built-in ones for resolving Migrations to apply.</td>
     </tr>
     <tr>
@@ -166,7 +166,7 @@ subtitle: 'mvn flyway:undo'
         <td>NO</td>
         <td></td>
         <td>Fully qualified class names of
-            <a href="/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback">Callback</a>
+            <a href="/v6/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback">Callback</a>
             implementations to use to hook into the Flyway lifecycle.</td>
     </tr>
     <tr>
@@ -175,9 +175,9 @@ subtitle: 'mvn flyway:undo'
         <td>false</td>
         <td>Whether default built-in callbacks (sql) should be skipped. If true, only custom callbacks are used.</td>
     </tr>
-    {% include cfg/outputQueryResults.html %}
-    {% include cfg/target-previous.html %}
-    {% include cfg/cleanOnValidationError.html %}
+    {% include v6/cfg/outputQueryResults.html %}
+    {% include v6/cfg/target-previous.html %}
+    {% include v6/cfg/cleanOnValidationError.html %}
     <tr>
         <td>ignoreMissingMigrations</td>
         <td>NO</td>
@@ -243,7 +243,7 @@ subtitle: 'mvn flyway:undo'
         <td><i>project.basedir</i> (where the POM resides)</td>
         <td>The working directory to consider when dealing with relative paths for both config files and locations.</td>
     </tr>
-    {% include cfg/errorOverrides-maven-gradle.html %}
+    {% include v6/cfg/errorOverrides-maven-gradle.html %}
     <tr>
         <td>dryRunOutput</td>
         <td>NO</td>
@@ -252,9 +252,9 @@ subtitle: 'mvn flyway:undo'
             directory, Flyway will create all directories and parent directories as needed.
             Omit to use the default mode of executing the SQL statements directly against the database.</td>
     </tr>
-    {% include cfg/oracleSqlplus.html %}
-    {% include cfg/oracleSqlplusWarn.html %}
-    {% include cfg/licenseKey.html %}
+    {% include v6/cfg/oracleSqlplus.html %}
+    {% include v6/cfg/oracleSqlplusWarn.html %}
+    {% include v6/cfg/licenseKey.html %}
     </tbody>
 </table>
 

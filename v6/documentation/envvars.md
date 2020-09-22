@@ -199,7 +199,7 @@ The following environment variables are supported:
     <tr id="FLYWAY_RESOLVERS">
         <td>FLYWAY_RESOLVERS</td>
         <td>Comma-separated list of fully qualified class names of custom
-            <a href="/documentation/api/javadoc/org/flywaydb/core/api/resolver/MigrationResolver">MigrationResolver</a>
+            <a href="/v6/documentation/api/javadoc/org/flywaydb/core/api/resolver/MigrationResolver">MigrationResolver</a>
             implementations to be used in addition to the built-in ones for resolving Migrations to apply.</td>
     </tr>
     <tr id="FLYWAY_SKIP_DEFAULT_RESOLVERS">
@@ -209,7 +209,7 @@ The following environment variables are supported:
     <tr id="FLYWAY_CALLBACKS">
         <td>FLYWAY_CALLBACKS</td>
         <td>Comma-separated list of fully qualified class names of
-            <a href="/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback">Callback</a>
+            <a href="/v6/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback">Callback</a>
             implementations to use to hook into the Flyway lifecycle.</td>
     </tr>
     <tr id="FLYWAY_SKIP_DEFAULT_CALLBACKS">

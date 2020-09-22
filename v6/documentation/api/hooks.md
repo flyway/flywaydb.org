@@ -14,8 +14,8 @@ when you need more power than SQL can offer you. This is great to for dealing wi
 data transformations.
 
 In order to be picked up by Flyway, Java-based Migrations must implement the
-[`JavaMigration`](/documentation/api/javadoc/org/flywaydb/core/api/migration/JavaMigration) interface. Most users
-however should inherit from the convenience class [`BaseJavaMigration`](/documentation/api/javadoc/org/flywaydb/core/api/migration/BaseJavaMigration)
+[`JavaMigration`](/v6/documentation/api/javadoc/org/flywaydb/core/api/migration/JavaMigration) interface. Most users
+however should inherit from the convenience class [`BaseJavaMigration`](/v6/documentation/api/javadoc/org/flywaydb/core/api/migration/BaseJavaMigration)
 instead as it encourages Flyway's default naming convention, enabling Flyway to automatically extract the version and
 the description from the class name.
 
@@ -49,7 +49,7 @@ flyway.migrate();
 Building upon that are the Java-based [Callbacks](/documentation/callbacks)
 when you need more power or flexibility in a Callback than SQL can offer you.
 
-They can be created by implementing the [**Callback**](/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback)
+They can be created by implementing the [**Callback**](/v6/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback)
 interface:
 
 ```java
@@ -93,7 +93,7 @@ public interface Callback {
 }
 ```
 
-The `event` argument tells you which [`Event`](/documentation/api/javadoc/org/flywaydb/core/api/callback/Event) 
+The `event` argument tells you which [`Event`](/v6/documentation/api/javadoc/org/flywaydb/core/api/callback/Event) 
 (`beforeClean`, `afterMigrate`, ...) is being handled and the `context` argument gives you access to things
 like the database connection and the Flyway configuration.
 
@@ -132,8 +132,8 @@ specified in the `flyway.callbacks` configuration property.
 ## Custom Migration resolvers &amp; executors
 
 For those that need more than what the SQL and Java-based migrations offer, you also have the possibility to
-implement your own [`MigrationResolver`](/documentation/api/javadoc/org/flywaydb/core/api/resolver/MigrationResolver)
-coupled with a custom [`MigrationExecutor`](/documentation/api/javadoc/org/flywaydb/core/api/executor/MigrationExecutor).
+implement your own [`MigrationResolver`](/v6/documentation/api/javadoc/org/flywaydb/core/api/resolver/MigrationResolver)
+coupled with a custom [`MigrationExecutor`](/v6/documentation/api/javadoc/org/flywaydb/core/api/executor/MigrationExecutor).
 
 These can then be used for loading things like CSV-based migrations or other custom formats.
 

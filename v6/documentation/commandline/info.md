@@ -51,9 +51,9 @@ Prints the details and status information about all the migrations.
         <td></td>
         <td>The password to use to connect to the database</td>
     </tr>
-    {% include cfg/connectRetries.html %}
-    {% include cfg/initSql.html %}
-    {% include cfg/schemas.html %}
+    {% include v6/cfg/connectRetries.html %}
+    {% include v6/cfg/initSql.html %}
+    {% include v6/cfg/schemas.html %}
     <tr>
         <td>table</td>
         <td>NO</td>
@@ -64,8 +64,8 @@ Prints the details and status information about all the migrations.
             the schema history table is placed in the first schema of the list.
         </td>
     </tr>
-    {% include cfg/locations-commandline.html %}
-    {% include cfg/color.html %}
+    {% include v6/cfg/locations-commandline.html %}
+    {% include v6/cfg/color.html %}
     <tr id="jarDirs">
         <td>jarDirs</td>
         <td>NO</td>
@@ -113,7 +113,7 @@ Prints the details and status information about all the migrations.
             Multiple suffixes (like .sql,.pkg,.pkb) can be specified for easier compatibility with other tools such as
                 editors with specific file associations.</td>
     </tr>
-    {% include cfg/validateMigrationNaming.html %}
+    {% include v6/cfg/validateMigrationNaming.html %}
     <tr>
         <td>encoding</td>
         <td>NO</td>
@@ -150,7 +150,7 @@ Prints the details and status information about all the migrations.
         <td>NO</td>
         <td></td>
         <td>Comma-separated list of fully qualified class names of custom
-            <a href="/documentation/api/javadoc/org/flywaydb/core/api/resolver/MigrationResolver">MigrationResolver</a>
+            <a href="/v6/v6/documentation/api/javadoc/org/flywaydb/core/api/resolver/MigrationResolver">MigrationResolver</a>
             implementations to be used in addition to the built-in ones for resolving Migrations to apply.</td>
     </tr>
     <tr>
@@ -164,7 +164,7 @@ Prints the details and status information about all the migrations.
         <td>NO</td>
         <td></td>
         <td>Comma-separated list of fully qualified class names of
-            <a href="/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback">Callback</a>
+            <a href="/v6/v6/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback">Callback</a>
             implementations to use to hook into the Flyway lifecycle.</td>
     </tr>
     <tr>
@@ -173,7 +173,7 @@ Prints the details and status information about all the migrations.
         <td>false</td>
         <td>Whether default built-in callbacks (sql) should be skipped. If true, only custom callbacks are used.</td>
     </tr>
-    {% include cfg/target-latest.html %}
+    {% include v6/cfg/target-latest.html %}
     <tr>
         <td>outOfOrder</td>
         <td>NO</td>
@@ -183,8 +183,8 @@ Prints the details and status information about all the migrations.
                 it will be applied too instead of being ignored.</p>
         </td>
     </tr>
-    {% include cfg/workingDirectory.html %}
-    {% include cfg/licenseKey.html %}
+    {% include v6/cfg/workingDirectory.html %}
+    {% include v6/cfg/licenseKey.html %}
     </tbody>
 </table>
 

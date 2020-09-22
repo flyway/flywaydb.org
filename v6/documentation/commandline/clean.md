@@ -52,10 +52,10 @@ The schemas are cleaned in the order specified by the `schemas` property.
         <td></td>
         <td>The password to use to connect to the database</td>
     </tr>
-    {% include cfg/connectRetries.html %}
-    {% include cfg/initSql.html %}
-    {% include cfg/schemas.html %}
-    {% include cfg/color.html %}
+    {% include v6/cfg/connectRetries.html %}
+    {% include v6/cfg/initSql.html %}
+    {% include v6/cfg/schemas.html %}
+    {% include v6/cfg/color.html %}
     <tr id="jarDirs">
         <td>jarDirs</td>
         <td>NO</td>
@@ -67,7 +67,7 @@ The schemas are cleaned in the order specified by the `schemas` property.
         <td>NO</td>
         <td></td>
         <td>Comma-separated list of fully qualified class names of
-            <a href="/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback">Callback</a>
+            <a href="/v6/v6/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback">Callback</a>
             implementations to use to hook into the Flyway lifecycle.</td>
     </tr>
     <tr>
@@ -82,9 +82,9 @@ The schemas are cleaned in the order specified by the `schemas` property.
         <td>false</td>
         <td>Whether to disable clean. This is especially useful for production environments where running clean can be quite a career limiting move.</td>
     </tr>
-    {% include cfg/validateMigrationNaming.html %}
-    {% include cfg/workingDirectory.html %}
-    {% include cfg/licenseKey.html %}
+    {% include v6/cfg/validateMigrationNaming.html %}
+    {% include v6/cfg/workingDirectory.html %}
+    {% include v6/cfg/licenseKey.html %}
     </tbody>
 </table>
 
