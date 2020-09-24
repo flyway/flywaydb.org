@@ -273,6 +273,7 @@ Database: jdbc:h2:file:flyway.db (H2 1.3)
       "executionTime": 0
     }
   ],
+  "allSchemasEmpty": false,
   "flywayVersion": "7.0.0",
   "database": "testdb",
   "warnings": []
