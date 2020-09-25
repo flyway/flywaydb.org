@@ -189,6 +189,8 @@ flyway.migrate();
     instance (both locally and on AWS), Flyway will automatically use the JDBC url, user and password
     <a href="https://boxfuse.com/docs/databases#envvars">provided by Boxfuse</a>.</div>
 
+See [configuration](/documentation/configuration) for a full list of supported configuration parameters.
+
 ### JDBC Drivers
 
 You will need to include the relevant JDBC driver for your chosen database as a dependency in your Java project. 

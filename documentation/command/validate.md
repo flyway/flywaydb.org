@@ -15,6 +15,8 @@ This is very useful to detect accidental changes that may prevent you from relia
 
 Validate works by storing a checksum (CRC32 for SQL migrations) when a migration is executed. The validate mechanism checks if the migration locally still has the same checksum as the migration already executed in the database.
 
+See [configuration](/documentation/configuration/#validate) for validate specific configuration parameters.
+
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/command/undo">Undo <i class="fa fa-arrow-right"></i></a>
 </p>

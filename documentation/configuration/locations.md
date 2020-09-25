@@ -73,3 +73,7 @@ flyway {
     </locations>
 </configuration>
 ```
+
+## Related Reading
+
+- [Blog Post: Organising your migrations](/blog/organising-your-migrations)

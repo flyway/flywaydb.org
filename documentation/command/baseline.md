@@ -13,6 +13,8 @@ Baseline is for introducing Flyway to [existing databases](/documentation/existi
 at a specific version. This will cause [Migrate](/documentation/command/migrate) to ignore all migrations
 up to and including the baseline version. Newer migrations will then be applied as usual.
 
+See [configuration](/documentation/configuration/#baseline) for baseline specific configuration parameters.
+
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/command/repair">Repair <i class="fa fa-arrow-right"></i></a>
 </p>
