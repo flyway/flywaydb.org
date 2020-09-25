@@ -7,6 +7,15 @@ subtitle: Config Files
 
 Flyway supports loading configuration via config files.
 
+## Loading
+
+By default Flyway will load configuration files from the following locations:
+- <i>installDir<i>/conf/flyway.conf
+- <i>userhome<i>/flyway.conf
+- <i>workingDir<i>/flyway.conf
+
+Additionally you can make Flyway load other configurations using the [configFiles](/documentation/configuration/configFiles) configuration parameter.
+
 ## Structure
 
 Config files have the following structure:
@@ -39,7 +48,9 @@ If an environment variable isn't set, an empty value is assumed.
 
 ## Reference
 
-These are the settings supported via config files:
+See [configuration](/documentation/configuration) for a full list of supported configuration parameters.
+
+Here is a sample configuration file:
 
 ```properties
 # JDBC url to use to connect to the database
