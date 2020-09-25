@@ -27,7 +27,9 @@ flyway.validateMigrationNaming=true
 ```
 
 ### Environment Variable
-Not available
+```
+FLYWAY_VALIDATE_MIGRATION_NAMING=true
+```
 
 ### API
 ```
