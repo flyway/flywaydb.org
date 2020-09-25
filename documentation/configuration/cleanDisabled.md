@@ -1,5 +1,6 @@
 ---
 layout: documentation
+menu: configuration
 pill: cleanDisabled
 subtitle: flyway.cleanDisabled
 ---

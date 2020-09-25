@@ -1,5 +1,6 @@
 ---
 layout: documentation
+menu: configuration
 pill: resolvers
 subtitle: flyway.resolvers
 ---

@@ -1,5 +1,6 @@
 ---
 layout: documentation
+menu: configuration
 pill: outOfOrder
 subtitle: flyway.outOfOrder
 ---

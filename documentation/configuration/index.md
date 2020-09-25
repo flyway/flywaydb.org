@@ -1,5 +1,7 @@
 ---
 layout: documentation
+menu: configuration
+menu: configuration
 pill: configuration
 subtitle: configuration
 ---

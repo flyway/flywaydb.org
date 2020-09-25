@@ -64,6 +64,9 @@ title: Documentation
                     <a href="/documentation/plugins/">Community Plugins</a></li>
                     <li class="nav-header">Configuration</li>
                     <li
+                    {% if page.menu == 'configuration' %} class="active" {% endif %}>
+                    <a href="/documentation/configuration">Parameters</a></li>
+                    <li
                     {% if page.menu == 'envvars' %} class="active" {% endif %}>
                     <a href="/documentation/envvars">Environment Variables</a></li>
                     <li

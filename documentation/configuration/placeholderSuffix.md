@@ -1,5 +1,6 @@
 ---
 layout: documentation
+menu: configuration
 pill: placeholderSuffix
 subtitle: flyway.placeholderSuffix
 ---

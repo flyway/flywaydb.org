@@ -1,5 +1,6 @@
 ---
 layout: documentation
+menu: configuration
 pill: oracleSqlPlus
 subtitle: flyway.oracleSqlPlus
 ---

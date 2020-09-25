@@ -1,5 +1,6 @@
 ---
 layout: documentation
+menu: configuration
 pill: placeholderPrefix
 subtitle: flyway.placeholderPrefix
 ---

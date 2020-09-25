@@ -1,5 +1,6 @@
 ---
 layout: documentation
+menu: configuration
 pill: ignorePendingMigrations
 subtitle: flyway.ignorePendingMigrations
 ---

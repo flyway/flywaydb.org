@@ -1,5 +1,6 @@
 ---
 layout: documentation
+menu: configuration
 pill: encoding
 subtitle: flyway.encoding
 ---
