@@ -26,7 +26,7 @@ flyway.placeholderSuffix=$$
 
 ### Environment Variable
 ```
-FLYWAY_PLACEHOLDER_PREFIX=$$
+FLYWAY_PLACEHOLDER_SUFFIX=$$
 ```
 
 ### API

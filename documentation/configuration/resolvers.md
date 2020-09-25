@@ -25,7 +25,7 @@ flyway.resolvers=my.resolver.MigrationResolver
 
 ### Environment Variable
 ```
-FLYWAY_PLACEHOLDER_PREFIX=my.resolver.MigrationResolver
+FLYWAY_RESOLVERS=my.resolver.MigrationResolver
 ```
 
 ### API

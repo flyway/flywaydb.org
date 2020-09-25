@@ -7,7 +7,7 @@ subtitle: flyway.skipDefaultResolvers
 # skipDefaultResolvers
 
 ## Description
-Whether default built-in resolvers (sql and jdbc) should be skipped. If true, only [custom resolvers](/documentation/configuration/resolvers) are used.
+Whether default built-in resolvers (sql and jdbc) should be skipped. If `true`, only [custom resolvers](/documentation/configuration/resolvers) are used.
 
 ## Default
 false
@@ -26,7 +26,7 @@ flyway.skipDefaultResolvers=true
 
 ### Environment Variable
 ```
-FLYWAY_skipDefaultResolvers=true
+FLYWAY_SKIP_DEFAULT_RESOLVERS=true
 ```
 
 ### API
