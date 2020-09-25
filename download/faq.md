@@ -80,7 +80,6 @@ With schema we mean the container for database objects commonly referred to as "
 - HSQLDB: `SCHEMA`
 - Derby: `SCHEMA`
 - Snowflake: `SCHEMA`
-- Google Cloud Spanner: `DATABASE` (no schema support)
 - SQLite: `DATABASE` (no schema support)
 - Firebird: `DATABASE` (no schema support)
 
