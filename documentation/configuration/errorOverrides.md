@@ -31,6 +31,8 @@ Example 2: to force SQL Server PRINT messages to be displayed as info messages (
 
 Example 3: to force all errors with SQL error code 123 to be treated as warnings instead, the following errorOverride can be used: <code>*:123:W</code>
 
+See [errorOverrides](/documentation/erroroverrides) for more details.
+
 ## Usage
 
 ### Commandline
