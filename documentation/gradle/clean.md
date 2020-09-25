@@ -15,71 +15,7 @@ Drops all objects (tables, views, procedures, triggers, ...) in the configured s
 
 ## Configuration
 
-<table class="table table-bordered table-hover">
-    <thead>
-    <tr>
-        <th>Parameter</th>
-        <th>Required</th>
-        <th>Default</th>
-        <th>Description</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td>url</td>
-        <td>YES</td>
-        <td></td>
-        <td>The jdbc url to use to connect to the database</td>
-    </tr>
-    <tr>
-        <td>driver</td>
-        <td>NO</td>
-        <td><i>Auto-detected based on url</i></td>
-        <td>The fully qualified classname of the jdbc driver to use
-            to connect to the database
-        </td>
-    </tr>
-    <tr>
-        <td>user</td>
-        <td>NO</td>
-        <td></td>
-        <td>The user to use to connect to the database</td>
-    </tr>
-    <tr>
-        <td>password</td>
-        <td>NO</td>
-        <td></td>
-        <td>The password to use to connect to the database</td>
-    </tr>
-    {% include cfg/connectRetries.html %}
-    {% include cfg/initSql.html %}
-    {% include cfg/schemas.html %}
-    <tr>
-        <td>callbacks</td>
-        <td>NO</td>
-        <td></td>
-        <td>Fully qualified class names of
-            <a href="/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback">Callback</a>
-            implementations to use to hook into the Flyway lifecycle.</td>
-    </tr>
-    <tr>
-        <td>skipDefaultCallbacks</td>
-        <td>NO</td>
-        <td>false</td>
-        <td>Whether default built-in callbacks (sql) should be skipped. If true, only custom callbacks are used.</td>
-    </tr>
-    <tr>
-        <td>cleanDisabled</td>
-        <td>NO</td>
-        <td>false</td>
-        <td>Whether to disable clean. This is especially useful for production environments where running clean can be quite a career limiting move.</td>
-    </tr>
-    {% include cfg/jdbcProperties.html %}
-    {% include cfg/validateMigrationNaming.html %}
-    {% include cfg/workingDirectory.html %}
-    {% include cfg/licenseKey.html %}
-    </tbody>
-</table>
+See [configuration](/documentation/configuration) for a full list of supported configuration parameters.
 
 ## Sample configuration
 
