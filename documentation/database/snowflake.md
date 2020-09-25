@@ -83,5 +83,5 @@ location of the private key:
 - *None*
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/database/spanner">Google Cloud Spanner <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/database/sqlite">SQLite <i class="fa fa-arrow-right"></i></a>
 </p>
