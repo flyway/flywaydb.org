@@ -4,7 +4,7 @@ pill: callbacks
 subtitle: flyway.callbacks
 ---
 
-# callbacks
+# Callbacks
 
 ## Description
 Comma-separated list of fully qualified class names of [Callback](/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback) implementations to use to hook into the Flyway lifecycle, or packages to scan for these classes. Ensure the class or package is available on the classpath (see [Adding to the classpath](/documentation/addingToTheClasspath)).

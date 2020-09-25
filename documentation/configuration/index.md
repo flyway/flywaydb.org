@@ -99,3 +99,6 @@ If using maven, config parameters can be set in the plugin configuration block, 
 - [placeholderReplacement](/documentation/configuration/placeholderReplacement)
 - [placeholders](/documentation/configuration/placeholders)
 - [placeholderSuffix](/documentation/configuration/placeholderSuffix)
+
+### Command Line
+- [color](/documentation/configuration/cliColor)
