@@ -40,13 +40,16 @@ flyway.configure()
 ### Gradle
 ```
 flyway {
-    schemas = 'schema1,schema2'
+    schemas = ['schema1', 'schema2']
 }
 ```
 
 ### Maven
 ```
 <configuration>
-    <schemas>schema1,schema2</schemas>
+    <schemas>
+        <schema>schema1</schema>
+        <schema>schema2</schema>
+    </schemas>
 </configuration>
 ```

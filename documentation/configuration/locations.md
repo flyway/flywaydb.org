@@ -60,13 +60,15 @@ flyway.configure()
 ### Gradle
 ```
 flyway {
-    locations = 'filesystem:./sql'
+    locations = ['filesystem:./sql']
 }
 ```
 
 ### Maven
 ```
 <configuration>
-    <locations>filesystem:./sql</locations>
+    <locations>
+        <location>filesystem:./sql</location>
+    </locations>
 </configuration>
 ```
