@@ -8,7 +8,7 @@ subtitle: flyway.defaultSchema
 # Default Schema
 
 ## Description
-The default schema managed by Flyway. This schema will be the one containing the schema history table.
+The default schema managed by Flyway. This schema will be the one containing the [schema history table](/documentation/migrations#schema-history-table).
 
 This schema will also be the default for the database connection (provided the database supports this concept).
 

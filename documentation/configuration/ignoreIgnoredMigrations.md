@@ -8,7 +8,7 @@ subtitle: flyway.ignoreIgnoredMigrations
 # Ignore Ignored Migrations
 
 ## Description
-Ignore ignored migrations when reading the schema history table. 
+Ignore ignored migrations when reading the [schema history table](/documentation/migrations#schema-history-table). 
 
 These are migrations that were added in between already migrated migrations in this version. 
 
