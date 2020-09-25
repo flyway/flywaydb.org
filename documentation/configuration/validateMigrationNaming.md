@@ -34,7 +34,7 @@ FLYWAY_VALIDATE_MIGRATION_NAMING=true
 
 ### API
 ```
-flyway.configure()
+Flyway.configure()
     .validateMigrationNaming(true)
     .load()
 ```

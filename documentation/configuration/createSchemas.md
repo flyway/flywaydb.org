@@ -32,7 +32,7 @@ FLYWAY_SCHEMAS=false
 
 ### API
 ```
-flyway.configure()
+Flyway.configure()
     .createSchemas(false)
     .load()
 ```

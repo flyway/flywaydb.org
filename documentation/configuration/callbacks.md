@@ -34,7 +34,7 @@ FLYWAY_CALLBACKS=my.callback.FlywayCallback,my.package.to.scan
 
 ### API
 ```
-flyway.configure()
+Flyway.configure()
     .callbacks("my.callback.FlywayCallback", "my.package.to.scan")
     .load()
 ```

@@ -34,7 +34,7 @@ FLYWAY_SQL_MIGRATION_PREFIX=M
 
 ### API
 ```
-flyway.configure()
+Flyway.configure()
     .sqlMigrationPrefix("M")
     .load()
 ```

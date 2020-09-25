@@ -32,7 +32,7 @@ FLYWAY_CLEAN_DISABLED=true
 
 ### API
 ```
-flyway.configure()
+Flyway.configure()
     .cleanDisabled(true)
     .load()
 ```

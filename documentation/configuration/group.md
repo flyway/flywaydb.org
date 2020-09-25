@@ -32,7 +32,7 @@ FLYWAY_GROUP=true
 
 ### API
 ```
-flyway.configure()
+Flyway.configure()
     .group(true)
     .load()
 ```

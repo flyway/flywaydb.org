@@ -32,7 +32,7 @@ FLYWAY_ENCODING=UTF-16
 
 ### API
 ```
-flyway.configure()
+Flyway.configure()
     .encoding("UTF-16")
     .load()
 ```

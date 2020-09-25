@@ -31,7 +31,7 @@ FLYWAY_URL=jdbc:h2:mem;flyway_db
 
 ### API
 ```
-flyway.configure()
+Flyway.configure()
     .url("jdbc:h2:mem;flyway_db")
     .load()
 ```

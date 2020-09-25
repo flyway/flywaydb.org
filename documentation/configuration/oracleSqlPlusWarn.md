@@ -33,7 +33,7 @@ FLYWAY_ORACLE_SQLPLUS_WARN=true
 
 ### API
 ```
-flyway.configure()
+Flyway.configure()
     .oracleSqlplusWarn(true)
     .load()
 ```

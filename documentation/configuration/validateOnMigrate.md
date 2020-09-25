@@ -32,7 +32,7 @@ FLYWAY_VALIDATE_ON_MIGRATE=false
 
 ### API
 ```
-flyway.configure()
+Flyway.configure()
     .validateOnMigrate(false)
     .load()
 ```

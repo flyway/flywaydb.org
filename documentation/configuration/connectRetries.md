@@ -32,7 +32,7 @@ FLYWAY_CONNECT_RETRIES=50
 
 ### API
 ```
-flyway.configure()
+Flyway.configure()
     .connectRetries(50)
     .load()
 ```

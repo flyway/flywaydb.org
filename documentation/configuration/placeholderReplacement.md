@@ -32,7 +32,7 @@ FLYWAY_PLACEHOLDER_REPLACEMENT=false
 
 ### API
 ```
-flyway.configure()
+Flyway.configure()
     .placeholderReplacement(false)
     .load()
 ```

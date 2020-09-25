@@ -30,7 +30,7 @@ FLYWAY_LICENSE_KEY=FL01...
 
 ### API
 ```
-flyway.configure()
+Flyway.configure()
     .licenseKey("FL01...")
     .load()
 ```

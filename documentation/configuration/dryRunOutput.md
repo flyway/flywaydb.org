@@ -37,7 +37,7 @@ FLYWAY_DRYRUN_OUTPUT=/my/output/file.sql
 
 ### API
 ```
-flyway.configure()
+Flyway.configure()
     .dryRunOutput("/my/output/file.sql")
     .load()
 ```

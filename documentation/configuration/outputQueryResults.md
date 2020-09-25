@@ -33,7 +33,7 @@ FLYWAY_OUTPUT_QUERY_RESULTS=false
 
 ### API
 ```
-flyway.configure()
+Flyway.configure()
     .outputQueryResults(false)
     .load()
 ```

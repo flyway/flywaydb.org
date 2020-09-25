@@ -31,7 +31,7 @@ FLYWAY_TABLESPACE=xyz
 
 ### API
 ```
-flyway.configure()
+Flyway.configure()
     .tablespace("xyz")
     .load()
 ```

@@ -32,7 +32,7 @@ FLYWAY_SKIP_DEFAULT_RESOLVERS=true
 
 ### API
 ```
-flyway.configure()
+Flyway.configure()
     .skipDefaultResolvers(true)
     .load()
 ```

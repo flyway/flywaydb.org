@@ -34,7 +34,7 @@ FLYWAY_IGNORE_FUTURE_MIGRATIONS=true
 
 ### API
 ```
-flyway.configure()
+Flyway.configure()
     .ignoreFutureMigrations(true)
     .load()
 ```

@@ -36,7 +36,7 @@ FLYWAY_DRIVER=com.microsoft.sqlserver.jdbc.SQLServerDriver
 
 ### API
 ```
-flyway.configure()
+Flyway.configure()
     .driver("com.microsoft.sqlserver.jdbc.SQLServerDriver")
     .load()
 ```

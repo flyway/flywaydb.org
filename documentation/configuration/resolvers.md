@@ -31,7 +31,7 @@ FLYWAY_RESOLVERS=my.resolver.MigrationResolver
 
 ### API
 ```
-flyway.configure()
+Flyway.configure()
     .resolvers("my.resolver.MigrationResolver")
     .load()
 ```

@@ -34,7 +34,7 @@ FLYWAY_DEFAULT_SCHEMA=schema2
 
 ### API
 ```
-flyway.configure()
+Flyway.configure()
     .defaultSchema("schema2")
     .load()
 ```

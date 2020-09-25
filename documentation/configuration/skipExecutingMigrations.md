@@ -35,7 +35,7 @@ FLYWAY_SKIP_EXECUTING_MIGRATIONS=true
 
 ### API
 ```
-flyway.configure()
+Flyway.configure()
     .skipExecutingMigrations(true)
     .load()
 ```

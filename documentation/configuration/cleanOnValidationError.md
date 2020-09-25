@@ -36,7 +36,7 @@ FLYWAY_CLEAN_ON_VALIDATION_ERROR=true
 
 ### API
 ```
-flyway.configure()
+Flyway.configure()
     .cleanOnValidationError(true)
     .load()
 ```

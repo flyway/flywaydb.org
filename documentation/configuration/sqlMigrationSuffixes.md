@@ -36,7 +36,7 @@ FLYWAY_SQL_MIGRATION_SUFFIXES=.sql,.pkg,.pkb
 
 ### API
 ```
-flyway.configure()
+Flyway.configure()
     .sqlMigrationSuffixes(".sql,.pkg,.pkb")
     .load()
 ```

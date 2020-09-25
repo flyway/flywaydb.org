@@ -32,7 +32,7 @@ FLYWAY_BASELINE_VERSION=0.0
 
 ### API
 ```
-flyway.configure()
+Flyway.configure()
     .baselineVersion("0.0")
     .load()
 ```

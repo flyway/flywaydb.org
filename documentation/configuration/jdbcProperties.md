@@ -35,7 +35,7 @@ FLYWAY_JDBC_PROPERTIES_ACCESSTOKEN=access-token
 Map<String, String> properties = new HashMap<>();
 properties.put("accessToken", "access-token");
 
-flyway.configure()
+Flyway.configure()
     .jdbcProperties(properties)
     .load()
 ```

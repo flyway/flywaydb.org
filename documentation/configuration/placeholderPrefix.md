@@ -32,7 +32,7 @@ FLYWAY_PLACEHOLDER_PREFIX=$$
 
 ### API
 ```
-flyway.configure()
+Flyway.configure()
     .placeholderPrefix("$$")
     .load()
 ```

@@ -32,7 +32,7 @@ FLYWAY_CHERRY_PICK=2.0
 
 ### API
 ```
-flyway.configure()
+Flyway.configure()
     .cherryPick("2.0")
     .load()
 ```

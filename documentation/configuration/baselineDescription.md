@@ -32,7 +32,7 @@ FLYWAY_BASELINE_DESCRIPTION=Baseline
 
 ### API
 ```
-flyway.configure()
+Flyway.configure()
     .baselineDescription("Baseline")
     .load()
 ```

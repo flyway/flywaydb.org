@@ -36,7 +36,7 @@ FLYWAY_TABLE=my_schema_history_table
 
 ### API
 ```
-flyway.configure()
+Flyway.configure()
     .table("my_schema_history_table")
     .load()
 ```

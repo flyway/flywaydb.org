@@ -38,7 +38,7 @@ FLYWAY_TARGET=2.0
 
 ### API
 ```
-flyway.configure()
+Flyway.configure()
     .target("2.0")
     .load()
 ```

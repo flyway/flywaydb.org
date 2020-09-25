@@ -37,7 +37,7 @@ FLYWAY_UNDO_SQL_MIGRATION_PREFIX=B
 
 ### API
 ```
-flyway.configure()
+Flyway.configure()
     .undoSqlMigrationPrefix("B")
     .load()
 ```

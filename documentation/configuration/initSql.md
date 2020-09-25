@@ -31,7 +31,7 @@ FLYWAY_INIT_SQL=ALTER SESSION SET NLS_LANGUAGE='ENGLISH';
 
 ### API
 ```
-flyway.configure()
+Flyway.configure()
     .initSql("ALTER SESSION SET NLS_LANGUAGE='ENGLISH';")
     .load()
 ```

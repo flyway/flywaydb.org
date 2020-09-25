@@ -31,7 +31,7 @@ FLYWAY_PASSWORD=mysecretpassword
 
 ### API
 ```
-flyway.configure()
+Flyway.configure()
     .password("mysecretpassword")
     .load()
 ```

@@ -34,7 +34,7 @@ FLYWAY_OUT_OF_ORDER=true
 
 ### API
 ```
-flyway.configure()
+Flyway.configure()
     .outOfOrder(true)
     .load()
 ```

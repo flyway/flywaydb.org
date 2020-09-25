@@ -32,7 +32,7 @@ FLYWAY_INSTALLED_BY=ci-pipeline
 
 ### API
 ```
-flyway.configure()
+Flyway.configure()
     .installedBy("ci-pipeline")
     .load()
 ```

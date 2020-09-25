@@ -32,7 +32,7 @@ FLYWAY_SKIP_DEFAULT_CALLBACKS=true
 
 ### API
 ```
-flyway.configure()
+Flyway.configure()
     .skipDefaultCallbacks(true)
     .load()
 ```

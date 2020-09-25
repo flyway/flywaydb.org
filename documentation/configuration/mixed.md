@@ -36,7 +36,7 @@ FLYWAY_MIXED=true
 
 ### API
 ```
-flyway.configure()
+Flyway.configure()
     .mixed(true)
     .load()
 ```

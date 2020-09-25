@@ -31,7 +31,7 @@ FLYWAY_USER=myuser
 
 ### API
 ```
-flyway.configure()
+Flyway.configure()
     .user("myuser")
     .load()
 ```

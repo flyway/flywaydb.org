@@ -34,7 +34,7 @@ FLYWAY_REPEATABLE_SQL_MIGRATION_PREFIX=A
 
 ### API
 ```
-flyway.configure()
+Flyway.configure()
     .repeatableSqlMigrationPrefix("A")
     .load()
 ```

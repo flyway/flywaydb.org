@@ -52,7 +52,7 @@ FLYWAY_ERROR_OVERRIDES=STATE:12345:W
 
 ### API
 ```
-flyway.configure()
+Flyway.configure()
     .errorOverrides("STATE:12345:W")
     .load()
 ```

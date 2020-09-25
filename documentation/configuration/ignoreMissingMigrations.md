@@ -38,7 +38,7 @@ FLYWAY_IGNORE_MISSING_MIGRATIONS=true
 
 ### API
 ```
-flyway.configure()
+Flyway.configure()
     .ignoreMissingMigrations(true)
     .load()
 ```

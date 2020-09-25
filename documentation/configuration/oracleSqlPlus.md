@@ -33,7 +33,7 @@ FLYWAY_ORACLE_SQLPLUS=true
 
 ### API
 ```
-flyway.configure()
+Flyway.configure()
     .oracleSqlplus(true)
     .load()
 ```

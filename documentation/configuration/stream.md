@@ -35,7 +35,7 @@ FLYWAY_STREAM=true
 
 ### API
 ```
-flyway.configure()
+Flyway.configure()
     .stream(true)
     .load()
 ```

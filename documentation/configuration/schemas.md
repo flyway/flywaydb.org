@@ -33,7 +33,7 @@ FLYWAY_SCHEMAS=schema1,schema2
 
 ### API
 ```
-flyway.configure()
+Flyway.configure()
     .schemas("schema1,schema2")
     .load()
 ```

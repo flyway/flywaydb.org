@@ -37,7 +37,7 @@ FLYWAY_BATCH=true
 
 ### API
 ```
-flyway.configure()
+Flyway.configure()
     .batch(true)
     .load()
 ```

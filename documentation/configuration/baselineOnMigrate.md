@@ -36,7 +36,7 @@ FLYWAY_BASELINE_ON_MIGRATE=true
 
 ### API
 ```
-flyway.configure()
+Flyway.configure()
     .baselineOnMigrate(true)
     .load()
 ```

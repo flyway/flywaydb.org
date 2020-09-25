@@ -53,7 +53,7 @@ FLYWAY_LOCATIONS=filesystem:./sql
 
 ### API
 ```
-flyway.configure()
+Flyway.configure()
     .locations("filesystem:./sql")
     .load()
 ```

@@ -34,7 +34,7 @@ FLYWAY_SQL_MIGRATION_SEPARATOR=-
 
 ### API
 ```
-flyway.configure()
+Flyway.configure()
     .sqlMigrationSeparator("-")
     .load()
 ```

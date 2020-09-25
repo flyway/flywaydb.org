@@ -34,7 +34,7 @@ FLYWAY_IGNORE_PENDING_MIGRATIONS=true
 
 ### API
 ```
-flyway.configure()
+Flyway.configure()
     .ignorePendingMigrations(true)
     .load()
 ```
