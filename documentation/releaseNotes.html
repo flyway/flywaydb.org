@@ -8,35 +8,43 @@ subtitle: Release Notes
 <p>Thank you all for reporting all these issues and contributing fixes!</p>
 
 <div class="release">
-    <h2 id="6.5.7">Flyway 6.5.7 (2020-09-22)</h2>
+    <h2 id="7.0.0">Flyway 7.0.0 (2020-09-28)</h2>
 
     <h3>Changes</h3>
     <ul>
-        {% include issue.html id="2936" title="Update postgres driver version because of XXE vulnerability" %}
+        <li>Introduce Flyway Teams edition</li>
+        <li>Make validate messages suggest actions</li>
+    </ul>
+
+    <h3>New features</h3>
+    <ul>
+        {% include issue.html id="2507" title="Add machine readable output for all commands" %}
+        {% include issue.html id="2780" title="Add jdbc-secretsmanager support" %}
+        <li>Oracle SQL*Plus support for <code>glogin.sql</code></li>
+        <li>Make cherry pick work for repair</li>
     </ul>
 
     <h3>Bug fixes</h3>
     <ul>
-        {% include issue.html id="2924" title="Improve mysql block handling further" %}
+        {% include issue.html id="2208" title="clean assemblies at the database level" %}
+        {% include issue.html id="2924" title="Improve mysql parser block handling" %}
+        {% include issue.html id="2926" title="Reapply java repeatables when checksum changes from null" %}
+        {% include issue.html id="2928" title="Fix parser error when using repeated placeholders" %}
+        {% include issue.html id="2940" title="Fix sql server parser error" %}
+        {% include issue.html id="2448" title="Drop extensions in PostgreSQL when running clean" %}
+        {% include issue.html id="2736" title="Reintroduce TestContainers support" %}
+        {% include issue.html id="2872" title="Batch SQL doesn't error out" %}
+        {% include issue.html id="2917" title="Resolve maven configuration files relatively" %}
+        <li>Make dry run work for repair</li>
+        <li>Add envvar support for validate migration naming</li>
     </ul>
 
     <p>
-        Thanks to amccarthy and sstrang for reporting these issues and/or submitting pull requests.
+        Read about more features that were released in <a href="/documentation/releaseNotes#7.0.0-beta1">the beta</a>.
     </p>
-</div>
-
-<div class="release">
-    <h2 id="6.5.6">Flyway 6.5.6 (2020-09-16)</h2>
-
-    <h3>Bug fixes</h3>
-    <ul>
-        {% include issue.html id="2924" title="Improve mysql block handling" %}
-        {% include issue.html id="2928" title="Fix parser bug when using multiple placeholders of the same name" %}
-        {% include issue.html id="2872" title="Make batches errors fail fast" %}
-    </ul>
 
     <p>
-        Thanks to amccarthy, hauntingEcho, and sdchhabaria for reporting these issues.
+        Thanks to AigleeK, JeanRev, LuisUrrutia, amccarthy, belugabehr, cdalexndr, hauntingEcho, lbreuss, mschirmacher, sdchhabaria, stankiewicz, will-sargent-eero, and yarhamjohn for reporting these issues.
     </p>
 </div>
 
@@ -96,6 +104,39 @@ subtitle: Release Notes
 
     <p>
         Thanks to JonLally, KrzysztofMadejski, Me1gireesh, PetterKraabol, belugabehr, fkoehler, hdgarrood, leoherbie, nelvadas, qoomon, stankiewicz, olavloite, laurentgrangier, jitu1983, and radzimir for reporting these issues and/or submitting pull requests.
+    </p>
+</div>
+
+<div class="release">
+    <h2 id="6.5.7">Flyway 6.5.7 (2020-09-22)</h2>
+
+    <h3>Changes</h3>
+    <ul>
+        {% include issue.html id="2936" title="Update postgres driver version because of XXE vulnerability" %}
+    </ul>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        {% include issue.html id="2924" title="Improve mysql block handling further" %}
+    </ul>
+
+    <p>
+        Thanks to amccarthy and sstrang for reporting these issues and/or submitting pull requests.
+    </p>
+</div>
+
+<div class="release">
+    <h2 id="6.5.6">Flyway 6.5.6 (2020-09-16)</h2>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        {% include issue.html id="2924" title="Improve mysql block handling" %}
+        {% include issue.html id="2928" title="Fix parser bug when using multiple placeholders of the same name" %}
+        {% include issue.html id="2872" title="Make batches errors fail fast" %}
+    </ul>
+
+    <p>
+        Thanks to amccarthy, hauntingEcho, and sdchhabaria for reporting these issues.
     </p>
 </div>
 
