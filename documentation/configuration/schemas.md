@@ -1,0 +1,56 @@
+---
+layout: documentation
+menu: configuration
+pill: schemas
+subtitle: flyway.schemas
+---
+
+# Schemas
+
+## Description
+Comma-separated case-sensitive list of schemas managed by Flyway. 
+
+Flyway will attempt to create these schemas if they do not already exist, and will clean them in the order of this list. If Flyway created them, then the schemas themselves will be dropped when cleaning.
+
+If [defaultSchema](/documentation/configuration/defaultSchema) is not specified, the first schema in this list also acts as the default schema. 
+
+## Usage
+
+### Commandline
+```
+./flyway -schemas="schema1,schema2" info
+```
+
+### Configuration File
+```
+flyway.schemas=schema1,schema2
+```
+
+### Environment Variable
+```
+FLYWAY_SCHEMAS=schema1,schema2
+```
+
+### API
+```
+Flyway.configure()
+    .schemas("schema1,schema2")
+    .load()
+```
+
+### Gradle
+```
+flyway {
+    schemas = ['schema1', 'schema2']
+}
+```
+
+### Maven
+```
+<configuration>
+    <schemas>
+        <schema>schema1</schema>
+        <schema>schema2</schema>
+    </schemas>
+</configuration>
+```
