@@ -16,30 +16,30 @@ Note: Only certain jdbc drivers are packaged with flyway. If your driver is not 
 
 ### Commandline
 ```
-./flyway -url=jdbc:h2:mem;flyway_db info
+./flyway -url=jdbc:h2:mem:flyway_db info
 ```
 
 ### Configuration File
 ```
-flyway.url=jdbc:h2:mem;flyway_db
+flyway.url=jdbc:h2:mem:flyway_db
 ```
 
 ### Environment Variable
 ```
-FLYWAY_URL=jdbc:h2:mem;flyway_db
+FLYWAY_URL=jdbc:h2:mem:flyway_db
 ```
 
 ### API
 ```
 Flyway.configure()
-    .url("jdbc:h2:mem;flyway_db")
+    .url("jdbc:h2:mem:flyway_db")
     .load()
 ```
 
 ### Gradle
 ```
 flyway {
-    url = 'jdbc:h2:mem;flyway_db'
+    url = 'jdbc:h2:mem:flyway_db'
 }
 ```
 
