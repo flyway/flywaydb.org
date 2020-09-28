@@ -26,26 +26,27 @@ If using maven, config parameters can be set in the plugin configuration block, 
 
 ## Parameters
 
-### Basic
+### Connection
 - [url](/documentation/configuration/url)
 - [user](/documentation/configuration/user)
 - [password](/documentation/configuration/password)
-- [locations](/documentation/configuration/locations)
 - [driver](/documentation/configuration/driver)
+- [connectRetries](/documentation/configuration/connectRetries)
+- [initSql](/documentation/configuration/initSql)
+- [jdbcProperties](/documentation/configuration/jdbcProperties) {% include teams.html %}
+
+### General
+
+- [locations](/documentation/configuration/locations)
 - [callbacks](/documentation/configuration/callbacks)
 - [configFiles](/documentation/configuration/configFiles)
 - [configFileEncoding](/documentation/configuration/configFileEncoding)
-
-### Advanced
-- [connectRetries](/documentation/configuration/connectRetries)
 - [encoding](/documentation/configuration/encoding)
 - [group](/documentation/configuration/group)
-- [initSql](/documentation/configuration/initSql)
 - [installedBy](/documentation/configuration/installedBy)
 - [jarDirs](/documentation/configuration/jarDirs)
 - [mixed](/documentation/configuration/mixed)
 - [outOfOrder](/documentation/configuration/outOfOrder)
-- [resolvers](/documentation/configuration/resolvers)
 - [skipDefaultCallbacks](/documentation/configuration/skipDefaultCallbacks)
 - [skipDefaultResolvers](/documentation/configuration/skipDefaultResolvers)
 - [table](/documentation/configuration/table)
@@ -54,21 +55,14 @@ If using maven, config parameters can be set in the plugin configuration block, 
 - [validateMigrationNaming](/documentation/configuration/validateMigrationNaming)
 - [validateOnMigrate](/documentation/configuration/validateOnMigrate)
 - [workingDirectory](/documentation/configuration/workingDirectory)
-
-### Flyway Teams
-{% include teams.html %}
-- [licenseKey](/documentation/configuration/licenseKey)
-- [cherryPick](/documentation/configuration/cherryPick)
-- [dryRunOutput](/documentation/configuration/dryRunOutput)
-- [errorOverrides](/documentation/configuration/errorOverrides)
-- [jdbcProperties](/documentation/configuration/jdbcProperties)
-- [batch](/documentation/configuration/batch)
-- [oracleSqlPlus](/documentation/configuration/oracleSqlPlus)
-- [oracleSqlPlusWarn](/documentation/configuration/oracleSqlPlusWarn)
-- [outputQueryResults](/documentation/configuration/outputQueryResults)
-- [skipExecutingMigrations](/documentation/configuration/skipExecutingMigrations)
-- [stream](/documentation/configuration/stream)
-- [undoSqlMigrationPrefix](/documentation/configuration/undoSqlMigrationPrefix)
+- [licenseKey](/documentation/configuration/licenseKey) {% include teams.html %}
+- [cherryPick](/documentation/configuration/cherryPick) {% include teams.html %}
+- [dryRunOutput](/documentation/configuration/dryRunOutput) {% include teams.html %}
+- [errorOverrides](/documentation/configuration/errorOverrides) {% include teams.html %}
+- [batch](/documentation/configuration/batch) {% include teams.html %}
+- [outputQueryResults](/documentation/configuration/outputQueryResults) {% include teams.html %}
+- [skipExecutingMigrations](/documentation/configuration/skipExecutingMigrations) {% include teams.html %}
+- [stream](/documentation/configuration/stream) {% include teams.html %}
 
 ### Schema
 - [schemas](/documentation/configuration/schemas)
@@ -90,11 +84,13 @@ If using maven, config parameters can be set in the plugin configuration block, 
 - [ignoreMissingMigrations](/documentation/configuration/ignoreMissingMigrations)
 - [ignorePendingMigrations](/documentation/configuration/ignorePendingMigrations)
 
-### Migration
+### Migrations
+- [resolvers](/documentation/configuration/resolvers)
 - [repeatableSqlMigrationPrefix](/documentation/configuration/repeatableSqlMigrationPrefix)
 - [sqlMigrationPrefix](/documentation/configuration/sqlMigrationPrefix)
 - [sqlMigrationSeparator](/documentation/configuration/sqlMigrationSeparator)
 - [sqlMigrationSuffixes](/documentation/configuration/sqlMigrationSuffixes)
+- [undoSqlMigrationPrefix](/documentation/configuration/undoSqlMigrationPrefix) {% include teams.html %}
 
 ### Placeholders
 - [placeholderPrefix](/documentation/configuration/placeholderPrefix)
@@ -104,3 +100,7 @@ If using maven, config parameters can be set in the plugin configuration block, 
 
 ### Command Line
 - [color](/documentation/configuration/cliColor)
+
+### Oracle
+- [oracleSqlPlus](/documentation/configuration/oracleSqlPlus) {% include teams.html %}
+- [oracleSqlPlusWarn](/documentation/configuration/oracleSqlPlusWarn) {% include teams.html %}
