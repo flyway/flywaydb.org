@@ -86,7 +86,7 @@ INSERT INTO ${tableName} (name) VALUES ('Mr. T');</pre>
 In addition to the regular Oracle SQL syntax, Flyway Teams also comes with support for Oracle 
 SQL*Plus commands.
 
-This support is disabled by default and must be activated using the [`oracle.sqlplus`](/documentation/commandline/migrate#oracle.sqlplus) flag.
+This support is disabled by default and must be activated using the [`oracle.sqlplus`](/documentation/configuration/oracle.sqlplus) flag.
 
 ### Supported commands
 
@@ -146,7 +146,7 @@ The short form of these commands is also supported.
 `login.sql` is a file used to execute statements before every script run, and is typically used to configure 
 the session in a consistent manner by calling SQL*Plus commands such as `SET FEEDBACK` and `SET DEFINE`.
 
-Flyway will look for this file in all the valid migration locations, and load it if present and [`oracle.sqlplus`](/documentation/commandline/migrate#oracle.sqlplus) is enabled.
+Flyway will look for this file in all the valid migration locations, and load it if present and [`oracle.sqlplus`](/documentation/configuration/oracle.sqlplus) is enabled.
 
 ### Output
 
