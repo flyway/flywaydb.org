@@ -141,12 +141,14 @@ The following commands are fully supported and can be used just like any regular
 
 The short form of these commands is also supported. 
 
-### Support for `login.sql`
+### Site Profiles (`glogin.sql`) & User Profiles (`login.sql`)
 
-`login.sql` is a file used to execute statements before every script run, and is typically used to configure 
+This feature allows you to set up your SQL * Plus environment to use the same settings with each session. It allows you to execute statements before every script run, and is typically used to configure 
 the session in a consistent manner by calling SQL*Plus commands such as `SET FEEDBACK` and `SET DEFINE`.
 
-Flyway will look for this file in all the valid migration locations, and load it if present and [`oracle.sqlplus`](/documentation/configuration/oracle.sqlplus) is enabled.
+Flyway will look for `login.sql` in all the valid migration locations, and load it if present. `glogin.sql` will be loaded from $ORACLE_HOME/sqlplus/admin/glogin.sql in UNIX, and ORACLE_HOME\sqlplus\admin\glogin.sql.
+
+Profiles are only loaded when [`oracle.sqlplus`](/documentation/configuration/oracle.sqlplus) is enabled.
 
 ### Output
 
