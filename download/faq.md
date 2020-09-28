@@ -108,13 +108,9 @@ company's VAT ID. After the VAT is removed the price will once again match the a
 
 Flyway subscriptions can be purchased for one, two or three year terms giving you the flexibility to choose the best term length for your needs.  By opting for the two or three year terms you are able to lock in the current annual rate for the duration of the subscription keeping you on the best possible rate moving forwards. 
 
-## Can I upgrade from Flyway Pro Edition to Flyway Enterprise Edition?
-
-Yes, contact us at **sales@flywaydb.org** so we can update your account and let you know how we will bill you.
-
 ## How can I pay and see my licenses?
 
-We can arrange an invoice for your Flyway licenses for both our Pro and Enterprise tiers.  You can register for a Redgate Account on our website [www.red-gate.com](https://www.red-gate.com) to give you full visibility and management of your licenses.
+We can arrange an invoice for your Flyway license for Teams tier. You can register for a Redgate Account on our website [www.red-gate.com](https://www.red-gate.com) to give you full visibility and management of your licenses.
 
 
 {% include trialpopup.html %}
