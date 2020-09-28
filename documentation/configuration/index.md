@@ -100,6 +100,7 @@ If using maven, config parameters can be set in the plugin configuration block, 
 
 ### Command Line
 - [color](/documentation/configuration/cliColor)
+- [edition](/documentation/configuration/edition)
 
 ### Oracle
 - [oracleSqlPlus](/documentation/configuration/oracleSqlPlus) {% include teams.html %}
