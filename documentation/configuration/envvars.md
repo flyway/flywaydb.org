@@ -12,7 +12,7 @@ This also possible using the Flyway API by calling the `envVars()` method on the
 See [configuration](/documentation/configuration/configuration) for a full list of supported configuration parameters.
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/ssl">SSL support <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/configuration/ssl">SSL support <i class="fa fa-arrow-right"></i></a>
 </p>
 
 {% include trialpopup.html %}
