@@ -10,7 +10,7 @@ subtitle: flyway.password
 ## Description
 The password to use to connect to the database
 
-This can be omitted if the password is baked into the [url](/documentation/configuration/configuration/url) (See [Sql Server](/documentation/database/sqlserver#windows-authentication) for an example), or if password is provided through another means (such as [aws secrets](/documentation/awsSecretsManager)).
+This can be omitted if the password is baked into the [url](/documentation/configuration/configuration/url) (See [Sql Server](/documentation/database/sqlserver#windows-authentication) for an example), or if password is provided through another means (such as [aws secrets](/documentation/configuration/awsSecretsManager)).
 
 ## Usage
 
