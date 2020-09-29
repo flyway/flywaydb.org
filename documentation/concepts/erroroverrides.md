@@ -110,5 +110,5 @@ to the `afterEachMigrateStatement`, `afterEachMigrateStatementError`, `afterEach
 `afterEachUndoStatementError` events.
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/dryruns">Dry Runs <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/concepts/dryruns">Dry Runs <i class="fa fa-arrow-right"></i></a>
 </p>

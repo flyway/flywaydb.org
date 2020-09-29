@@ -132,5 +132,5 @@ In this brief tutorial we saw how to
 - apply the changes after the dry run has been validated
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/dryruns">Read the Dry Runs documentation <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/concepts/dryruns">Read the Dry Runs documentation <i class="fa fa-arrow-right"></i></a>
 </p>

@@ -13,7 +13,7 @@ The file where to output the SQL statements of a migration dry run. If the file 
 
 Omit to use the default mode of executing the SQL statements directly against the database.
 
-See See [dry runs](/documentation/dryruns) for more details.
+See See [dry runs](/documentation/concepts/dryruns) for more details.
 
 ## Default
 <i>Execute directly against the database</i>
