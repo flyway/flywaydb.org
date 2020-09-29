@@ -46,7 +46,7 @@ subtitle: SQL Server
 
 ## SQL Script Syntax
 
-- [Standard SQL syntax](/documentation/migrations#sql-based-migrations#syntax) with statement delimiter **GO**
+- [Standard SQL syntax](/documentation/concepts/migrations#sql-based-migrations#syntax) with statement delimiter **GO**
 - T-SQL
 
 ### Compatibility
@@ -193,7 +193,7 @@ This is equivalent to the [process defined on this documentation page](https://d
 <code>WITH (MEMORY_OPTIMIZED = ON)</code>). You will need to override the `executeInTransaction` setting to be false,
 either on a [per-script basis](https://flywaydb.org/documentation/scriptconfigfiles) or globally.
 - SQL Server is unable to change the default schema for a session. Therefore, setting the `flyway.defaultSchema` property
-has no value, unless used for a [Placeholder](https://flywaydb.org/documentation/migrations#placeholder-replacement) in
+has no value, unless used for a [Placeholder](https://flywaydb.org/documentation/concepts/migrations#placeholder-replacement) in
 your sql scripts. If you decide to use `flyway.defaultSchema`, it also must exist in `flyway.schemas`.
 - By default, the flyway schema history table will try to write to the default schema for the database connection. You may
 specify which schema to write this table to by setting `flyway.schemas=custom_schema`, as the first entry will become the

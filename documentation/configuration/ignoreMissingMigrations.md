@@ -8,7 +8,7 @@ subtitle: flyway.ignoreMissingMigrations
 # Ignore Missing Migrations
 
 ## Description
-Ignore missing migrations when reading the [schema history table](/documentation/migrations#schema-history-table). 
+Ignore missing migrations when reading the [schema history table](/documentation/concepts/migrations#schema-history-table). 
 
 These are migrations that were performed by an older deployment of the application that are no longer available in this version. 
 

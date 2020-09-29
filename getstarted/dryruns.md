@@ -24,7 +24,7 @@ generates a single SQL file containing all statements it would have executed in 
 run. This SQL file can then be reviewed. If satisfactory, Flyway can then be instructed to migrate the database and
 all changes will be applied. Alternatively a separate tool of your choice can also be used to apply the dry run SQL file
 directly to the database without using Flyway. This SQL file also contains the necessary statements to create and update Flyway's
-[schema history table](/documentation/migrations#schema-history-table), ensuring that all schema changes are tracked the usual way.  
+[schema history table](/documentation/concepts/migrations#schema-history-table), ensuring that all schema changes are tracked the usual way.  
 
 ## Reviewing the status
 

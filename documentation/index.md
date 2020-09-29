@@ -32,9 +32,9 @@ title: Documentation
     <a href="/documentation/command/repair">Repair</a>.
 </p>
 
-<p>Migrations can be written in <a href="/documentation/migrations#sql-based-migrations">SQL</a>
+<p>Migrations can be written in <a href="/documentation/concepts/migrations#sql-based-migrations">SQL</a>
     (database-specific syntax (such as PL/SQL, T-SQL, ...) is supported)
-    or <a href="/documentation/migrations#java-based-migrations">Java</a>
+    or <a href="/documentation/concepts/migrations#java-based-migrations">Java</a>
     (for advanced data transformations or dealing with LOBs).</p>
 
 <p>It has a <a href="/documentation/commandline">Command-line client</a>.
@@ -71,5 +71,5 @@ title: Documentation
     <a href="/documentation/database/firebird">Firebird</a>.</p>
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/migrations">Migrations <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/concepts/migrations">Migrations <i class="fa fa-arrow-right"></i></a>
 </p>
