@@ -27,13 +27,13 @@ If using maven, config parameters can be set in the plugin configuration block, 
 ## Parameters
 
 ### Connection
-- [url](/documentation/configuration/url)
-- [user](/documentation/configuration/user)
-- [password](/documentation/configuration/password)
-- [driver](/documentation/configuration/driver)
-- [connectRetries](/documentation/configuration/connectRetries)
-- [initSql](/documentation/configuration/initSql)
-- [jdbcProperties](/documentation/configuration/jdbcProperties) {% include teams.html %}
+- [url](/documentation/configuration/configuration/url)
+- [user](/documentation/configuration/configuration/user)
+- [password](/documentation/configuration/configuration/password)
+- [driver](/documentation/configuration/configuration/driver)
+- [connectRetries](/documentation/configuration/configuration/connectRetries)
+- [initSql](/documentation/configuration/configuration/initSql)
+- [jdbcProperties](/documentation/configuration/configuration/jdbcProperties) {% include teams.html %}
 
 ### General
 
@@ -70,19 +70,19 @@ If using maven, config parameters can be set in the plugin configuration block, 
 - [schemas](/documentation/configuration/schemas)
 
 ### Baseline
-- [baselineDescription](/documentation/configuration/baselineDescription)
-- [baselineOnMigrate](/documentation/configuration/baselineOnMigrate)
-- [baselineVersion](/documentation/configuration/baselineVersion)
+- [baselineDescription](/documentation/configuration/configuration/baselineDescription)
+- [baselineOnMigrate](/documentation/configuration/configuration/baselineOnMigrate)
+- [baselineVersion](/documentation/configuration/configuration/baselineVersion)
 
 ### Clean
-- [cleanDisabled](/documentation/configuration/cleanDisabled)
-- [cleanOnValidationError](/documentation/configuration/cleanOnValidationError)
+- [cleanDisabled](/documentation/configuration/configuration/cleanDisabled)
+- [cleanOnValidationError](/documentation/configuration/configuration/cleanOnValidationError)
 
 ### Validate
-- [ignoreFutureMigrations](/documentation/configuration/ignoreFutureMigrations)
-- [ignoreIgnoredMigrations](/documentation/configuration/ignoreIgnoredMigrations)
-- [ignoreMissingMigrations](/documentation/configuration/ignoreMissingMigrations)
-- [ignorePendingMigrations](/documentation/configuration/ignorePendingMigrations)
+- [ignoreFutureMigrations](/documentation/configuration/configuration/ignoreFutureMigrations)
+- [ignoreIgnoredMigrations](/documentation/configuration/configuration/ignoreIgnoredMigrations)
+- [ignoreMissingMigrations](/documentation/configuration/configuration/ignoreMissingMigrations)
+- [ignorePendingMigrations](/documentation/configuration/configuration/ignorePendingMigrations)
 
 ### Migrations
 - [repeatableSqlMigrationPrefix](/documentation/configuration/repeatableSqlMigrationPrefix)
@@ -93,15 +93,15 @@ If using maven, config parameters can be set in the plugin configuration block, 
 - [undoSqlMigrationPrefix](/documentation/configuration/undoSqlMigrationPrefix) {% include teams.html %}
 
 ### Placeholders
-- [placeholderPrefix](/documentation/configuration/placeholderPrefix)
-- [placeholderReplacement](/documentation/configuration/placeholderReplacement)
-- [placeholders](/documentation/configuration/placeholders)
-- [placeholderSuffix](/documentation/configuration/placeholderSuffix)
+- [placeholderPrefix](/documentation/configuration/configuration/placeholderPrefix)
+- [placeholderReplacement](/documentation/configuration/configuration/placeholderReplacement)
+- [placeholders](/documentation/configuration/configuration/placeholders)
+- [placeholderSuffix](/documentation/configuration/configuration/placeholderSuffix)
 
 ### Command Line
-- [color](/documentation/configuration/cliColor)
-- [edition](/documentation/configuration/edition)
+- [color](/documentation/configuration/configuration/cliColor)
+- [edition](/documentation/configuration/configuration/edition)
 
 ### Oracle
-- [oracleSqlPlus](/documentation/configuration/oracleSqlPlus) {% include teams.html %}
-- [oracleSqlPlusWarn](/documentation/configuration/oracleSqlPlusWarn) {% include teams.html %}
+- [oracleSqlPlus](/documentation/configuration/configuration/oracleSqlPlus) {% include teams.html %}
+- [oracleSqlPlusWarn](/documentation/configuration/configuration/oracleSqlPlusWarn) {% include teams.html %}

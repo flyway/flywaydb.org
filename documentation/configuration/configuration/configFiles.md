@@ -10,7 +10,7 @@ subtitle: flyway.configFiles
 ## Description
 The [Flyway configuration](/documentation/configfiles) files to load.
 
-These files will be relative to the [Working Directory](/documentation/configuration/workingDirectory).
+These files will be relative to the [Working Directory](/documentation/configuration/configuration/workingDirectory).
 
 ## Usage
 

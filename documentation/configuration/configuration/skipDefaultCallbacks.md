@@ -8,7 +8,7 @@ subtitle: flyway.skipDefaultCallbacks
 # Skip Default Callbacks
 
 ## Description
-Whether default built-in callbacks (sql) should be skipped. If true, only [custom callbacks](/documentation/configuration/callbacks) are used.
+Whether default built-in callbacks (sql) should be skipped. If true, only [custom callbacks](/documentation/configuration/configuration/callbacks) are used.
 
 ## Default
 false
