@@ -40,7 +40,7 @@ title: Documentation
 <p>It has a <a href="/documentation/usage/commandline">Command-line client</a>.
     If you are on the JVM, we recommend using the <a href="/documentation/usage/api">Java API</a> (also works on Android)
     for migrating the database on application startup.
-    Alternatively, you can also use the <a href="/documentation/maven">Maven plugin</a>
+    Alternatively, you can also use the <a href="/documentation/usage/maven">Maven plugin</a>
     or <a href="/documentation/gradle">Gradle plugin</a>.</p>
 
 <p>And if that's not enough, there are <a href="/documentation/plugins">plugins</a>

@@ -107,5 +107,5 @@ See [configuration](/documentation/configuration) for a full list of supported c
 [INFO] Validated 5 migrations (execution time 00:00.030s)</pre>
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/maven/undo">Maven: undo <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/usage/maven/undo">Maven: undo <i class="fa fa-arrow-right"></i></a>
 </p>
