@@ -19,14 +19,14 @@ Locations starting with <code>filesystem:</code> point to a directory on the fil
 ### Amazon S3
 Locations starting with <code>s3:</code> point to a bucket in AWS S3, may only contain SQL migrations, and are scanned recursively. They are in the format <code>s3:&lt;bucket&gt;(/optionalfolder/subfolder)</code>. To use AWS S3, the AWS environment variables <code>AWS_REGION</code>, <code>AWS_ACCESS_KEY_ID</code> and <code>AWS_SECRET_ACCESS_KEY</code> need to be set to the appropriate values for your S3 account.<br/>
 
-Flyway community is limited to a maximum of 100 migrations in Amazon S3. Upgrade to [Flyway teams](https://flywaydb.org/download/) to allow unlimited migrations.
+Flyway Community is limited to a maximum of 100 migrations in Amazon S3. Upgrade to [Flyway Teams](https://flywaydb.org/download/) to allow unlimited migrations.
 
 ### Google Cloud Storage
 {% include teams.html %}
 
 Locations starting with <code>gcs:</code> point to a bucket in Google Cloud Storage, may only contain SQL migrations, and are scanned recursively. They are in the format <code>gcs:&lt;bucket&gt;(/optionalfolder/subfolder)</code>. To use GCS, the GCS library must be included, and the GCS environment variable <code>GOOGLE_APPLICATION_CREDENTIALS</code> must be set to the credentials file for the service account that has access to the bucket.<br/>
 
-### Wildcard
+### Wildcards
 Locations can contain wildcards. This allows matching against a path pattern instead of a single path. Supported wildcards:<br/>
 <ul>
     <li>
