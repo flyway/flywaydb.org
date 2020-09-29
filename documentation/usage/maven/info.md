@@ -95,5 +95,5 @@ See [configuration](/documentation/configuration) for a full list of supported c
 [INFO] +-------------+------------------------+---------------------+---------+</pre>
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/maven/validate">Maven: validate <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/usage/maven/validate">Maven: validate <i class="fa fa-arrow-right"></i></a>
 </p>

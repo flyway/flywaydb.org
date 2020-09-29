@@ -110,5 +110,5 @@ The new database version number is exposed in the `flyway.current` Maven propert
 [INFO] Successfully undid 1 migration to schema "PUBLIC" (execution time 00:00.024s).</pre>
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/maven/baseline">Maven: baseline <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/usage/maven/baseline">Maven: baseline <i class="fa fa-arrow-right"></i></a>
 </p>

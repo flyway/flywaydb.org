@@ -93,31 +93,31 @@ The Flyway Maven plugin supports **Maven 3.x** running on **Java 8**, **Java 9**
     </thead>
     <tbody>
     <tr>
-        <td><a href="/documentation/maven/migrate">migrate</a></td>
+        <td><a href="/documentation/usage/maven/migrate">migrate</a></td>
         <td>Migrates the database</td>
     </tr>
     <tr>
-        <td><a href="/documentation/maven/clean">clean</a></td>
+        <td><a href="/documentation/usage/maven/clean">clean</a></td>
         <td>Drops all objects in the configured schemas</td>
     </tr>
     <tr>
-        <td><a href="/documentation/maven/info">info</a></td>
+        <td><a href="/documentation/usage/maven/info">info</a></td>
         <td>Prints the details and status information about all the migrations</td>
     </tr>
     <tr>
-        <td><a href="/documentation/maven/validate">validate</a></td>
+        <td><a href="/documentation/usage/maven/validate">validate</a></td>
         <td>Validates the applied migrations against the ones available on the classpath</td>
     </tr>
     <tr>
-        <td><a href="/documentation/maven/undo">undo</a> {% include teams.html %}</td>
+        <td><a href="/documentation/usage/maven/undo">undo</a> {% include teams.html %}</td>
         <td>Undoes the most recently applied versioned migration</td>
     </tr>
     <tr>
-        <td><a href="/documentation/maven/baseline">baseline</a></td>
+        <td><a href="/documentation/usage/maven/baseline">baseline</a></td>
         <td>Baselines an existing database, excluding all migrations up to and including baselineVersion</td>
     </tr>
     <tr>
-        <td><a href="/documentation/maven/repair">repair</a></td>
+        <td><a href="/documentation/usage/maven/repair">repair</a></td>
         <td>Repairs the schema history table</td>
     </tr>
     </tbody>
@@ -255,5 +255,5 @@ The means that if for example `flyway.url` is both present in a config file and 
 the JVM system property passed in via the command-line will take precedence and be used.  
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/maven/migrate">Maven: migrate <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/usage/maven/migrate">Maven: migrate <i class="fa fa-arrow-right"></i></a>
 </p>

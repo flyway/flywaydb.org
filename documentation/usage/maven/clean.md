@@ -64,5 +64,5 @@ See [configuration](/documentation/configuration) for a full list of supported c
 [INFO] Cleaned database schema 'PUBLIC' (execution time 00:00.016s)</pre>
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/maven/info">Maven: info <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/usage/maven/info">Maven: info <i class="fa fa-arrow-right"></i></a>
 </p>

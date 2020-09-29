@@ -127,5 +127,5 @@ The new database version number is exposed in the `flyway.current` Maven propert
 [INFO] Successfully applied 4 migrations (execution time 00:00.091s).</pre>
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/maven/clean">Maven: clean <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/usage/maven/clean">Maven: clean <i class="fa fa-arrow-right"></i></a>
 </p>

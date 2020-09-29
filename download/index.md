@@ -79,7 +79,7 @@ Choose your download based on how you want to use Flyway
     <div class="col-md-2"></div>
     {% include download.html name="Java" icon="coffee" url="/documentation/usage/api/#download" %}
     {% include download.html name="Android" icon="android" url="/documentation/usage/api/#download" %}
-    {% include download.html name="Maven" icon="maxcdn" url="/documentation/maven/#installation" %}
+    {% include download.html name="Maven" icon="maxcdn" url="/documentation/usage/maven/#installation" %}
     {% include download.html name="Gradle" icon="cogs" url="/documentation/gradle/#installation" %}
 </div>
 
