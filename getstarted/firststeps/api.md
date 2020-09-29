@@ -122,5 +122,5 @@ In this brief tutorial we saw how to
 These migrations were then successfully found and executed.
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/api">Read the documentation <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/usage/api">Read the documentation <i class="fa fa-arrow-right"></i></a>
 </p>

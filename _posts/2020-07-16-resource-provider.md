@@ -87,4 +87,4 @@ This is a trivial example, but it demonstrates the principle. Given that we allo
 
 ## Summary
 
-That's a brief overview of how the new API methods work. This is a fairly advanced feature which is designed to make Flyway more flexible. You can also inject a Java migration resource provider too. You can read more about the API in the [documentation](../documentation/api/).
+That's a brief overview of how the new API methods work. This is a fairly advanced feature which is designed to make Flyway more flexible. You can also inject a Java migration resource provider too. You can read more about the API in the [documentation](../documentation/usage/api/).
