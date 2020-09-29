@@ -89,5 +89,5 @@ Migrating to version 1.3
 Successfully applied 4 migrations (execution time 00:00.091s).</pre>
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/gradle/clean">Gradle: clean <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/usage/gradle/clean">Gradle: clean <i class="fa fa-arrow-right"></i></a>
 </p>

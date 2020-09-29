@@ -41,7 +41,7 @@ title: Documentation
     If you are on the JVM, we recommend using the <a href="/documentation/usage/api">Java API</a> (also works on Android)
     for migrating the database on application startup.
     Alternatively, you can also use the <a href="/documentation/usage/maven">Maven plugin</a>
-    or <a href="/documentation/gradle">Gradle plugin</a>.</p>
+    or <a href="/documentation/usage/gradle">Gradle plugin</a>.</p>
 
 <p>And if that's not enough, there are <a href="/documentation/plugins">plugins</a>
     available for Spring Boot, Dropwizard, Grails, Play, SBT, Ant, Griffon, Grunt, Ninja and more!</p>

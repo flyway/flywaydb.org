@@ -5,7 +5,7 @@ subtitle: Community Plugins and Integrations
 ---
 # Community Plugins and Integrations
 
-Flyway comes out of the box with integrations for [Maven](/documentation/usage/maven), [Gradle](/documentation/gradle)
+Flyway comes out of the box with integrations for [Maven](/documentation/usage/maven), [Gradle](/documentation/usage/gradle)
 and [Docker](/documentation/usage/commandline).
 
 The broader Flyway community however maintains a much larger collection of integrations and plugins. The tools and

@@ -45,31 +45,31 @@ running on **Java 8**, **Java 9**, **Java 10**, **Java 11** or **Java 12**.
     </thead>
     <tbody>
     <tr>
-        <td><a href="/documentation/gradle/migrate">flywayMigrate</a></td>
+        <td><a href="/documentation/usage/gradle/migrate">flywayMigrate</a></td>
         <td>Migrates the database</td>
     </tr>
     <tr>
-        <td><a href="/documentation/gradle/clean">flywayClean</a></td>
+        <td><a href="/documentation/usage/gradle/clean">flywayClean</a></td>
         <td>Drops all objects in the configured schemas</td>
     </tr>
     <tr>
-        <td><a href="/documentation/gradle/info">flywayInfo</a></td>
+        <td><a href="/documentation/usage/gradle/info">flywayInfo</a></td>
         <td>Prints the details and status information about all the migrations</td>
     </tr>
     <tr>
-        <td><a href="/documentation/gradle/validate">flywayValidate</a></td>
+        <td><a href="/documentation/usage/gradle/validate">flywayValidate</a></td>
         <td>Validates the applied migrations against the ones available on the classpath</td>
     </tr>
     <tr>
-        <td><a href="/documentation/gradle/undo">flywayUndo</a> {% include teams.html %}</td>
+        <td><a href="/documentation/usage/gradle/undo">flywayUndo</a> {% include teams.html %}</td>
         <td>Undoes the most recently applied versioned migration</td>
     </tr>
     <tr>
-        <td><a href="/documentation/gradle/baseline">flywayBaseline</a></td>
+        <td><a href="/documentation/usage/gradle/baseline">flywayBaseline</a></td>
         <td>Baselines an existing database, excluding all migrations up to and including baselineVersion</td>
     </tr>
     <tr>
-        <td><a href="/documentation/gradle/repair">flywayRepair</a></td>
+        <td><a href="/documentation/usage/gradle/repair">flywayRepair</a></td>
         <td>Repairs the schema history table</td>
     </tr>
     </tbody>
@@ -274,5 +274,5 @@ The means that if for example `flyway.url` is both present in a config file and 
 the JVM system property passed in via the command-line will take precedence and be used.  
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/gradle/migrate">Gradle: migrate <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/usage/gradle/migrate">Gradle: migrate <i class="fa fa-arrow-right"></i></a>
 </p>

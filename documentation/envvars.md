@@ -6,7 +6,7 @@ subtitle: Environment Variables
 # Environment Variables
 
 The Flyway [command-line tool](/documentation/usage/commandline), [Maven plugin](/documentation/usage/maven) and
-[Gradle plugin](/documentation/gradle) support loading configuration via environment variables.
+[Gradle plugin](/documentation/usage/gradle) support loading configuration via environment variables.
 This also possible using the Flyway API by calling the `envVars()` method on the configuration.
 
 See [configuration](/documentation/configuration) for a full list of supported configuration parameters.

@@ -75,5 +75,5 @@ Undoing migration of schema "PUBLIC" to version 1 - First
 Successfully undid 1 migration to schema "PUBLIC" (execution time 00:00.024s).</pre>
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/gradle/baseline">Gradle: baseline <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/usage/gradle/baseline">Gradle: baseline <i class="fa fa-arrow-right"></i></a>
 </p>

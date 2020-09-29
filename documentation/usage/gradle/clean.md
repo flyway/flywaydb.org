@@ -46,5 +46,5 @@ flyway {
 Cleaned database schema 'PUBLIC' (execution time 00:00.016s)</pre>
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/gradle/info">Gradle: info <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/usage/gradle/info">Gradle: info <i class="fa fa-arrow-right"></i></a>
 </p>
