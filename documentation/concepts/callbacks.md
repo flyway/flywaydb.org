@@ -200,5 +200,5 @@ therefore not bound by the SQL callback naming convention.
 When multiple callbacks for the same event are found, they are executed in the alphabetical order.
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/erroroverrides">Error Overrides <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/concepts/erroroverrides">Error Overrides <i class="fa fa-arrow-right"></i></a>
 </p>

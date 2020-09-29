@@ -31,7 +31,7 @@ Choose your Flyway edition based on the features and support level you require
 <tr><td><a href="/documentation/configuration/locations#google-cloud-storage">Google cloud storage locations</a></td><td></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td><a href="/documentation/migrations#script-migrations">Arbitrary script migrations</a></td><td></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td><a href="/documentation/database/oracle#sqlplus-commands">Oracle SQL*Plus compatibility</a></td><td></td><td><i class="fa fa-check"></i></td></tr>
-<tr><td><a href="/documentation/erroroverrides">Error Overrides</a></td><td></td><td><i class="fa fa-check"></i></td></tr>
+<tr><td><a href="/documentation/concepts/erroroverrides">Error Overrides</a></td><td></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td>Statement-level callbacks</td><td></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td><a href="/documentation/dryruns">Dry runs</a></td><td></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td><a href="/documentation/command/undo">Undo</a></td><td></td><td><i class="fa fa-check"></i></td></tr>
