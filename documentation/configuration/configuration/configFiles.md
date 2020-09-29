@@ -8,7 +8,7 @@ subtitle: flyway.configFiles
 # Config Files
 
 ## Description
-The [Flyway configuration](/documentation/configfiles) files to load.
+The [Flyway configuration](/documentation/configuration/configfiles) files to load.
 
 These files will be relative to the [Working Directory](/documentation/configuration/configuration/workingDirectory).
 

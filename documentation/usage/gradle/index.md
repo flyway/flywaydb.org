@@ -225,8 +225,8 @@ Configuration can also be supplied directly via the command-line using JVM syste
 
 ### Config files
 
-[Config files](/documentation/configfiles) are supported by the Flyway Gradle plugin. If you are not familiar with them,
-check out the [Flyway config file structure and settings reference](/documentation/configfiles) first.
+[Config files](/documentation/configuration/configfiles) are supported by the Flyway Gradle plugin. If you are not familiar with them,
+check out the [Flyway config file structure and settings reference](/documentation/configuration/configfiles) first.
 
 Flyway will search for and automatically load the `<user-home>/flyway.conf` config file if present.
 
