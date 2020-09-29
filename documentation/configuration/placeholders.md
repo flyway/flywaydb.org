@@ -1,21 +1,25 @@
 ---
 layout: documentation
-menu: configuration
-pill: placeholders
-subtitle: flyway.placeholders
+menu: placeholders
+subtitle: Placeholders
 ---
-
 # Placeholders
+In addition to regular SQL syntax, Flyway also supports placeholder replacement with configurable pre- and suffixes.
+By default it looks for Ant-style placeholders like `${myplaceholder}`. This can be very useful to abstract differences between environments.
+Changing the value of placeholders will cause repeatable migrations to be re-applied on next migrate.
 
-## Description
-[Placeholders](/documentation/placeholders) to replace in SQL migrations. 
+## How to configure
+Placeholders can be configured through a number of different ways.
+- Via environment variables. `FLYWAY_PLACEHOLDERS_MYPLACEHOLDER=value`
+- Via configuration parameters. `flyway.placeholders.myplaceholder=value`
+- Via the api. `.placeholders(Map.of("myplaceholder", "value"))`
 
-For example to replace a placeholder named `key1` with the value `value1`, you can set `flyway.placeholders.key1=value1`. 
-Flyway will take the `key1` part, and long with the [placeholder prefix](/documentation/configuration/placeholderPrefix) and the [placeholder suffix](/documentation/configuration/placeholderSuffix) construct a placeholder replacement, which by default would look like `${key}`. Then in your SQL migrations and instances of this will be replaced with `value1`. 
+Placeholders are case insensitive, so a placeholder like `${myplaceholder}` can be specified with any of the above techniques.
 
-Placeholder matching is case insensitive, so a placeholder of `flyway.placeholders.key1` will match `${key1}` and `${KEY1}`.
+See [configuration](/documentation/configuration/#placeholders) for placeholder specific configuration parameters. 
 
-## Usage
+## Default placeholders
+Flyway also provides default placeholders, whose values are automatically populated:
 
 ### Commandline
 ```powershell
@@ -40,10 +44,8 @@ Map<String, String> placeholders = new HashMap<>();
 placeholders.put("key1", "value1");
 placeholders.put("key2", "value2");
 
-Flyway.configure()
-    .placeholders(placeholders)
-    .load()
-```
+-- Default placeholders
+GRANT SELECT ON SCHEMA ${flyway:defaultSchema} TO ${flyway:user};
 
 ### Gradle
 ```groovy
