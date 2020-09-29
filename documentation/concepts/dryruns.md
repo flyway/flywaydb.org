@@ -33,7 +33,7 @@ callbacks, undo migrations, etc.
 ## Configuration
 
 When using the Flyway [command-line tool](/documentation/usage/commandline), [Maven plugin](/documentation/usage/maven) or
-[Gradle plugin](/documentation/gradle), a SQL file contained the output of the dry run can be configured using the 
+[Gradle plugin](/documentation/usage/gradle), a SQL file contained the output of the dry run can be configured using the 
 [`flyway.dryRunOutput`](/documentation/configuration/dryRunOutput) property.
 
 When using the API directly, the dry run output can be configured using a `java.io.OutputStream`, giving you additional

@@ -37,7 +37,7 @@ When using the API, the jars you wish to include should be added as dependencies
 
 ### Gradle
 
-See [extending the gradle classpath](/documentation/gradle/#extending-the-default-classpath).
+See [extending the gradle classpath](/documentation/usage/gradle/#extending-the-default-classpath).
 
 ### Maven
 

@@ -72,5 +72,5 @@ Database: jdbc:h2:file:flyway.db (H2 1.3)
 +------------+---------+----------------+------+---------------------+---------+----------+</pre>
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/gradle/validate">Gradle: validate <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/usage/gradle/validate">Gradle: validate <i class="fa fa-arrow-right"></i></a>
 </p>

@@ -51,5 +51,5 @@ Creating schema history table: "PUBLIC"."flyway_schema_history"
 Schema baselined with version: 1</pre>
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/gradle/repair">Gradle: repair <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/usage/gradle/repair">Gradle: repair <i class="fa fa-arrow-right"></i></a>
 </p>
