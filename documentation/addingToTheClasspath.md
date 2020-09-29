@@ -29,7 +29,7 @@ When using the CLI, you can add to the classpath by dropping the `.jar` files fo
   <i class="fa fa-file-text"></i> README.txt
 </pre>
 
-You can also specify more folders to load jars from using the [jarDirs](/documentation/configuration/jarDirs) configuration parameter.
+You can also specify more folders to load jars from using the [jarDirs](/documentation/configuration/configuration/jarDirs) configuration parameter.
 
 ### API
 

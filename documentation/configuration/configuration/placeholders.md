@@ -11,7 +11,7 @@ subtitle: flyway.placeholders
 [Placeholders](/documentation/placeholders) to replace in SQL migrations. 
 
 For example to replace a placeholder named `key1` with the value `value1`, you can set `flyway.placeholders.key1=value1`. 
-Flyway will take the `key1` part, and long with the [placeholder prefix](/documentation/configuration/placeholderPrefix) and the [placeholder suffix](/documentation/configuration/placeholderSuffix) construct a placeholder replacement, which by default would look like `${key}`. Then in your SQL migrations and instances of this will be replaced with `value1`. 
+Flyway will take the `key1` part, and long with the [placeholder prefix](/documentation/configuration/configuration/placeholderPrefix) and the [placeholder suffix](/documentation/configuration/configuration/placeholderSuffix) construct a placeholder replacement, which by default would look like `${key}`. Then in your SQL migrations and instances of this will be replaced with `value1`. 
 
 Placeholder matching is case insensitive, so a placeholder of `flyway.placeholders.key1` will match `${key1}` and `${KEY1}`.
 

@@ -13,7 +13,7 @@ The default schema managed by Flyway. This schema will be the one containing the
 This schema will also be the default for the database connection (provided the database supports this concept).
 
 ## Default
-If [schemas](/documentation/configuration/schemas) is specified, the first schema in that list.
+If [schemas](/documentation/configuration/configuration/schemas) is specified, the first schema in that list.
 
 ## Usage
 

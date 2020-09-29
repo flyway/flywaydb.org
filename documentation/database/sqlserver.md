@@ -199,7 +199,7 @@ your sql scripts. If you decide to use `flyway.defaultSchema`, it also must exis
 specify which schema to write this table to by setting `flyway.schemas=custom_schema`, as the first entry will become the
 default schema if `flyway.defaultSchema` itself is not set.
 - With these limitations in mind, please refer to the properties or
-[Options](https://flywaydb.org/documentation/configuration/defaultSchema) mentioned here for descriptions / 
+[Options](https://flywaydb.org/documentation/configuration/configuration/defaultSchema) mentioned here for descriptions / 
 consequences.
 - If using the JTDS driver, then setting `ANSI_NULLS` or `QUOTED_IDENTIFIER` in a script will cause an error. This is
 a driver limitation, and can be solved by using the Microsoft driver instead.
