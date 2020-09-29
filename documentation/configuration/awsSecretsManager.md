@@ -1,6 +1,6 @@
 ---
 layout: documentation
-menu: aswSecretsManager
+menu: awsSecretsManager
 subtitle: AWS Secrets Manager support
 ---
 # AWS Secrets Manager support
