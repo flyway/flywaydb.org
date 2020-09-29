@@ -46,7 +46,7 @@ flyway.migrate();
 
 ## Java-based Callbacks
 
-Building upon that are the Java-based [Callbacks](/documentation/callbacks)
+Building upon that are the Java-based [Callbacks](/documentation/concepts/callbacks)
 when you need more power or flexibility in a Callback than SQL can offer you.
 
 They can be created by implementing the [**Callback**](/documentation/api/javadoc/org/flywaydb/core/api/callback/Callback)

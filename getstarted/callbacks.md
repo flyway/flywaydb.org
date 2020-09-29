@@ -79,5 +79,5 @@ In this brief tutorial we saw how to
 - triggers the execution of callbacks
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/callbacks">Read the callback documentation <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/concepts/callbacks">Read the callback documentation <i class="fa fa-arrow-right"></i></a>
 </p>
