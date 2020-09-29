@@ -115,5 +115,5 @@ In this brief tutorial we saw how to
 - configure Flyway to use error overrides
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/erroroverrides">Read the Error Overrides documentation <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/concepts/erroroverrides">Read the Error Overrides documentation <i class="fa fa-arrow-right"></i></a>
 </p>
