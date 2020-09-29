@@ -191,7 +191,7 @@ This is equivalent to the [process defined on this documentation page](https://d
 - Flyway's automatic detection for whether SQL statements are valid in transactions does not apply to 
 <code>CREATE/ALTER/DROP</code> statements acting on memory-optimised tables (that is, those created with 
 <code>WITH (MEMORY_OPTIMIZED = ON)</code>). You will need to override the `executeInTransaction` setting to be false,
-either on a [per-script basis](https://flywaydb.org/documentation/scriptconfigfiles) or globally.
+either on a [per-script basis](https://flywaydb.org/documentation/configuration/scriptconfigfiles) or globally.
 - SQL Server is unable to change the default schema for a session. Therefore, setting the `flyway.defaultSchema` property
 has no value, unless used for a [Placeholder](https://flywaydb.org/documentation/concepts/migrations#placeholder-replacement) in
 your sql scripts. If you decide to use `flyway.defaultSchema`, it also must exist in `flyway.schemas`.
