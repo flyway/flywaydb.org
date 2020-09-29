@@ -15,5 +15,5 @@ Repair is your tool to fix issues with the schema history table. It has a few ma
 - Mark all missing migrations as **deleted**
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/commandline/">Command-line <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/usage/commandline/">Command-line <i class="fa fa-arrow-right"></i></a>
 </p>
