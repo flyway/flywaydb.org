@@ -8,7 +8,7 @@ subtitle: flyway.resolvers
 # Resolver
 
 ## Description
-Comma-separated list of fully qualified class names of custom [MigrationResolver](/documentation/api/javadoc/org/flywaydb/core/api/resolver/MigrationResolver) implementations to be used in addition to the built-in ones for resolving Migrations to apply.
+Comma-separated list of fully qualified class names of custom [MigrationResolver](/documentation/usage/api/javadoc/org/flywaydb/core/api/resolver/MigrationResolver) implementations to be used in addition to the built-in ones for resolving Migrations to apply.
 
 You must ensure that the resolver is available on the classpath (see [Adding to the classpath](/documentation/addingToTheClasspath)).
 

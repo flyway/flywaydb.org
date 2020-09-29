@@ -82,5 +82,5 @@ Repair not necessary. No failed migration detected.</pre>
 }</pre>
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/api">API <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/usage/api">API <i class="fa fa-arrow-right"></i></a>
 </p>

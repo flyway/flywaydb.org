@@ -106,7 +106,7 @@ flyway.migrate();</pre>
         to all tables after all migrations complete, recompiling procedures, or whatever you need. You now get handed
         a connection within a transaction and you can use it to your liking. All you have to do is:</p>
     <ul>
-        <li>Implement the new <a href="/documentation/api/javadoc/org/flywaydb/core/api/callback/FlywayCallback">FlywayCallback</a>
+        <li>Implement the new <a href="/documentation/usage/api/javadoc/org/flywaydb/core/api/callback/FlywayCallback">FlywayCallback</a>
             interface
         </li>
         <li>Register it with <code>Flyway.setCallbacks(...)</code></li>
@@ -123,11 +123,11 @@ flyway.migrate();</pre>
     <p>To get started with this:</p>
     <ul>
         <li>Implement the new <a
-                href="/documentation/api/javadoc/org/flywaydb/core/api/resolver/MigrationResolver">MigrationResolver</a>
+                href="/documentation/usage/api/javadoc/org/flywaydb/core/api/resolver/MigrationResolver">MigrationResolver</a>
             interface
         </li>
         <li>Add a corresponding <a
-                href="/documentation/api/javadoc/org/flywaydb/core/api/resolver/MigrationExecutor">MigrationExecutor</a>
+                href="/documentation/usage/api/javadoc/org/flywaydb/core/api/resolver/MigrationExecutor">MigrationExecutor</a>
             implementation
         </li>
         <li>Register the resolver with <code>Flyway.setResolvers(...)</code></li>
