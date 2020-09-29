@@ -12,7 +12,7 @@ title: Documentation
                     {% if page.menu == 'overview' %} class="active" {% endif %}>
                     <a href="/documentation">Overview</a></li>
 
-                    <details>
+                    <details {% if page.url contains "documentation/concepts" %} open {% endif %}>
                         <summary class="nav-header">Concepts</summary>
 
                         <ul class="nav nav-pills nav-stacked">
