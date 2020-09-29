@@ -33,7 +33,7 @@ Choose your Flyway edition based on the features and support level you require
 <tr><td><a href="/documentation/database/oracle#sqlplus-commands">Oracle SQL*Plus compatibility</a></td><td></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td><a href="/documentation/concepts/erroroverrides">Error Overrides</a></td><td></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td>Statement-level callbacks</td><td></td><td><i class="fa fa-check"></i></td></tr>
-<tr><td><a href="/documentation/dryruns">Dry runs</a></td><td></td><td><i class="fa fa-check"></i></td></tr>
+<tr><td><a href="/documentation/concepts/dryruns">Dry runs</a></td><td></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td><a href="/documentation/command/undo">Undo</a></td><td></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td><a href="/documentation/configuration/parameters/batch">Batching</a></td><td></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td><a href="/documentation/configuration/parameters/stream">Streaming</a></td><td></td><td><i class="fa fa-check"></i></td></tr>
