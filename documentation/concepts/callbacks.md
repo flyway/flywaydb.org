@@ -178,7 +178,7 @@ in the configured locations following a certain naming convention: the event nam
 Using the default settings, Flyway looks in its default locations (&lt;install_dir&gt;/sql) for the Command-line tool)
 for SQL files like `beforeMigrate.sql`, `beforeEachMigrate.sql`, `afterEachMigrate.sql`, ...
 
-Placeholder replacement works just like it does for <a href="/documentation/migrations#sql-based-migrations">SQL migrations</a>.
+Placeholder replacement works just like it does for <a href="/documentation/concepts/migrations#sql-based-migrations">SQL migrations</a>.
 
 Optionally the callback may also include a description. In that case the callback name is composed of the event name,
 the separator, the description and the suffix. Example: `beforeRepair__vacuum.sql`.

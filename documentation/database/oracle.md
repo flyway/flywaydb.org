@@ -49,7 +49,7 @@ All editions are supported, including XE.
 
 ## SQL Script Syntax
 
-- [Standard SQL syntax](/documentation/migrations#sql-based-migrations#syntax) with statement delimiter **;**
+- [Standard SQL syntax](/documentation/concepts/migrations#sql-based-migrations#syntax) with statement delimiter **;**
 - PL/SQL blocks starting with DECLARE or BEGIN and finishing with END; /
 
 ### Compatibility

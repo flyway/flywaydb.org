@@ -38,7 +38,7 @@ subtitle: Snowflake
 
 ## SQL Script Syntax
 
-- [Standard SQL syntax](/documentation/migrations#syntax) with statement delimiter **;**
+- [Standard SQL syntax](/documentation/concepts/migrations#syntax) with statement delimiter **;**
 
 ### Compatibility
 

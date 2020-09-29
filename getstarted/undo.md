@@ -130,5 +130,5 @@ In this brief tutorial we saw how to
 - undo and redo existing migrations
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/migrations#undo-migrations">Read the undo migration documentation <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/concepts/migrations#undo-migrations">Read the undo migration documentation <i class="fa fa-arrow-right"></i></a>
 </p>

@@ -8,7 +8,7 @@ subtitle: flyway.createSchemas
 # Create Schemas
 
 ## Description
-Whether Flyway should attempt to create the schemas specified in the schemas property. [See this page for more details](/documentation/migrations#the-createschemas-option-and-the-schema-history-table)
+Whether Flyway should attempt to create the schemas specified in the schemas property. [See this page for more details](/documentation/concepts/migrations#the-createschemas-option-and-the-schema-history-table)
 
 ## Default
 true

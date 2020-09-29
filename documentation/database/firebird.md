@@ -37,7 +37,7 @@ subtitle: Firebird
 
 ## SQL Script Syntax
 
- - [Standard SQL syntax](/documentation/migrations#syntax)
+ - [Standard SQL syntax](/documentation/concepts/migrations#syntax)
 - Terminator changes supported using `SET TERM <i>&lt;new terminator&gt;</i><i>&lt;old terminator&gt;</i>
 - Firebird dialect 3 only
 

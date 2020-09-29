@@ -46,7 +46,7 @@ subtitle: DB2
 
 ## SQL Script Syntax
 
-- [Standard SQL syntax](/documentation/migrations#sql-based-migrations#syntax)
+- [Standard SQL syntax](/documentation/concepts/migrations#sql-based-migrations#syntax)
 - DB2 SQL-PL
 - Terminator changes
 

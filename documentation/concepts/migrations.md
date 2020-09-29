@@ -24,8 +24,8 @@ Optionally their effect can be undone by supplying an **undo migration** with th
 Within a single migration run, repeatable migrations are always applied last, after all pending versioned migrations 
 have been executed. Repeatable migrations are applied in the order of their description.
 
-By default both versioned and repeatable migrations can be written either in **[SQL](/documentation/migrations#sql-based-migrations)**
-or in **[Java](/documentation/migrations#java-based-migrations)** and can consist of multiple statements.
+By default both versioned and repeatable migrations can be written either in **[SQL](/documentation/concepts/migrations#sql-based-migrations)**
+or in **[Java](/documentation/concepts/migrations#java-based-migrations)** and can consist of multiple statements.
 
 Flyway automatically discovers migrations on the *filesystem* and on the Java *classpath*.
 

@@ -162,5 +162,5 @@ In this brief tutorial we saw how to
 - run and rerun repeatable migrations
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/migrations#repeatable-migrations">Read the repeatable migration documentation <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/concepts/migrations#repeatable-migrations">Read the repeatable migration documentation <i class="fa fa-arrow-right"></i></a>
 </p>

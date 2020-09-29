@@ -8,7 +8,7 @@ subtitle: flyway.table
 # Table
 
 ## Description
-The name of Flyway's [schema history table](/documentation/migrations#schema-history-table).
+The name of Flyway's [schema history table](/documentation/concepts/migrations#schema-history-table).
 
 By default (single-schema mode) the schema history table is placed in the default schema for the connection provided by the datasource.
 
