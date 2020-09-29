@@ -215,7 +215,7 @@ project.ext['flyway.placeholders.otherplaceholder']='value123'</pre>
 ### Environment Variables
 
 To make it ease to work with cloud and containerized environments, Flyway also supports configuration via
-[environment variables](/documentation/envvars). Check out the [Flyway environment variable reference](/documentation/envvars) for details.
+[environment variables](/documentation/configuration/envvars). Check out the [Flyway environment variable reference](/documentation/configuration/envvars) for details.
 
 ### System properties
 

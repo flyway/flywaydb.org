@@ -211,7 +211,7 @@ Alternatively you can also use the `FLYWAY_CONFIG_FILE_ENCODING` environment var
 ### Environment Variables
 
 To make it easier to work with cloud and containerized environments, Flyway also supports configuration via
-[environment variables](/documentation/envvars). Check out the [Flyway environment variable reference](/documentation/envvars) for details.
+[environment variables](/documentation/configuration/envvars). Check out the [Flyway environment variable reference](/documentation/configuration/envvars) for details.
 
 ### Command-line Arguments
 
