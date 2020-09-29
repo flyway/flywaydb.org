@@ -105,7 +105,7 @@ Done.
 ## Advanced programmatic configuration
 
 As an alternative to the simple declarative syntax presented above, you can also fully customize the behavior of Flyway
-following the execution of a statement by implementing a Java-based [callback](/documentation/callbacks) which listens
+following the execution of a statement by implementing a Java-based [callback](/documentation/concepts/callbacks) which listens
 to the `afterEachMigrateStatement`, `afterEachMigrateStatementError`, `afterEachUndoStatement` and
 `afterEachUndoStatementError` events.
 

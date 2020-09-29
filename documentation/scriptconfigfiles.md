@@ -38,5 +38,5 @@ executeInTransaction=false
 ```
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/callbacks">Callbacks <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/concepts/callbacks">Callbacks <i class="fa fa-arrow-right"></i></a>
 </p>
