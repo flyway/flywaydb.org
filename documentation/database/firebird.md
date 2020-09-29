@@ -85,5 +85,5 @@ errors as Firebird uses existence locks on metadata objects when they are in use
 database and run the migration with exclusive access.
 
  <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/existing">Existing database setup <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/learnmore/existing">Existing database setup <i class="fa fa-arrow-right"></i></a>
 </p>
