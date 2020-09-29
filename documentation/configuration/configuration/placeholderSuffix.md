@@ -8,7 +8,7 @@ subtitle: flyway.placeholderSuffix
 # Placeholder Suffix
 
 ## Description
-The suffix of every [placeholder](/documentation/placeholders)
+The suffix of every [placeholder](/documentation/configuration/placeholders)
 
 ## Default
 }

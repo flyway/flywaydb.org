@@ -8,7 +8,7 @@ subtitle: flyway.placeholderReplacement
 # Placeholder Replacement
 
 ## Description
-Whether [placeholders](/documentation/placeholders) should be replaced
+Whether [placeholders](/documentation/configuration/placeholders) should be replaced
 
 ## Default
 true

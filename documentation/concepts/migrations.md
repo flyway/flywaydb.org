@@ -233,7 +233,7 @@ Additionally in the case of Oracle, Flyway also supports [SQL*Plus commands](/do
 In addition to regular SQL syntax, Flyway also supports placeholder replacement with configurable pre- and suffixes.
 By default it looks for Ant-style placeholders like `${myplaceholder}`. This can be very useful to abstract differences between environments.
 
-See [Placeholders](/documentation/placeholders).
+See [Placeholders](/documentation/configuration/placeholders).
 
 ## Java-based migrations
 
