@@ -38,5 +38,5 @@ You can also watch her live at any of these upcoming events:
 
 ## Enjoy
 
-Enjoy these talks! And in case you missed it [Flyway 5.0.7 is out](/documentation/releaseNotes#5.0.7) is out with a
+Enjoy these talks! And in case you missed it [Flyway 5.0.7 is out](/documentation/learnmore/releaseNotes#5.0.7) is out with a
 number of fixes so don't forget to [update](/download).
