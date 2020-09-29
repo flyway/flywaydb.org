@@ -1,34 +1,35 @@
 ---
 layout: documentation
-menu: configuration
-pill: configFiles
-subtitle: flyway.configFiles
+menu: configFiles
+subtitle: Config Files
 ---
-
 # Config Files
 
-## Description
-The [Flyway configuration](/documentation/configfiles) files to load.
+Flyway supports loading configuration via config files.
 
-These files will be relative to the [Working Directory](/documentation/configuration/workingDirectory).
+## Loading
 
-## Usage
+By default Flyway will load configuration files from the following locations:
+- <i>installDir<i>/conf/flyway.conf
+- <i>userhome<i>/flyway.conf
+- <i>workingDir<i>/flyway.conf
 
 ### Commandline
 ```powershell
 ./flyway -configFiles="my.conf" info
 ```
 
-### Configuration File
-Not available
+## Structure
 
 ### Environment Variable
 ```properties
 FLYWAY_CONFIG_FILES=my.conf
 ```
 
-### API
-Not available
+```properties
+# Settings are simple key-value pairs
+flyway.key=value
+# Single line comment start with a hash
 
 ### Gradle
 ```groovy
