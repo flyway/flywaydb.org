@@ -70,10 +70,10 @@ Choose your download based on how you want to use Flyway
 
 <div class="row">
     <div class="col-md-2"></div>
-    {% include download.html name="Windows" icon="windows" url="/documentation/commandline/#download-and-installation" %}
-    {% include download.html name="macOS" icon="apple" url="/documentation/commandline/#download-and-installation" %}
-    {% include download.html name="Linux" icon="linux" url="/documentation/commandline/#download-and-installation" %}
-    {% include download.html name="Docker" icon="docker" url="/documentation/commandline/#download-and-installation" %}
+    {% include download.html name="Windows" icon="windows" url="/documentation/usage/commandline/#download-and-installation" %}
+    {% include download.html name="macOS" icon="apple" url="/documentation/usage/commandline/#download-and-installation" %}
+    {% include download.html name="Linux" icon="linux" url="/documentation/usage/commandline/#download-and-installation" %}
+    {% include download.html name="Docker" icon="docker" url="/documentation/usage/commandline/#download-and-installation" %}
 </div>    
 <div class="row">
     <div class="col-md-2"></div>
