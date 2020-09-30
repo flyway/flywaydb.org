@@ -10,7 +10,7 @@ subtitle: flyway.user
 ## Description
 The user to use to connect to the database.
 
-This can be omitted if the user is baked into the [url](/documentation/configuration/configuration/url) (See [Sql Server](/documentation/database/sqlserver#windows-authentication) for an example).
+This can be omitted if the user is baked into the [url](/documentation/configuration/parameters/url) (See [Sql Server](/documentation/database/sqlserver#windows-authentication) for an example).
 
 ## Usage
 

@@ -175,13 +175,13 @@ In order to be picked up by Flyway, SQL migrations must comply with the followin
 </div>
 
 The file name consists of the following parts:
-- **Prefix**: `V` for versioned ([configurable](/documentation/configuration/configuration/sqlMigrationPrefix)),
-`U` for undo ([configurable](/documentation/configuration/configuration/undoSqlMigrationPrefix)) and
-`R` for repeatable migrations ([configurable](/documentation/configuration/configuration/repeatableSqlMigrationPrefix))
+- **Prefix**: `V` for versioned ([configurable](/documentation/configuration/parameters/sqlMigrationPrefix)),
+`U` for undo ([configurable](/documentation/configuration/parameters/undoSqlMigrationPrefix)) and
+`R` for repeatable migrations ([configurable](/documentation/configuration/parameters/repeatableSqlMigrationPrefix))
 - **Version**: Version with dots or underscores separate as many parts as you like (Not for repeatable migrations)
-- **Separator**: `__` (two underscores) ([configurable](/documentation/configuration/configuration/sqlMigrationSeparator))
+- **Separator**: `__` (two underscores) ([configurable](/documentation/configuration/parameters/sqlMigrationSeparator))
 - **Description**: Underscores or spaces separate the words
-- **Suffix**: `.sql` ([configurable](/documentation/configuration/configuration/sqlMigrationSuffixes))
+- **Suffix**: `.sql` ([configurable](/documentation/configuration/parameters/sqlMigrationSuffixes))
 
 Optionally versioned SQL migrations can also omit both the separator and the description.
 
@@ -191,7 +191,7 @@ Flyway will fail fast and list all files which need to be corrected.
 
 ### Discovery
 
-Flyway discovers SQL-based migrations from one or more directories referenced by the **[`locations`](/documentation/configuration/configuration/locations)**
+Flyway discovers SQL-based migrations from one or more directories referenced by the **[`locations`](/documentation/configuration/parameters/locations)**
 property.
 - Unprefixed locations or locations with the `classpath:` prefix target the Java classpath.
 - Locations with the `filesystem:` prefix search the file system.
@@ -215,7 +215,7 @@ property.
     <i class="fa fa-file-text"></i> V1.2__Add_constraints.sql</pre>
     
 New SQL-based migrations are **discovered automatically** through filesystem and Java classpath scanning at runtime.
-Once you have configured the [`locations`](/documentation/configuration/configuration/locations) you want to use, Flyway will
+Once you have configured the [`locations`](/documentation/configuration/parameters/locations) you want to use, Flyway will
 automatically pick up any new SQL migrations as long as they conform to the configured *naming convention*.
 
 This scanning is recursive. All migrations in non-hidden directories below the specified ones are also picked up.
@@ -293,7 +293,7 @@ implementing the respective methods.
 ### Discovery
 
 Flyway discovers Java-based migrations on the Java classpath in the packages referenced by the
-[`locations`](/documentation/configuration/configuration/locations) property.
+[`locations`](/documentation/configuration/parameters/locations) property.
 
 <pre class="filetree"><i class="fa fa-folder-open"></i> my-project
   <i class="fa fa-folder-open"></i> src
@@ -385,13 +385,13 @@ The migration checksum is only calculated for the migration itself, not for any 
 By default, Flyway always wraps the execution of an entire migration within a single transaction.
 
 Alternatively you can also configure Flyway to wrap the entire execution of all migrations of a single migration run
-within a single transaction by setting the [`group`](/documentation/configuration/configuration/group) property to `true`.
+within a single transaction by setting the [`group`](/documentation/configuration/parameters/group) property to `true`.
 
 If Flyway detects that a specific statement cannot be run within a transaction due to technical limitations of your
 database, it won't run that migration within a transaction. Instead it will be marked as *non-transactional*.
 
 By default transactional and non-transactional statements cannot be mixed within a migration run. You can however allow
-this by setting the [`mixed`](/documentation/configuration/configuration/mixed) property to `true`. Note that this is only
+this by setting the [`mixed`](/documentation/configuration/parameters/mixed) property to `true`. Note that this is only
 applicable for PostgreSQL, Aurora PostgreSQL, SQL Server and SQLite which all have statements that do not run at all
 within a transaction. This is not to be confused with implicit transaction, as they occur in MySQL or Oracle, where even
 though a DDL statement was run within within a transaction, the database will issue an implicit commit before and after
@@ -428,7 +428,7 @@ There are however some scenarios where such manual inspection makes sense, and t
 ### Toggling query results
 {% include teams.html %}
 
-To prevent Flyway from displaying query results, set the configuration option [`outputQueryResults`](/documentation/configuration/configuration/outputQueryResults) to `false`.
+To prevent Flyway from displaying query results, set the configuration option [`outputQueryResults`](/documentation/configuration/parameters/outputQueryResults) to `false`.
 
 ## Schema History Table
 
@@ -512,7 +512,7 @@ When a migration is not found on disk, but is found in the schema history, it is
 
 When a migration has had its state changed to deleted by *repair* it is marked as **deleted**.
 
-When using [cherryPick](/documentation/configuration/configuration/cherryPick), if the migration is not in the cherry picked list then it is marked as **ignored**.
+When using [cherryPick](/documentation/configuration/parameters/cherryPick), if the migration is not in the cherry picked list then it is marked as **ignored**.
 
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/concepts/callbacks">Callbacks <i class="fa fa-arrow-right"></i></a>

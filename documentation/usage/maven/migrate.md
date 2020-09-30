@@ -20,7 +20,7 @@ Migrates the schema to the latest version. Flyway will create the schema history
 
 ## Configuration
 
-See [configuration](/documentation/configuration/configuration) for a full list of supported configuration parameters.
+See [configuration](/documentation/configuration/parameters) for a full list of supported configuration parameters.
 
 ## Sample configuration
 ```xml
