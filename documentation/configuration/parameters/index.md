@@ -13,16 +13,16 @@ Flyway has many different parameters that can be set to configure its behavior. 
 ## Usage
 
 ### Command Line
-If using the command line, config parameters can be set via command line arguments (e.g. `./flyway -url=jdbc:h2:mem:flyway info`), [configuration files](/documentation/configuration/configfiles), or environment variables (e.g. `FLYWAY_URL=jdbc:h2:mem:flyway`).
+If using the command line, config parameters can be set via command line arguments (e.g. `./flyway -url=jdbc:h2:mem:flyway info`), [configuration files](/documentation/configuration/configFiles), or environment variables (e.g. `FLYWAY_URL=jdbc:h2:mem:flyway`).
 
 ### Api
-If using the api, config parameters can be set via calling methods on the configuration object returned by `Flyway.configure()` (e.g. `Flyway.configure().url("jdbc:h2:mem:flyway").load()`), [configuration files](/documentation/configuration/configfiles), or environment variables if the `.envVars()` method is called on the configuration object.
+If using the api, config parameters can be set via calling methods on the configuration object returned by `Flyway.configure()` (e.g. `Flyway.configure().url("jdbc:h2:mem:flyway").load()`), [configuration files](/documentation/configuration/configFiles), or environment variables if the `.envVars()` method is called on the configuration object.
 
 ### Maven
-If using maven, config parameters can be set on the configuration xml block in the maven config, [configuration files](/documentation/configuration/configfiles), or environment variables (e.g. `FLYWAY_URL=jdbc:h2:mem:flyway`).
+If using maven, config parameters can be set on the configuration xml block in the maven config, [configuration files](/documentation/configuration/configFiles), or environment variables (e.g. `FLYWAY_URL=jdbc:h2:mem:flyway`).
 
 ### Gradle
-If using maven, config parameters can be set in the plugin configuration block, [configuration files](/documentation/configuration/configfiles), or environment variables (e.g. `FLYWAY_URL=jdbc:h2:mem:flyway`).
+If using maven, config parameters can be set in the plugin configuration block, [configuration files](/documentation/configuration/configFiles), or environment variables (e.g. `FLYWAY_URL=jdbc:h2:mem:flyway`).
 
 ## Parameters
 
