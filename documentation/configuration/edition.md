@@ -27,10 +27,10 @@ FLYWAY_EDITION=teams
 ```
 
 ### API
-Not available
+See [upgrading api to Teams](/documentation/upgradingToTeams#api)
 
 ### Gradle
-Not available
+See [upgrading gradle to Teams](/documentation/upgradingToTeams#gradle)
 
 ### Maven
-Not available
+See [upgrading maven to Teams](/documentation/upgradingToTeams#maven)

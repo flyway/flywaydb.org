@@ -155,6 +155,9 @@ title: Documentation
                     <a href="/documentation/database/firebird">Firebird</a></li>
                     <li class="nav-header">Learn more</li>
                     <li
+                    {% if page.menu == 'upgradingToTeams' %} class="active" {% endif %}>
+                    <a href="/documentation/upgradingToTeams">Upgrading to Flyway Teams</a></li>
+                    <li
                     {% if page.menu == 'existing' %} class="active" {% endif %}>
                     <a href="/documentation/existing">Existing database setup</a></li>
                     <li
