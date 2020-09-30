@@ -227,6 +227,10 @@ title: Documentation
 
                         <ul class="nav nav-pills nav-stacked">
                             <li
+                            {% if page.menu == 'upgradingToTeams' %} class="active" {% endif %}>
+                            <a href="/documentation/learnmore/upgradingToTeams">Upgrading to Flyway Teams</a></li>
+
+                            <li
                             {% if page.menu == 'existing' %} class="active" {% endif %}>
                             <a href="/documentation/learnmore/existing">Existing database setup</a></li>
 
