@@ -1,7 +1,6 @@
 ---
 layout: documentation
 menu: configuration
-menu: configuration
 pill: configuration
 subtitle: configuration
 ---
@@ -37,37 +36,37 @@ If using maven, config parameters can be set in the plugin configuration block, 
 
 ### General
 
-- [locations](/documentation/configuration/parameters/locations)
+- [batch](/documentation/configuration/parameters/batch) {% include teams.html %}
 - [callbacks](/documentation/configuration/parameters/callbacks)
-- [configFiles](/documentation/configuration/parameters/configFiles)
+- [cherryPick](/documentation/configuration/parameters/cherryPick) {% include teams.html %}
 - [configFileEncoding](/documentation/configuration/parameters/configFileEncoding)
+- [configFiles](/documentation/configuration/parameters/configFiles)
+- [dryRunOutput](/documentation/configuration/parameters/dryRunOutput) {% include teams.html %}
 - [encoding](/documentation/configuration/parameters/encoding)
+- [errorOverrides](/documentation/configuration/parameters/errorOverrides) {% include teams.html %}
 - [group](/documentation/configuration/parameters/group)
 - [installedBy](/documentation/configuration/parameters/installedBy)
 - [jarDirs](/documentation/configuration/parameters/jarDirs)
+- [licenseKey](/documentation/configuration/parameters/licenseKey) {% include teams.html %}
+- [locations](/documentation/configuration/parameters/locations)
 - [mixed](/documentation/configuration/parameters/mixed)
 - [outOfOrder](/documentation/configuration/parameters/outOfOrder)
+- [outputQueryResults](/documentation/configuration/parameters/outputQueryResults) {% include teams.html %}
 - [skipDefaultCallbacks](/documentation/configuration/parameters/skipDefaultCallbacks)
 - [skipDefaultResolvers](/documentation/configuration/parameters/skipDefaultResolvers)
+- [skipExecutingMigrations](/documentation/configuration/parameters/skipExecutingMigrations) {% include teams.html %}
+- [stream](/documentation/configuration/parameters/stream) {% include teams.html %}
 - [table](/documentation/configuration/parameters/table)
 - [tablespace](/documentation/configuration/parameters/tablespace)
 - [target](/documentation/configuration/parameters/target)
 - [validateMigrationNaming](/documentation/configuration/parameters/validateMigrationNaming)
 - [validateOnMigrate](/documentation/configuration/parameters/validateOnMigrate)
 - [workingDirectory](/documentation/configuration/parameters/workingDirectory)
-- [licenseKey](/documentation/configuration/parameters/licenseKey) {% include teams.html %}
-- [cherryPick](/documentation/configuration/parameters/cherryPick) {% include teams.html %}
-- [dryRunOutput](/documentation/configuration/parameters/dryRunOutput) {% include teams.html %}
-- [errorOverrides](/documentation/configuration/parameters/errorOverrides) {% include teams.html %}
-- [batch](/documentation/configuration/parameters/batch) {% include teams.html %}
-- [outputQueryResults](/documentation/configuration/parameters/outputQueryResults) {% include teams.html %}
-- [skipExecutingMigrations](/documentation/configuration/parameters/skipExecutingMigrations) {% include teams.html %}
-- [stream](/documentation/configuration/parameters/stream) {% include teams.html %}
 
 ### Schema
-- [schemas](/documentation/configuration/parameters/schemas)
-- [defaultSchema](/documentation/configuration/parameters/defaultSchema)
 - [createSchemas](/documentation/configuration/parameters/createSchemas)
+- [defaultSchema](/documentation/configuration/parameters/defaultSchema)
+- [schemas](/documentation/configuration/parameters/schemas)
 
 ### Baseline
 - [baselineDescription](/documentation/configuration/parameters/baselineDescription)
@@ -85,8 +84,8 @@ If using maven, config parameters can be set in the plugin configuration block, 
 - [ignorePendingMigrations](/documentation/configuration/parameters/ignorePendingMigrations)
 
 ### Migrations
-- [resolvers](/documentation/configuration/parameters/resolvers)
 - [repeatableSqlMigrationPrefix](/documentation/configuration/parameters/repeatableSqlMigrationPrefix)
+- [resolvers](/documentation/configuration/parameters/resolvers)
 - [sqlMigrationPrefix](/documentation/configuration/parameters/sqlMigrationPrefix)
 - [sqlMigrationSeparator](/documentation/configuration/parameters/sqlMigrationSeparator)
 - [sqlMigrationSuffixes](/documentation/configuration/parameters/sqlMigrationSuffixes)
