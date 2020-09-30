@@ -21,36 +21,36 @@ See See [dry runs](/documentation/dryruns) for more details.
 ## Usage
 
 ### Commandline
-```
+```powershell
 ./flyway -dryRunOutput="/my/output/file.sql" clean
 ```
 
 ### Configuration File
-```
+```properties
 flyway.dryRunOutput=/my/output/file.sql
 ```
 
 ### Environment Variable
-```
+```properties
 FLYWAY_DRYRUN_OUTPUT=/my/output/file.sql
 ```
 
 ### API
-```
+```java
 Flyway.configure()
     .dryRunOutput("/my/output/file.sql")
     .load()
 ```
 
 ### Gradle
-```
+```groovy
 flyway {
     dryRunOutput = '/my/output/file.sql'
 }
 ```
 
 ### Maven
-```
+```xml
 <configuration>
     <dryRunOutput>/my/output/file.sql</dryRunOutput>
 </configuration>

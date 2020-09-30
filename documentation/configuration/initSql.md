@@ -15,36 +15,36 @@ This is mainly used for setting some state on the connection that needs to be sh
 ## Usage
 
 ### Commandline
-```
+```powershell
 ./flyway -initSql="ALTER SESSION SET NLS_LANGUAGE='ENGLISH';" info
 ```
 
 ### Configuration File
-```
+```properties
 flyway.initSql=ALTER SESSION SET NLS_LANGUAGE='ENGLISH';
 ```
 
 ### Environment Variable
-```
+```properties
 FLYWAY_INIT_SQL=ALTER SESSION SET NLS_LANGUAGE='ENGLISH';
 ```
 
 ### API
-```
+```java
 Flyway.configure()
     .initSql("ALTER SESSION SET NLS_LANGUAGE='ENGLISH';")
     .load()
 ```
 
 ### Gradle
-```
+```groovy
 flyway {
     initSql = "ALTER SESSION SET NLS_LANGUAGE='ENGLISH';"
 }
 ```
 
 ### Maven
-```
+```xml
 <configuration>
     <initSql>ALTER SESSION SET NLS_LANGUAGE='ENGLISH';</initSql>
 </configuration>

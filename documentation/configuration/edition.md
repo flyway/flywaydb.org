@@ -14,7 +14,7 @@ The version of flyway to use. This config parameter only applies to the Command 
 ## Usage
 
 ### Commandline
-```
+```powershell
 ./flyway -teams info
 ```
 
@@ -22,7 +22,7 @@ The version of flyway to use. This config parameter only applies to the Command 
 Not available
 
 ### Environment Variable
-```
+```properties
 FLYWAY_EDITION=teams
 ```
 

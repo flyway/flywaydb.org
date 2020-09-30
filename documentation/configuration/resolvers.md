@@ -15,36 +15,36 @@ You must ensure that the resolver is available on the classpath (see [Adding to 
 ## Usage
 
 ### Commandline
-```
+```powershell
 ./flyway -resolvers="my.resolver.MigrationResolver" info
 ```
 
 ### Configuration File
-```
+```properties
 flyway.resolvers=my.resolver.MigrationResolver
 ```
 
 ### Environment Variable
-```
+```properties
 FLYWAY_RESOLVERS=my.resolver.MigrationResolver
 ```
 
 ### API
-```
+```java
 Flyway.configure()
     .resolvers("my.resolver.MigrationResolver")
     .load()
 ```
 
 ### Gradle
-```
+```groovy
 flyway {
     resolvers = 'my.resolver.MigrationResolver'
 }
 ```
 
 ### Maven
-```
+```xml
 <configuration>
     <resolvers>my.resolver.MigrationResolver</resolvers>
 </configuration>

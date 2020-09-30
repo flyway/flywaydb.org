@@ -17,36 +17,36 @@ If [defaultSchema](/documentation/configuration/defaultSchema) is not specified,
 ## Usage
 
 ### Commandline
-```
+```powershell
 ./flyway -schemas="schema1,schema2" info
 ```
 
 ### Configuration File
-```
+```properties
 flyway.schemas=schema1,schema2
 ```
 
 ### Environment Variable
-```
+```properties
 FLYWAY_SCHEMAS=schema1,schema2
 ```
 
 ### API
-```
+```java
 Flyway.configure()
     .schemas("schema1,schema2")
     .load()
 ```
 
 ### Gradle
-```
+```groovy
 flyway {
     schemas = ['schema1', 'schema2']
 }
 ```
 
 ### Maven
-```
+```xml
 <configuration>
     <schemas>
         <schema>schema1</schema>

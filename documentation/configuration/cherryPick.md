@@ -22,36 +22,36 @@ The schema history table now shows migration `V1` and `create_view` as being suc
 ## Usage
 
 ### Commandline
-```
+```powershell
 ./flyway -cherryPick="2.0" migrate
 ```
 
 ### Configuration File
-```
+```properties
 flyway.cherryPick=2.0
 ```
 
 ### Environment Variable
-```
+```properties
 FLYWAY_CHERRY_PICK=2.0
 ```
 
 ### API
-```
+```java
 Flyway.configure()
     .cherryPick("2.0")
     .load()
 ```
 
 ### Gradle
-```
+```groovy
 flyway {
     cherryPick = '2.0'
 }
 ```
 
 ### Maven
-```
+```xml
 <configuration>
     <cherryPick>2.0</cherryPick>
 </configuration>

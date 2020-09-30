@@ -18,36 +18,36 @@ If [schemas](/documentation/configuration/schemas) is specified, the first schem
 ## Usage
 
 ### Commandline
-```
+```powershell
 ./flyway -defaultSchema="schema2" info
 ```
 
 ### Configuration File
-```
+```properties
 flyway.defaultSchema=schema2
 ```
 
 ### Environment Variable
-```
+```properties
 FLYWAY_DEFAULT_SCHEMA=schema2
 ```
 
 ### API
-```
+```java
 Flyway.configure()
     .defaultSchema("schema2")
     .load()
 ```
 
 ### Gradle
-```
+```groovy
 flyway {
     defaultSchema = 'schema2'
 }
 ```
 
 ### Maven
-```
+```xml
 <configuration>
     <defaultSchema>schema2</defaultSchema>
 </configuration>

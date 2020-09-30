@@ -21,36 +21,36 @@ false
 ## Usage
 
 ### Commandline
-```
+```powershell
 ./flyway -batch="true" info
 ```
 
 ### Configuration File
-```
+```properties
 flyway.batch=true
 ```
 
 ### Environment Variable
-```
+```properties
 FLYWAY_BATCH=true
 ```
 
 ### API
-```
+```java
 Flyway.configure()
     .batch(true)
     .load()
 ```
 
 ### Gradle
-```
+```groovy
 flyway {
     batch = true
 }
 ```
 
 ### Maven
-```
+```xml
 <configuration>
     <batch>true</batch>
 </configuration>

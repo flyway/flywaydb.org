@@ -16,36 +16,36 @@ false
 ## Usage
 
 ### Commandline
-```
+```powershell
 ./flyway -group="true" info
 ```
 
 ### Configuration File
-```
+```properties
 flyway.group=true
 ```
 
 ### Environment Variable
-```
+```properties
 FLYWAY_GROUP=true
 ```
 
 ### API
-```
+```java
 Flyway.configure()
     .group(true)
     .load()
 ```
 
 ### Gradle
-```
+```groovy
 flyway {
     group = true
 }
 ```
 
 ### Maven
-```
+```xml
 <configuration>
     <group>true</group>
 </configuration>

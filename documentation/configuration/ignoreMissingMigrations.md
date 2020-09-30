@@ -22,36 +22,36 @@ false
 ## Usage
 
 ### Commandline
-```
+```powershell
 ./flyway -ignoreMissingMigrations="true" validate
 ```
 
 ### Configuration File
-```
+```properties
 flyway.ignoreMissingMigrations=true
 ```
 
 ### Environment Variable
-```
+```properties
 FLYWAY_IGNORE_MISSING_MIGRATIONS=true
 ```
 
 ### API
-```
+```java
 Flyway.configure()
     .ignoreMissingMigrations(true)
     .load()
 ```
 
 ### Gradle
-```
+```groovy
 flyway {
     ignoreMissingMigrations = true
 }
 ```
 
 ### Maven
-```
+```xml
 <configuration>
     <ignoreMissingMigrations>true</ignoreMissingMigrations>
 </configuration>

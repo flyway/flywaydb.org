@@ -16,7 +16,7 @@ auto
 ## Usage
 
 ### Commandline
-```
+```powershell
 ./flyway -color=never info
 ```
 

@@ -19,36 +19,36 @@ false
 ## Usage
 
 ### Commandline
-```
+```powershell
 ./flyway -stream="true" info
 ```
 
 ### Configuration File
-```
+```properties
 flyway.stream=true
 ```
 
 ### Environment Variable
-```
+```properties
 FLYWAY_STREAM=true
 ```
 
 ### API
-```
+```java
 Flyway.configure()
     .stream(true)
     .load()
 ```
 
 ### Gradle
-```
+```groovy
 flyway {
     stream = true
 }
 ```
 
 ### Maven
-```
+```xml
 <configuration>
     <stream>true</stream>
 </configuration>

@@ -20,36 +20,36 @@ false
 ## Usage
 
 ### Commandline
-```
+```powershell
 ./flyway -mixed="true" info
 ```
 
 ### Configuration File
-```
+```properties
 flyway.mixed=true
 ```
 
 ### Environment Variable
-```
+```properties
 FLYWAY_MIXED=true
 ```
 
 ### API
-```
+```java
 Flyway.configure()
     .mixed(true)
     .load()
 ```
 
 ### Gradle
-```
+```groovy
 flyway {
     mixed = true
 }
 ```
 
 ### Maven
-```
+```xml
 <configuration>
     <mixed>true</mixed>
 </configuration>

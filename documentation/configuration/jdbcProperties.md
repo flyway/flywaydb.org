@@ -16,22 +16,22 @@ For example to supply a property `property1` with the value `value1`, you can se
 ## Usage
 
 ### Commandline
-```
+```powershell
 ./flyway -jdbcProperties.accessToken=my-access-token info
 ```
 
 ### Configuration File
-```
+```properties
 flyway.jdbcProperties.accessToken=my-access-token
 ```
 
 ### Environment Variable
-```
+```properties
 FLYWAY_JDBC_PROPERTIES_ACCESSTOKEN=access-token
 ```
 
 ### API
-```
+```java
 Map<String, String> properties = new HashMap<>();
 properties.put("accessToken", "access-token");
 
@@ -41,14 +41,14 @@ Flyway.configure()
 ```
 
 ### Gradle
-```
+```groovy
 flyway {
     jdbcProperties = ['accessToken' : 'access-token']
 }
 ```
 
 ### Maven
-```
+```xml
 <configuration>
     <jdbcProperties>
         <accessToken>access-token</accessToken>

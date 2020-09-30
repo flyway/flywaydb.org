@@ -18,36 +18,36 @@ false
 ## Usage
 
 ### Commandline
-```
+```powershell
 ./flyway -ignorePendingMigrations="true" validate
 ```
 
 ### Configuration File
-```
+```properties
 flyway.ignorePendingMigrations=true
 ```
 
 ### Environment Variable
-```
+```properties
 FLYWAY_IGNORE_PENDING_MIGRATIONS=true
 ```
 
 ### API
-```
+```java
 Flyway.configure()
     .ignorePendingMigrations(true)
     .load()
 ```
 
 ### Gradle
-```
+```groovy
 flyway {
     ignorePendingMigrations = true
 }
 ```
 
 ### Maven
-```
+```xml
 <configuration>
     <ignorePendingMigrations>true</ignorePendingMigrations>
 </configuration>

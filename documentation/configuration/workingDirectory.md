@@ -16,7 +16,7 @@ The working directory to consider when dealing with relative paths for both conf
 ## Usage
 
 ### Commandline
-```
+```powershell
 ./flyway -workingDirectory="sql" info
 ```
 
@@ -33,7 +33,7 @@ Not available
 Not available
 
 ### Maven
-```
+```xml
 <configuration>
     <workingDirectory>sql</workingDirectory>
 </configuration>

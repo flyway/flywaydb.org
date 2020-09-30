@@ -17,36 +17,36 @@ true
 ## Usage
 
 ### Commandline
-```
+```powershell
 ./flyway -outputQueryResults="false" info
 ```
 
 ### Configuration File
-```
+```properties
 flyway.outputQueryResults=false
 ```
 
 ### Environment Variable
-```
+```properties
 FLYWAY_OUTPUT_QUERY_RESULTS=false
 ```
 
 ### API
-```
+```java
 Flyway.configure()
     .outputQueryResults(false)
     .load()
 ```
 
 ### Gradle
-```
+```groovy
 flyway {
     outputQueryResults = false
 }
 ```
 
 ### Maven
-```
+```xml
 <configuration>
     <outputQueryResults>false</outputQueryResults>
 </configuration>

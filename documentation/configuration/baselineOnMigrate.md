@@ -20,36 +20,36 @@ false
 ## Usage
 
 ### Commandline
-```
+```powershell
 ./flyway -baselineOnMigrate="true" baseline
 ```
 
 ### Configuration File
-```
+```properties
 flyway.baselineOnMigrate=true
 ```
 
 ### Environment Variable
-```
+```properties
 FLYWAY_BASELINE_ON_MIGRATE=true
 ```
 
 ### API
-```
+```java
 Flyway.configure()
     .baselineOnMigrate(true)
     .load()
 ```
 
 ### Gradle
-```
+```groovy
 flyway {
     baselineOnMigrate = true
 }
 ```
 
 ### Maven
-```
+```xml
 <configuration>
     <baselineOnMigrate>true</baselineOnMigrate>
 </configuration>

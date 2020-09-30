@@ -18,36 +18,36 @@ false
 ## Usage
 
 ### Commandline
-```
+```powershell
 ./flyway -ignoreFutureMigrations="true" validate
 ```
 
 ### Configuration File
-```
+```properties
 flyway.ignoreFutureMigrations=true
 ```
 
 ### Environment Variable
-```
+```properties
 FLYWAY_IGNORE_FUTURE_MIGRATIONS=true
 ```
 
 ### API
-```
+```java
 Flyway.configure()
     .ignoreFutureMigrations(true)
     .load()
 ```
 
 ### Gradle
-```
+```groovy
 flyway {
     ignoreFutureMigrations = true
 }
 ```
 
 ### Maven
-```
+```xml
 <configuration>
     <ignoreFutureMigrations>true</ignoreFutureMigrations>
 </configuration>

@@ -18,36 +18,36 @@ false
 ## Usage
 
 ### Commandline
-```
+```powershell
 ./flyway -outOfOrder="true" info
 ```
 
 ### Configuration File
-```
+```properties
 flyway.outOfOrder=true
 ```
 
 ### Environment Variable
-```
+```properties
 FLYWAY_OUT_OF_ORDER=true
 ```
 
 ### API
-```
+```java
 Flyway.configure()
     .outOfOrder(true)
     .load()
 ```
 
 ### Gradle
-```
+```groovy
 flyway {
     outOfOrder = true
 }
 ```
 
 ### Maven
-```
+```xml
 <configuration>
     <outOfOrder>true</outOfOrder>
 </configuration>

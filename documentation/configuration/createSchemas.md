@@ -16,36 +16,36 @@ true
 ## Usage
 
 ### Commandline
-```
+```powershell
 ./flyway -createSchemas="false" info
 ```
 
 ### Configuration File
-```
+```properties
 flyway.createSchemas=false
 ```
 
 ### Environment Variable
-```
+```properties
 FLYWAY_SCHEMAS=false
 ```
 
 ### API
-```
+```java
 Flyway.configure()
     .createSchemas(false)
     .load()
 ```
 
 ### Gradle
-```
+```groovy
 flyway {
     createSchemas = false
 }
 ```
 
 ### Maven
-```
+```xml
 <configuration>
     <createSchemas>false</createSchemas>
 </configuration>
