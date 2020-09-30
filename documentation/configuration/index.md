@@ -37,37 +37,37 @@ If using maven, config parameters can be set in the plugin configuration block, 
 
 ### General
 
-- [locations](/documentation/configuration/locations)
+- [batch](/documentation/configuration/batch) {% include teams.html %}
 - [callbacks](/documentation/configuration/callbacks)
-- [configFiles](/documentation/configuration/configFiles)
+- [cherryPick](/documentation/configuration/cherryPick) {% include teams.html %}
 - [configFileEncoding](/documentation/configuration/configFileEncoding)
+- [configFiles](/documentation/configuration/configFiles)
+- [dryRunOutput](/documentation/configuration/dryRunOutput) {% include teams.html %}
 - [encoding](/documentation/configuration/encoding)
+- [errorOverrides](/documentation/configuration/errorOverrides) {% include teams.html %}
 - [group](/documentation/configuration/group)
 - [installedBy](/documentation/configuration/installedBy)
 - [jarDirs](/documentation/configuration/jarDirs)
+- [licenseKey](/documentation/configuration/licenseKey) {% include teams.html %}
+- [locations](/documentation/configuration/locations)
 - [mixed](/documentation/configuration/mixed)
 - [outOfOrder](/documentation/configuration/outOfOrder)
+- [outputQueryResults](/documentation/configuration/outputQueryResults) {% include teams.html %}
 - [skipDefaultCallbacks](/documentation/configuration/skipDefaultCallbacks)
 - [skipDefaultResolvers](/documentation/configuration/skipDefaultResolvers)
+- [skipExecutingMigrations](/documentation/configuration/skipExecutingMigrations) {% include teams.html %}
+- [stream](/documentation/configuration/stream) {% include teams.html %}
 - [table](/documentation/configuration/table)
 - [tablespace](/documentation/configuration/tablespace)
 - [target](/documentation/configuration/target)
 - [validateMigrationNaming](/documentation/configuration/validateMigrationNaming)
 - [validateOnMigrate](/documentation/configuration/validateOnMigrate)
 - [workingDirectory](/documentation/configuration/workingDirectory)
-- [licenseKey](/documentation/configuration/licenseKey) {% include teams.html %}
-- [cherryPick](/documentation/configuration/cherryPick) {% include teams.html %}
-- [dryRunOutput](/documentation/configuration/dryRunOutput) {% include teams.html %}
-- [errorOverrides](/documentation/configuration/errorOverrides) {% include teams.html %}
-- [batch](/documentation/configuration/batch) {% include teams.html %}
-- [outputQueryResults](/documentation/configuration/outputQueryResults) {% include teams.html %}
-- [skipExecutingMigrations](/documentation/configuration/skipExecutingMigrations) {% include teams.html %}
-- [stream](/documentation/configuration/stream) {% include teams.html %}
 
 ### Schema
-- [schemas](/documentation/configuration/schemas)
-- [defaultSchema](/documentation/configuration/defaultSchema)
 - [createSchemas](/documentation/configuration/createSchemas)
+- [defaultSchema](/documentation/configuration/defaultSchema)
+- [schemas](/documentation/configuration/schemas)
 
 ### Baseline
 - [baselineDescription](/documentation/configuration/baselineDescription)
@@ -85,8 +85,8 @@ If using maven, config parameters can be set in the plugin configuration block, 
 - [ignorePendingMigrations](/documentation/configuration/ignorePendingMigrations)
 
 ### Migrations
-- [resolvers](/documentation/configuration/resolvers)
 - [repeatableSqlMigrationPrefix](/documentation/configuration/repeatableSqlMigrationPrefix)
+- [resolvers](/documentation/configuration/resolvers)
 - [sqlMigrationPrefix](/documentation/configuration/sqlMigrationPrefix)
 - [sqlMigrationSeparator](/documentation/configuration/sqlMigrationSeparator)
 - [sqlMigrationSuffixes](/documentation/configuration/sqlMigrationSuffixes)
