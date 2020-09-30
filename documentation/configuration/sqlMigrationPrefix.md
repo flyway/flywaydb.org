@@ -18,36 +18,36 @@ V
 ## Usage
 
 ### Commandline
-```
+```powershell
 ./flyway -sqlMigrationPrefix="M" info
 ```
 
 ### Configuration File
-```
+```properties
 flyway.sqlMigrationPrefix=M
 ```
 
 ### Environment Variable
-```
+```properties
 FLYWAY_SQL_MIGRATION_PREFIX=M
 ```
 
 ### API
-```
+```java
 Flyway.configure()
     .sqlMigrationPrefix("M")
     .load()
 ```
 
 ### Gradle
-```
+```groovy
 flyway {
     sqlMigrationPrefix = 'M'
 }
 ```
 
 ### Maven
-```
+```xml
 <configuration>
     <sqlMigrationPrefix>M</sqlMigrationPrefix>
 </configuration>

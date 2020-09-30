@@ -20,36 +20,36 @@ false
 ## Usage
 
 ### Commandline
-```
+```powershell
 ./flyway -cleanOnValidationError="true" validate
 ```
 
 ### Configuration File
-```
+```properties
 flyway.cleanOnValidationError=true
 ```
 
 ### Environment Variable
-```
+```properties
 FLYWAY_CLEAN_ON_VALIDATION_ERROR=true
 ```
 
 ### API
-```
+```java
 Flyway.configure()
     .cleanOnValidationError(true)
     .load()
 ```
 
 ### Gradle
-```
+```groovy
 flyway {
     cleanOnValidationError = true
 }
 ```
 
 ### Maven
-```
+```xml
 <configuration>
     <cleanOnValidationError>true</cleanOnValidationError>
 </configuration>

@@ -46,36 +46,36 @@ classpath:db/migration
 ## Usage
 
 ### Commandline
-```
+```powershell
 ./flyway -locations="filesystem:./sql" info
 ```
 
 ### Configuration File
-```
+```properties
 flyway.locations=filesystem:./sql
 ```
 
 ### Environment Variable
-```
+```properties
 FLYWAY_LOCATIONS=filesystem:./sql
 ```
 
 ### API
-```
+```java
 Flyway.configure()
     .locations("filesystem:./sql")
     .load()
 ```
 
 ### Gradle
-```
+```groovy
 flyway {
     locations = ['filesystem:./sql']
 }
 ```
 
 ### Maven
-```
+```xml
 <configuration>
     <locations>
         <location>filesystem:./sql</location>

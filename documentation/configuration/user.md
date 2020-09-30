@@ -15,36 +15,36 @@ This can be omitted if the user is baked into the [url](/documentation/configura
 ## Usage
 
 ### Commandline
-```
+```powershell
 ./flyway -user=myuser info
 ```
 
 ### Configuration File
-```
+```properties
 flyway.user=myuser
 ```
 
 ### Environment Variable
-```
+```properties
 FLYWAY_USER=myuser
 ```
 
 ### API
-```
+```java
 Flyway.configure()
     .user("myuser")
     .load()
 ```
 
 ### Gradle
-```
+```groovy
 flyway {
     user = 'myuser'
 }
 ```
 
 ### Maven
-```
+```xml
 <configuration>
     <user>myuser</user>
 </configuration>

@@ -16,36 +16,36 @@ The maximum number of retries when attempting to connect to the database. After 
 ## Usage
 
 ### Commandline
-```
+```powershell
 ./flyway -connectRetries=50 info
 ```
 
 ### Configuration File
-```
+```properties
 flyway.connectRetries=50
 ```
 
 ### Environment Variable
-```
+```properties
 FLYWAY_CONNECT_RETRIES=50
 ```
 
 ### API
-```
+```java
 Flyway.configure()
     .connectRetries(50)
     .load()
 ```
 
 ### Gradle
-```
+```groovy
 flyway {
     connectRetries = 50
 }
 ```
 
 ### Maven
-```
+```xml
 <configuration>
     <connectRetries>50</connectRetries>
 </configuration>

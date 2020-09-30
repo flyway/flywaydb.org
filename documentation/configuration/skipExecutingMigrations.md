@@ -23,36 +23,36 @@ false
 ## Usage
 
 ### Commandline
-```
+```powershell
 ./flyway -skipExecutingMigrations="true" info
 ```
 
 ### Configuration File
-```
+```properties
 flyway.skipExecutingMigrations=true
 ```
 
 ### Environment Variable
-```
+```properties
 FLYWAY_SKIP_EXECUTING_MIGRATIONS=true
 ```
 
 ### API
-```
+```java
 Flyway.configure()
     .skipExecutingMigrations(true)
     .load()
 ```
 
 ### Gradle
-```
+```groovy
 flyway {
     skipExecutingMigrations = true
 }
 ```
 
 ### Maven
-```
+```xml
 <configuration>
     <skipExecutingMigrations>true</skipExecutingMigrations>
 </configuration>

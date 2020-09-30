@@ -36,36 +36,36 @@ See [errorOverrides](/documentation/erroroverrides) for more details.
 ## Usage
 
 ### Commandline
-```
+```powershell
 ./flyway -errorOverrides="STATE:12345:W" clean
 ```
 
 ### Configuration File
-```
+```properties
 flyway.errorOverrides=STATE:12345:W
 ```
 
 ### Environment Variable
-```
+```properties
 FLYWAY_ERROR_OVERRIDES=STATE:12345:W
 ```
 
 ### API
-```
+```java
 Flyway.configure()
     .errorOverrides("STATE:12345:W")
     .load()
 ```
 
 ### Gradle
-```
+```groovy
 flyway {
     errorOverrides = 'STATE:12345:W'
 }
 ```
 
 ### Maven
-```
+```xml
 <configuration>
     <errorOverrides>STATE:12345:W</errorOverrides>
 </configuration>

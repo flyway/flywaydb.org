@@ -16,36 +16,36 @@ true
 ## Usage
 
 ### Commandline
-```
+```powershell
 ./flyway -validateOnMigrate="false" migrate
 ```
 
 ### Configuration File
-```
+```properties
 flyway.validateOnMigrate=false
 ```
 
 ### Environment Variable
-```
+```properties
 FLYWAY_VALIDATE_ON_MIGRATE=false
 ```
 
 ### API
-```
+```java
 Flyway.configure()
     .validateOnMigrate(false)
     .load()
 ```
 
 ### Gradle
-```
+```groovy
 flyway {
     validateOnMigrate = false
 }
 ```
 
 ### Maven
-```
+```xml
 <configuration>
     <validateOnMigrate>false</validateOnMigrate>
 </configuration>

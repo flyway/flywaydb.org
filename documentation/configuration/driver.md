@@ -20,36 +20,36 @@ Auto-detected based on the url
 ## Usage
 
 ### Commandline
-```
+```powershell
 ./flyway -driver=com.microsoft.sqlserver.jdbc.SQLServerDriver info
 ```
 
 ### Configuration File
-```
+```properties
 flyway.driver=com.microsoft.sqlserver.jdbc.SQLServerDriver
 ```
 
 ### Environment Variable
-```
+```properties
 FLYWAY_DRIVER=com.microsoft.sqlserver.jdbc.SQLServerDriver
 ```
 
 ### API
-```
+```java
 Flyway.configure()
     .driver("com.microsoft.sqlserver.jdbc.SQLServerDriver")
     .load()
 ```
 
 ### Gradle
-```
+```groovy
 flyway {
     driver = 'com.microsoft.sqlserver.jdbc.SQLServerDriver'
 }
 ```
 
 ### Maven
-```
+```xml
 <configuration>
     <driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</driver>
 </configuration>

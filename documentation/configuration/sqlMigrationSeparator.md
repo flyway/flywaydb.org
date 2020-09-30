@@ -18,36 +18,36 @@ __
 ## Usage
 
 ### Commandline
-```
+```powershell
 ./flyway -sqlMigrationSeparator="-" info
 ```
 
 ### Configuration File
-```
+```properties
 flyway.sqlMigrationSeparator=-
 ```
 
 ### Environment Variable
-```
+```properties
 FLYWAY_SQL_MIGRATION_SEPARATOR=-
 ```
 
 ### API
-```
+```java
 Flyway.configure()
     .sqlMigrationSeparator("-")
     .load()
 ```
 
 ### Gradle
-```
+```groovy
 flyway {
     sqlMigrationSeparator = '-'
 }
 ```
 
 ### Maven
-```
+```xml
 <configuration>
     <sqlMigrationSeparator>-</sqlMigrationSeparator>
 </configuration>

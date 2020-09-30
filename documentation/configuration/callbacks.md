@@ -18,36 +18,36 @@ db/callback
 ## Usage
 
 ### Commandline
-```
+```powershell
 ./flyway -callbacks="my.callback.FlywayCallback,my.package.to.scan" info
 ```
 
 ### Configuration File
-```
+```properties
 flyway.callbacks=my.callback.FlywayCallback,my.package.to.scan
 ```
 
 ### Environment Variable
-```
+```properties
 FLYWAY_CALLBACKS=my.callback.FlywayCallback,my.package.to.scan
 ```
 
 ### API
-```
+```java
 Flyway.configure()
     .callbacks("my.callback.FlywayCallback", "my.package.to.scan")
     .load()
 ```
 
 ### Gradle
-```
+```groovy
 flyway {
     callbacks = ['my.callback.FlywayCallback', 'my.package.to.scan']
 }
 ```
 
 ### Maven
-```
+```xml
 <configuration>
     <callbacks>my.callback.FlywayCallback,my.package.to.scan</callbacks>
 </configuration>

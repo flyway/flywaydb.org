@@ -20,36 +20,36 @@ Multiple suffixes (like .sql,.pkg,.pkb) can be specified for easier compatibilit
 ## Usage
 
 ### Commandline
-```
+```powershell
 ./flyway -sqlMigrationSuffixes=".sql,.pkg,.pkb" info
 ```
 
 ### Configuration File
-```
+```properties
 flyway.sqlMigrationSuffixes=.sql,.pkg,.pkb
 ```
 
 ### Environment Variable
-```
+```properties
 FLYWAY_SQL_MIGRATION_SUFFIXES=.sql,.pkg,.pkb
 ```
 
 ### API
-```
+```java
 Flyway.configure()
     .sqlMigrationSuffixes(".sql,.pkg,.pkb")
     .load()
 ```
 
 ### Gradle
-```
+```groovy
 flyway {
     sqlMigrationSuffixes = '.sql,.pkg,.pkb'
 }
 ```
 
 ### Maven
-```
+```xml
 <configuration>
     <sqlMigrationSuffixes>.sql,.pkg,.pkb</sqlMigrationSuffixes>
 </configuration>

@@ -16,7 +16,7 @@ UTF-8
 ## Usage
 
 ### Commandline
-```
+```powershell
 ./flyway -configFileEncoding="UTF-16" info
 ```
 
@@ -24,7 +24,7 @@ UTF-8
 Not available
 
 ### Environment Variable
-```
+```properties
 FLYWAY_configFileEncoding=UTF-16
 ```
 
@@ -32,14 +32,14 @@ FLYWAY_configFileEncoding=UTF-16
 Not available
 
 ### Gradle
-```
+```groovy
 flyway {
     configFileEncoding = 'UTF-16'
 }
 ```
 
 ### Maven
-```
+```xml
 <configuration>
     <configFileEncoding>UTF-16</configFileEncoding>
 </configuration>

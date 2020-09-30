@@ -15,36 +15,36 @@ This can be omitted if the password is baked into the [url](/documentation/confi
 ## Usage
 
 ### Commandline
-```
+```powershell
 ./flyway -password=mysecretpassword info
 ```
 
 ### Configuration File
-```
+```properties
 flyway.password=mysecretpassword
 ```
 
 ### Environment Variable
-```
+```properties
 FLYWAY_PASSWORD=mysecretpassword
 ```
 
 ### API
-```
+```java
 Flyway.configure()
     .password("mysecretpassword")
     .load()
 ```
 
 ### Gradle
-```
+```groovy
 flyway {
     password = 'mysecretpassword'
 }
 ```
 
 ### Maven
-```
+```xml
 <configuration>
     <password>mysecretpassword</password>
 </configuration>

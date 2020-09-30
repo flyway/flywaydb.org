@@ -22,36 +22,36 @@ latest
 ## Usage
 
 ### Commandline
-```
+```powershell
 ./flyway -target="2.0" migrate
 ```
 
 ### Configuration File
-```
+```properties
 flyway.target=2.0
 ```
 
 ### Environment Variable
-```
+```properties
 FLYWAY_TARGET=2.0
 ```
 
 ### API
-```
+```java
 Flyway.configure()
     .target("2.0")
     .load()
 ```
 
 ### Gradle
-```
+```groovy
 flyway {
     target = '2.0'
 }
 ```
 
 ### Maven
-```
+```xml
 <configuration>
     <target>2.0</target>
 </configuration>

@@ -20,36 +20,36 @@ flyway_schema_history
 ## Usage
 
 ### Commandline
-```
+```powershell
 ./flyway -table="my_schema_history_table" info
 ```
 
 ### Configuration File
-```
+```properties
 flyway.table=my_schema_history_table
 ```
 
 ### Environment Variable
-```
+```properties
 FLYWAY_TABLE=my_schema_history_table
 ```
 
 ### API
-```
+```java
 Flyway.configure()
     .table("my_schema_history_table")
     .load()
 ```
 
 ### Gradle
-```
+```groovy
 flyway {
     table = 'my_schema_history_table'
 }
 ```
 
 ### Maven
-```
+```xml
 <configuration>
     <table>my_schema_history_table</table>
 </configuration>

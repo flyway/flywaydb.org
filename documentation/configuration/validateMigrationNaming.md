@@ -18,36 +18,36 @@ false
 ## Usage
 
 ### Commandline
-```
+```powershell
 ./flyway -validateMigrationNaming="true" info
 ```
 
 ### Configuration File
-```
+```properties
 flyway.validateMigrationNaming=true
 ```
 
 ### Environment Variable
-```
+```properties
 FLYWAY_VALIDATE_MIGRATION_NAMING=true
 ```
 
 ### API
-```
+```java
 Flyway.configure()
     .validateMigrationNaming(true)
     .load()
 ```
 
 ### Gradle
-```
+```groovy
 flyway {
     validateMigrationNaming = true
 }
 ```
 
 ### Maven
-```
+```xml
 <configuration>
     <validateMigrationNaming>true</validateMigrationNaming>
 </configuration>

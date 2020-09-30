@@ -18,7 +18,7 @@ Comma-separated list of directories containing JDBC drivers and Java-based migra
 This configuration parameter will only be used in the command line version of Flyway.
 
 ### Commandline
-```
+```powershell
 ./flyway -jarDirs="/my/jar/dir" info
 ```
 
@@ -26,7 +26,7 @@ This configuration parameter will only be used in the command line version of Fl
 Not available
 
 ### Environment Variable
-```
+```properties
 FLYWAY_JAR_DIRS=/my/jar/dir
 ```
 
