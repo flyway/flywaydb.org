@@ -112,5 +112,9 @@ Flyway subscriptions can be purchased for one, two or three year terms giving yo
 
 We can arrange an invoice for your Flyway license for Teams tier. You can register for a Redgate Account on our website [www.red-gate.com](https://www.red-gate.com) to give you full visibility and management of your licenses.
 
+## I already own a license, how do I use it?
+
+See [upgrading to Teams](/documentation/upgradingToTeams) for step-by-step instructions on how to upgrade your Flyway community installation to Flyway Teams.
+
 
 {% include trialpopup.html %}
