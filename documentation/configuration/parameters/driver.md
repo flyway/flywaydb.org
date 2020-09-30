@@ -10,7 +10,7 @@ subtitle: flyway.driver
 ## Description
 The fully qualified classname of the jdbc driver to use to connect to the database.
 
-This must match the driver for the database type in the [url](/documentation/configuration/configuration/url) you are using.
+This must match the driver for the database type in the [url](/documentation/configuration/parameters/url) you are using.
 
 If you use a driver class that is not shipped with Flyway, you must ensure that it is available on the classpath (see [Adding to the classpath](/documentation/addingToTheClasspath)).
 

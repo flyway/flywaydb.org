@@ -16,7 +16,7 @@ Placeholders can be configured through a number of different ways.
 
 Placeholders are case insensitive, so a placeholder like `${myplaceholder}` can be specified with any of the above techniques.
 
-See [configuration](/documentation/configuration/configuration/#placeholders) for placeholder specific configuration parameters. 
+See [configuration](/documentation/configuration/parameters/#placeholders) for placeholder specific configuration parameters. 
 
 ## Default placeholders
 Flyway also provides default placeholders, whose values are automatically populated:

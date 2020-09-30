@@ -86,7 +86,7 @@ INSERT INTO ${tableName} (name) VALUES ('Mr. T');</pre>
 In addition to the regular Oracle SQL syntax, Flyway Teams also comes with support for Oracle 
 SQL*Plus commands.
 
-This support is disabled by default and must be activated using the [`oracle.sqlplus`](/documentation/configuration/oracleSqlPlus) flag.
+This support is disabled by default and must be activated using the [`oracle.sqlplus`](/documentation/configuration/parameters/oracleSqlPlus) flag.
 
 ### Supported commands
 
@@ -148,7 +148,7 @@ the session in a consistent manner by calling SQL*Plus commands such as `SET FEE
 
 Flyway will look for `login.sql` in all the valid migration locations, and load it if present. `glogin.sql` will be loaded from $ORACLE_HOME/sqlplus/admin/glogin.sql in UNIX, and ORACLE_HOME\sqlplus\admin\glogin.sql.
 
-Profiles are only loaded when [`oracle.sqlplus`](/documentation/configuration/oracleSqlPlus) is enabled.
+Profiles are only loaded when [`oracle.sqlplus`](/documentation/configuration/parameters/oracleSqlPlus) is enabled.
 
 ### Output
 

@@ -16,7 +16,7 @@ subtitle: 'Command-line: undo'
 
 ## Options
 
-See [configuration](/documentation/configuration/configuration) for a full list of supported configuration parameters.
+See [configuration](/documentation/configuration/parameters) for a full list of supported configuration parameters.
 
 ## Sample configuration
 

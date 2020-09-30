@@ -12,7 +12,7 @@ The name of Flyway's [schema history table](/documentation/concepts/migrations#s
 
 By default (single-schema mode) the schema history table is placed in the default schema for the connection provided by the datasource.
 
-When the [defaultSchema](/documentation/configuration/configuration/defaultSchema) or [schemas](/documentation/configuration/configuration/schemas) property is set (multi-schema mode), the schema history table is placed in the specified default schema.
+When the [defaultSchema](/documentation/configuration/parameters/defaultSchema) or [schemas](/documentation/configuration/parameters/schemas) property is set (multi-schema mode), the schema history table is placed in the specified default schema.
 
 ## Default
 flyway_schema_history

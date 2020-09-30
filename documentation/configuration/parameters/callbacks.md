@@ -10,7 +10,7 @@ subtitle: flyway.callbacks
 ## Description
 Comma-separated list of fully qualified class names of [Callback](/documentation/usage/api/javadoc/org/flywaydb/core/api/callback/Callback) implementations to use to hook into the Flyway lifecycle, or packages to scan for these classes. Ensure the class or package is available on the classpath (see [Adding to the classpath](/documentation/addingToTheClasspath)).
 
-Note: SQL callbacks matching the correct name pattern are loaded from locations (see [Callbacks](/documentation/concepts/callbacks)). This configuration parameter is only used for loading java callbacks. To disable loading sql callbacks, see [skipDefaultCallbacks](/documentation/configuration/configuration/skipDefaultCallbacks).
+Note: SQL callbacks matching the correct name pattern are loaded from locations (see [Callbacks](/documentation/concepts/callbacks)). This configuration parameter is only used for loading java callbacks. To disable loading sql callbacks, see [skipDefaultCallbacks](/documentation/configuration/parameters/skipDefaultCallbacks).
 
 ## Default
 db/callback
