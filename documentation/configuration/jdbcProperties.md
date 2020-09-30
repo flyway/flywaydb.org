@@ -5,7 +5,7 @@ pill: jdbcProperties
 subtitle: flyway.jdbcProperties
 ---
 
-# Installed By
+# JDBC Properties
 {% include teams.html %}
 
 ## Description
