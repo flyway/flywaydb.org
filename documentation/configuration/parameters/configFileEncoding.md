@@ -8,7 +8,7 @@ subtitle: flyway.configFileEncoding
 # Config File Encoding
 
 ## Description
-The file encoding to use when loading [Flyway configuration files](/documentation/configuration/configfiles).
+The file encoding to use when loading [Flyway configuration files](/documentation/configuration/configFiles).
 
 ## Default
 UTF-8

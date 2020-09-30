@@ -173,8 +173,8 @@ should be used as specified above). These different means of configuration can b
 
 ### Config files
 
-[Config files](/documentation/configuration/configfiles) are supported by the Flyway command-line tool. If you are not familiar with them,
-check out the [Flyway config file structure and settings reference](/documentation/configuration/configfiles) first.
+[Config files](/documentation/configuration/configFiles) are supported by the Flyway command-line tool. If you are not familiar with them,
+check out the [Flyway config file structure and settings reference](/documentation/configuration/configFiles) first.
 
 Flyway will search for and automatically load the following config files if present:
 - `<install-dir>/conf/flyway.conf`
