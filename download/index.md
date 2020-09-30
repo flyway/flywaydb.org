@@ -35,8 +35,8 @@ Choose your Flyway edition based on the features and support level you require
 <tr><td>Statement-level callbacks</td><td></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td><a href="/documentation/dryruns">Dry runs</a></td><td></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td><a href="/documentation/command/undo">Undo</a></td><td></td><td><i class="fa fa-check"></i></td></tr>
-<tr><td>Batching</td><td></td><td><i class="fa fa-check"></i></td></tr>
-<tr><td>Streaming</td><td></td><td><i class="fa fa-check"></i></td></tr>
+<tr><td><a href="/documentation/configuration/batch">Batching</a></td><td></td><td><i class="fa fa-check"></i></td></tr>
+<tr><td><a href="/documentation/configuration/stream">Streaming</a></td><td></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td><a href="/documentation/configuration/cherryPick">Cherry picking</a></td><td></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td><a href="/documentation/configuration/skipExecutingMigrations">Mark as applied</a></td><td></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td><a href="/documentation/migrations#query-results">Toggle display of query results</a></td><td></td><td><i class="fa fa-check"></i></td></tr>
