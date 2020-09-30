@@ -10,12 +10,13 @@ This article assumes you are a proud owner of a Flyway Teams license. If you are
 
 ## Upgrading from community
 
-If you are currently using Flyway Community there are a few things you need to do to upgrade to using Flyway Teams. The steps to do so differ depending on how you are accessing Flyway, but broadly consist of two main steps. Telling Flyway to use the [correct edition](/documentation/configuration/edition), and supplying a [license key](/documentation/configuration/licenseKey). See below for more details for each usage.
+If you are currently using Flyway Community there are a few things you need to do to upgrade to using Flyway Teams. The process to do so differs depending on how you are accessing Flyway, but broadly consists of telling Flyway to use the [correct edition](/documentation/configuration/edition), and supplying a [license key](/documentation/configuration/licenseKey). See below for more details for each usage.
 
 ### Command Line
 
 If you are using the command line, simply add the `-teams` flag when you invoke Flyway (or use the environment variable `FLYWAY_EDITION=teams`). Then provide your [license key](/documentation/configuration/licenseKey) through any of the supported methods.
 
+For example:
 ```powershell
 ./flyway -teams -licenseKey=FL01... info
 ```
@@ -24,6 +25,7 @@ If you are using the command line, simply add the `-teams` flag when you invoke 
 
 If you are using the API, simply swap your dependency from `org.flywaydb.flyway` to `org.flywaydb.flyway.enterprise`. Then provide your [license key](/documentation/configuration/licenseKey) through any of the supported methods.
 
+For example:
 ```groovy
 // gradle
 dependencies {
@@ -41,6 +43,7 @@ flyway.info();
 
 If you are using the Gradle plugin, swap the plugin dependency from `id "org.flywaydb.flyway" version "{{ site.flywayVersion }}"` to `id "org.flywaydb.flyway.enterprise" version "{{ site.flywayVersion }}"`. Then provide your [license key](/documentation/configuration/licenseKey) through any of the supported methods.
 
+For example:
 ```groovy
 plugins {
     id "org.flywaydb.flyway.enterprise" version "{{ site.flywayVersion }}"
@@ -55,6 +58,7 @@ flyway {
 
 If you are using the Maven plugin, swap the plugin dependency from `<groupId>org.flywaydb</groupId>` to `<groupId>org.flywaydb.enterprise</groupId>`. Then provide your [license key](/documentation/configuration/licenseKey) through any of the supported methods.
 
+For example:
 ```xml
 <plugin>
     <groupId>org.flywaydb.enterprise</groupId>
