@@ -8,14 +8,14 @@ subtitle: flyway.configFiles
 # Config Files
 
 ## Description
-The [Flyway configuration](/documentation/configuration/configFiles) files to load.
+The [Flyway configuration](/documentation/configuration/configfiles) files to load.
 
 These files will be relative to the [Working Directory](/documentation/configuration/parameters/workingDirectory).
 
 ## Usage
 
 ### Commandline
-```
+```powershell
 ./flyway -configFiles="my.conf" info
 ```
 
@@ -23,7 +23,7 @@ These files will be relative to the [Working Directory](/documentation/configura
 Not available
 
 ### Environment Variable
-```
+```properties
 FLYWAY_CONFIG_FILES=my.conf
 ```
 
@@ -31,14 +31,14 @@ FLYWAY_CONFIG_FILES=my.conf
 Not available
 
 ### Gradle
-```
+```groovy
 flyway {
     configFiles = ['my.conf']
 }
 ```
 
 ### Maven
-```
+```xml
 <configuration>
     <configFiles>
         <configFile>my.conf</configFile>
