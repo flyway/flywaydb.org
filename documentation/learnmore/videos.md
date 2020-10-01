@@ -2,6 +2,7 @@
 layout: documentation
 menu: videos
 subtitle: Video Tutorials
+redirect_from: /documentation/videos
 ---
 # Video Tutorials
 

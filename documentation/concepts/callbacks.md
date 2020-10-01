@@ -2,6 +2,7 @@
 layout: documentation
 menu: callbacks
 subtitle: Callbacks
+redirect_from: /documentation/callbacks
 ---
 # Callbacks
 

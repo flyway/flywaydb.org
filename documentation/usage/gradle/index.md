@@ -2,6 +2,7 @@
 layout: gradle
 pill: overview
 subtitle: Gradle Plugin
+redirect_from: /documentation/gradle
 ---
 # Gradle Plugin
 

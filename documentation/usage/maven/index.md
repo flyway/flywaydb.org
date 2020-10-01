@@ -2,6 +2,7 @@
 layout: maven
 pill: overview
 subtitle: Maven Plugin
+redirect_from: /documentation/maven
 ---
 # Maven Plugin
 

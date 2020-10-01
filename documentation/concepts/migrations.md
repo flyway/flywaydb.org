@@ -2,6 +2,7 @@
 layout: documentation
 menu: migrations
 subtitle: Migrations
+redirect_from: /documentation/migrations
 ---
 # Migrations
 

@@ -3,6 +3,7 @@ layout: documentation
 menu: configuration
 pill: configuration
 subtitle: configuration
+redirect_from: /documentation/configuration/
 ---
 
 # Configuration
