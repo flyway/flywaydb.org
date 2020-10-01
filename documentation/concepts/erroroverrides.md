@@ -2,6 +2,7 @@
 layout: documentation
 menu: erroroverrides
 subtitle: Error Overrides
+redirect_from: /documentation/erroroverrides
 ---
 # Error Overrides
 {% include teams.html %}

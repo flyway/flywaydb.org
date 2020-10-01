@@ -2,6 +2,7 @@
 layout: documentation
 menu: placeholders
 subtitle: Placeholders
+redirect_from: /documentation/placeholders
 ---
 # Placeholders
 In addition to regular SQL syntax, Flyway also supports placeholder replacement with configurable pre- and suffixes.

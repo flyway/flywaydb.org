@@ -2,6 +2,7 @@
 layout: documentation
 menu: envvars
 subtitle: Environment Variables
+redirect_from: /documentation/envvars
 ---
 # Environment Variables
 

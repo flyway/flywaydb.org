@@ -2,6 +2,7 @@
 layout: documentation
 menu: upgradingToTeams
 subtitle: Upgrading to Teams
+redirect_from: /documentation/upgradingToTeams
 ---
 
 # Upgrading to Teams

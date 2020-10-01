@@ -2,6 +2,7 @@
 layout: documentation
 menu: awsSecretsManager
 subtitle: AWS Secrets Manager support
+redirect_from: /documentation/awsSecretsManager
 ---
 # AWS Secrets Manager support
 {% include teams.html %}

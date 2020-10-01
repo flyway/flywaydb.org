@@ -2,6 +2,7 @@
 layout: commandLine
 pill: overview
 subtitle: Command-line
+redirect_from: /documentation/commandline
 ---
 # Command-line tool
 

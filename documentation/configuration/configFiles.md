@@ -2,6 +2,7 @@
 layout: documentation
 menu: configFiles
 subtitle: Config Files
+redirect_from: /documentation/configfiles
 ---
 # Config Files
 

@@ -2,6 +2,7 @@
 layout: documentation
 menu: scriptconfigfiles
 subtitle: Script Config Files
+redirect_from: /documentation/scriptconfigfiles
 ---
 # Script Config Files
 
