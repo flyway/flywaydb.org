@@ -216,7 +216,7 @@ img {
     text-transform: uppercase;
     padding: 10px 15px;
     background-color: #f0f0f0;
-    margin-top: 30px;
+    margin-top: 5px;
     color: #333;
 }
 
@@ -228,6 +228,7 @@ img {
     padding: 10px 15px;
     background-color: #f0f0f0;
     margin-top: 5px;
+    margin-left: 15px;
     color: #333;
 }
 
