@@ -4,9 +4,10 @@ tab: download
 title: Download / Pricing
 cssid: download-pricing
 ---
-# Choose your Flyway Edition
 
-Choose your Flyway edition based on the features and support level you require
+<h1 style="text-align:left">Choose your Flyway Edition</h1>
+
+<p style="text-align:left">Choose your Flyway edition based on the features and support level you require</p>
 
 <table class="table table-striped table-left">
 <thead>
@@ -16,6 +17,7 @@ Choose your Flyway edition based on the features and support level you require
 <th>Teams Edition</th>
 </tr>
 </thead>
+<tr><td>Price</td><td>Free</td><td>3000 USD per year<br><span class="note">per 10 schemas in production<br>(25 USD per schema per month)<br>unlimited for dev and test</span></td></tr>
 <tr><td><a href="/documentation/concepts/migrations#sql-based-migrations">SQL-based migrations</a></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td><a href="/documentation/concepts/migrations#java-based-migrations">Java-based migrations</a></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td><a href="/documentation/concepts/migrations#repeatable-migrations">Repeatable migrations</a></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
@@ -44,7 +46,6 @@ Choose your Flyway edition based on the features and support level you require
 <tr><td>Maven Repository</td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td>Source Code included</td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td>Support</td><td>Community</td><td>Email (2 business days)</td></tr>
-<tr><td>Price</td><td>Free</td><td>3000 USD per year<br><span class="note">per 10 schemas in production<br>(25 USD per schema per month)<br>unlimited for dev and test</span></td></tr>
 <tr><td>Automatic renewal</td><td></td><td>optional</td></tr>
 <tr><td>Payment methods accepted</td><td></td><td>Credit card, wire transfer, purchase order</td></tr>
 <tr><td></td><td></td>
