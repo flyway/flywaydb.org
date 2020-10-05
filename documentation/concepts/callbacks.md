@@ -200,6 +200,10 @@ therefore not bound by the SQL callback naming convention.
 
 When multiple callbacks for the same event are found, they are executed in the alphabetical order.
 
+## Tutorial
+
+Click [here](/documentation/getstarted/advanced/callbacks) to see a tutorial on using callbacks.
+
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/concepts/erroroverrides">Error Overrides <i class="fa fa-arrow-right"></i></a>
 </p>

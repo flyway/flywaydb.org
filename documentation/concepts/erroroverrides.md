@@ -110,6 +110,10 @@ following the execution of a statement by implementing a Java-based [callback](/
 to the `afterEachMigrateStatement`, `afterEachMigrateStatementError`, `afterEachUndoStatement` and
 `afterEachUndoStatementError` events.
 
+## Tutorial
+
+Click [here](/documentation/getstarted/advanced/erroroverrides) to see a tutorial on using error overrides.
+
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/concepts/dryruns">Dry Runs <i class="fa fa-arrow-right"></i></a>
 </p>

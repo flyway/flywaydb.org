@@ -43,6 +43,10 @@ flexibility.
 As soon as this property is set, Flyway kicks in dry run mode. The database is no longer modified and all SQL statements
 that would have been applied are sent to the dry run output instead.
 
+## Tutorial
+
+Click [here](/documentation/getstarted/advanced/dryruns) to see a tutorial on using dry runs.
+
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/command/migrate">Migrate <i class="fa fa-arrow-right"></i></a>
 </p>
