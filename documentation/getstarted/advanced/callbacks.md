@@ -2,6 +2,7 @@
 layout: documentation
 menu: callbacks
 subtitle: 'Tutorial: Callbacks'
+redirect_from: /getStarted/callbacks
 ---
 # Tutorial: Callbacks
 
