@@ -27,11 +27,11 @@ using Flyway and are ready to start exploring more advanced topics. Each tutoria
 about 5 minutes to complete.
 
 So without further ado, here they are:
-- [Java migrations](/getstarted/java)
-- [Repeatable migrations](/getstarted/repeatable)
-- [Undo migrations](/getstarted/undo)
-- [Callbacks](/getstarted/callbacks)
-- [Error Handlers](/getstarted/errorhandlers)
+- [Java migrations](/documentation/getstarted/java)
+- [Repeatable migrations](/documentation/getstarted/repeatable)
+- [Undo migrations](/documentation/getstarted/undo)
+- [Callbacks](/documentation/getstarted/callbacks)
+- [Error Handlers](/documentation/getstarted/errorhandlers)
 
 If you aren't familiar with these topics, do take a few minutes to explore them. They are very useful features that can
 be lifesavers when you need them.

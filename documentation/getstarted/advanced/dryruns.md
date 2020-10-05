@@ -1,12 +1,12 @@
 ---
-layout: getstarted
+layout: documentation
 menu: dryruns
 subtitle: 'Tutorial: Dry Runs'
 ---
 # Tutorial: Dry Runs
 {% include teams.html %}
 
-This tutorial assumes you have successfully completed the [**First Steps: Command-line**](/getstarted/firststeps/commandline)
+This tutorial assumes you have successfully completed the [**First Steps: Command-line**](/documentation/getstarted/firststeps/commandline)
 tutorial. **If you have not done so, please do so first.** This tutorial picks up where that one left off.
 
 This brief tutorial will teach **how to do Dry Runs**. It will take you through the
@@ -28,7 +28,7 @@ directly to the database without using Flyway. This SQL file also contains the n
 
 ## Reviewing the status
 
-After having completed the [First Steps: Command-line](/getstarted/firststeps/commandline), you can now execute
+After having completed the [First Steps: Command-line](/documentation/getstarted/firststeps/commandline), you can now execute
 
 <pre class="console"><span>flyway-{{ site.flywayVersion }}&gt;</span> flyway <strong>info</strong></pre>
 

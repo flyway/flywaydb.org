@@ -1,12 +1,12 @@
 ---
-layout: getstarted
+layout: documentation
 menu: erroroverrides
 subtitle: 'Tutorial: Error Overrides'
 ---
 # Tutorial: Error Overrides
 {% include teams.html %}
 
-This tutorial assumes you have successfully completed the [**First Steps: Maven**](/getstarted/firststeps/maven)
+This tutorial assumes you have successfully completed the [**First Steps: Maven**](/documentation/getstarted/firststeps/maven)
 tutorial. **If you have not done so, please do so first.** This tutorial picks up where that one left off.
 
 This brief tutorial will teach **how to use Error Overrides**. It will take you through the
@@ -20,7 +20,7 @@ steps on how to configure and use them.
 
 ## Reviewing the status
 
-After having completed the [First Steps: Maven](/getstarted/firststeps/maven), you can now execute
+After having completed the [First Steps: Maven](/documentation/getstarted/firststeps/maven), you can now execute
 
 <pre class="console"><span>bar&gt;</span> mvn flyway:<strong>info</strong></pre>
 

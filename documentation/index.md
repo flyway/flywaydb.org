@@ -9,7 +9,7 @@ title: Documentation
 
 <div class="well well-small">
     <strong>Tip:</strong>
-    If you haven't checked out the <a href="/getstarted">Get Started</a> section yet, do it now. You'll be up
+    If you haven't checked out the <a href="/documentation/getstarted">Get Started</a> section yet, do it now. You'll be up
     and running in no time!
 </div>
 

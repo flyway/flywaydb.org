@@ -14,26 +14,26 @@
             <div class="tab-pane active" id="tab-commandline">
                 <p>For non-JVM users and environments without build tools</p>
                 <pre class="console"><span>&gt;</span> flyway migrate -url=... -user=... -password=...</pre>
-                <a href="/getstarted/firststeps/commandline" class="btn btn-primary">Get Started with the
+                <a href="/documentation/getstarted/firststeps/commandline" class="btn btn-primary">Get Started with the
                     Command-line Tool <i class="fa fa-arrow-right"></i></a>
             </div>
             <div class="tab-pane" id="tab-api">
                 <p>Migrate directly from within your application</p>
                 <pre class="prettyprint">Flyway flyway = Flyway.configure().dataSource(url, user, password).load();
 flyway.migrate();</pre>
-                <a href="/getstarted/firststeps/api" class="btn btn-primary">Get Started with the Java API <i
+                <a href="/documentation/getstarted/firststeps/api" class="btn btn-primary">Get Started with the Java API <i
                         class="fa fa-arrow-right"></i></a>
             </div>
             <div class="tab-pane" id="tab-maven">
                 <p>Seamless integration with Maven 2/3 builds</p>
                 <pre class="console"><span>&gt;</span> mvn flyway:migrate -Dflyway.url=... -Dflyway.user=... -Dflyway.password=...</pre>
-                <a href="/getstarted/firststeps/maven" class="btn btn-primary">Get Started with the Maven
+                <a href="/documentation/getstarted/firststeps/maven" class="btn btn-primary">Get Started with the Maven
                     Plugin <i class="fa fa-arrow-right"></i></a>
             </div>
             <div class="tab-pane" id="tab-gradle">
                 <p>Seamless integration with Gradle builds</p>
                 <pre class="console"><span>&gt;</span> gradle flywayMigrate -Dflyway.url=... -Dflyway.user=... -Dflyway.password=...</pre>
-                <a href="/getstarted/firststeps/gradle" class="btn btn-primary">Get Started with the Gradle
+                <a href="/documentation/getstarted/firststeps/gradle" class="btn btn-primary">Get Started with the Gradle
                     Plugin <i class="fa fa-arrow-right"></i></a>
             </div>
         </div>
