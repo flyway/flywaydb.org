@@ -2,6 +2,7 @@
 layout: documentation
 menu: dryruns
 subtitle: 'Tutorial: Dry Runs'
+redirect_from: /getStarted/dryruns
 ---
 # Tutorial: Dry Runs
 {% include teams.html %}

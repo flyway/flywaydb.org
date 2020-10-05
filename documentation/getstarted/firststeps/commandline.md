@@ -2,6 +2,7 @@
 layout: documentation
 menu: commandline
 subtitle: Flyway Command-line - First Steps
+redirect_from: /getStarted/firststeps/commandline
 ---
 # First Steps: Command-line
 

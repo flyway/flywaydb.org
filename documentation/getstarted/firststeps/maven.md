@@ -2,6 +2,7 @@
 layout: documentation
 menu: maven
 subtitle: Flyway Maven Plugin - First Steps
+redirect_from: /getStarted/firststeps/maven
 ---
 # First Steps: Maven
 
