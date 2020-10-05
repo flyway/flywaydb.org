@@ -1,6 +1,6 @@
 ---
 layout: documentation
-menu: erroroverrides
+menu: gs_erroroverrides
 subtitle: 'Tutorial: Error Overrides'
 redirect_from: /getStarted/erroroverrides
 ---

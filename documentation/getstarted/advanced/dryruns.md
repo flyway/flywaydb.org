@@ -1,6 +1,6 @@
 ---
 layout: documentation
-menu: dryruns
+menu: gs_dryruns
 subtitle: 'Tutorial: Dry Runs'
 redirect_from: /getStarted/dryruns
 ---
