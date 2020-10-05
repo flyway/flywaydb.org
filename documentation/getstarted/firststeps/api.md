@@ -1,5 +1,5 @@
 ---
-layout: getstarted
+layout: documentation
 menu: api
 subtitle: API - First Steps
 ---

@@ -8,9 +8,80 @@ title: Documentation
         <div class="col-md-3" style="width: auto">
             <div id="menu">
                 <ul class="nav nav-pills nav-stacked">
+
                     <li
                     {% if page.menu == 'overview' %} class="active" {% endif %}>
                     <a href="/documentation">Overview</a></li>
+
+                    <details {% if page.url contains "documentation/getstarted" %} open {% endif %}>
+                        <summary class="nav-header">Get Started</summary>
+
+                        <ul class="nav nav-pills nav-stacked">
+                            <li
+                            {% if page.menu == 'gs_overview' %} class="active" {% endif %}>
+                            <a href="/documentation/getstarted">Overview</a></li>
+
+                            <li
+                            {% if page.menu == 'why' %} class="active" {% endif %}>
+                            <a href="/documentation/getstarted/why">Why database migrations</a></li>
+
+                            <li
+                            {% if page.menu == 'how' %} class="active" {% endif %}>
+                            <a href="/documentation/getstarted/how">How Flyway works</a></li>
+                        </ul>
+
+                        <details {% if page.url contains "documentation/getstarted/firststeps" %} open {% endif %}>
+                            <summary class="nav-header-nested">First steps</summary>
+
+                            <ul class="nav nav-pills nav-stacked">
+                                <li
+                                {% if page.menu == 'commandline' %} class="active" {% endif %}>
+                                <a href="/documentation/getstarted/firststeps/commandline">Command-line</a></li>
+
+                                <li
+                                {% if page.menu == 'api' %} class="active" {% endif %}>
+                                <a href="/documentation/getstarted/firststeps/api">API</a></li>
+
+                                <li
+                                {% if page.menu == 'maven' %} class="active" {% endif %}>
+                                <a href="/documentation/getstarted/firststeps/maven">Maven</a></li>
+
+                                <li
+                                {% if page.menu == 'gradle' %} class="active" {% endif %}>
+                                <a href="/documentation/getstarted/firststeps/gradle">Gradle</a></li>
+                            </ul>
+                        </details>
+
+                        <details {% if page.url contains "documentation/getstarted/advanced" %} open {% endif %}>
+                            <summary class="nav-header-nested">Advanced</summary>
+
+                            <ul class="nav nav-pills nav-stacked">
+                                <li
+                                {% if page.menu == 'repeatable' %} class="active" {% endif %}>
+                                <a href="/documentation/getstarted/advanced/repeatable">Repeatable migrations</a></li>
+
+                                <li
+                                {% if page.menu == 'undo' %} class="active" {% endif %}>
+                                <a href="/documentation/getstarted/advanced/undo">Undo migrations</a></li>
+
+                                <li
+                                {% if page.menu == 'java' %} class="active" {% endif %}>
+                                <a href="/documentation/getstarted/advanced/java">Java-based migrations</a></li>
+
+                                <li
+                                {% if page.menu == 'callbacks' %} class="active" {% endif %}>
+                                <a href="/documentation/getstarted/advanced/callbacks">Callbacks</a></li>
+
+                                <li
+                                {% if page.menu == 'erroroverrides' %} class="active" {% endif %}>
+                                <a href="/documentation/getstarted/advanced/erroroverrides">Error Overrides</a></li>
+
+                                <li
+                                {% if page.menu == 'dryruns' %} class="active" {% endif %}>
+                                <a href="/documentation/getstarted/advanced/dryruns">Dry Runs</a></li>
+                            </ul>
+                        </details>
+                    </details>
 
                     <details {% if page.url contains "documentation/concepts" %} open {% endif %}>
                         <summary class="nav-header">Concepts</summary>

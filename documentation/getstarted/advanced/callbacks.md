@@ -1,11 +1,11 @@
 ---
-layout: getstarted
+layout: documentation
 menu: callbacks
 subtitle: 'Tutorial: Callbacks'
 ---
 # Tutorial: Callbacks
 
-This tutorial assumes you have successfully completed the [**First Steps: Command-line**](/getstarted/firststeps/commandline)
+This tutorial assumes you have successfully completed the [**First Steps: Command-line**](/documentation/getstarted/firststeps/commandline)
 tutorial. **If you have not done so, please do so first.** This tutorial picks up where that one left off.
 
 This brief tutorial will teach **how to use callbacks**. It will take you through the
@@ -23,7 +23,7 @@ They are typically used for
 
 ## Reviewing the status
 
-After having completed the [First Steps: Command-line](/getstarted/firststeps/commandline), you can now execute
+After having completed the [First Steps: Command-line](/documentation/getstarted/firststeps/commandline), you can now execute
 
 <pre class="console"><span>flyway-{{ site.flywayVersion }}&gt;</span> flyway <strong>info</strong></pre>
 

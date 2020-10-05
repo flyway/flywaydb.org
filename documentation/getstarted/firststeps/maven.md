@@ -1,5 +1,5 @@
 ---
-layout: getstarted
+layout: documentation
 menu: maven
 subtitle: Flyway Maven Plugin - First Steps
 ---

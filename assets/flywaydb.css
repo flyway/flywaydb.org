@@ -220,6 +220,16 @@ img {
     color: #333;
 }
 
+#menu .nav-pills .nav-header-nested {
+    cursor: default;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    margin-top: 30px;
+    color: #333;
+}
+
 #social a:hover i {
     color: #0088cc !important;
 }

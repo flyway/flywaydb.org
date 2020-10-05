@@ -1,5 +1,5 @@
 ---
-layout: getstarted
+layout: documentation
 menu: commandline
 subtitle: Flyway Command-line - First Steps
 ---

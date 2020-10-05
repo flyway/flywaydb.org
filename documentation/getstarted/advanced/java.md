@@ -1,11 +1,11 @@
 ---
-layout: getstarted
+layout: documentation
 menu: java
 subtitle: 'Tutorial: Java-based Migrations'
 ---
 # Tutorial: Java-based Migrations
 
-This tutorial assumes you have successfully completed the [**First Steps: Maven**](/getstarted/firststeps/maven)
+This tutorial assumes you have successfully completed the [**First Steps: Maven**](/documentation/getstarted/firststeps/maven)
 tutorial. **If you have not done so, please do so first.** This tutorial picks up where that one left off.
 
 This brief tutorial will teach **how to use Java-based migrations**. It will take you through the
@@ -21,7 +21,7 @@ These would typically be things like
 
 ## Reviewing the status
 
-After having completed the [First Steps: Maven](/getstarted/firststeps/maven), you can now execute
+After having completed the [First Steps: Maven](/documentation/getstarted/firststeps/maven), you can now execute
 
 <pre class="console"><span>bar&gt;</span> mvn flyway:<strong>info</strong></pre>
 

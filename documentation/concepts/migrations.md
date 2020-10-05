@@ -437,7 +437,7 @@ To keep track of which migrations have already been applied when and by whom, Fl
 **schema history table** to your schema. You can think of this table as a complete audit trail of all changes
 performed against the schema. It also tracks migration checksums and whether or not the migrations were successful.
 
-Read more about this in our getting started guide on [how Flyway works](/getstarted/how).
+Read more about this in our getting started guide on [how Flyway works](/documentation/getstarted/how).
 
 ## Schema creation
 
