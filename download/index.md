@@ -21,10 +21,10 @@ cssid: download-pricing
 <tr><td><a href="/documentation/concepts/migrations#sql-based-migrations">SQL-based migrations</a></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td><a href="/documentation/concepts/migrations#java-based-migrations">Java-based migrations</a></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td><a href="/documentation/concepts/migrations#repeatable-migrations">Repeatable migrations</a></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
-<tr><td>Placeholder replacement</td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
+<tr><td><a href="/documentation/concepts/placeholders">Placeholder replacement</a></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td><a href="/documentation/concepts/callbacks">Callbacks</a></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
-<tr><td>Machine readable output</td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
-<tr><td>Custom migration resolvers/executors</td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
+<tr><td><a href="/documentation/commandline/#machine-readable-output">Machine readable output</a></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
+<tr><td><a href="/blog/Configure-resource-providers">Custom migration resolvers/executors</a></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td>Safe for multiple nodes in parallel</td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td>Native SQL dialect support (PL/SQL, SQLPL, T-SQL, ...)</td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td>Java 8/9/10/11/12/13 compatibility</td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
@@ -34,7 +34,7 @@ cssid: download-pricing
 <tr><td><a href="/documentation/concepts/migrations#script-migrations">Arbitrary script migrations</a></td><td></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td><a href="/documentation/database/oracle#sqlplus-commands">Oracle SQL*Plus compatibility</a></td><td></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td><a href="/documentation/concepts/erroroverrides">Error Overrides</a></td><td></td><td><i class="fa fa-check"></i></td></tr>
-<tr><td>Statement-level callbacks</td><td></td><td><i class="fa fa-check"></i></td></tr>
+<tr><td><a href="/documentation/concepts/callbacks#beforeEachMigrateStatement">Statement-level callbacks</a></td><td></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td><a href="/documentation/concepts/dryruns">Dry runs</a></td><td></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td><a href="/documentation/command/undo">Undo</a></td><td></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td><a href="/documentation/configuration/parameters/batch">Batching</a></td><td></td><td><i class="fa fa-check"></i></td></tr>
