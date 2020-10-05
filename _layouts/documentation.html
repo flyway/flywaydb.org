@@ -168,11 +168,249 @@ title: Documentation
                     <details {% if page.url contains "documentation/configuration" %} open {% endif %}>
                         <summary class="nav-header">Configuration</summary>
 
-                        <ul class="nav nav-pills nav-stacked">
-                            <li
-                            {% if page.menu == 'configuration' %} class="active" {% endif %}>
-                            <a href="/documentation/configuration/parameters">Parameters</a></li>
+                        <details {% if page.url contains "documentation/configuration/parameters/" %} open {% endif %}>
+                            <summary class="nav-header-nested"><a href="/documentation/configuration/parameters">Parameters</a></summary>
 
+                            <ul class="nav nav-pills nav-stacked">
+                                <li
+                                {% if page.pill == 'url' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/url">url</a></li>
+                                
+                                <li
+                                {% if page.pill == 'user' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/user">user</a></li>
+                                
+                                <li
+                                {% if page.pill == 'password' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/password">password</a></li>
+                                
+                                <li
+                                {% if page.pill == 'driver' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/driver">driver</a></li>
+                                
+                                <li
+                                {% if page.pill == 'connectRetries' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/connectRetries">connectRetries</a></li>
+                                
+                                <li
+                                {% if page.pill == 'initSql' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/initSql">initSql</a></li>
+                                
+                                <li
+                                {% if page.pill == 'jdbcProperties' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/jdbcProperties">jdbcProperties</a></li>
+                                
+                                <li
+                                {% if page.pill == 'batch' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/batch">batch</a></li>
+                                
+                                <li
+                                {% if page.pill == 'callbacks' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/callbacks">callbacks</a></li>
+                                
+                                <li
+                                {% if page.pill == 'cherryPick' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/cherryPick">cherryPick</a></li>
+                                
+                                <li
+                                {% if page.pill == 'configFileEncoding' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/configFileEncoding">configFileEncoding</a></li>
+                                
+                                <li
+                                {% if page.pill == 'configFiles' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/configFiles">configFiles</a></li>
+                                
+                                <li
+                                {% if page.pill == 'dryRunOutput' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/dryRunOutput">dryRunOutput</a></li>
+                                
+                                <li
+                                {% if page.pill == 'encoding' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/encoding">encoding</a></li>
+                                
+                                <li
+                                {% if page.pill == 'errorOverrides' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/errorOverrides">errorOverrides</a></li>
+                                
+                                <li
+                                {% if page.pill == 'group' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/group">group</a></li>
+                                
+                                <li
+                                {% if page.pill == 'installedBy' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/installedBy">installedBy</a></li>
+                                
+                                <li
+                                {% if page.pill == 'jarDirs' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/jarDirs">jarDirs</a></li>
+                                
+                                <li
+                                {% if page.pill == 'licenseKey' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/licenseKey">licenseKey</a></li>
+                                
+                                <li
+                                {% if page.pill == 'locations' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/locations">locations</a></li>
+                                
+                                <li
+                                {% if page.pill == 'mixed' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/mixed">mixed</a></li>
+                                
+                                <li
+                                {% if page.pill == 'outOfOrder' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/outOfOrder">outOfOrder</a></li>
+                                
+                                <li
+                                {% if page.pill == 'outputQueryResults' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/outputQueryResults">outputQueryResults</a></li>
+                                
+                                <li
+                                {% if page.pill == 'skipDefaultCallbacks' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/skipDefaultCallbacks">skipDefaultCallbacks</a></li>
+                                
+                                <li
+                                {% if page.pill == 'skipDefaultResolvers' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/skipDefaultResolvers">skipDefaultResolvers</a></li>
+                                
+                                <li
+                                {% if page.pill == 'skipExecutingMigrations' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/skipExecutingMigrations">skipExecutingMigrations</a></li>
+                                
+                                <li
+                                {% if page.pill == 'stream' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/stream">stream</a></li>
+                                
+                                <li
+                                {% if page.pill == 'table' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/table">table</a></li>
+                                
+                                <li
+                                {% if page.pill == 'tablespace' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/tablespace">tablespace</a></li>
+                                
+                                <li
+                                {% if page.pill == 'target' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/target">target</a></li>
+                                
+                                <li
+                                {% if page.pill == 'validateMigrationNaming' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/validateMigrationNaming">validateMigrationNaming</a></li>
+                                
+                                <li
+                                {% if page.pill == 'validateOnMigrate' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/validateOnMigrate">validateOnMigrate</a></li>
+                                
+                                <li
+                                {% if page.pill == 'workingDirectory' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/workingDirectory">workingDirectory</a></li>
+                                
+                                <li
+                                {% if page.pill == 'createSchemas' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/createSchemas">createSchemas</a></li>
+                                
+                                <li
+                                {% if page.pill == 'defaultSchema' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/defaultSchema">defaultSchema</a></li>
+                                
+                                <li
+                                {% if page.pill == 'schemas' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/schemas">schemas</a></li>
+                                
+                                <li
+                                {% if page.pill == 'baselineDescription' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/baselineDescription">baselineDescription</a></li>
+                                
+                                <li
+                                {% if page.pill == 'baselineOnMigrate' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/baselineOnMigrate">baselineOnMigrate</a></li>
+                                
+                                <li
+                                {% if page.pill == 'baselineVersion' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/baselineVersion">baselineVersion</a></li>
+                                
+                                <li
+                                {% if page.pill == 'cleanDisabled' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/cleanDisabled">cleanDisabled</a></li>
+                                
+                                <li
+                                {% if page.pill == 'cleanOnValidationError' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/cleanOnValidationError">cleanOnValidationError</a></li>
+                                
+                                <li
+                                {% if page.pill == 'ignoreFutureMigrations' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/ignoreFutureMigrations">ignoreFutureMigrations</a></li>
+                                
+                                <li
+                                {% if page.pill == 'ignoreIgnoredMigrations' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/ignoreIgnoredMigrations">ignoreIgnoredMigrations</a></li>
+                                
+                                <li
+                                {% if page.pill == 'ignoreMissingMigrations' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/ignoreMissingMigrations">ignoreMissingMigrations</a></li>
+                                
+                                <li
+                                {% if page.pill == 'ignorePendingMigrations' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/ignorePendingMigrations">ignorePendingMigrations</a></li>
+                                
+                                <li
+                                {% if page.pill == 'repeatableSqlMigrationPrefix' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/repeatableSqlMigrationPrefix">repeatableSqlMigrationPrefix</a></li>
+                                
+                                <li
+                                {% if page.pill == 'resolvers' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/resolvers">resolvers</a></li>
+                                
+                                <li
+                                {% if page.pill == 'sqlMigrationPrefix' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/sqlMigrationPrefix">sqlMigrationPrefix</a></li>
+                                
+                                <li
+                                {% if page.pill == 'sqlMigrationSeparator' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/sqlMigrationSeparator">sqlMigrationSeparator</a></li>
+                                
+                                <li
+                                {% if page.pill == 'sqlMigrationSuffixes' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/sqlMigrationSuffixes">sqlMigrationSuffixes</a></li>
+                                
+                                <li
+                                {% if page.pill == 'undoSqlMigrationPrefix' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/undoSqlMigrationPrefix">undoSqlMigrationPrefix</a></li>
+                                
+                                <li
+                                {% if page.pill == 'placeholderPrefix' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/placeholderPrefix">placeholderPrefix</a></li>
+                                
+                                <li
+                                {% if page.pill == 'placeholderReplacement' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/placeholderReplacement">placeholderReplacement</a></li>
+                                
+                                <li
+                                {% if page.pill == 'placeholders' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/placeholders">placeholders</a></li>
+                                
+                                <li
+                                {% if page.pill == 'placeholderSuffix' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/placeholderSuffix">placeholderSuffix</a></li>
+                                
+                                <li
+                                {% if page.pill == 'cliColor' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/cliColor">cliColor</a></li>
+                                
+                                <li
+                                {% if page.pill == 'edition' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/edition">edition</a></li>
+                                
+                                <li
+                                {% if page.pill == 'oracleSqlPlus' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/oracleSqlPlus">oracleSqlPlus</a></li>
+                                
+                                <li
+                                {% if page.pill == 'oracleSqlPlusWarn' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/oracleSqlPlusWarn">oracleSqlPlusWarn</a></li>
+                            </ul>
+                        </details>
+
+                        <ul class="nav nav-pills nav-stacked">
                             <li
                             {% if page.menu == 'envvars' %} class="active" {% endif %}>
                             <a href="/documentation/configuration/envvars">Environment Variables</a></li>
