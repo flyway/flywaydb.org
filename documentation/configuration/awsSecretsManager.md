@@ -49,7 +49,7 @@ To make Flyway pull credentials from the Secrets Manager, you need to perform th
 Now you can run `migrate`, `info`, etc and the credentials will be pulled out of the Secrets Manager.
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/configuration/placeholders">Placeholders <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/configuration/placeholder">Placeholders <i class="fa fa-arrow-right"></i></a>
 </p>
 
 {% include trialpopup.html %}

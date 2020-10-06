@@ -9,7 +9,7 @@ redirect_from: /documentation/configuration/placeholderSuffix
 # Placeholder Suffix
 
 ## Description
-The suffix of every [placeholder](/documentation/configuration/placeholders)
+The suffix of every [placeholder](/documentation/configuration/placeholder)
 
 ## Default
 }

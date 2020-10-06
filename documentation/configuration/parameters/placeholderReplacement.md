@@ -9,7 +9,7 @@ redirect_from: /documentation/configuration/placeholderReplacement
 # Placeholder Replacement
 
 ## Description
-Whether [placeholders](/documentation/configuration/placeholders) should be replaced
+Whether [placeholders](/documentation/configuration/placeholder) should be replaced
 
 ## Default
 true
