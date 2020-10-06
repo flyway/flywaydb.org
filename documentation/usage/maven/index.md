@@ -206,8 +206,8 @@ Configuration can also be supplied directly via the command-line using JVM syste
 
 ### Config files
 
-[Config files](/documentation/configuration/configfiles) are supported by the Flyway Maven plugin. If you are not familiar with them,
-check out the [Flyway config file structure and settings reference](/documentation/configuration/configfiles) first.
+[Config files](/documentation/configuration/configfile) are supported by the Flyway Maven plugin. If you are not familiar with them,
+check out the [Flyway config file structure and settings reference](/documentation/configuration/configfile) first.
 
 Flyway will search for and automatically load the `<user-home>/flyway.conf` config file if present.
 
