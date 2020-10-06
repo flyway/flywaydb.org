@@ -21,9 +21,9 @@ cssid: download-pricing
 <tr><td><a href="/documentation/concepts/migrations#sql-based-migrations">SQL-based migrations</a></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td><a href="/documentation/concepts/migrations#java-based-migrations">Java-based migrations</a></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td><a href="/documentation/concepts/migrations#repeatable-migrations">Repeatable migrations</a></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
-<tr><td><a href="/documentation/concepts/placeholders">Placeholder replacement</a></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
+<tr><td><a href="/documentation/configuration/placeholders">Placeholder replacement</a></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td><a href="/documentation/concepts/callbacks">Callbacks</a></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
-<tr><td><a href="/documentation/commandline/#machine-readable-output">Machine readable output</a></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
+<tr><td><a href="/documentation/usage/commandline/#machine-readable-output">Machine readable output</a></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td><a href="/blog/Configure-resource-providers">Custom migration resolvers/executors</a></td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td>Safe for multiple nodes in parallel</td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td>Native SQL dialect support (PL/SQL, SQLPL, T-SQL, ...)</td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
