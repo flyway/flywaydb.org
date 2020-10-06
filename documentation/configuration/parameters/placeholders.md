@@ -3,7 +3,7 @@ layout: documentation
 menu: configuration
 pill: placeholders
 subtitle: flyway.placeholders
-redirect_from: /documentation/configuration/placeholder
+redirect_from: /documentation/configuration/placeholders
 ---
 
 # Placeholders
