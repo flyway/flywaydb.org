@@ -313,15 +313,16 @@ By default, all debug, info and warning output is sent to `stdout`. All errors a
 
 Flyway will automatically detect and use any logger class that it finds on its classpath that derives from any of the 
 following:
- - the Apache Commons Logging framework <code>org.apache.commons.logging.Log</code> 
+ - the Apache Commons Logging framework <code>org.apache.commons.logging.Log</code> (including Log4j v1)
  - SLF4J <code>org.slf4j.Logger</code>
+ - Log4J v2 <code>org.apache.logging.log4j.Logger</code>
  - the Android builtin log <code>android.util.Log</code>
 
 The simplest pattern to achieve this is to put all the necessary jar files in Flyway's `lib` folder and any 
-configuration in the FLyway root folder. 
-For example, if you wished to use <b>log4j</b> with the Flyway command line, you would achieve this by placing the 
-log4j jar file <code>log4j-&lt;version&gt;.jar</code> and the corresponding
-configuration file <code>log4j.xml</code> like this: 
+configuration in the Flyway root folder. 
+For example, if you wished to use <b>log4j</b> v2 with the Flyway command line, you would achieve this by placing the 
+log4j jar files and the corresponding
+configuration file <code>log4j2.xml</code> like this: 
 
 <pre class="filetree"><i class="fa fa-folder-open"></i> flyway-{{site.flywayVersion}}
   <i class="fa fa-folder"></i> conf
@@ -329,10 +330,11 @@ configuration file <code>log4j.xml</code> like this:
   <i class="fa fa-folder"></i> jars           
   <i class="fa fa-folder"></i> jre
   <i class="fa fa-folder-open"></i> lib
-    <span><i class="fa fa-file-text"></i> log4j-2.13.1.jar</span>          <i class="fa fa-long-arrow-left"></i> log4j jar
+    <span><i class="fa fa-file-text"></i> log4j-api-2.11.2.jar</span>       <i class="fa fa-long-arrow-left"></i> log4j v2 jar
+    <span><i class="fa fa-file-text"></i> log4j-core-2.11.2.jar</span>      <i class="fa fa-long-arrow-left"></i> log4j v2 jar
   <i class="fa fa-folder"></i> licenses
   <i class="fa fa-folder"></i> sql            
-  <span><i class="fa fa-file"></i> log4j.xml</span>                   <i class="fa fa-long-arrow-left"></i> log4j configuration
+  <span><i class="fa fa-file"></i> log4j2.xml</span>                   <i class="fa fa-long-arrow-left"></i> log4j configuration
 </pre>
 
 Similarly, to use <b>Logback</b> add the relevant files like this:
