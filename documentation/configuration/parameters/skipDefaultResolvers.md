@@ -3,6 +3,7 @@ layout: documentation
 menu: configuration
 pill: skipDefaultResolvers
 subtitle: flyway.skipDefaultResolvers
+redirect_from: /documentation/configuration/skipDefaultResolvers
 ---
 
 # skipDefaultResolvers

@@ -3,6 +3,7 @@ layout: documentation
 menu: configuration
 pill: validateMigrationNaming
 subtitle: flyway.validateMigrationNaming
+redirect_from: /documentation/configuration/validateMigrationNaming
 ---
 
 # Validate Migration Naming

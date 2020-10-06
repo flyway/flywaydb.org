@@ -3,6 +3,7 @@ layout: documentation
 menu: configuration
 pill: baselineOnMigrate
 subtitle: flyway.baselineOnMigrate
+redirect_from: /documentation/configuration/baselineOnMigrate
 ---
 
 # Baseline On Migrate

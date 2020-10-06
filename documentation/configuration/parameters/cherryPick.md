@@ -3,6 +3,7 @@ layout: documentation
 menu: configuration
 pill: cherryPick
 subtitle: flyway.cherryPick
+redirect_from: /documentation/configuration/cherryPick
 ---
 
 # Cherry Pick

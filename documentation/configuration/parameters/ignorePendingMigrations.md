@@ -3,6 +3,7 @@ layout: documentation
 menu: configuration
 pill: ignorePendingMigrations
 subtitle: flyway.ignorePendingMigrations
+redirect_from: /documentation/configuration/ignorePendingMigrations
 ---
 
 # Ignore Pending Migrations

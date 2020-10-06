@@ -3,6 +3,7 @@ layout: documentation
 menu: configuration
 pill: errorOverrides
 subtitle: flyway.errorOverrides
+redirect_from: /documentation/configuration/errorOverrides
 ---
 
 # Error Overrides

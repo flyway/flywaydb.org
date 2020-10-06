@@ -3,6 +3,7 @@ layout: documentation
 menu: configuration
 pill: placeholderSuffix
 subtitle: flyway.placeholderSuffix
+redirect_from: /documentation/configuration/placeholderSuffix
 ---
 
 # Placeholder Suffix

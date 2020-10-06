@@ -3,6 +3,7 @@ layout: documentation
 menu: configuration
 pill: dryRunOutput
 subtitle: flyway.dryRunOutput
+redirect_from: /documentation/configuration/dryRunOutput
 ---
 
 # Dry Run Output

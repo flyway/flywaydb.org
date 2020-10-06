@@ -3,6 +3,7 @@ layout: documentation
 menu: configuration
 pill: defaultSchema
 subtitle: flyway.defaultSchema
+redirect_from: /documentation/configuration/defaultSchema
 ---
 
 # Default Schema
