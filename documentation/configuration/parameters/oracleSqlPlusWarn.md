@@ -3,6 +3,7 @@ layout: documentation
 menu: configuration
 pill: oracleSqlPlusWarn
 subtitle: flyway.oracleSqlPlusWarn
+redirect_from: /documentation/configuration/oracleSqlPlusWarn
 ---
 
 # Oracle SQL*Plus Warn

@@ -3,6 +3,7 @@ layout: documentation
 menu: configuration
 pill: cleanOnValidationError
 subtitle: flyway.cleanOnValidationError
+redirect_from: /documentation/configuration/cleanOnValidationError
 ---
 
 # Clean On Validation Error

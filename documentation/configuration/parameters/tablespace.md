@@ -3,6 +3,7 @@ layout: documentation
 menu: configuration
 pill: tablespace
 subtitle: flyway.tablespace
+redirect_from: /documentation/configuration/tablespace
 ---
 
 # Tablespace

@@ -3,6 +3,7 @@ layout: documentation
 menu: configuration
 pill: placeholderReplacement
 subtitle: flyway.placeholderReplacement
+redirect_from: /documentation/configuration/placeholderReplacement
 ---
 
 # Placeholder Replacement

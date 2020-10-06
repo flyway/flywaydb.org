@@ -3,6 +3,7 @@ layout: documentation
 menu: configuration
 pill: workingDirectory
 subtitle: flyway.workingDirectory
+redirect_from: /documentation/configuration/workingDirectory
 ---
 
 # Working Directory

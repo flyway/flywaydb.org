@@ -3,6 +3,7 @@ layout: documentation
 menu: configuration
 pill: schemas
 subtitle: flyway.schemas
+redirect_from: /documentation/configuration/schemas
 ---
 
 # Schemas

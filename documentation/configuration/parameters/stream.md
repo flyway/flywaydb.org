@@ -3,6 +3,7 @@ layout: documentation
 menu: configuration
 pill: stream
 subtitle: flyway.stream
+redirect_from: /documentation/configuration/stream
 ---
 
 # Stream

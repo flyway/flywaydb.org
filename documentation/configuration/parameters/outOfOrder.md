@@ -3,6 +3,7 @@ layout: documentation
 menu: configuration
 pill: outOfOrder
 subtitle: flyway.outOfOrder
+redirect_from: /documentation/configuration/outOfOrder
 ---
 
 # Out Of Order

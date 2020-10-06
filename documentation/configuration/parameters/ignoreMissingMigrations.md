@@ -3,6 +3,7 @@ layout: documentation
 menu: configuration
 pill: ignoreMissingMigrations
 subtitle: flyway.ignoreMissingMigrations
+redirect_from: /documentation/configuration/ignoreMissingMigrations
 ---
 
 # Ignore Missing Migrations

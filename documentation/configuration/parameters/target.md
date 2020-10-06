@@ -3,6 +3,7 @@ layout: documentation
 menu: configuration
 pill: target
 subtitle: flyway.target
+redirect_from: /documentation/configuration/target
 ---
 
 # Target

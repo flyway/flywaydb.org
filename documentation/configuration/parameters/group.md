@@ -3,6 +3,7 @@ layout: documentation
 menu: configuration
 pill: group
 subtitle: flyway.group
+redirect_from: /documentation/configuration/group
 ---
 
 # Group

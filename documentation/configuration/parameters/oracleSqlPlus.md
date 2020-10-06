@@ -3,6 +3,7 @@ layout: documentation
 menu: configuration
 pill: oracleSqlPlus
 subtitle: flyway.oracleSqlPlus
+redirect_from: /documentation/configuration/oracleSqlPlus
 ---
 
 # Oracle SQL*Plus

@@ -3,6 +3,7 @@ layout: documentation
 menu: configuration
 pill: skipExecutingMigrations
 subtitle: flyway.skipExecutingMigrations
+redirect_from: /documentation/configuration/skipExecutingMigrations
 ---
 
 # Skip Executing Migrations

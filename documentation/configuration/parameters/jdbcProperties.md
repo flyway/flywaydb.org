@@ -3,6 +3,7 @@ layout: documentation
 menu: configuration
 pill: jdbcProperties
 subtitle: flyway.jdbcProperties
+redirect_from: /documentation/configuration/jdbcProperties
 ---
 
 # JDBC Properties
