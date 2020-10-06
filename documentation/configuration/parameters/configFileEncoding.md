@@ -9,7 +9,7 @@ redirect_from: /documentation/configuration/configFileEncoding
 # Config File Encoding
 
 ## Description
-The file encoding to use when loading [Flyway configuration files](/documentation/configuration/configFiles).
+The file encoding to use when loading [Flyway configuration files](/documentation/configuration/configfiles).
 
 ## Default
 UTF-8
