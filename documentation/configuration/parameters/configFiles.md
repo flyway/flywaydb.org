@@ -3,7 +3,6 @@ layout: documentation
 menu: configuration
 pill: configFiles
 subtitle: flyway.configFiles
-redirect_from: /documentation/configuration/configFiles
 ---
 
 # Config Files
