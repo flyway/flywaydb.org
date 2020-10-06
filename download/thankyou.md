@@ -24,8 +24,11 @@ it is highly relevant for Flyway users and there is an unsubscribe link in each 
 </div>
 <div class="col-md-6">
 <h2>New to Flyway?</h2>
-In our <a href="/documentation/getstarted">Get Started section</a> you'll find a whole collection of 5-10 minute tutorials to get you 
+In our Get Started section you'll find a whole collection of 5-10 minute tutorials to get you 
 up to speed in no time on both basic and more advanced topics.
+<p>
+<a class="btn btn-primary" href="/documentation/getstarted/firststeps/commandline" style="margin: 0.2em">Get Started with Flyway Command-line <i class="fa fa-arrow-right"></i></a>
+</p>
 </div>
 </div>
 
