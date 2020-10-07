@@ -1,5 +1,5 @@
 ---
-layout: gradle
+layout: v6/gradle
 pill: overview
 subtitle: Gradle Plugin
 ---

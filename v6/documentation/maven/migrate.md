@@ -1,5 +1,5 @@
 ---
-layout: maven
+layout: v6/maven
 pill: migrate
 subtitle: 'mvn flyway:migrate'
 ---

@@ -1,5 +1,5 @@
 ---
-layout: maven
+layout: v6/maven
 pill: clean
 subtitle: 'mvn flyway:clean'
 ---

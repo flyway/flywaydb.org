@@ -1,5 +1,5 @@
 ---
-layout: gradle
+layout: v6/gradle
 pill: undo
 subtitle: 'gradle flywayUndo'
 ---

@@ -1,5 +1,5 @@
 ---
-layout: documentation
+layout: v6/documentation
 menu: oracle
 subtitle: Oracle
 ---

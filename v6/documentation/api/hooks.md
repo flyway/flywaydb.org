@@ -1,5 +1,5 @@
 ---
-layout: api
+layout: v6/api
 pill: hooks
 subtitle: API hooks
 ---

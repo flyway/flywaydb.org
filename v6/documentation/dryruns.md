@@ -1,5 +1,5 @@
 ---
-layout: documentation
+layout: v6/documentation
 menu: dryruns
 subtitle: Dry Runs
 ---

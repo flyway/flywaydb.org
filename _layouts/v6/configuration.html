@@ -1,0 +1,33 @@
+---
+layout: documentation
+menu: configuration
+---
+
+{% include base.html %}
+
+<div>
+    <div id="pills">
+    <ul class="nav nav-pills">
+        <li
+        {% if page.pill == 'overview' %} class="active" {% endif %}>
+        <a href="/{{base}}documentation/configuration">Overview</a></li>
+        <li
+        {% if page.pill == 'configFiles' %} class="active" {% endif %}>
+        <a href="/{{base}}documentation/configfiles">Config Files</a></li>
+        <li
+        {% if page.pill == 'envvars' %} class="active" {% endif %}>
+        <a href="/{{base}}documentation/envvars">Environment variables</a></li>
+        <li
+        {% if page.pill == 'placeholders' %} class="active" {% endif %}>
+        <a href="/{{base}}documentation/placeholders">Placeholders</a></li>
+        <li
+        {% if page.pill == 'scriptconfigfiles' %} class="active" {% endif %}>
+        <a href="/{{base}}documentation/scriptconfigfiles">Script Config Files</a></li>
+    </ul>
+    </div>
+    
+    {{ content }}
+
+</div>
+
+{% include trialpopup.html %}

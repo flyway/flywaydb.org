@@ -1,5 +1,5 @@
 ---
-layout: commandLine
+layout: v6/commandLine
 pill: repair
 subtitle: 'Command-line: repair'
 ---

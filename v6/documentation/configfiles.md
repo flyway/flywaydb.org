@@ -1,5 +1,5 @@
 ---
-layout: documentation
+layout: v6/documentation
 menu: configFiles
 subtitle: Config Files
 ---

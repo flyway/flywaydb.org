@@ -1,5 +1,5 @@
 ---
-layout: commandLine
+layout: v6/commandLine
 pill: undo
 subtitle: 'Command-line: undo'
 ---

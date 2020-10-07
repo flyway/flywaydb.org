@@ -1,5 +1,5 @@
 ---
-layout: code
+layout: v6/code
 pill: codeSetup
 subtitle: Dev Environment Setup - Code
 ---

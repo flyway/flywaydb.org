@@ -1,5 +1,5 @@
 ---
-layout: maven
+layout: v6/maven
 pill: overview
 subtitle: Maven Plugin
 ---

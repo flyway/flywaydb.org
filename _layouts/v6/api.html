@@ -1,0 +1,25 @@
+---
+layout: documentation
+menu: api
+---
+
+{% include base.html %}
+
+<div>
+    <div id="pills">
+        <ul class="nav nav-pills">
+        <li
+        {% if page.pill == 'overview' %} class="active" {% endif %}>
+        <a href="/{{base}}documentation/api">Overview</a></li>
+        <li
+        {% if page.pill == 'hooks' %} class="active" {% endif %}>
+        <a href="/{{base}}documentation/api/hooks">Hooks</a></li>
+        <li
+        {% if page.pill == 'javadoc' %} class="active" {% endif %}>
+        <a href="/{{base}}documentation/api/javadoc.html">Javadoc</a></li>
+    </ul>
+        </div>
+    
+    {{ content }}
+
+</div>

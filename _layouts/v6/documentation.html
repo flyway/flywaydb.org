@@ -1,0 +1,191 @@
+---
+layout: default
+tab: documentation
+title: Documentation
+---
+
+{% include base.html %}
+
+<div>
+    <div class="row">
+        <div class="col-md-3" style="width: auto">
+            <div id="menu">
+                <ul class="nav nav-pills nav-stacked">
+                    <li
+                    {% if page.menu == 'overview' %} class="active" {% endif %}>
+                    <a href="/{{base}}documentation">Overview</a></li>
+                    <li class="nav-header">Concepts</li>
+                    <li
+                    {% if page.menu == 'migrations' %} class="active" {% endif %}>
+                    <a href="/{{base}}documentation/migrations">Migrations</a></li>
+                    <li
+                    {% if page.menu == 'callbacks' %} class="active" {% endif %}>
+                    <a href="/{{base}}documentation/callbacks">Callbacks</a></li>
+                    <li
+                    {% if page.menu == 'erroroverrides' %} class="active" {% endif %}>
+                    <a href="/{{base}}documentation/erroroverrides">Error Overrides</a></li>
+                    <li
+                    {% if page.menu == 'dryruns' %} class="active" {% endif %}>
+                    <a href="/{{base}}documentation/dryruns">Dry Runs</a></li>
+                    <li class="nav-header">Commands</li>
+                    <li
+                    {% if page.menu == 'migrate' %} class="active" {% endif %}>
+                    <a href="/{{base}}documentation/command/migrate">Migrate</a></li>
+                    <li
+                    {% if page.menu == 'clean' %} class="active" {% endif %}>
+                    <a href="/{{base}}documentation/command/clean">Clean</a></li>
+                    <li
+                    {% if page.menu == 'info' %} class="active" {% endif %}>
+                    <a href="/{{base}}documentation/command/info">Info</a></li>
+                    <li
+                    {% if page.menu == 'validate' %} class="active" {% endif %}>
+                    <a href="/{{base}}documentation/command/validate">Validate</a></li>
+                    <li
+                    {% if page.menu == 'undo' %} class="active" {% endif %}>
+                    <a href="/{{base}}documentation/command/undo">Undo</a></li>
+                    <li
+                    {% if page.menu == 'baseline' %} class="active" {% endif %}>
+                    <a href="/{{base}}documentation/command/baseline">Baseline</a></li>
+                    <li
+                    {% if page.menu == 'repair' %} class="active" {% endif %}>
+                    <a href="/{{base}}documentation/command/repair">Repair</a></li>
+                    <li class="nav-header">Usage</li>
+                    <li
+                    {% if layout.menu == 'commandLine' %} class="active" {% endif %}>
+                    <a href="/{{base}}documentation/commandline">Command-line</a></li>
+                    <li
+                    {% if layout.menu == 'api' %} class="active" {% endif %}>
+                    <a href="/{{base}}documentation/api">API (Java / Android)</a></li>
+                    <li
+                    {% if layout.menu == 'maven' %} class="active" {% endif %}>
+                    <a href="/{{base}}documentation/maven">Maven</a></li>
+                    <li
+                    {% if layout.menu == 'gradle' %} class="active" {% endif %}>
+                    <a href="/{{base}}documentation/gradle">Gradle</a></li>
+                    <li
+                    {% if page.menu == 'plugins' %} class="active" {% endif %}>
+                    <a href="/{{base}}documentation/plugins/">Community Plugins</a></li>
+                    <li class="nav-header">Configuration</li>
+                    <li
+                    {% if page.menu == 'envvars' %} class="active" {% endif %}>
+                    <a href="/{{base}}documentation/envvars">Environment Variables</a></li>
+                    <li
+                    {% if page.menu == 'configFiles' %} class="active" {% endif %}>
+                    <a href="/{{base}}documentation/configfiles">Config Files</a></li>
+                    <li
+                    {% if page.menu == 'scriptconfigfiles' %} class="active" {% endif %}>
+                    <a href="/{{base}}documentation/scriptconfigfiles">Script Config Files</a></li>
+                    <li
+                    {% if page.menu == 'placeholders' %} class="active" {% endif %}>
+                    <a href="/{{base}}documentation/placeholders">Placeholders</a></li>
+                    <li
+                    {% if page.menu == 'ssl' %} class="active" {% endif %}>
+                    <a href="/{{base}}documentation/ssl">SSL support</a>
+                    </li>
+                    <li class="nav-header">Supported Databases</li>
+                    <li
+                    {% if page.menu == 'oracle' %} class="active" {% endif %}>
+                    <a href="/{{base}}documentation/database/oracle">Oracle</a></li>
+                    <li
+                    {% if page.menu == 'sqlServer' %} class="active" {% endif %}>
+                    <a href="/{{base}}documentation/database/sqlserver">SQL Server</a></li>
+                    <li
+                    {% if page.menu == 'db2' %} class="active" {% endif %}>
+                    <a href="/{{base}}documentation/database/db2">DB2</a></li>
+                    <li
+                    {% if page.menu == 'mysql' %} class="active" {% endif %}>
+                    <a href="/{{base}}documentation/database/mysql">MySQL</a></li>
+                    <li
+                    {% if page.menu == 'aurora-mysql' %} class="active" {% endif %}>
+                    <a href="/{{base}}documentation/database/aurora-mysql">Aurora MySQL</a></li>
+                    <li
+                    {% if page.menu == 'mariadb' %} class="active" {% endif %}>
+                    <a href="/{{base}}documentation/database/mariadb">MariaDB</a></li>
+                    <li
+                    {% if page.menu == 'xtradb' %} class="active" {% endif %}>
+                    <a href="/{{base}}documentation/database/xtradb">Percona XtraDB Cluster</a></li>
+                    <li
+                    {% if page.menu == 'postgresql' %} class="active" {% endif %}>
+                    <a href="/{{base}}documentation/database/postgresql">PostgreSQL</a></li>
+                    <li
+                    {% if page.menu == 'aurora-postgresql' %} class="active" {% endif %}>
+                    <a href="/{{base}}documentation/database/aurora-postgresql">Aurora PostgreSQL</a></li>
+                    <li
+                    {% if page.menu == 'redshift' %} class="active" {% endif %}>
+                    <a href="/{{base}}documentation/database/redshift">Redshift</a></li>
+                    <li
+                    {% if page.menu == 'cockroachdb' %} class="active" {% endif %}>
+                    <a href="/{{base}}documentation/database/cockroachdb">CockroachDB</a></li>
+                    <li
+                    {% if page.menu == 'saphana' %} class="active" {% endif %}>
+                    <a href="/{{base}}documentation/database/saphana">SAP HANA</a></li>
+                    <li
+                    {% if page.menu == 'sybasease' %} class="active" {% endif %}>
+                    <a href="/{{base}}documentation/database/sybasease">Sybase ASE</a></li>
+                    <li
+                    {% if page.menu == 'informix' %} class="active" {% endif %}>
+                    <a href="/{{base}}documentation/database/informix">Informix</a></li>
+                    <li
+                    {% if page.menu == 'h2' %} class="active" {% endif %}>
+                    <a href="/{{base}}documentation/database/h2">H2</a></li>
+                    <li
+                    {% if page.menu == 'hsqldb' %} class="active" {% endif %}>
+                    <a href="/{{base}}documentation/database/hsqldb">HSQLDB</a></li>
+                    <li
+                    {% if page.menu == 'derby' %} class="active" {% endif %}>
+                    <a href="/{{base}}documentation/database/derby">Derby</a></li>
+                    <li
+                    {% if page.menu == 'snowflake' %} class="active" {% endif %}>
+                    <a href="/{{base}}documentation/database/snowflake">Snowflake</a></li>
+                    <li
+                    {% if page.menu == 'sqlite' %} class="active" {% endif %}>
+                    <a href="/{{base}}documentation/database/sqlite">SQLite</a></li>
+                    <li
+                    {% if page.menu == 'firebird' %} class="active" {% endif %}>
+                    <a href="/{{base}}documentation/database/firebird">Firebird</a></li>
+                    <li class="nav-header">Learn more</li>
+                    <li
+                    {% if page.menu == 'existing' %} class="active" {% endif %}>
+                    <a href="/{{base}}documentation/existing">Existing database setup</a></li>
+                    <li
+                    {% if page.menu == 'articles' %} class="active" {% endif %}>
+                    <a href="/{{base}}documentation/articles">Articles</a></li>
+                    <li
+                    {% if page.menu == 'videos' %} class="active" {% endif %}>
+                    <a href="/{{base}}documentation/videos">Videos</a></li>
+                    <li
+                    {% if page.menu == 'releaseNotes' %} class="active" {% endif %}>
+                    <a href="/{{base}}documentation/releaseNotes">Release Notes</a></li>
+                    <li
+                    {% if page.menu == 'roadmap' %} class="active" {% endif %}>
+                    <a href="/{{base}}documentation/roadmap">Roadmap</a></li>
+                    <li
+                    {% if page.menu == 'faq' %} class="active" {% endif %}>
+                    <a href="/{{base}}documentation/faq">FAQ</a></li>
+                    <li class="nav-header">Contribute</li>
+                    <li
+                    {% if page.menu == 'contribute' %} class="active" {% endif %}>
+                    <a href="/{{base}}documentation/contribute">Contributing to Flyway</a></li>
+                    <li
+                        {% if page.menu == 'contributingDatabaseSupport' %} class="active" {% endif %}>
+                        <a href="/{{base}}documentation/contribute/contributingDatabaseSupport">Contributing Database Support</a>
+                    </li>
+                    <li
+                    {% if layout.menu == 'website' %} class="active" {% endif %}>
+                    <a href="/{{base}}documentation/contribute/website">Website</a></li>
+                    <li
+                    {% if layout.menu == 'code' %} class="active" {% endif %}>
+                    <a href="/{{base}}documentation/contribute/code">Code</a></li>
+                    <li
+                    {% if page.menu == 'hallOfFame' %} class="active" {% endif %}>
+                    <a href="/{{base}}documentation/contribute/hallOfFame">Hall Of Fame</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9">
+
+            {{ content }}
+
+        </div>
+    </div>
+</div>

@@ -1,5 +1,5 @@
 ---
-layout: maven
+layout: v6/maven
 pill: repair
 subtitle: 'mvn flyway:repair'
 ---
