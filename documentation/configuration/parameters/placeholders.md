@@ -19,24 +19,24 @@ Placeholder matching is case insensitive, so a placeholder of `flyway.placeholde
 ## Usage
 
 ### Commandline
-```
+```powershell
 ./flyway -flyway.placeholders.key1=value1 -flyway.placeholders.key2=value2 info
 ```
 
 ### Configuration File
-```
+```properties
 flyway.placeholders.key1=value1
 flyway.placeholders.key2=value2
 ```
 
 ### Environment Variable
-```
+```properties
 FLYWAY_PLACEHOLDERS_KEY1=value1
 FLYWAY_PLACEHOLDERS_KEY2=value2
 ```
 
 ### API
-```
+```java
 Map<String, String> placeholders = new HashMap<>();
 placeholders.put("key1", "value1");
 placeholders.put("key2", "value2");
@@ -47,14 +47,14 @@ Flyway.configure()
 ```
 
 ### Gradle
-```
+```groovy
 flyway {
     placeholders = ['key1' : 'value1', 'key2' : 'value2']
 }
 ```
 
 ### Maven
-```
+```xml
 <configuration>
     <placeholders>
         <key1>value1</key1>

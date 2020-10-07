@@ -4,6 +4,7 @@ menu: placeholders
 subtitle: Placeholders
 redirect_from: /documentation/placeholders
 ---
+
 # Placeholders
 In addition to regular SQL syntax, Flyway also supports placeholder replacement with configurable pre- and suffixes.
 By default it looks for Ant-style placeholders like `${myplaceholder}`. This can be very useful to abstract differences between environments.
@@ -17,50 +18,38 @@ Placeholders can be configured through a number of different ways.
 
 Placeholders are case insensitive, so a placeholder like `${myplaceholder}` can be specified with any of the above techniques.
 
-See [configuration](/documentation/configuration/parameters/#placeholders) for placeholder specific configuration parameters. 
+See [parameters](/documentation/configuration/parameters/#placeholders) for placeholder specific configuration parameters. 
 
 ## Default placeholders
 Flyway also provides default placeholders, whose values are automatically populated:
 
-### Commandline
-```powershell
-./flyway -flyway.placeholders.key1=value1 -flyway.placeholders.key2=value2 info
-```
+- `${flyway:defaultSchema}` = The default schema for Flyway
+- `${flyway:user}` = The user Flyway will use to connect to the database
+- `${flyway:database}` = The name of the database from the connection url
+- `${flyway:timestamp}` = The time that Flyway parsed the migration, formatted as 'yyyy-MM-dd HH:mm:ss'
 
-### Configuration File
-```properties
-flyway.placeholders.key1=value1
-flyway.placeholders.key2=value2
-```
+### Example
+Here is a small example of the supported syntax:
 
-### Environment Variable
-```properties
-FLYWAY_PLACEHOLDERS_KEY1=value1
-FLYWAY_PLACEHOLDERS_KEY2=value2
-```
+```sql
+/* Single line comment */
+CREATE TABLE test_user (
+  name VARCHAR(25) NOT NULL,
+  PRIMARY KEY(name)
+);
 
-### API
-```java
-Map<String, String> placeholders = new HashMap<>();
-placeholders.put("key1", "value1");
-placeholders.put("key2", "value2");
+/*
+Multi-line
+comment
+*/
 
 -- Default placeholders
 GRANT SELECT ON SCHEMA ${flyway:defaultSchema} TO ${flyway:user};
 
-### Gradle
-```groovy
-flyway {
-    placeholders = ['key1' : 'value1', 'key2' : 'value2']
-}
+-- User defined placeholder
+INSERT INTO ${tableName} (name) VALUES ('Mr. T');
 ```
 
-### Maven
-```xml
-<configuration>
-    <placeholders>
-        <key1>value1</key1>
-        <key2>value2</key2>
-    </placeholders>
-</configuration>
-```
+<p class="next-steps">
+  <a class="btn btn-primary" href="/documentation/configuration/scriptconfigfiles">Script Config Files <i class="fa fa-arrow-right"></i></a>
+</p>
