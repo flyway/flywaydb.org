@@ -9,6 +9,45 @@ redirect_from: /documentation/releaseNotes
 <p>Thank you all for reporting all these issues and contributing fixes!</p>
 
 <div class="release">
+    <h2 id="7.0.1">Flyway 7.0.1 (2020-10-07)</h2>
+
+    <h3>Database compatibility</h3>
+    <ul>
+        {% include issue.html id="2952" title="Confirm PostgreSQL 13 support" %}
+    </ul>
+
+    <h3>New features</h3>
+    <ul>
+        {% include issue.html id="2921" title="Add Log4J v2 support" %}
+        {% include issue.html id="2919" title="Allow custom S3Client to be supplied" %}
+    </ul>
+
+    <h3>Changes</h3>
+    <ul>
+        {% include issue.html id="2871" title="Double quote migration names in logs" %}
+    </ul>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        {% include issue.html id="2898" title="Don't prompt for credentials with H2 in-memory databases" %}
+        {% include issue.html id="2949" title="Fix table locking retry logic" %}
+        {% include issue.html id="2954" title="Fix getting Oracle database name" %}
+        {% include issue.html id="2959" title="Fix handling of wrapped SQL in Oracle parser" %}
+        {% include issue.html id="2961" title="Fix SQLServer parser block handling" %}
+        <li>Make outputQueryResults public</li>
+    </ul>
+
+    <h3>Performance Improvements</h3>
+    <ul>
+        {% include issue.html id="2965" title="Remove unnecessary linebreak trimming" %}
+    </ul>
+
+    <p>
+        Thanks to AigleeK, TheSench, gendolf3d, mLarsenAlkaDk, peng-ran, and pyrocks for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
     <h2 id="7.0.0">Flyway 7.0.0 (2020-09-28)</h2>
 
     <h3>Changes</h3>
