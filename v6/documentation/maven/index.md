@@ -141,7 +141,7 @@ The Flyway Enterprise Edition Maven plugin also supports **Java 7**.
         <td>Validates the applied migrations against the ones available on the classpath</td>
     </tr>
     <tr>
-        <td><a href="/v6/documentation/maven/undo">undo</a> {% include pro.html %}</td>
+        <td><a href="/v6/documentation/maven/undo">undo</a> {% include teams.html %}</td>
         <td>Undoes the most recently applied versioned migration</td>
     </tr>
     <tr>

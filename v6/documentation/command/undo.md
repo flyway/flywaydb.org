@@ -4,7 +4,7 @@ menu: undo
 subtitle: Undo
 ---
 # Undo
-{% include pro.html %}
+{% include teams.html %}
 
 Undoes the most recently applied versioned migration.
 

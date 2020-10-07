@@ -28,15 +28,15 @@ These are the events Flyway supports:
         <td>Before every single migration during Migrate</td>
     </tr>
     <tr>
-        <td>beforeEachMigrateStatement {% include pro.html %}</td>
+        <td>beforeEachMigrateStatement {% include teams.html %}</td>
         <td>Before every single statement of a migration during Migrate</td>
     </tr>
     <tr>
-        <td>afterEachMigrateStatement {% include pro.html %}</td>
+        <td>afterEachMigrateStatement {% include teams.html %}</td>
         <td>After every single successful statement of a migration during Migrate</td>
     </tr>
     <tr>
-        <td>afterEachMigrateStatementError {% include pro.html %}</td>
+        <td>afterEachMigrateStatementError {% include teams.html %}</td>
         <td>After every single failed statement of a migration during Migrate</td>
     </tr>
     <tr>
@@ -57,39 +57,39 @@ These are the events Flyway supports:
     </tr>
     <tr><td></td><td></td></tr>
     <tr>
-        <td>beforeUndo {% include pro.html %}</td>
+        <td>beforeUndo {% include teams.html %}</td>
         <td>Before Undo runs</td>
     </tr>
     <tr>
-        <td>beforeEachUndo {% include pro.html %}</td>
+        <td>beforeEachUndo {% include teams.html %}</td>
         <td>Before every single migration during Undo</td>
     </tr>
     <tr>
-        <td>beforeEachUndoStatement {% include pro.html %}</td>
+        <td>beforeEachUndoStatement {% include teams.html %}</td>
         <td>Before every single statement of a migration during Undo</td>
     </tr>
     <tr>
-        <td>afterEachUndoStatement {% include pro.html %}</td>
+        <td>afterEachUndoStatement {% include teams.html %}</td>
         <td>After every single successful statement of a migration during Undo</td>
     </tr>
     <tr>
-        <td>afterEachUndoStatementError {% include pro.html %}</td>
+        <td>afterEachUndoStatementError {% include teams.html %}</td>
         <td>After every single failed statement of a migration during Undo</td>
     </tr>
     <tr>
-        <td>afterEachUndo {% include pro.html %}</td>
+        <td>afterEachUndo {% include teams.html %}</td>
         <td>After every single successful migration during Undo</td>
     </tr>
     <tr>
-        <td>afterEachUndoError {% include pro.html %}</td>
+        <td>afterEachUndoError {% include teams.html %}</td>
         <td>After every single failed migration during Undo</td>
     </tr>
     <tr>
-        <td>afterUndo {% include pro.html %}</td>
+        <td>afterUndo {% include teams.html %}</td>
         <td>After successful Undo runs</td>
     </tr>
     <tr>
-        <td>afterUndoError {% include pro.html %}</td>
+        <td>afterUndoError {% include teams.html %}</td>
         <td>After failed Undo runs</td>
     </tr>
     <tr><td></td><td></td></tr>

@@ -4,7 +4,7 @@ pill: undo
 subtitle: 'mvn flyway:undo'
 ---
 # Maven Goal: Undo
-{% include pro.html %}
+{% include teams.html %}
 
 [Undoes](/v6/documentation/command/undo) the most recently applied versioned migration.
 

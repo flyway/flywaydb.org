@@ -4,7 +4,7 @@ menu: dryruns
 subtitle: Dry Runs
 ---
 # Dry Runs
-{% include pro.html %}
+{% include teams.html %}
 
 When Flyway migrates a database, it looks for migrations that need to be applied, sorts them and applies them in order
 directly against the database.
