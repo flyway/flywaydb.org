@@ -8,7 +8,7 @@ subtitle: Sybase ASE
 ## Supported Versions
 
 - `16.0`
-- `15.7` {% include enterprise.html %}
+- `15.7` {% include teams.html %}
 
 ## Drivers
 

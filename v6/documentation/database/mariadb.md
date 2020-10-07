@@ -10,12 +10,12 @@ subtitle: MariaDB
 - `10.4`
 - `10.3`
 - `10.2`
-- `10.1` {% include enterprise.html %}
-- `10.0` {% include enterprise.html %}
-- `5.5` {% include enterprise.html %}
-- `5.3` {% include enterprise.html %}
-- `5.2` {% include enterprise.html %}
-- `5.1` {% include enterprise.html %}
+- `10.1` {% include teams.html %}
+- `10.0` {% include teams.html %}
+- `5.5` {% include teams.html %}
+- `5.3` {% include teams.html %}
+- `5.2` {% include teams.html %}
+- `5.1` {% include teams.html %}
 
 
 ## Driver

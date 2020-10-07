@@ -9,9 +9,9 @@ subtitle: HSQLDB
 
 - `2.4`
 - `2.3`
-- `2.2` {% include enterprise.html %}
-- `2.0` {% include enterprise.html %}
-- `1.8` {% include enterprise.html %}
+- `2.2` {% include teams.html %}
+- `2.0` {% include teams.html %}
+- `1.8` {% include teams.html %}
 
 ## Driver
 

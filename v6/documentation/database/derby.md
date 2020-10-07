@@ -10,8 +10,8 @@ subtitle: Derby
 - `10.15` (Important: see 'Compatibility' below)
 - `10.14`
 - `10.13` 
-- `10.12` {% include enterprise.html %}
-- `10.11` {% include enterprise.html %}
+- `10.12` {% include teams.html %}
+- `10.11` {% include teams.html %}
 
 ## Driver
 
