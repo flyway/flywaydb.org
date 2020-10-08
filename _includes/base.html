@@ -1,9 +1,9 @@
-{% assign base = ''
+{%   assign base = ''
 %}{% assign split = page.url | split: '/'
-%}{% assign firstBit = split[1]
-%}{% assign firstChar = firstBit | slice: 0
+%}{% assign secondBit = split[2]
+%}{% assign firstChar = secondBit | slice: 0
 %}{% if firstChar == 'v' 
-%}{% assign base = firstBit | append: "/"
+%}{% assign base = secondBit | append: "/"
 %}{% else
 %}{% assign base = ''
 %}{% endif 
