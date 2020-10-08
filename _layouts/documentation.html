@@ -4,13 +4,17 @@ tab: documentation
 title: Documentation
 ---
 
-{% include base.html %}
-
 <div>
     <div class="row">
         <div class="col-md-3" style="width: auto">
             <div id="menu">
                 <ul class="nav nav-pills nav-stacked">
+
+                    <label for="docversion">Documentation version: </label>
+                    <select name="docversion" onchange="location = this.value;">
+                        <option value="/documentation" selected>v7</option>
+                        <option value="/v6/documentation">v6</option>
+                    </select>
 
                     <li
                     {% if page.menu == 'overview' %} class="active" {% endif %}>
