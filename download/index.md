@@ -45,7 +45,7 @@ cssid: download-pricing
 <tr><td>License</td><td><a href="/licenses/flyway-community">Apache v2</a></td><td><a href="/licenses/flyway-teams">Commercial</a></td></tr>
 <tr><td>Maven Repository</td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td>Source Code included</td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
-<tr><td>Support</td><td>Community</td><td>Email (2 business days)</td></tr>
+<tr><td>Support</td><td><a href="https://github.com/flyway/flyway/issues">Community</a></td><td>Email (2 business days)</td></tr>
 <tr><td>Automatic renewal</td><td></td><td>optional</td></tr>
 <tr><td>Payment methods accepted</td><td></td><td>Credit card, wire transfer, purchase order</td></tr>
 <tr><td></td><td><a class="btn btn-primary btn-download" href="/download/community">Download <i class="fa fa-arrow-right"></i><br><span class="note">Community</span></a></td>
