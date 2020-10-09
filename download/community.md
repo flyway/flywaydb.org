@@ -25,5 +25,3 @@ Flyway is available in many different forms. Choose from the options below for s
 </div>
 
 Looking for Flyway Teams, or interested in what powerful features are available to enhance your workflows? See a comparison of the versions, begin a free trial, or purchase a license in [download / pricing](/download).
-
-{% include trialpopup.html %}
