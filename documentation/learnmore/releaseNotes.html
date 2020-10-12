@@ -24,6 +24,9 @@ redirect_from: /documentation/releaseNotes
 
 <div class="release">
     <h2 id="7.0.1">Flyway 7.0.1 (2020-10-07)</h2>
+    <h3>
+      Skipped due to a regression introduced by <a href="https://github.com/flyway/flyway/issues/2919">this change</a>. The change is reverted in the next release.
+    </h3>
 
     <h3>Database compatibility</h3>
     <ul>
@@ -33,7 +36,7 @@ redirect_from: /documentation/releaseNotes
     <h3>New features</h3>
     <ul>
         {% include issue.html id="2921" title="Add Log4J v2 support" %}
-        {% include issue.html id="2919" title="Allow custom S3Client to be supplied" %}
+        {% include issue.html id="2919" title="Allow custom S3Client to be supplied (reverted in next release)" %} 
     </ul>
 
     <h3>Changes</h3>
