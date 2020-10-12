@@ -48,7 +48,7 @@ prod: 1,2,3 -- error!
 
 However, when you then try to `migrate` on prod, the migration would fail, as the changes applied by the hotfix already exist!
 
-This is where `skipExecutingMigrations` comes in. On prod instead of running a normal `migrate`, instead run `migrate -skipExecutingMigrations=true`. Now Flyway will not actually try to execute the contents of the migration on this environment, instead just updating the schema history to say its been applied. Now all the environments are back in sync, and development can continue.
+This is where `skipExecutingMigrations` comes in. On prod instead of running a normal `migrate`, instead run `migrate -skipExecutingMigrations=true`. Now Flyway will not actually try to execute the contents of the migration on this environment, instead just updating the schema history to say it's been applied. Now all the environments are back in sync, and development can continue.
 
 ```
 Migrations:
@@ -84,12 +84,12 @@ V3__create_views.sql
 V4__new_changes.sql
 ```
 
-Migration `V4` can't be applied to the developers own database as the changes already exist. In this case the developer can then run `migrate -skipExecutingMigrations=true` to mark the migration as applied locally. The migration can then be committed to VCS, and any other developer can update and apply the migration without a problem to their own dev instances.
+Migration `V4` can't be applied to the developer's own database as the changes already exist. In this case the developer can then run `migrate -skipExecutingMigrations=true` to mark the migration as applied locally. The migration can then be committed to VCS, and any other developer can update and apply the migration without a problem to their own dev instances.
 
 
 ## Deferred migration execution
 
-In more complex projects, it is sometimes desirable to have more control over *when* a migration is executed (such as during down time), out of order from the other migrations. This could be because the migration takes a long time to execute, its deemed too risky by the dba and wants to be skipped for now, or many other reasons. 
+In more complex projects, it is sometimes desirable to have more control over *when* a migration is executed (such as during down time), out of order from the other migrations. This could be because the migration takes a long time to execute, it's deemed too risky by the dba and wants to be skipped for now, or many other reasons. 
 
 Consider the following project, with 4 migrations, along with corresponding undo migrations.
 
@@ -107,7 +107,7 @@ U16__delete_things.sql
 
 In this example, `V13` takes a very long time to execute, and the DBA decided that the best time to execute the migration is during the quiet period at the weekend. However, the rest of the migrations still need to be applied immediately.
 
-Before Flyway 7.0.0, the only answer would be to delete the migration from disk (and VCS, just incase an accidental `migrate` applies it before the DBA is ready), and reintroduce it once it is desirable again to apply it. Pretty fiddly!
+Before Flyway 7.0.0, the only answer would be to delete the migration from disk (and VCS, just in case an accidental `migrate` applies it before the DBA is ready), and reintroduce it once it is desirable again to apply it. Pretty fiddly!
 
 With `skipExecutingMigrations` however this is much easier to manage. First, the DBA can mark the migration to be skipped: 
 
@@ -124,7 +124,7 @@ Now a `migrate -outOfOrder=true` will execute the `V13` migration that was delay
 
 ## Intermediate baseline
 
-As a project grows in size, constructing the databases used in various temporary environments (such as dev or test) becomes harder to manage via a normal `migrate`. Instead of applying a vast number of migrations to setup the database, it may because more desirable to create the database via other means. This could be a new migration that does the same thing all the previous migrations did in a more efficient way, restoring from some form of image or backup, or something else. No matter what method is chosen, the problem of what to do with the existing migration files remains.
+As a project grows in size, constructing the databases used in various temporary environments (such as dev or test) becomes harder to manage via a normal `migrate`. Instead of applying a vast number of migrations to setup the database, it may become more desirable to create the database via other means. This could be a new migration that does the same thing all the previous migrations did in a more efficient way, restoring from some form of image or backup, or something else. No matter what method is chosen, the problem of what to do with the existing migration files remains.
 
 The simplest solution would be to delete the old migrations, but this abandons all support for existing databases that have not yet been migrated beyond this new 'baseline' point. It could also introduce confusion on the version naming (e.g. "Why do our migrations start from version 8.2?"). Luckily `skipExecutingMigrations` can provide a better solution.
 
