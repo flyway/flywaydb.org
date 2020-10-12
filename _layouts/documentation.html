@@ -176,11 +176,21 @@ title: Documentation
                             </ul>
                         </details>
 
-                        <ul class="nav nav-pills nav-stacked">
-                            <li
-                            {% if layout.menu == 'api' %} class="active" {% endif %}>
-                            <a href="/documentation/usage/api">API (Java / Android)</a></li>
+                        <details {% if layout.menu == 'api' %} open {% endif %} class="collapsible-nested">
+                            <summary class="nav-header"><a href="/documentation/usage/api">API (Java / Android)</a></summary>
 
+                            <ul class="nav nav-pills nav-stacked">
+                                <li
+                                {% if page.pill == 'hooks' %} class="active" {% endif %}>
+                                <a href="/documentation/usage/api/hooks">Hooks</a></li>
+
+                                <li
+                                {% if page.pill == 'javadoc' %} class="active" {% endif %}>
+                                <a href="/documentation/usage/api/javadoc.html">Javadoc</a></li>
+                            </ul>
+                        </details>
+
+                        <ul class="nav nav-pills nav-stacked">
                             <li
                             {% if layout.menu == 'maven' %} class="active" {% endif %}>
                             <a href="/documentation/usage/maven">Maven</a></li>
