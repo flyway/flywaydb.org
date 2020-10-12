@@ -1,6 +1,6 @@
 ---
 layout: maven
-pill: info
+pill: mvn_info
 subtitle: 'mvn flyway:info'
 ---
 # Maven Goal: Info

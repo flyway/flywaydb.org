@@ -1,6 +1,6 @@
 ---
 layout: commandLine
-pill: clean
+pill: cli_clean
 subtitle: 'Command-line: clean'
 ---
 # Command-line: clean

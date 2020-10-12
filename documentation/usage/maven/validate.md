@@ -1,6 +1,6 @@
 ---
 layout: maven
-pill: validate
+pill: mvn_validate
 subtitle: 'mvn flyway:validate'
 ---
 # Maven Goal: Validate

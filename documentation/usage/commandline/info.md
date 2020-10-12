@@ -1,6 +1,6 @@
 ---
 layout: commandLine
-pill: info
+pill: cli_info
 subtitle: 'Command-line: info'
 ---
 # Command-line: info

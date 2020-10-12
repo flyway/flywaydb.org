@@ -1,6 +1,6 @@
 ---
 layout: gradle
-pill: undo
+pill: gradle_undo
 subtitle: 'gradle flywayUndo'
 ---
 # Gradle Task: flywayUndo

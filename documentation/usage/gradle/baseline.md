@@ -1,6 +1,6 @@
 ---
 layout: gradle
-pill: baseline
+pill: gradle_baseline
 subtitle: 'gradle flywayBaseline'
 ---
 # Gradle Task: flywayBaseline

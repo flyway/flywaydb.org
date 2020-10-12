@@ -1,6 +1,6 @@
 ---
 layout: gradle
-pill: overview
+pill: gradle_overview
 subtitle: Gradle Plugin
 redirect_from: /documentation/gradle
 ---

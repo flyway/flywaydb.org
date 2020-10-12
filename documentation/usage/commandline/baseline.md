@@ -1,6 +1,6 @@
 ---
 layout: commandLine
-pill: baseline
+pill: cli_baseline
 subtitle: 'Command-line: baseline'
 ---
 # Command-line: baseline

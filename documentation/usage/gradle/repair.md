@@ -1,6 +1,6 @@
 ---
 layout: gradle
-pill: repair
+pill: gradle_repair
 subtitle: 'gradle flywayRepair'
 ---
 # Gradle Task: flywayRepair

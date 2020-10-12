@@ -1,6 +1,6 @@
 ---
 layout: commandLine
-pill: migrate
+pill: cli_migrate
 subtitle: 'Command-line: migrate'
 ---
 # Command-line: migrate

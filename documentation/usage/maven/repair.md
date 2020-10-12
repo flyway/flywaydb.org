@@ -1,6 +1,6 @@
 ---
 layout: maven
-pill: repair
+pill: mvn_repair
 subtitle: 'mvn flyway:repair'
 ---
 # Maven Goal: Repair

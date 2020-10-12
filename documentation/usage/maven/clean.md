@@ -1,6 +1,6 @@
 ---
 layout: maven
-pill: clean
+pill: mvn_clean
 subtitle: 'mvn flyway:clean'
 ---
 # Maven Goal: Clean
