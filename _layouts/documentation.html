@@ -142,11 +142,41 @@ title: Documentation
                     <details {% if page.url contains "documentation/usage" %} open {% endif %}>
                         <summary class="nav-header">Usage</summary>
 
-                        <ul class="nav nav-pills nav-stacked">
-                            <li
-                            {% if layout.menu == 'commandLine' %} class="active" {% endif %}>
-                            <a href="/documentation/usage/commandline">Command-line</a></li>
+                        <details {% if layout.menu == 'commandLine' %} open {% endif %} class="collapsible-nested">
+                            <summary class="nav-header"><a href="/documentation/usage/commandline">Command-line</a></summary>
 
+                            <ul class="nav nav-pills nav-stacked">
+                                <li
+                                {% if page.pill == 'migrate' %} class="active" {% endif %}>
+                                <a href="/documentation/usage/commandline/migrate">migrate</a></li>
+
+                                <li
+                                {% if page.pill == 'clean' %} class="active" {% endif %}>
+                                <a href="/documentation/usage/commandline/clean">clean</a></li>
+
+                                <li
+                                {% if page.pill == 'info' %} class="active" {% endif %}>
+                                <a href="/documentation/usage/commandline/info">info</a></li>
+
+                                <li
+                                {% if page.pill == 'validate' %} class="active" {% endif %}>
+                                <a href="/documentation/usage/commandline/validate">validate</a></li>
+
+                                <li
+                                {% if page.pill == 'undo' %} class="active" {% endif %}>
+                                <a href="/documentation/usage/commandline/undo">undo</a></li>
+
+                                <li
+                                {% if page.pill == 'baseline' %} class="active" {% endif %}>
+                                <a href="/documentation/usage/commandline/baseline">baseline</a></li>
+
+                                <li
+                                {% if page.pill == 'repair' %} class="active" {% endif %}>
+                                <a href="/documentation/usage/commandline/repair">repair</a></li>
+                            </ul>
+                        </details>
+
+                        <ul class="nav nav-pills nav-stacked">
                             <li
                             {% if layout.menu == 'api' %} class="active" {% endif %}>
                             <a href="/documentation/usage/api">API (Java / Android)</a></li>
