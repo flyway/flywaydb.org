@@ -77,11 +77,14 @@ No migrations applied yet. No validation necessary.</pre>
 
 {
   "validationError": null,
+  "errorCodeWithMessage": null,
+  "invalidMigrations": [],
   "validationSuccessful": true,
   "validateCount": 2,
-  "flywayVersion": "7.0.0",
+  "flywayVersion": "{{ site.flywayVersion }}",
   "database": "testdb",
-  "warnings": []
+  "warnings": [],
+  "operation": "validate"
 }</pre>
 
 <p class="next-steps">
