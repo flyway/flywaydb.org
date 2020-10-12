@@ -16,7 +16,7 @@ This should be used when you have applied a migration manually (via executing th
 
 This is useful when executing an script against your database manually. For instance, when you apply an out-of-process change like a hotfix. The hotfix script can be turned into a migration and applied with `skipExecutingMigrations=true`. The schema history table will be updated, but the hotfix script won't be run gain.
 
-When combined with [cherryPick](/documentation/configuration/cherryPick), you can gain a lot more control of how your deployments take place.
+When combined with [cherryPick](/documentation/configuration/parameters/cherryPick), you can gain a lot more control of how your deployments take place.
 
 ## Default
 false
