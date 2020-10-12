@@ -283,6 +283,10 @@ title: Documentation
 
                         <ul class="nav nav-pills nav-stacked">
                             <li
+                            {% if page.menu == 'errorcodes' %} class="active" {% endif %}>
+                            <a href="/documentation/usage/errorcodes/">Error Codes</a></li>
+
+                            <li
                             {% if page.menu == 'plugins' %} class="active" {% endif %}>
                             <a href="/documentation/usage/plugins/">Community Plugins</a></li>
                         </ul>

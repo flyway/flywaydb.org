@@ -65,5 +65,5 @@ flyway {
 Repair not necessary. No failed migration detected.</pre>
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/plugins">Community Plugins <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/usage/errorcodes/">Error Codes<i class="fa fa-arrow-right"></i></a>
 </p>
