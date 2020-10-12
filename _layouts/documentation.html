@@ -190,11 +190,41 @@ title: Documentation
                             </ul>
                         </details>
 
-                        <ul class="nav nav-pills nav-stacked">
-                            <li
-                            {% if layout.menu == 'maven' %} class="active" {% endif %}>
-                            <a href="/documentation/usage/maven">Maven</a></li>
+                        <details {% if layout.menu == 'maven' %} open {% endif %} class="collapsible-nested">
+                            <summary class="nav-header"><a href="/documentation/usage/maven">Maven</a></summary>
 
+                            <ul class="nav nav-pills nav-stacked">
+                                <li
+                                {% if page.pill == 'migrate' %} class="active" {% endif %}>
+                                <a href="/documentation/usage/maven/migrate">migrate</a></li>
+
+                                <li
+                                {% if page.pill == 'clean' %} class="active" {% endif %}>
+                                <a href="/documentation/usage/maven/clean">clean</a></li>
+
+                                <li
+                                {% if page.pill == 'info' %} class="active" {% endif %}>
+                                <a href="/documentation/usage/maven/info">info</a></li>
+
+                                <li
+                                {% if page.pill == 'validate' %} class="active" {% endif %}>
+                                <a href="/documentation/usage/maven/validate">validate</a></li>
+
+                                <li
+                                {% if page.pill == 'undo' %} class="active" {% endif %}>
+                                <a href="/documentation/usage/maven/undo">undo</a></li>
+
+                                <li
+                                {% if page.pill == 'baseline' %} class="active" {% endif %}>
+                                <a href="/documentation/usage/maven/baseline">baseline</a></li>
+
+                                <li
+                                {% if page.pill == 'repair' %} class="active" {% endif %}>
+                                <a href="/documentation/usage/maven/repair">repair</a></li>
+                            </ul>
+                        </details>
+
+                        <ul class="nav nav-pills nav-stacked">
                             <li
                             {% if layout.menu == 'gradle' %} class="active" {% endif %}>
                             <a href="/documentation/usage/gradle">Gradle</a></li>
