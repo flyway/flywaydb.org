@@ -1,6 +1,6 @@
 ---
 layout: maven
-pill: migrate
+pill: mvn_migrate
 subtitle: 'mvn flyway:migrate'
 ---
 # Maven Goal: Migrate

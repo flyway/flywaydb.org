@@ -1,6 +1,6 @@
 ---
 layout: commandLine
-pill: overview
+pill: cli_overview
 subtitle: Command-line
 redirect_from: /documentation/commandline
 ---

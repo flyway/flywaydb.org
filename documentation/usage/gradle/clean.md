@@ -1,6 +1,6 @@
 ---
 layout: gradle
-pill: clean
+pill: gradle_clean
 subtitle: 'gradle flywayClean'
 ---
 Gradle Task: flywayClean

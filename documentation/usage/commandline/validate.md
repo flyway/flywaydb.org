@@ -1,6 +1,6 @@
 ---
 layout: commandLine
-pill: validate
+pill: cli_validate
 subtitle: 'Command-line: validate'
 ---
 # Command-line: validate

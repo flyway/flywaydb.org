@@ -1,6 +1,6 @@
 ---
 layout: maven
-pill: undo
+pill: mvn_undo
 subtitle: 'mvn flyway:undo'
 ---
 # Maven Goal: Undo

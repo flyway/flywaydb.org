@@ -1,6 +1,6 @@
 ---
 layout: commandLine
-pill: repair
+pill: cli_repair
 subtitle: 'Command-line: repair'
 ---
 # Command-line: repair

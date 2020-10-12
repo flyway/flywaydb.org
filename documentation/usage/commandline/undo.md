@@ -1,6 +1,6 @@
 ---
 layout: commandLine
-pill: undo
+pill: cli_undo
 subtitle: 'Command-line: undo'
 ---
 # Command-line: undo

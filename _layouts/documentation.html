@@ -142,23 +142,139 @@ title: Documentation
                     <details {% if page.url contains "documentation/usage" %} open {% endif %}>
                         <summary class="nav-header">Usage</summary>
 
+                        <details {% if layout.menu == 'commandLine' %} open {% endif %} class="collapsible-nested">
+                            <summary class="nav-header">Command-line</summary>
+
+                            <ul class="nav nav-pills nav-stacked">
+                                <li
+                                {% if page.pill == 'cli_overview' %} class="active" {% endif %}>
+                                <a href="/documentation/usage/commandline">Overview</a></li>
+
+                                <li
+                                {% if page.pill == 'cli_migrate' %} class="active" {% endif %}>
+                                <a href="/documentation/usage/commandline/migrate">migrate</a></li>
+
+                                <li
+                                {% if page.pill == 'cli_clean' %} class="active" {% endif %}>
+                                <a href="/documentation/usage/commandline/clean">clean</a></li>
+
+                                <li
+                                {% if page.pill == 'cli_info' %} class="active" {% endif %}>
+                                <a href="/documentation/usage/commandline/info">info</a></li>
+
+                                <li
+                                {% if page.pill == 'cli_validate' %} class="active" {% endif %}>
+                                <a href="/documentation/usage/commandline/validate">validate</a></li>
+
+                                <li
+                                {% if page.pill == 'cli_undo' %} class="active" {% endif %}>
+                                <a href="/documentation/usage/commandline/undo">undo</a></li>
+
+                                <li
+                                {% if page.pill == 'cli_baseline' %} class="active" {% endif %}>
+                                <a href="/documentation/usage/commandline/baseline">baseline</a></li>
+
+                                <li
+                                {% if page.pill == 'cli_repair' %} class="active" {% endif %}>
+                                <a href="/documentation/usage/commandline/repair">repair</a></li>
+                            </ul>
+                        </details>
+
+                        <details {% if layout.menu == 'api' %} open {% endif %} class="collapsible-nested">
+                            <summary class="nav-header">API (Java / Android)</summary>
+
+                            <ul class="nav nav-pills nav-stacked">
+                                <li
+                                {% if page.pill == 'overview' %} class="active" {% endif %}>
+                                <a href="/documentation/usage/api">Overview</a></li>
+
+                                <li
+                                {% if page.pill == 'hooks' %} class="active" {% endif %}>
+                                <a href="/documentation/usage/api/hooks">Hooks</a></li>
+
+                                <li
+                                {% if page.pill == 'javadoc' %} class="active" {% endif %}>
+                                <a href="/documentation/usage/api/javadoc.html">Javadoc</a></li>
+                            </ul>
+                        </details>
+
+                        <details {% if layout.menu == 'maven' %} open {% endif %} class="collapsible-nested">
+                            <summary class="nav-header">Maven</summary>
+
+                            <ul class="nav nav-pills nav-stacked">
+                                <li
+                                {% if page.pill == 'mvn_overview' %} class="active" {% endif %}>
+                                <a href="/documentation/usage/maven">Overview</a></li>
+
+                                <li
+                                {% if page.pill == 'mvn_migrate' %} class="active" {% endif %}>
+                                <a href="/documentation/usage/maven/migrate">migrate</a></li>
+
+                                <li
+                                {% if page.pill == 'mvn_clean' %} class="active" {% endif %}>
+                                <a href="/documentation/usage/maven/clean">clean</a></li>
+
+                                <li
+                                {% if page.pill == 'mvn_info' %} class="active" {% endif %}>
+                                <a href="/documentation/usage/maven/info">info</a></li>
+
+                                <li
+                                {% if page.pill == 'mvn_validate' %} class="active" {% endif %}>
+                                <a href="/documentation/usage/maven/validate">validate</a></li>
+
+                                <li
+                                {% if page.pill == 'mvn_undo' %} class="active" {% endif %}>
+                                <a href="/documentation/usage/maven/undo">undo</a></li>
+
+                                <li
+                                {% if page.pill == 'mvn_baseline' %} class="active" {% endif %}>
+                                <a href="/documentation/usage/maven/baseline">baseline</a></li>
+
+                                <li
+                                {% if page.pill == 'mvn_repair' %} class="active" {% endif %}>
+                                <a href="/documentation/usage/maven/repair">repair</a></li>
+                            </ul>
+                        </details>
+
+                        <details {% if layout.menu == 'gradle' %} open {% endif %} class="collapsible-nested">
+                            <summary class="nav-header">Gradle</summary>
+
+                            <ul class="nav nav-pills nav-stacked">
+                                <li
+                                {% if page.pill == 'gradle_overview' %} class="active" {% endif %}>
+                                <a href="/documentation/usage/gradle">Overview</a></li>
+
+                                <li
+                                {% if page.pill == 'gradle_migrate' %} class="active" {% endif %}>
+                                <a href="/documentation/usage/gradle/migrate">migrate</a></li>
+
+                                <li
+                                {% if page.pill == 'gradle_clean' %} class="active" {% endif %}>
+                                <a href="/documentation/usage/gradle/clean">clean</a></li>
+
+                                <li
+                                {% if page.pill == 'gradle_info' %} class="active" {% endif %}>
+                                <a href="/documentation/usage/gradle/info">info</a></li>
+
+                                <li
+                                {% if page.pill == 'gradle_validate' %} class="active" {% endif %}>
+                                <a href="/documentation/usage/gradle/validate">validate</a></li>
+
+                                <li
+                                {% if page.pill == 'gradle_undo' %} class="active" {% endif %}>
+                                <a href="/documentation/usage/gradle/undo">undo</a></li>
+
+                                <li
+                                {% if page.pill == 'gradle_baseline' %} class="active" {% endif %}>
+                                <a href="/documentation/usage/gradle/baseline">baseline</a></li>
+
+                                <li
+                                {% if page.pill == 'gradle_repair' %} class="active" {% endif %}>
+                                <a href="/documentation/usage/gradle/repair">repair</a></li>
+                            </ul>
+                        </details>
+
                         <ul class="nav nav-pills nav-stacked">
-                            <li
-                            {% if layout.menu == 'commandLine' %} class="active" {% endif %}>
-                            <a href="/documentation/usage/commandline">Command-line</a></li>
-
-                            <li
-                            {% if layout.menu == 'api' %} class="active" {% endif %}>
-                            <a href="/documentation/usage/api">API (Java / Android)</a></li>
-
-                            <li
-                            {% if layout.menu == 'maven' %} class="active" {% endif %}>
-                            <a href="/documentation/usage/maven">Maven</a></li>
-
-                            <li
-                            {% if layout.menu == 'gradle' %} class="active" {% endif %}>
-                            <a href="/documentation/usage/gradle">Gradle</a></li>
-
                             <li
                             {% if page.menu == 'plugins' %} class="active" {% endif %}>
                             <a href="/documentation/usage/plugins/">Community Plugins</a></li>
@@ -169,9 +285,13 @@ title: Documentation
                         <summary class="nav-header">Configuration</summary>
 
                         <details {% if page.url contains "documentation/configuration/parameters/" %} open {% endif %} class="collapsible-nested">
-                            <summary class="nav-header"><a href="/documentation/configuration/parameters">Parameters</a></summary>
+                            <summary class="nav-header">Parameters</summary>
 
                             <ul class="nav nav-pills nav-stacked">
+                                <li
+                                {% if page.menu == 'configuration' %} class="active" {% endif %}>
+                                <a href="/documentation/configuration/parameters">Overview</a></li>
+
                                 <li
                                 {% if page.pill == 'baselineDescription' %} class="active" {% endif %}>
                                 <a href="/documentation/configuration/parameters/baselineDescription">baselineDescription</a></li>

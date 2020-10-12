@@ -1,6 +1,6 @@
 ---
 layout: gradle
-pill: validate
+pill: gradle_validate
 subtitle: 'gradle flywayValidate'
 ---
 # Gradle Task: flywayValidate

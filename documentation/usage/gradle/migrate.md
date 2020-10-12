@@ -1,6 +1,6 @@
 ---
 layout: gradle
-pill: migrate
+pill: gradle_migrate
 subtitle: 'gradle flywayMigrate'
 ---
 # Gradle Task: flywayMigrate

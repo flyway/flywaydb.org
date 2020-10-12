@@ -1,6 +1,6 @@
 ---
 layout: maven
-pill: baseline
+pill: mvn_baseline
 subtitle: 'mvn flyway:baseline'
 ---
 # Maven Goal: Baseline

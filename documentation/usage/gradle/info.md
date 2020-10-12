@@ -1,6 +1,6 @@
 ---
 layout: gradle
-pill: info
+pill: gradle_info
 subtitle: 'gradle flywayInfo'
 ---
 # Gradle Task: flywayInfo
