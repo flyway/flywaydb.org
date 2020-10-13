@@ -7,7 +7,7 @@ cssid: download-community
 
 # Download Flyway Community
 
-Flyway is available in many different forms. Choose from the options below for specific instructions on how to download for the platform of your choice.
+Flyway is available for many different platforms. Choose from the options below for specific instructions on how to download for the platform of your choice.
 
 <div class="row" style="text-align: center">
     <div class="col-md-2"></div>
