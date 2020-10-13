@@ -77,7 +77,7 @@ No migrations applied yet. No validation necessary.</pre>
 
 {
   "validationError": null,
-  "errorCodeWithMessage": null,
+  "errorDetails": null,
   "invalidMigrations": [],
   "validationSuccessful": true,
   "validateCount": 2,
