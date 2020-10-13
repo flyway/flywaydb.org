@@ -2,6 +2,7 @@
 layout: documentation
 menu: grails
 subtitle: 'Grails'
+redirect_from: /documentation/plugins/grails
 ---
 # Community Plugins and Integrations: Grails
 

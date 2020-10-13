@@ -1,7 +1,8 @@
 ---
 layout: documentation
-menu: plugins
+menu: ant
 subtitle: 'Ant'
+redirect_from: /documentation/plugins/ant
 ---
 # Community Plugins and Integrations: Ant
 

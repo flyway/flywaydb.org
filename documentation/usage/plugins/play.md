@@ -2,6 +2,7 @@
 layout: documentation
 menu: play
 subtitle: 'Play'
+redirect_from: /documentation/plugins/play
 ---
 # Community Plugins and Integrations: Play
 
