@@ -100,7 +100,7 @@ Database: jdbc:h2:file:flyway.db (H2 1.3)
     }
   ],
   "allSchemasEmpty": false,
-  "flywayVersion": "7.0.0",
+  "flywayVersion": "{{ site.flywayVersion }}",
   "database": "testdb",
   "warnings": []
 }</pre>
