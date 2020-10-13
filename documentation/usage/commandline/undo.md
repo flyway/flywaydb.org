@@ -89,7 +89,7 @@ Successfully undid 1 migration to schema "PUBLIC" (execution time 00:00.024s).</
     }
   ],
   "migrationsUndone": 1,
-  "flywayVersion": "7.0.0",
+  "flywayVersion": "{{ site.flywayVersion }}",
   "database": "testdb",
   "warnings": []
 }</pre>

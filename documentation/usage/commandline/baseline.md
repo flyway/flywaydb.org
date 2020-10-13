@@ -53,7 +53,7 @@ Schema baselined with version: 1</pre>
 {
   "successfullyBaselined": true,
   "baselineVersion": "1",
-  "flywayVersion": "7.0.0",
+  "flywayVersion": "{{ site.flywayVersion }}",
   "database": "testdb",
   "warnings": []
 }</pre>

@@ -76,7 +76,7 @@ Repair not necessary. No failed migration detected.</pre>
       "filepath": "C:\\flyway\\sql\\V1__first.sql"
     }
   ],
-  "flywayVersion": "7.0.0",
+  "flywayVersion": "{{ site.flywayVersion }}",
   "database": "testdb",
   "warnings": []
 }</pre>
