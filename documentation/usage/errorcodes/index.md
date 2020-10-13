@@ -14,7 +14,7 @@ These error codes are surfaced when running `validate` or `validateWithResult`.
 
 ### `SCHEMA_DOES_NOT_EXIST`
 - **Caused by:** The schema being validated against does not exist
-- **Solution:** Manually create the schema or enable `flyway.createSchemas`
+- **Solution:** Manually create the schema or enable [`createSchemas`](/documentation/configuration/parameters/createSchemas)
 
 ### `FAILED_REPEATABLE_MIGRATION`
 - **Caused by:** A failed repeatable migration was detected
@@ -34,11 +34,11 @@ These error codes are surfaced when running `validate` or `validateWithResult`.
 
 ### `RESOLVED_REPEATABLE_MIGRATION_NOT_APPLIED`
 - **Caused by:** A repeatable migration that was resolved has not been applied
-- **Solution:** To ignore this migration enable `ignoreIgnoredMigrations`
+- **Solution:** To ignore this migration enable [`ignoreIgnoredMigrations`](/documentation/configuration/parameters/ignoreIgnoredMigrations)
 
 ### `RESOLVED_VERSIONED_MIGRATION_NOT_APPLIED`
 - **Caused by:** A versioned migration that was resolved has not been applied
-- **Solution:** To ignore this migration enable `ignoreIgnoredMigrations` and to allow executing this migration enable `outOfOrder`
+- **Solution:** To ignore this migration enable [`ignoreIgnoredMigrations`](/documentation/configuration/parameters/ignoreIgnoredMigrations) and to allow executing this migration enable [`outOfOrder`](/documentation/configuration/parameters/outOfOrder)
 
 ### `OUTDATED_REPEATABLE_MIGRATION`
 - **Caused by:** An applied repeatable migration was resolved with a newer checksum and can be reapplied
