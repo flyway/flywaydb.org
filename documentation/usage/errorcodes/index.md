@@ -9,8 +9,20 @@ subtitle: Error Codes
 When Flyway commands fail, they throw an exception with a message to help you identify the problem. They also contain an error code which users of the API or those who have enabled machine readable output can inspect and handle accordingly. Below are details of each error code under the command that causes it along with a suggested solution.
 
 
+## General Error Codes
+These error codes may appear from any command, and are indicative of more general errors.
+
+### `FAULT`
+- **Caused by:** An unexpected error within Flyway (e.g. a null pointer exception)
+- **Solution:** Please contact support or create a [GitHub issue](https://github.com/flyway/flyway/issues)
+
+
 ## Validate Error Codes
 These error codes are surfaced when running `validate` or `validateWithResult`.
+
+### `VALIDATE_ERROR`
+- **Caused by:** Some migrations have failed validation
+- **Solution:** Inspect the list `invalidMigrations` on the validate result to see the required actions
 
 ### `SCHEMA_DOES_NOT_EXIST`
 - **Caused by:** The schema being validated against does not exist
@@ -55,18 +67,6 @@ These error codes are surfaced when running `validate` or `validateWithResult`.
 ### `DESCRIPTION_MISMATCH`
 - **Caused by:** The description of the resolved migration is different from the applied migration's
 - **Solution:** Either revert the changes to the migration or run `repair` to update the schema history
-
-
-## General Error Codes
-These error codes may appear from any command, and are indicative of more general errors.
-
-### `FAULT`
-- **Caused by:** An unexpected error within Flyway (e.g. a null pointer exception)
-- **Solution:** Please contact support or create a [GitHub issue](https://github.com/flyway/flyway/issues)
-
-### `VALIDATE_ERROR`
-- **Caused by:** Some migrations have failed validation
-- **Solution:** Inspect the list `invalidMigrations` on the validate result to see the required actions
 
 
 <p class="next-steps">
