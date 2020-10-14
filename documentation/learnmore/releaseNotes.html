@@ -9,6 +9,25 @@ redirect_from: /documentation/releaseNotes
 <p>Thank you all for reporting all these issues and contributing fixes!</p>
 
 <div class="release">
+    <h2 id="7.0.3">Flyway 7.0.3 (2020-10-14)</h2>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        {% include issue.html id="2966" title="Passwords embedded in Flyway URLs redacted analogously to <code>flyway.password</code> parameter" %}
+        {% include issue.html id="2977" title="MySQL parser: BEGIN [WORK] not being parsed correctly" %}
+    </ul>
+
+    <h3>Database compatibility</h3>
+    <ul>
+        <li>Flyway now ships with MySQL driver 8.0.20, following Whitesource recommendation</li>
+    </ul>
+
+    <p>
+        Thanks to Dan Carley and sniperrifle2004 for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
     <h2 id="7.0.2">Flyway 7.0.2 (2020-10-09)</h2>
 
     <h3>Bug fixes</h3>
