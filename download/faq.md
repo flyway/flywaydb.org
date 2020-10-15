@@ -36,7 +36,7 @@ least March 2022. After that date support will be retired from Community Edition
 ## Is there a trial version?
 
 Yes there is. All you need to do is <a href="" data-toggle="modal" data-target="#flyway-trial-license-modal">request a trial license key</a>.
-This license key is valid for 30 days and can be used with Flyway Teams. After 30 days
+This license key is valid for 28 days and can be used with Flyway Teams. After 28 days
 you must either upgrade to a full Flyway Teams Edition license or downgrade to
 Flyway Community Edition. The trial comes with the full functionality of the Flyway Teams Edition,
 except for the source code, which is only available to paying customers.
