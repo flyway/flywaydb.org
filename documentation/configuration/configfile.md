@@ -402,7 +402,7 @@ flyway.locations=filesystem:sql
 
 # Your Flyway license key (FL01...). Not yet a Flyway Teams Edition customer?
 # Request your Flyway trial license key st https://flywaydb.org/download/
-# to try out Flyway Teams Edition features free for 30 days.
+# to try out Flyway Teams Edition features free for 28 days.
 # Flyway Teams only
 # flyway.licenseKey=
 ```

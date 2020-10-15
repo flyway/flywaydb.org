@@ -48,7 +48,7 @@ Choose your Flyway edition based on the features and support level you require
 <tr><td>Automatic renewal</td><td></td><td>optional</td></tr>
 <tr><td>Payment methods accepted</td><td></td><td>Credit card, wire transfer, purchase order</td></tr>
 <tr><td></td><td></td>
-<td><button class="btn btn-primary btn-download" data-toggle="modal" data-target="#flyway-trial-license-modal">Start Free Trial <i class="fa fa-arrow-right"></i><br><span class="note">License key for 30 days</span></button></td>
+<td><button class="btn btn-primary btn-download" data-toggle="modal" data-target="#flyway-trial-license-modal">Start Free Trial <i class="fa fa-arrow-right"></i><br><span class="note">License key for 28 days</span></button></td>
 </tr>
 <tr><td></td>
 <td></td>
