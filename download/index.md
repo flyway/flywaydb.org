@@ -27,9 +27,9 @@ Choose your Flyway edition based on the features and support level you require
 <tr><td>Native SQL dialect support (PL/SQL, SQLPL, T-SQL, ...)</td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td>Java 8/9/10/11/12/13 compatibility</td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td><a href="/download/faq#how-long-are-database-releases-supported-in-each-edition-of-flyway">Guaranteed database support timeline</a></td><td>5 years</td><td>10 years</td></tr>
-<tr><td><a href="/documentation/configuration/locations#amazon-s3">Amazon S3 locations</a></td><td>Up to 100 migrations</td><td>Unlimited</td></tr>
-<tr><td><a href="/documentation/configuration/locations#google-cloud-storage">Google cloud storage locations</a></td><td></td><td><i class="fa fa-check"></i></td></tr>
-<tr><td><a href="/documentation/migrations#script-migrations">Arbitrary script migrations</a></td><td></td><td><i class="fa fa-check"></i></td></tr>
+<tr><td><a href="/documentation/configuration/parameters/locations#amazon-s3">Amazon S3 locations</a></td><td>Up to 100 migrations</td><td>Unlimited</td></tr>
+<tr><td><a href="/documentation/configuration/parameters/locations#google-cloud-storage">Google cloud storage locations</a></td><td></td><td><i class="fa fa-check"></i></td></tr>
+<tr><td><a href="/documentation/concepts/migrations#script-migrations">Arbitrary script migrations</a></td><td></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td><a href="/documentation/database/oracle#sqlplus-commands">Oracle SQL*Plus compatibility</a></td><td></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td><a href="/documentation/concepts/erroroverrides">Error Overrides</a></td><td></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td>Statement-level callbacks</td><td></td><td><i class="fa fa-check"></i></td></tr>
