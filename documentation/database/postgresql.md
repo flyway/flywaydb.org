@@ -59,16 +59,6 @@ subtitle: PostgreSQL
 - Any PostgreSQL sql script executed by Flyway, can be executed by the PostgreSQL command-line tool and other
         PostgreSQL-compatible tools (after the placeholders have been replaced).
 
-## Authentication
-
-PostgreSQL supports user and password being provided in the JDBC URL, in the form
-
-`jdbc:postgresql://<host>:<port>/<database>?user=myUsername&password=myPassword&<key1>=<value1>&<key2>=<value2>...`
-
-In this case, they do not need to be passed separately in configuration and the Flyway commandline will not prompt for them.
-Flyway supports SCRAM authentication encryption transparently using the current driver (42.2.14) - note that 
-`.jre6` and `.jre7` versions of the driver for older JREs do not support it. 
-
 ### Example
 
 <pre class="prettyprint">/* Single line comment */
@@ -107,6 +97,31 @@ COPY copy_test (c1, c2, c3) FROM stdin;
 2	\N	123
 3	text	123.234444444444449
 \.</pre>
+
+## Authentication
+
+Flyway supports the following PostgreSQL authentication methods:
+
+- URL authentication 
+- SCRAM
+- pgpass
+
+### URL authentication
+
+The user and password can be provided in the JDBC URL, in the form
+
+`jdbc:postgresql://<host>:<port>/<database>?user=myUsername&password=myPassword&<key1>=<value1>&<key2>=<value2>...`
+
+In this case, they do not need to be passed separately in configuration and the Flyway commandline will not prompt for them.
+
+### SCRAM
+
+SCRAM authentication encryption is supported transparently using the current driver (42.2.14) - note that 
+`.jre6` and `.jre7` versions of the driver for older JREs do not support it. 
+
+### pgpass
+
+Authentication can be done via pgpass files to retrieve the credentials for a connection, in which case they do not need to be supplied in configuration. For Windows, the location of this file is `%APPDATA%\postgresql\pgpass.conf`, otherwise it is `~/.pgpass`. The path to the file can also be set in the environment variable `PGPASSFILE` where it will be read from with priority. You can read more about pgpass files and their structure [here](https://www.postgresql.org/docs/9.6/libpq-pgpass.html).
 
 ## Limitations
 
