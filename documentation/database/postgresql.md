@@ -121,7 +121,7 @@ SCRAM authentication encryption is supported transparently using the current dri
 
 ### pgpass
 
-Authentication can be done via pgpass files to retrieve the credentials for a connection, in which case they do not need to be supplied in configuration. For Windows, the location of this file is `%APPDATA%\postgresql\pgpass.conf`, otherwise it is `~/.pgpass`. The path to the file can also be set in the environment variable `PGPASSFILE` where it will be read from with priority. You can read more about pgpass files and their structure [here](https://www.postgresql.org/docs/9.6/libpq-pgpass.html).
+Authentication can be done via pgpass files to retrieve the credentials for a connection, in which case they do not need to be supplied in configuration. If the path to a pgpass file is set in the environment variable `PGPASSFILE`, it will be read from here. If not, then in Windows the file will be read from the location `%APPDATA%\postgresql\pgpass.conf`, otherwise it is read from`~/.pgpass`. You can read more about pgpass files and their structure [here](https://www.postgresql.org/docs/9.6/libpq-pgpass.html).
 
 ## Limitations
 
