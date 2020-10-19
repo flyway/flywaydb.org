@@ -20,7 +20,7 @@ Placeholder matching is case insensitive, so a placeholder of `flyway.placeholde
 
 ### Commandline
 ```powershell
-./flyway -flyway.placeholders.key1=value1 -flyway.placeholders.key2=value2 info
+./flyway -placeholders.key1=value1 -placeholders.key2=value2 info
 ```
 
 ### Configuration File
