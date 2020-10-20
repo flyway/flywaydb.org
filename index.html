@@ -6,12 +6,30 @@ hideNewsletterFooterForm: true
 <div id="big-sell">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-4">
+                <div class="panel panel-default panel-embed">
+                    <div class="panel-heading">
+                        <h3><strong>Recent Blog Posts</strong></h3>
+                    </div>
+                    <div id="menu" class="panel-body" style="text-align: left; max-height: 195px; overflow: auto">
+                        <ul class="nav nav-pills nav-stacked">
+                            {% for post in site.posts limit:5 %}
+                            <li><a href="{{ post.permalink | split: '.html' }}"><span class="date">{{ post.date | date: "%Y-%m-%d" }}</span><br/>{{ post.subtitle | xml_escape }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
                 <img src="assets/logo/flyway-logo-tm.png" alt="Flyway" usemap="#logomap" style="padding-bottom: 10px; max-width: 100%"/>
                 <map name="logomap">
                     <area shape="rect" coords="130,260,370,330" href="https://red-gate.com" alt="Redgate">
                 </map>
-
+            </div>
+            <div class="cold-md-4"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
                 <div id="tagline-long" class="strong-heading">
                     Version control for your database.<br>Robust schema evolution across all your environments.<br>With ease, pleasure and plain SQL.
                 </div>
