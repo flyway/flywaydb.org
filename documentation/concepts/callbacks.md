@@ -196,6 +196,14 @@ therefore not bound by the SQL callback naming convention.
 
 **More info:** [Java-based Callbacks](/documentation/usage/api/hooks#callsbacks)
 
+## Script Callbacks
+{% include teams.html %}
+
+Much like SQL callbacks, Flyway also supports the execution of callbacks written in a scripting language. The supported file extensions are the same as those supported by [script migrations](/documentation/concepts/migrations#script-migrations). For example, you could have a `beforeRepair__vacuum.ps1` callback. Script callbacks give you much more flexibility and power during the migration lifecycle. Some of the things you can achieve are:
+
+- Call external tools between migrations
+- Dynamically create migrations!
+
 ## Callback ordering
 
 When multiple callbacks for the same event are found, they are executed in the alphabetical order.
