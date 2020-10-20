@@ -1,7 +1,11 @@
 ifeq ($(OS), Windows_NT)
 FORCE_POLLING = true
 else
-FORCE_POLLING = false
+	FORCE_POLLING = false
+	UNAME_S := $(shell uname -s)
+	ifeq ($(UNAME_S),Darwin)
+		FORCE_POLLING = true
+	endif
 endif
 
 all: clean run
