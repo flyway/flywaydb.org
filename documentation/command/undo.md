@@ -42,6 +42,32 @@ optimal performance, and if your infrastructure supports this, we recommend usin
 technology of your underlying storage solution. Especially for larger data volumes, this can be
 several orders of magnitude faster than traditional backups and restores.
 
+## Usage
+<div class="tabbable">
+	<ul class="nav nav-tabs">
+		<li class="active marketing-item"><a href="#tab-commandline" data-toggle="tab"><i class="fa fa-desktop"></i>
+			Command-line</a></li>
+		<li class="marketing-item"><a href="#tab-maven" data-toggle="tab"><i class="fa fa-maxcdn"></i> Maven</a>
+		</li>
+		<li class="marketing-item"><a href="#tab-gradle" data-toggle="tab"><i class="fa fa-cogs"></i> Gradle</a>
+		</li>
+	</ul>
+	<div class="tab-content">
+		<div class="tab-pane active" id="tab-commandline">
+			<a href="/documentation/usage/commandline/undo" class="btn btn-primary">How to undo in the
+				Command-line Tool <i class="fa fa-arrow-right"></i></a>
+		</div>
+		<div class="tab-pane" id="tab-maven">
+			<a href="/documentation/usage/maven/undo" class="btn btn-primary">How to undo in the
+				Maven Plugin <i class="fa fa-arrow-right"></i></a>
+		</div>
+		<div class="tab-pane" id="tab-gradle">
+			<a href="/documentation/usage/gradle/undo" class="btn btn-primary">How to undo in the
+				Gradle Plugin <i class="fa fa-arrow-right"></i></a>
+		</div>
+	</div>
+</div>
+
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/command/baseline">Baseline <i class="fa fa-arrow-right"></i></a>
 </p>
