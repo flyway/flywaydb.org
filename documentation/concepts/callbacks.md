@@ -201,8 +201,8 @@ therefore not bound by the SQL callback naming convention.
 
 Much like SQL callbacks, Flyway also supports the execution of callbacks written in a scripting language. The supported file extensions are the same as those supported by [script migrations](/documentation/concepts/migrations#script-migrations). For example, you could have a `beforeRepair__vacuum.ps1` callback. Script callbacks give you much more flexibility and power during the migration lifecycle. Some of the things you can achieve are:
 
-- Call external tools between migrations
-- Dynamically create migrations!
+- Executing external tools between migrations
+- Creating or cleaning local files for migrations to use
 
 ## Callback ordering
 
