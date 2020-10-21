@@ -12,7 +12,7 @@ redirect_from: /documentation/configuration/licenseKey/
 ## Description
 Your Flyway license key (`FL01...`) when using Flyway Teams. This should be 516 alpha numeric characters, beginning with `FL`.
 
-Not yet a Flyway Teams Edition customer? Request your <a href="" data-toggle="modal" data-target="#flyway-trial-license-modal">Flyway trial license key</a> to try out Flyway Teams Edition features free for 30 days.
+Not yet a Flyway Teams Edition customer? Request your <a href="" data-toggle="modal" data-target="#flyway-trial-license-modal">Flyway trial license key</a> to try out Flyway Teams Edition features free for 28 days.
 
 ## Usage
 
