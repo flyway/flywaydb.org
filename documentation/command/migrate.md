@@ -29,30 +29,7 @@ Migrate will apply the migrations 6, 7, 8 and 9 in order.
 Migrate does nothing.
 
 ## Usage
-<div class="tabbable">
-	<ul class="nav nav-tabs">
-		<li class="active marketing-item"><a href="#tab-commandline" data-toggle="tab"><i class="fa fa-desktop"></i>
-			Command-line</a></li>
-		<li class="marketing-item"><a href="#tab-maven" data-toggle="tab"><i class="fa fa-maxcdn"></i> Maven</a>
-		</li>
-		<li class="marketing-item"><a href="#tab-gradle" data-toggle="tab"><i class="fa fa-cogs"></i> Gradle</a>
-		</li>
-	</ul>
-	<div class="tab-content">
-		<div class="tab-pane active" id="tab-commandline">
-			<a href="/documentation/usage/commandline/migrate" class="btn btn-primary">How to migrate in the
-				Command-line Tool <i class="fa fa-arrow-right"></i></a>
-		</div>
-		<div class="tab-pane" id="tab-maven">
-			<a href="/documentation/usage/maven/migrate" class="btn btn-primary">How to migrate in the
-				Maven Plugin <i class="fa fa-arrow-right"></i></a>
-		</div>
-		<div class="tab-pane" id="tab-gradle">
-			<a href="/documentation/usage/gradle/migrate" class="btn btn-primary">How to migrate in the
-				Gradle Plugin <i class="fa fa-arrow-right"></i></a>
-		</div>
-	</div>
-</div>
+{% include commandUsage.html command="migrate" %}
 
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/command/clean">Clean <i class="fa fa-arrow-right"></i></a>
