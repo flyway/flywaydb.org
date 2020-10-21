@@ -3,7 +3,7 @@ layout: documentation
 menu: configuration
 pill: sqlMigrationSuffixes
 subtitle: flyway.sqlMigrationSuffixes
-redirect_from: /documentation/configuration/sqlMigrationSuffixes
+redirect_from: /documentation/configuration/sqlMigrationSuffixes/
 ---
 
 # SQL Migration Suffixes

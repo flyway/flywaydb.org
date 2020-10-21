@@ -3,7 +3,7 @@ layout: documentation
 menu: configuration
 pill: sqlMigrationPrefix
 subtitle: flyway.sqlMigrationPrefix
-redirect_from: /documentation/configuration/sqlMigrationPrefix
+redirect_from: /documentation/configuration/sqlMigrationPrefix/
 ---
 
 # SQL Migration Prefix

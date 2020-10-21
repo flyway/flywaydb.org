@@ -3,7 +3,7 @@ layout: documentation
 menu: configuration
 pill: ignoreFutureMigrations
 subtitle: flyway.ignoreFutureMigrations
-redirect_from: /documentation/configuration/ignoreFutureMigrations
+redirect_from: /documentation/configuration/ignoreFutureMigrations/
 ---
 
 # Ignore Future Migrations

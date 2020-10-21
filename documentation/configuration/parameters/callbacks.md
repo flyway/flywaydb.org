@@ -3,7 +3,7 @@ layout: documentation
 menu: configuration
 pill: callbacks
 subtitle: flyway.callbacks
-redirect_from: /documentation/configuration/callbacks
+redirect_from: /documentation/configuration/callbacks/
 ---
 
 # Callbacks

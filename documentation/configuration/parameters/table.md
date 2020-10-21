@@ -3,7 +3,7 @@ layout: documentation
 menu: configuration
 pill: table
 subtitle: flyway.table
-redirect_from: /documentation/configuration/table
+redirect_from: /documentation/configuration/table/
 ---
 
 # Table

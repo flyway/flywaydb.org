@@ -2,7 +2,7 @@
 layout: documentation
 menu: springboot
 subtitle: 'Spring Boot'
-redirect_from: /documentation/plugins/springboot
+redirect_from: /documentation/plugins/springboot/
 ---
 # Community Plugins and Integrations: Spring Boot
 

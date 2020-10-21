@@ -3,7 +3,7 @@ layout: documentation
 menu: configuration
 pill: cleanDisabled
 subtitle: flyway.cleanDisabled
-redirect_from: /documentation/configuration/cleanDisabled
+redirect_from: /documentation/configuration/cleanDisabled/
 ---
 
 # Clean Disabled

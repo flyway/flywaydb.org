@@ -3,7 +3,7 @@ layout: documentation
 menu: configuration
 pill: createSchemas
 subtitle: flyway.createSchemas
-redirect_from: /documentation/configuration/createSchemas
+redirect_from: /documentation/configuration/createSchemas/
 ---
 
 # Create Schemas

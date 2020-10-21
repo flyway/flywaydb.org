@@ -3,7 +3,7 @@ layout: documentation
 menu: configuration
 pill: batch
 subtitle: flyway.batch
-redirect_from: /documentation/configuration/batch
+redirect_from: /documentation/configuration/batch/
 ---
 
 # Batch

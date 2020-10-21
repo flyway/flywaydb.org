@@ -3,7 +3,7 @@ layout: documentation
 menu: configuration
 pill: mixed
 subtitle: flyway.mixed
-redirect_from: /documentation/configuration/mixed
+redirect_from: /documentation/configuration/mixed/
 ---
 
 # Mixed

@@ -3,7 +3,7 @@ layout: documentation
 menu: configuration
 pill: undoSqlMigrationPrefix
 subtitle: flyway.undoSqlMigrationPrefix
-redirect_from: /documentation/configuration/undoSqlMigrationPrefix
+redirect_from: /documentation/configuration/undoSqlMigrationPrefix/
 ---
 
 # Undo SQL Migration Prefix

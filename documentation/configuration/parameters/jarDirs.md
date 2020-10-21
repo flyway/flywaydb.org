@@ -3,7 +3,7 @@ layout: documentation
 menu: configuration
 pill: jarDirs
 subtitle: flyway.jarDirs
-redirect_from: /documentation/configuration/jarDirs
+redirect_from: /documentation/configuration/jarDirs/
 ---
 
 # Jar Dirs

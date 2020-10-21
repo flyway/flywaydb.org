@@ -3,7 +3,7 @@ layout: documentation
 menu: configuration
 pill: validateOnMigrate
 subtitle: flyway.validateOnMigrate
-redirect_from: /documentation/configuration/validateOnMigrate
+redirect_from: /documentation/configuration/validateOnMigrate/
 ---
 
 # Validate On Migrate

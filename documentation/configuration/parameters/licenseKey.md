@@ -3,7 +3,7 @@ layout: documentation
 menu: configuration
 pill: licenseKey
 subtitle: flyway.licenseKey
-redirect_from: /documentation/configuration/licenseKey
+redirect_from: /documentation/configuration/licenseKey/
 ---
 
 # License Key

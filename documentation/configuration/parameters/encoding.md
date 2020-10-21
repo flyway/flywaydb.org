@@ -3,7 +3,7 @@ layout: documentation
 menu: configuration
 pill: encoding
 subtitle: flyway.encoding
-redirect_from: /documentation/configuration/encoding
+redirect_from: /documentation/configuration/encoding/
 ---
 
 # Encoding

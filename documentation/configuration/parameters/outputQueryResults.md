@@ -3,7 +3,7 @@ layout: documentation
 menu: configuration
 pill: outputQueryResults
 subtitle: flyway.outputQueryResults
-redirect_from: /documentation/configuration/outputQueryResults
+redirect_from: /documentation/configuration/outputQueryResults/
 ---
 
 # Output Query Results

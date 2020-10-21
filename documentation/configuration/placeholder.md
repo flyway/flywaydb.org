@@ -2,7 +2,7 @@
 layout: documentation
 menu: placeholders
 subtitle: Placeholders
-redirect_from: /documentation/placeholders
+redirect_from: /documentation/placeholders/
 ---
 
 # Placeholders

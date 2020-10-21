@@ -2,7 +2,7 @@
 layout: api
 pill: overview
 subtitle: API
-redirect_from: /documentation/api
+redirect_from: /documentation/api/
 ---
 # API
 

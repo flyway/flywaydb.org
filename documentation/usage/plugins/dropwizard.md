@@ -2,7 +2,7 @@
 layout: documentation
 menu: dropwizard
 subtitle: 'Dropwizard'
-redirect_from: /documentation/plugins/dropwizard
+redirect_from: /documentation/plugins/dropwizard/
 ---
 # Community Plugins and Integrations: Dropwizard
 

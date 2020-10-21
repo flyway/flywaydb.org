@@ -3,7 +3,7 @@ layout: documentation
 menu: configuration
 pill: url
 subtitle: flyway.url
-redirect_from: /documentation/configuration/url
+redirect_from: /documentation/configuration/url/
 ---
 
 # URL

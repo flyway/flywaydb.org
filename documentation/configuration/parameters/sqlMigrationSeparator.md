@@ -3,7 +3,7 @@ layout: documentation
 menu: configuration
 pill: sqlMigrationSeparator
 subtitle: flyway.sqlMigrationSeparator
-redirect_from: /documentation/configuration/sqlMigrationSeparator
+redirect_from: /documentation/configuration/sqlMigrationSeparator/
 ---
 
 # SQL Migration Separator

@@ -3,7 +3,7 @@ layout: documentation
 menu: configuration
 pill: connectRetries
 subtitle: flyway.connectRetries
-redirect_from: /documentation/configuration/connectRetries
+redirect_from: /documentation/configuration/connectRetries/
 ---
 
 # Connect Retries

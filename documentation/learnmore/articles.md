@@ -2,7 +2,7 @@
 layout: documentation
 menu: articles
 subtitle: Articles
-redirect_from: /documentation/articles
+redirect_from: /documentation/articles/
 ---
 # Articles
 

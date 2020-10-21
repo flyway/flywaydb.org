@@ -3,7 +3,7 @@ layout: documentation
 menu: configuration
 pill: repeatableSqlMigrationPrefix
 subtitle: flyway.repeatableSqlMigrationPrefix
-redirect_from: /documentation/configuration/repeatableSqlMigrationPrefix
+redirect_from: /documentation/configuration/repeatableSqlMigrationPrefix/
 ---
 
 # Repeatable SQL Migration Prefix

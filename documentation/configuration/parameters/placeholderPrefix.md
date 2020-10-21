@@ -3,7 +3,7 @@ layout: documentation
 menu: configuration
 pill: placeholderPrefix
 subtitle: flyway.placeholderPrefix
-redirect_from: /documentation/configuration/placeholderPrefix
+redirect_from: /documentation/configuration/placeholderPrefix/
 ---
 
 # Placeholder Prefix

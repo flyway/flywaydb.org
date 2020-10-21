@@ -2,7 +2,7 @@
 layout: documentation
 menu: ssl
 subtitle: SSL support
-redirect_from: /documentation/ssl
+redirect_from: /documentation/ssl/
 ---
 # SSL support
 

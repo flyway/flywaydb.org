@@ -3,7 +3,7 @@ layout: documentation
 menu: configuration
 pill: cliColor
 subtitle: color
-redirect_from: /documentation/configuration/cliColor
+redirect_from: /documentation/configuration/cliColor/
 ---
 
 # Color

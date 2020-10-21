@@ -3,7 +3,7 @@ layout: documentation
 menu: configuration
 pill: locations
 subtitle: flyway.locations
-redirect_from: /documentation/configuration/locations
+redirect_from: /documentation/configuration/locations/
 ---
 
 # Locations

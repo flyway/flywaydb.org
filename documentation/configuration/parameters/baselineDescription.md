@@ -3,7 +3,7 @@ layout: documentation
 menu: configuration
 pill: baselineDescription
 subtitle: flyway.baselineDescription
-redirect_from: /documentation/configuration/baselineDescription
+redirect_from: /documentation/configuration/baselineDescription/
 ---
 
 # Baseline Description

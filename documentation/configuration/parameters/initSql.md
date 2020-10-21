@@ -3,7 +3,7 @@ layout: documentation
 menu: configuration
 pill: initSql
 subtitle: flyway.initSql
-redirect_from: /documentation/configuration/initSql
+redirect_from: /documentation/configuration/initSql/
 ---
 
 # Init SQL

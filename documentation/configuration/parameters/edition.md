@@ -3,7 +3,7 @@ layout: documentation
 menu: configuration
 pill: edition
 subtitle: flyway.edition
-redirect_from: /documentation/configuration/edition
+redirect_from: /documentation/configuration/edition/
 ---
 
 # Edition

@@ -2,7 +2,7 @@
 layout: documentation
 menu: api
 subtitle: API - First Steps
-redirect_from: /getStarted/firststeps/api
+redirect_from: /getStarted/firststeps/api/
 ---
 # First Steps: API
 

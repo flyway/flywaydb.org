@@ -3,7 +3,7 @@ layout: documentation
 menu: configuration
 pill: baselineVersion
 subtitle: flyway.baselineVersion
-redirect_from: /documentation/configuration/baselineVersion
+redirect_from: /documentation/configuration/baselineVersion/
 ---
 
 # Baseline Version

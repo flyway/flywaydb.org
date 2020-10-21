@@ -3,7 +3,7 @@ layout: documentation
 menu: configuration
 pill: user
 subtitle: flyway.user
-redirect_from: /documentation/configuration/user
+redirect_from: /documentation/configuration/user/
 ---
 
 # User

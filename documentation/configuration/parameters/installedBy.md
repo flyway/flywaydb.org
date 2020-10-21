@@ -3,7 +3,7 @@ layout: documentation
 menu: configuration
 pill: installedBy
 subtitle: flyway.installedBy
-redirect_from: /documentation/configuration/installedBy
+redirect_from: /documentation/configuration/installedBy/
 ---
 
 # Installed By

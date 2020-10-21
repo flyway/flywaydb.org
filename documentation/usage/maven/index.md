@@ -2,7 +2,7 @@
 layout: maven
 pill: mvn_overview
 subtitle: Maven Plugin
-redirect_from: /documentation/maven
+redirect_from: /documentation/maven/
 ---
 # Maven Plugin
 

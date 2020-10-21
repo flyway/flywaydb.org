@@ -3,7 +3,7 @@ layout: documentation
 menu: configuration
 pill: password
 subtitle: flyway.password
-redirect_from: /documentation/configuration/password
+redirect_from: /documentation/configuration/password/
 ---
 
 # Password

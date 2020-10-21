@@ -2,7 +2,7 @@
 layout: documentation
 menu: plugins
 subtitle: Community Plugins and Integrations
-redirect_from: /documentation/plugins
+redirect_from: /documentation/plugins/
 ---
 # Community Plugins and Integrations
 

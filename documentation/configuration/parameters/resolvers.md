@@ -3,7 +3,7 @@ layout: documentation
 menu: configuration
 pill: resolvers
 subtitle: flyway.resolvers
-redirect_from: /documentation/configuration/resolvers
+redirect_from: /documentation/configuration/resolvers/
 ---
 
 # Resolver

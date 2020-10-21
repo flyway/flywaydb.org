@@ -2,7 +2,7 @@
 layout: documentation
 menu: dryruns
 subtitle: Dry Runs
-redirect_from: /documentation/dryruns
+redirect_from: /documentation/dryruns/
 ---
 # Dry Runs
 {% include teams.html %}

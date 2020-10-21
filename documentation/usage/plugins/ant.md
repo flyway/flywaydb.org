@@ -2,7 +2,7 @@
 layout: documentation
 menu: ant
 subtitle: 'Ant'
-redirect_from: /documentation/plugins/ant
+redirect_from: /documentation/plugins/ant/
 ---
 # Community Plugins and Integrations: Ant
 

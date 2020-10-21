@@ -3,7 +3,7 @@ layout: documentation
 menu: configuration
 pill: driver
 subtitle: flyway.driver
-redirect_from: /documentation/configuration/driver
+redirect_from: /documentation/configuration/driver/
 ---
 
 # Driver
