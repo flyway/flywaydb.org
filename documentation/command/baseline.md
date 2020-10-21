@@ -13,7 +13,9 @@ Baseline is for introducing Flyway to [existing databases](/documentation/learnm
 at a specific version. This will cause [Migrate](/documentation/command/migrate) to ignore all migrations
 up to and including the baseline version. Newer migrations will then be applied as usual.
 
+## Usage
 See [configuration](/documentation/configuration/parameters/#baseline) for baseline specific configuration parameters.
+{% include commandUsage.html command="baseline" %}
 
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/command/repair">Repair <i class="fa fa-arrow-right"></i></a>

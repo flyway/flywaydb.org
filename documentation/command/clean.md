@@ -14,7 +14,9 @@ Clean is a great help in development and test. It will effectively give you a fr
 
 Needless to say: **do not use against your production DB!**
 
+## Usage
 See [configuration](/documentation/configuration/parameters/#clean) for clean specific configuration parameters.
+{% include commandUsage.html command="clean" %}
 
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/command/info">Info <i class="fa fa-arrow-right"></i></a>

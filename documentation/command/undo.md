@@ -42,6 +42,9 @@ optimal performance, and if your infrastructure supports this, we recommend usin
 technology of your underlying storage solution. Especially for larger data volumes, this can be
 several orders of magnitude faster than traditional backups and restores.
 
+## Usage
+{% include commandUsage.html command="undo" %}
+
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/command/baseline">Baseline <i class="fa fa-arrow-right"></i></a>
 </p>

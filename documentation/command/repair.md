@@ -14,6 +14,9 @@ Repair is your tool to fix issues with the schema history table. It has a few ma
 - Realign the checksums, descriptions, and types of the applied migrations with the ones of the available migrations
 - Mark all missing migrations as **deleted**
 
+## Usage
+{% include commandUsage.html command="repair" %}
+
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/usage/commandline/">Command-line <i class="fa fa-arrow-right"></i></a>
 </p>

@@ -28,6 +28,9 @@ Migrate will apply the migrations 6, 7, 8 and 9 in order.
 
 Migrate does nothing.
 
+## Usage
+{% include commandUsage.html command="migrate" %}
+
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/command/clean">Clean <i class="fa fa-arrow-right"></i></a>
 </p>
