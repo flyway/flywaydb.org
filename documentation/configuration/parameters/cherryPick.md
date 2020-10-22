@@ -57,3 +57,9 @@ flyway {
     <cherryPick>2.0</cherryPick>
 </configuration>
 ```
+
+## Use Cases
+
+### Deferred migration execution
+
+Let's say you have a project with 3 migrations: `V1__fastCreate1.sql`, `V2__slowInsert.sql` and `V3__fastCreate2.sql`. Migration `V2` takes a tremendously large amount of time to execute so you decide executing it overnight would be better, but still need to execute the other migrations. Without `cherryPick` this would involve deleting `V2` from disk and adding it back when needed which is a tedious and error prone task. Using `cherryPick` we can simply migrate `V1` and `V3` immediately: `flyway migrate -cherryPick="1,3"`. When it comes to migrating `V2`, we can utilise [outOfOrder](http://localhost:4000/documentation/configuration/parameters/outOfOrder) as follows: `flyway migrate -cherryPick="2" -outOfOrder="true"`.
