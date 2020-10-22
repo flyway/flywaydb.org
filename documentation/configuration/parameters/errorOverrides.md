@@ -71,3 +71,7 @@ flyway {
     <errorOverrides>STATE:12345:W</errorOverrides>
 </configuration>
 ```
+
+## Use Cases
+
+- See our [error overrides examples](http://localhost:4000/documentation/concepts/erroroverrides#examples)
