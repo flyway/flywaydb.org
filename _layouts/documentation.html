@@ -3,11 +3,18 @@ layout: default
 tab: documentation
 title: Documentation
 ---
+
 <div>
     <div class="row">
         <div class="col-md-3" style="width: auto">
             <div id="menu">
                 <ul class="nav nav-pills nav-stacked">
+
+                    <label for="docversion">Documentation version: </label>
+                    <select name="docversion" onchange="location = this.value;">
+                        <option value="/documentation" selected>v7</option>
+                        <option value="/documentation/v6">v6</option>
+                    </select>
 
                     <li
                     {% if page.menu == 'overview' %} class="active" {% endif %}>
