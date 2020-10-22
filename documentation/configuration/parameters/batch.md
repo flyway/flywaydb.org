@@ -56,3 +56,9 @@ flyway {
     <batch>true</batch>
 </configuration>
 ```
+
+## Use Cases
+
+### Improving performance by reducing communication overhead
+
+Suppose you have 1000 statements in a migration, and your communication overhead is 0.1 second. Without batching the migrate process would have a 1000 x 0.1 = 100 second overhead in communication (sending the statements) alone. This is a lot of time. With `batch` enabled, 100 statements can be sent at a time, meaning the communication overhead is only incurred 1000/100 = 10 times, resulting in a 10 x 0.1 = 1 second migrate overhead due to communication.
