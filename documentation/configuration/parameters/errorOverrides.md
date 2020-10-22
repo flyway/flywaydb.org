@@ -74,4 +74,4 @@ flyway {
 
 ## Use Cases
 
-See our [error overrides examples](http://localhost:4000/documentation/concepts/erroroverrides#examples).
+See our [error overrides examples](/documentation/concepts/erroroverrides#examples).
