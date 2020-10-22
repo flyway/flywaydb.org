@@ -57,5 +57,4 @@ flyway {
 
 ### Configuring consistent sessions for your migrations
 
-See [site and user profiles](/documentation/database/oracle#site-profiles-gloginsql--user-profiles-loginsql) to learn about how this is achieved with
-Oracle SQL*Plus.
+See our list of [supported SQL\*Plus commands](/documentation/database/oracle#sqlplus-commands) and how you can utilize them with [site and user profiles](/documentation/database/oracle#site-profiles-gloginsql--user-profiles-loginsql) once SQL\*Plus is enable to achieved this.
