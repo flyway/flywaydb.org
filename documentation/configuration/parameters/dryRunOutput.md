@@ -61,4 +61,18 @@ flyway {
 
 ### Preview changes without altering the database
 
-Quite often a migration may be making use of [placeholders](http://localhost:4000/documentation/configuration/parameters/placeholders), such as in the statement `INSERT INTO table1(name) VALUES(${name})`. There may also be callbacks executing as part of your migration process which you might not be aware of when developing migrations. Instead of risking errors when migrating against your actual database with these unknowns, you can use dry runs to generate the SQL that would be executed in order to preview what would happen without altering the database. For example, you may notice that the placeholder `${name}` isn't what you expected, or that there is a callback being executed before your migration which you aren't accounting for.
+Quite often a migration may be making use of [placeholders](http://localhost:4000/documentation/configuration/parameters/placeholders), such as in the following statement:
+
+```
+INSERT INTO table1(name) VALUES('${name}')
+```
+
+There may also be callbacks executing as part of your migration process which you might not be aware of when developing migrations. Instead of risking errors when migrating against your actual database with these unknowns, you can use dry runs to generate the SQL that would be executed in order to preview what would happen without altering the database. For example, you may notice that the placeholder `${name}` isn't what you expected. Part of the dry run might show as:
+
+```
+-- Source: ./V1__insert1.sql
+---------------------------
+INSERT INTO table1(name) VALUES('XYZ')
+```
+
+You may have expected `${name}` to be `ABC` instead of `XYZ`. There could also be a callback being executed before your migration which you aren't accounting for.
