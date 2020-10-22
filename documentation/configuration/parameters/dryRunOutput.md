@@ -61,7 +61,7 @@ flyway {
 
 ### Preview changes without altering the database
 
-Quite often a migration may be making use of [placeholders](http://localhost:4000/documentation/configuration/parameters/placeholders), such as in the following statement:
+Quite often a migration may be making use of [placeholders](/documentation/configuration/parameters/placeholders), such as in the following statement:
 
 ```
 INSERT INTO table1(name) VALUES('${name}')

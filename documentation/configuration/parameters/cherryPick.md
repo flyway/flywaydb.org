@@ -76,7 +76,7 @@ Migration `V2` takes a tremendously large amount of time to execute so you decid
 flyway migrate -cherryPick="1,3"
 ```
 
-When it comes to migrating `V2`, we can utilise [outOfOrder](http://localhost:4000/documentation/configuration/parameters/outOfOrder) as follows:
+When it comes to migrating `V2`, we can utilise [outOfOrder](/documentation/configuration/parameters/outOfOrder) as follows:
 
 ```
 flyway migrate -cherryPick="2" -outOfOrder="true"

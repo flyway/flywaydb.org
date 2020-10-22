@@ -61,4 +61,4 @@ flyway {
 
 ### Passing access tokens
 
-Some database JDBC drivers support authentication with access tokens, but this token may not be supported in the URL (see [SQL Server Azure Active Directory](http://localhost:4000/documentation/database/sqlserver#azure-active-directory)). You may also not want to leak information such as tokens in the URL. In these cases, an additional properties object can be passed to the JDBC driver which can be configured with `jdbcProperties` allowing you to achieve, for example, authentication that wasn't previously possible.
+Some database JDBC drivers support authentication with access tokens, but this token may not be supported in the URL (see [SQL Server Azure Active Directory](/documentation/database/sqlserver#azure-active-directory)). You may also not want to leak information such as tokens in the URL. In these cases, an additional properties object can be passed to the JDBC driver which can be configured with `jdbcProperties` allowing you to achieve, for example, authentication that wasn't previously possible.
