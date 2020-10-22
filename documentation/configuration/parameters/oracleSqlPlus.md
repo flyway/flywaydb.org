@@ -52,3 +52,10 @@ flyway {
     <oracleSqlplus>true</oracleSqlplus>
 </configuration>
 ```
+
+## Use Cases
+
+### Configuring consistent sessions for your migrations
+
+See [site and user profiles](/documentation/database/oracle#site-profiles-gloginsql--user-profiles-loginsql) to learn about how this is achieved with
+Oracle SQL*Plus.
