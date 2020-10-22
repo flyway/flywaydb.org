@@ -52,3 +52,15 @@ flyway {
     <outputQueryResults>false</outputQueryResults>
 </configuration>
 ```
+
+## Use Cases
+
+### Checking the result of your migrations
+
+When developing and testing migrations, you often want to do a sanity check to ensure that they behave and return expected values. For example, you may have applied some migrations that insert data. You could then also execute a select query such as:
+
+```
+SELECT * FROM my_table
+```
+
+With `outputQueryResults` enabled the result of this `SELECT` will be printed for you to inspect and verify before you continue.
