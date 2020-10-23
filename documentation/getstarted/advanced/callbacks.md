@@ -2,7 +2,9 @@
 layout: documentation
 menu: gs_callbacks
 subtitle: 'Tutorial: Callbacks'
-redirect_from: /getStarted/callbacks/
+redirect_from:
+- /getStarted/callbacks/
+- /documentation/getstarted/callbacks/
 ---
 # Tutorial: Callbacks
 

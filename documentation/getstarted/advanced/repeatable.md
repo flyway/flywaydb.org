@@ -2,7 +2,9 @@
 layout: documentation
 menu: repeatable
 subtitle: 'Tutorial: Repeatable Migrations'
-redirect_from: /getStarted/repeatable/
+redirect_from:
+- /getStarted/repeatable/
+- /documentation/getstarted/repeatable/
 ---
 # Tutorial: Repeatable Migrations
 

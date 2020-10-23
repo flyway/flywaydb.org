@@ -2,7 +2,9 @@
 layout: documentation
 menu: sbt
 subtitle: 'SBT'
-redirect_from: /documentation/plugins/sbt/
+redirect_from:
+- /documentation/plugins/sbt/
+- /documentation/getstarted/firststeps/sbt/
 ---
 # Community Plugins and Integrations: SBT
 

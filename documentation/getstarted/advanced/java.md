@@ -2,7 +2,9 @@
 layout: documentation
 menu: java
 subtitle: 'Tutorial: Java-based Migrations'
-redirect_from: /getStarted/java/
+redirect_from:
+- /getStarted/java/
+- /documentation/getstarted/java/
 ---
 # Tutorial: Java-based Migrations
 

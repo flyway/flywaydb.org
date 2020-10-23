@@ -3,6 +3,7 @@ layout: default
 tab: download
 title: Download / Pricing
 cssid: download-pricing
+redirect_from: /licenses/flyway-trial
 ---
 
 <h1 style="text-align:left">Choose your Flyway Edition</h1>
