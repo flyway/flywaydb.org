@@ -131,25 +131,18 @@ The instructions provided here are adapted from the [Microsoft JDBC Driver for S
 
 This uses a straightforward username and password to authenticate. Provide these with the `user` and `password` configuration options.
 
-### Windows Authentication & Azure Active Directory
-
-Windows Authentication and Azure Active Directory require an extra driver to be installed:
-
-- Go to the <a href="https://docs.microsoft.com/en-us/sql/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server?view=sql-server-ver15">'Download Microsoft JDBC Driver for SQL Server' page</a>
-- Download the <code>.tar.gz</code> file for the JDBC version used by Flyway
-  - The version can be seen in the 'Maven Central coordinates' url under the <a href="https://flywaydb.org/documentation/database/sqlserver#driver">Driver section</a> at the top of this page
-- Extract the contents of the file
-- Look for <code>sqljdbc_auth.dll</code>, under <code>sqljdbc_{version}\enu\auth\x64</code>
-- Copy <code>sqljdbc_auth.dll</code> to an accessible location in your environment (e.g. <code>C:\jdbc-drivers\</code>)
-- Add the location of <code>sqljdbc_auth.dll</code> to your <code>PATH</code> environment variable
-
 ### Windows Authentication
 
 [Windows Authentication, also known as Integrated Security](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/authentication-in-sql-server), is enabled by amending your JDBC connection string to set <code>integratedSecurity=true</code>.
 
 Example: <code>jdbc:sqlserver://<i>host</i>:<i>port</i>;databaseName=<i>database</i>;integratedSecurity=true</code>.
 
+To use it you must install an additional native library, see [Connecting with integrated authentication On Windows](https://docs.microsoft.com/en-us/sql/connect/jdbc/building-the-connection-url?view=sql-server-ver15#Connectingintegrated).
+
+
 ### Azure Active Directory
+
+To use Azure Active Directory authentication, the [ADAL4J library](https://github.com/AzureAD/azure-activedirectory-library-for-java) and all its dependencies must be available on the classpath (see [Adding to the classpath](/documentation/addingToTheClasspath)).
 
 There are several types of Azure Active Directory authentication:
 - Azure Active Directory with MFA (not supported)*
@@ -167,8 +160,6 @@ For MSI and Integrated, amend your JDBC URL to set the `authentication` paramete
 - For Active Directory With Password set `authentication=ActiveDirectoryPassword`
   - e.g: <code>jdbc:sqlserver://<i>host</i>:<i>port</i>;databaseName=<i>database</i>;authentication=ActiveDirectoryPassword</code>
   - You must also supply a username and password with Flyway's `user` and `password` configuration options
-
-**Note:** You may also need to add ADAL4J and its dependencies to your classpath. See [the ADAL4J GitHub page](https://github.com/AzureAD/azure-activedirectory-library-for-java).
 
 [The Microsoft documentation has more details about how these work with JDBC URLs](https://docs.microsoft.com/en-us/sql/connect/jdbc/connecting-using-azure-active-directory-authentication?view=sql-server-ver15).
 
