@@ -105,6 +105,20 @@ Database: jdbc:h2:file:flyway.db (H2 1.3)
   "warnings": []
 }</pre>
 
+## Filtering output
+{% include teams.html %}
+
+The output from `info` can be filtered to only the parts of the history that you care about using the following 4 parameters, or a combination thereof:
+- `infoSinceDate`: Limits info to show only migrations applied after this date, and any unapplied migrations. Must be in the format `dd/MM/yyyy HH:mm` (e.g. `01/12/2020 13:00`)
+- `infoUntilDate`: Limits info to show only migrations applied before this date. Must be in the format `dd/MM/yyyy HH:mm` (e.g. `01/12/2020 13:00`)
+- `infoSinceVersion`: Limits info to show only migrations greater than or equal to this version, and any repeatable migrations. (e.g `1.1`)
+- `infoUntilVersion`: Limits info to show only migrations less than or equal to this version, and any repeatable migrations. (e.g. `1.1`)
+
+Example:
+<pre class="console">&gt; flyway info -infoSinceDate="01/12/2020 13:00"
+</pre>
+
+
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/usage/commandline/validate">Command-line: validate <i class="fa fa-arrow-right"></i></a>
 </p>
