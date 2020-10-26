@@ -9,6 +9,8 @@ redirect_from: /documentation/existing/
 
 These are the steps to follow to successfully integrate Flyway into a project with existing databases.
 
+If you are new to Flyway, read through our [getting started](/documentation/getstarted/) section first.
+
 ## Extract the DDL and reference data from production
 
 First start by taking a snapshot of your most important database: production. This will be the starting point for migrations.
@@ -27,7 +29,7 @@ to completely remove their contents.
 
 ## Align the databases not cleaned with production
 
-Now you need to check all remaining databases (e.g. dev). You must make sure that their structure (DDL) and reference data matches production exactly. This step is important, as all scripts destined for production will be applied here first. For the scripts to succeed, the objects they migrate must be identical to what is present in production.
+Now you need to check all remaining databases (e.g. dev). You must make sure that their structure (DDL) and reference data matches production exactly. This step is important, as all scripts destined for production will likely be applied to these databases first. For the scripts to succeed, the objects they migrate must be identical to what is present in production.
 
 ### Give these databases a baseline version
 
