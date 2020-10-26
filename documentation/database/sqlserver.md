@@ -133,12 +133,9 @@ This uses a straightforward username and password to authenticate. Provide these
 
 ### Windows Authentication
 
-[Windows Authentication, also known as Integrated Security](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/authentication-in-sql-server), is enabled by amending your JDBC connection string to set <code>integratedSecurity=true</code>.
+[Windows Authentication, also known as Integrated Security](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/authentication-in-sql-server), is enabled by amending your JDBC connection string to set `integratedSecurity=true`.
 
-Example: <code>jdbc:sqlserver://<i>host</i>:<i>port</i>;databaseName=<i>database</i>;integratedSecurity=true</code>.
-
-To use it you must install an additional native library, see [Connecting with integrated authentication On Windows](https://docs.microsoft.com/en-us/sql/connect/jdbc/building-the-connection-url?view=sql-server-ver15#Connectingintegrated).
-
+Example: `jdbc:sqlserver://<i>host</i>:<i>port</i>;databaseName=<i>database</i>;integratedSecurity=true`.
 
 ### Azure Active Directory
 
