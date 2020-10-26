@@ -21,11 +21,11 @@ This script will form your baseline migration. Save it in a location specified i
 
 ## Clean all databases containing data you don't mind losing
 
-Now comes the point where we have to make sure that the migrations meant for production will work everywhere.
+Now comes the point where we have to make sure that the migrations meant for production will work everywhere with the [clean](/documentation/command/clean) command.
 
 For all databases with unimportant data that you don't mind losing, execute:
 <pre class="console">&gt; flyway clean</pre>
-to completely remove their contents.
+by altering the [url](/documentation/configuration/parameters/url) to completely remove their contents.
 
 ## Align the databases not cleaned with production
 
@@ -33,11 +33,11 @@ Now you need to check all remaining databases (e.g. dev). You must make sure tha
 
 ### Give these databases a baseline version
 
-Now comes the time to baseline the databases that contain data (including production) with a baseline version. Use the same version and description you used for the baselined migration above (`V1__baseline_migration.sql`).
+Now comes the time to [baseline](/documentation/command/baseline) the databases that contain data (including production) with a baseline version. Use the same version and description you used for the baselined migration above (`V1__baseline_migration.sql`).
 
 You can accomplish it like this:
-<pre class="console">&gt; flyway baseline</pre>
-You must perform this step for each database that hasn't been cleaned.
+<pre class="console">&gt; flyway -baselineVersion="1" -baselineDescription="baseline_migration" baseline</pre>
+You must perform this step for each database that hasn't been cleaned by altering the [url](/documentation/configuration/parameters/url) again.
 
 ## Done!
 
@@ -47,9 +47,9 @@ When you execute:
 
 <pre class="console">&gt; flyway migrate</pre>
 
-the empty databases will be migrated to the state of production and the others will be left as is.
+against the empty databases (by altering the [url](/documentation/configuration/parameters/url)), they will be migrated to the state of production and the others will be left as is.
 
-As soon as you add a new migration, it can be applied identically to all databases.
+As soon as you add a new migration, it can be applied identically to any of your databases.
 
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/configuration/envvars">Environment Variables<i class="fa fa-arrow-right"></i></a>
