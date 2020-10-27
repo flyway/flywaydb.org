@@ -19,7 +19,7 @@ There are however situations where you may want to
 
 Flyway Teams Edition give you a way to achieve all these scenarios using **Dry Runs**.
 
-## Implementation
+## How it works
 
 When doing a Dry Run, Flyway sets up a read-only connection to the database. It assesses what migrations need to run and
 generates a single SQL file containing all statements it would have executed in case of a regular migration
@@ -28,8 +28,27 @@ all changes will be applied. Alternatively a separate tool of your choice can al
 directly to the database without using Flyway. This SQL file also contains the necessary statements to create and update Flyway's
 [schema history table](/documentation/concepts/migrations#schema-history-table), ensuring that all schema changes are tracked the usual way.
 
-This works transparently with all other Flyway features including SQL and Java migrations, both versioned and repeatable,
-callbacks, undo migrations, etc.  
+It is not advised to change a dry run script after it's been generated. Instead, any changes should be made to the migrations and a new dry run script generated. This is to ensure the changes executed match what's in your migrations.
+
+### Exceptions
+
+Not every change is intercepted in a Dry Run. Some changes cannot be intercepted and will be executed as normal. Details are provided;
+
+#### Intercepted in Dry Run
+
+These changes are intercepted and written into a file as explained above.
+
+- SQL versioned migrations
+- SQL repeatable migrations
+- SQL callbacks
+
+#### Not intercepted in Dry Run
+
+These changes will be executed as normal during a Dry Run. **The schema history table will not be updated, so Flyway will have no record of execution.** Be sure you're aware of the side effects when performing a Dry Run if you Flyway project contains such changes.
+
+- [Arbitrary script migrations](/documentation/concepts/migrations#script-migrations)
+- [Arbitrary script callbacks](/documentation/concepts/migrations#script-migrations)
+- [Java migrations](/documentation/concepts/migrations#java-based-migrations)
 
 ## Configuration
 
