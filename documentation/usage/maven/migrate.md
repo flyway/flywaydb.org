@@ -101,6 +101,7 @@ See [configuration](/documentation/configuration/parameters) for a full list of 
         <errorOverride>42001:42001:W</errorOverride>
     </errorOverrides>
     <dryRunOutput>/my/sql/dryrun-outputfile.sql</dryRunOutput>
+    <lockRetryCount>10</lockRetryCount>
     <oracle.sqlplus>true</oracle.sqlplus>
     <oracle.sqlplusWarn>true</oracle.sqlplusWarn>
     <jdbcProperties>

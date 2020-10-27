@@ -65,6 +65,7 @@ flyway.baselineOnMigrate=false
 flyway.installedBy=my-user
 flyway.errorOverrides=99999:17110:E,42001:42001:W
 flyway.dryRunOutput=/my/sql/dryrun-outputfile.sql
+flyway.lockRetryCount=10
 flyway.oracle.sqlplus=true
 flyway.oracle.sqlplusWarn=true
 flyway.workingDirectory=C:/myProject
