@@ -9,6 +9,37 @@ redirect_from: /documentation/releaseNotes/
 <p>Thank you all for reporting all these issues and contributing fixes!</p>
 
 <div class="release">
+    <h2 id="7.1.0">Flyway 7.1.0 (2020-10-27)</h2>
+
+    <h3>New features</h3>
+    <ul>
+        {% include issue.html id="960" title="Support pgpass for authentication" %}
+        {% include issue.html id="2847" title="Allow number of lock retries to be configured." %}
+        {% include issue.html id="2984" title="Support for SLF4J v1.8+" %}
+        {% include issue.html id="2967" title="Add schema support for Cockroach 20.2" %}
+        {% include issue.html id="2694" title="Add windows native folder" %}
+        {% include issue.html id="2881" title="Allow for filtering info output by date or version" %}
+        <li>Allow arbitrary script callbacks</li>
+    </ul>
+
+    <h3>Changes</h3>
+    <ul>
+        {% include issue.html id="2820" title="Add validate error codes and improve validate result object" %}
+        {% include issue.html id="2986" title="Create the schema history table when using skipExecutingMigrations without baseline" %}
+        <li>Make validate fix suggestions copy-pastable.</li>
+    </ul>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        {% include issue.html id="2987" title="only mark latest repeatable as deleted" %}
+    </ul>
+
+    <p>
+        Thanks to A248, AigleeK, ToBeReplaced, aherkarsatish11, cheppsn, and yarhamjohn for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
     <h2 id="7.0.4">Flyway 7.0.4 (2020-10-16)</h2>
 
     <h3>Bug fixes</h3>
