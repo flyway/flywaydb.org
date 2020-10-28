@@ -32,7 +32,7 @@ It is not advised to change a dry run script after it's been generated. Instead,
 
 ### Exceptions
 
-Not every change is intercepted in a Dry Run. Some changes cannot be intercepted and will be executed as normal. Details are provided;
+Not every change is intercepted in a Dry Run. Some changes cannot be intercepted and will be executed as normal. Details are provided:
 
 #### Intercepted in Dry Run
 
@@ -44,11 +44,12 @@ These changes are intercepted and written into a file as explained above.
 
 #### Not intercepted in Dry Run
 
-These changes will be executed as normal during a Dry Run. **The schema history table will not be updated, so Flyway will have no record of execution.** Be sure you're aware of the side effects when performing a Dry Run if you Flyway project contains such changes.
+These changes will be executed as normal during a Dry Run. **The schema history table will not be updated, so Flyway will have no record of execution.** Be sure you're aware of the side effects when performing a Dry Run if your Flyway project contains such changes.
 
 - [Arbitrary script migrations](/documentation/concepts/migrations#script-migrations)
-- [Arbitrary script callbacks](/documentation/concepts/migrations#script-migrations)
+- [Arbitrary script callbacks](/documentation/concepts/callbacks#script-callbacks)
 - [Java migrations](/documentation/concepts/migrations#java-based-migrations)
+- [Java callbacks](/documentation/concepts/callbacks#java-callbacks)
 
 ## Configuration
 
