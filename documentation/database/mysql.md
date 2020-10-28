@@ -101,6 +101,32 @@ CALL AddData();
 INSERT INTO ${tableName} (name) VALUES ('Mr. T');
 ```
 
+## Authentication
+
+Flyway supports the following MySQL authentication methods:
+
+- MySQL Option Files
+
+### Option Files
+{% include teams.html %}
+
+A username and password can be retrieved from MySQL option files for authentication, in which case they do not need to be supplied in configuration. The following table lists which option files are searched for per operating system, in order.
+
+| Windows                                      |   | Other                |
+|----------------------------------------------|---|----------------------|
+| `%WINDIR%\my.ini`, `%WINDIR%\my.cnf`         |   | `/etc/my.cnf`        |
+| `C:\my.ini`, `C:\my.cnf`                     |   | `/etc/mysql/my.cnf`  |
+| `%MYSQL_HOME%\my.ini`, `%MYSQL_HOME%\my.cnf` |   | `$MYSQL_HOME/my.cnf` |
+| `%APPDATA%\MySQL\.mylogin.cnf`               |   | `~/.my.cnf`          |
+|                                              |   | `~/.mylogin.cnf`     |
+
+You can read more about MySQL option files [here](https://dev.mysql.com/doc/refman/8.0/en/option-files.html).
+
+## Limitations
+
+- No support for option file inclusions
+- No support for loading properties other than `user` and `password` from option files
+
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/database/aurora-mysql">Aurora MySQL <i class="fa fa-arrow-right"></i></a>
 </p>
