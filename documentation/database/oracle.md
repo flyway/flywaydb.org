@@ -181,7 +181,7 @@ As much as possible, Flyway aims to emulate the behavior of the SQL*Plus client 
 
 - SQL*Plus is known to replace CRLF pairs in string literals with single LFs. Flyway will not do this - instead it preserves scripts as they are written.
 
-If you encounter a discrepancy between the Oracle SQL*Plus client and Flyway, get in let us know via the official support email.
+If you encounter a discrepancy between the Oracle SQL*Plus client and Flyway, let us know via the official support email.
 
 ## Authentication
 
