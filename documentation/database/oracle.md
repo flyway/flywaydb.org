@@ -83,8 +83,7 @@ INSERT INTO ${tableName} (name) VALUES ('Mr. T');</pre>
 ## SQL*Plus commands 
 {% include teams.html %}
 
-In addition to the regular Oracle SQL syntax, Flyway Teams also comes with support for Oracle 
-SQL*Plus commands.
+In addition to the regular Oracle SQL syntax, Flyway Teams also comes with support for many Oracle SQL*Plus commands.
 
 This support is disabled by default and must be activated using the [`oracle.sqlplus`](/documentation/configuration/parameters/oracleSqlPlus) flag.
 
@@ -170,9 +169,19 @@ the ampersand.
 For more information, see the 
 [SQL\*Plus documentation](https://blogs.oracle.com/opal/sqlplus-101-substitution-variables#2)
 
-### Unsupported commands
+### Limitations
 
-All other SQL*Plus commands are gracefully ignored with a warning message.
+#### Unsupported commands
+
+Not all SQL*Plus commands are supported by Flyway. Unsupported commands are gracefully ignored with a warning message.
+
+#### Behavior parity
+
+As much as possible, Flyway aims to emulate the behavior of the SQL*Plus client in Oracle SQL Developer. However, there are some edge cases where Flyway isn't able to emulate the behavior exactly. Known cases are detailed below:
+
+- SQL*Plus is known to replace CRLF pairs in string literals with single LFs. Flyway will not do this - instead it preserves scripts as they are written.
+
+If you encounter a discrepancy between the Oracle SQL*Plus client and Flyway, let us know via the official support email.
 
 ## Authentication
 
