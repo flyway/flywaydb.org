@@ -24,8 +24,8 @@ and much more.
     {% include plugin.html name="IntelliJ IDEA" logo="intellij.svg" url="https://plugins.jetbrains.com/plugin/8597-flyway-migration-creation" info="Capable and ergonomic Java IDE" %}
     {% include plugin.html name="Jenkins" logo="jenkins.png" url="https://plugins.jenkins.io/flyway-runner" info="Automation server" %}
     {% include plugin.html name="JUnit" logo="junit.png" url="https://github.com/flyway/flyway-test-extensions" info="Programmer-friendly testing framework for Java" %}
-    {% include plugin.html name="Jooby" logo="jooby.png" url="https://jooby.org/doc/flyway/" info="Scalable, fast and modular micro web framework for Java" %}
-    {% include plugin.html name="Micronaut" logo="micronaut.png" url="https://micronaut-projects.github.io/micronaut-configuration-flyway/latest/guide/index.html" info="Modern, JVM-based, full-stack framework" %}
+    {% include plugin.html name="Jooby" logo="jooby.png" url="https://jooby.org/modules/flyway/" info="Scalable, fast and modular micro web framework for Java" %}
+    {% include plugin.html name="Micronaut" logo="micronaut.png" url="https://github.com/micronaut-projects/micronaut-flyway" info="Modern, JVM-based, full-stack framework" %}
     {% include plugin.html name="Ninja" logo="ninja.png" url="http://www.ninjaframework.org/documentation/working_with_relational_dbs/db_migrations.html" info="Full stack web framework for Java" %}
     {% include plugin.html name="NPM" logo="npm.svg" url="https://www.npmjs.com/package/flywaydb-cli" info="Package manager for JavaScript" %}
     {% include plugin.html name="Play" logo="play.png" url="/documentation/usage/plugins/play" info="High velocity web framework for Java and Scala" %}

@@ -33,7 +33,7 @@ Here are her slides:
 
 You can also watch her live at any of these upcoming events:
 - [DevOps Gathering 2018](https://www.sandra-parsick.de/talk/cdbi-flyway-devopsgatering/) (2018-02-19 in Bochum)
-- [Magdeburger Developer Days 2018](https://md-devdays.de/Act?id=51) (2018-04-11 in Magdeburg)
+- [Magdeburger Developer Days 2018](https://md-devdays.de) (2018-04-11 in Magdeburg)
 - [JAX 2018](https://jax.de/devops-continuous-delivery/continuous-database-integration-mit-flyway/) (2018-04-26 in Mainz)
 
 ## Enjoy

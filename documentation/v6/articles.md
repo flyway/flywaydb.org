@@ -80,9 +80,6 @@ Database Migrations With FlywayDB</a></strong> by Amos Omondi<br/></p>
 <p><strong><a href="http://www.jeremyjarrell.com/?p=24"
         >Lessons learned using Flyway DB with distributed version control</a></strong> by Jeremy Jarrell<br/></p>
 
-<p><strong><a href="http://www.ravellosystems.com/blog/managing-database-changes-about-flyway-h2-and-more/"
-        >Managing database changes – about flyway, H2 and more</a></strong> by Gilad Bar Orion<br/></p>
-
 <p><strong><a href="http://blog.jooq.org/2014/06/25/flyway-and-jooq-for-unbeatable-sql-development-productivity/"
         >Flyway and jOOQ for Unbeatable SQL Development Productivity</a></strong> by Lukas Eder<br/></p>
 
@@ -108,7 +105,7 @@ by Sandra Parsick<br/></p>
         >Automatiser les changements de schéma de base de données avec Flyway</a></strong> by Thomas
     Recloux<br/></p>
 
-<p><strong><a href="http://post-it.alinto.com/78/versionnez-vos-bases-avec-flyway/"
+<p><strong><a href="https://labs.alinto.com/versionnez-vos-bases-avec-flyway/"
         >Versionnez vos bases avec Flyway</a></strong> by Olivier<br/></p>
 
 <p><strong><a href="http://blog.soat.fr/2013/04/mettez-de-lagilite-dans-vos-bases-de-donnees-avec-flyway/"
