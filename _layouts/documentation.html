@@ -567,6 +567,10 @@ title: Documentation
                             <a href="/documentation/configuration/ssl">SSL support</a></li>
 
                             <li
+                            {% if page.menu == 'authentication' %} class="active" {% endif %}>
+                            <a href="/documentation/configuration/authentication">Authentication</a></li>
+
+                            <li
                             {% if page.menu == 'awsSecretsManager' %} class="active" {% endif %}>
                             <a href="/documentation/configuration/awsSecretsManager">AWS Secrets Manager</a></li>
                         </ul>
