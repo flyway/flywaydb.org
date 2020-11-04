@@ -8,7 +8,7 @@ subtitle: Authentication
 
 In order to log in to your database, the typical approach is to set your username and password in the Flyway [configuration file](/documentation/configuration/configfile). This however has some concerns:
 
-- These are stored in plain text - anyone can see your credentials
+- These properties are stored in plain text - anyone can see your credentials
 - Your credentials must be supplied in every configuration file you use
 - You may not have access to these credentials, and someone else needs to configure them securely
 
@@ -16,7 +16,7 @@ Flyway comes with additional authentication mechanisms that tackle these concern
 
 ## Environment Variables
 
-By storing your username and password in environment variables they can be configured once and used across multiple Flyway configurations. They can also be set by someone who has the relevant access.
+By storing your username and password in the environment variables `FLYWAY_USER` and `FLYWAY_PASSWORD` respectively, they can be configured once and used across multiple Flyway configurations. They can also be set by someone who has the relevant access, so they do not end up being leaked to any unwarranted parties.
 
 ## Database Specific Authentication
 
@@ -28,7 +28,7 @@ By storing your username and password in environment variables they can be confi
 - [Azure Active Directory](/documentation/database/sqlserver#azure-active-directory)
 
 ### MySQL
-- [MySQL Option Files](/LINK_WHEN_RELEASED) {% include teams.html %}
+- [MySQL Option Files](/documentation/database/mysql#option-files) {% include teams.html %}
 
 ### PostgreSQL
 - [SCRAM](/documentation/database/postgresql#scram)
