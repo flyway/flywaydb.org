@@ -139,7 +139,29 @@ Example: `jdbc:sqlserver://<i>host</i>:<i>port</i>;databaseName=<i>database</i>;
 
 ### Azure Active Directory
 
-To use Azure Active Directory authentication, the [ADAL4J library](https://github.com/AzureAD/azure-activedirectory-library-for-java) and all its dependencies must be available on the classpath (see [Adding to the classpath](/documentation/addingToTheClasspath)).
+#### Installing ADAL4J
+
+To use Flyway with Azure Active Directory connections, you must to install [ADAL4J](https://github.com/AzureAD/azure-activedirectory-library-for-java) and it's dependencies.
+
+If you're using Flyway in an environment that is integrated with Maven or Gradle (Like the Maven or Gradle plugin), you only need to add [ADAL4J's Maven package](https://mvnrepository.com/artifact/com.microsoft.azure/adal4j) as a dependency in your `pom.xml`. Maven should then deal with getting ADAL4J's dependencies itself.
+
+For command line users, you'll have to download them all manually. To do this, you can use the JAR Download tool to find ADAL4J and it's dependencies:
+
+- Go to the [JAR Download Tool](https://jar-download.com/online-maven-download-tool.php)
+- Paste the following into the `Maven XML` box:
+
+```xml
+<dependency>
+  <groupId>com.microsoft.azure</groupId>
+  <artifactId>adal4j</artifactId>
+  <version>1.6.6</version>
+</dependency>
+```
+
+- Click 'Submit'
+- Download the archive and add the files to your classpath. See [Adding to the classpath](https://flywaydb.org/documentation/addingToTheClasspath).
+
+#### Connecting
 
 There are several types of Azure Active Directory authentication:
 - Azure Active Directory with MFA (not supported)*
@@ -148,7 +170,7 @@ There are several types of Azure Active Directory authentication:
 - Azure Active Directory with Password
 - Access Tokens
 
-For MSI and Integrated, amend your JDBC URL to set the `authentication` parameter:
+To use the various authentication types, amend your JDBC URL to set the `authentication` parameter:
 
 - For Active Directory Integrated set `authentication=ActiveDirectoryIntegrated`
   - e.g: <code>jdbc:sqlserver://<i>host</i>:<i>port</i>;databaseName=<i>database</i>;authentication=ActiveDirectoryIntegrated</code>
@@ -172,7 +194,7 @@ E.g, in a `flyway.conf` file:
 flyway.jdbcProperties.accessToken=my-access-token
 ```
 
-This is equivalent to the [process defined on this documentation page](https://docs.microsoft.com/en-us/sql/connect/jdbc/connecting-using-azure-active-directory-authentication?view=sql-server-ver15#connecting-using-access-token).
+This is equivalent to the [process of setting `accessToken` as described on this Microsoft documentation page](https://docs.microsoft.com/en-us/sql/connect/jdbc/connecting-using-azure-active-directory-authentication?view=sql-server-ver15#connecting-using-access-token).
 
 ## Limitations
 
