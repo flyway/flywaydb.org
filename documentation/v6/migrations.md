@@ -7,11 +7,7 @@ subtitle: Migrations
 
 <div id="toc"></div>
 
-sdfuiouijhgyfetrdqwfegrhtiyopithjdsfa
-
 ## Overview
-
-dfkdsgkfjsdgkjgdskjfgdksjgf
 
 With Flyway all changes to the database are called **migrations**. Migrations can be either *versioned* or
 *repeatable*. Versioned migrations come in 2 forms: regular and *undo*.
