@@ -120,6 +120,7 @@ SCRAM authentication encryption is supported transparently using the current dri
 `.jre6` and `.jre7` versions of the driver for older JREs do not support it. 
 
 ### pgpass
+{% include teams.html %}
 
 Authentication can be done with a pgpass file to retrieve the password for a connection, in which case it does not need to be supplied in configuration. If the path to a pgpass file is set in the environment variable `PGPASSFILE`, it will be read from here. If not, then in Windows the file will be read from the location `%APPDATA%\postgresql\pgpass.conf`, otherwise it is read from`~/.pgpass`. You can read more about pgpass files and their structure [here](https://www.postgresql.org/docs/9.6/libpq-pgpass.html).
 
