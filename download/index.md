@@ -43,11 +43,7 @@ redirect_from: /licenses/flyway-trial
 <tr><td><a href="/documentation/configuration/parameters/cherryPick">Cherry picking</a></td><td></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td><a href="/documentation/configuration/parameters/skipExecutingMigrations">Mark as applied</a></td><td></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td><a href="/documentation/concepts/migrations#query-results">Toggle display of query results</a></td><td></td><td><i class="fa fa-check"></i></td></tr>
-<tr>
-    <td><a href="/documentation/configuration/authentication">Supported authentication mechanisms</a></td>
-    <td>Oracle Wallet, SQL Server Windows Authentication, SQL Server Azure Active Directory, PostgreSQL SCRAM, Snowflake key-based authentication</td>
-    <td>Community + MySQL option files, PostgreSQL pgpass</td>
-</tr>
+<tr><td><a href="/documentation/configuration/authentication">Supported authentication mechanisms</a></td><td>7</td><td>9</td></tr>
 <tr><td>License</td><td><a href="/licenses/flyway-community">Apache v2</a></td><td><a href="/licenses/flyway-teams">Commercial</a></td></tr>
 <tr><td>Maven Repository</td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td>Source Code included</td><td><i class="fa fa-check"></i></td><td><i class="fa fa-check"></i></td></tr>
