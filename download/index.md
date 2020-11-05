@@ -44,7 +44,7 @@ redirect_from: /licenses/flyway-trial
 <tr><td><a href="/documentation/configuration/parameters/skipExecutingMigrations">Mark as applied</a></td><td></td><td><i class="fa fa-check"></i></td></tr>
 <tr><td><a href="/documentation/concepts/migrations#query-results">Toggle display of query results</a></td><td></td><td><i class="fa fa-check"></i></td></tr>
 <tr>
-    <td><a href="/documentation/configuration/authentication">Additional authentication mechanisms</a></td>
+    <td><a href="/documentation/configuration/authentication">Supported authentication mechanisms</a></td>
     <td>Oracle Wallet, SQL Server Windows Authentication, SQL Server Azure Active Directory, PostgreSQL SCRAM, Snowflake key-based authentication</td>
     <td>Community + MySQL option files, PostgreSQL pgpass</td>
 </tr>
