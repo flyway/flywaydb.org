@@ -144,12 +144,6 @@ The following environment variables are supported:
             Multiple suffixes (like .sql,.pkg,.pkb) can be specified for easier compatibility with other tools such as
                 editors with specific file associations.</td>
     </tr>
-    <tr id="FLYWAY_IGNORE_INVALID_MIGRATION_NAMES">
-            <td>FLYWAY_IGNORE_INVALID_MIGRATION_NAMES</td>
-            <td>Whether to ignore migrations and callbacks whose scripts do not obey the correct naming convention. 
-            A failure can be useful to check that errors such as case sensitivity in migration prefixes have been corrected.
-            If false, Flyway fails fast with an exception.</td>
-        </tr>
     <tr id="FLYWAY_STREAM">
         <td>FLYWAY_STREAM {% include teams.html %}</td>
         <td>Whether to stream SQL migrations when executing them. Streaming doesn't load the entire migration in memory at
