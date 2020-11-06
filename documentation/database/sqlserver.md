@@ -141,11 +141,11 @@ Example: `jdbc:sqlserver://<i>host</i>:<i>port</i>;databaseName=<i>database</i>;
 
 #### Installing ADAL4J
 
-To use Flyway with Azure Active Directory connections, you must to install [ADAL4J](https://github.com/AzureAD/azure-activedirectory-library-for-java) and it's dependencies.
+To use Flyway with Azure Active Directory connections, you must install [ADAL4J](https://github.com/AzureAD/azure-activedirectory-library-for-java) and it's dependencies.
 
 If you're using Flyway in an environment that is integrated with Maven or Gradle (Like the Maven or Gradle plugin), you only need to add [ADAL4J's Maven package](https://mvnrepository.com/artifact/com.microsoft.azure/adal4j) as a dependency in your `pom.xml`. Maven should then deal with getting ADAL4J's dependencies itself.
 
-For command line users, you'll have to download them all manually. To do this, you can use the JAR Download tool to find ADAL4J and it's dependencies:
+For command line users, you'll have to download them all manually. To do this, you can use the JAR Download tool to find ADAL4J and its dependencies:
 
 - Go to the [JAR Download Tool](https://jar-download.com/online-maven-download-tool.php)
 - Paste the following into the `Maven XML` box:
@@ -159,7 +159,7 @@ For command line users, you'll have to download them all manually. To do this, y
 ```
 
 - Click 'Submit'
-- Download the archive and add the files to your classpath. See [Adding to the classpath](https://flywaydb.org/documentation/addingToTheClasspath).
+- Download the archive and add the files to your classpath. See [Adding to the classpath](/documentation/addingToTheClasspath).
 
 #### Connecting
 
