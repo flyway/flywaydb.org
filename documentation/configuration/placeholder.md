@@ -10,6 +10,8 @@ In addition to regular SQL syntax, Flyway also supports placeholder replacement 
 By default it looks for Ant-style placeholders like `${myplaceholder}`. This can be very useful to abstract differences between environments.
 Changing the value of placeholders will cause repeatable migrations to be re-applied on next migrate.
 
+Placeholders are supported in versioned migrations, repeatable migrations, and SQL callbacks.
+
 ## How to configure
 Placeholders can be configured through a number of different ways.
 - Via environment variables. `FLYWAY_PLACEHOLDERS_MYPLACEHOLDER=value`
@@ -26,8 +28,8 @@ Flyway also provides default placeholders, whose values are automatically popula
 - `${flyway:defaultSchema}` = The default schema for Flyway
 - `${flyway:user}` = The user Flyway will use to connect to the database
 - `${flyway:database}` = The name of the database from the connection url
-- `${flyway:timestamp}` = The time that Flyway parsed the migration, formatted as 'yyyy-MM-dd HH:mm:ss'
-- `${flyway:filename}` = The filename of the current migration
+- `${flyway:timestamp}` = The time that Flyway parsed the script, formatted as 'yyyy-MM-dd HH:mm:ss'
+- `${flyway:filename}` = The filename of the current script
 
 ### Example
 Here is a small example of the supported syntax:
