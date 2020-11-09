@@ -9,6 +9,37 @@ redirect_from: /documentation/releaseNotes/
 <p>Thank you all for reporting all these issues and contributing fixes!</p>
 
 <div class="release">
+    <h2 id="7.2.0">Flyway 7.2.0 (2020-11-09)</h2>
+
+    <h3>New features</h3>
+    <ul>
+        {% include issue.html id="960" title="Read MySQL credentials from option files" %}
+        {% include issue.html id="2914" title="Add filename as a default placeholder" %}
+        <li>Option to filter info by migration state</li>
+    </ul>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        {% include issue.html id="2987" title="Display all validate messages in exceptions" %}
+        {% include issue.html id="2987" title="Ignore superseded repeatables when validating" %}
+    </ul>
+
+    <h3>Performance Improvements</h3>
+    <ul>
+        {% include issue.html id="2993" title="Improve performance of migrate" %}
+    </ul>
+
+    <h3>Changes</h3>
+    <ul>
+        <li>Arbitrary script callbacks no longer require a description</li>
+    </ul>
+
+    <p>
+        Thanks to AigleeK, OliverDTM, ToBeReplaced, kasgilpofi, and wilkinsona for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
     <h2 id="7.1.1">Flyway 7.1.1 (2020-10-29)</h2>
 
     <h3>Bug fixes</h3>
