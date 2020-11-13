@@ -195,11 +195,22 @@ In this case, they do not need to be passed separately in configuration and the 
 
 ### Oracle Wallet
 
-You can supply credentials using Oracle Wallet by specfiying properties on the JDBC url. For example:
+You can supply credentials using Oracle Wallet by specifying properties on the JDBC url. For example:
 
 `jdbc:oracle:thin:@dbname_high?TNS_ADMIN=/Users/test/wallet_dbname`
 
 [See the Oracle documentation for more details](https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/user/connect-jdbc-thin-wallet.html#GUID-20656D84-4D79-4EE9-B55F-333053948966).
+
+### Kerberos 
+{% include teams.html %}
+
+You can authenticate using Kerberos by specifying the location of the local Kerberos configuration file (which contains
+details such as the locations of Kerberos Key Distribution Centers), and optionally the local credential cache, to 
+Flyway. For example, in `flyway.conf`:
+
+`flyway.oracle.kerberosConfigFile=/etc/krb5.conf`
+
+`flyway.oracle.kerberosCacheFile=/tmp/krb5cc_123`
 
 ## Limitations
 
