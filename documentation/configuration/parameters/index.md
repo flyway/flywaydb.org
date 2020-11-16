@@ -106,3 +106,5 @@ If using maven, config parameters can be set in the plugin configuration block, 
 ### Oracle
 - [oracleSqlPlus](/documentation/configuration/parameters/oracleSqlPlus) {% include teams.html %}
 - [oracleSqlPlusWarn](/documentation/configuration/parameters/oracleSqlPlusWarn) {% include teams.html %}
+- [oracleKerberosCacheFile](/documentation/configuration/parameters/oracleKerberosCacheFile) {% include teams.html %}
+- [oracleKerberosConfigFile](/documentation/configuration/parameters/oracleKerberosConfigFile) {% include teams.html %}

@@ -208,9 +208,10 @@ You can authenticate using Kerberos by specifying the location of the local Kerb
 details such as the locations of Kerberos Key Distribution Centers), and optionally the local credential cache, to 
 Flyway. For example, in `flyway.conf`:
 
-`flyway.oracle.kerberosConfigFile=/etc/krb5.conf`
-
-`flyway.oracle.kerberosCacheFile=/tmp/krb5cc_123`
+```
+flyway.oracle.kerberosConfigFile=/etc/krb5.conf
+flyway.oracle.kerberosCacheFile=/tmp/krb5cc_123
+```
 
 ## Limitations
 
