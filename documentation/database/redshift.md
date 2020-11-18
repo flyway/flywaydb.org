@@ -22,7 +22,11 @@ subtitle: Redshift
 </tr>
 <tr>
 <th>Supported versions</th>
-<td><code>1.2.10.1009</code> and later</td>
+<td><code>1.2.10.1009</code> and later v1</td>
+</tr>
+<tr>
+<th></th>
+<td><code>2.0</code> and later (see below)</td>
 </tr>
 <tr>
 <th>Default Java class</th>
@@ -42,6 +46,12 @@ subtitle: Redshift
 - Any Redshift SQL script executed by Flyway,
         can be executed by the PostgreSQL command-line tool and other PostgreSQL-compatible tools,
         such as SQL Workbench/J (after the placeholders have been replaced).
+
+#### v2 Driver issues
+
+- The v2 JDBC driver is available as source from [Github](https://github.com/aws/amazon-redshift-jdbc-driver) rather
+than Maven Central. There appear to be issues with it at the time of writing which mean that transactions cannot be used,
+and it is therefore not a direct substitute for the v1 driver. We do not recommend its use.
 
 ### Example
 
