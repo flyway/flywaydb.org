@@ -9,6 +9,33 @@ redirect_from: /documentation/releaseNotes/
 <p>Thank you all for reporting all these issues and contributing fixes!</p>
 
 <div class="release">
+    <h2 id="7.2.1">Flyway 7.2.1 (2020-11-18)</h2>
+
+    <h3>New features</h3>
+    <ul>
+        {% include issue.html id="2953" title="Exponential backoff scheme for connect intervals" %}
+    </ul>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        {% include issue.html id="2932" title="Add a timeout to Flyway's custom table lock" %}
+        {% include issue.html id="2987" title="Display all validate messages in exceptions" %}
+        {% include issue.html id="2999" title="Allow 'alter type' in transactions for PostgreSQL 12 and up" %}
+        {% include issue.html id="2698" title="Execute migrations in cherryPick defined order" %}
+    </ul>
+
+    <h3>Changes</h3>
+    <ul>
+        {% include issue.html id="3005" title="Only drop PostgreSQL extensions owned by current user" %}
+        {% include issue.html id="2914" title="Full filename in filename default placeholder" %}
+    </ul>
+
+    <p>
+        Thanks to AigleeK, OliverDTM, axelfontaine, gendolf3d, holgerstolzenberg, and scranen for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
     <h2 id="7.2.0">Flyway 7.2.0 (2020-11-09)</h2>
 
     <h3>New features</h3>
