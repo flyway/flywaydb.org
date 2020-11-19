@@ -26,7 +26,7 @@ subtitle: Redshift
 </tr>
 <tr>
 <th></th>
-<td><code>2.0</code> and later (see below)</td>
+<td><code>2.0</code> and later are <strong>not</strong> supported (see below)</td>
 </tr>
 <tr>
 <th>Default Java class</th>
@@ -51,7 +51,7 @@ subtitle: Redshift
 
 - The v2 JDBC driver is available as source from [Github](https://github.com/aws/amazon-redshift-jdbc-driver) rather
 than Maven Central. There appear to be issues with it at the time of writing which mean that transactions cannot be used,
-and it is therefore not a direct substitute for the v1 driver. We do not recommend its use.
+and it is therefore not a direct substitute for the v1 driver. We do not support its use.
 
 ### Example
 
