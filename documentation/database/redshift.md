@@ -50,7 +50,7 @@ subtitle: Redshift
 #### v2 Driver issues
 
 - The v2 JDBC driver is available as source from Github rather than as a binary from
-than Maven Central. There appear to be issues with it at the time of writing which mean that transactions will fail,
+Maven Central. There appear to be issues with it at the time of writing which mean that transactions will fail,
 and it is therefore <strong>not compatible</strong> with Flyway. We do not support its use.
 
 ### Example
