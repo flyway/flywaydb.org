@@ -49,9 +49,9 @@ subtitle: Redshift
 
 #### v2 Driver issues
 
-- The v2 JDBC driver is available as source from [Github](https://github.com/aws/amazon-redshift-jdbc-driver) rather
-than Maven Central. There appear to be issues with it at the time of writing which mean that transactions cannot be used,
-and it is therefore not a direct substitute for the v1 driver. We do not support its use.
+- The v2 JDBC driver is available as source from Github rather than as a binary from
+than Maven Central. There appear to be issues with it at the time of writing which mean that transactions will fail,
+and it is therefore <strong>not compatible</strong> with Flyway. We do not support its use.
 
 ### Example
 
