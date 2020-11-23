@@ -147,26 +147,9 @@ to set any environment variable at all:
 
 In order to connect with your database, Flyway needs the appropriate JDBC driver to be available in its `drivers` directory.
 
-Flyway ships with JDBC drivers for the following databases by default:
-- Aurora MySQL
-- Aurora PostgreSQL
-- CockroachDB
-- Derby
-- Firebird
-- H2
-- HSQLDB
-- MariaDB
-- MySQL
-- Oracle
-- Percona XtraDB
-- PostgreSQL
-- SQLite
-- SQL Server
-- Sybase ASE
+To see if Flyway ships with the JDBC driver for your database, visit the *Driver* section of the documentation page for your database.
 
-If your database is not listed here, you need to download its JDBC driver and place it in the `drivers` directory
-yourself. Instructions on where to download the drivers from are provided on the respective documentation pages for each
-database.
+If Flyway does not ship with the JDBC driver, you will need to download the driver and place it in the `drivers` directory yourself. Instructions on where to download drivers from are also in the *Driver* section of the documentation page for each database.
 
 ## Configuration
 
