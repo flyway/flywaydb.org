@@ -156,6 +156,7 @@ Flyway ships with JDBC drivers for the following databases by default:
 - HSQLDB
 - MariaDB
 - MySQL
+- Oracle
 - Percona XtraDB
 - PostgreSQL
 - SQLite
