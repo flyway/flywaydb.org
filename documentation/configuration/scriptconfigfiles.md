@@ -37,12 +37,12 @@ encoding=ISO_8859_1
 # databases like PostgreSQL and SQL Server where certain statements can only execute outside a transaction.
 executeInTransaction=false
 
-# Whether this migration should be executed or ignored. Valid values are 'true', 'false', or 'A=B' where
+# Whether this migration should be executed or ignored. Valid values are 'true', 'false', or 'A==B' where
 # A and B are boolean values and not themselves expressions. This migration is executed if the boolean
 # expression evaluates to true, ignored if it evaluates to false, and throws an exception if the expression
 # is invalid. Placeholder replacement is also supported in the expression.
 # Flyway Teams only
-shouldExecute=${should_execute}=true
+shouldExecute=${should_execute}==true
 ```
 
 <p class="next-steps">
