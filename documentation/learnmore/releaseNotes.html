@@ -9,6 +9,34 @@ redirect_from: /documentation/releaseNotes/
 <p>Thank you all for reporting all these issues and contributing fixes!</p>
 
 <div class="release">
+    <h2 id="7.3.0">Flyway 7.3 (2020-11-25)</h2>
+
+    <h3>New features</h3>
+    <ul>
+        {% include issue.html id="2914" title="Script filename placeholder introduced" %}
+        {% include issue.html id="2953" title="If Flyway cannot connect to the database, retries are now made in an exponential backoff pattern" %}
+        {% include issue.html id="2992" title="Dry Run output can now be directed to AWS S3 or Google Cloud Storage (if relevant SDK is present)" %}
+    </ul>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        {% include issue.html id="2932" title="CockroachDB: lock indicators time out if left behind by Flyway erroring on bad scripts" %}
+        {% include issue.html id="2999" title="PostgreSQL 12: support for ALTER TYPE ... ADD VALUE being run in a transaction added" %}
+        {% include issue.html id="3005" title="PostgreSQL: cleaning no longer tries to drop extensions installed by a superuser" %}
+        {% include issue.html id="3010" title="MariaDB: script parsing error fixed" %}
+    </ul>
+
+    <h3>Changes</h3>
+    <ul>
+
+    </ul>
+
+    <p>
+        Thanks to adipata, axelfontaine, gendolf3d, OliverDTM and scranen for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
     <h2 id="7.2.1">Flyway 7.2.1 (2020-11-18)</h2>
 
     <h3>New features</h3>
