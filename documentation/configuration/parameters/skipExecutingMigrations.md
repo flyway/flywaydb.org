@@ -12,9 +12,9 @@ redirect_from: /documentation/configuration/skipExecutingMigrations/
 ## Description
 Whether Flyway should skip migration execution. The remainder of the operation will run as normal - including updating the schema history table, callbacks, and so on.
 
-`skipExecutingMigrations` essentially allows you to 'pretend' that a migration was executed, because the schema history table is still updated as normal.
+`skipExecutingMigrations` essentially allows you to mimic a migration being executed, because the schema history table is still updated as normal.
 
-`skipExecutingMigrations` can be used bring an out-of-process change into Flyway's change control process. For instance, a script run against the database outside of Flyway (like a hotfix) can be turned into a migration. The hotfix migration can be deployed with Flyway with `skipExecutingMigrations=true`. The schema history table will be updated with the new migration, but the script itself won't be executed again.
+`skipExecutingMigrations` can be used to bring an out-of-process change into Flyway's change control process. For instance, a script run against the database outside of Flyway (like a hotfix) can be turned into a migration. The hotfix migration can be deployed with Flyway with `skipExecutingMigrations=true`. The schema history table will be updated with the new migration, but the script itself won't be executed again.
 
 `skipExecutingMigrations` can be used with with [cherryPick](/documentation/configuration/parameters/cherryPick) to skip specific migrations.
 
