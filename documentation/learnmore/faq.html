@@ -126,6 +126,25 @@ redirect_from:
         <code>flyway.schemas</code> to match the name of the schema of the current tenant.
     </p>
 
+    <p>Here are examples for how to do this in the commandline, in Maven, and in Gradle:</p>
+
+    <h4>Commandline</h4>
+
+    <p>This example shows how to invoke Flyway in a loop in PowerShell:</p>
+
+    <pre><code>$schemas = @('schema1', 'schema2', 'schema3')
+Foreach ($schema in $schemas) {
+    ./flyway -schemas="$($schema)" migrate
+}</code></pre>
+
+    <h4>Maven</h4>
+
+    <p>If you can't invoke Maven in a loop, then you can use the <code>iterator-maven-plugin</code> to implement the looping:</p>
+
+    <h4>Gradle</h4>
+
+    <p>If you can't invoke Gradle in a loop, then you can dynamically define a task migrating each schema as in the following example:</p>
+
     <h3>The schemas are distinct, but have the same life-cycle:</h3>
 
     <p>
