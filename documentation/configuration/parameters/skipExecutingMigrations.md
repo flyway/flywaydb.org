@@ -10,13 +10,13 @@ redirect_from: /documentation/configuration/skipExecutingMigrations/
 {% include teams.html %}
 
 ## Description
-Whether Flyway should skip actually executing the contents of the migrations and only update the schema history table.
-    
-This should be used when you have applied a migration manually (via executing the sql yourself, or via an ide), and just want the schema history table to reflect this.
+Whether Flyway should skip migration execution. The remainder of the operation will run as normal - including updating the schema history table, callbacks, and so on.
 
-This is useful when executing an script against your database manually. For instance, when you apply an out-of-process change like a hotfix. The hotfix script can be turned into a migration and applied with `skipExecutingMigrations=true`. The schema history table will be updated, but the hotfix script won't be run gain.
+`skipExecutingMigrations` essentially allows you to mimic a migration being executed, because the schema history table is still updated as normal.
 
-When combined with [cherryPick](/documentation/configuration/parameters/cherryPick), you can gain a lot more control of how your deployments take place.
+`skipExecutingMigrations` can be used to bring an out-of-process change into Flyway's change control process. For instance, a script run against the database outside of Flyway (like a hotfix) can be turned into a migration. The hotfix migration can be deployed with Flyway with `skipExecutingMigrations=true`. The schema history table will be updated with the new migration, but the script itself won't be executed again.
+
+`skipExecutingMigrations` can be used with with [cherryPick](/documentation/configuration/parameters/cherryPick) to skip specific migrations.
 
 ## Default
 false
@@ -25,7 +25,7 @@ false
 
 ### Commandline
 ```powershell
-./flyway -skipExecutingMigrations="true" info
+./flyway -skipExecutingMigrations="true" migrate
 ```
 
 ### Configuration File
