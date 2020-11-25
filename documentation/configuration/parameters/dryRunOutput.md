@@ -10,11 +10,26 @@ redirect_from: /documentation/configuration/dryRunOutput/
 {% include teams.html %}
 
 ## Description
-The file where to output the SQL statements of a migration dry run. If the file specified is in a non-existent directory, Flyway will create all directories and parent directories as needed.
+The file where to output the SQL statements of a migration dry run. If the file specified is in a non-existent directory, 
+Flyway will create all directories and parent directories as needed.
 
 Omit to use the default mode of executing the SQL statements directly against the database.
 
 See [dry runs](/documentation/concepts/dryruns) for more details.
+
+### Amazon S3
+
+Paths starting with <code>s3:</code> point to a bucket in AWS S3, which must exist. They are in the format 
+`s3:<bucket>(/optionalfolder/subfolder)/filename.sql`. To use AWS S3, the 
+[AWS SDK v2](https://mvnrepository.com/artifact/software.amazon.awssdk/services) and dependencies must be included, 
+and [configured](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/credentials.html) for your S3 account.
+
+### Google Cloud Storage
+
+Paths starting with <code>gcs:</code> point to a bucket in Google Cloud Storage, which must exist. They are in the 
+format `gcs:<bucket>(/optionalfolder/subfolder)/filename.sql`. To use GCS, the GCS library must be included, and the 
+GCS environment variable `GOOGLE_APPLICATION_CREDENTIALS` must be set to the credentials file for the service 
+account that has access to the bucket.
 
 ## Default
 <i>Execute directly against the database</i>

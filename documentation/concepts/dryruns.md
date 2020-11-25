@@ -55,7 +55,8 @@ These changes will be executed as normal during a Dry Run. **The schema history 
 
 When using the Flyway [command-line tool](/documentation/usage/commandline), [Maven plugin](/documentation/usage/maven) or
 [Gradle plugin](/documentation/usage/gradle), a SQL file contained the output of the dry run can be configured using the 
-[`flyway.dryRunOutput`](/documentation/configuration/parameters/dryRunOutput) property.
+[`flyway.dryRunOutput`](/documentation/configuration/parameters/dryRunOutput) property. This can be on the local file
+system, or in AWS S3 / Google Cloud Storage.
 
 When using the API directly, the dry run output can be configured using a `java.io.OutputStream`, giving you additional
 flexibility.
