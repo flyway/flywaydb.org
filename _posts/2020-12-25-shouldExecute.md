@@ -35,6 +35,8 @@ What better way to see this in action than with some examples!
 
 ### Executing migrations in a specific schema
 
+Flyway comes with [default placeholders](/documentation/configuration/placeholder#default-placeholders) that are automatically populated with useful values, such as the user connecting to the database and the default schema used by Flyway, and these can be used in the expression provided to `shouldExecute`.
+
 To control the execution of migrations based on the schema, we can use the `${flyway:defaultSchema}` default placeholder.
 
 Let's say we have the following migrations:
