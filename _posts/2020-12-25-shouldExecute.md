@@ -7,7 +7,7 @@ author: ajay
 
 Have you ever wanted more customizable control over when your migrations are executed?
 
-In Flyway 7.3.0 we released the `shouldExecute` script configuration option which lets you achieve just that!
+In Flyway Teams Edition 7.3.0 we released the `shouldExecute` script configuration option which lets you achieve just that!
 
 ## What is the shouldExecute option?
 
