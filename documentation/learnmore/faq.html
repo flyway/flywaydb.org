@@ -139,11 +139,21 @@ Foreach ($schema in $schemas) {
 
     <h4>Maven</h4>
 
-    <p>If you can't invoke Maven in a loop, then you can use the <code>iterator-maven-plugin</code> to implement the looping:</p>
+    <p>This example shows how to invoke Maven in a loop in PowerShell:</p>
+
+    <pre><code>$schemas = @('schema1', 'schema2', 'schema3')
+Foreach ($schema in $schemas) {
+    mvn "-Dflyway.schemas=$($schema)" flyway:migrate
+}</code></pre>
 
     <h4>Gradle</h4>
 
-    <p>If you can't invoke Gradle in a loop, then you can dynamically define a task migrating each schema as in the following example:</p>
+    <p>This example shows how to invoke Gradle in a loop in PowerShell:</p>
+
+    <pre><code>$schemas = @('schema1', 'schema2', 'schema3')
+Foreach ($schema in $schemas) {
+    ./gradlew "-Pflyway.schemas=$($schema)" flywayMigrate
+}</code></pre>
 
     <h3>The schemas are distinct, but have the same life-cycle:</h3>
 
