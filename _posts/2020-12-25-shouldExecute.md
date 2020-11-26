@@ -85,7 +85,7 @@ In this example, let's also assume that we have a basic automated pipeline runni
 
 Since migration `V2` takes too long to execute during a work day, we decide to execute it overnight, but don't want to delay executing `V1` and `V3`. We can still execute migrations `V1` and `V3`, but first need to create a script configuration file `V2__long_migration_1.sql.conf` for `V2` with the line `shouldExecute=false`. When we commit this to version control, migrations `V1` and `V3` will automatically be applied, ignoring `V2`. 
 
-When we reach the end of the day and decide it's time to apply `V2`, we can modify the script configuration file and remove the line containing `shouldExecute=false` since the default value is `true`. Once we commit this, migration `V2` will automatically begin execution in our pipeline.
+When we reach the end of the day and decide it's time to apply `V2`, we can modify the script configuration file and remove the line containing `shouldExecute=false` since the default value is `true`. We also need to modify the Flyway configuration file and set `outOfOrder=true`. Once we commit this, migration `V2` will automatically begin execution in our pipeline.
 
 We have successfully deferred migration execution in an automated pipeline without changing how we call Flyway!
 
