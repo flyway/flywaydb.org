@@ -22,7 +22,7 @@ subtitle: Redshift
 </tr>
 <tr>
 <th>Supported versions</th>
-<td><code>1.2.10.1009</code> and later v1</td>
+<td><code>1.2.10.1009</code> and later</td>
 </tr>
 <tr>
 <th></th>
@@ -46,12 +46,6 @@ subtitle: Redshift
 - Any Redshift SQL script executed by Flyway,
         can be executed by the PostgreSQL command-line tool and other PostgreSQL-compatible tools,
         such as SQL Workbench/J (after the placeholders have been replaced).
-
-#### v2 Driver issues
-
-- The v2 JDBC driver is available as source from Github rather than as a binary from
-Maven Central. There appear to be issues with it at the time of writing which mean that transactions will fail,
-and it is therefore <strong>not compatible</strong> with Flyway. We do not support its use.
 
 ### Example
 
