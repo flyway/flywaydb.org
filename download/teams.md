@@ -3,6 +3,7 @@ layout: default
 tab: download
 title: Flyway Teams Download / Pricing
 cssid: download-pricing
+redirect_from: /upgrade/
 ---
 # Select the Flyway Teams Edition usage level you require
 
