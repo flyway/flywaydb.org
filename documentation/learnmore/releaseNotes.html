@@ -9,6 +9,30 @@ redirect_from: /documentation/releaseNotes/
 <p>Thank you all for reporting all these issues and contributing fixes!</p>
 
 <div class="release">
+    <h2 id="7.3.1">Flyway 7.3.1 (2020-12-04)</h2>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        {% include issue.html id="3010" title="Fix MariaDB block parsing" %}
+        {% include issue.html id="3019" title="Fix NPE when repairing failed repeatables" %}
+    </ul>
+
+    <h3>New features</h3>
+    <ul>
+        {% include issue.html id="3000" title="Redshift V2 driver support" %}
+    </ul>
+
+    <h3>Changes</h3>
+    <ul>
+        <li>Display a message if PostgreSQL or MySQL authentication files are found</li>
+    </ul>
+
+    <p>
+        Thanks to adipata, bjaglin, and tatumsu for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
     <h2 id="7.3.0">Flyway 7.3 (2020-11-25)</h2>
 
     <h3>New features</h3>
