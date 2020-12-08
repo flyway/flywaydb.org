@@ -22,8 +22,8 @@ subtitle: SAP HANA
 <td>No</td>
 </tr>
 <tr>
-<th>Download</th>
-<td>Download from <a href="https://sap.com">sap.com</a></td>
+<th>Maven Central coordinates</th>
+<td><code>com.sap.cloud.db.jdbc:ngdbc:2.6.30</code></td>
 </tr>
 <tr>
 <th>Supported versions</th>
