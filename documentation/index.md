@@ -13,11 +13,10 @@ title: Documentation
     and running in no time!
 </div>
 
-<p class="center"><img src="/assets/logo/flyway-logo-tm.png" alt="Flyway" usemap="#logomap" style="padding-bottom: 10px"/>
-    <map name="logomap">
-        <area shape="rect" coords="130,260,370,330" href="https://red-gate.com" alt="Redgate">
-    </map>
-</p>
+<h1 class="text--center">
+    <span class="icon--flyway color--red icon--6x display--block spaced-v"></span>
+    <span class="text--redgate text--bigger">Flyway</span>
+</h1>
 
 <p>Flyway is an open-source database migration tool. It strongly favors simplicity and convention over
     configuration.</p>
