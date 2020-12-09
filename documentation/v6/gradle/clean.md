@@ -3,7 +3,7 @@ layout: v6/gradle
 pill: clean
 subtitle: 'gradle flywayClean'
 ---
-Gradle Task: flywayClean
+# Gradle Task: flywayClean
 
 Drops all objects (tables, views, procedures, triggers, ...) in the configured schemas.
 
