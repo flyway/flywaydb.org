@@ -166,20 +166,6 @@ Statements which contain a `&VAR`-style expression which is not intended to be s
 literal string, will either require `SET DEFINE OFF` beforehand, or some alternative construct to avoid use of
 the ampersand.
 
-
-### Limitations
-
-#### Unsupported commands
-
-Not all SQL*Plus commands are supported by Flyway. Unsupported commands are gracefully ignored with a warning message.
-
-#### Behavior parity
-
-As much as possible, Flyway aims to emulate the behavior of the SQL*Plus client in Oracle SQL Developer. However, there are some edge cases where Flyway isn't able to emulate the behavior exactly. Known cases are detailed below:
-
-- SQL*Plus is known to replace CRLF pairs in string literals with single LFs. Flyway will not do this - instead it preserves scripts as they are written.
-
-If you encounter a discrepancy between the Oracle SQL*Plus client and Flyway, let us know via the official support email.
 For more information, see the [SQL\*Plus documentation](https://blogs.oracle.com/opal/sqlplus-101-substitution-variables#2).
 
 ## Authentication
@@ -215,6 +201,20 @@ flyway.oracle.kerberosCacheFile=/tmp/krb5cc_123
 ## Limitations
 
 - SPATIAL EXTENSIONS: `sdo_geom_metadata` can only be cleaned for the user currently logged in
+
+### SQL*Plus
+
+#### Unsupported commands
+
+Not all SQL*Plus commands are supported by Flyway. Unsupported commands are gracefully ignored with a warning message.
+
+#### Behavior parity
+
+As much as possible, Flyway aims to emulate the behavior of the SQL*Plus client in Oracle SQL Developer. However, there are some edge cases where Flyway isn't able to emulate the behavior exactly. Known cases are detailed below:
+
+- SQL*Plus is known to replace CRLF pairs in string literals with single LFs. Flyway will not do this - instead it preserves scripts as they are written    
+
+If you encounter a discrepancy between the Oracle SQL*Plus client and Flyway, let us know via the official support email.
 
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/database/sqlserver">SQL Server <i class="fa fa-arrow-right"></i></a>
