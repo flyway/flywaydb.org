@@ -21,28 +21,29 @@ All editions are supported, including XE.
 ## Driver
 
 <table class="table">
-<tr>
-<th>URL format</th>
-<td><code>jdbc:oracle:thin:@//<i>host</i>:<i>port</i>/<i>service</i></code><br>
-<code>jdbc:oracle:thin:@<i>tns_entry</i></code> *
-</td>
-</tr>
-<tr>
-<th>Ships with Flyway Command-line</th>
-<td>Yes</td>
-</tr>
-<tr>
-<th>Maven Central coordinates</th>
-<td><code>com.oracle.database.jdbc:ojdbc8:19.6.0.0</code></td>
-</tr>
-<tr>
-<th>Supported versions</th>
-<td><code>18.3.0.0</code> and later</td>
-</tr>
-<tr>
-<th>Default Java class</th>
-<td><code>oracle.jdbc.OracleDriver</code></td>
-</tr>
+    <tr>
+        <th>URL format</th>
+        <td>
+            <code>jdbc:oracle:thin:@//<i>host</i>:<i>port</i>/<i>service</i></code><br>
+            <code>jdbc:oracle:thin:@<i>tns_entry</i></code> *
+        </td>
+    </tr>
+    <tr>
+        <th>Ships with Flyway Command-line</th>
+        <td>Yes</td>
+    </tr>
+    <tr>
+        <th>Maven Central coordinates</th>
+        <td><code>com.oracle.database.jdbc:ojdbc8:19.6.0.0</code></td>
+    </tr>
+    <tr>
+        <th>Supported versions</th>
+        <td><code>18.3.0.0</code> and later</td>
+    </tr>
+    <tr>
+        <th>Default Java class</th>
+        <td><code>oracle.jdbc.OracleDriver</code></td>
+    </tr>
 </table>
 
 \* `TNS_ADMIN` environment variable must point to the directory of where `tnsnames.ora` resides
