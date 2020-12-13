@@ -216,6 +216,17 @@ As much as possible, Flyway aims to emulate the behavior of the SQL*Plus client 
 
 If you encounter a discrepancy between the Oracle SQL*Plus client and Flyway, let us know via the official support email.
 
+### Known issues and workarounds
+
+Implementing a compatible solution to some problems isn't always possible, so we document those problems and the valid workarounds.
+
+#### A default schema different to the current user's causes remote links to fail
+
+Flyway alters the current schema to the specified [default schema](/documentation/configuration/parameters/defaultSchema) as this is where the schema history table should reside. This causes remote links to fail in migrations that expect the current schema to be the user's. The workarounds for this are:
+
+- Create the remote link via dynamic SQL in a stored procedure that resides in the correct schema. Stored procedures execute as the schema owner, so the remote link is created in the correct schema
+- Use [beforeEachMigrate](/documentation/concepts/callbacks#beforeEachMigrate) and [afterEachMigrate](/documentation/concepts/callbacks#afterEachMigrate) callbacks to alter the current schema as needed
+
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/database/sqlserver">SQL Server <i class="fa fa-arrow-right"></i></a>
 </p>
