@@ -50,21 +50,20 @@ All editions are supported, including XE.
 
 ## SQL Script Syntax
 
-- [Standard SQL syntax](/documentation/concepts/migrations#sql-based-migrations#syntax) with statement delimiter **;**
-- PL/SQL blocks starting with DECLARE or BEGIN and finishing with END; /
+- [Standard SQL syntax](/documentation/concepts/migrations#sql-based-migrations#syntax) with statement delimiter `;`
+- PL/SQL blocks starting with `DECLARE` or `BEGIN` and finishing with `END; /`
 
 ### Compatibility
 
 - DDL exported by Oracle can be used unchanged in a Flyway migration
-- Any Oracle SQL script executed by Flyway, can be executed by SQL*Plus
-        and other Oracle-compatible tools (after the placeholders have been replaced)
+- Any Oracle SQL script executed by Flyway can be executed by SQL*Plus and other Oracle-compatible tools (after the placeholders have been replaced)
 
 ### Example
 
 <pre class="prettyprint">/* Single line comment */
 CREATE TABLE test_user (
- name VARCHAR(25) NOT NULL,
- PRIMARY KEY(name)
+  name VARCHAR(25) NOT NULL,
+  PRIMARY KEY(name)
 );
 
 /*
@@ -143,16 +142,16 @@ The short form of these commands is also supported.
 
 ### Site Profiles (`glogin.sql`) & User Profiles (`login.sql`)
 
-This feature allows you to set up your SQL * Plus environment to use the same settings with each session. It allows you to execute statements before every script run, and is typically used to configure 
+This feature allows you to set up your SQL\*Plus environment to use the same settings with each session. It allows you to execute statements before every script run, and is typically used to configure 
 the session in a consistent manner by calling SQL*Plus commands such as `SET FEEDBACK` and `SET DEFINE`.
 
-Flyway will look for `login.sql` in all the valid migration locations, and load it if present. `glogin.sql` will be loaded from $ORACLE_HOME/sqlplus/admin/glogin.sql in UNIX, and ORACLE_HOME\sqlplus\admin\glogin.sql.
+Flyway will look for `login.sql` in all the valid migration locations, and load it if present. `glogin.sql` will be loaded from `$ORACLE_HOME/sqlplus/admin/glogin.sql` in UNIX, and `ORACLE_HOME\sqlplus\admin\glogin.sql` otherwise.
 
 Profiles are only loaded when [`oracle.sqlplus`](/documentation/configuration/parameters/oracleSqlPlus) is enabled.
 
 ### Output
 
-When `SET SERVEROUTPUT ON` is invoked output produced by `DBMS_OUTPUT.PUT_LINE` will be shown in the console.
+When `SET SERVEROUTPUT ON` is invoked, output produced by `DBMS_OUTPUT.PUT_LINE` will be shown in the console.
 
 ### Variable substitution
 
@@ -167,8 +166,6 @@ Statements which contain a `&VAR`-style expression which is not intended to be s
 literal string, will either require `SET DEFINE OFF` beforehand, or some alternative construct to avoid use of
 the ampersand.
 
-For more information, see the 
-[SQL\*Plus documentation](https://blogs.oracle.com/opal/sqlplus-101-substitution-variables#2)
 
 ### Limitations
 
@@ -183,6 +180,7 @@ As much as possible, Flyway aims to emulate the behavior of the SQL*Plus client 
 - SQL*Plus is known to replace CRLF pairs in string literals with single LFs. Flyway will not do this - instead it preserves scripts as they are written.
 
 If you encounter a discrepancy between the Oracle SQL*Plus client and Flyway, let us know via the official support email.
+For more information, see the [SQL\*Plus documentation](https://blogs.oracle.com/opal/sqlplus-101-substitution-variables#2).
 
 ## Authentication
 
@@ -209,14 +207,14 @@ You can authenticate using Kerberos by specifying the location of the local Kerb
 details such as the locations of Kerberos Key Distribution Centers), and optionally the local credential cache, to 
 Flyway. For example, in `flyway.conf`:
 
-```
+```properties
 flyway.oracle.kerberosConfigFile=/etc/krb5.conf
 flyway.oracle.kerberosCacheFile=/tmp/krb5cc_123
 ```
 
 ## Limitations
 
-- SPATIAL EXTENSIONS: sdo_geom_metadata can only be cleaned for the user currently logged in
+- SPATIAL EXTENSIONS: `sdo_geom_metadata` can only be cleaned for the user currently logged in
 
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/database/sqlserver">SQL Server <i class="fa fa-arrow-right"></i></a>
