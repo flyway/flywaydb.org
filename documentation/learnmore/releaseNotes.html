@@ -9,6 +9,35 @@ redirect_from: /documentation/releaseNotes/
 <p>Thank you all for reporting all these issues and contributing fixes!</p>
 
 <div class="release">
+    <h2 id="7.3.2">Flyway 7.3.2 (2020-12-16)</h2>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        {% include issue.html id="3021" title="Don't cascade when dropping SAP HANA views" %}
+        {% include issue.html id="3025" title="Check that connected keywords are on the same line when parsin in Oracle" %}
+        {% include issue.html id="3029" title="Use classpath environment variable in bash script" %}
+        {% include issue.html id="3031" title="Calculate correct 'undoable' value when using info filters" %}
+        <li>Correct name for MSSQL integrated security DLL</li>
+        <li>Only validate cherry-picked migrations</li>
+        <li>Use correct execution time in migrate result</li>
+    </ul>
+
+    <h3>Performance improvements</h3>
+    <ul>
+        {% include issue.html id="3024" title="Improve performance of shouldExecute" %}
+    </ul>
+
+    <h3>Changes</h3>
+    <ul>
+        <li>Display a message if external authentication files are found</li>
+    </ul>
+
+    <p>
+        Thanks to BaburaoLad, cesargomezvela, iggycoder, luoy1991, and rglidden for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
     <h2 id="7.3.1">Flyway 7.3.1 (2020-12-04)</h2>
 
     <h3>Bug fixes</h3>
