@@ -41,7 +41,7 @@ This parameter doesn't affect migrations, unless you've chosen not to specify `d
 schema in this list is treated as the default). It is useful mostly in a development scenario; when you first `migrate`,
 all these schemas will be created if they didn't already exist, and when you `clean` Flyway will empty them again.
 
-## Many desired schemas, many histories
+## Many different schemas, many histories
 
 This is the simplest scenario, as all our schemas are effectively separate entities and can happily co-exist in different
 states. Each schema will be built up from a different set of scripts, which is probably best served by building up
@@ -69,7 +69,7 @@ do
 done
 ```
 
-## One desired schema, many histories
+## One desired schema structure, many histories
 
 Now suppose we have a multi-tenant database where we want all schemas to have an identical structure. Now, we no longer
 need separate sets of scripts - and moreover, we no longer want separate sets of scripts, as having a single set will
@@ -92,7 +92,10 @@ others until it has reached the latest structure.
 This method is also failure-resistant - if Flyway fails on one schema, the history tables contain enough information
 that once the failure is cleared, Flyway will do the right thing on future runs.  
 
-## One desired schema, one history
+It is possible to do similar iterations with Maven and Gradle; in addition in Maven there is the 
+[`iterator-maven-plugin`](https://github.com/khmarbaise/iterator-maven-plugin) which makes iterating over a collection of 
+
+## One desired schema structure, one history
 
 This is the most tricky scenario, as it requires each migration to handle the iteration across schemas - which makes
 the migrations more complex as they will need to use dynamic SQL. Adding a new schema is also much more complex;
