@@ -166,6 +166,11 @@ These are the events Flyway supports:
         <td>afterRepairError</td>
         <td>After failed Repair runs</td>
     </tr>
+    <tr><td></td><td></td></tr>
+    <tr id="createSchema">
+        <td>createSchema</td>
+        <td>Before automatically creating non-existent schemas</td>
+    </tr>
     </tbody>
 </table>
 
