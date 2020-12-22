@@ -12,7 +12,7 @@ there's an ongoing discussion on [Github Issues](https://github.com/flyway/flywa
 
 ## Configuration
 
-There are two main configuration parameters; `flyway.schemas` and `flyway.defaultSchema`. In this post we'll talk
+There are two main configuration parameters: `flyway.schemas` and `flyway.defaultSchema`. In this post we'll talk
 about them as being in `flyway.conf`, but of course the same will apply whether you choose to use them in configuration
 files, environment variables, the Java API or command line parameters.
 
@@ -64,7 +64,7 @@ and then migrating each one in turn:
 ```
 # Powershell
 $schemas = @('foo', 'bar')
-foreach ($schema in $schemas) { flyway migrate -configfFiles="c:\src\config\$schema.conf" }
+foreach ($schema in $schemas) { flyway migrate -configFiles="c:\src\config\$schema.conf" }
 ```
 
 ```
@@ -86,7 +86,7 @@ using the `${flyway:defaultSchema}` placeholder in any script that needs a fully
 ```
 # Powershell
 $schemas = @('foo', 'bar')
-foreach ($schema in $schemas) { flyway migrate -configfFiles="c:\src\config\flyway.conf" -defaultSchema="$schema" }
+foreach ($schema in $schemas) { flyway migrate -configFiles="c:\src\config\flyway.conf" -defaultSchema="$schema" }
 ```
 
 Having a separate history table in each schema appears redundant in that the same sequence of migrations will be
