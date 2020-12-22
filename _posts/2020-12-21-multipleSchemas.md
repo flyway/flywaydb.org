@@ -5,7 +5,10 @@ permalink: /blog/multipleSchemas.html
 author: julia
 ---
 
-Flyway offers a range of options for handling multiple schemas in the same database. Let's take a look at some of them.
+We've had some users ask recently about multi-schema deployments. There are a number of possible scenarios, some
+of which are supported naturally by Flyway and some not. This blog post summarises the current state of play
+on the matter, but we're keen to make sure we cover popular use cases. If you have any feedback for us, 
+there's an ongoing discussion on [Github Issues](https://github.com/flyway/flyway/issues/2995).
 
 ## Configuration
 
@@ -27,9 +30,13 @@ with other schemas, we need to use fully-qualified object names. This schema is 
 schema history table.
 
 Not all databases have a concept of a default schema, and perhaps more awkwardly, some have gotchas - SQL Server,
-for example, has a concept of a default schema but it's quietly ignored if you are a member of the sysadmin server role
-such as `sa`. However, this parameter is still useful, as it is used to populate the corresponding placeholder.
-So, the following migration would still create our table in the relevant schema:
+for example, has a concept of a default schema but it's not applicable to all users and it's 
+[quietly ignored](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-user-transact-sql?redirectedfrom=MSDN&view=sql-server-ver15) 
+if you are a member of the sysadmin server role such as `sa`. Flyway will warn you if you're trying to use
+a default schema when the database doesn't support it. However, regardless of whether it is supported,
+the configuration parameter is still useful, as it is used 
+to populate the corresponding Flyway placeholder.
+So, the following migration will still create our table in the relevant schema:
 
 ```
 CREATE TABLE ${flyway:defaultSchema}.MyTable (id INT);
@@ -72,7 +79,7 @@ done
 ## One desired schema structure, many histories
 
 Now suppose we have a multi-tenant database where we want all schemas to have an identical structure. Now, we no longer
-need separate sets of scripts - and moreover, we no longer want separate sets of scripts, as having a single set will
+need separate sets of scripts - and moreover, we no longer *want* separate sets of scripts, as having a single set will
 enforce that uniformity for us. Instead of iterating over configurations, we can iterate instead over the schemas,
 using the `${flyway:defaultSchema}` placeholder in any script that needs a fully qualified name:
 
@@ -93,7 +100,8 @@ This method is also failure-resistant - if Flyway fails on one schema, the histo
 that once the failure is cleared, Flyway will do the right thing on future runs.  
 
 It is possible to do similar iterations with Maven and Gradle; in addition in Maven there is the 
-[`iterator-maven-plugin`](https://github.com/khmarbaise/iterator-maven-plugin) which makes iterating over a collection of 
+[`iterator-maven-plugin`](https://github.com/khmarbaise/iterator-maven-plugin) which makes iterating over a collection 
+of values significantly easier.
 
 ## One desired schema structure, one history
 
@@ -114,5 +122,5 @@ So, we can't recommend this approach.
 
 We recognise that databases with large numbers of identical schemas are an increasingly common situation. We'd like
 to hear from you if you have such a database! Do the above iterative methods work for you? If not, how could we
-best support you? There's a discussion Issue open at [Github Issues](https://github.com/flyway/flyway/issues/2995)
-where we would really value your feedback as we figure out what would be the best way to implement support for you.
+best support you? Let us know either at [Github Issues](https://github.com/flyway/flyway/issues/2995) or in the comments
+below; we would really value your feedback as we figure out what would be the best way to implement support for you.
