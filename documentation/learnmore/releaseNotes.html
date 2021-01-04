@@ -9,6 +9,33 @@ redirect_from: /documentation/releaseNotes/
 <p>Thank you all for reporting all these issues and contributing fixes!</p>
 
 <div class="release">
+    <h2 id="7.4.0">Flyway 7.4.0 (2021-01-04)</h2>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        {% include issue.html id="3026" title="Fix parsing of wrapped Oracle SQL" %}
+        {% include issue.html id="3029" title="Include classpath variable in bash script" %}
+        {% include issue.html id="3034" title="HSQLDB - successfully parse drop procedure" %}
+    </ul>
+
+    <h3>New features</h3>
+    <ul>
+        {% include issue.html id="2239" title="New callback for custom schema creation SQL" %}
+        {% include issue.html id="3028" title="Support p6spy in URLs" %}
+        <li>Support reading configurations from Vault and Conjur</li>
+    </ul>
+
+    <h3>Changes</h3>
+    <ul>
+        {% include issue.html id="3013" title="Move LoadableResource and Resource into the API" %}
+    </ul>
+
+    <p>
+        Thanks to RB14, calvarius7, ericparton, luoy1991, mLarsenAlkaDk, and tobato for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
     <h2 id="7.3.2">Flyway 7.3.2 (2020-12-16)</h2>
 
     <h3>Bug fixes</h3>
