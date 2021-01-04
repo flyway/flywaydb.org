@@ -15,7 +15,7 @@ need to be explicitly listed in the main configuration, or the command line.
 For example, a migration file `sql/V2__my_script.sql` would have a script configuration file `sql/V2__my_script.sql.conf`.
 
 Script Config Files have a subset of the options from the other ways of configuring Flyway (e.g. `flyway.conf`). See 
-the Reference at the bottom of the page for the complete list of options.
+the [Reference](/documentation/configuration/scriptconfigfiles#reference) at the bottom of the page for the complete list of options.
 
 ## Structure
 
