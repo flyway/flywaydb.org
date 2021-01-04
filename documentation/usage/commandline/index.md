@@ -300,7 +300,7 @@ following:
  - the Apache Commons Logging framework <code>org.apache.commons.logging.Log</code> (including Log4j v1)
  - SLF4J <code>org.slf4j.Logger</code>
  - Log4J v2 <code>org.apache.logging.log4j.Logger</code>
- - the Android builtin log <code>android.util.Log</code>
+ - the Android built-in log <code>android.util.Log</code>
 
 The simplest pattern to achieve this is to put all the necessary jar files in Flyway's `lib` folder and any 
 configuration in the Flyway root folder. 
@@ -337,7 +337,11 @@ Similarly, to use <b>Logback</b> add the relevant files like this:
   <span><i class="fa fa-file"></i> logback.xml</span>                 <i class="fa fa-long-arrow-left"></i> Logback configuration
 </pre>
 
-If you are building Flyway into a larger application, this means you do not need to explicitly wire up any logging if you use one of these frameworks. 
+If you are building Flyway into a larger application, this means you do not need to explicitly wire up any logging if you use one of these frameworks.
+
+### P6Spy
+
+P6Spy is another approach to logging which operates at the driver or datasource level, and Flyway has integration with this. You can read about setting it up [here](https://p6spy.readthedocs.io/en/latest/install.html#generic-instructions) and configuring it [here](https://p6spy.readthedocs.io/en/latest/configandusage.html#configuration-and-usage).
 
 ### Colors
 
@@ -379,8 +383,7 @@ Add `-outputType=json` to the argument list to print JSON instead of human-reada
 Add `-outputFile=/my/output.txt` to the argument list to also write output to the specified file.
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/usage/commandline/migrate">Command-line: migrate <i
-            class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/usage/commandline/migrate">Command-line: migrate <i class="fa fa-arrow-right"></i></a>
 </p>
 
 {% include downloadpopup.html %}
