@@ -9,3 +9,4 @@ org.flywaydb.core.api.logging
 org.flywaydb.core.api.migration
 org.flywaydb.core.api.output
 org.flywaydb.core.api.resolver
+org.flywaydb.core.api.resource
