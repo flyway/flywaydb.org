@@ -3,12 +3,16 @@ layout: documentation
 menu: saphana
 subtitle: SAP HANA
 ---
-# SAP HANA
+# SAP HANA (Including SAP HANA Cloud)
 
-## Supported Versions
+## Supported Versions - On-Premise
 
 - `2.0`
 - `1.0` {% include teams.html %}
+
+## Supported Versions - SAP HANA Cloud
+
+- `4.0`
 
 ## Driver
 
