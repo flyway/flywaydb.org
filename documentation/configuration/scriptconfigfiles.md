@@ -15,7 +15,7 @@ need to be explicitly listed in the main configuration, or the command line.
 For example, a migration file `sql/V2__my_script.sql` would have a script configuration file `sql/V2__my_script.sql.conf`.
 
 Script Config Files have a subset of the options from the other ways of configuring Flyway (e.g. `flyway.conf`). See 
-the Reference at the bottom of the page for the complete list of options.
+the [Reference](/documentation/configuration/scriptconfigfiles#reference) at the bottom of the page for the complete list of options.
 
 ## Structure
 
@@ -37,10 +37,11 @@ encoding=ISO_8859_1
 # databases like PostgreSQL and SQL Server where certain statements can only execute outside a transaction.
 executeInTransaction=false
 
-# Whether this migration should be executed or ignored. Valid values are 'true', 'false', or 'A==B' where
-# A and B are boolean values and not themselves expressions. This migration is executed if the boolean
-# expression evaluates to true, ignored if it evaluates to false, and throws an exception if the expression
-# is invalid. Placeholder replacement is also supported in the expression.
+# Whether this migration should be executed or ignored. Valid values are 'true', 'false', 'A==B', 'A!=B' (where
+# A,B are values), and combinations of these using `&&` (AND), `||` (OR) and parentheses. This
+# migration is executed if the boolean expression evaluates to true, ignored if it evaluates to false, and throws an
+# exception if the expression is invalid. Placeholder replacement is also supported in the expression.
+# Example: 'shouldExecute=(${environment}==dev || ${environment}==test)' will run if '${environment}' is 'dev' or 'test'
 # Flyway Teams only
 shouldExecute=${should_execute}==true
 ```
