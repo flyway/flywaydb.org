@@ -1,6 +1,6 @@
 # flywaydb.org
 
-This is the code for Flyway's website hosted at <https://flywaydb.org>
+This is the code for Flyway's documentation hosted at <https://flywaydb.org/documentation>.
 
 ## Contributing
 
