@@ -9,6 +9,27 @@ redirect_from: /documentation/releaseNotes/
 <p>Thank you all for reporting all these issues and contributing fixes!</p>
 
 <div class="release">
+    <h2 id="7.5.1">Flyway 7.5.1 (2021-01-21)</h2>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        {% include issue.html title="Alpine Docker image rebuilt based on openjdk:16-alpine to fix CVE (as 12-alpine is no longer maintained)" %}
+        {% include issue.html id="3049" title="HSQLDB: case-sensitivity bug on PROCEDURE fixed " %}
+        {% include issue.html id="3053" title="HSQLDB: failure to parse END inside a query fixed" %}
+    </ul>
+
+    <h3>Changes</h3>
+    <ul>
+        <li>Vault integration: configuration now allows multiple locations for secrets</li>
+        <li>Vault integration: now supports V2 of Vault secret engine</li>
+    </ul>
+
+    <p>
+        Thanks to esauser and Peter Gerrard for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
     <h2 id="7.5.0">Flyway 7.5.0 (2021-01-11)</h2>
 
     <h3>Bug fixes</h3>
