@@ -13,15 +13,15 @@ redirect_from: /documentation/releaseNotes/
 
     <h3>Bug fixes</h3>
     <ul>
-        {% include issue.html title="Alpine Docker image rebuilt based on openjdk:16-alpine to fix CVE (as 12-alpine is no longer maintained)" %}
-        {% include issue.html id="3049" title="HSQLDB: case-sensitivity bug on PROCEDURE fixed " %}
+        <li>Alpine Docker image rebuilt based on openjdk:16-alpine to fix CVE (as 12-alpine is no longer maintained)</li>
+        {% include issue.html id="3049" title="HSQLDB: case-sensitivity bug on PROCEDURE fixed" %}
         {% include issue.html id="3053" title="HSQLDB: failure to parse END inside a query fixed" %}
     </ul>
 
     <h3>Changes</h3>
     <ul>
         <li>Vault integration: configuration now allows multiple locations for secrets</li>
-        <li>Vault integration: now supports V2 of Vault secret engine</li>
+        <li>Vault integration: now support V1 of key-value secret engine</li>
     </ul>
 
     <p>
