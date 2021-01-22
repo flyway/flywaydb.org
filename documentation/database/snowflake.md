@@ -7,6 +7,7 @@ subtitle: Snowflake
 
 ## Supported Versions
 
+- `5.x` versions up to 5.1
 - `4.x` versions up to 4.2
 - `3.50` and later `3.x` versions
 
