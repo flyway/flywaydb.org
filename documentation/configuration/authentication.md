@@ -37,6 +37,17 @@ By storing your username and password in the environment variables `FLYWAY_USER`
 ### Snowflake
 - [Key-based Authentication](/documentation/database/snowflake#key-based-authentication)
 
+## Platform Specific Authentication
+
+### AWS IAM
+
+Configure the JDBC URL to point to an AWS RDS instance:  
+`flyway.url=jdbc:mysql://<RDS_INSTANCE_HOSTNAME>:<RDS_INSTANCE_PORT>`
+
+Set `flyway.user` to be the database user and `flyway.password` to be the IAM authentication token: `flyway.password=<AuthToken>`
+
+You can read more about AWS IAM in Java applications [here](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.Connecting.Java.html).
+
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/configuration/awsSecretsManager">AWS Secrets Manager<i class="fa fa-arrow-right"></i></a>
 </p>
