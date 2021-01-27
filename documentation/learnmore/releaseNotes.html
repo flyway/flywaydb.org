@@ -9,6 +9,27 @@ redirect_from: /documentation/releaseNotes/
 <p>Thank you all for reporting all these issues and contributing fixes!</p>
 
 <div class="release">
+    <h2 id="7.5.2">Flyway 7.5.2 (2021-01-27)</h2>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        <li>Check that PostgreSQL advisory unlock result returns true</li>
+        <li>Allow 'pro' in FLYWAY_EDITION environment variable</li>
+        <li>Remove warning following tests against Snowflake 5.1</li>
+    </ul>
+
+    <h3>Changes</h3>
+    <ul>
+        {% include issue.html id="3042" title="Add fulltext database to SQL Server non-transactional list" %}
+        {% include issue.html id="3060" title="Add Flyway upgrade exceptions when setting secret management parameters" %}
+    </ul>
+
+    <p>
+        Thanks to JeanFrancoeur and wilkinsona for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
     <h2 id="7.5.1">Flyway 7.5.1 (2021-01-21)</h2>
 
     <h3>Bug fixes</h3>
