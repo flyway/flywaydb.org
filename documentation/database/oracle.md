@@ -212,6 +212,10 @@ Not all SQL*Plus commands are supported by Flyway. Unsupported commands are grac
 
 As much as possible, Flyway aims to emulate the behavior of the SQL*Plus client in Oracle SQL Developer. However, there are some edge cases where Flyway isn't able to emulate the behavior exactly. Known cases are detailed below:
 
+- Abbreviations: Flyway is limited by JDBC support for particular commands, and this is more strict than the
+SQL*Plus client; in general abbreviations are supported by Flyway as documented [here](https://docs.oracle.com/cd/B19306_01/server.102/b14357/ch12041.htm),
+so for example `SHOW ERRORS` can be abbreviated to `SHO ERR`, but not `SHOW ERROR` (which is accepted by the client).
+
 - SQL*Plus is known to replace CRLF pairs in string literals with single LFs. Flyway will not do this - instead it preserves scripts as they are written    
 
 If you encounter a discrepancy between the Oracle SQL*Plus client and Flyway, let us know via the official support email.
