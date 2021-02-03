@@ -28,7 +28,7 @@ flyway.createSchemas=false
 
 ### Environment Variable
 ```properties
-FLYWAY_SCHEMAS=false
+FLYWAY_CREATE_SCHEMAS=false
 ```
 
 ### API
