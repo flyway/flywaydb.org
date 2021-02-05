@@ -220,6 +220,10 @@ so for example `SHOW ERRORS` can be abbreviated to `SHO ERR`, but not `SHOW ERRO
 
 If you encounter a discrepancy between the Oracle SQL*Plus client and Flyway, let us know via the official support email.
 
+#### Referenced scripts and checksums
+
+Flyway includes any referenced scripts when calculating checksums. This also extends to `login.sql` and `glogin.sql` since their contents can affect the reproducibility of a migration and can differ in different environments.
+
 ### Known issues and workarounds
 
 Implementing a compatible solution to some problems isn't always possible, so we document those problems and the valid workarounds.
