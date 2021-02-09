@@ -370,14 +370,16 @@ public class V1_2__Another_user extends BaseJavaMigration {
 ## Script migrations 
 {% include teams.html %}
 
-Sometimes it may be more desirable to use a scripting language for migrations. Flyway Teams currently supports the `.ps1`, `.bat`, `.cmd`, `.sh`, `.bash`, `.py` file extensions, and on non-windows platforms it also supports migrations without extensions (assuming a valid [shebang](https://en.wikipedia.org/wiki/Shebang_(Unix))).
+Sometimes it may be more desirable to use a scripting language for migrations. Flyway Teams currently supports the `.ps1`, `.bat`, `.cmd`, `.sh`, `.bash`, `.py` file extensions as migrations, and on non-windows platforms it also supports migrations without extensions (assuming a valid [shebang](https://en.wikipedia.org/wiki/Shebang_(Unix))).
 
-These can be used for a number of tasks such as
+These migrations follow the same [naming scheme](/documentation/concepts/migrations#naming) as SQL migrations, with only the file extension being different. For example `V1__execute_batch_tool.ps1` is a valid migration.
+
+Script migrations can be used for a number of tasks such as:
 - Triggering execution of a 3rd party application as part of the migrations (such as a batch upload tool)
 - Cleaning up local files (such as those created by SQL*Plus SPOOL)
 
 ### Important notes
-On linux, if executing a extensionless migration that is not set to be executable, Flyway will attempt to set the file to be executable before running it.
+On linux, if executing an extensionless migration that is not set to be executable, Flyway will attempt to set the file to be executable before running it.
 
 The migration checksum is only calculated for the migration itself, not for any files it references or loads.
 
