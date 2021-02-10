@@ -9,6 +9,32 @@ redirect_from: /documentation/releaseNotes/
 <p>Thank you all for reporting all these issues and contributing fixes!</p>
 
 <div class="release">
+    <h2 id="7.5.3">Flyway 7.5.3 (2021-02-10)</h2>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        {% include issue.html id="3063" title="Drop SQLServer types at the database level" %}
+        {% include issue.html id="3071" title="Support multiline boolean expressions for shouldExecute" %}
+    </ul>
+
+    <h3>Changes</h3>
+    <ul>
+        {% include issue.html id="3074" title="Log referenced scripts used when calculating checksums" %}
+        {% include issue.html id="3066" title="Get MySQL and MariaDB version from the database" %}
+        <li>Check that PostgreSQL unlock result is true</li>
+    </ul>
+
+    <h3>Database compatibility</h3>
+    <ul>
+        {% include issue.html id="3070" title="Support SQL Server engine edition 9" %}
+    </ul>
+
+    <p>
+        Thanks to Sam-Redgate, StaffanHorke, TonytheEditor, chakrit, and scottsauber for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
     <h2 id="7.5.2">Flyway 7.5.2 (2021-01-27)</h2>
 
     <h3>Bug fixes</h3>
