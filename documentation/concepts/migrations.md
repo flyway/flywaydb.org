@@ -383,6 +383,8 @@ On linux, if executing an extensionless migration that is not set to be executab
 
 The migration checksum is only calculated for the migration itself, not for any files it references or loads.
 
+Script migrations do not support placeholder replacement during execution, but placeholders are considered when calculating checksums so that repeatables may be re-executed.
+
 ## Transactions
 
 By default, Flyway always wraps the execution of an entire migration within a single transaction.
