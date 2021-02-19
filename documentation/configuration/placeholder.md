@@ -6,9 +6,13 @@ redirect_from: /documentation/placeholders/
 ---
 
 # Placeholders
-In addition to regular SQL syntax, Flyway also supports placeholder replacement with configurable pre- and suffixes.
+In addition to regular SQL syntax, Flyway also supports placeholder replacement with configurable prefixes and suffixes.
 By default it looks for Ant-style placeholders like `${myplaceholder}`. This can be very useful to abstract differences between environments.
+
 Changing the value of placeholders will cause repeatable migrations to be re-applied on next migrate.
+
+Placeholders are also provided as additional properties to the database connection, so placeholders reserved by your database (e.g. `serverName` for SQL Server)
+will be used by the connection.
 
 Placeholders are supported in versioned migrations, repeatable migrations, and SQL callbacks.
 
