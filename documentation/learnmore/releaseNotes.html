@@ -9,6 +9,28 @@ redirect_from: /documentation/releaseNotes/
 <p>Thank you all for reporting all these issues and contributing fixes!</p>
 
 <div class="release">
+    <h2 id="7.5.4">Flyway 7.5.4 (2021-02-22)</h2>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        {% include issue.html id="3088" title="Fix comparator exception in migration comparator" %}
+        {% include issue.html id="3090" title="Fix cleaning of SQL Server computed columns which are primary keys" %}
+        <li>Fix incorrectly updating dropped schema list in clean JSON result</li>
+    </ul>
+
+    <h3>Changes</h3>
+    <ul>
+        {% include issue.html id="2761" title="Support SnowflakeDB `QUOTED_IDENTIFIERS_IGNORE_CASE = true`" %}
+        {% include issue.html id="3071" title="Support multiline boolean expressions for `shouldExecute`" %}
+        {% include issue.html id="3081" title="Log output from script migrations at the info level" %}
+    </ul>
+
+    <p>
+        Thanks to dvdtknsn, esauser, johnwright, and scottsauber for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
     <h2 id="7.5.3">Flyway 7.5.3 (2021-02-10)</h2>
 
     <h3>Bug fixes</h3>
