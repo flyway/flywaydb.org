@@ -9,7 +9,7 @@ subtitle: flyway.vaultUrl
 {% include teams.html %}
 
 ## Description
-The REST API URL of your Vault server, including the API version. Currently only supports API version v1.
+The REST API URL of your [Vault](https://www.vaultproject.io/) server, including the API version. Currently only supports API version v1.
 
 Example: `http://localhost:8200/v1/`
 

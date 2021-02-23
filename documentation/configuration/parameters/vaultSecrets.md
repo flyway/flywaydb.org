@@ -9,7 +9,7 @@ subtitle: flyway.vaultSecrets
 {% include teams.html %}
 
 ## Description
-A comma-separated list of paths to key-value secrets in Vault that contain Flyway configurations. This must start with the name of the engine and end with the name of the secret.
+A comma-separated list of paths to key-value secrets in [Vault](https://www.vaultproject.io/) that contain Flyway configurations. This must start with the name of the engine and end with the name of the secret.
 
 The resulting form is `{engine_name}/data/{path}/{to}/{secret_name}` for the key-value V2 engine, and `{engine_name}/{path}/{to}/{secret_name}` for the key-value V1 engine.
 If multiple secrets specify the same configuration parameter, then the last secret takes precedence.

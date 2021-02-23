@@ -9,7 +9,7 @@ subtitle: flyway.vaultToken
 {% include teams.html %}
 
 ## Description
-The Vault token required to access your secrets.
+The [Vault](https://www.vaultproject.io/) token required to access your secrets.
 
 ## Usage
 
