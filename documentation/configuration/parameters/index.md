@@ -108,3 +108,8 @@ If using maven, config parameters can be set in the plugin configuration block, 
 - [oracleSqlPlusWarn](/documentation/configuration/parameters/oracleSqlPlusWarn) {% include teams.html %}
 - [oracleKerberosCacheFile](/documentation/configuration/parameters/oracleKerberosCacheFile) {% include teams.html %}
 - [oracleKerberosConfigFile](/documentation/configuration/parameters/oracleKerberosConfigFile) {% include teams.html %}
+
+### Secrets Management - Vault
+- [vaultUrl](/documentation/configuration/parameters/vaultUrl) {% include teams.html %}
+- [vaultToken](/documentation/configuration/parameters/vaultToken) {% include teams.html %}
+- [vaultSecrets](/documentation/configuration/parameters/vaultSecrets) {% include teams.html %}
