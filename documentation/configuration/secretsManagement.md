@@ -54,7 +54,7 @@ To make Flyway pull credentials from the Secrets Manager, you need to perform th
 
 Now you can run `migrate`, `info`, etc. and the credentials will be pulled out of the Secrets Manager.
 
-## Vault
+## HashiCorp Vault
 
 Flyway integrates with [Vault's](https://www.vaultproject.io/) key-value engine in order to allow users to store Flyway configuration parameters securely. This can be used to securely read license keys without storing them in application configuration, and other configuration parameters can also be stored and read such as your database password or Flyway placeholders.
 
