@@ -4,15 +4,18 @@ menu: secretsManagement
 subtitle: Secrets Management
 redirect_from: /documentation/awsSecretsManager/
 ---
-# AWS Secrets Manager support
+# Secrets Management
 {% include teams.html %}
 
-A problem that organizations often encounter is where to store the credentials for connecting to the database. 
-[AWS Secrets Manager](https://aws.amazon.com/secrets-manager) offers a solution to the problem.
-Secrets such as usernames and passwords can be stored in the Secrets Manager, and then be accessed via an id 
-known to authorized users. This keeps sensitive credentials out of application configuration.
+A problem that organizations often encounter is where to store and how to access sensitive data such as the credentials for connecting to a database or their Flyway license key.
 
-## Driver
+Flyway comes with support for various secrets manegement solutions that enable you to successfully handle sensitive data.
+
+## AWS Secrets Manager
+
+[AWS Secrets Manager](https://aws.amazon.com/secrets-manager) offers a solution to the problem of handling database credentials. Secrets such as usernames and passwords can be stored in the Secrets Manager, and then accessed via an id known to authorized users. This keeps sensitive credentials out of application configuration.
+
+### Driver
 <table class="table">
 <tr>
 <th>Ships with Flyway Command-line</th>
@@ -28,7 +31,7 @@ known to authorized users. This keeps sensitive credentials out of application c
 </tr>
 </table>
 
-## Supported databases
+### Supported databases
 Secrets Manager support is currently provided by the [AWS Secrets Manager JDBC Library](https://github.com/aws/aws-secretsmanager-jdbc) for the following databases:
 - MariaDB
 - MySQL
@@ -36,7 +39,7 @@ Secrets Manager support is currently provided by the [AWS Secrets Manager JDBC L
 - PostgreSQL
 - SQL Server
 
-## Configuring Flyway
+### Configuring Flyway
 To make Flyway pull credentials from the Secrets Manager, you need to perform the following steps:
 - Ensure the AWS CLI is installed and configured to be able to access the Secrets Manager.
 - Add the driver to your project dependencies, or add it to the drivers folder if using the CLI.
@@ -46,10 +49,8 @@ To make Flyway pull credentials from the Secrets Manager, you need to perform th
 - Change the `flyway.user` configuration property to contain the secret id.
 - Remove the `flyway.password` configuration property.
 
-Now you can run `migrate`, `info`, etc and the credentials will be pulled out of the Secrets Manager.
+Now you can run `migrate`, `info`, etc. and the credentials will be pulled out of the Secrets Manager.
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/configuration/placeholder">Placeholders <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/configuration/placeholder">Placeholders<i class="fa fa-arrow-right"></i></a>
 </p>
-
-{% include trialpopup.html %}
