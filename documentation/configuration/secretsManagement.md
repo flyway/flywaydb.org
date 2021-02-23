@@ -9,7 +9,10 @@ redirect_from: /documentation/awsSecretsManager/
 
 A problem that organizations often encounter is where to store and how to access sensitive data such as the credentials for connecting to a database or their Flyway license key.
 
-Flyway comes with support for various secrets manegement solutions that enable you to successfully handle sensitive data.
+Flyway comes with support for the following secrets manegement solutions that enable you to successfully handle sensitive data:
+
+- [AWS Secrets Manager](/documentation/configuration/secretsManagement#aws-secrets-manager)
+- [Vault](/documentation/configuration/secretsManagement#vault)
 
 ## AWS Secrets Manager
 
@@ -50,6 +53,8 @@ To make Flyway pull credentials from the Secrets Manager, you need to perform th
 - Remove the `flyway.password` configuration property.
 
 Now you can run `migrate`, `info`, etc. and the credentials will be pulled out of the Secrets Manager.
+
+## Vault
 
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/configuration/placeholder">Placeholders<i class="fa fa-arrow-right"></i></a>
