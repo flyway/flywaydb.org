@@ -547,6 +547,18 @@ title: Documentation
                                 <li
                                 {% if page.pill == 'validateOnMigrate' %} class="nav--vertical__active" {% endif %}>
                                 <a href="/documentation/configuration/parameters/validateOnMigrate">validateOnMigrate</a></li>
+
+                                <li
+                                {% if page.pill == 'vaultSecrets' %} class="nav--vertical__active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/vaultSecrets">vaultSecrets</a></li>
+
+                                <li
+                                {% if page.pill == 'vaultToken' %} class="nav--vertical__active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/vaultToken">vaultToken</a></li>
+
+                                <li
+                                {% if page.pill == 'vaultUrl' %} class="nav--vertical__active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/vaultUrl">vaultUrl</a></li>
                                 
                                 <li
                                 {% if page.pill == 'workingDirectory' %} class="nav--vertical__active" {% endif %}>
@@ -580,8 +592,8 @@ title: Documentation
                             <a href="/documentation/configuration/authentication">Authentication</a></li>
 
                             <li
-                            {% if page.menu == 'awsSecretsManager' %} class="nav--vertical__active" {% endif %}>
-                            <a href="/documentation/configuration/awsSecretsManager">AWS Secrets Manager</a></li>
+                            {% if page.menu == 'secretsManagement' %} class="nav--vertical__active" {% endif %}>
+                            <a href="/documentation/configuration/secretsManagement">Secrets Management</a></li>
                         </ul>
                     </details>
 
