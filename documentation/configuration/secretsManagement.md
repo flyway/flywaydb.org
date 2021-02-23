@@ -56,6 +56,23 @@ Now you can run `migrate`, `info`, etc. and the credentials will be pulled out o
 
 ## Vault
 
+Flyway integrates with [Vault's](https://www.vaultproject.io/) key-value engine in order to allow users to store Flyway configuration parameters securely. This can be used to securely read license keys without storing them in application configuration, and other configuration parameters can also be stored and read such as your database password or Flyway placeholders.
+
+Parameters stored in secrets in Vault are read with the highest priority and will override all other configurations.
+
+### Example
+
+Assume we have the following two secrets in Vault:
+- `test/1/config` which contains `flyway.url=jdbc:h2:mem:db` and uses key-value engine V1
+- `test/2/config` which contains `flyway.user=sa` and uses key-value engine V2
+
+In order to read these secrets you need to configure just the following Flyway parameters:
+- [flyway.vault.url](/documentation/configuration/parameters/vaultUrl) - This is the REST API URL of your Vault server e.g. `http://localhost:8200/v1/`
+- [flyway.vault.token](/documentation/configuration/parameters/vaultToken) - This is the Vault token required to access your secrets e.g. `s.abcdefghijklmnopqrstuvwx`
+- [flyway.vault.secrets](/documentation/configuration/parameters/vaultSecrets) - This is a comma-separated list of paths to secrets that contain Flyway configurations. This must start with the name of the engine and end with the name of the secret. In our cause we would set `flyway.vault.secrets=kv/test/1/config,kv/data/test/2/config`
+
+After configuring the above parameters, we would be able to connect to a database in Flyway without configuring a database connection locally as all of the necessary configuration would be read from Vault.
+
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/configuration/placeholder">Placeholders<i class="fa fa-arrow-right"></i></a>
 </p>
