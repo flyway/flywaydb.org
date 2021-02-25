@@ -12,7 +12,7 @@ A problem that organizations often encounter is where to store and how to access
 Flyway comes with support for the following secrets manegement solutions that enable you to successfully handle sensitive data:
 
 - [AWS Secrets Manager](/documentation/configuration/secretsManagement#aws-secrets-manager)
-- [Vault](/documentation/configuration/secretsManagement#vault)
+- [Vault](/documentation/configuration/secretsManagement#hashicorp-vault)
 
 ## AWS Secrets Manager
 
