@@ -79,5 +79,5 @@ flyway migrate -cherryPick="1,3"
 When it comes to migrating `V2`, we can utilise [outOfOrder](/documentation/configuration/parameters/outOfOrder) as follows:
 
 ```
-flyway migrate -cherryPick="2" -outOfOrder="true"
+flyway migrate -outOfOrder="true"
 ```
