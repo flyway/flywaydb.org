@@ -159,7 +159,7 @@ For command line users, you'll have to download them all manually. To do this, y
 ```
 
 - Click 'Submit'
-- Download the archive and add the files to your classpath. See [Adding to the classpath](/documentation/addingToTheClasspath).
+- Download the archive and add it to the `lib` folder in your command-line installation.
 
 #### Connecting
 
