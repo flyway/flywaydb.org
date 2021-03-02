@@ -54,13 +54,13 @@ Download the following files from the [AdoptOpenJDK website](https://adoptopenjd
 - [Linux x64 JRE 11.0.2](https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.2%2B9/OpenJDK11U-jre_x64_linux_hotspot_11.0.2_9.tar.gz)
 - [macOS x64 JRE 11.0.2](https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.2%2B9/OpenJDK11U-jre_x64_mac_hotspot_11.0.2_9.tar.gz)
 
-and place them in your local maven repository as
+and place them in your local maven repository as:
 
 - `~/.m2/repository/net/adoptopenjdk/jre/11.0.2/jre-11.0.2-windows-x64.zip`
 - `~/.m2/repository/net/adoptopenjdk/jre/11.0.2/jre-11.0.2-linux-x64.tar.gz`
 - `~/.m2/repository/net/adoptopenjdk/jre/11.0.2/jre-11.0.2-macos-x64.tar.gz`
 
-by invoking
+by invoking:
 
 <pre class="console">mvn install:install-file -DgroupId=net.adoptopenjdk \
 -DartifactId=jre \
@@ -68,7 +68,7 @@ by invoking
 -Dtype=zip \
 -Dversion=11.0.2 \
 -Dpackaging=zip \
--Dfile=OpenJDK11U-jre_x64_windows_hotspot_11.0.2_9.zip</pre>
+-Dfile=path/to/OpenJDK11U-jre_x64_windows_hotspot_11.0.2_9.zip</pre>
 
 <pre class="console">mvn install:install-file -DgroupId=net.adoptopenjdk \
 -DartifactId=jre \
@@ -76,7 +76,7 @@ by invoking
 -Dtype=tar.gz \
 -Dversion=11.0.2 \
 -Dpackaging=tar.gz \
--Dfile=OpenJDK11U-jre_x64_linux_hotspot_11.0.2_9.tar.gz</pre>
+-Dfile=path/to/OpenJDK11U-jre_x64_linux_hotspot_11.0.2_9.tar.gz</pre>
 
 <pre class="console">mvn install:install-file -DgroupId=net.adoptopenjdk \
 -DartifactId=jre \
@@ -84,9 +84,8 @@ by invoking
 -Dtype=tar.gz \
 -Dversion=11.0.2 \
 -Dpackaging=tar.gz \
--Dfile=OpenJDK11U-jre_x64_mac_hotspot_11.0.2_9.tar.gz</pre>
+-Dfile=path/to/OpenJDK11U-jre_x64_mac_hotspot_11.0.2_9.tar.gz</pre>
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/contribute/code/submit">Submit your changes <i
-            class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/contribute/code/submit">Submit your changes <i class="fa fa-arrow-right"></i></a>
 </p>
