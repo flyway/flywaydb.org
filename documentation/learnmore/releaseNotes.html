@@ -9,6 +9,32 @@ redirect_from: /documentation/releaseNotes/
 <p>Thank you all for reporting all these issues and contributing fixes!</p>
 
 <div class="release">
+    <h2 id="7.6.0">Flyway 7.6.0 (2021-03-05)</h2>
+
+    <h3>New features</h3>
+    <ul>
+        {% include issue.html id="3084" title="Allow loading Gradle configuration artifacts outside of a Java project" %}
+    </ul>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        {% include issue.html id="3090" title="Fix cleaning SQL Server computed columns which are primary keys" %}
+        {% include issue.html id="3091" title="Fix exception in migration comparator by sorting ignored migrations by version" %}
+        {% include issue.html id="3092" title="Fix NPE by checking CodeSource location isn't null" %}
+    </ul>
+
+    <h3>Changes</h3>
+    <ul>
+        {% include issue.html id="3098" title="Throw upgrade required exception when using shouldExecute in community" %}
+        <li>Remove experimental annotations from Vault parameters</li>
+    </ul>
+
+    <p>
+        Thanks to eikek, esauser, and johnwright for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
     <h2 id="7.5.4">Flyway 7.5.4 (2021-02-22)</h2>
 
     <h3>Bug fixes</h3>
