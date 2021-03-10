@@ -11,6 +11,19 @@ redirect_from: /documentation/configuration/configFileEncoding/
 ## Description
 The file encoding to use when loading [Flyway configuration files](/documentation/configuration/configfile).
 
+The encodings that Flyway supports are:
+
+- `US-ASCII`
+- `ISO-8859-1`
+- `UTF-8`
+- `UTF-16BE`
+- `UTF-16LE`
+- `UTF-16`
+
+All your config files must have the same file encoding.
+
+See [Encoding](/documentation/configuration/encoding) for details about correct configuration.
+
 ## Default
 UTF-8
 
