@@ -34,6 +34,7 @@ Flyway also provides default placeholders, whose values are automatically popula
 - `${flyway:database}` = The name of the database from the connection url
 - `${flyway:timestamp}` = The time that Flyway parsed the script, formatted as 'yyyy-MM-dd HH:mm:ss'
 - `${flyway:filename}` = The filename of the current script
+- `${flyway:workingDirectory}` = The user working directory as defined by the ['user.dir']((https://docs.oracle.com/javase/tutorial/essential/environment/sysprop.html)) System Property
 
 ### Example
 Here is a small example of the supported syntax:
