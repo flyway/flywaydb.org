@@ -108,7 +108,7 @@ import java.sql.Statement;
 public class V3__Anonymize extends BaseJavaMigration {
     public void migrate(Context context) throws Exception {
         try (Statement select = context.getConnection().createStatement()) {
-            try (ResultSet rows = select.executeQuery("SELECT id FROM person ORDER BY id")) {
+            try (ResultSet rows = select.executeQuery("SELECT id FROM person ORDER BY id;")) {
                 while (rows.next()) {
                     int id = rows.getInt(1);
                     String anonymizedName = "Anonymous" + id;
