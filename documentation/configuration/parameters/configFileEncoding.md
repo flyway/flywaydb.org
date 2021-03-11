@@ -22,8 +22,6 @@ The encodings that Flyway supports are:
 
 All your config files must have the same file encoding.
 
-See [Encoding](/documentation/configuration/encoding) for details about correct configuration.
-
 ## Default
 UTF-8
 
@@ -39,7 +37,7 @@ Not available
 
 ### Environment Variable
 ```properties
-FLYWAY_configFileEncoding=UTF-16
+FLYWAY_CONFIG_FILE_ENCODING=UTF-16
 ```
 
 ### API
