@@ -112,15 +112,17 @@ public class V3__Anonymize extends BaseJavaMigration {
                 while (rows.next()) {
                     int id = rows.getInt(1);
                     String anonymizedName = "Anonymous" + id;
-                    try (Statement update = context.getConnection().createStatement()) {
-                        update.execute("UPDATE person SET name='" + anonymizedName + "' WHERE id=" + id);
+
+                    try (PreparedStatement update = context.getConnection().prepareStatement("UPDATE person SET name = ? WHERE id = ?;")) {
+                        update.setString(1, anonymizedName);
+                        update.setInt(2, id);
+                        update.executeUpdate();
                     }
                 }
             }
         }
     }
-}
-```
+}```
 
 Finally compile the project using
 <pre class="console"><span>bar&gt;</span> mvn compile</pre>
