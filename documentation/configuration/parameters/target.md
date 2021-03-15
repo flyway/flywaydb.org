@@ -14,7 +14,7 @@ The target version up to which Flyway should consider migrations. If set to a va
 this must be a valid migration version (e.g. `2.1`).
 
 When migrating forwards, Flyway will apply all migrations up to and including the target version. Migrations with a 
-higher version number will be ignored. If the target is <code>current</code>, then no versioned migrations will be
+higher version number will be ignored. If the target is `current`, then no versioned migrations will be
 applied but repeatable migrations will be, together with any callbacks.
 
 When undoing migrations, Flyway will apply all undo scripts up to and including the target version. Undo scripts with a 
@@ -29,7 +29,7 @@ Special values:
 
 ## Default
 
-<code>latest</code> for migrations, <code>current</code> for undos.
+`latest` for versioned migrations, `current` for undo migrations.
 
 ## Usage
 
