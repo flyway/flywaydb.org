@@ -9,7 +9,17 @@ redirect_from: /documentation/configuration/target/
 # Target
 
 ## Description
-The target version up to which Flyway should consider migrations. Migrations with a higher version number will be ignored. If set to a value other than `current` or `latest`, this must be a valid migration version (e.g. `2.1`).
+
+The target version up to which Flyway should consider migrations. If set to a value other than `current` or `latest`, 
+this must be a valid migration version (e.g. `2.1`).
+
+When migrating forwards, Flyway will apply all migrations up to and including the target version. Migrations with a 
+higher version number will be ignored. If the target is <code>current</code>, then no versioned migrations will be
+applied but repeatable migrations will be, together with any callbacks.
+
+When undoing migrations, Flyway will apply all undo scripts up to and including the target version. Undo scripts with a 
+lower version number will be ignored. Specifying a target version should be done with care, as undo scripts typically
+destroy database objects.
 
 Special values:
 <ul>
@@ -18,7 +28,8 @@ Special values:
 </ul>
 
 ## Default
-latest
+
+<code>latest</code> for migrations, <code>current</code> for undos.
 
 ## Usage
 
