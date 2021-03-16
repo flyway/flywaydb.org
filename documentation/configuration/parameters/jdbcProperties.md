@@ -28,7 +28,7 @@ flyway.jdbcProperties.accessToken=my-access-token
 
 ### Environment Variable
 ```properties
-FLYWAY_JDBC_PROPERTIES_ACCESSTOKEN=access-token
+FLYWAY_JDBC_PROPERTIES_accessToken=access-token
 ```
 
 ### API
