@@ -7,6 +7,7 @@ subtitle: CockroachDB
 
 ## Supported Versions
 
+- `20.2`
 - `19.2`
 - `19.1`
 - `2.1`
@@ -73,6 +74,10 @@ INSERT INTO ${tableName} (name) VALUES ('Mr. T');
 ## Limitations
 
 - No support for psql meta-commands with no JDBC equivalent like `\set`
+
+## Additional Information
+
+- See CockroachDB's walkthrough on using Flyway [here](https://www.cockroachlabs.com/docs/stable/flyway.html)
 
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/database/saphana">SAP HANA <i class="fa fa-arrow-right"></i></a>
