@@ -9,7 +9,7 @@ redirect_from: /documentation/configuration/baselineOnMigrate/
 # Baseline On Migrate
 
 ## Description
-Whether to automatically call [baseline](/documentation/command/baseline) when migrate is executed against a non-empty schema with no metadata table. This schema will then be baselined with the `baselineVersion` before executing the migrations. Only migrations above `baselineVersion` will then be applied.
+Whether to automatically call [baseline](/documentation/command/baseline) when [migrate](/documentation/command/migrate) is executed against a non-empty schema with no metadata table. This schema will then be baselined with the `baselineVersion` before executing the migrations. Only migrations above `baselineVersion` will then be applied.
 
 This is useful for initial Flyway production deployments on projects with an existing DB.
 
@@ -22,7 +22,7 @@ false
 
 ### Commandline
 ```powershell
-./flyway -baselineOnMigrate="true" baseline
+./flyway -baselineOnMigrate="true" migrate
 ```
 
 ### Configuration File
