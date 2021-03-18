@@ -8,6 +8,7 @@ subtitle: CockroachDB
 ## Supported Versions
 
 - `20.2`
+- `20.1`
 - `19.2`
 - `19.1`
 - `2.1`
