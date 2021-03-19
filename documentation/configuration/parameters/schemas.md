@@ -37,7 +37,7 @@ FLYWAY_SCHEMAS=schema1,schema2
 ### API
 ```java
 Flyway.configure()
-    .schemas("schema1,schema2")
+    .schemas("schema1", "schema2")
     .load()
 ```
 
