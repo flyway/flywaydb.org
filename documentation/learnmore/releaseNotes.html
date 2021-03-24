@@ -9,6 +9,33 @@ redirect_from: /documentation/releaseNotes/
 <p>Thank you all for reporting all these issues and contributing fixes!</p>
 
 <div class="release">
+    <h2 id="7.7.1">Flyway 7.7.1 (2021-03-24)</h2>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        {% include issue.html id="3110" title="Correctly parse <code>GO</code> in identifiers"%}
+        {% include issue.html id="3115" title="Handle <code>NOT ATOMIC</code> statements in MariaDB" %}
+        {% include issue.html id="3116" title="Fix cleaning of computed columns in SQL Server" %}
+        {% include issue.html id="-1" title="Improve JDBC properties env var usage" %}
+    </ul>
+
+    <h3>Changes</h3>
+    <ul>
+        {% include issue.html id="2847" title="Display link to docs page upon PostgreSQL lock fail" %}
+        {% include issue.html id="3105" title="Promote update query debug logs to info logs" %}
+        <li>Update various dependencies</li>
+        <li>SQL callbacks support <code>shouldExecute</code></li>
+        <li>Fix <code>-target=latest</code> for undo</li>
+        <li>Add <code>installedOnUTC</code> field on JSON result for info</li>
+        <li>Update copyright headers</li>
+    </ul>
+
+    <p>
+        Thanks to JD-CSTx, aherkarsatish11, bobdoah, rchurchley, and zikato for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
     <h2 id="7.7.0">Flyway 7.7.0 (2021-03-11)</h2>
 
     <h3>New features</h3>
