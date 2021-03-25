@@ -32,7 +32,7 @@ subtitle: SQL Server
 </tr>
 <tr>
 <th>Maven Central coordinates</th>
-<td><code>com.microsoft.sqlserver:mssql-jdbc:7.2.0.jre8</code></td>
+<td><code>com.microsoft.sqlserver:mssql-jdbc:9.2.1.jre8</code></td>
 </tr>
 <tr>
 <th>Supported versions</th>
@@ -164,10 +164,11 @@ For command line users, you'll have to download them all manually. To do this, y
 #### Connecting
 
 There are several types of Azure Active Directory authentication:
-- Azure Active Directory with MFA (not supported)*
+- Azure Active Directory with MFA
 - Azure Active Directory Integrated
 - Azure Active Directory MSI
 - Azure Active Directory with Password
+- Azure Active Directory Service Principal
 - Access Tokens
 
 To use the various authentication types, amend your JDBC URL to set the `authentication` parameter:
@@ -179,6 +180,11 @@ To use the various authentication types, amend your JDBC URL to set the `authent
 - For Active Directory With Password set `authentication=ActiveDirectoryPassword`
   - e.g: <code>jdbc:sqlserver://<i>host</i>:<i>port</i>;databaseName=<i>database</i>;authentication=ActiveDirectoryPassword</code>
   - You must also supply a username and password with Flyway's `user` and `password` configuration options
+- For Active Directory Interactive set `authentication=ActiveDirectoryInteractive`
+  - e.g: <code>jdbc:sqlserver://<i>host</i>:<i>port</i>;databaseName=<i>database</i>;authentication=ActiveDirectoryInteractive</code>
+  - This will being an interactive process which expects user input (e.g. a dialogue box), so it's not recommended automated environments
+- For Active Directory Service Principal set `authentication=ActiveDirectoryServicePrincipal `
+  - e.g: <code>jdbc:sqlserver://<i>host</i>:<i>port</i>;databaseName=<i>database</i>;authentication=ActiveDirectoryServicePrincipal </code>
 
 [The Microsoft documentation has more details about how these work with JDBC URLs](https://docs.microsoft.com/en-us/sql/connect/jdbc/connecting-using-azure-active-directory-authentication?view=sql-server-ver15).
 
