@@ -139,13 +139,13 @@ Example: `jdbc:sqlserver://<i>host</i>:<i>port</i>;databaseName=<i>database</i>;
 
 ### Azure Active Directory
 
-#### Installing ADAL4J
+#### Installing MSAL4J
 
-To use Flyway with Azure Active Directory connections, you must install [ADAL4J](https://github.com/AzureAD/azure-activedirectory-library-for-java) and it's dependencies.
+To use Flyway with Azure Active Directory connections, you must install [MSAL4J](https://github.com/AzureAD/microsoft-authentication-library-for-java) and it's dependencies.
 
-If you're using Flyway in an environment that is integrated with Maven or Gradle (Like the Maven or Gradle plugin), you only need to add [ADAL4J's Maven package](https://mvnrepository.com/artifact/com.microsoft.azure/adal4j) as a dependency in your `pom.xml`. Maven should then deal with getting ADAL4J's dependencies itself.
+If you're using Flyway in an environment that is integrated with Maven or Gradle (Like the Maven or Gradle plugin), you only need to add [MSAL4J's Maven package](https://mvnrepository.com/artifact/com.microsoft.azure/msal4j) as a dependency in your `pom.xml`. Maven should then deal with getting MSAL4J's dependencies itself.
 
-For command line users, you'll have to download them all manually. To do this, you can use the JAR Download tool to find ADAL4J and its dependencies:
+For command line users, you'll have to download them all manually. To do this, you can use the JAR Download tool to find MSAL4J and its dependencies:
 
 - Go to the [JAR Download Tool](https://jar-download.com/online-maven-download-tool.php)
 - Paste the following into the `Maven XML` box:
@@ -153,8 +153,8 @@ For command line users, you'll have to download them all manually. To do this, y
 ```xml
 <dependency>
   <groupId>com.microsoft.azure</groupId>
-  <artifactId>adal4j</artifactId>
-  <version>1.6.6</version>
+  <artifactId>msal4j</artifactId>
+  <version>1.9.1</version>
 </dependency>
 ```
 
@@ -182,7 +182,7 @@ To use the various authentication types, amend your JDBC URL to set the `authent
   - You must also supply a username and password with Flyway's `user` and `password` configuration options
 - For Active Directory Interactive set `authentication=ActiveDirectoryInteractive`
   - e.g: <code>jdbc:sqlserver://<i>host</i>:<i>port</i>;databaseName=<i>database</i>;authentication=ActiveDirectoryInteractive</code>
-  - This will being an interactive process which expects user input (e.g. a dialogue box), so it's not recommended automated environments
+  - This will begin an interactive process which expects user input (e.g. a dialogue box), so it's not recommended in automated environments
 - For Active Directory Service Principal set `authentication=ActiveDirectoryServicePrincipal `
   - e.g: <code>jdbc:sqlserver://<i>host</i>:<i>port</i>;databaseName=<i>database</i>;authentication=ActiveDirectoryServicePrincipal </code>
 
