@@ -572,12 +572,6 @@ a.stackoverflow-tag:hover {
     text-decoration: none;
 }
 
-.blog_list {
-    overflow: scroll;
-    overflow-x: hidden;
-    max-height: 500px;
-}
-
 h2 {
     margin-top: 40px;
 }
