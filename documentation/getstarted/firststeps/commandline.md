@@ -63,7 +63,7 @@ It's now time to execute Flyway to migrate your database:
 
 If all went well, you should see the following output:
 
-<pre class="console">Database: jdbc:h2:file:./foobardb (H2 1.4)
+<pre class="console">Database: jdbc:postgresql://instances.spawn.cc:port/foobardb (PostgreSQL 11.0)
 Successfully validated 1 migration (execution time 00:00.008s)
 Creating Schema History table: "PUBLIC"."flyway_schema_history"
 Current version of schema "PUBLIC": << Empty Schema >>
@@ -84,7 +84,7 @@ and execute it by issuing:
 
 You now get:
 
-<pre class="console">Database: jdbc:h2:file:./foobardb (H2 1.4)
+<pre class="console">Database: jdbc:postgresql://instances.spawn.cc:port/foobardb (PostgreSQL 11.0)
 Successfully validated 2 migrations (execution time 00:00.018s)
 Current version of schema "PUBLIC": 1
 Migrating schema "PUBLIC" to version 2 - Add people
