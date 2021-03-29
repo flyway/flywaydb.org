@@ -93,8 +93,8 @@ Successfully applied 1 migration to schema "PUBLIC" (execution time 00:00.016s)<
 ## Summary
 
 In this brief tutorial we saw how to:
-- install the Flyway Command-line tool
-- configure it so it can talk to our database
+- install the Flyway Command-line tool and Spawn
+- configure it so it can talk to our Spawn database
 - write our first couple of migrations
 
 These migrations were then successfully found and executed.
