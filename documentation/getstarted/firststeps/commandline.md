@@ -15,20 +15,33 @@ This tutorial should take you about **10 minutes** to complete.
 
 Start by <a href="/download">downloading the Flyway Command-line Tool</a> for your platform and extract it.
 
-Let's jump into our new directory:
-
-<pre class="console"><span>&gt;</span> cd flyway-{{ site.flywayVersion }}</pre>
-
 Install Spawn by visiting the <a href="https://www.spawn.cc/docs/getting-started.html">getting started documentation</a> and following the installation steps.
 
 ## Configuring Flyway
 
-Once that is done, configure Flyway by editing `/conf/flyway.conf` like this:
+To configure Flyway, we first need a database we can connect to. We’ll use Spawn to create your own, isolated database environment from which you can run migrations against. This will create you your first data container, which is your database instance:
+
+<pre class="console"><span>&gt;</span> spawnctl create data-container --image postgres:empty --name flyway-container</pre>
+
+This will return connection string details which is used to connect and query using your normal tools:
+
+<pre class="console">Data container 'flyway-container' created!
+-> Host=instances.spawn.cc;Port=xxxxx;Username=xxxx;Database=foobardb;Password=xxxxxxxxx</pre>
+
+You can retrieve these details at any time by running:
+
+<pre class="console"><span>&gt;</span> spawnctl get data-container flyway-container -o yaml</pre>
+
+Let's now jump into our new directory created from downloading Flyway:
+
+<pre class="console"><span>&gt;</span> cd flyway-{{ site.flywayVersion }}</pre>
+
+Configure Flyway by editing `/conf/flyway.conf` with your Spawn data container connection details, like this:
 
 ```properties
-flyway.url=jdbc:h2:file:./foobardb
-flyway.user=SA
-flyway.password=
+flyway.url=jdbc:postgresql://instances.spawn.cc:port/foobardb
+flyway.user=user
+flyway.password=password
 ```
 
 ## Creating the first migration
