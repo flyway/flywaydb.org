@@ -141,25 +141,9 @@ Example: `jdbc:sqlserver://<i>host</i>:<i>port</i>;databaseName=<i>database</i>;
 
 #### Installing MSAL4J
 
-To use Flyway with Azure Active Directory connections, you must install [MSAL4J](https://github.com/AzureAD/microsoft-authentication-library-for-java) and it's dependencies.
-
 If you're using Flyway in an environment that is integrated with Maven or Gradle (Like the Maven or Gradle plugin), you only need to add [MSAL4J's Maven package](https://mvnrepository.com/artifact/com.microsoft.azure/msal4j) as a dependency in your `pom.xml`. Maven should then deal with getting MSAL4J's dependencies itself.
 
-For command line users, you'll have to download them all manually. To do this, you can use the JAR Download tool to find MSAL4J and its dependencies:
-
-- Go to the [JAR Download Tool](https://jar-download.com/online-maven-download-tool.php)
-- Paste the following into the `Maven XML` box:
-
-```xml
-<dependency>
-  <groupId>com.microsoft.azure</groupId>
-  <artifactId>msal4j</artifactId>
-  <version>1.9.1</version>
-</dependency>
-```
-
-- Click 'Submit'
-- Download the archive and add it to the `lib` folder in your command-line installation.
+For command-line users, the necessary dependencies are shipped with Flyway so that zero installation is required.
 
 #### Connecting
 
