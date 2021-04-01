@@ -39,9 +39,9 @@ Let's now jump into our new directory created from downloading Flyway:
 Configure Flyway by editing `/conf/flyway.conf` with your Spawn data container connection details, like this:
 
 ```properties
-flyway.url=jdbc:postgresql://instances.spawn.cc:port/foobardb
-flyway.user=user
-flyway.password=password
+flyway.url=jdbc:postgresql://instances.spawn.cc:<Port>/foobardb
+flyway.user=<User>
+flyway.password=<Password>
 ```
 
 ## Creating the first migration
@@ -63,7 +63,7 @@ It's now time to execute Flyway to migrate your database:
 
 If all went well, you should see the following output:
 
-<pre class="console">Database: jdbc:postgresql://instances.spawn.cc:port/foobardb (PostgreSQL 11.0)
+<pre class="console">Database: jdbc:postgresql://instances.spawn.cc:<Port>/foobardb (PostgreSQL 11.0)
 Successfully validated 1 migration (execution time 00:00.008s)
 Creating Schema History table: "PUBLIC"."flyway_schema_history"
 Current version of schema "PUBLIC": << Empty Schema >>
@@ -84,7 +84,7 @@ and execute it by issuing:
 
 You now get:
 
-<pre class="console">Database: jdbc:postgresql://instances.spawn.cc:port/foobardb (PostgreSQL 11.0)
+<pre class="console">Database: jdbc:postgresql://instances.spawn.cc:<Port>/foobardb (PostgreSQL 11.0)
 Successfully validated 2 migrations (execution time 00:00.018s)
 Current version of schema "PUBLIC": 1
 Migrating schema "PUBLIC" to version 2 - Add people
