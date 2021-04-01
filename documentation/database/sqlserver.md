@@ -172,8 +172,6 @@ To use the various authentication types, amend your JDBC URL to set the `authent
 
 [The Microsoft documentation has more details about how these work with JDBC URLs](https://docs.microsoft.com/en-us/sql/connect/jdbc/connecting-using-azure-active-directory-authentication?view=sql-server-ver15).
 
-*Flyway doesn't support Azure Active Directory with MFA, as it is [not supported by the Microsoft JDBC drivers](https://github.com/microsoft/mssql-jdbc/issues/1053).
-
 #### Azure access tokens
 
 Another way to authenticate using Azure Active Directory is through access tokens. As of the time of writing, the access token property on Microsoft's JDBC driver cannot be supplied through the URL. Therefore you should use Flyway's `jdbcProperties` configuration property.
