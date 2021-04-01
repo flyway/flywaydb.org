@@ -9,6 +9,36 @@ redirect_from: /documentation/releaseNotes/
 <p>Thank you all for reporting all these issues and contributing fixes!</p>
 
 <div class="release">
+    <h2 id="7.7.2">Flyway 7.7.2 (2021-04-01)</h2>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        {% include issue.html id="3123" title="Use new MariaDB parser" %}
+    </ul>
+
+    <h3>New features</h3>
+    <ul>
+        {% include issue.html id="3119" title="Updated MSSQL JDBC driver to allow for interactive authentication" %}
+    </ul>
+
+    <h3>Changes</h3>
+    <ul>
+        {% include issue.html id="3131" title="fix #3131: - Update MariaDB support to 10.5" %}
+        <li>Update dependencies</li>
+        <li>Ship MSAL4J dependencies for AAD auth</li>
+        <li>Update GCS dependency</li>
+        <li>Update DB2 driver</li>
+        <li>Update log4j dependency</li>
+        <li>Update Amazon SDK dependency</li>
+        <li>Make flyway.cmd more robust</li>
+    </ul>
+
+    <p>
+        Thanks to JD-CSTx and nicregez for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
     <h2 id="7.7.1">Flyway 7.7.1 (2021-03-24)</h2>
 
     <h3>Bug fixes</h3>
