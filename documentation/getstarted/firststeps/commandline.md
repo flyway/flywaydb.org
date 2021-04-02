@@ -8,7 +8,7 @@ redirect_from: /getStarted/firststeps/commandline/
 # First Steps: Command-line
 
 This brief tutorial will teach **how to get up and running with the Flyway Command-line tool**. It will take you through the
-steps on how to configure it and how to write and execute your first few database migrations, using <a href="spawn.cc">Spawn</a>
+steps on how to configure it and how to write and execute your first few database migrations, using [Spawn](https://spawn.cc/)
 to provision a database instance without the need for installing any database engines onto your own machine. You can create MySQL,
 MSSQL and PostgreSQL databases with Spawn that will work with Flyway.
 
@@ -16,16 +16,16 @@ This tutorial should take you about **10 minutes** to complete.
 
 ## Prerequisites
 
-Start by <a href="/download">downloading the Flyway Command-line Tool</a> for your platform and extract it.
+Start by [downloading the Flyway Command-line Tool](/download) for your platform and extract it.
 
-Install Spawn by visiting the <a href="https://www.spawn.cc/docs/getting-started.html">getting started documentation</a> and following
+Install Spawn by visiting the [getting started documentation](https://www.spawn.cc/docs/getting-started.html) and following
 the installation steps.
 
 ## Configuring Flyway
 
-To configure Flyway, we first need a database we can connect to. We’ll use Spawn to create your own, isolated database environment from which
-you can run migrations against. This will create you your first data container, which is your database instance. Here we are specifying a PostgreSQL
-database but you can also specify `mysql:empty` or `mssql:empty`:
+To configure Flyway, we first need a database we can connect to. We’ll use Spawn to create your own, isolated database environment
+from which you can run migrations against. This will create you your first data container, which is your database instance. Here we
+are specifying a PostgreSQL database but you can also specify `mysql:empty` or `mssql:empty`:
 
 <pre class="console"><span>&gt;</span> spawnctl create data-container --image postgres:empty --name flyway-container</pre>
 
@@ -96,7 +96,8 @@ Current version of schema "PUBLIC": 1
 Migrating schema "PUBLIC" to version 2 - Add people
 Successfully applied 1 migration to schema "PUBLIC" (execution time 00:00.016s)</pre>
 
-Any time you want to reset your database back to it's original state, in this case an empty instance, you can run a reset command on your Spawn data container:
+Any time you want to reset your database back to it's original state, in this case an empty instance, you can run a
+reset command on your Spawn data container:
 
 <pre class="console"><span>&gt;</span> spawnctl reset data-container flyway-container</pre>
 
