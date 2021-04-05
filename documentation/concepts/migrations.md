@@ -354,7 +354,7 @@ package db.migration;
 
 import org.flywaydb.core.api.migration.BaseJavaMigration;
 import org.flywaydb.core.api.migration.Context;
-import java.sql.PreparedStatement;
+import org.springframework.jdbc.core.JdbcTemplate;
 
 /**
  * Example of a Java-based migration using Spring JDBC.
@@ -399,7 +399,7 @@ By default transactional and non-transactional statements cannot be mixed within
 this by setting the [`mixed`](/documentation/configuration/parameters/mixed) property to `true`. Note that this is only
 applicable for PostgreSQL, Aurora PostgreSQL, SQL Server and SQLite which all have statements that do not run at all
 within a transaction. This is not to be confused with implicit transaction, as they occur in MySQL or Oracle, where even
-though a DDL statement was run within within a transaction, the database will issue an implicit commit before and after
+though a DDL statement was run within a transaction, the database will issue an implicit commit before and after
 its execution.
 
 ### Manual override
