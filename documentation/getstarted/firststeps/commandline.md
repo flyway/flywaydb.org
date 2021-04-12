@@ -96,7 +96,7 @@ Current version of schema "PUBLIC": 1
 Migrating schema "PUBLIC" to version 2 - Add people
 Successfully applied 1 migration to schema "PUBLIC" (execution time 00:00.016s)</pre>
 
-Any time you want to reset your database back to it's original state, in this case an empty instance, you can run a
+Any time you want to reset your database back to its original state, in this case an empty instance, you can run a
 reset command on your Spawn data container:
 
 <pre class="console"><span>&gt;</span> spawnctl reset data-container flyway-container</pre>
