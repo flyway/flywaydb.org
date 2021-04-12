@@ -106,8 +106,8 @@ to set any environment variable at all:
 The following flags provide helpful information without carrying out any other operations:
 
 <table class="table table-striped">
-<tr><td><code>--help</code><br/><code>-h</code></td><td>Print the list of available commands and options</td></tr> 
-<tr><td><code>--version</code><br/><code>-v</code><br/><code>-?</code></td><td>Print the Flyway version</td></tr> 
+<tr><td><code>--help</code><br/><code>-h</code><br/><code>-?</code></td><td>Print the list of available commands and options</td></tr> 
+<tr><td><code>--version</code><br/><code>-v</code></td><td>Print the Flyway version</td></tr> 
 </table> 
 
 ## Commands
