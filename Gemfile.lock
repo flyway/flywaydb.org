@@ -37,6 +37,8 @@ GEM
       listen (~> 3.0)
     kramdown (2.3.1)
       rexml
+    kramdown-parser-gfm (1.1.0)
+      kramdown (~> 2.0)
     liquid (4.0.3)
     listen (3.5.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
@@ -65,6 +67,7 @@ PLATFORMS
 DEPENDENCIES
   jekyll (~> 3.9)
   jekyll-redirect-from
+  kramdown-parser-gfm
   rouge
   wdm
 
