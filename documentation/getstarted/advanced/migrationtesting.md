@@ -161,3 +161,73 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch
 ```
+
+### Automate creating backups 
+
+One last thing which is useful - with the way it's set up, you will have to create a data image manually every time you have migration changes to get the latest backup of your production database. But we can [automate this step](https://www.spawn.cc/docs/howto-ci-scheduled-image-creation) using Spawn in our existing GitHub Actions pipeline.
+
+1. Add some more GitHub secrets so that we can allow the agent access to our production database **to back up, not write to**. We will need the database's:
+  * `Host`
+  * `Username`
+  * `Password`
+
+1. Lets add another workflow called `db-backup.yaml` underneath our `.github/workflows` folder:
+
+    ```
+    name: Take backup of production database daily
+
+    on:
+      schedule:
+        - cron: "0 9 * * MON-FRI"
+
+      workflow_dispatch:
+
+    jobs:
+      take_db_backup:
+        name: Take backup of production database
+        runs-on: ubuntu-latest
+        steps:
+          - name: Checkout
+            uses: actions/checkout@v2
+          - name: Create backup
+            run: ./take-db-backup.sh
+            env:
+              SPAWNCTL_ACCESS_TOKEN: ${{ secrets.SPAWNCTL_ACCESS_TOKEN }}
+              PAGILA_HOST: ${{ secrets.PAGILA_HOST }}
+              PAGILA_USERNAME: ${{ secrets.PAGILA_ADMIN_USERNAME }}
+              PAGILA_PASSWORD: ${{ secrets.PAGILA_ADMIN_PASSWORD }}
+    ```
+
+1. We are going to create another bash script here called `take-db-backup.sh`, which you can create at the root level of your repository with the following content:
+
+    ```
+    #!/bin/bash
+
+    set -e
+
+    echo "Downloading and installing spawnctl..."
+    curl -sL https://run.spawn.cc/install | sh
+    export PATH=$HOME/.spawnctl/bin:$PATH
+
+    echo "Backing up Pagila database..."
+
+    mkdir backups
+
+    docker run --net=host --rm -v $PWD/backups:/backups/ -e PGPASSWORD=$PAGILA_PASSWORD postgres:12-alpine pg_dump -h $PAGILA_HOST -p 5432 -U $PAGILA_USERNAME --create pagila --file /backups/pagila.sql
+
+
+    echo "Creating Spawn data image..."
+
+    pagilaImageName=$(spawnctl create data-image --file ./pagila-backup.yaml --lifetime 336h --accessToken $SPAWNCTL_ACCESS_TOKEN -q)
+
+    echo "Successfully created Spawn data image '$pagilaImageName'"
+    echo "Successfully backed up Pagila database"
+    ```
+
+1. Once again, this script needs to be made executable:
+
+    <pre class="console"><span>&gt;</span> chmod +x take-db-backup.sh</pre>
+
+1. Finally you'll need to add the source file for your data image `pagila-backup.yaml`, which you created locally earlier, to your repository.
+
+Every week day at 9am, this script will run which creates a new data image from a backup of the latest state of Pagila database. We don't need to change our other workflow - that is already programmed to use an image under the name of `Pagila:prod`, and much like docker tags we will have a newer image with the `prod` tag after this script is run.
