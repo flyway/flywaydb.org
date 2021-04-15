@@ -493,31 +493,112 @@ The following will happen:
 
 ## Migration States
 
-Migrations are either *resolved* or *applied*. Resolved migrations have been detected by Flyway's filesystem
-and classpath scanner. Initially they are **pending**. Once they are executed against the database,
-they become applied.
-
-When the migration *succeeds* it is marked as **success** in Flyway's *schema history table*.
-
-When the migration *fails* and the database supports *DDL transactions*, the migration is *rolled back* and
-nothing is recorded in the schema history table.
-
-When the migration *fails* and the database doesn't support *DDL transactions*, the migration
-is marked as **failed** in the schema history table, indicating manual database cleanup may be required.
-
-Versioned migrations whose effects have been undone by an undo migration are marked as **undone**.
-
-Repeatable migrations whose checksum has changed since they are last applied are marked as **outdated** until
-they are executed again. Note also that changing the value of placeholders will cause repeatable migrations to be considered **outdated**.
-
-When Flyway discovers an applied versioned migration with a version that is higher than the highest known version
-(this happens typically when a newer version of the software has migrated that schema), that migration is marked as **future**.
-
-When a migration is not found on disk, but is found in the schema history, it is marked as **missing**. By default these will cause *validate* to fail, however they can be marked as **deleted** by using *repair*. See [repair](/documentation/command/repair) for more details.
-
-When a migration has had its state changed to deleted by *repair* it is marked as **deleted**.
-
-When using [cherryPick](/documentation/configuration/parameters/cherryPick), if the migration is not in the cherry picked list then it is marked as **ignored**.
+<table class="table">
+    <thead>
+        <tr>
+            <th>State</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tr>
+        <td><code>Pending</code></td>
+        <td>This migration has not been applied yet.</td>
+    </tr>
+    <tr>
+        <td>
+            <code>Above Target</code>
+        </td>
+        <td>This migration has not been applied yet, and won't be applied because target is set to a lower version.</td>
+    </tr>
+    <tr>
+        <td><code>Below Baseline</code></td>
+        <td>This migration was not applied against this DB, because the schema history table was baselined with a higher version.</td>
+    </tr>
+    <tr>
+        <td><code>Baseline</code>
+        </td>
+        <td>This migration has <a href="/documentation/command/baseline"><code>baselined</code></a> this DB.</td>
+    </tr>
+    <tr>
+        <td><code>Ignored</code></td>
+        <td><p>When using <a href="/documentation/configuration/parameters/cherryPick"><code>cherryPick</code></a>, this indicates a migration that was not in the cherry picked list.</p>
+            <p>When not using <a href="/documentation/configuration/parameters/cherryPick"><code>cherryPick</code></a>, this usually indicates a problem.</p>
+            <p>
+                This migration was not applied against this DB, because a migration with a higher version has already been
+                applied. This probably means some checkins happened out of order.
+            </p>
+            <p>Fix by increasing the version number, run clean and migrate again or rerun migration with <a href="/documentation/configuration/parameters/outOfOrder"><code>outOfOrder</code></a> enabled.</p></td>
+    </tr>
+    <tr>
+        <td><code>Missing</code></td>
+        <td><p>This migration succeeded.</p>
+            <p>This migration was applied against this DB, but it is not available locally.
+            This usually results from multiple older migration files being consolidated into a single one.</p></td>
+    </tr>
+    <tr>
+        <td><code>Failed (Missing)</code></td>
+        <td><p>This migration failed.</p>
+     <p>
+     This migration was applied against this DB, but it is not available locally.
+     This usually results from multiple older migration files being consolidated into a single one.
+     </p>
+     <p>This should rarely, if ever, occur in practice.</p></td>
+    </tr>
+    <tr>
+        <td><code>Success</code></td>
+        <td>This migration succeeded.</td>
+    </tr>
+    <tr>
+        <td><code>Undone</code></td>
+        <td>This versioned migration succeeded, but has since been undone.</td>
+    </tr>
+    <tr>
+        <td><code>Available</code></td>
+        <td>This <a href="/documentation/command/undo"><code>undo</code></a> migration is ready to be applied if desired.</td>
+    </tr>
+    <tr>
+        <td><code>Failed</code></td>
+        <td>This migration failed.</td>
+    </tr>
+    <tr>
+        <td><code>Out of Order</code></td>
+        <td><p>This migration succeeded.</p>
+            <p>
+                This migration succeeded, but it was applied out of order.
+                Rerunning the entire migration history might produce different results!
+            </p></td>
+    </tr>
+    <tr>
+        <td><code>Future</code></td>
+        <td><p>This migration succeeded.</p>
+             <p>
+                This migration has been applied against the DB, but it is not available locally.
+                Its version is higher than the highest version available locally.
+                It was most likely successfully installed by a future version of this deployable.
+            </p></td>
+    </tr>
+    <tr>
+        <td><code>Failed (Future)</code></td>
+        <td><p>This migration failed.</p>
+            <p>
+                This migration has been applied against the DB, but it is not available locally.
+                Its version is higher than the highest version available locally.
+                It most likely failed during the installation of a future version of this deployable.
+            </p></td>
+    </tr>
+    <tr>
+        <td><code>Outdated</code></td>
+        <td>This is a <a href="/documentation/getstarted/advanced/repeatable"><code>repeatable</code></a> migration that is outdated and should be re-applied.</td>
+    </tr>
+    <tr>
+        <td><code>Superseded</code></td>
+        <td>This is a repeatable migration that is outdated and has already been superseded by a newer run.</td>
+    </tr>
+     <tr>
+        <td><code>Deleted</code></td>
+        <td>This is a migration that has been marked as deleted</td>
+    </tr>
+</table>
 
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/concepts/callbacks">Callbacks <i class="fa fa-arrow-right"></i></a>
