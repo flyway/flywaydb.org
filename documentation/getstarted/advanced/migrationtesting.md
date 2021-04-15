@@ -231,3 +231,11 @@ One last thing which is useful - with the way it's set up, you will have to crea
 1. Finally you'll need to add the source file for your data image `pagila-backup.yaml`, which you created locally earlier, to your repository.
 
 Every week day at 9am, this script will run which creates a new data image from a backup of the latest state of Pagila database. We don't need to change our other workflow - that is already programmed to use an image under the name of `Pagila:prod`, and much like docker tags we will have a newer image with the `prod` tag after this script is run.
+
+## Summary
+
+In this tutorial we saw how to
+- take a backup and create a Spawn data image from it
+- spin up a database from that data image in a CI pipeline
+- automate running `flyway migrate` to test latest migrations against a copy of production
+- automate scheduling image creation so tests are always run against the latest database
