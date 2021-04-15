@@ -59,3 +59,6 @@ Firstly, we want to get a backup of our production database. This will ultimatel
 
 This set up will allow us to create databases from the backup file - we'll come back to this later on in the tutorial.
 
+## Write a GitHub Actions workflow
+
+Lets create and set up our GitHub Actions workflow to test database migrations.
