@@ -62,3 +62,12 @@ This set up will allow us to create databases from the backup file - we'll come 
 ## Write a GitHub Actions workflow
 
 Lets create and set up our GitHub Actions workflow to test database migrations.
+
+### Set up access token for Spawn
+
+1. To access `spawnctl` in the pipeline, we will first need to create an [access token](https://spawn.cc/docs/spawnctl-accesstoken-create#tutorial) so that we won't be prompted to authenticate with Spawn in our CI environment:
+
+    <pre class="console"><span>&gt;</span> spawnctl create access-token --purpose "CI system Spawn access token"
+    Access token generated: &lt;access-token-string&gt;</pre>
+
+1. Copy the `<access-token-string>` into your clipboard; you won't be able to retrieve it again. Now lets add it as a secret variable called `SPAWNCTL_ACCESS_TOKEN` in GitHub Actions by following this [tutorial](https://docs.github.com/en/actions/reference/encrypted-secrets#creating-encrypted-secrets-for-a-repository).
