@@ -9,6 +9,30 @@ redirect_from: /documentation/releaseNotes/
 <p>Thank you all for reporting all these issues and contributing fixes!</p>
 
 <div class="release">
+    <h2 id="7.8.0">Flyway 7.8.0 (2021-04-15)</h2>
+
+    <h3>New features</h3>
+    <ul>
+        <li>Add <code>ignoreMigrationPatterns</code> parameter to customize <code>validate</code></li>
+        <li>Add support for Oracle proxy user connections</li>
+    </ul>
+
+    <h3>Changes</h3>
+    <ul>
+        {% include issue.html id="3132" title="Log <code>0 rows affected</code> at the debug level" %}
+    </ul>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        {% include issue.html id="3129" title="SQLServer: Don't accidentally parse identifiers in square brackets as key words" %}
+    </ul>
+
+    <p>
+        Thanks to rchurchley, wparuch and esauser for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
     <h2 id="7.7.3">Flyway 7.7.3 (2021-04-08)</h2>
 
     <h3>Bug fixes</h3>
