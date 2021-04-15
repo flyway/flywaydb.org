@@ -71,3 +71,74 @@ Lets create and set up our GitHub Actions workflow to test database migrations.
     Access token generated: &lt;access-token-string&gt;</pre>
 
 1. Copy the `<access-token-string>` into your clipboard; you won't be able to retrieve it again. Now lets add it as a secret variable called `SPAWNCTL_ACCESS_TOKEN` in GitHub Actions by following this [tutorial](https://docs.github.com/en/actions/reference/encrypted-secrets#creating-encrypted-secrets-for-a-repository).
+
+### Create GitHub workflow
+
+1. In your repository, add a file underneath the folder `.github/workflows` called `migration-test.yml`
+
+1. Copy and paste the yaml below, then commit and push the new file:
+
+    ```
+    name: Database migration test
+
+    on: workflow_dispatch
+
+    jobs:
+      run_migration_test:
+        name: Run Flyway migration tests
+        runs-on: ubuntu-latest
+        steps:
+          - name: Checkout
+            uses: actions/checkout@v2
+          - name: Run database migrations
+            run: migration-test-prod.sh
+            env:
+              SPAWNCTL_ACCESS_TOKEN: ${{ secrets.SPAWNCTL_ACCESS_TOKEN }} 
+    ```
+
+1. This workflow is referencing a bash script `migration-test-prod.sh` which can be called from any CI pipeline as it is, and just work. Lets go ahead and create that script by copying the code below and saving the file at the root level of our directory:
+
+    ```
+    #!/bin/bash
+
+    set -e
+
+    echo "Downloading and installing spawnctl..."
+    curl -sL https://run.spawn.cc/install | sh
+    export PATH=$HOME/.spawnctl/bin:$PATH
+
+    export SPAWN_PAGILA_IMAGE_NAME=Pagila:prod
+
+    echo "Creating Pagila backup Spawn data container from image '$SPAWN_PAGILA_IMAGE_NAME'..."
+    pagilaContainerName=$(spawnctl create data-container --image $SPAWN_PAGILA_IMAGE_NAME --lifetime 10m --accessToken $SPAWNCTL_ACCESS_TOKEN -q)
+
+    pagilaJson=$(spawnctl get data-container $pagilaContainerName -o json)
+    pagilaHost=$(echo $pagilaJson | jq -r '.host')
+    pagilaPort=$(echo $pagilaJson | jq -r '.port')
+    pagilaUser=$(echo $pagilaJson | jq -r '.user')
+    pagilaPassword=$(echo $pagilaJson | jq -r '.password')
+
+    echo "Successfully created Spawn data container '$pagilaContainerName'"
+
+    docker run --net=host --rm -v $PWD/sql:/flyway/sql flyway/flyway migrate -url="jdbc:postgresql://$pagilaHost:$pagilaPort/pagila" -user=$pagilaUser -password=$pagilaPassword
+
+    echo "Successfully migrated 'Pagila' database"
+
+    spawnctl delete data-container $pagilaContainerName --accessToken $SPAWNCTL_ACCESS_TOKEN -q
+
+    echo "Successfully cleaned up the Spawn data container '$pagilaContainerName'"
+    ```    
+
+1. Before committing and pushing this file to the repository, lets give it executable permissions:
+
+    <pre class="console"><span>&gt;</span> chmod +x migration-test-prod.sh</pre>
+
+This script accomplishes a few things. We are:
+  * Installing Spawn to give us access to the `spawnctl` command from the pipeline agent
+  * Creating a [Spawn data container](https://www.spawn.cc/docs/concepts-data-container) from the data image we created locally named `Pagila:prod`
+  * Using the official [Flyway docker image](https://hub.docker.com/r/flyway/flyway) to run `flyway migrate` on our data container, using migration scripts stored under the `sql` folder
+  * Automating the cleanup of the database
+
+That it - that is our migration test. We have quickly provisioned a database instance from our back up using Spawn, and set the flyway connection details to point to that database and run the migration scripts in our repository. Any errors will be apparent here and show up on the developers Pull Request that this ran against.
+
+Note: There is a [Flyway Migration action](https://github.com/marketplace/actions/flyway-migration) in the GitHub Marketplace which you can copy from. But using the code in `migrate-test.sh` is using generic bash and will work across all CI pipelines.
