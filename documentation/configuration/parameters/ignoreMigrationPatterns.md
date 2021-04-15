@@ -12,8 +12,7 @@ subtitle: flyway.ignoreMigrationPatterns
 Ignore specified migrations during validate.
 
 ### Pattern
-
-Patterns are in the form `type`:`status` , with `*` wildcards being valid for each `type` and `status`. 
+Patterns are in the form `type`:`status`, with `*` wildcards being valid for each `type` and `status`.
 
 Type is one of (*case insensitive*):
 
@@ -27,14 +26,14 @@ Status is one of (*case insensitive*):
 * `Pending`
 * `Ignored`
 * `Future`
-* `*` *(wild card, will match either of the above)*
+* `*` *(wild card, will match any of the above)*
 
 For example, the pattern to ignore missing repeatables is:
 ```
 repeatable:missing
 ```
 
-Patterns are comma seperated, for example, to ignore missing repeatables and pending versioned migrations:
+Patterns are comma seperated. For example, to ignore missing repeatables and pending versioned migrations:
 ```
 repeatable:missing,versioned:pending
 ```
