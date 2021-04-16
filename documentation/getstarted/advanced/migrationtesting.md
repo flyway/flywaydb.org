@@ -71,7 +71,7 @@ Lets create and set up our GitHub Actions workflow to test database migrations.
 
 ### Create GitHub workflow
 
-1. In your repository, add a file underneath the folder `.github/workflows` called `migration-test.yml`
+1. In your repository, add a file underneath the folder `.github/workflows` called `migration-test.yaml`
 
 1. Copy and paste the yaml below, then commit and push the new file:
 
@@ -144,7 +144,7 @@ Note: There is a [Flyway Migration action](https://github.com/marketplace/action
 
 Once you've pushed all your changes to GitHub, you can now manually run the migration test workflow by navigating to the Actions tab in GitHub and clicking on 'Database migration test', then 'Run workflow'. Or, a more likely scenario, we want this to automatically run on a PR request so the development team can test that any new migrations will run against master before merging.
 
-Add the following to the top of your `migration-test.yml` file:
+Add the following to the top of your `migration-test.yaml` file:
 
 ```
 # Controls when the action will run. 
