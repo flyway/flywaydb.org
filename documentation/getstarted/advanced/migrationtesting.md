@@ -163,10 +163,7 @@ on:
 
 One last thing which is useful - with the way it's set up, you will have to create a data image manually every time you have migration changes to get the latest backup of your production database. But we can [automate this step](https://www.spawn.cc/docs/howto-ci-scheduled-image-creation) using Spawn in our existing GitHub Actions pipeline.
 
-1. Add some more GitHub secrets so that we can allow the agent access to our production database **to back up, not write to**. We will need the database's:
-  * `Host`
-  * `Username`
-  * `Password`
+1. Add some more GitHub secrets so that we can allow the agent access to our production database **to back up, not write to**. We will need the database's `<Host>`, `<Username>`, and `<Password>`. The next step will reference these secrets by using the names `PAGILA_HOST`, `PAGILA_ADMIN_USERNAME` and `PAGILA_ADMIN_PASSWORD` but you will create secret names prefixed with your own database name.
 
 1. Lets add another workflow called `db-backup.yaml` underneath our `.github/workflows` folder:
 
