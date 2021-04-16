@@ -36,7 +36,7 @@ Firstly, we want to get a backup of our production database. This will ultimatel
 
 1. Using Spawn, we can turn this into a [data image](https://www.spawn.cc/docs/concepts-data-image) from our backup file, following the instructions [here](https://www.spawn.cc/docs/source-configuration-backup-postgres). First, we will create a source file `pagila-backup.yaml` **in the directory which contains the `backups` folder** with the following content:
 
-    ```
+    ```yaml
     name: Pagila
     engine: postgresql
     version: 12.0
@@ -75,7 +75,7 @@ Lets create and set up our GitHub Actions workflow to test database migrations.
 
 1. Copy and paste the yaml below, then commit and push the new file:
 
-    ```
+    ```yaml
     name: Database migration test
 
     on: workflow_dispatch
@@ -90,12 +90,12 @@ Lets create and set up our GitHub Actions workflow to test database migrations.
           - name: Run database migrations
             run: migration-test-prod.sh
             env:
-              SPAWNCTL_ACCESS_TOKEN: ${{ secrets.SPAWNCTL_ACCESS_TOKEN }} 
+              SPAWNCTL_ACCESS_TOKEN: {% raw %}${{ secrets.SPAWNCTL_ACCESS_TOKEN }}{% endraw %}
     ```
 
 1. This workflow is referencing a bash script `migration-test-prod.sh` which can be called from any CI pipeline as it is, and just work. Lets go ahead and create that script by copying the code below and saving the file at the root level of our directory:
 
-    ```
+    ```bash
     #!/bin/bash
 
     set -e
@@ -146,7 +146,7 @@ Once you've pushed all your changes to GitHub, you can now manually run the migr
 
 Add the following to the top of your `migration-test.yaml` file:
 
-```
+```yaml
 # Controls when the action will run. 
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
@@ -170,7 +170,7 @@ One last thing which is useful - with the way it's set up, you will have to crea
 
 1. Lets add another workflow called `db-backup.yaml` underneath our `.github/workflows` folder:
 
-    ```
+    ```yaml
     name: Take backup of production database daily
 
     on:
@@ -189,15 +189,15 @@ One last thing which is useful - with the way it's set up, you will have to crea
           - name: Create backup
             run: ./take-db-backup.sh
             env:
-              SPAWNCTL_ACCESS_TOKEN: ${{ secrets.SPAWNCTL_ACCESS_TOKEN }}
-              PAGILA_HOST: ${{ secrets.PAGILA_HOST }}
-              PAGILA_USERNAME: ${{ secrets.PAGILA_ADMIN_USERNAME }}
-              PAGILA_PASSWORD: ${{ secrets.PAGILA_ADMIN_PASSWORD }}
+              SPAWNCTL_ACCESS_TOKEN: {% raw %}${{ secrets.SPAWNCTL_ACCESS_TOKEN }}{% endraw %} 
+              PAGILA_HOST: {% raw %}${{ secrets.PAGILA_HOST }}{% endraw %} 
+              PAGILA_USERNAME: {% raw %}${{ secrets.PAGILA_ADMIN_USERNAME }}{% endraw %} 
+              PAGILA_PASSWORD: {% raw %}${{ secrets.PAGILA_ADMIN_PASSWORD }}{% endraw %} 
     ```
 
 1. We are going to create another bash script here called `take-db-backup.sh`, which you can create at the root level of your repository with the following content:
 
-    ```
+    ```bash
     #!/bin/bash
 
     set -e
