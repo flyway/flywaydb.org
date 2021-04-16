@@ -156,7 +156,7 @@ on:
     branches: [ main ]
 
   # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch
+  workflow_dispatch:
 ```
 
 ### Automate creating backups 
