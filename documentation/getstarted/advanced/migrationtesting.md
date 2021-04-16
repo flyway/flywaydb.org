@@ -2,9 +2,6 @@
 layout: documentation
 menu: migrationtesting
 subtitle: 'Tutorial: Testing Flyway migrations in a CI pipeline'
-redirect_from:
-- /getStarted/migrationtesting/
-- /documentation/getstarted/migrationtesting/
 ---
 # Tutorial: Testing Flyway migrations in a CI pipeline
 
