@@ -11,7 +11,7 @@ This tutorial will guide you through the process of setting up Flyway migration 
 
 Install Spawn by visiting the [getting started documentation](https://www.spawn.cc/docs/getting-started.html) and following the installation steps.
 
-This tutorial will assume you have a database with flyway migrations already set up, and migration scripts stored in your repository.
+This tutorial will assume you have a database with Flyway migrations already set up, and migration scripts stored in your repository.
 
 ## Introduction
 
@@ -136,7 +136,7 @@ This script accomplishes a few things. We are:
   * Using the official [Flyway docker image](https://hub.docker.com/r/flyway/flyway) to run `flyway migrate` on our data container, using migration scripts stored under the `sql` folder
   * Automating the cleanup of the database
 
-That it - that is our migration test. We have quickly provisioned a database instance from our back up using Spawn, and set the flyway connection details to point to that database and run the migration scripts in our repository. Any errors will be apparent here and show up on the developers Pull Request that this ran against.
+That's it - that is our migration test. We have quickly provisioned a database instance from our back up using Spawn, and set the Flyway connection details to point to that database and run the migration scripts in our repository. Any errors will be apparent here and show up on the developer's Pull Request that this ran against.
 
 Note: There is a [Flyway Migration action](https://github.com/marketplace/actions/flyway-migration) in the GitHub Marketplace which you can copy from. But using the code in `migrate-test.sh` is using generic bash and will work across all CI pipelines.
 
