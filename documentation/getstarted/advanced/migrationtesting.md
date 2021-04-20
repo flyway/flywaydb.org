@@ -147,13 +147,13 @@ This script accomplishes a few things. We are:
   * Using the official [Flyway docker image](https://hub.docker.com/r/flyway/flyway) to run `flyway migrate` on our data container, using migration scripts stored under the `sql` folder
   * Automating the cleanup of the database
 
-That's it - that is our migration test. We have quickly provisioned a database instance from our back up using Spawn, and set the Flyway connection details to point to that database and run the migration scripts in our repository. Any errors will be apparent at this point before changes get merged into the master branch.
+That's it - that is our migration test. We have quickly provisioned a database instance from our back up using Spawn, and set the Flyway connection details to point to that database and run the migration scripts in our repository. Any errors will be apparent at this point before changes get merged into the main branch.
 
 Note: There is an **unofficial** [Flyway Migration action](https://github.com/marketplace/actions/flyway-migration) in the GitHub Marketplace which you can copy from. But using the code in `migration-test-prod.sh` is using generic bash and will work across all CI pipelines.
 
 ### Run Flyway migration tests
 
-Once you've pushed all your scripts to GitHub, you can now manually run the migration test workflow by navigating to the Actions tab in GitHub and clicking on 'Database migration test', then 'Run workflow'. Or, a more likely scenario, we want this to automatically run on a pull request so the development team can test that any new migrations will run against master before merging.
+Once you've pushed all your scripts to GitHub, you can now manually run the migration test workflow by navigating to the Actions tab in GitHub and clicking on 'Database migration test', then 'Run workflow'. Or, a more likely scenario, we want this to automatically run on a pull request so the development team can test that any new migrations will run against main before merging.
 
 Alter your `migration-test.yaml` file to the following, so that we now trigger this workflow on other GitHub events:
 
