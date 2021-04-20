@@ -7,6 +7,8 @@ subtitle: 'Tutorial: Testing Flyway migrations in a CI pipeline'
 
 This tutorial will guide you through the process of setting up Flyway migration tests in a CI pipeline using [Spawn](spawn.cc) to provision a database on the fly.
 
+This tutorial should take you about **20 minutes** to complete.
+
 ## Prerequisites
 
 Install Spawn by visiting the [getting started documentation](https://www.spawn.cc/docs/getting-started.html) and following the installation steps.
