@@ -13,7 +13,7 @@ This tutorial should take you about **20 minutes** to complete.
 
 Install Spawn by visiting the [getting started documentation](https://www.spawn.cc/docs/getting-started.html) and following the installation steps.
 
-This tutorial will assume you have a database with Flyway migrations already set up, and migration scripts stored in your repository.
+This tutorial will assume you have a database with Flyway migrations already set up and commited to your own repository. Alternatively, follow along with the examples taken from [this demo repo](https://github.com/red-gate/flyway-spawn-demo), which you can fork and clone.
 
 ## Introduction
 
@@ -21,20 +21,18 @@ Testing your database migrations before they reach production is critical. There
 
 We will work through a step-by-step guide on setting up migration tests for the [PostgreSQL Pagila demo database](https://github.com/devrimgunduz/pagila) stored in [Amazon RDS](https://aws.amazon.com/rds/), in a [GitHub Actions](https://github.com/features/actions) pipeline. The logic can be applied to any other CI pipeline, and also SQL Server and MySQL databases.
 
-All examples used can be found in [this demo repo](https://github.com/red-gate/flyway-spawn-demo) which you can clone and use as appropriate.
-
 ## Create a backup of your database
 
 Firstly, we want to get a backup of our production database. This will ultimately be used to run migrations against later. Testing against real data will catch problems which may not arise from testing against an empty database.
 
-1. Lets create a folder which will hold our backup file:
+1. In our repository, lets create a folder which will hold our backup file:
 
     <pre class="console"><span>&gt;</span> mkdir backups</pre>
 
-1. Following the [PostgreSQL docs](https://www.postgresql.org/docs/current/app-pgdump.html), we'll run the following to get a database backup file saved to our folder as `pagila.sql`:
+1. Following the [PostgreSQL docs](https://www.postgresql.org/docs/current/app-pgdump.html), we'll run the following to get a database backup file saved to our folder as `pagila.sql`. Note that `pg_dump` will have to be the same version (or lower) of your Spawn database, which is 12 in our example:
 
     <pre class="console"><span>&gt;</span> export PGPASSWORD=&lt;Password&gt;</pre>
-    <pre class="console"><span>&gt;</span> pg_dump -h &lt;Host&gt; -p &lt;Port&gt; -U &lt;Username&gt; --file backups/pagila.sql</pre>
+    <pre class="console"><span>&gt;</span> pg_dump -h &lt;Host&gt; -p &lt;Port&gt; -U &lt;Username&gt; --create &lt;DbName&gt; --file backups/pagila.sql</pre>
 
 1. Using Spawn, we can turn this into a [data image](https://www.spawn.cc/docs/concepts-data-image) from our backup file, following the instructions [here](https://www.spawn.cc/docs/source-configuration-backup-postgres). First, we will create a source file `pagila-backup.yaml` **in the directory which contains the `backups` folder** with the following content:
 
@@ -89,13 +87,13 @@ Lets create and set up our GitHub Actions workflow to test database migrations.
         steps:
           - name: Checkout
             uses: actions/checkout@v2
-          - name: Run database migrations
-            run: migration-test-prod.sh
+          - name: Run database migrations against prod backup
+            run: ./migration-test-prod.sh
             env:
               SPAWNCTL_ACCESS_TOKEN: {% raw %}${{ secrets.SPAWNCTL_ACCESS_TOKEN }}{% endraw %}
     ```
 
-1. This workflow is referencing a bash script `migration-test-prod.sh` which can be called from any CI pipeline as it is, and just work. Lets go ahead and create that script by copying the code below and saving the file at the root level of our directory:
+1. This workflow is referencing a bash script `migration-test-prod.sh` which can be called from any CI pipeline as it is, and just work. Lets go ahead and create that script by copying the code below and saving the file at the root level of our directory, substituting the variable `databaseName` for your own databases name:
 
     ```bash
     #!/bin/bash
@@ -103,14 +101,17 @@ Lets create and set up our GitHub Actions workflow to test database migrations.
     set -e
 
     echo "Downloading and installing spawnctl..."
-    curl -sL https://run.spawn.cc/install | sh
+    curl -sL https://run.spawn.cc/install | sh > /dev/null 2>&1
     export PATH=$HOME/.spawnctl/bin:$PATH
+    echo "spawnctl successfully installed"
 
     export SPAWN_PAGILA_IMAGE_NAME=Pagila:prod
 
+    echo
     echo "Creating Pagila backup Spawn data container from image '$SPAWN_PAGILA_IMAGE_NAME'..."
     pagilaContainerName=$(spawnctl create data-container --image $SPAWN_PAGILA_IMAGE_NAME --lifetime 10m --accessToken $SPAWNCTL_ACCESS_TOKEN -q)
 
+    databaseName="pagila"
     pagilaJson=$(spawnctl get data-container $pagilaContainerName -o json)
     pagilaHost=$(echo $pagilaJson | jq -r '.host')
     pagilaPort=$(echo $pagilaJson | jq -r '.port')
@@ -118,10 +119,18 @@ Lets create and set up our GitHub Actions workflow to test database migrations.
     pagilaPassword=$(echo $pagilaJson | jq -r '.password')
 
     echo "Successfully created Spawn data container '$pagilaContainerName'"
+    echo
 
-    docker run --net=host --rm -v $PWD/sql:/flyway/sql flyway/flyway migrate -url="jdbc:postgresql://$pagilaHost:$pagilaPort/pagila" -user=$pagilaUser -password=$pagilaPassword
+    docker pull postgres:12-alpine > /dev/null 2>&1
+    docker pull flyway/flyway > /dev/null 2>&1
+
+    echo
+    echo "Starting migration of database with flyway"
+
+    docker run --net=host --rm -v $PWD/sql:/flyway/sql flyway/flyway migrate -url="jdbc:postgresql://$pagilaHost:$pagilaPort/$databaseName" -user=$pagilaUser -password=$pagilaPassword
 
     echo "Successfully migrated 'Pagila' database"
+    echo
 
     spawnctl delete data-container $pagilaContainerName --accessToken $SPAWNCTL_ACCESS_TOKEN -q
 
@@ -134,31 +143,42 @@ Lets create and set up our GitHub Actions workflow to test database migrations.
 
 This script accomplishes a few things. We are:
   * Installing Spawn to give us access to the `spawnctl` command from the pipeline agent
-  * Creating a [Spawn data container](https://www.spawn.cc/docs/concepts-data-container) from the data image we created locally named `Pagila:prod`
+  * Creating a [Spawn data container](https://www.spawn.cc/docs/concepts-data-container) from the data image we previously created named `Pagila:prod`
   * Using the official [Flyway docker image](https://hub.docker.com/r/flyway/flyway) to run `flyway migrate` on our data container, using migration scripts stored under the `sql` folder
   * Automating the cleanup of the database
 
-That's it - that is our migration test. We have quickly provisioned a database instance from our back up using Spawn, and set the Flyway connection details to point to that database and run the migration scripts in our repository. Any errors will be apparent here and show up on the developer's pull request that this ran against.
+That's it - that is our migration test. We have quickly provisioned a database instance from our back up using Spawn, and set the Flyway connection details to point to that database and run the migration scripts in our repository. Any errors will be apparent at this point before changes get merged into the master branch.
 
-Note: There is an **unofficial** [Flyway Migration action](https://github.com/marketplace/actions/flyway-migration) in the GitHub Marketplace which you can copy from. But using the code in `migrate-test.sh` is using generic bash and will work across all CI pipelines.
+Note: There is an **unofficial** [Flyway Migration action](https://github.com/marketplace/actions/flyway-migration) in the GitHub Marketplace which you can copy from. But using the code in `migration-test-prod.sh` is using generic bash and will work across all CI pipelines.
 
 ### Run Flyway migration tests
 
-Once you've pushed all your changes to GitHub, you can now manually run the migration test workflow by navigating to the Actions tab in GitHub and clicking on 'Database migration test', then 'Run workflow'. Or, a more likely scenario, we want this to automatically run on a pull request so the development team can test that any new migrations will run against master before merging.
+Once you've pushed all your scripts to GitHub, you can now manually run the migration test workflow by navigating to the Actions tab in GitHub and clicking on 'Database migration test', then 'Run workflow'. Or, a more likely scenario, we want this to automatically run on a pull request so the development team can test that any new migrations will run against master before merging.
 
-Add the following to the top of your `migration-test.yaml` file:
+Alter your `migration-test.yaml` file to the following, so that we now trigger this workflow on other GitHub events:
 
 ```yaml
-# Controls when the action will run. 
+name: Database migration test
+
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
 
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+
+jobs:
+  run_migration_test:
+    name: Run Flyway migration tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Run database migrations against prod backup
+        run: ./migration-test-prod.sh
+        env:
+          SPAWNCTL_ACCESS_TOKEN: {% raw %}${{ secrets.SPAWNCTL_ACCESS_TOKEN }}{% endraw %}
 ```
 
 ### Automate creating backups 
@@ -194,7 +214,7 @@ One last thing which is useful - with the way it's set up, you will have to crea
               PAGILA_PASSWORD: {% raw %}${{ secrets.PAGILA_ADMIN_PASSWORD }}{% endraw %} 
     ```
 
-1. We are going to create another bash script here called `take-db-backup.sh`, which you can create at the root level of your repository with the following content:
+1. We are going to create another bash script here called `take-db-backup.sh`, which you can create at the root level of your repository with the following content substituting the variable `databaseName` for your own databases name:
 
     ```bash
     #!/bin/bash
@@ -202,20 +222,27 @@ One last thing which is useful - with the way it's set up, you will have to crea
     set -e
 
     echo "Downloading and installing spawnctl..."
-    curl -sL https://run.spawn.cc/install | sh
+    curl -sL https://run.spawn.cc/install | sh > /dev/null 2>&1
     export PATH=$HOME/.spawnctl/bin:$PATH
+    echo "spawnctl successfully installed"
 
-    echo "Backing up Pagila database..."
-
+    databaseName="pagila"
     mkdir backups
 
-    docker run --net=host --rm -v $PWD/backups:/backups/ -e PGPASSWORD=$PAGILA_PASSWORD postgres:12-alpine pg_dump -h $PAGILA_HOST -p 5432 -U $PAGILA_USERNAME --create pagila --file /backups/pagila.sql
+    docker pull postgres:12-alpine > /dev/null 2>&1
+
+    echo
+    echo "Backing up Pagila database..."
+
+    docker run --net=host --rm -v $PWD/backups:/backups/ -e PGPASSWORD=$PAGILA_PASSWORD postgres:12-alpine pg_dump -h $PAGILA_HOST -p 5432 -U $PAGILA_USERNAME --create $databaseName --file /backups/pagila.sql
 
     echo "Creating Spawn data image..."
+    echo
 
     pagilaImageName=$(spawnctl create data-image --file ./pagila-backup.yaml --lifetime 336h --accessToken $SPAWNCTL_ACCESS_TOKEN -q)
 
     echo "Successfully created Spawn data image '$pagilaImageName'"
+    echo
     echo "Successfully backed up Pagila database"
     ```
 
@@ -223,7 +250,7 @@ One last thing which is useful - with the way it's set up, you will have to crea
 
     <pre class="console"><span>&gt;</span> chmod +x take-db-backup.sh</pre>
 
-1. Finally you'll need to add the source file for your data image `pagila-backup.yaml`, which you created locally earlier, to your repository.
+1. Finally you'll need to add the source file for your data image `pagila-backup.yaml`, which you created locally earlier, to your repository. Now you can push all your new files to the repository.
 
 Every week day at 9am, this script will run which creates a new data image from a backup of the latest state of Pagila database. We don't need to change our other workflow - that is already programmed to use an image under the name of `Pagila:prod`, and much like docker tags we will have a newer image with the `prod` tag after this script is run.
 
