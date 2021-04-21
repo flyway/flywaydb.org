@@ -9,24 +9,24 @@ subtitle: flyway.ignoreMigrationPatterns
 {% include teams.html %}
 
 ## Description
-Ignore specified migrations during validate.
+Ignore migrations during `validate` according to a given list of [patterns](https://flywaydb.org/documentation/configuration/parameters/ignoreMigrationPatterns#patterns).
 
-### Pattern
-Patterns are in the form `type`:`status`, with `*` wildcards being valid for each `type` and `status`.
+### Patterns
+Patterns are of the form `type`:`status` with `*` matching `type` or `status`.
 
-Type is one of (*case insensitive*):
+`type` must be one of (*case insensitive*):
 
 * `repeatable`
 * `versioned`
-* `*` *(wild card, will match either of the above)*
+* `*` *(will match any of the above)*
 
-Status is one of (*case insensitive*):
+`status` must be one of (*case insensitive*):
 
 * `Missing`
 * `Pending`
 * `Ignored`
 * `Future`
-* `*` *(wild card, will match any of the above)*
+* `*` *(will match any of the above)*
 
 For example, the pattern to ignore missing repeatables is:
 ```
@@ -38,11 +38,11 @@ Patterns are comma seperated. For example, to ignore missing repeatables and pen
 repeatable:missing,versioned:pending
 ```
 
-Wildcards are supported, thus:
+The `*` wild card is also supported, thus:
 ```
 *:missing
 ```
-will ignore missing files, no matter their type and:
+will ignore missing migrations no matter their type and:
 ```
 repeatable:*
 ```
