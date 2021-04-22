@@ -4,7 +4,8 @@ menu: undo
 subtitle: Undo
 ---
 # Undo
-{% include teams.html %}
+
+<a class="btn btn-primary" href="https://flywaydb.org/try-flyway-teams-edition">Get Undo in Flyway Teams</a>
 
 Undoes the most recently applied versioned migration.
 
@@ -37,6 +38,8 @@ This should be complemented with a **proper, well tested, backup and restore str
 structure, and once it is tested and proven to work, no migration script can break it. For optimal performance, and 
 if your infrastructure supports this, we recommend using the snapshot technology of your underlying storage solution. 
 Especially for larger data volumes, this can be several orders of magnitude faster than traditional backups and restores.
+
+<a class="btn btn-primary" href="https://flywaydb.org/try-flyway-teams-edition">Get Undo in Flyway Teams</a>
 
 ## Usage
 {% include commandUsage.html command="undo" %}
