@@ -15,7 +15,7 @@ up to and including the baseline version. Newer migrations will then be applied 
 
 ## Resetting the baseline
 
-When you have many migrations, it might be desirable to reset your baseline migration. This will allow you to reduce the build of old scripts.
+When you have many migrations, it might be desirable to reset your baseline migration. This will allow you to reduce the overhead of dealing with lots of scripts, many of which might be old and irrelevant.
 
 <a class="btn btn-primary" href="https://flywaydb.org/reset-the-baseline-migration">Learn more about resetting the baseline migration</a>
 
