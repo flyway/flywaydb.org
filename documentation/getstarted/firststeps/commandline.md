@@ -27,7 +27,10 @@ To configure Flyway, we first need a database we can connect to. We’ll use Spa
 from which you can run migrations against. This will create you your first data container, which is your database instance. Here we
 are specifying a PostgreSQL database but you can also specify `mysql:flyway-getting-started` or `mssql:flyway-getting-started`:
 
-<pre class="console"><span>&gt;</span> spawnctl create data-container --image postgres:flyway-getting-started --name flyway-container</pre>
+<pre class="console"><span>&gt;</span> spawnctl create data-container \
+  --image postgres:flyway-getting-started \
+  --name flyway-container \
+  --lifetime 24h</pre>
 
 This will return connection string details which is used to connect and query using your normal tools:
 
