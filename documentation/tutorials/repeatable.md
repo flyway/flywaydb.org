@@ -5,6 +5,7 @@ subtitle: 'Tutorial: Repeatable Migrations'
 redirect_from:
 - /getStarted/repeatable/
 - /documentation/getstarted/repeatable/
+- /documentation/getstarted/advanced/repeatable/
 ---
 # Tutorial: Repeatable Migrations
 
