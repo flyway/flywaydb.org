@@ -65,10 +65,6 @@ title: Documentation
 
                             <ul class="nav nav-pills nav-stacked">
                                 <li
-                                {% if page.menu == 'gs_callbacks' %} class="nav--vertical__active" {% endif %}>
-                                <a href="/documentation/getstarted/advanced/callbacks">Callbacks</a></li>
-
-                                <li
                                 {% if page.menu == 'gs_erroroverrides' %} class="nav--vertical__active" {% endif %}>
                                 <a href="/documentation/getstarted/advanced/erroroverrides">Error Overrides</a></li>
 
@@ -300,6 +296,10 @@ title: Documentation
                             <li
                             {% if page.menu == 'java' %} class="nav--vertical__active" {% endif %}>
                             <a href="/documentation/tutorials/java">Java-based migrations</a></li>
+
+                            <li
+                            {% if page.menu == 'tut_callbacks' %} class="nav--vertical__active" {% endif %}>
+                            <a href="/documentation/tutorials/callbacks">Callbacks</a></li>
                         </ul>
                     </details>
 
