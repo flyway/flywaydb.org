@@ -5,6 +5,7 @@ subtitle: 'Tutorial: Java-based Migrations'
 redirect_from:
 - /getStarted/java/
 - /documentation/getstarted/java/
+- /documentation/getstarted/advanced/java/
 ---
 # Tutorial: Java-based Migrations
 
