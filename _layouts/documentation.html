@@ -65,10 +65,6 @@ title: Documentation
 
                             <ul class="nav nav-pills nav-stacked">
                                 <li
-                                {% if page.menu == 'undo' %} class="nav--vertical__active" {% endif %}>
-                                <a href="/documentation/getstarted/advanced/undo">Undo migrations</a></li>
-
-                                <li
                                 {% if page.menu == 'java' %} class="nav--vertical__active" {% endif %}>
                                 <a href="/documentation/getstarted/advanced/java">Java-based migrations</a></li>
 
@@ -300,6 +296,10 @@ title: Documentation
                             <li
                             {% if page.menu == 'repeatable' %} class="nav--vertical__active" {% endif %}>
                             <a href="/documentation/tutorials/repeatable">Repeatable migrations</a></li>
+
+                            <li
+                            {% if page.menu == 'undo' %} class="nav--vertical__active" {% endif %}>
+                            <a href="/documentation/tutorials/undo">Undo migrations</a></li>
                         </ul>
                     </details>
 

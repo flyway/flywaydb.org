@@ -5,6 +5,7 @@ subtitle: 'Tutorial: Undo Migrations'
 redirect_from:
 - /getStarted/undo/
 - /documentation/getstarted/undo/
+- /documentation/getstarted/advanced/undo/
 ---
 # Tutorial: Undo Migrations
 {% include teams.html %}
