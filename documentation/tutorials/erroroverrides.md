@@ -1,10 +1,11 @@
 ---
 layout: documentation
-menu: gs_erroroverrides
+menu: tut_erroroverrides
 subtitle: 'Tutorial: Error Overrides'
 redirect_from:
 - /getStarted/erroroverrides/
 - /documentation/getstarted/errorhandlers/
+- /documentation/getstarted/advanced/erroroverrides/
 ---
 # Tutorial: Error Overrides
 {% include teams.html %}
