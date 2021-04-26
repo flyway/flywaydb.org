@@ -1,8 +1,10 @@
 ---
 layout: documentation
-menu: gs_dryruns
+menu: tut_dryruns
 subtitle: 'Tutorial: Dry Runs'
-redirect_from: /getStarted/dryruns/
+redirect_from: 
+- /getStarted/dryruns/
+- /documentation/getstarted/advanced/dryruns/
 ---
 # Tutorial: Dry Runs
 {% include teams.html %}
