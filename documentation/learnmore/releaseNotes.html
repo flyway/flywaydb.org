@@ -9,6 +9,27 @@ redirect_from: /documentation/releaseNotes/
 <p>Thank you all for reporting all these issues and contributing fixes!</p>
 
 <div class="release">
+    <h2 id="7.8.2">Flyway 7.8.2 (2021-04-27)</h2>
+
+    <h3>New features</h3>
+    <ul>
+        <li>Add support for Oracle proxy users when using Hikari pooled connections</li>
+        {% include issue.html id="3139" title="Add GNU-standard command line help options" %}
+    </ul>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        {% include issue.html id="3152" title="Fix MySQL parsing nested blocks with labels" %}
+        {% include issue.html id="3153" title="Only show warning about missing default schema when relevant" %}
+        <li>Fix issue with comparator resulting (rarely) in failure during sorting migrations</li>
+    </ul>
+
+    <p>
+        Thanks to austek, Eric Sauser and tomikmar for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
     <h2 id="7.8.1">Flyway 7.8.1 (2021-04-16)</h2>
 
     <h3>Bug fixes</h3>
