@@ -7,7 +7,9 @@ subtitle: Aurora PostgreSQL
 
 ## Supported Versions
 
-- `11.4`
+- `13.x`
+- `12.x`
+- `11.x`
 - `10.x`
 - `9.6`
 
