@@ -81,3 +81,23 @@ When it comes to migrating `V2`, we can utilise [outOfOrder](/documentation/conf
 ```
 flyway migrate -outOfOrder="true"
 ```
+
+### Undo out of order
+
+By default `undo` will undo migrations starting with the latest applied migration. With `cherryPick` you can undo migrations out of order, targetting specific migrations to undo.
+
+Let's assume the following 3 migrations are applied, and all have an available [undo migration](/documentation/concepts/migrations#undo-migrations):
+
+```
+V1__first.sql
+V2__second.sql
+V3__third.sql
+```
+
+If we only want to undo migration `V2` we can run:
+
+```
+flyway undo -cherryPick="2"
+```
+
+This will let us target any migration to undo out of order.
