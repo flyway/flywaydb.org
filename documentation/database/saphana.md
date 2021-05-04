@@ -31,7 +31,7 @@ subtitle: SAP HANA
     </tr>
 </table>
 
-Support Level determines the degree of support available for this database ([learn more](https://www.flywaydb.org/documentation/learnmore/database-support)). 
+Support Level determines the degree of support available for this database ([learn more](/documentation/learnmore/database-support)). 
 
 ## Driver
 
