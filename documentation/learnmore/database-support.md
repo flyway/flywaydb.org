@@ -31,7 +31,7 @@ There are three levels of support; Compatible, Certified and Guaranteed.
 
 ### Compatible
 
-"Compatible" means that Flyway has been reported to work with this database engine. The report of compatability may have come from user producing a forked versison of Flyway, or has been connected using Flyway's database extension mechanism.
+"Compatible" means that Flyway has been reported to work with this database engine. The report of compatability may have come from a user producing a forked versison of Flyway, or has been connected using Flyway's database extension mechanism.
 
 When a database is listed as "Compatible" only, it is either a lower priority when dealing with GitHub Issues raised against it, or it is going through the Certification process. 
 
@@ -52,5 +52,3 @@ Guaranteed support is only available to Flyway Teams edition customers.
 "Guaranteed" means that support for the database is provided at the level outlined in the end-user license agreement, including priority bug-fixing and prioritised feature requests.
 
 You can upgrade to Flyway Teams at anytime by visiting [flywaydb.org/download](https://www.flyway.org/download) and purchasing a Flyway Teams license.
-
-
