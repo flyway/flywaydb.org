@@ -13,6 +13,25 @@ subtitle: MySQL
 - `5.5` {% include teams.html %}
 - `5.1` {% include teams.html %}
 
+## Support Level
+
+<table class="table">
+    <tr>
+        <th width="25%">Compatible</th>
+        <td>✅</td>
+    </tr>
+    <tr>
+        <th width="25%">Certified</th>
+        <td>✅</td>
+    </tr>
+    <tr>
+        <th width="25%">Guaranteed</th>
+        <td>✅ {% include teams.html %}</td>
+    </tr>
+</table>
+
+Support Level determines the degree of support available for this database ([learn more](https://www.flywaydb.org/documentation/learnmore/database-support)). 
+
 ## Drivers
 
 <table class="table">
