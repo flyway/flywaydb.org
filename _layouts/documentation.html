@@ -433,6 +433,10 @@ title: Documentation
                                 <a href="/documentation/configuration/parameters/locations">locations</a></li>
 
                                 <li
+                                {% if page.pill == 'failOnMissingLocations' %} class="nav--vertical__active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/failOnMissingLocations">failOnMissingLocations</a></li>
+
+                                <li
                                 {% if page.pill == 'lockRetryCount' %} class="nav--vertical__active" {% endif %}>
                                 <a href="/documentation/configuration/parameters/lockRetryCount">lockRetryCount</a></li>
                                 

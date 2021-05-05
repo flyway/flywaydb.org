@@ -50,6 +50,7 @@ If using maven, config parameters can be set in the plugin configuration block, 
 - [jarDirs](/documentation/configuration/parameters/jarDirs)
 - [licenseKey](/documentation/configuration/parameters/licenseKey) {% include teams.html %}
 - [locations](/documentation/configuration/parameters/locations)
+- [failOnMissingLocations](/documentation/configuration/parameters/failOnMissingLocations)
 - [lockRetryCount](/documentation/configuration/parameters/lockRetryCount)
 - [mixed](/documentation/configuration/parameters/mixed)
 - [outOfOrder](/documentation/configuration/parameters/outOfOrder)
