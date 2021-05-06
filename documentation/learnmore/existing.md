@@ -152,7 +152,7 @@ We can see that our Production database is already at version `1` which matches 
 
 ### Next steps
 
-If you have followed our examples and are ready to integrate Flyway into your own database, don't forget that [Spawn](https://spawn.cc) is available for free to create fast, isolated copies for development and testing of your own databases. Enabling you to perfect the baselining process on a copy of Production before touching the real database. You can find out how to create a data image of your own database [here](https://spawn.cc/docs/source-configuration-backup-postgres).
+If you have followed our examples and are ready to integrate Flyway into your own database, don't forget that [Spawn](https://spawn.cc) is available for free to create fast, isolated copies for development and testing of your own databases. This enables you to perfect the baselining process on a copy of Production before touching the real database. You can find out how to create a data image of your own database [here](https://spawn.cc/docs/source-configuration-backup-postgres).
 
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/configuration/envvars">Environment Variables<i class="fa fa-arrow-right"></i></a>
