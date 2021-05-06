@@ -9,13 +9,13 @@ redirect_from: /documentation/existing/
 
 These are the steps to follow to successfully integrate Flyway into a project with existing databases.
 
-To guide you through the process, we'll use [Spawn](https://spawn.cc) to quickly provision database instances that will represent our Development and Production instances.
+To guide you through the process, we'll show examplies using [Spawn](https://spawn.cc) to quickly provision database instances that will represent our Development and Production environments.
 
 ## Prerequisites
 
 If you are new to Flyway, read through our [getting started](/documentation/getstarted/) section first.
 
-To follow along using the example, [install Spawn](https://spawn.cc/docs/howto-installation) and run the commands to create our environments.
+To follow along with the examples, [install Spawn](https://spawn.cc/docs/howto-installation) and run the following commands to create our Development and Production instances:
 
 <pre class="console">&gt; spawnctl create data-container \
   --image postgres:flyway-existing-database \
@@ -27,16 +27,19 @@ To follow along using the example, [install Spawn](https://spawn.cc/docs/howto-i
   --name flyway-container-prod \
   --lifetime 24h</pre>
 
-This will return connection string details for each Postgres instance which is used to connect and query using your normal tools:
+This will return connection string details for each PostgreSQL instance which are used when connecting with Flyway and can be queried with your normal tools:
 
 <pre class="console">Data container 'flyway-container-dev' created!
--> Host=instances.spawn.cc;Port=xxxxx;Username=xxxx;Database=pagila;Password=xxxxxxxxx</pre>
+-> Host=instances.spawn.cc;Port=&lt;DevPort&gt;;Username=&lt;DevUsername&gt;;Database=pagila;Password=&lt;DevPassword&gt;</pre>
+
+<pre class="console">Data container 'flyway-container-prod' created!
+-> Host=instances.spawn.cc;Port=&lt;ProdPort&gt;;Username=&lt;ProdUsername&gt;;Database=pagila;Password=&lt;ProdPassword&gt;</pre>
 
 You can retrieve these details at any time by running:
 
 <pre class="console">&gt; spawnctl get data-containers -o yaml</pre>
 
-We now have two identical but isolated disposable environments to use for this tutorial. Under each section below, you will find an `Example` heading with steps for the tutorial.
+We now have two identical but isolated and disposable database instances to use in our examples. Under each section below, you will find an `Example` section with steps to follow.
 
 ## Extract the DDL and reference data from production
 
@@ -48,7 +51,7 @@ This script will form your baseline migration. Save it in a location specified i
 
 ### Example
 
-For the purposes of this tutorial, you can download the baseline script for our example database [here](/assets/tutorial/V1__baseline_migration.sql). Create a new directory `flyway-tutorial`, download the file into the new directory and switch to it.
+You can download a sample baseline migration for our example database [here](/assets/tutorial/V1__baseline_migration.sql). Create a new directory `flyway-tutorial`, download the migration into the new directory and switch to it:
 
 <pre class="console">&gt; cd flyway-tutorial</pre>
 
@@ -62,7 +65,7 @@ by altering the [url](/documentation/configuration/parameters/url) to completely
 
 ### Example
 
-In this example, we don't mind losing data in the development environment so we will [clean](/documentation/command/clean) it. Using the connection details from our `flyway-container-dev` container we can run:
+In this example, we don't mind losing data in the Development database so we will [clean](/documentation/command/clean) it. Using the connection details from our `flyway-container-dev` container we can run:
 
 <pre class="console">&gt; flyway clean -url="jdbc:postgresql://instances.spawn.cc:&lt;DevPort&gt;/pagila" \
   -user="&lt;DevUsername&gt;" -password="&lt;DevPassword&gt;"</pre>
@@ -72,14 +75,13 @@ Successfully dropped pre-schema database level objects (execution time 00:00.001
 Successfully cleaned schema "public" (execution time 00:01.404s)
 Successfully dropped post-schema database level objects (execution time 00:00.000s)</pre>
 
-
 ## Align the databases not cleaned with production
 
 Now you need to check all remaining databases (e.g. test). You must make sure that their structure (DDL) and reference data matches production exactly. This step is important, as all scripts destined for production will likely be applied to these databases first. For the scripts to succeed, the objects they migrate must be identical to what is present in production.
 
 ### Example
 
-We only have the Production instance that isn't being cleaned and is of course already aligned.
+We only have the Production database that isn't being cleaned and therefore have nothing to align.
 
 ### Give these databases a baseline version
 
@@ -91,7 +93,7 @@ You must perform this step for each database that hasn't been cleaned by alterin
 
 ### Example
 
-The Production instance needs to be baselined in our example, for which we can run:
+The Production database needs to be baselined in our example, for which we can run:
 
 <pre class="console">&gt; flyway baseline -baselineVersion="1" -baselineDescription="baseline_migration" \
   -url="jdbc:postgresql://instances.spawn.cc:&lt;ProdPort&gt;/pagila" \
@@ -101,7 +103,6 @@ This should give an output similar to:
 
 <pre class="console">Database: jdbc:postgresql://instances.spawn.cc:&lt;ProdPort&gt;/pagila (PostgreSQL 11.0)
 Creating Schema History table "public"."flyway_schema_history" with baseline ...
-1 rows affected
 Successfully baselined schema with version: 1</pre>
 
 ## Done!
@@ -118,9 +119,9 @@ As soon as you add a new migration, it can be applied identically to any of your
 
 ### Example
 
-Looking at our instances, we have Production baselined and in line with our migration scripts. The Development instance has been cleaned and so is not in line. If we now run migrate against each instance it will align them. Migrate isn't strictly needed at this point for Production, however it will highlight that there is no work to be done as the baseline has been configured correctly.
+Looking at our databases, we have Production baselined and in line with our migration scripts. The Development database has been cleaned and so is not in line. If we now run migrate against each database it will align them. Migrate isn't strictly needed at this point for Production, however it will highlight that there is no work to be done as the baseline has been configured correctly.
 
-First we should migrate our Development instance.
+First we should migrate our Development database:
 
 <pre class="console">&gt; flyway migrate -url="jdbc:postgresql://instances.spawn.cc:&lt;DevPort&gt;/pagila" \
   -user="&lt;DevUsername&gt;" -password="&lt;DevPassword&gt;" -locations="filesystem:."</pre>
@@ -131,16 +132,13 @@ Creating Schema History table "public"."flyway_schema_history" ...
 Current version of schema "public": << Empty Schema >>
 Migrating schema "public" to version "1 - baseline migration"
 
-16 rows affected
-600 rows affected
-109 rows affected
-6 rows affected
+...
 
 Successfully applied 1 migration to schema "public", now at version v1 (execution time 00:04.962s)</pre>
 
-As expected, Flyway recognised that the database has an empty schema and therefore created the `flyway_schema_history` table and ran our baseline migration. <i>I've removed some of the Postgres output for display purposes.</i>
+As expected, Flyway recognised that the database has an empty schema and therefore created the `flyway_schema_history` table and ran our baseline migration.
 
-Now to migrate the Production instance.
+Now to migrate the Production database:
 
 <pre class="console">&gt; flyway migrate -url="jdbc:postgresql://instances.spawn.cc:&lt;ProdPort&gt;/pagila" \
   -user="&lt;ProdUsername&gt;" -password="&lt;ProdPassword&gt;" -locations="filesystem:."</pre>
@@ -150,12 +148,11 @@ Successfully validated 1 migration (execution time 00:00.111s)
 Current version of schema "public": 1
 Schema "public" is up to date. No migration necessary.</pre>
 
-We can now see that our production database is already at version `1` which matches the `-baselineVersion` we specified during the `baseline` command. This means it is up to date with our migration scripts and nothing needs to be run.
+We can see that our Production database is already at version `1` which matches the `-baselineVersion` we specified to the `baseline` command. This means it is up to date with our migration scripts and nothing needs to be run.
 
 ### Next steps
 
-If you have followed through this tutorial using our example and are ready to integrate Flyway into your own database, don't forget that [Spawn](https://spawn.cc) is available for free to create fast isolated copies for development and testing of your own databases. Enabling you to perfect the baselining process on a production like copy before the real thing. Find out how to create a data image of your own database [here](https://spawn.cc/docs/source-configuration-backup-postgres).
-
+If you have followed our examples and are ready to integrate Flyway into your own database, don't forget that [Spawn](https://spawn.cc) is available for free to create fast, isolated copies for development and testing of your own databases. Enabling you to perfect the baselining process on a copy of Production before touching the real database. You can find out how to create a data image of your own database [here](https://spawn.cc/docs/source-configuration-backup-postgres).
 
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/configuration/envvars">Environment Variables<i class="fa fa-arrow-right"></i></a>
