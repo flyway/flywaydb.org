@@ -9,7 +9,7 @@ redirect_from: /documentation/existing/
 
 These are the steps to follow to successfully integrate Flyway into a project with existing databases.
 
-To guide you through the process, we'll show examplies using [Spawn](https://spawn.cc) to quickly provision database instances that will represent our Development and Production environments.
+To guide you through the process, we'll show examples using [Spawn](https://spawn.cc) to quickly provision database instances that will represent our Development and Production environments.
 
 ## Prerequisites
 
