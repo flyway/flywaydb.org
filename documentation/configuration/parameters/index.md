@@ -42,6 +42,7 @@ If using maven, config parameters can be set in the plugin configuration block, 
 - [cherryPick](/documentation/configuration/parameters/cherryPick) {% include teams.html %}
 - [configFileEncoding](/documentation/configuration/parameters/configFileEncoding)
 - [configFiles](/documentation/configuration/parameters/configFiles)
+- [detectEncoding](/documentation/configuration/parameters/detectEncoding) {% include teams.html %}
 - [dryRunOutput](/documentation/configuration/parameters/dryRunOutput) {% include teams.html %}
 - [encoding](/documentation/configuration/parameters/encoding)
 - [errorOverrides](/documentation/configuration/parameters/errorOverrides) {% include teams.html %}
