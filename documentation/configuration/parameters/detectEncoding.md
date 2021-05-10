@@ -9,7 +9,7 @@ subtitle: flyway.detectEncoding
 {% include teams.html %}
 
 ## Description
-Will attempt to autodetect the file encoding of each migration. It can ascertain each of the following formats:
+Whether Flyway should attempt to auto-detect the file encoding of each migration. It can detect each of the following formats:
 
 * UTF-8
 * ISO-8859-1
@@ -17,9 +17,9 @@ Will attempt to autodetect the file encoding of each migration. It can ascertain
 * UTF-16 LE
 * UTF-16 BE
 
-When it fails to detect, it will failover to the configured encoding if set, UTF-8 if not.
+When Flyway fails to auto-detect, it will default to the configured encoding if set, UTF-8 if not.
 
-Can be overridden in script level configurations if needed; if per script configuration defines an encoding, auto detection will be skipped.
+If a script configuration file defines an encoding, auto detection will be skipped on that file.
 
 ## Default
 false
@@ -28,7 +28,7 @@ false
 
 ### Commandline
 ```powershell
-./flyway -detectEncoding="true" info
+./flyway -detectEncoding="true" migrate
 ```
 
 ### Configuration File
