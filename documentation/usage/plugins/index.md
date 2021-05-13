@@ -18,11 +18,12 @@ and much more.
     {% include plugin.html name="Bootique" logo="bootique.svg" url="https://github.com/bootique/bootique-flyway" info="Minimally opinionated framework for runnable Java apps" %}
     {% include plugin.html name="Chef" logo="chef.svg" url="https://supermarket.chef.io/cookbooks/flywaydb" info="Infrastructure Automation" %}
     {% include plugin.html name="Chocolatey" logo="chocolatey.svg" url="https://chocolatey.org/packages/flyway.commandline/" info="Package manager for Windows" %}
-    {% include plugin.html name="Dropwizard" logo="dropwizard.png" url="/documentation/usage/plugins/dropwizard" info="Java framework for developing ops-friendly, high-performance, RESTful web services" %}
+    {% include plugin.html name="Dropwizard" logo="dropwizard.png" url="/documentation/usage/plugins/dropwizard" info="Java framework for developing high-performance RESTful web services" %}
     {% include plugin.html name="Grails" logo="grails.svg" url="/documentation/usage/plugins/grails" info="Groovy-based web application framework for the JVM built on top of Spring Boot" %}
     {% include plugin.html name="Homebrew" logo="homebrew.png" url="http://formulae.brew.sh/formula/flyway" info="Package manager for macOS" %}
     {% include plugin.html name="IntelliJ IDEA" logo="intellij.svg" url="https://plugins.jetbrains.com/plugin/8597-flyway-migration-creation" info="Capable and ergonomic Java IDE" %}
     {% include plugin.html name="Jenkins" logo="jenkins.png" url="https://plugins.jenkins.io/flyway-runner" info="Automation server" %}
+    {% include plugin.html name="JPABuddy" logo="jpabuddy.png" url="https://www.jpa-buddy.com/" info="Generate Flyway migration scripts directly from your JPA domain objects" %}
     {% include plugin.html name="JUnit" logo="junit.png" url="https://github.com/flyway/flyway-test-extensions" info="Programmer-friendly testing framework for Java" %}
     {% include plugin.html name="Jooby" logo="jooby.png" url="https://jooby.io/modules/flyway/" info="Scalable, fast and modular micro web framework for Java" %}
     {% include plugin.html name="Micronaut" logo="micronaut.png" url="https://github.com/micronaut-projects/micronaut-flyway" info="Modern, JVM-based, full-stack framework" %}
