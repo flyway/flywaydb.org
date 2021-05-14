@@ -4,7 +4,6 @@ tab: documentation
 title: Documentation
 ---
 
-
 <div class="padded-v">
     <div class="row">
         <div class="col-md-3">
@@ -365,6 +364,10 @@ title: Documentation
                                 <a href="/documentation/configuration/parameters/defaultSchema">defaultSchema</a></li>
 
                                 <li
+                                {% if page.pill == 'detectEncoding' %} class="nav--vertical__active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/detectEncoding">detectEncoding</a></li>
+
+                                <li
                                 {% if page.pill == 'driver' %} class="nav--vertical__active" {% endif %}>
                                 <a href="/documentation/configuration/parameters/driver">driver</a></li>
 
@@ -431,6 +434,10 @@ title: Documentation
                                 <li
                                 {% if page.pill == 'locations' %} class="nav--vertical__active" {% endif %}>
                                 <a href="/documentation/configuration/parameters/locations">locations</a></li>
+
+                                <li
+                                {% if page.pill == 'failOnMissingLocations' %} class="nav--vertical__active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/failOnMissingLocations">failOnMissingLocations</a></li>
 
                                 <li
                                 {% if page.pill == 'lockRetryCount' %} class="nav--vertical__active" {% endif %}>
@@ -696,6 +703,10 @@ title: Documentation
                             <li
                             {% if page.menu == 'firebird' %} class="nav--vertical__active" {% endif %}>
                             <a href="/documentation/database/firebird">Firebird</a></li>
+
+                            <li
+                            {% if page.menu == 'cloud-spanner' %} class="nav--vertical__active" {% endif %}>
+                            <a href="/documentation/database/cloud-spanner">Cloud Spanner</a></li>
                         </ul>
                     </details>
 
@@ -730,6 +741,10 @@ title: Documentation
                             <li
                             {% if page.menu == 'faq' %} class="nav--vertical__active" {% endif %}>
                             <a href="/documentation/learnmore/faq">FAQ</a></li>
+
+                            <li
+                            {% if page.menu == 'support levels' %} class="nav--vertical__active" {% endif %}>
+                            <a href="/documentation/learnmore/database-support">Database Support Levels</a></li>
                         </ul>
                     </details>
 

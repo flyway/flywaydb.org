@@ -9,6 +9,37 @@ redirect_from: /documentation/releaseNotes/
 <p>Thank you all for reporting all these issues and contributing fixes!</p>
 
 <div class="release">
+    <h2 id="7.9.0">Flyway 7.9.0 (2021-05-13)</h2>
+
+    <h3>New features</h3>
+    <ul>
+        {% include issue.html id="2205" title="Add failOnMissingLocations parameter" %}
+        {% include issue.html id="3155" title="Allow targets that don't exist with '?'" %}
+        <li>Add Flyway update checking in command line</li>
+        <li>Add support for auto detecting file encoding for SQL migrations.</li>
+        <li><a href="/documentation/database/cloud-spanner"><strong>Add Spanner Beta support</strong></a></li>
+    </ul>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        {% include issue.html id="3160" title="Fix parsing of Oracle ACCESSIBLE BY" %}
+        {% include issue.html id="3161" title="Clean all SQLServer objects in a 2-pass approach" %}
+    </ul>
+
+    <h3>Changes</h3>
+    <ul>
+        {% include issue.html id="3132" title="'n rows affected' is now debug level in logs" %}
+        {% include issue.html id="3162" title="Update MySQL driver version" %}
+        <li>Update S3 dependency to fix vulnerabilities in transitive dependencies</li>
+        <li>Detect Hikari pooled connections automatically when using Oracle proxy users</li>
+    </ul>
+
+    <p>
+        Thanks to artjomsimon, jeanremacle, mabako, rbroth, wparuch, and xiagw for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
     <h2 id="7.8.2">Flyway 7.8.2 (2021-04-27)</h2>
 
     <h3>New features</h3>

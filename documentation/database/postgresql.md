@@ -19,6 +19,25 @@ subtitle: PostgreSQL
 - `9.1` {% include teams.html %}
 - `9.0` {% include teams.html %}
 
+## Support Level
+
+<table class="table">
+    <tr>
+        <th width="25%">Compatible</th>
+        <td>✅</td>
+    </tr>
+    <tr>
+        <th width="25%">Certified</th>
+        <td>✅</td>
+    </tr>
+    <tr>
+        <th width="25%">Guaranteed</th>
+        <td>✅ {% include teams.html %}</td>
+    </tr>
+</table>
+
+Support Level determines the degree of support available for this database ([learn more](/documentation/learnmore/database-support)). 
+
 ## Driver
 
 <table class="table">
