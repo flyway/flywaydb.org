@@ -9,6 +9,26 @@ redirect_from: /documentation/releaseNotes/
 <p>Thank you all for reporting all these issues and contributing fixes!</p>
 
 <div class="release">
+    <h2 id="7.9.1">Flyway 7.9.1 (2021-05-19)</h2>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        {% include issue.html id="3173" title="Use the ClassLoader specified to Flyway when using the ServiceLoader" %}
+        <li>Oracle - Fix parsing of GOTO statements</li>
+        <li>Inline method to fix compatibility with GraalVM</li>
+    </ul>
+
+    <h3>Changes</h3>
+    <ul>
+        {% include issue.html id="3174" title="Clean schemas before dropping them" %}
+    </ul>
+
+    <p>
+        Thanks to AigleeK, alexgast and gastaldi for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
     <h2 id="7.9.0">Flyway 7.9.0 (2021-05-13)</h2>
 
     <h3>New features</h3>
