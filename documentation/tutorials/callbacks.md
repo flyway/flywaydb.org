@@ -17,7 +17,7 @@ steps on how to create and use them.
 
 ## Introduction
 
-**Callbacks** let you hook into Flyway's lifecycle. This is particularly useful are when execute the same housekeeping 
+**Callbacks** let you hook into Flyway's lifecycle. This is particularly useful when you execute the same housekeeping 
 action over and over again.
  
 They are typically used for
