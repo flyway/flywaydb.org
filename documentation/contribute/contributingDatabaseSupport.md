@@ -97,7 +97,7 @@ Here are all the changes and additions you'll need to make:
     *   `doExists()` – to query whether the table described exists in the database
     *   `doLock()` – to lock the table with a read/write pessimistic lock until the end of the current transaction. This is used to prevent concurrent reads and writes to the schema history while a migration is underway. If your database doesn’t support table-level locks, do nothing.
 
-# Try it!
+## Try it!
 
 You should at this point be able to run the `flyway info` build configuration and see an empty version history. Congratulations! You have got a basic implementation up and running. You can now start creating migration scripts and running `flyway migrate` on them.
 
