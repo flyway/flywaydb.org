@@ -1,6 +1,6 @@
 ---
 layout: documentation
-menu: support levels
+menu: dbSupportLevels
 subtitle: Database Support Levels
 ---
 
