@@ -616,69 +616,42 @@ title: Documentation
                         <summary class="nav-header">Supported Databases</summary>
 
                         <ul class="nav nav-pills nav-stacked">
-                            <li
-                            {% if page.menu == 'oracle' %} class="nav--vertical__active" {% endif %}>
-                            <a href="/documentation/database/oracle">Oracle</a></li>
-
-                            <li
-                            {% if page.menu == 'sqlServer' %} class="nav--vertical__active" {% endif %}>
-                            <a href="/documentation/database/sqlserver">SQL Server</a></li>
-
-                            <li
-                            {% if page.menu == 'azuresynapse' %} class="nav--vertical__active" {% endif %}>
-                            <a href="/documentation/database/azuresynapse">Azure Synapse</a></li>
-
-                            <li
-                            {% if page.menu == 'db2' %} class="nav--vertical__active" {% endif %}>
-                            <a href="/documentation/database/db2">DB2</a></li>
-
-                            <li
-                            {% if page.menu == 'mysql' %} class="nav--vertical__active" {% endif %}>
-                            <a href="/documentation/database/mysql">MySQL</a></li>
 
                             <li
                             {% if page.menu == 'aurora-mysql' %} class="nav--vertical__active" {% endif %}>
                             <a href="/documentation/database/aurora-mysql">Aurora MySQL</a></li>
 
                             <li
-                            {% if page.menu == 'mariadb' %} class="nav--vertical__active" {% endif %}>
-                            <a href="/documentation/database/mariadb">MariaDB</a></li>
-
-                            <li
-                            {% if page.menu == 'xtradb' %} class="nav--vertical__active" {% endif %}>
-                            <a href="/documentation/database/xtradb">Percona XtraDB Cluster</a></li>
-
-                            <li
-                            {% if page.menu == 'testcontainers' %} class="nav--vertical__active" {% endif %}>
-                            <a href="/documentation/database/testcontainers">TestContainers</a></li>
-
-                            <li
-                            {% if page.menu == 'postgresql' %} class="nav--vertical__active" {% endif %}>
-                            <a href="/documentation/database/postgresql">PostgreSQL</a></li>
-
-                            <li
                             {% if page.menu == 'aurora-postgresql' %} class="nav--vertical__active" {% endif %}>
                             <a href="/documentation/database/aurora-postgresql">Aurora PostgreSQL</a></li>
 
                             <li
-                            {% if page.menu == 'redshift' %} class="nav--vertical__active" {% endif %}>
-                            <a href="/documentation/database/redshift">Redshift</a></li>
+                            {% if page.menu == 'azuresynapse' %} class="nav--vertical__active" {% endif %}>
+                            <a href="/documentation/database/azuresynapse">Azure Synapse</a></li>
+
+                            <li
+                            {% if page.menu == 'big-query' %} class="nav--vertical__active" {% endif %}>
+                            <a href="/documentation/database/big-query">Google Big Query</a></li>
 
                             <li
                             {% if page.menu == 'cockroachdb' %} class="nav--vertical__active" {% endif %}>
                             <a href="/documentation/database/cockroachdb">CockroachDB</a></li>
 
                             <li
-                            {% if page.menu == 'saphana' %} class="nav--vertical__active" {% endif %}>
-                            <a href="/documentation/database/saphana">SAP HANA</a></li>
+                            {% if page.menu == 'cloud-spanner' %} class="nav--vertical__active" {% endif %}>
+                            <a href="/documentation/database/cloud-spanner">Cloud Spanner</a></li>
 
                             <li
-                            {% if page.menu == 'sybasease' %} class="nav--vertical__active" {% endif %}>
-                            <a href="/documentation/database/sybasease">Sybase ASE</a></li>
+                            {% if page.menu == 'db2' %} class="nav--vertical__active" {% endif %}>
+                            <a href="/documentation/database/db2">DB2</a></li>
 
                             <li
-                            {% if page.menu == 'informix' %} class="nav--vertical__active" {% endif %}>
-                            <a href="/documentation/database/informix">Informix</a></li>
+                            {% if page.menu == 'derby' %} class="nav--vertical__active" {% endif %}>
+                            <a href="/documentation/database/derby">Derby</a></li>
+
+                            <li
+                            {% if page.menu == 'firebird' %} class="nav--vertical__active" {% endif %}>
+                            <a href="/documentation/database/firebird">Firebird</a></li>
 
                             <li
                             {% if page.menu == 'h2' %} class="nav--vertical__active" {% endif %}>
@@ -689,8 +662,40 @@ title: Documentation
                             <a href="/documentation/database/hsqldb">HSQLDB</a></li>
 
                             <li
-                            {% if page.menu == 'derby' %} class="nav--vertical__active" {% endif %}>
-                            <a href="/documentation/database/derby">Derby</a></li>
+                            {% if page.menu == 'informix' %} class="nav--vertical__active" {% endif %}>
+                            <a href="/documentation/database/informix">Informix</a></li>
+
+                            <li
+                            {% if page.menu == 'oracle' %} class="nav--vertical__active" {% endif %}>
+                            <a href="/documentation/database/oracle">Oracle</a></li>
+
+                            <li
+                            {% if page.menu == 'sqlServer' %} class="nav--vertical__active" {% endif %}>
+                            <a href="/documentation/database/sqlserver">SQL Server</a></li>
+
+                            <li
+                            {% if page.menu == 'mariadb' %} class="nav--vertical__active" {% endif %}>
+                            <a href="/documentation/database/mariadb">MariaDB</a></li>
+                            
+                            <li
+                            {% if page.menu == 'mysql' %} class="nav--vertical__active" {% endif %}>
+                            <a href="/documentation/database/mysql">MySQL</a></li>
+
+                            <li
+                            {% if page.menu == 'xtradb' %} class="nav--vertical__active" {% endif %}>
+                            <a href="/documentation/database/xtradb">Percona XtraDB Cluster</a></li>
+                            
+                            <li
+                            {% if page.menu == 'postgresql' %} class="nav--vertical__active" {% endif %}>
+                            <a href="/documentation/database/postgresql">PostgreSQL</a></li>
+                            
+                            <li
+                            {% if page.menu == 'redshift' %} class="nav--vertical__active" {% endif %}>
+                            <a href="/documentation/database/redshift">Redshift</a></li>
+
+                            <li
+                            {% if page.menu == 'saphana' %} class="nav--vertical__active" {% endif %}>
+                            <a href="/documentation/database/saphana">SAP HANA</a></li>
 
                             <li
                             {% if page.menu == 'snowflake' %} class="nav--vertical__active" {% endif %}>
@@ -701,16 +706,13 @@ title: Documentation
                             <a href="/documentation/database/sqlite">SQLite</a></li>
 
                             <li
-                            {% if page.menu == 'firebird' %} class="nav--vertical__active" {% endif %}>
-                            <a href="/documentation/database/firebird">Firebird</a></li>
+                            {% if page.menu == 'sybasease' %} class="nav--vertical__active" {% endif %}>
+                            <a href="/documentation/database/sybasease">Sybase ASE</a></li>
 
                             <li
-                            {% if page.menu == 'cloud-spanner' %} class="nav--vertical__active" {% endif %}>
-                            <a href="/documentation/database/cloud-spanner">Google Cloud Spanner</a></li>
+                            {% if page.menu == 'testcontainers' %} class="nav--vertical__active" {% endif %}>
+                            <a href="/documentation/database/testcontainers">TestContainers</a></li>
 
-                            <li
-                            {% if page.menu == 'big-query' %} class="nav--vertical__active" {% endif %}>
-                            <a href="/documentation/database/big-query">Google Big Query</a></li>
                         </ul>
                     </details>
 
