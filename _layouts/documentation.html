@@ -718,8 +718,13 @@ title: Documentation
 
                     <details {% if page.url contains "documentation/learnmore" %} open class="nav--vertical__active-parent" {% endif %}>
                         <summary class="nav-header">Learn more</summary>
-
+                        
                         <ul class="nav nav-pills nav-stacked">
+
+                            <li
+                            {% if page.menu == 'dbSupportLevels' %} class="nav--vertical__active" {% endif %}>
+                            <a href="/documentation/learnmore/database-support">Database Support Levels</a></li>
+
                             <li
                             {% if page.menu == 'upgradingToTeams' %} class="nav--vertical__active" {% endif %}>
                             <a href="/documentation/learnmore/upgradingToTeams">Upgrading to Flyway Teams</a></li>
@@ -752,9 +757,7 @@ title: Documentation
                             {% if page.menu == 'faq' %} class="nav--vertical__active" {% endif %}>
                             <a href="/documentation/learnmore/faq">FAQ</a></li>
 
-                            <li
-                            {% if page.menu == 'support levels' %} class="nav--vertical__active" {% endif %}>
-                            <a href="/documentation/learnmore/database-support">Database Support Levels</a></li>
+                            
                         </ul>
                     </details>
 
