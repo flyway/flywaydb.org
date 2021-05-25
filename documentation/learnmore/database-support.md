@@ -49,6 +49,10 @@ A database going through the certification process will be marked as "pending".
 
 When a database is listed as "Certified", priority for bug-fixing is increased. However, fixes are often dependent on community input and time-to-resolution cannot be guaranteed.
 
+**Ready to get your database certified?** [Learn how to get your database certified with Flyway](/documentation/learnmore/getting-certified)
+
+<hr/>
+
 ### Guaranteed
 
 Guaranteed support is only available to Flyway Teams edition customers.
