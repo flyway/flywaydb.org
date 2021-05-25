@@ -102,3 +102,7 @@ Here are all the changes and additions you'll need to make:
 You should at this point be able to run the `flyway info` build configuration and see an empty version history. Congratulations! You have got a basic implementation up and running. You can now start creating migration scripts and running `flyway migrate` on them.
 
 Basic SQL scripts should run with few problems, but you may find more edge cases, particularly in `Parser`. Look at the existing overrides for existing platforms for examples of how to deal with them. If you find you need to make more invasive changes in the core of Flyway, please do contact us for advice. We will need to test bigger changes ourselves against all our test instances before we can accept them.
+
+## What's next?
+
+Adding compatibility for your databse to Flyway is just the first step. If you want your database to become officially supported, you should learn more about [Flyway's Support Levels](/documentation/learnmore/database-support), and [process for obtaining Certification](/documentation/learnmore/getting-certified).
