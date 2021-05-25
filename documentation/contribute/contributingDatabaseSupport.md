@@ -1,19 +1,13 @@
 ---
 layout: documentation
 menu: contributingDatabaseSupport
-subtitle: Contributing Database Support
+subtitle: Contributing Database Compatibility
 ---
-# Contributing Database Support to Flyway
+# Contributing Database Compatibility to Flyway
 
-Flyway follows an Open Source model for the Community edition. We welcome code contributions through Pull Requests on the [Flyway GitHub page](https://github.com/flyway/flyway). This article will provide help with contributing code to make Flyway support a new database platform.
+Flyway follows an Open Source model for the Community edition. We welcome code contributions through Pull Requests on the [Flyway GitHub page](https://github.com/flyway/flyway). This article will provide help with contributing code to make Flyway compatible with a new database platform. 
 
-Flyway supports migrations for a large number of database platforms in a unified and consistent way. It does this by abstracting away the details of each database into a set of classes for each platform, plus factory classes that construct the appropriate objects for the database at hand; all communication with the database is done through a JDBC connection. The advantage of this approach is that JDBC is a widely adopted standard; with little more than a JDBC driver and knowledge of the SQL dialect used by a database it is possible to add Flyway support.
-
-## Why doesn’t Flyway accept all database support contributions?
-
-We welcome pull requests for database support, but not all requests are automatically accepted. Once support for a new database platform is introduced, we become responsible for ongoing maintenance. Maintenance of a database platform has a cost, which has to be balanced against our other priorities for Flyway.  
-Before we can support a database platform, we need an effective way of testing against an instance of that platform. This generally takes the form of a Docker image per version for on-premise databases, or a test account with a cloud provider. Unfortunately, it's not always possible to access a test instance without excessive cost.  
-Finally, contributions need to be based on a recent fork of the Flyway repository with no merge conflicts, and also meet the high bar we set for Flyway’s code standard – we can provide advice and code review.
+Flyway supports migrations for a large number of database platforms in a unified and consistent way. It does this by abstracting away the details of each database into a set of classes for each platform, plus factory classes that construct the appropriate objects for the database at hand; all communication with the database is done through a JDBC connection. The advantage of this approach is that JDBC is a widely adopted standard; with little more than a JDBC driver and knowledge of the SQL dialect used by a database it is possible to make Flyway compatible with your database of choice.
 
 ## You will need...
 
