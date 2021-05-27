@@ -28,6 +28,35 @@ subtitle: Google Big Query
 
 Support Level determines the degree of support available for this database ([learn more](/documentation/learnmore/database-support)).
 
+## Driver
+
+<table class="table">
+<tr>
+<th>URL format</th>
+<td><code>jdbc:bigquery://https://www.googleapis.com/bigquery/v2:443;ProjectId=<i>project_id</i>;OAuthType=0;OAuthServiceAcctEmail=<i>service_account_name</i>;OAuthPvtKeyPath=<i>path_to_key</i>;</code></td>
+</tr>
+<tr>
+<th>SSL support</th>
+<td>No</td>
+</tr>
+<tr>
+<th>Ships with Flyway Command-line</th>
+<td>No</td>
+</tr>
+<tr>
+<th>Maven Central coordinates</th>
+<td>None. The Simba driver is available for download <a href="https://cloud.google.com/bigquery/docs/reference/odbc-jdbc-drivers" target="_blank">here</a></td>
+</tr>
+<tr>
+<th>Supported versions</th>
+<td>-</td>
+</tr>
+<tr>
+<th>Default Java class</th>
+<td><code>com.simba.googlebigquery.jdbc42.Driver</code></td>
+</tr>
+</table>
+
 ## Using Flyway with Google Big Query
 
 Google Big Query is in the process of being certified. The process of certification involves getting real world usage feedback from beta users. 
