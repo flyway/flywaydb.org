@@ -27,10 +27,10 @@ Special values:
   <li><code>latest</code>: the latest version of the schema, as defined by the migration with the highest version</li>
 </ul>
 
-## Fuzzy Matching
+## Non-specific target
 {% include teams.html %}
 
-Appending a version number with a `?` character will enable _"fuzzy matching"_ where Flyway will match the closest version available (specified number or below for `migrate`, specified number or above for `undo`) rather than throwing an exception.
+Appending a version number with a `?` character will enable _"Non-specific target"_ where Flyway will match the closest version available (specified number or below for `migrate`, specified number or above for `undo`) rather than throwing an exception.
 
 
 ## Default
@@ -44,7 +44,7 @@ Appending a version number with a `?` character will enable _"fuzzy matching"_ w
 ./flyway -target="2.0" migrate
 ```
 
-### Commandline with fuzzy matching
+### Commandline with Non-specific target
 {% include teams.html %}
 ```powershell
 ./flyway -target="2.0?" migrate
@@ -55,7 +55,7 @@ Appending a version number with a `?` character will enable _"fuzzy matching"_ w
 flyway.target=2.0
 ```
 
-### Configuration File with fuzzy matching
+### Configuration File with Non-specific target
 {% include teams.html %}
 ```properties
 flyway.target=2.0?
@@ -66,7 +66,7 @@ flyway.target=2.0?
 FLYWAY_TARGET=2.0
 ```
 
-### Environment Variable with fuzzy matching
+### Environment Variable with Non-specific target
 {% include teams.html %}
 ```properties
 FLYWAY_TARGET=2.0?
@@ -79,7 +79,7 @@ Flyway.configure()
     .load()
 ```
 
-### API with fuzzy matching
+### API with Non-specific target
 {% include teams.html %}
 ```java
 Flyway.configure()
@@ -94,7 +94,7 @@ flyway {
 }
 ```
 
-### Gradle with fuzzy matching
+### Gradle with Non-specific target
 {% include teams.html %}
 ```groovy
 flyway {
@@ -110,7 +110,7 @@ flyway {
 ```
 
 
-### Maven with fuzzy matching
+### Maven with Non-specific target
 {% include teams.html %}
 ```xml
 <configuration>
