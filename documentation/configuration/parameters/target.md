@@ -23,9 +23,9 @@ destroy database objects.
 
 Special values:
 
-  - <code>current</code>: designates the current version of the schema
-  - <code>latest</code>: the latest version of the schema, as defined by the migration with the highest version
-  - <code>&lt;version&gt;?</code>: {% include teams.html %} Instructs Flyway to not fail if the target version doesn't exist. In this case, Flyway will go up to but not beyond the specified target (default: fail if the target version doesn't exist) (e.g.) `2.1?`
+  - `current`: designates the current version of the schema
+  - `latest`: the latest version of the schema, as defined by the migration with the highest version
+  - `&lt;version&gt;?`: {% include teams.html %} Instructs Flyway to not fail if the target version doesn't exist. In this case, Flyway will go up to but not beyond the specified target (default: fail if the target version doesn't exist) (e.g.) `target=2.1?`
 
 ## Default
 
