@@ -55,7 +55,3 @@ An RDBMS will be considered for Certification when we (the Flyway core team) are
 If you’re satisfied that you have, or will be able to meet the criteria above, the next step is to get in touch by completing the form below.
 
 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc4u2O7jrVagqk6oYgiBCBJhsaD8XWwnKe0QG6XfRz_zBHlFA/viewform?embedded=true" width="640" height="1300" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-
-
-
-

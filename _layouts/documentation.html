@@ -634,12 +634,12 @@ title: Documentation
                             <a href="/documentation/database/big-query">Google Big Query</a></li>
 
                             <li
-                            {% if page.menu == 'cockroachdb' %} class="nav--vertical__active" {% endif %}>
-                            <a href="/documentation/database/cockroachdb">CockroachDB</a></li>
-
-                            <li
                             {% if page.menu == 'cloud-spanner' %} class="nav--vertical__active" {% endif %}>
                             <a href="/documentation/database/cloud-spanner">Cloud Spanner</a></li>
+
+                            <li
+                            {% if page.menu == 'cockroachdb' %} class="nav--vertical__active" {% endif %}>
+                            <a href="/documentation/database/cockroachdb">CockroachDB</a></li>
 
                             <li
                             {% if page.menu == 'db2' %} class="nav--vertical__active" {% endif %}>
@@ -666,14 +666,6 @@ title: Documentation
                             <a href="/documentation/database/informix">Informix</a></li>
 
                             <li
-                            {% if page.menu == 'oracle' %} class="nav--vertical__active" {% endif %}>
-                            <a href="/documentation/database/oracle">Oracle</a></li>
-
-                            <li
-                            {% if page.menu == 'sqlServer' %} class="nav--vertical__active" {% endif %}>
-                            <a href="/documentation/database/sqlserver">SQL Server</a></li>
-
-                            <li
                             {% if page.menu == 'mariadb' %} class="nav--vertical__active" {% endif %}>
                             <a href="/documentation/database/mariadb">MariaDB</a></li>
                             
@@ -682,13 +674,17 @@ title: Documentation
                             <a href="/documentation/database/mysql">MySQL</a></li>
 
                             <li
+                            {% if page.menu == 'oracle' %} class="nav--vertical__active" {% endif %}>
+                            <a href="/documentation/database/oracle">Oracle</a></li>
+
+                            <li
                             {% if page.menu == 'xtradb' %} class="nav--vertical__active" {% endif %}>
                             <a href="/documentation/database/xtradb">Percona XtraDB Cluster</a></li>
                             
                             <li
                             {% if page.menu == 'postgresql' %} class="nav--vertical__active" {% endif %}>
                             <a href="/documentation/database/postgresql">PostgreSQL</a></li>
-                            
+
                             <li
                             {% if page.menu == 'redshift' %} class="nav--vertical__active" {% endif %}>
                             <a href="/documentation/database/redshift">Redshift</a></li>
@@ -704,6 +700,10 @@ title: Documentation
                             <li
                             {% if page.menu == 'sqlite' %} class="nav--vertical__active" {% endif %}>
                             <a href="/documentation/database/sqlite">SQLite</a></li>
+
+                            <li
+                            {% if page.menu == 'sqlServer' %} class="nav--vertical__active" {% endif %}>
+                            <a href="/documentation/database/sqlserver">SQL Server</a></li>
 
                             <li
                             {% if page.menu == 'sybasease' %} class="nav--vertical__active" {% endif %}>
