@@ -6,7 +6,7 @@ subtitle: Getting your Database Certified
 
 # Getting Flyway Certified support for your database
 
-This page provides guidance on the process and crtieria for getting your database added to Flyway’s list of “Certified supported” databases. It’s aimed at the vendors and maintainers of relational database management systems (“RDBMS”). 
+This page provides guidance on the process and criteria for getting your database added to Flyway’s list of “Certified supported” databases. It’s aimed at the vendors and maintainers of relational database management systems (“RDBMS”). 
 
 _If you’re an end user of a database Flyway doesn’t support, and you would like it to, you should let us know by raising an issue on our GitHub repo, or by following the how-to guide for [making your database compatible with Flyway](/documentation/contribute/contributingDatabaseSupport) yourself._
 
@@ -40,7 +40,7 @@ An RDBMS will be considered for Certification when we (the Flyway core team) are
 **There is technical compatibility.**
 
 - You can demonstrate your RDBMS is technically compatible with Flyway having forked Flyway and followed the Adding Compatibility process. Note that while it’s technically possible, we don’t currently support NoSQL databases due to the degree of architectural change required to Flyway core in order to support them. However, we may do so in the future. Any contributed code requires the author to have signed out CLA.
-- You are happy that Flyway’s prescribed migration process matches best-practice for your database, or are able to provide specific guidance in the context of using Flyway with your RDBMs. For example, some Cloud-native RDBMSs with auto-scaling features like geo-replication require the database change-frequency to be limited.    
+- You are happy that Flyway’s prescribed migration process matches best-practice for your database, or are able to provide specific guidance in the context of using Flyway with your RDBMS. For example, some Cloud-native RDBMSs with auto-scaling features like geo-replication require the database change-frequency to be limited.    
 - You are able to provide documentation to help us understand any nuances specific to your database engine that we need to make Flyway users aware of. For example, special syntax.
 - You are able to support us in developing a comprehensive test suite for your database. For example, we require a Dockerized version of your database – or, for Cloud-native databases, a free instance or emulator (with parity) – for us to develop and run our tests against.    
 - You are able to support us with real-world beta-testing. As a rough guide, we try to work with ten end-users / organisations in real-world testing a beta version of compatibility before we are able to sign off on certification. This process helps us identify nuances, ensure robustness and develop documentation. 
