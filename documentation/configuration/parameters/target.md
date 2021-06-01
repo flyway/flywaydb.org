@@ -22,16 +22,10 @@ lower version number will be ignored. Specifying a target version should be done
 destroy database objects.
 
 Special values:
-<ul>
-  <li><code>current</code>: designates the current version of the schema</li>
-  <li><code>latest</code>: the latest version of the schema, as defined by the migration with the highest version</li>
-</ul>
 
-## Non-specific target
-{% include teams.html %}
-
-Appending a version number with a `?` character will enable _"Non-specific target"_ where Flyway will match the closest version available (specified number or below for `migrate`, specified number or above for `undo`) rather than throwing an exception.
-
+  - <code>current</code>: designates the current version of the schema
+  - <code>latest</code>: the latest version of the schema, as defined by the migration with the highest version
+  - <code>&lt;version&gt;?</code>: {% include teams.html %} Instructs Flyway to not fail if the target version doesn't exist. In this case, Flyway will go up to but not beyond the specified target (default: fail if the target version doesn't exist) (e.g.) `2.1?`
 
 ## Default
 
@@ -44,21 +38,9 @@ Appending a version number with a `?` character will enable _"Non-specific targe
 ./flyway -target="2.0" migrate
 ```
 
-### Commandline with Non-specific target
-{% include teams.html %}
-```powershell
-./flyway -target="2.0?" migrate
-```
-
 ### Configuration File
 ```properties
 flyway.target=2.0
-```
-
-### Configuration File with Non-specific target
-{% include teams.html %}
-```properties
-flyway.target=2.0?
 ```
 
 ### Environment Variable
@@ -66,24 +48,10 @@ flyway.target=2.0?
 FLYWAY_TARGET=2.0
 ```
 
-### Environment Variable with Non-specific target
-{% include teams.html %}
-```properties
-FLYWAY_TARGET=2.0?
-```
-
 ### API
 ```java
 Flyway.configure()
     .target("2.0")
-    .load()
-```
-
-### API with Non-specific target
-{% include teams.html %}
-```java
-Flyway.configure()
-    .target("2.0?")
     .load()
 ```
 
@@ -94,26 +62,9 @@ flyway {
 }
 ```
 
-### Gradle with Non-specific target
-{% include teams.html %}
-```groovy
-flyway {
-    target = '2.0?'
-}
-```
-
 ### Maven
 ```xml
 <configuration>
     <target>2.0</target>
-</configuration>
-```
-
-
-### Maven with Non-specific target
-{% include teams.html %}
-```xml
-<configuration>
-    <target>2.0?</target>
 </configuration>
 ```
