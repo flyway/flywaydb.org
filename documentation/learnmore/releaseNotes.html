@@ -9,6 +9,26 @@ redirect_from: /documentation/releaseNotes/
 <p>Thank you all for reporting all these issues and contributing fixes!</p>
 
 <div class="release">
+    <h2 id="7.9.2">Flyway 7.9.2 (2021-06-03)</h2>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        {% include issue.html id="3177" title="Use an instance of DatabaseTypeRegister when getting the ClassLoader" %}
+		<li>Fix connecting to Snowflake with role which has special characters</li>
+        <li>Fix handling of PL/SQL / "slash" delimiters that are not in first column</li>
+    </ul>
+
+    <h3>Changes</h3>
+    <ul>
+        {% include issue.html id="3174" title="Clean schemas before dropping them" %}
+    </ul>
+
+    <p>
+        Thanks to AigleeK, alexgast, aliusmiles, and polaskj for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
     <h2 id="7.9.1">Flyway 7.9.1 (2021-05-19)</h2>
 
     <h3>Bug fixes</h3>
