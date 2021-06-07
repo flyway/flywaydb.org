@@ -26,7 +26,7 @@ Each new database deserves the same degree of testing. As you can imagine, this 
 
 Our relationships with database vendors is an important part of being a stable product, and it's a relationship that also benefits vendors. Today, the majority of databases that have grown in popularity operate on some form of the open-core model, providing paid-for editions of their technology in much the same way as Flyway.
 
-There are [339 database engines](https://db-engines.com/en/ranking) in the world, offering a lot of choice for developers, their specific needs and context of application. When we add support into Flyway for a new database, we strengthen the ecosystems of those vendors and their databases.
+There are [hundreds of database engines](https://db-engines.com/en/ranking) in the world, offering a lot of choice for developers, their specific needs and context of application. When we add support into Flyway for a new database, we strengthen the ecosystems of those vendors and their databases.
 
 ## Achieving Certified support
 
@@ -39,7 +39,7 @@ An RDBMS will be considered for Certification when we (the Flyway core team) are
 
 **There is technical compatibility.**
 
-- You can demonstrate your RDBMS is technically compatible with Flyway having forked Flyway and followed the Adding Compatibility process. Note that while it’s technically possible, we don’t currently support NoSQL databases due to the degree of architectural change required to Flyway core in order to support them. However, we may do so in the future. Any contributed code requires the author to have signed out CLA.
+- You can demonstrate your RDBMS is technically compatible with Flyway having forked Flyway and followed the Adding Compatibility process. Note that while it’s technically possible, we don’t currently support NoSQL databases due to the degree of architectural change required to Flyway core in order to support them. However, we may do so in the future. Any contributed code requires the author to have signed our CLA.
 - You are happy that Flyway’s prescribed migration process matches best-practice for your database, or are able to provide specific guidance in the context of using Flyway with your RDBMS. For example, some Cloud-native RDBMSs with auto-scaling features like geo-replication require the database change-frequency to be limited.    
 - You are able to provide documentation to help us understand any nuances specific to your database engine that we need to make Flyway users aware of. For example, special syntax.
 - You are able to support us in developing a comprehensive test suite for your database. For example, we require a Dockerized version of your database – or, for Cloud-native databases, a free instance or emulator (with parity) – for us to develop and run our tests against.    
