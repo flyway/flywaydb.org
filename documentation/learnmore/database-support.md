@@ -59,4 +59,4 @@ Guaranteed support is only available to Flyway Teams edition customers.
 
 "Guaranteed" means that support for the database is provided at the level outlined in the end-user license agreement, including priority bug-fixing and prioritised feature requests.
 
-**Ready for guaranteed database support?** You can upgrade to Flyway Teams at anytime by visiting [flywaydb.org/download](https://www.flyway.org/download) and purchasing a Flyway Teams license, or by emailing <a href="mailto:sales@flywaydb.org">sales@flywaydb.org</a>.
+**Ready for guaranteed database support?** You can upgrade to Flyway Teams at anytime by visiting [flywaydb.org/download](https://www.flywaydb.org/download) and purchasing a Flyway Teams license, or by emailing <a href="mailto:sales@flywaydb.org">sales@flywaydb.org</a>.
