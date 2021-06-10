@@ -1,0 +1,21 @@
+version: "3.9"
+services:
+ clean:
+  image: bash
+  volumes:
+   - ./:/app
+  command: rm -rf /app/_site
+ run:
+  image: jekyll/jekyll:3.8
+  ports:
+   - "35729:35729"
+   - "4000:4000"
+  environment:
+   - FORCE_POLLING=true
+   - PAGES_REPO_NWO='flyway/flywaydb.org'
+  volumes:
+   - ./:/srv/jekyll
+  stdin_open: true
+  tty: true
+  hostname: localhost
+  command: jekyll serve --livereload --incremental --host localhost
