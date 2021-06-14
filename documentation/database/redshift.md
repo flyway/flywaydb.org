@@ -45,7 +45,7 @@ Support Level determines the degree of support available for this database ([lea
 </tr>
 <tr>
 <th></th>
-<td><code>2.0</code> and later are <strong>partially</strong> supported (see below)</td>
+<td><code>2.0.0.5</code> and later are <strong>partially</strong> supported (see below)</td>
 </tr>
 <tr>
 <th>Default Java class</th>
