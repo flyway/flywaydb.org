@@ -45,7 +45,7 @@ Support Level determines the degree of support available for this database ([lea
 </tr>
 <tr>
 <th></th>
-<td><code>2.0</code> and later are <strong>not</strong> supported (see below)</td>
+<td><code>2.0</code> and later are <strong>partially</strong> supported (see below)</td>
 </tr>
 <tr>
 <th>Default Java class</th>
@@ -98,6 +98,9 @@ INSERT INTO ${tableName} (name) VALUES ('Mr. T');</pre>
 Due to Redshift limitations `ALTER TABLE` and `DROP TABLE` for **external tables** cannot run within a transaction, yet Flyway doesn't
 autodetect this. You can work around this limitation and successfully execute such a statement by including a `VACUUM`
 statement in the same SQL file as this will force Flyway to run the entire migration without a transaction.
+
+The v2 driver is only supported from v2.0.0.5, and only then by Flyway setting the connection property `enableFetchRingBuffer=false`. 
+We recommend using the latest v1 driver for the time being. See [here](https://github.com/aws/amazon-redshift-jdbc-driver/issues/4) for more details.
 
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/database/cockroachdb">CockroachDB <i class="fa fa-arrow-right"></i></a>
