@@ -37,14 +37,20 @@ Flyway itself should start. Since Flyway doesn’t yet support your database you
 
 You’re now ready to start adding that database support. We’re going to assume your database platform is called **FooDb**. Change the obvious naming conventions to suit your database.
 
+## Project structure
+
+First of all, where should we put the changes? In versions of Flyway up to 7.10, we would make changes to the Flyway core. However, 
+we've more recently separated out database-specific code into separate modules, and in particular, community contributions should
+go into `flyway-community-db-support`. This means there won't be any changes affecting critical areas of the product code for 
+existing users.
+
 ## Let's code!
 
 Here are all the changes and additions you'll need to make:
 
-1.  Add an optional dependency to your JDBC driver to the top-level `.pom`
-1.  Add a dependency of your JDBC driver to the flyway-commandline `.pom` if you wish the driver to be automatically shipped with the Flyway product.
-1.  In `flyway.conf`, document the format of the JDBC connection url for your database. This is not necessary to make Flyway work but it will help adoption of your database!
-1.  Create a new folder `Foo` in `org.flywaydb.core.internal.database` to contain your new classes.
+1.  Add a dependency to your JDBC driver to the `flyway-community-db-support` `pom.xml`
+1.  Document the format of the JDBC connection url for your database. This is not necessary to make Flyway work but it will help adoption of your database!
+1.  Create a new folder `Foo` in `org.flywaydb.community.database.foo` to contain your new classes.
 1.  In the folder create classes `FooDatabase` (subclassed from Database), `FooSchema` (subclassed from Schema), and `FooTable` (subclassed from Table), using the canonical signatures. These classes make up Flyway’s internal representation of the parts of your database that it works on.
 1.  Create class `FooParser` (subclassed from Parser) using the canonical signature. This represents a simplified version of a parser for your database’s dialect of SQL. When finished it will be able to decompose a migration script into separate statements and report on serious errors, but it does not need to fully understand them.
 1.  Create a class `FooDatabaseType` subclassed from `DatabaseType` in the folder your created. This class acts as the collation class that brings together all the classes you created before. Implement the required methods. There are also some optional methods you can override to customize the behavior.
@@ -96,10 +102,14 @@ Here are all the changes and additions you'll need to make:
     *   `doDrop()` – to drop the table
     *   `doExists()` – to query whether the table described exists in the database
     *   `doLock()` – to lock the table with a read/write pessimistic lock until the end of the current transaction. This is used to prevent concurrent reads and writes to the schema history while a migration is underway. If your database doesn’t support table-level locks, do nothing.
+1. Finally, expose your database support to the Flyway engine by adding an entry to `src/main/resources/META-INF/services/org.flywaydb.core.internal.database.DatabaseType`
 
 ## Try it!
 
-You should at this point be able to run the `flyway info` build configuration and see an empty version history. Congratulations! You have got a basic implementation up and running. You can now start creating migration scripts and running `flyway migrate` on them.
+You should at this point be able to drop your `flyway-community-db-support` jar into Flyway (the `lib` folder is preferable) and
+the necessary driver jars into `drivers`, run the `flyway info` build configuration and see an empty version history. 
+Congratulations! You have got a basic implementation up and running. You can now start creating migration scripts and running 
+`flyway migrate` on them.
 
 Basic SQL scripts should run with few problems, but you may find more edge cases, particularly in `Parser`. Look at the existing overrides for existing platforms for examples of how to deal with them. If you find you need to make more invasive changes in the core of Flyway, please do contact us for advice. We will need to test bigger changes ourselves against all our test instances before we can accept them.
 
@@ -114,4 +124,4 @@ In this case you will need to:
 + Completed any requested code changes
 + Signed the [Flyway CLA](https://cla-assistant.io/flyway/flyway) for your PR
 
-Finally, adding compatibility for your databse to Flyway is just the first step. If you want your database to become officially supported, you should learn more about [Flyway's Support Levels](/documentation/learnmore/database-support), and [process for obtaining Certification](/documentation/learnmore/getting-certified).
+Finally, adding compatibility for your database to Flyway is just the first step. If you want your database to become officially supported, you should learn more about [Flyway's Support Levels](/documentation/learnmore/database-support), and [process for obtaining Certification](/documentation/learnmore/getting-certified).
