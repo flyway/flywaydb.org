@@ -3,7 +3,7 @@ layout: v6/documentation
 menu: aurora-postgresql
 subtitle: Aurora PostgreSQL
 ---
-# PostgreSQL
+# Aurora PostgreSQL
 
 ## Supported Versions
 
