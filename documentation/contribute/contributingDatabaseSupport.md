@@ -39,7 +39,7 @@ You’re now ready to start adding that database support. We’re going to assum
 
 ## Project structure
 
-First of all, where should we put the changes? In versions of Flyway up to 7.10, we would make changes to the Flyway core. However, 
+First of all, where should we put the changes? In versions of Flyway prior to 7.10.0, we would make changes to the Flyway core. However, 
 we've more recently separated out database-specific code into separate modules, and in particular, community contributions should
 go into `flyway-community-db-support`. This means there won't be any changes affecting critical areas of the product code for 
 existing users.
@@ -50,7 +50,7 @@ Here are all the changes and additions you'll need to make:
 
 1.  Add a dependency to your JDBC driver to the `flyway-community-db-support` `pom.xml`
 1.  Document the format of the JDBC connection url for your database. This is not necessary to make Flyway work but it will help adoption of your database!
-1.  Create a new folder `Foo` in `org.flywaydb.community.database.foo` to contain your new classes.
+1.  Create a new folder `foo` in `org.flywaydb.community.database` to contain your new classes.
 1.  In the folder create classes `FooDatabase` (subclassed from Database), `FooSchema` (subclassed from Schema), and `FooTable` (subclassed from Table), using the canonical signatures. These classes make up Flyway’s internal representation of the parts of your database that it works on.
 1.  Create class `FooParser` (subclassed from Parser) using the canonical signature. This represents a simplified version of a parser for your database’s dialect of SQL. When finished it will be able to decompose a migration script into separate statements and report on serious errors, but it does not need to fully understand them.
 1.  Create a class `FooDatabaseType` subclassed from `DatabaseType` in the folder your created. This class acts as the collation class that brings together all the classes you created before. Implement the required methods. There are also some optional methods you can override to customize the behavior.
