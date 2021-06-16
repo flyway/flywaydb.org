@@ -160,9 +160,9 @@ Example: `jdbc:sqlserver://<i>host</i>:<i>port</i>;databaseName=<i>database</i>;
 
 #### Installing MSAL4J
 
-If you're using Flyway in an environment that is integrated with Maven or Gradle (Like the Maven or Gradle plugin), you only need to add [MSAL4J's Maven package](https://mvnrepository.com/artifact/com.microsoft.azure/msal4j) as a dependency in your `pom.xml`. Maven should then deal with getting MSAL4J's dependencies itself.
+You must add Microsoft's [MSAL4J library](https://mvnrepository.com/artifact/com.microsoft.azure/msal4j) to your classpath. For instance, as a Maven or Gradle dependency.
 
-For command-line users, the necessary dependencies are shipped with Flyway so that zero installation is required.
+For command-line users, MSAL4J is already included, so no extra installation is required.
 
 #### Connecting
 
