@@ -105,4 +105,13 @@ Basic SQL scripts should run with few problems, but you may find more edge cases
 
 ## What's next?
 
-Adding compatibility for your databse to Flyway is just the first step. If you want your database to become officially supported, you should learn more about [Flyway's Support Levels](/documentation/learnmore/database-support), and [process for obtaining Certification](/documentation/learnmore/getting-certified).
+Now that you've proved that Flyway can work with your database, you may wish to submit a request for your database to be listed as Compatible on our support pages. 
+
+In this case you will need to:
+
++ Have completed every section of this tutorial
++ Submitted your code as a [Pull Request](https://github.com/flyway/flyway/pulls) for our review, remembering to include supporting material (eg. test code, results, screenshots etc) to prove compatibility
++ Completed any requested code changes
++ Signed the [Flyway CLA](https://cla-assistant.io/flyway/flyway) for your PR
+
+Finally, adding compatibility for your databse to Flyway is just the first step. If you want your database to become officially supported, you should learn more about [Flyway's Support Levels](/documentation/learnmore/database-support), and [process for obtaining Certification](/documentation/learnmore/getting-certified).
