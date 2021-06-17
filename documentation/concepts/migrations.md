@@ -187,7 +187,7 @@ The file name consists of the following parts:
 Optionally versioned SQL migrations can also omit both the separator and the description.
 
 The configuration option <code>validateMigrationNaming</code> determines how Flyway handles files that do not correspond with
-the naming pattern when carrying out a migration: if true then Flyway will simply ignore all such files, if false then 
+the naming pattern when carrying out a migration: if false then Flyway will simply ignore all such files, if true then 
 Flyway will fail fast and list all files which need to be corrected.
 
 ### Discovery
