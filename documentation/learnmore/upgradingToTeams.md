@@ -5,17 +5,17 @@ subtitle: Upgrading to Teams
 redirect_from: /documentation/upgradingToTeams/
 ---
 
-# Upgrading to Teams
+# Automatic Teams Trial and Upgrading
 
-This article assumes you are a proud owner of a Flyway Teams license. If you are not, head over to the [download/pricing page](/download) to purchase a license or start a free trial.
+Flyway will enable you to use Teams features within the first 28 days from your first deployment, after which it will revert to Community Edition unless you sign for a [free trial](/download/teams?ref=upgradingTeamsDocs) or purchase a [full license](https://www.red-gate.com/products/dba/flyway/pricing).
 
 ## Upgrading from community
 
-If you are currently using Flyway Community there are a few things you need to do to upgrade to using Flyway Teams. The process to do so differs depending on how you are accessing Flyway, but broadly consists of telling Flyway to use the [correct edition](/documentation/configuration/parameters/edition), and supplying a [license key](/documentation/configuration/parameters/licenseKey). See below for more details for each usage.
+If you are currently using Flyway Community and have obtained a Flyway Teams license, please see [license key](/documentation/configuration/parameters/licenseKey) to read about where to configure this License Key.
 
 ### Command Line
 
-If you are using the command line, simply add the `-teams` flag when you invoke Flyway (or use the environment variable `FLYWAY_EDITION=teams`). Then provide your [license key](/documentation/configuration/parameters/licenseKey) through any of the supported methods.
+If you are using the command line, simply provide your [license key](/documentation/configuration/parameters/licenseKey) through any of the supported methods.
 
 For example:
 ```powershell

@@ -10,7 +10,11 @@ redirect_from: /documentation/configuration/edition/
 {% include teams.html %}
 
 ## Description
-The version of flyway to use. This config parameter only applies to the Command Line version of Flyway. To change the edition of the Gradle or Maven plugins, simply change the dependency to the teams one (e.g. `compile "org.flywaydb:flyway-core:{{ site.flywayVersion }}"` -> `compile "org.flywaydb.enterprise:flyway-core:{{ site.flywayVersion }}"`).
+Forces Flyway to use either Teams or Community. Should be either `-teams` or `-community` for teams or community editions respectively.
+
+This config parameter only applies to the Command-Line version of Flyway. To change the edition of the Gradle or Maven plugins, simply change the dependency to the teams one (e.g. `compile "org.flywaydb:flyway-core:{{ site.flywayVersion }}"` -> `compile "org.flywaydb.enterprise:flyway-core:{{ site.flywayVersion }}"`).
+
+If omitted, Flyway Command-Line will ascertain the correct version to run based on the presence of a license key and the entitlement to a Teams trial if available.
 
 ## Usage
 
