@@ -8,25 +8,8 @@ subtitle: GCP Spanner
 ## Pre-requisites
 - Latest Flyway command line
   - [Download here](https://flywaydb.org/download/community)
-- Teams Edition trial license
-  - [Get it here](https://flywaydb.org/download/teams?ref=gcp-spanner-beta)
-- Ensure the `flyway.googleCloudPlatformBeta` environment variable is set to `true`
 
-Familiarize yourself with basic Flyway command line by reading the docs, [here](https://flywaydb.org/documentation/usage/commandline/).
-
-Ensure you're using the Flyway Teams edition by supplying your license key in the configuration, and calling `flyway` with the `-teams` flag in the command line.
-
-If you aren't a Flyway Teams customer, you can get a free trial [here](https://flywaydb.org/download/teams).
-
-**`flyway.conf`**
-```
-flyway.licenseKey=FL01...
-```
-
-**Command line**
-```
-flyway -teams
-```
+Familiarize yourself with basic Flyway command line by reading the docs [here](https://flywaydb.org/documentation/usage/commandline/).
 
 ## Configuring Flyway
 
@@ -67,14 +50,16 @@ Once you have set up the above, Flyway should be ready to connect to your Spanne
 On the command line run:
 
 ```
-flyway -teams info
+flyway info
 ```
 ​
 Flyway will give some brief info (including a possible warning about logging), along with an empty table of migrations:
 
 ```
-PS C:\flyway> .\flyway -teams info
+PS C:\flyway> .\flyway info
+
 ...
+
 +----------+---------+-------------+------+--------------+-------+----------+
 | Category | Version | Description | Type | Installed On | State | Undoable |
 +----------+---------+-------------+------+--------------+-------+----------+
@@ -82,13 +67,6 @@ PS C:\flyway> .\flyway -teams info
 +----------+---------+-------------+------+--------------+-------+----------+
 ```
 
-​
-If you attempt to run without Flyway Teams set up, you will see something along the lines of:
+## Share Your Feedback
 
-```
-PS C:\flyway> .\flyway info
-Jun 07, 2021 11:47:37 AM org.flywaydb.commandline.Main error
-SEVERE: Missing license key. Ensure flyway.licenseKey is set to a valid Flyway license key ("FL01" followed by 512 hex chars)
-```
-
-This lets you know that you need a Flyway Teams license. Ensure you're signed up to the free trial [here](https://flywaydb.org/download/teams?ref=gcp-spanner-beta), and that you have the `-teams` flag in the command line prompt.
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSep6p4N-okfCVYi7KmJhDbkfQpT6xovVcA0Lxq50BaLzFjaSg/viewform?embedded=true" width="640" height="1869" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
