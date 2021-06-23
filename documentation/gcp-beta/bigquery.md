@@ -8,25 +8,8 @@ subtitle: GCP BigQuery
 ## Pre-requisites
 - Latest Flyway command line
   - [Download here](https://flywaydb.org/download/community)
-- Teams Edition trial license
-  - [Get it here](https://flywaydb.org/download/teams?ref=gcp-bigquery-beta)
-- Ensure the `flyway.googleCloudPlatformBeta` environment variable is set to `true`
 
-Familiarize yourself with basic Flyway command line by reading the docs, [here](https://flywaydb.org/documentation/usage/commandline/).
-
-Ensure you're using the Flyway Teams edition by supplying your license key in the configuration, and calling `flyway` with the `-teams` flag in the command line.
-
-If you aren't a Flyway Teams customer, you can get a free trial [here](https://flywaydb.org/download/teams).
-
-**`flyway.conf`**
-```
-flyway.licenseKey=FL01...
-```
-
-**Command line**
-```
-flyway -teams
-```
+Familiarize yourself with basic Flyway command line by reading the docs [here](https://flywaydb.org/documentation/usage/commandline/).
 
 ## Installing dependencies
 Google BigQuery requires a number of dependencies to be installed manually.
@@ -36,7 +19,7 @@ Go to [Google's documentation](https://cloud.google.com/bigquery/docs/reference/
 You will get a zip archive with many JARs inside. Extract the contents to the `flyway/drivers/` folder.
 ​
 ## Configuring Flyway
-​
+
 ### JDBC URL
 ​
 This is a JDBC URL that points to your database. You can configure a connection using this sample URL as an example:
@@ -80,25 +63,16 @@ Once you have set up the above, Flyway should be ready to connect to your BigQue
 On the command line run:
 
 ```
-flyway -teams info
+flyway info
 ```
 ​
 Flyway will give some brief info (including a possible warning about logging), along with an empty table of migrations:
 
 ```
-PS C:\GBQ> .\flyway -teams info
-Jun 07, 2021 11:50:59 AM org.flywaydb.core.internal.license.VersionPrinter info
-INFO: Flyway Teams Edition (unlimited schemas) 0-SNAPSHOT by Redgate licensed to Red Gate Software until 2029-08-01
-Jun 07, 2021 11:51:00 AM org.flywaydb.core.internal.license.VersionPrinter info
-INFO: > GCP Spanner/BigQuery database support (beta) 0-SNAPSHOT by Redgate
-SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
-SLF4J: Defaulting to no-operation (NOP) logger implementation
-SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-Jun 07, 2021 11:51:03 AM org.flywaydb.core.internal.database.base.BaseDatabaseType info
-INFO: Database: jdbc:bigquery://rgbsync.iam.gserviceaccount.com;OAuthPvtKeyPath=rgbsync-e4ba7d14e486.json; (Google BigQuery 2.0)
-Jun 07, 2021 11:51:12 AM org.flywaydb.commandline.Main info
-INFO: Schema version: << Empty Schema >>
-Jun 07, 2021 11:51:12 AM org.flywaydb.commandline.Main info
+PS C:\GBQ> .\flyway info
+
+...
+
 INFO:
 Jun 07, 2021 11:51:13 AM org.flywaydb.commandline.Main info
 INFO: +----------+---------+-------------+------+--------------+-------+----------+
@@ -109,7 +83,7 @@ INFO: +----------+---------+-------------+------+--------------+-------+--------
 ```
 ​
 If you see this, you are good to go on your BigQuery/Flyway migration journey.
-​
+
 If you see:
 ```
 PS C:\GBQ> .\flyway info
@@ -120,11 +94,6 @@ Caused by: java.lang.ClassNotFoundException: com.simba.googlebigquery.jdbc42.Dri
 ​
 Then the BigQuery dependencies have not installed correctly.
 ​
-If you attempt to run without Flyway Teams set up, you will see something along the lines of:
-```
-PS C:\GBQ> .\flyway info
-Jun 07, 2021 11:47:37 AM org.flywaydb.commandline.Main error
-SEVERE: Missing license key. Ensure flyway.licenseKey is set to a valid Flyway license key ("FL01" followed by 512 hex chars)
-```
+## Share Your Feedback
 
-This lets you know that you need a Flyway Teams license. Ensure you're signed up to the free trial [here](https://flywaydb.org/download/teams?ref=gcp-bigquery-beta), and that you have the `-teams` flag in the command line prompt.
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSep6p4N-okfCVYi7KmJhDbkfQpT6xovVcA0Lxq50BaLzFjaSg/viewform?embedded=true" width="640" height="1869" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
