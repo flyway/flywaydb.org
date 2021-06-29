@@ -6,10 +6,12 @@ subtitle: GCP Spanner
 # Flyway & Google Cloud Spanner
 
 ## Pre-requisites
-- Latest Flyway command line
-  - [Download here](https://flywaydb.org/download/community)
-
-Familiarize yourself with basic Flyway command line by reading the docs [here](https://flywaydb.org/documentation/usage/commandline/).
+- Using the Flyway command-line?
+  - Download the latest version [here](/download/community)
+  - Familiarize yourself with basic Flyway command-line usage by reading the docs [here](/documentation/usage/commandline/)
+- Using the Flyway Maven plugin?
+  - Include the Flyway GCP Spanner dependency [here](https://search.maven.org/artifact/org.flywaydb/flyway-gcp-spanner/7.11.0-beta/jar) in your pom
+  - Familiarize yourself with basic Flyway Maven usage by reading the docs [here](/documentation/usage/maven/)
 
 ## Configuring Flyway
 
@@ -32,28 +34,30 @@ The authentication file needs to be accessible to Flyway, so save it somewhere a
 
 You can learn more about service accounts [here](https://cloud.google.com/iam/docs/service-accounts).
 
-Set this URL in the `flyway.url` in your configuration file.
+Set this URL in the [`url`](/documentation/configuration/parameters/url) property in your Flyway configuration.
 ​
 ## Other configuration
 
-Set `flyway.user` and `flyway.password` to empty in your configuration file since we're authenticating using the JDBC URL i.e.
+Set the [`user`](/documentation/configuration/parameters/user) and [`password`](/documentation/configuration/parameters/password) properties to empty in your Flwyay configuration since we're authenticating using the JDBC URL i.e.
 
 ```
 flyway.user=
 flyway.password=
 ```
 
+In a Flyway configuration file.
+
 ## Testing the setup
 ​
-Once you have set up the above, Flyway should be ready to connect to your Spanner database. To test this, run `flyway info` to ensure communications works as expected.
+Once you have set up the above, Flyway should be ready to connect to your Spanner database. We will show sample output using the Flyway command-line.
 
-On the command line run:
+On the command-line running:
 
 ```
 flyway info
 ```
 ​
-Flyway will give some brief info (including a possible warning about logging), along with an empty table of migrations:
+Will give some brief info (including a possible warning about logging), along with an empty table of migrations:
 
 ```
 PS C:\flyway> .\flyway info
