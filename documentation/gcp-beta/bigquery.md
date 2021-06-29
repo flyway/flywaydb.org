@@ -6,17 +6,23 @@ subtitle: GCP BigQuery
 # Flyway & GCP BigQuery
 
 ## Pre-requisites
-- Latest Flyway command line
-  - [Download here](https://flywaydb.org/download/community)
-
-Familiarize yourself with basic Flyway command line by reading the docs [here](https://flywaydb.org/documentation/usage/commandline/).
+- Using the Flyway command-line?
+  - Download the latest version [here](/download/community)
+  - Familiarize yourself with basic Flyway command-line usage by reading the docs [here](/documentation/usage/commandline/)
+- Using the Flyway Maven plugin?
+  - Include the Flyway GCP BigQuery dependency [here](https://search.maven.org/artifact/org.flywaydb/flyway-gcp-bigquery/7.11.0-beta/jar) in your pom
+  - Familiarize yourself with basic Flyway Maven usage by reading the docs [here](/documentation/usage/maven/)
 
 ## Installing dependencies
 Google BigQuery requires a number of dependencies to be installed manually.
 
 Go to [Google's documentation](https://cloud.google.com/bigquery/docs/reference/odbc-jdbc-drivers#current_jdbc_driver_release_12161020) and download the JDBC driver.
 
-You will get a zip archive with many JARs inside. Extract the contents to the `flyway/drivers/` folder.
+You will get a zip archive with many JARs inside.
+
+If you are using the Flyway command-line, you will need to extract the contents of this archive into the `flyway/drivers/` folder.
+
+If you are using the Flyway Maven plugin, you will need to add the contents of this archive to your classpath.
 ​
 ## Configuring Flyway
 
@@ -42,13 +48,11 @@ The keyfile file needs to be accessible to Flyway, so save it somewhere accessib
 
 You can learn more about service accounts [here](https://cloud.google.com/iam/docs/service-accounts).
 
-​Set this URL in the `flyway.url` in your configuration file.
+Set this URL in the [`url`](/documentation/configuration/parameters/url) property in your Flyway configuration.
 
 ## Other configuration
 
-Set `flyway.schemas` to the name of a `data set` within your BigQuery project.
-
-Set `flyway.user` and `flyway.password` to empty in your configuration file since we're authenticating using the JDBC URL i.e.
+Set the [`schemas`](/documentation/configuration/parameters/schemas) property in your Flyway configuration to the name of a `data set` within your BigQuery project. Set the [`user`](/documentation/configuration/parameters/user) and [`password`](/documentation/configuration/parameters/password) properties to empty in your Flwyay configuration since we're authenticating using the JDBC URL i.e.
 
 ```
 flyway.schemas=<your data set>
@@ -56,17 +60,19 @@ flyway.user=
 flyway.password=
 ```
 ​
+In a Flyway configuration file.
+
 ## Testing the setup
 ​
-Once you have set up the above, Flyway should be ready to connect to your BigQuery database. To test this, run `flyway info` to ensure communications works as expected.
+Once you have set up the above, Flyway should be ready to connect to your BigQuery database. We will show sample output using the Flyway command-line.
 
-On the command line run:
+On the command-line runing:
 
 ```
 flyway info
 ```
 ​
-Flyway will give some brief info (including a possible warning about logging), along with an empty table of migrations:
+Will give some brief info (including a possible warning about logging), along with an empty table of migrations:
 
 ```
 PS C:\GBQ> .\flyway info
@@ -92,7 +98,7 @@ Caused by: Unable to instantiate class com.simba.googlebigquery.jdbc42.Driver : 
 Caused by: java.lang.ClassNotFoundException: com.simba.googlebigquery.jdbc42.Driver
 ```
 ​
-Then the BigQuery dependencies have not installed correctly.
+Then the BigQuery dependencies have not installed or been added to the classpath correctly.
 ​
 ## Share Your Feedback
 
