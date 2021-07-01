@@ -1,16 +1,13 @@
 ---
 layout: documentation
-menu: h2
-subtitle: H2
+menu: tidb
+subtitle: TiDB
 ---
-# H2
+# TiDB (Titanium DB)
 
 ## Supported Versions
 
-- `2.0`
-- `1.4`
-- `1.3` {% include teams.html %}
-- `1.2` {% include teams.html %}
+- `5.0` {% include teams.html %}
 
 ## Support Level
 
@@ -21,22 +18,32 @@ subtitle: H2
     </tr>
     <tr>
         <th width="25%">Certified</th>
-        <td>✅</td>
+        <td>❌</td>
     </tr>
     <tr>
         <th width="25%">Guaranteed</th>
-        <td>✅ {% include teams.html %}</td>
+        <td>❌ {% include teams.html %}</td>
     </tr>
 </table>
 
 Support Level determines the degree of support available for this database ([learn more](/documentation/learnmore/database-support)). 
 
-## Driver
+## Drivers
 
 <table class="table">
+<thead>
+<tr>
+<th></th>
+<th>MySQL</th>
+</tr>
+</thead>
 <tr>
 <th>URL format</th>
-<td><code>jdbc:h2:<i>file</i></code></td>
+<td><code>jdbc:mysql://<i>host</i>:<i>port</i>/<i>database</i></code></td>
+</tr>
+<tr>
+<th>SSL support</th>
+<td>Not tested</td>
 </tr>
 <tr>
 <th>Ships with Flyway Command-line</th>
@@ -44,34 +51,30 @@ Support Level determines the degree of support available for this database ([lea
 </tr>
 <tr>
 <th>Maven Central coordinates</th>
-<td><code>com.h2database:h2:1.4.200</code></td>
+<td><code>mysql:mysql-connector-java:8.0.12</code></td>
 </tr>
 <tr>
 <th>Supported versions</th>
-<td><code>1.2.137</code> and later</td>
+<td><code>5.0</code> and later</td>
 </tr>
 <tr>
 <th>Default Java class</th>
-<td><code>org.h2.Driver</code></td>
+<td><code>com.mysql.jdbc.Driver</code></td>
 </tr>
 </table>
 
 ## SQL Script Syntax
 
 - [Standard SQL syntax](/documentation/concepts/migrations#sql-based-migrations#syntax) with statement delimiter **;**
-- $$ delimited strings
-
-### Compatibility
-
-- DDL exported by H2 can be used unchanged in a Flyway migration
-- Any H2 SQL script executed by Flyway, can be executed by the h2 tools (after the placeholders have been replaced)
-        
+- MySQL-style single-line comments (# Comment)
+ 
 ### Example
 
 ```sql
 /* Single line comment */
 CREATE TABLE test_data (
- value VARCHAR(25) NOT NULL PRIMARY KEY
+ value VARCHAR(25) NOT NULL,
+ PRIMARY KEY(value)
 );
 
 /*
@@ -79,18 +82,21 @@ Multi-line
 comment
 */
 
--- Sql-style comment
+-- MySQL procedure
+DELIMITER //
+CREATE PROCEDURE AddData()
+ BEGIN
+   # MySQL-style single line comment
+   INSERT INTO test_data (value) VALUES ('Hello');
+ END //
+DELIMITER;
+
+CALL AddData();
 
 -- Placeholder
 INSERT INTO ${tableName} (name) VALUES ('Mr. T');
-INSERT INTO test_user (name) VALUES ( $$'Mr. Semicolon+Linebreak;
-another line'$$);
 ```
 
-## Limitations
-
-- Due to H2 limitations DOMAIN objects can only be cleaned in the current schema
-
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/database/hsqldb">HSQLDB <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/database/testcontainers">TestContainers <i class="fa fa-arrow-right"></i></a>
 </p>

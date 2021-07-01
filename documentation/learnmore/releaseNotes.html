@@ -9,6 +9,39 @@ redirect_from: /documentation/releaseNotes/
 <p>Thank you all for reporting all these issues and contributing fixes!</p>
 
 <div class="release">
+    <h2 id="7.11.0">Flyway 7.11.0 (2021-07-01)</h2>
+
+    <h3>New features</h3>
+    <ul>
+        <li>Enable Flyway Teams for 28 days for new schemas in CLI</li>
+        <li>Remove the need to specify <code>-teams</code> in CLI</li>
+    </ul>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        {% include issue.html id="3207" title="Fix interleaved repeatable migrations running indefinitely" %}
+        <li>Ensure that (g)login.sql doesn't fail name validation in SQL*Plus</li>
+        <li>Fix copyright symbol for better platform compatibility</li>
+    </ul>
+
+    <h3>Changes</h3>
+    <ul>
+        <li>Make GCP Spanner and BigQuery beta publicly available</li>
+        <li>Bump MSAL4J to fix transitive dependency CVE</li>
+    </ul>
+
+    <h3>Database compatibility</h3>
+    <ul>
+        <li>Add Cockroach v21.1 support</li>
+        {% include issue.html id="2918" title="Add community-level TiDB support" %}
+        {% include issue.html id="3221" title="Verify support for HSQLDB 2.6" %}
+    </ul>
+    <p>
+        Thanks to A248, bb7133, donna-156, dvdtknsn, and johnlinp for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
     <h2 id="7.10.0">Flyway 7.10.0 (2021-06-10)</h2>
 
     <h3>New features</h3>
