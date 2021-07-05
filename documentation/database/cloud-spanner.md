@@ -28,6 +28,14 @@ subtitle: Google Cloud Spanner
 
 Support Level determines the degree of support available for this database ([learn more](/documentation/learnmore/database-support)).
 
+## Flyway Teams Features for Cloud Spanner
+
+GCP Spanner can suffer from performance issues while executing schema changes. 
+
+Flyway Teams edition solves this via [batching](/documentation/configuration/parameters/batch) which combines schema changes to reduce the network overhead and improves performance.
+
+To find out more about Flyway Teams click [here](/try-flyway-teams-edition/?ref=cloud-spanner-batch).
+
 ## Using Flyway with Google Cloud Spanner
 
 Google Cloud Spanner is in the process of being certified. The process of certification involves getting real world usage feedback from beta users. 
