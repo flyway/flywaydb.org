@@ -55,7 +55,7 @@ title: Documentation
     <a href="/documentation/database/mariadb">MariaDB</a>,
     <a href="/documentation/database/xtradb">Percona XtraDB Cluster</a>,
     <a href="/documentation/database/testcontainers">TestContainers</a>,
-    <a href="/documentation/database/postgresql">PostgreSQL</a> (including Amazon RDS, Azure Database, Google Cloud SQL, TimescaleDB &amp; Heroku),
+    <a href="/documentation/database/postgresql">PostgreSQL</a> (including Amazon RDS, Azure Database, Google Cloud SQL, TimescaleDB, YugabyteDB &amp; Heroku),
     <a href="/documentation/database/aurora-postgresql">Aurora PostgreSQL</a>,
     <a href="/documentation/database/redshift">Redshift</a>,
     <a href="/documentation/database/cockroachdb">CockroachDB</a>,

@@ -1,14 +1,13 @@
 ---
 layout: documentation
-menu: timescaledb
-subtitle: TimescaleDB
+menu: yugabytedb
+subtitle: YugabyteDB
 ---
-# TimescaleDB
+# YugabyteDB
 
 ## Supported Versions
 
 - `12`
-- `11`
 
 ## Support Level
 
@@ -60,13 +59,13 @@ Support Level determines the degree of support available for this database ([lea
 
 ## Notes
 
-TimescaleDB is an extension to PostgreSQL and Flyway usage is the same for the two databases. For more details, 
+YugabyteDB is a variant of PostgreSQL and Flyway usage is the same for the two databases. For more details, 
 please refer to the [PostgreSQL](/documentation/database/postgresql) page.
 
 ## Limitations
 
-- AWS SecretsManager is not supported with TimescaleDB.
+- AWS SecretsManager is not supported with YugabyteDB.
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/database/yugabytedb">YugabyteDB <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/database/aurora-postgresql">Aurora PostgreSQL <i class="fa fa-arrow-right"></i></a>
 </p>
