@@ -37,7 +37,7 @@ After having completed the [First Steps: Command-line](/documentation/getstarted
 
 This should give you the following status:
 
-<pre class="console">Database: jdbc:h2:file:./target/foobar (H2 1.4)
+<pre class="console">Database: jdbc:postgresql://instances.spawn.cc:31585/ (PostgreSQL 11.0)
 
 +-----------+---------+---------------------+------+---------------------+---------+
 | Category  | Version | Description         | Type | Installed On        | State   |
@@ -117,7 +117,7 @@ Either one of these approaches yields the same result as you can see using:
 
 This should give you the following status:
 
-<pre class="console">Database: jdbc:h2:file:./target/foobar (H2 1.4)
+<pre class="console">Database: jdbc:postgresql://instances.spawn.cc:31585/ (PostgreSQL 11.0)
 Schema version: 3
 
 +-----------+---------+---------------------+------+---------------------+---------+----------+
