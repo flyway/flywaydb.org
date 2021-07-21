@@ -29,8 +29,8 @@ After having completed the [First Steps: Command-line](/documentation/getstarted
 
 This should give you the following status:
 
-<pre class="console">Database: jdbc:h2:file:./foobardb (H2 1.4)
-                     
+<pre class="console">Database: jdbc:postgresql://instances.spawn.cc:31585/ (PostgreSQL 11.0)
+
 +-----------+---------+---------------------+------+---------------------+---------+----------+
 | Category  | Version | Description         | Type | Installed On        | State   | Undoable |
 +-----------+---------+---------------------+------+---------------------+---------+----------+
@@ -59,8 +59,8 @@ This is now the status
 
 <pre class="console"><span>flyway-{{ site.flywayVersion }}&gt;</span> flyway <strong>info</strong>
 
-Database: jdbc:h2:file:./foobardb (H2 1.4)
-                     
+Database: Database: jdbc:postgresql://instances.spawn.cc:31585/ (PostgreSQL 11.0)
+
 +-----------+---------+---------------------+------+---------------------+---------+----------+
 | Category  | Version | Description         | Type | Installed On        | State   | Undoable |
 +-----------+---------+---------------------+------+---------------------+---------+----------+
@@ -80,7 +80,7 @@ So go ahead and invoke
 
 This will give you the following result:
 
-<pre class="console">Database: jdbc:h2:file:./foobardb (H2 1.4)
+<pre class="console">Database: Database: jdbc:postgresql://instances.spawn.cc:31585/ (PostgreSQL 11.0)
 Current version of schema "PUBLIC": 2
 Undoing migration of schema "PUBLIC" to version 2 - Add people
 Successfully undid 1 migration to schema "PUBLIC" (execution time 00:00.030s)</pre>
@@ -89,8 +89,8 @@ And you can check that this is indeed the new status:
 
 <pre class="console"><span>flyway-{{ site.flywayVersion }}&gt;</span> flyway <strong>info</strong>
 
-Database: jdbc:h2:file:./foobardb (H2 1.4)
-                     
+Database: Database: jdbc:postgresql://instances.spawn.cc:31585/ (PostgreSQL 11.0)
+
 +-----------+---------+---------------------+----------+---------------------+---------+----------+
 | Category  | Version | Description         | Type     | Installed On        | State   | Undoable |
 +-----------+---------+---------------------+----------+---------------------+---------+----------+
@@ -106,7 +106,7 @@ We can now safely reapply it with
 
 <pre class="console"><span>flyway-{{ site.flywayVersion }}&gt;</span> flyway <strong>migrate</strong>
 
-Database: jdbc:h2:file:./foobardb (H2 1.4)
+Database: Database: jdbc:postgresql://instances.spawn.cc:31585/ (PostgreSQL 11.0)
 Successfully validated 5 migrations (execution time 00:00.020s)
 Current version of schema "PUBLIC": 1
 Migrating schema "PUBLIC" to version 2 - Add people
@@ -116,7 +116,7 @@ And the status is now
 
 <pre class="console"><span>flyway-{{ site.flywayVersion }}&gt;</span> flyway <strong>info</strong>
 
-Database: jdbc:h2:file:./foobardb (H2 1.4)
+Database: Database: jdbc:postgresql://instances.spawn.cc:31585/ (PostgreSQL 11.0)
 
 +-----------+---------+---------------------+----------+---------------------+---------+----------+
 | Category  | Version | Description         | Type     | Installed On        | State   | Undoable |
