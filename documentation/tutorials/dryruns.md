@@ -9,11 +9,47 @@ redirect_from:
 # Tutorial: Dry Runs
 {% include teams.html %}
 
-This tutorial assumes you have successfully completed the [**First Steps: Command-line**](/documentation/getstarted/firststeps/commandline)
-tutorial. **If you have not done so, please do so first.** This tutorial picks up where that one left off.
-
 This brief tutorial will teach **how to do Dry Runs**. It will take you through the
 steps on how to use them.
+
+## Setting up the database
+
+This tutorial picks up from where the [**First Steps: Command-line**](/documentation/getstarted/firststeps/commandline) tutorial left off.
+
+To get started quickly without having to run through that tutorial first, we will create a new [Spawn](https://spawn.cc) data container
+with the migrations from that tutorial already applied:
+
+```bash
+spawnctl create data-container -i postgres:flyway-getting-started-complete
+```
+
+Configure Flyway by editing `./flyway.conf` with your Spawn data container connection details, like this:
+
+```properties
+flyway.url=jdbc:postgresql://instances.spawn.cc:<Port>/foobardb
+flyway.user=<User>
+flyway.password=<Password>
+```
+
+Create a `./sql` directory and create the two migration scripts that have already been applied.
+The first file should be called `V1__Create_person_table.sql`:
+
+```sql
+create table PERSON (
+    ID int not null,
+    NAME varchar(100) not null
+);
+```
+
+and the second one called `V2__Add_people.sql`:
+
+```sql
+insert into PERSON (ID, NAME) values (1, 'Axel');
+insert into PERSON (ID, NAME) values (2, 'Mr. Foo');
+insert into PERSON (ID, NAME) values (3, 'Ms. Bar');
+```
+
+The database is now ready to go.
 
 ## Introduction
 
