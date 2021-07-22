@@ -291,6 +291,10 @@ title: Documentation
                             <a href="/documentation/tutorials/dryruns">Dry Runs</a></li>
 
                             <li
+                            {% if page.menu == 'tut_batch' %} class="nav--vertical__active" {% endif %}>
+                            <a href="/documentation/tutorials/batch">Batching</a></li>
+
+                            <li
                             {% if page.menu == 'migrationtesting' %} class="nav--vertical__active" {% endif %}>
                             <a href="/documentation/tutorials/migrationtesting">Migration testing</a></li>
                         </ul>
