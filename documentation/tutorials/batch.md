@@ -2,10 +2,6 @@
 layout: documentation
 menu: tut_batch
 subtitle: 'Tutorial: Batch'
-redirect_from:
-- /getStarted/batch/
-- /documentation/getstarted/batch/
-- /documentation/getstarted/advanced/batch/
 ---
 # Tutorial: Batching
 {% include teams.html %}
