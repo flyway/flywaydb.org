@@ -86,7 +86,7 @@ This should give you the following status:
 
 Let's add a new migration for which we'll do a dry run at first.
 
-In the `/sql` directory, create a migration called `V3__Couple.sql`:
+In the `./sql` directory, create a migration called `V3__Couple.sql`:
 
 ```sql
 create table COUPLE (
