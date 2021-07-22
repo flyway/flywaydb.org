@@ -10,7 +10,7 @@ This brief tutorial will teach you **how to use the flyway batch command**.
 
 ## Introduction
 
-Batching allows multiple `INSERT`, `UPDATE`, `DELETE`, `MERGE`, and `UPSERT` statements in a migration script to be sent over the wire to to database server in one go.
+Batching allows multiple `INSERT`, `UPDATE`, `DELETE`, `MERGE`, and `UPSERT` statements in a migration script to be sent over the wire to the database server in one go.
 
 Batching can save up to 99 percent of network roundtrips by sending up to 100 statements at once over the network to the database, instead of sending each statement individually.
 
