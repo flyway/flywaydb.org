@@ -19,9 +19,7 @@ This tutorial picks up from where the [**First Steps: Command-line**](/documenta
 To get started quickly without having to run through that tutorial first, we will create a new [Spawn](https://spawn.cc) data container
 with the migrations from that tutorial already applied:
 
-```bash
-spawnctl create data-container -i postgres:flyway-getting-started-complete
-```
+<pre class="console"><span>&gt;</span> spawnctl create data-container -i postgres:flyway-getting-started-complete</pre>
 
 Configure Flyway by editing `./flyway.conf` with your Spawn data container connection details, like this:
 
