@@ -22,7 +22,7 @@ We will use [Spawn](https://spawn.cc) to create a database for this tutorial. Ru
 
 <pre class="console"><span>&gt;</span> spawnctl create data-container \
   --image postgres:flyway-getting-started \
-  --name flyway-container \
+  --name flyway-batch \
   --lifetime 24h</pre>
 
 This will return the connection string details which are used to connect and query using your normal tools:
