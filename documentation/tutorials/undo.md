@@ -25,6 +25,14 @@ with the migrations from that tutorial already applied:
   --name flyway-undo \
   --lifetime 24h</pre>
 
+The `flyway-getting-started-complete` image is available for other database engines besides `postgres`. Use:
+
+```bash
+$ spawnctl get data-images --public | grep flyway-getting-started-complete
+```
+
+to find them.
+
 Configure Flyway by editing `./flyway.conf` with your Spawn data container connection details, like this:
 
 ```properties
