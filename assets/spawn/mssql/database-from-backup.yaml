@@ -1,0 +1,7 @@
+sourceType: backup
+name: database-from-backup
+engine: mssql
+version: 2017
+backup:
+  folder: .
+  file: sample.bak
