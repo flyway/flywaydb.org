@@ -9,6 +9,21 @@ redirect_from: /documentation/releaseNotes/
 <p>Thank you all for reporting all these issues and contributing fixes!</p>
 
 <div class="release">
+    <h2 id="7.11.4">Flyway 7.11.4 (2021-07-26)</h2>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        {% include issue.html id="3165" title="Fix execution of migrations without a transaction over a single connection" %}
+        {% include issue.html id="3232" title="Fix Gradle location configuration override order" %}
+        {% include issue.html id="3237" title="Fix deadlock due to exhausted connections when creating result objects" %}
+    </ul>
+
+    <p>
+        Thanks to pw-aowen, Leyren and uwolfer for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
     <h2 id="7.11.3">Flyway 7.11.3 (2021-07-19)</h2>
 
     <h3>Changes</h3>
