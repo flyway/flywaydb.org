@@ -262,6 +262,36 @@ title: Documentation
                         </ul>
                     </details>
 
+                    <details {% if page.url contains "documentation/spawn" %} open class="nav--vertical__active-parent" {% endif %}>
+                        <summary class="nav-header">Spawn instant databases</summary>
+
+                        <ul class="nav nav-pills nav-stacked">
+                            <li
+                            {% if page.menu == 'spawn_overview' %} class="nav--vertical__active" {% endif %}>
+                            <a href="/documentation/spawn">Overview</a></li>
+
+                        </ul>
+
+                        <details {% if page.url contains "documentation/spawn/firststeps" %} open {% endif %}>
+                            <summary class="nav-header">First steps</summary>
+
+                            <ul class="nav nav-pills nav-stacked">
+                                <li
+                                {% if page.menu == 'spawn_installation' %} class="nav--vertical__active" {% endif %}>
+                                <a href="/documentation/spawn/firststeps/installation">Installation</a></li>
+
+                                <li
+                                {% if page.menu == 'spawn_containers' %} class="nav--vertical__active" {% endif %}>
+                                <a href="/documentation/spawn/firststeps/containers">Using data containers</a></li>
+
+                                <li
+                                {% if page.menu == 'spawn_images' %} class="nav--vertical__active" {% endif %}>
+                                <a href="/documentation/spawn/firststeps/images">Making data images</a></li>
+
+                            </ul>
+                        </details>
+                    </details>
+
                     <details {% if page.url contains "documentation/tutorials" %} open class="nav--vertical__active-parent" {% endif %}>
                         <summary class="nav-header">Tutorials</summary>
 

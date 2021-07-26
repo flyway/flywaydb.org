@@ -1,0 +1,221 @@
+<div id="spawn-sampledatabases">
+    <div class="tabbable">
+        <ul class="nav nav-tabs">
+            <li class="active marketing-item">
+                <a href="#tab-postgresql" data-toggle="tab">PostgreSQL</a>
+            </li>
+            <li class="marketing-item">
+                <a href="#tab-mysql" data-toggle="tab"> MySQL</a>
+            </li>
+            <li class="marketing-item">
+                <a href="#tab-mssql" data-toggle="tab"> SQL Server</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active" id="tab-postgresql">
+                <p></p>
+                <p>
+                    Create a copy of the PostgreSQL
+                    <a href="https://github.com/devrimgunduz/pagila">Pagila</a>
+                    demo database by running
+                </p>
+
+                <pre
+                    class="console"
+                ><span>&gt;</span> spawnctl create data-container --image pagila:v11 --name spawn-tutorial --lifetime 1h</pre>
+
+                <div class="well well-small">
+                    <strong>Note:</strong> The `--name` flag is optional. If you
+                    don't specify a name a random one will be generated for you
+                    based on the image name.
+                </div>
+
+                <p>
+                    Spawn creates the database copy and returns the connection
+                    details:
+                </p>
+
+                <pre class="console">
+Data container 'spawn-tutorial' (97477) created!
+    -> Host=instances.spawn.cc;Port=32194;Username=&lt;some_user_id&gt;;Database=postgres;Password=&lt;some_password&gt;</pre>
+
+                <p>
+                    Using <a href="https://www.pgadmin.org/">pgAdmin</a> (or
+                    your preferred client) you can connect to this database as
+                    normal. Copy in the server name and port, the username and
+                    password and click Connect.
+                </p>
+
+                <p>
+                    <img
+                        src="/assets/spawn/getting-started-pgadmin-connect.png"
+                        style="max-width: 100%"
+                    />
+                </p>
+
+                <p>
+                    This database copy is a full version of PostgreSQL running
+                    in a container. You can use it just like any other, querying
+                    and updating as normal.
+                </p>
+
+                <p>
+                    <img
+                        src="/assets/spawn/getting-started-pgadmin-query.png"
+                        style="max-width: 100%"
+                    />
+                </p>
+
+                <p>
+                    List data containers to see the one that was just created:
+                </p>
+
+                <pre class="console"><span>&gt;</span> spawnctl get data-containers</pre>
+
+                <pre class="console">
+ID    Name           Revision Status     Engine            CreatedAt
+97477 spawn-tutorial rev.0    Completed  PostgreSQL:11.0   29 seconds ago</pre>
+            </div>
+            <div class="tab-pane" id="tab-mysql">
+                <p></p>
+                <p>
+                    Create a copy of the MySQL
+                    <a href="https://dev.mysql.com/doc/sakila/en/">Sakila</a>
+                    demo database by running
+                </p>
+
+                <pre
+                    class="console"
+                ><span>&gt;</span> spawnctl create data-container --image sakila:v5.7 --name spawn-tutorial --lifetime 1h</pre>
+
+                <div class="well well-small">
+                    <strong>Note:</strong> The `--name` flag is optional. If you
+                    don't specify a name a random one will be generated for you
+                    based on the image name.
+                </div>
+
+                <p>
+                    Spawn creates the database copy and returns the connection
+                    details:
+                </p>
+
+                <pre class="console">
+Data container 'spawn-tutorial' (97479) created!
+-> Server=instances.spawn.cc;Port=30635;User Id=root;Database=mysql;Password=&lt;some_password&gt;</pre>
+
+                <p>
+                    Using
+                    <a href="https://dev.mysql.com/downloads/workbench/"
+                        >MySQL Workbench</a>
+                    (or your preferred client) you can connect to this database
+                    as normal. Copy in the server name and port, the username
+                    and password and click Connect.
+                </p>
+
+                <p>
+                    <img
+                        src="/assets/spawn/getting-started-mysqlworkbench-connect.png"
+                        style="max-width: 100%"
+                    />
+                </p>
+
+                <p>
+                    This database copy is a full version of MySQL running in a
+                    container. You can use it just like any other, querying and
+                    updating as normal.
+                </p>
+
+                <p>
+                    <img
+                        src="/assets/spawn/getting-started-mysqlworkbench-query.png"
+                        style="max-width: 100%"
+                    />
+                </p>
+
+                <p>
+                    List data containers to see the one that was just created:
+                </p>
+
+                <pre
+                    class="console"
+                ><span>&gt;</span> spawnctl get data-containers</pre>
+
+                <pre class="console">
+ID    Name           Revision Status     Engine            CreatedAt
+97479 spawn-tutorial rev.0    Completed  MySQL:5.7         34 seconds ago</pre>
+            </div>
+            <div class="tab-pane" id="tab-mssql">
+                <p></p>
+                <p>
+                    Create a copy of the SQL Server
+                    <a
+                        href="https://docs.microsoft.com/en-us/sql/samples/wide-world-importers-what-is?view=sql-server-ver15"
+                        >Wide World Importers</a>
+                    demo database by running
+                </p>
+
+                <pre
+                    class="console"
+                ><span>&gt;</span> spawnctl create data-container --image wide-world-importers:2017 --name spawn-tutorial --lifetime 1h</pre>
+
+                <div class="well well-small">
+                    <strong>Note:</strong> The `--name` flag is optional. If you
+                    don't specify a name a random one will be generated for you
+                    based on the image name.
+                </div>
+
+                <p>
+                    Spawn creates the database copy and returns the connection
+                    details:
+                </p>
+
+                <pre class="console">
+Data container 'spawn-tutorial' (97484) created!
+-> Data Source=instances.spawn.cc,32598;Initial Catalog=master;User ID=sa;Password=&lt;some_password&gt;</pre
+                >
+
+                <p>
+                    Using
+                    <a
+                        href="https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15"
+                        >SSMS</a>
+                    (or your preferred client) you can connect to this database
+                    as normal. Copy in the server name and port, the username
+                    and password and click Connect.
+                </p>
+
+                <p>
+                    <img
+                        src="/assets/spawn/getting-started-ssms-connect.png"
+                        style="max-width: 100%"
+                    />
+                </p>
+
+                <p>
+                    This database copy is a full version of SQL Server running
+                    in a container. You can use it just like any other, querying
+                    and updating as normal.
+                </p>
+
+                <p>
+                    <img
+                        src="/assets/spawn/getting-started-ssms-query.png"
+                        style="max-width: 100%"
+                    />
+                </p>
+
+                <p>
+                    List data containers to see the one that was just created:
+                </p>
+
+                <pre
+                    class="console"
+                ><span>&gt;</span> spawnctl get data-containers</pre>
+
+                <pre class="console">
+ID    Name           Revision Status     Engine            CreatedAt
+97484 spawn-tutorial rev.0    Completed  MSSQL:2017       35 seconds ago</pre>
+            </div>
+        </div>
+    </div>
+</div>

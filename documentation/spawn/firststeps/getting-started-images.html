@@ -1,0 +1,103 @@
+---
+layout: documentation
+menu: spawn_images
+title: Making data images
+redirect_from: /documentation/spawn/firststeps/images
+---
+
+<div id="spawnImages">
+    <h1>Getting started: Making data images</h1>
+
+    <p>
+        In the previous exercise we made a new data image by making changes to a
+        Spawn database and then graduating it. We can also create new data
+        images from scratch. Data images can be created from
+        <a
+            href="https://docs.spawn.cc/data-image-configuration/empty"
+            target="_blank"
+            >empty databases</a>, from
+        <a
+            href="https://docs.spawn.cc/data-image-configuration/backups"
+            target="_blank"
+            >backups</a>
+        and from
+        <a
+            href="https://docs.spawn.cc/data-image-configuration/scripts"
+            target="_blank"
+            >scripts</a>
+    </p>
+
+    <h2>Create a data image from an existing backup</h2>
+
+    <p>
+        Data images can also be created directly from backup files. The backup
+        is first uploaded to the Spawn service and restored to a new database,
+        before being used to create our re-usable data image. For a large backup
+        file the initial upload might take some time, but after that new copies
+        can be created in just a few seconds.
+    </p>
+
+    {% include spawn-images-backup.html %}
+
+    <p></p>
+
+    <p>
+        Call
+        <a
+            href="https://docs.spawn.cc/commands/spawnctl-di-create"
+            target="_blank"
+            >create data image</a>, passing in the path to the configuration file we created:
+    </p>
+
+    <pre
+        class="console"
+    ><span>&gt;</span> spawnctl create data-image --file ./database-from-backup.yaml
+Data image 'database-from-backup' (10001) created!</pre>
+
+    <p>
+        This data image can now be used to create multiple database copies,
+        using <code>spawnctl create data-container</code> as before:
+    </p>
+
+    <pre
+        class="console"
+    ><span>&gt;</span> spawnctl create data-container --image database-from-backup --lifetime 1h</pre>
+
+    <p>
+        Connect to this new data container and you'll find the database just as
+        though it was restored from the backup file. Unlike restoring a database
+        backup though, once the data image has been created Spawn will create
+        new copies in seconds, regardless of the size of the backup.
+    </p>
+
+    {% include spawn-images-query.html %}
+
+    <p></p>
+    <p>
+        Besides backups, data images can also be created from empty or from
+        scripts. See
+        <a
+            href="https://docs.spawn.cc/data-image-configuration/intro"
+            target="_blank"
+            >source configuration</a>
+        for more information about creating data images from different sources.
+    </p>
+
+    <h2>Next steps</h2>
+
+    <p>That's the basics of Spawn covered:</p>
+    <ul>
+        <li>
+            Creating disposable copies of databases for development and testing
+        </li>
+        <li>Resetting those database and creating revisions to undo changes</li>
+        <li>
+            Creating your own data images from which to make further database
+            copies
+        </li>
+    </ul>
+
+    <p>Next learn more about the <code>spawnctl</code> commands.</p>
+    <a href="https://docs.spawn.cc/commands/spawnctl" class="btn btn-primary"
+        >spawnctl commands <i class="fa fa-arrow-right"></i></a>
+</div>

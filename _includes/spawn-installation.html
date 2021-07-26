@@ -1,0 +1,55 @@
+<div id="spawn-installation">
+    <div class="tabbable">
+        <ul class="nav nav-tabs">
+            <li class="active marketing-item">
+                <a href="#tab-mac" data-toggle="tab">macOS or Linux</a>
+            </li>
+            <li class="marketing-item">
+                <a href="#tab-windows" data-toggle="tab"> Windows</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active" id="tab-mac">
+                <p></p>
+                <p>1. Download and run the install script</p>
+                <pre class="console"><span>&gt;</span> curl -sL https://run.spawn.cc/install | sh</pre>
+                <p>2. Add <code>spawnctl</code> to your path</p>
+                <pre class="console"><span>&gt;</span> export PATH=$PATH:$HOME/.spawnctl/bin</pre>
+                <div class="well well-small">
+                    <strong>Note:</strong> Spawn also supports Raspberry Pi
+                    (ARM-based Linux operating systems). Please follow the
+                    standard installation instructions for Linux above.
+                </div>
+            </div>
+            <div class="tab-pane" id="tab-windows">
+                <p></p>
+                <p>
+                    1. Download
+                    <a href="https://run.spawn.cc/exe"
+                        ><code>spawnctl.exe</code></a>
+                    and save it to a folder of your choosing.
+                </p>
+
+                <div class="well well-small">
+                    <strong>Note:</strong> <code>spawnctl.exe</code> is not an
+                    installer, it's a command line executable that can be run
+                    directly. We suggest creating the folder
+                    <code>C:\Program Files\Spawn</code> and saving it there.
+                </div>
+
+                <p>
+                    2. Add the folder containing <code>spawnctl.exe</code> to
+                    your path.
+                </p>
+
+                <div class="well well-small">
+                    <strong>Note:</strong> Search for
+                    <i>View advanced system settings</i> from the Windows start
+                    menu and click the <i>Environment Variables</i> button to
+                    edit the <code>Path</code> variable. You may need to restart
+                    your terminal after doing this.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
