@@ -1,17 +1,15 @@
 ---
 layout: documentation
 menu: spawn_overview
-subtitle: Flyway Spawn - Database environments made simple
+subtitle: Spin up instant copies of your dev databases in the cloud for free
 redirect_from: /documentation/spawn/
 ---
 
-# Flyway Spawn - Database environments made simple
+# Spin up instant copies of your dev databases in the cloud for free
 
 Forget about breaking shared databases, ditch complicated Docker scripts and skip the hassle of backup restores. Flyway Spawn lets you **spin up instant copies of your dev databases in the cloud for free** so you can catch data-related issues early and bring your databases into CI pipelines.
 
-## Free for Flyway users
-
-Flyway Spawn is a free service for Flyway users. The database copies are hosted in the cloud by us so you don't need database servers installed locally.  
+Flyway Spawn is a free service and the database copies are hosted in the cloud by us so you don't need database servers installed locally.
 
 You can create, save and destroy your databases as often as you like, even spinning up multiple copies for different branches and CI pipelines. It uses a command line interface, making it simple to script and automate in DevOps pipelines. 
 
