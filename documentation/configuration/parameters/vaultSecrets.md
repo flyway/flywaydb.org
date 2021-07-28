@@ -35,9 +35,9 @@ FLYWAY_VAULT_SECRETS=kv/data/flyway/flywayConfig1,kv/flyway/flywayConfig2
 
 ### API
 ```java
-Flyway.configure()
-    .vaultSecrets("kv/data/flyway/flywayConfig1,kv/flyway/flywayConfig2")
-    .load()
+Configuration configuration = new ClassicConfiguration();
+VaultApiExtension apiExtension = configuration.getExtensionConfiguration(VaultApiExtension.class);
+apiExtension.setVaultSecrets("kv/data/flyway/flywayConfig1", "kv/flyway/flywayConfig2");
 ```
 
 ### Gradle

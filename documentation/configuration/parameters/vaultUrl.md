@@ -32,9 +32,9 @@ FLYWAY_VAULT_URL=http://localhost:8200/v1/
 
 ### API
 ```java
-Flyway.configure()
-    .vaultUrl("http://localhost:8200/v1/")
-    .load()
+Configuration configuration = new ClassicConfiguration();
+VaultApiExtension apiExtension = configuration.getExtensionConfiguration(VaultApiExtension.class);
+apiExtension.setVaultUrl("http://localhost:8200/v1/");
 ```
 
 ### Gradle

@@ -30,9 +30,9 @@ FLYWAY_VAULT_TOKEN=s.abcdefghijklmnopqrstuvwx
 
 ### API
 ```java
-Flyway.configure()
-    .vaultToken("s.abcdefghijklmnopqrstuvwx")
-    .load()
+Configuration configuration = new ClassicConfiguration();
+VaultApiExtension apiExtension = configuration.getExtensionConfiguration(VaultApiExtension.class);
+apiExtension.setVaultToken("s.abcdefghijklmnopqrstuvwx");
 ```
 
 ### Gradle
