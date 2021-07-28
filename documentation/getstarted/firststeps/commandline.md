@@ -8,7 +8,7 @@ redirect_from: /getStarted/firststeps/commandline/
 # First Steps: Command-line
 
 This brief tutorial will teach **how to get up and running with the Flyway Command-line tool**. It will take you through the
-steps on how to configure it and how to write and execute your first few database migrations, using [Spawn](https://spawn.cc/)
+steps on how to configure it and how to write and execute your first few database migrations, using [Spawn](/documentation/spawn){:target="_blank"}
 to provision a database instance without the need for installing any database engines onto your own machine. You can create MySQL,
 MSSQL and PostgreSQL databases with Spawn that will work with Flyway.
 
@@ -18,7 +18,7 @@ This tutorial should take you about **10 minutes** to complete.
 
 Start by [downloading the Flyway Command-line Tool](/download) for your platform and extract it.
 
-Install Spawn by visiting the [getting started documentation](https://www.spawn.cc/docs/getting-started.html) and following
+Install Spawn by visiting the [getting started documentation](/documentation/spawn/firststeps/installation){:target="_blank"} and following
 the installation steps.
 
 ## Configuring Flyway

@@ -18,7 +18,7 @@ This is particularly useful for very large SQL migrations composed of multiple M
 
 ## Setting up the database
 
-We will use [Spawn](https://spawn.cc) to create a database for this tutorial. Run the following command:
+We will use [Spawn](/documentation/spawn){:target="_blank"} to create a database for this tutorial. Run the following command:
 
 <pre class="console"><span>&gt;</span> spawnctl create data-container \
   --image postgres:flyway-getting-started \
