@@ -20,7 +20,7 @@ Example: `kv/data/flyway/flywayConfig`
 
 ### Commandline
 ```powershell
-./flyway -vaultSecrets="kv/data/flyway/flywayConfig1,kv/flyway/flywayConfig2" info
+./flyway -vault.secrets="kv/data/flyway/flywayConfig1,kv/flyway/flywayConfig2" info
 ```
 
 ### Configuration File

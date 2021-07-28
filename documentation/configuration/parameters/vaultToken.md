@@ -15,7 +15,7 @@ The [Vault](https://www.vaultproject.io/) token required to access your secrets.
 
 ### Commandline
 ```powershell
-./flyway -vaultToken="s.abcdefghijklmnopqrstuvwx" info
+./flyway -vault.token="s.abcdefghijklmnopqrstuvwx" info
 ```
 
 ### Configuration File

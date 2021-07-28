@@ -17,7 +17,7 @@ Example: `http://localhost:8200/v1/`
 
 ### Commandline
 ```powershell
-./flyway -vaultUrl="http://localhost:8200/v1/" info
+./flyway -vault.url="http://localhost:8200/v1/" info
 ```
 
 ### Configuration File

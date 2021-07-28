@@ -16,7 +16,7 @@ The location of the `krb5.conf` file for use in Kerberos authentication.
 
 ### Commandline
 ```powershell
-./flyway -oracleKerberosConfigFile="/etc/krb5.conf" info
+./flyway -oracle.kerberosConfigFile="/etc/krb5.conf" info
 ```
 
 ### Configuration File

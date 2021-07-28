@@ -19,7 +19,7 @@ false
 
 ### Commandline
 ```powershell
-./flyway -oracleSqlplus="true" info
+./flyway -oracle.sqlplus="true" info
 ```
 
 ### Configuration File

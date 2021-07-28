@@ -17,7 +17,7 @@ and only has any significance when `oracleKerberosConfigFile` is also specified.
 
 ### Commandline
 ```powershell
-./flyway -oracleKerberosCacheFile="/temp/krb5cc_123" info
+./flyway -oracle.kerberosCacheFile="/temp/krb5cc_123" info
 ```
 
 ### Configuration File

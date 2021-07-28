@@ -19,12 +19,12 @@ false
 
 ### Commandline
 ```powershell
-./flyway -oracleSqlplusWarn="true" info
+./flyway -oracle.sqlplusWarn="true" info
 ```
 
 ### Configuration File
 ```properties
-flyway.oracle.sqlplus=true
+flyway.oracle.sqlplusWarn=true
 ```
 
 ### Environment Variable
