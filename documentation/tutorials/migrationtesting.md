@@ -6,13 +6,13 @@ redirect_from: /documentation/getstarted/advanced/migrationtesting/
 ---
 # Tutorial: Testing Flyway migrations in a CI pipeline
 
-This tutorial will guide you through the process of setting up Flyway migration tests in a CI pipeline using [Spawn](spawn.cc) to provision a database on the fly.
+This tutorial will guide you through the process of setting up Flyway migration tests in a CI pipeline using [Spawn](/documentation/spawn){:target="_blank"} to provision a database on the fly.
 
 This tutorial should take you about **20 minutes** to complete.
 
 ## Prerequisites
 
-Install Spawn by visiting the [getting started documentation](https://www.spawn.cc/docs/getting-started.html) and following the installation steps.
+Install Spawn by visiting the [getting started documentation](/documentation/spawn/firststeps/installation){:target="_blank"} and following the installation steps.
 
 This tutorial will assume you have a database with Flyway migrations already set up and commited to your own repository. Alternatively, follow along with the examples taken from [this demo repo](https://github.com/red-gate/flyway-spawn-demo), which you can fork and clone.
 

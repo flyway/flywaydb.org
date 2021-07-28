@@ -17,7 +17,7 @@ steps on how to create and use them.
 
 This tutorial picks up from where the [**First Steps: Command-line**](/documentation/getstarted/firststeps/commandline) tutorial left off.
 
-To get started quickly without having to run through that tutorial first, we will create a new [Spawn](https://spawn.cc) data container
+To get started quickly without having to run through that tutorial first, we will create a new [Spawn](/documentation/spawn){:target="_blank"} data container
 with the migrations from that tutorial already applied:
 
 <pre class="console"><span>&gt;</span> spawnctl create data-container \

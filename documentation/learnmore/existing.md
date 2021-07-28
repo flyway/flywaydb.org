@@ -9,13 +9,13 @@ redirect_from: /documentation/existing/
 
 These are the steps to follow to successfully integrate Flyway into a project with existing databases.
 
-To guide you through the process, we'll show examples using [Spawn](https://spawn.cc) to quickly provision database instances that will represent our Development and Production environments.
+To guide you through the process, we'll show examples using [Spawn](/documentation/spawn){:target="_blank"} to quickly provision database instances that will represent our Development and Production environments.
 
 ## Prerequisites
 
 If you are new to Flyway, read through our [getting started](/documentation/getstarted/) section first.
 
-To follow along with the examples, [install Spawn](https://spawn.cc/docs/howto-installation) and run the following commands to create our Development and Production instances:
+To follow along with the examples, [install Spawn](/documentation/spawn/firststeps/installation){:target="_blank"} and run the following commands to create our Development and Production instances:
 
 <pre class="console">&gt; spawnctl create data-container \
   --image postgres:flyway-existing-database \
