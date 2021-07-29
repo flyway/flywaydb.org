@@ -43,13 +43,20 @@ Flyway.configure()
 ### Gradle
 ```groovy
 flyway {
-    vaultSecrets = 'kv/data/flyway/flywayConfig1,kv/flyway/flywayConfig2'
+    vaultConfiguration {
+        vaultSecrets = ['kv/data/flyway/flywayConfig1', 'kv/flyway/flywayConfig2']
+    }
 }
 ```
 
 ### Maven
 ```xml
 <configuration>
-    <vaultSecrets>kv/data/flyway/flywayConfig1,kv/flyway/flywayConfig2</vaultSecrets>
+    <vaultConfiguration>
+        <vaultSecrets>
+            <vaultSecret>kv/data/flyway/flywayConfig1</vaultSecret>
+            <vaultSecret>kv/flyway/flywayConfig2</vaultSecret>
+        </vaultSecrets>
+    </vaultConfiguration>
 </configuration>
 ```

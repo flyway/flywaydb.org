@@ -38,13 +38,17 @@ Flyway.configure()
 ### Gradle
 ```groovy
 flyway {
-    vaultToken = 's.abcdefghijklmnopqrstuvwx'
+    vaultConfiguration {
+        vaultToken = 's.abcdefghijklmnopqrstuvwx'
+    }
 }
 ```
 
 ### Maven
 ```xml
 <configuration>
-    <vaultToken>s.abcdefghijklmnopqrstuvwx</vaultToken>
+    <vaultConfiguration>
+        <vaultToken>s.abcdefghijklmnopqrstuvwx</vaultToken>
+    </vaultConfiguration>
 </configuration>
 ```

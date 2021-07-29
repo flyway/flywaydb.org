@@ -40,13 +40,17 @@ Flyway.configure()
 ### Gradle
 ```groovy
 flyway {
-    vaultUrl = 'http://localhost:8200/v1/'
+    vaultConfiguration {
+        vaultUrl = 'http://localhost:8200/v1/'
+    }
 }
 ```
 
 ### Maven
 ```xml
 <configuration>
-    <vaultUrl>http://localhost:8200/v1/</vaultUrl>
+    <vaultConfiguration>
+        <vaultUrl>http://localhost:8200/v1/</vaultUrl>
+    </vaultConfiguration>
 </configuration>
 ```
