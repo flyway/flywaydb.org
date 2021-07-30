@@ -9,6 +9,31 @@ redirect_from: /documentation/releaseNotes/
 <p>Thank you all for reporting all these issues and contributing fixes!</p>
 
 <div class="release">
+    <h2 id="7.12.0">Flyway 7.12.0 (2021-07-30)</h2>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        {% include issue.html id="3197" title="Fix resolving resources with the same name in multiple classpath locations" %}
+        {% include issue.html id="3241" title="Simplify migration sorting to fix 'Comparison method violates its general contract'" %}
+    </ul>
+
+    <h3>Changes</h3>
+    <ul>
+        <li>Add VaultConfiguration object for configuring Vault in Maven and Gradle Plugins</li>
+        <li>Release Vault integration to Maven as a separate artifact</li>
+    </ul>
+
+    <h3>New features</h3>
+    <ul>
+        <li>Add Java API extension that allows reading configuration from Vault</li>
+    </ul>
+
+    <p>
+        Thanks to magicwerk and esauser for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
     <h2 id="7.11.4">Flyway 7.11.4 (2021-07-26)</h2>
 
     <h3>Bug fixes</h3>
