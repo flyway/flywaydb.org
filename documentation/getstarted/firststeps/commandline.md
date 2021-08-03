@@ -108,9 +108,9 @@ You can then re-run `migrate` on your database.
 
 ## Continue to use Spawn
 
-At the start of this tutorial you used [Spawn](https://spawn.cc) to provision a database to learn how Flyway works.
+At the start of this tutorial you used [Spawn](https://spawn.cc?utm_source=flyway&utm_medium=docs&utm_campaign=get_started&utm_id=flyway) to provision a database to learn how Flyway works.
 
-[Spawn](https://spawn.cc) is a cloud-hosted database provisioning service provided by Redgate. You can continue to use it for development or CI workflows. Read more about the features and use cases on the [Spawn Website](https://spawn.cc).
+[Spawn](https://spawn.cc?utm_source=flyway&utm_medium=docs&utm_campaign=get_started&utm_id=flyway) is a cloud-hosted database provisioning service provided by Redgate. You can continue to use it for development or CI workflows. Read more about the features and use cases on the [Spawn Website](https://spawn.cc?utm_source=flyway&utm_medium=docs&utm_campaign=get_started&utm_id=flyway).
 
 ## Summary
 

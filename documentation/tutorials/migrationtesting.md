@@ -35,7 +35,7 @@ Firstly, we want to get a backup of our production database. This will ultimatel
     <pre class="console"><span>&gt;</span> export PGPASSWORD=&lt;Password&gt;</pre>
     <pre class="console"><span>&gt;</span> pg_dump -h &lt;Host&gt; -p &lt;Port&gt; -U &lt;Username&gt; --create &lt;DbName&gt; --file backups/pagila.sql</pre>
 
-1. Using Spawn, we can turn this into a [data image](https://www.spawn.cc/docs/concepts-data-image) from our backup file, following the instructions [here](https://www.spawn.cc/docs/source-configuration-backup-postgres). First, we will create a source file `pagila-backup.yaml` **in the directory which contains the `backups` folder** with the following content:
+1. Using Spawn, we can turn this into a [data image](https://www.spawn.cc/docs/concepts-data-image?utm_source=flyway&utm_medium=docs&utm_campaign=migrationtesting_tutorial&utm_id=flyway) from our backup file, following the instructions [here](https://www.spawn.cc/docs/source-configuration-backup-postgres?utm_source=flyway&utm_medium=docs&utm_campaign=migrationtesting_tutorial&utm_id=flyway). First, we will create a source file `pagila-backup.yaml` **in the directory which contains the `backups` folder** with the following content:
 
     ```yaml
     name: Pagila
@@ -63,7 +63,7 @@ Lets create and set up our GitHub Actions workflow to test database migrations.
 
 ### Set up access token for Spawn
 
-1. To access `spawnctl` in the pipeline, we will first need to create an [access token](https://spawn.cc/docs/spawnctl-accesstoken-create#tutorial) so that we won't be prompted to authenticate with Spawn in our CI environment:
+1. To access `spawnctl` in the pipeline, we will first need to create an [access token](https://spawn.cc/docs/spawnctl-accesstoken-create?utm_source=flyway&utm_medium=docs&utm_campaign=migrationtesting_tutorial&utm_id=flyway#tutorial) so that we won't be prompted to authenticate with Spawn in our CI environment:
 
     <pre class="console"><span>&gt;</span> spawnctl create access-token --purpose "CI system Spawn access token"
     Access token generated: &lt;access-token-string&gt;</pre>
@@ -144,7 +144,7 @@ Lets create and set up our GitHub Actions workflow to test database migrations.
 
 This script accomplishes a few things. We are:
   * Installing Spawn to give us access to the `spawnctl` command from the pipeline agent
-  * Creating a [Spawn data container](https://www.spawn.cc/docs/concepts-data-container) from the data image we previously created named `Pagila:prod`
+  * Creating a [Spawn data container](https://www.spawn.cc/docs/concepts-data-container?utm_source=flyway&utm_medium=docs&utm_campaign=migrationtesting_tutorial&utm_id=flyway) from the data image we previously created named `Pagila:prod`
   * Using the official [Flyway docker image](https://hub.docker.com/r/flyway/flyway) to run `flyway migrate` on our data container, using migration scripts stored under the `sql` folder
   * Automating the cleanup of the database
 
@@ -184,7 +184,7 @@ jobs:
 
 ### Automate creating backups 
 
-One last thing which is useful - with the way it's set up, you will have to create a data image manually every time you have migration changes to get the latest backup of your production database. But we can [automate this step](https://www.spawn.cc/docs/howto-ci-scheduled-image-creation) using Spawn in our existing GitHub Actions pipeline.
+One last thing which is useful - with the way it's set up, you will have to create a data image manually every time you have migration changes to get the latest backup of your production database. But we can [automate this step](https://www.spawn.cc/docs/howto-ci-scheduled-image-creation?utm_source=flyway&utm_medium=docs&utm_campaign=migrationtesting_tutorial&utm_id=flyway) using Spawn in our existing GitHub Actions pipeline.
 
 1. Add some more GitHub secrets so that we can allow the agent access to our production database **to back up, not write to**. We will need the database's `<Host>`, `<Username>`, and `<Password>`. The next step will reference these secrets by using the names `PAGILA_HOST`, `PAGILA_ADMIN_USERNAME` and `PAGILA_ADMIN_PASSWORD` but you will create secret names prefixed with your own database name.
 

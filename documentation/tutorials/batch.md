@@ -178,5 +178,5 @@ With batching enabled the migration only took ~5 seconds to run.
 
 In this brief tutorial we saw how to:
 * use flyway [batch](https://flywaydb.org/documentation/configuration/parameters/batch) to batch migration scripts for better performance.
-* use [Spawn](https://spawn.cc) to save and reset databases.
+* use [Spawn](https://spawn.cc?utm_source=flyway&utm_medium=docs&utm_campaign=batch&utm_id=flyway) to save and reset databases.
 
