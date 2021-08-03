@@ -38,7 +38,7 @@ Set this URL in the [`url`](/documentation/configuration/parameters/url) propert
 ​
 ## Other configuration
 
-Set the [`user`](/documentation/configuration/parameters/user) and [`password`](/documentation/configuration/parameters/password) properties to empty in your Flwyay configuration since we're authenticating using the JDBC URL i.e.
+Set the [`user`](/documentation/configuration/parameters/user) and [`password`](/documentation/configuration/parameters/password) properties to empty in your Flyway configuration since we're authenticating using the JDBC URL i.e.
 
 ```
 flyway.user=
