@@ -7,7 +7,7 @@ author: julia
 
 It probably won't come as much surprise to know that at Redgate we have quite a lot of development teams. Obviously
 a lot of what we do is related, and collections of teams may collaborate on specific pieces of work - including
-with Flyway, we have the core Flyway team and another development team which is building on top of the Flwyay engine.
+with Flyway, we have the core Flyway team and another development team which is building on top of the Flyway engine.
 However, we have a lot of autonomy around how we organise ourselves both within our teams and around keeping everyone
 else up to date with what's going on. It is recognised that there's no one-size-fits-all solution for every team;
 an established open-source project has very different needs to an internal platform, a suite of desktop tools or

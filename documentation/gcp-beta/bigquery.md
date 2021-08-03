@@ -52,7 +52,7 @@ Set this URL in the [`url`](/documentation/configuration/parameters/url) propert
 
 ## Other configuration
 
-Set the [`schemas`](/documentation/configuration/parameters/schemas) property in your Flyway configuration to the name of a `data set` within your BigQuery project. Set the [`user`](/documentation/configuration/parameters/user) and [`password`](/documentation/configuration/parameters/password) properties to empty in your Flwyay configuration since we're authenticating using the JDBC URL i.e.
+Set the [`schemas`](/documentation/configuration/parameters/schemas) property in your Flyway configuration to the name of a `data set` within your BigQuery project. Set the [`user`](/documentation/configuration/parameters/user) and [`password`](/documentation/configuration/parameters/password) properties to empty in your Flyway configuration since we're authenticating using the JDBC URL i.e.
 
 ```
 flyway.schemas=<your data set>
