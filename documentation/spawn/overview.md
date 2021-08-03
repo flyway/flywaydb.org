@@ -24,11 +24,11 @@ We recommend you begin with our tutorial to learn how to:
 
 [Get started now](/documentation/spawn/firststeps/installation)
 
-## [Commands](https://docs.spawn.cc/commands/spawnctl)
+## [Commands](https://docs.spawn.cc/commands/spawnctl?utm_source=flyway&utm_medium=docs&utm_campaign=spawn_overview&utm_id=flyway)
 
 Alternatively jump straight into the commands section to learn about `spawnctl`, the command line client.
 
-[Check out the commands](https://docs.spawn.cc/commands/spawnctl)
+[Check out the commands](https://docs.spawn.cc/commands/spawnctl?utm_source=flyway&utm_medium=docs&utm_campaign=spawn_overview&utm_id=flyway)
 
 ## Database engine support
 
