@@ -12,6 +12,7 @@ A problem that organizations often encounter is where to store and how to access
 Flyway comes with support for the following secrets management solutions that enable you to successfully handle sensitive data:
 
 - [AWS Secrets Manager](/documentation/configuration/secretsManagement#aws-secrets-manager)
+- [Dapr Secret Store](/documentation/configuration/secretsManagement#dapr)
 - [Vault](/documentation/configuration/secretsManagement#hashicorp-vault)
 
 ## AWS Secrets Manager
@@ -54,6 +55,25 @@ To make Flyway pull credentials from the Secrets Manager, you need to perform th
 
 Now you can run `migrate`, `info`, etc. and the credentials will be pulled out of the Secrets Manager.
 
+## Dapr Secret Store
+
+Flyway integrates with [Dapr's](https://docs.dapr.io/developing-applications/building-blocks/secrets/secrets-overview/) Secret Store in order to allow users to store Flyway configuration parameters securely. This can be used to securely read license keys without storing them in application configuration, and other configuration parameters can also be stored and read such as your database password or Flyway placeholders.
+
+Parameters stored in secrets in Dapr are read with the highest priority and will override all other configurations.
+
+### Example
+
+Assume we have the following two secrets in Vault:
+- `secret1` which contains `flyway.url=jdbc:h2:mem:db`
+- `secret2` which contains `flyway.user=sa`
+
+In order to read these secrets you need to configure just the following Flyway parameters:
+- [flyway.dapr.url](/documentation/configuration/parameters/daprUrl) - This is the REST API URL of your Dapr sidecar application e.g. `http://localhost:3500/v1.0/secrets/my-secrets-store`
+- [flyway.dapr.secrets](/documentation/configuration/parameters/daprSecrets) - This is a comma-separated list of paths to secrets that contain Flyway configurations. This must start with the name of the engine and end with the name of the secret. In our case we would set `flyway.dapr.secrets=secret1,secret2`
+
+After configuring the above parameters, we would be able to connect to a database in Flyway without configuring a database connection locally, as all the necessary configuration would be read from Dapr.
+
+
 ## HashiCorp Vault
 
 Flyway integrates with [Vault's](https://www.vaultproject.io/) key-value engine in order to allow users to store Flyway configuration parameters securely. This can be used to securely read license keys without storing them in application configuration, and other configuration parameters can also be stored and read such as your database password or Flyway placeholders.
@@ -69,9 +89,9 @@ Assume we have the following two secrets in Vault:
 In order to read these secrets you need to configure just the following Flyway parameters:
 - [flyway.vault.url](/documentation/configuration/parameters/vaultUrl) - This is the REST API URL of your Vault server e.g. `http://localhost:8200/v1/`
 - [flyway.vault.token](/documentation/configuration/parameters/vaultToken) - This is the Vault token required to access your secrets e.g. `s.abcdefghijklmnopqrstuvwx`
-- [flyway.vault.secrets](/documentation/configuration/parameters/vaultSecrets) - This is a comma-separated list of paths to secrets that contain Flyway configurations. This must start with the name of the engine and end with the name of the secret. In our cause we would set `flyway.vault.secrets=kv/test/1/config,kv/data/test/2/config`
+- [flyway.vault.secrets](/documentation/configuration/parameters/vaultSecrets) - This is a comma-separated list of paths to secrets that contain Flyway configurations. This must start with the name of the engine and end with the name of the secret. In our case we would set `flyway.vault.secrets=kv/test/1/config,kv/data/test/2/config`
 
-After configuring the above parameters, we would be able to connect to a database in Flyway without configuring a database connection locally as all of the necessary configuration would be read from Vault.
+After configuring the above parameters, we would be able to connect to a database in Flyway without configuring a database connection locally, as all the necessary configuration would be read from Vault.
 
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/configuration/placeholder">Placeholders<i class="fa fa-arrow-right"></i></a>
