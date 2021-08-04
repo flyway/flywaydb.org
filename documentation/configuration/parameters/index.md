@@ -118,6 +118,10 @@ If using maven, config parameters can be set in the plugin configuration block, 
 - [oracleKerberosConfigFile](/documentation/configuration/parameters/oracleKerberosConfigFile) {% include teams.html %}
 - [oracleWalletLocation](/documentation/configuration/parameters/oracleWalletLocation) {% include teams.html %}
 
+### Secrets Management - Dapr Secret Store
+- [daprUrl](/documentation/configuration/parameters/daprUrl) {% include teams.html %}
+- [daprSecrets](/documentation/configuration/parameters/daprSecrets) {% include teams.html %}
+
 ### Secrets Management - Vault
 - [vaultUrl](/documentation/configuration/parameters/vaultUrl) {% include teams.html %}
 - [vaultToken](/documentation/configuration/parameters/vaultToken) {% include teams.html %}
