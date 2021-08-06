@@ -9,7 +9,7 @@ redirect_from: /documentation/awsSecretsManager/
 
 A problem that organizations often encounter is where to store and how to access sensitive data such as the credentials for connecting to a database or their Flyway license key.
 
-Flyway comes with support for the following secrets manegement solutions that enable you to successfully handle sensitive data:
+Flyway comes with support for the following secrets management solutions that enable you to successfully handle sensitive data:
 
 - [AWS Secrets Manager](/documentation/configuration/secretsManagement#aws-secrets-manager)
 - [Vault](/documentation/configuration/secretsManagement#hashicorp-vault)
