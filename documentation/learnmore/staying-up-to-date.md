@@ -6,7 +6,19 @@ subtitle: Staying Up To Date
 
 # Staying up to date
 
-It's important to keep your Flyway installation up to date. Flyway is regularly updated with bugfixes and quality of life improvements.
+It's important to keep your Flyway installation up to date. Flyway is regularly updated with bugfixes and quality of life improvements.<br/>
+
+<h2>Recent highlights</h2>
+
+Here's an overview of the biggest changes to Flyway since 7.0.0.
+<br/>
+<br/>
+
+{% include recent-highlights.html %}
+
+<a href="https://flywaydb.org/documentation/learnmore/releaseNotes?ref=staying-up-to-date">
+  <button class="btn btn-primary">Go to full release notes</button>
+</a>
 
 ## Download the latest version
 
