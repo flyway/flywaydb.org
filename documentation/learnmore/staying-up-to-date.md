@@ -16,7 +16,7 @@ Here's an overview of the biggest changes to Flyway since 7.0.0.
 
 {% include recent-highlights.html %}
 
-<a href="https://flywaydb.org/documentation/learnmore/releaseNotes?ref=staying-up-to-date">
+<a href="/documentation/learnmore/releaseNotes?ref=staying-up-to-date">
   <button class="btn btn-primary">Go to full release notes</button>
 </a>
 
