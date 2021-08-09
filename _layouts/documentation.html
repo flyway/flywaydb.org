@@ -81,8 +81,8 @@ title: Documentation
                             <a href="/documentation/concepts/dryruns">Dry Runs</a></li>
 
                             <li
-                            {% if page.menu == 'intermediatebaselines' %} class="nav--vertical__active" {% endif %}>
-                            <a href="/documentation/concepts/intermediatebaselines">Intermediate Baselines</a></li>
+                            {% if page.menu == 'statescripts' %} class="nav--vertical__active" {% endif %}>
+                            <a href="/documentation/concepts/statescripts">State Scripts</a></li>
                         </ul>
                     </details>
 
@@ -309,8 +309,8 @@ title: Documentation
                             <a href="/documentation/tutorials/undo">Undo migrations</a></li>
 
                             <li
-                            {% if page.menu == 'tut_intermediatebaselines' %} class="nav--vertical__active" {% endif %}>
-                            <a href="/documentation/tutorials/intermediateBaselines">Intermediate baseline migrations</a></li>
+                            {% if page.menu == 'tut_statescripts' %} class="nav--vertical__active" {% endif %}>
+                            <a href="/documentation/tutorials/stateScripts">State Scripts</a></li>
 
                             <li
                             {% if page.menu == 'java' %} class="nav--vertical__active" {% endif %}>
@@ -474,10 +474,6 @@ title: Documentation
                                 <a href="/documentation/configuration/parameters/installedBy">installedBy</a></li>
 
                                 <li
-                                {% if page.pill == 'intermediateBaselineSqlMigrationPrefix' %} class="nav--vertical__active" {% endif %}>
-                                <a href="/documentation/configuration/parameters/intermediateBaselineSqlMigrationPrefix">intermediateBaselineSqlMigrationPrefix</a></li>
-
-                                <li
                                 {% if page.pill == 'jarDirs' %} class="nav--vertical__active" {% endif %}>
                                 <a href="/documentation/configuration/parameters/jarDirs">jarDirs</a></li>
 
@@ -588,6 +584,10 @@ title: Documentation
                                 <li
                                 {% if page.pill == 'sqlMigrationSuffixes' %} class="nav--vertical__active" {% endif %}>
                                 <a href="/documentation/configuration/parameters/sqlMigrationSuffixes">sqlMigrationSuffixes</a></li>
+
+                                <li
+                                {% if page.pill == 'stateScriptPrefix' %} class="nav--vertical__active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/stateScriptPrefix">stateScriptPrefix</a></li>
 
                                 <li
                                 {% if page.pill == 'stream' %} class="nav--vertical__active" {% endif %}>
