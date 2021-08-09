@@ -198,12 +198,13 @@ Oracle supports user and password being provided in the JDBC URL, in the form
 In this case, they do not need to be passed separately in configuration and the Flyway commandline will not prompt for them.
 
 ### Oracle Wallet
+{% include teams.html %}
 
-You can supply credentials using Oracle Wallet by specifying properties on the JDBC url. For example:
+Flyway can connect to your databases using credentials in your Oracle Wallet.
 
-`jdbc:oracle:thin:@dbname_high?TNS_ADMIN=/Users/test/wallet_dbname`
+First you need to ensure you have set the environment variable `TNS_ADMIN` to point to the location containing your `tnsnames.ora` file. Then you will need to configure the [`flyway.oracle.walletLocation`](/documentation/configuration/parameters/oracleWalletLocation) parameter to point to the location of your Oracle wallet. Lastly your URL should be provided as specified in `tnsnames.ora` i.e. if it is using an alias then connect with the `jdbc:oracle:thin:@db_alias` syntax.
 
-[See the Oracle documentation for more details](https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/user/connect-jdbc-thin-wallet.html#GUID-20656D84-4D79-4EE9-B55F-333053948966).
+With that configuration you will be able to connect to your database without providing any credentials in config.
 
 ### Kerberos 
 {% include teams.html %}
