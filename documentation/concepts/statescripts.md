@@ -14,10 +14,12 @@ Instead, you might wish to add a single, cumulative script that represents the s
 
 ## How it works
 
-Once you decide it's time to add such a cumulative script, instead of making it a regular [versioned migration](/documentation/concepts/migrations#versioned-migrations) it should be a state script, which is prefixed with `S` instead of `V`.
+State scripts are prefixed with `S` followed by the version of your database they represent. For example: `S5__my_database.sql` represents the state of your database after applying all versioned migrations up to and including `V5`.
 
-With this prefix, these new scripts won't disrupt existing deployment pipelines and new environments will choose the latest state script as the starting point when you run `migrate`. Every migration with a version below the latest state script's version is marked as `below baseline`. <br/>
-Note that repeatable migrations are executed as normal.
+State scripts are only used when deploying to new environments. If used in an environment where some Flyway migrations have already been applied, state scripts will be ignored. New environments will choose the latest state script as the starting point when you run `migrate`. Every migration with a version below the latest state script's version is marked as `ignored`. <br/>
+Note that:
+- repeatable migrations are executed as normal
+- state scripts do not replace versioned migrations - you can have both a state script and a versioned migration at the same version
 
 This mechanism is fully automated and requires no modification in your pipeline to begin using. Simply add your state scripts when you need them and they will be utilized.
 
