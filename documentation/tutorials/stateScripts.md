@@ -14,9 +14,9 @@ Over the lifetime of a project, many database objects may be created and destroy
 
 Instead, you might wish to add a single, cumulative script that represents the state of your database after all of those migrations have been applied without disrupting existing environments.
 
-State scripts let you achieve just that. These are a new type of script, similar to [versioned migrations](/documentation/concepts/migrations#versioned-migrations) except with `S` as their prefix.
+[State scripts](/documentation/concepts/statescripts) let you achieve just that. These are a new type of script, similar to [versioned migrations](/documentation/concepts/migrations#versioned-migrations) except with `S` as their prefix.
 
-In existing deployments they have no effect as your database is already where it needs to be. In new environments, the state script with the latest version is applied first as the baseline migration in order to bring your database up to speed before applying later migrations. Any migrations with a version older than the latest state script's version are not applied, and are treated as being [below baseline](/documentation/concepts/migrations#migration-states). <br/>
+In existing deployments they have no effect as your database is already where it needs to be. In new environments, the state script with the latest version is applied first in order to bring your database up to speed before applying later migrations. Any migrations with a version older than the latest state script's version are not applied and are treated as being [ignored](/documentation/concepts/migrations#migration-states). <br/>
 Note that repeatable migrations are executed as normal.
 
 ## Example
@@ -61,7 +61,7 @@ However, when we come to apply our migrations in a new environment, `flyway info
 +-----------+---------+--------------+------------------+--------------+---------+----------+
 ```
 
-Migrations with a version less than or equal to the latest state script's version are ignored as they are considered to be below the baseline version. Running `flyway migrate` will cause just the `S3` script to be applied, and the history table will show this as a result:
+Migrations with a version less than or equal to the latest state script's version are ignored. Running `flyway migrate` will cause just the `S3` script to be applied, and the history table will show this as a result:
 
 ```
 +-----------+---------+--------------+------------------+---------------------+----------+----------+
