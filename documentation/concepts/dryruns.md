@@ -69,5 +69,5 @@ that would have been applied are sent to the dry run output instead.
 Click [here](/documentation/getstarted/advanced/dryruns) to see a tutorial on using dry runs.
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/concepts/intermediatebaselines">Intermediate Baselines<i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/concepts/statescripts">State Scripts<i class="fa fa-arrow-right"></i></a>
 </p>
