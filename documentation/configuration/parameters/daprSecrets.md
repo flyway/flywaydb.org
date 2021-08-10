@@ -15,8 +15,6 @@ Flyway configurations.
 
 If multiple secrets specify the same configuration parameter, then the last secret takes precedence.
 
-Example: `secret1,secret2`
-
 ## Usage
 
 ### Commandline
