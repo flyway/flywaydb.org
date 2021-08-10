@@ -7,6 +7,7 @@ subtitle: Percona XtraDB Cluster
 
 ## Supported Versions
 
+- `8.0`
 - `5.7`
 
 ## Support Level
