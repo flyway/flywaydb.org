@@ -34,7 +34,7 @@ FLYWAY_DAPR_URL=http://localhost:3500/v1.0/secrets/my-secrets-store
 ```java
 Configuration configuration = new ClassicConfiguration();
 DaprApiExtension apiExtension = configuration.getExtensionConfiguration(DaprApiExtension.class);
-apiExtension.setVaultUrl("http://localhost:3500/v1.0/secrets/my-secrets-store");
+apiExtension.setDaprUrl("http://localhost:3500/v1.0/secrets/my-secrets-store");
 ```
 
 ### Gradle

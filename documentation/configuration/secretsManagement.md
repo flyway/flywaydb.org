@@ -63,13 +63,13 @@ Parameters stored in secrets in Dapr are read with the highest priority and will
 
 ### Example
 
-Assume we have the following two secrets in Vault:
+Assume we have the following two secrets in Dapr:
 - `secret1` which contains `flyway.url=jdbc:h2:mem:db`
 - `secret2` which contains `flyway.user=sa`
 
 In order to read these secrets you need to configure just the following Flyway parameters:
 - [flyway.dapr.url](/documentation/configuration/parameters/daprUrl) - This is the REST API URL of your Dapr sidecar application e.g. `http://localhost:3500/v1.0/secrets/my-secrets-store`
-- [flyway.dapr.secrets](/documentation/configuration/parameters/daprSecrets) - This is a comma-separated list of paths to secrets that contain Flyway configurations. This must start with the name of the engine and end with the name of the secret. In our case we would set `flyway.dapr.secrets=secret1,secret2`
+- [flyway.dapr.secrets](/documentation/configuration/parameters/daprSecrets) - This is a comma-separated list of paths to secrets that contain Flyway configurations. In our case we would set `flyway.dapr.secrets=secret1,secret2`
 
 After configuring the above parameters, we would be able to connect to a database in Flyway without configuring a database connection locally, as all the necessary configuration would be read from Dapr.
 

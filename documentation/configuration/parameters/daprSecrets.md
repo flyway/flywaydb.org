@@ -38,14 +38,14 @@ FLYWAY_DAPR_SECRETS=secret1,secret2
 ```java
 Configuration configuration = new ClassicConfiguration();
 DaprApiExtension apiExtension = configuration.getExtensionConfiguration(DaprApiExtension.class);
-apiExtension.setVaultSecrets("secret1,secret2");
+apiExtension.setVaultSecrets("secret1", "secret2");
 ```
 
 ### Gradle
 ```groovy
 flyway {
     daprConfiguration {
-        daprSecrets = ['secret1,secret2']
+        daprSecrets = ['secret1', 'secret2']
     }
 }
 ```
@@ -53,11 +53,11 @@ flyway {
 ### Maven
 ```xml
 <configuration>
-    <vaultConfiguration>
+    <daprConfiguration>
         <daprSecrets>
             <daprSecret>secret1</daprSecret>
             <daprSecret>secret2</daprSecret>
         </daprSecrets>
-    </vaultConfiguration>
+    </daprConfiguration>
 </configuration>
 ```

@@ -14,8 +14,8 @@ Dapr is an application runtime which has a secrets management component, allowin
 provide access to sensitive information. You can learn more about it 
 [here](https://docs.dapr.io/developing-applications/building-blocks/secrets/secrets-overview/).
 
-Flyway integrates with Dapr's [Secret Store](https://www.vaultproject.io/docs/secrets/kv), letting you 
-securely store and provide access to any confidential Flyway parameters for any specified duration.
+Flyway integrates with Dapr's [Secret Store](https://docs.dapr.io/developing-applications/building-blocks/secrets), 
+letting you securely store and provide access to any confidential Flyway parameters.
 
 This tutorial will assume you already have a Dapr server instance and know how to configure secrets in it,
 and a local installation of the Dapr application sidecar. 
