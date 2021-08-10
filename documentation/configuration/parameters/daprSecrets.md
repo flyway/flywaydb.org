@@ -36,7 +36,7 @@ FLYWAY_DAPR_SECRETS=secret1,secret2
 ```java
 Configuration configuration = new ClassicConfiguration();
 DaprApiExtension apiExtension = configuration.getExtensionConfiguration(DaprApiExtension.class);
-apiExtension.setVaultSecrets("secret1", "secret2");
+apiExtension.setDaprSecrets("secret1", "secret2");
 ```
 
 ### Gradle
