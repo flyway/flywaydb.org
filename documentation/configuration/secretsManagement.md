@@ -12,7 +12,7 @@ A problem that organizations often encounter is where to store and how to access
 Flyway comes with support for the following secrets management solutions that enable you to successfully handle sensitive data:
 
 - [AWS Secrets Manager](/documentation/configuration/secretsManagement#aws-secrets-manager)
-- [Dapr Secret Store](/documentation/configuration/secretsManagement#dapr)
+- [Dapr Secret Store](/documentation/configuration/secretsManagement#dapr-secret-store)
 - [Vault](/documentation/configuration/secretsManagement#hashicorp-vault)
 
 ## AWS Secrets Manager
