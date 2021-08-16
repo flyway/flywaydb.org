@@ -6,13 +6,21 @@ redirect_from: /documentation/placeholders/
 ---
 
 # Placeholders
+
+Flyway comes with support for placeholder replacement in:
+
+- [SQL migrations](/documentation/configuration/placeholders#sql-migration-placeholders)
+- [Script migrations](/documentation/configuration/placeholders#script-migration-placeholders) {% include teams.html %}
+
+# SQL Migration Placeholders
 In addition to regular SQL syntax, Flyway also supports placeholder replacement with configurable prefixes and suffixes.
-By default it looks for Ant-style placeholders like `${myplaceholder}`. This can be very useful to abstract differences between environments.
+By default it looks for Ant-style placeholders like `${myplaceholder}`. This can be very useful to abstract differences 
+between environments.
 
 Changing the value of placeholders will cause repeatable migrations to be re-applied on next migrate.
 
-Placeholders are also provided as additional properties to the database connection, so placeholders reserved by your database (e.g. `serverName` for SQL Server)
-will be used by the connection.
+Placeholders are also provided as additional properties to the database connection, so placeholders reserved by your 
+database (e.g. `serverName` for SQL Server) will be used by the connection.
 
 Placeholders are supported in versioned migrations, repeatable migrations, and SQL callbacks.
 
@@ -57,6 +65,27 @@ GRANT SELECT ON SCHEMA ${flyway:defaultSchema} TO ${flyway:user};
 
 -- User defined placeholder
 INSERT INTO ${tableName} (name) VALUES ('Mr. T');
+```
+
+# Script Migration Placeholders
+{% include teams.html %}
+
+Much like SQL placeholders, Flyway supports placeholder replacement in 
+[script migrations](/documentation/concepts/migrations#script-migrations). Placeholders can be read 
+through environment variables in your chosen scripting language and by default are prefixed by `FP__` 
+and suffixed by `__`.
+
+### Example
+Here are some examples of the supported syntax:
+
+Powershell:
+```powershell
+echo $env:FP__myPlaceholder__
+```
+
+Bash:
+```bash
+echo $FP__myPlaceholder__
 ```
 
 <p class="next-steps">
