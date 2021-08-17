@@ -17,6 +17,25 @@ Here's an overview of the biggest changes to Flyway since 7.0.0.
 <h2>Full release notes</h2>
 
 <div class="release">
+    <h2 id="7.14.0">Flyway 7.14.0 (2021-08-17)</h2>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        <li>Resolve a nesting issue with BigQuery parsing</li>
+        <li>Fix cases of CLI hanging when no credentials are provided</li>
+    </ul>
+
+    <h3>New features</h3>
+    <ul>
+        <li> Add support for placeholders in arbitrary script migrations</li>
+    </ul>
+
+    <p>
+        Thanks to everyone who reported these issues.
+    </p>
+</div>
+
+<div class="release">
     <h2 id="7.13.0">Flyway 7.13.0 (2021-08-11)</h2>
 
     <h3>Bug fixes</h3>
@@ -36,7 +55,7 @@ Here's an overview of the biggest changes to Flyway since 7.0.0.
 
     <h3>New features</h3>
     <ul>
-        <li>Introduce <a href="/documentation/tutorials/stateScripts">State Scripts</a> - a single, cumulative script that represents the state of your database after many migrations have been applied.
+        <li>Introduce <a href="/documentation/tutorials/stateScripts">State Scripts</a> - a single, cumulative script that represents the state of your database after many migrations have been applied.</li>
     </ul>
 
     <p>
@@ -862,7 +881,7 @@ Here's an overview of the biggest changes to Flyway since 7.0.0.
     <h3>New features</h3>
     <ul>
         {% include issue.html id="2921" title="Add Log4J v2 support" %}
-        {% include issue.html id="2919" title="Allow custom S3Client to be supplied" %} 
+        {% include issue.html id="2919" title="Allow custom S3Client to be supplied" %}
     </ul>
 
     <h3>Changes</h3>
