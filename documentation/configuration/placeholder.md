@@ -9,17 +9,17 @@ redirect_from: /documentation/placeholders/
 
 Flyway comes with support for placeholder replacement in:
 
-- [SQL migrations](/documentation/configuration/placeholders#sql-migration-placeholders)
-- [Script migrations](/documentation/configuration/placeholders#script-migration-placeholders) {% include teams.html %}
+- [SQL migrations](/documentation/configuration/placeholder#sql-migration-placeholders)
+- [Script migrations](/documentation/configuration/placeholder#script-migration-placeholders) {% include teams.html %}
 
 # SQL Migration Placeholders
 In addition to regular SQL syntax, Flyway also supports placeholder replacement with configurable prefixes and suffixes.
-By default it looks for Ant-style placeholders like `${myplaceholder}`. This can be very useful to abstract differences 
+By default it looks for Ant-style placeholders like `${myplaceholder}`. This can be very useful to abstract differences
 between environments.
 
 Changing the value of placeholders will cause repeatable migrations to be re-applied on next migrate.
 
-Placeholders are also provided as additional properties to the database connection, so placeholders reserved by your 
+Placeholders are also provided as additional properties to the database connection, so placeholders reserved by your
 database (e.g. `serverName` for SQL Server) will be used by the connection.
 
 Placeholders are supported in versioned migrations, repeatable migrations, and SQL callbacks.
@@ -32,7 +32,7 @@ Placeholders can be configured through a number of different ways.
 
 Placeholders are case insensitive, so a placeholder like `${myplaceholder}` can be specified with any of the above techniques.
 
-See [parameters](/documentation/configuration/parameters/#placeholders) for placeholder specific configuration parameters. 
+See [parameters](/documentation/configuration/parameters/#placeholders) for placeholder specific configuration parameters.
 
 ## Default placeholders
 Flyway also provides default placeholders, whose values are automatically populated:
@@ -70,9 +70,9 @@ INSERT INTO ${tableName} (name) VALUES ('Mr. T');
 # Script Migration Placeholders
 {% include teams.html %}
 
-Much like SQL placeholders, Flyway supports placeholder replacement in 
-[script migrations](/documentation/concepts/migrations#script-migrations). Placeholders can be read 
-through environment variables in your chosen scripting language and by default are prefixed by `FP__` 
+Much like SQL placeholders, Flyway supports placeholder replacement in
+[script migrations](/documentation/concepts/migrations#script-migrations). Placeholders can be read
+through environment variables in your chosen scripting language and by default are prefixed by `FP__`
 and suffixed by `__`.
 
 ### Example
