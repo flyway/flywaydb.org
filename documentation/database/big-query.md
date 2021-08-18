@@ -71,4 +71,11 @@ Google BigQuery is in the process of being certified. The process of certificati
 
 **If you'd like to use Google BigQuery and you are happy to provide feedback as we build support for this database, please complete the form below  to get access to the getting started documentation**
 
+## Limitations
+
+While the Simba JDBC driver supports a number of [different modes](https://simba.wpengine.com/products/BigQuery/doc/JDBC_InstallGuide/content/jdbc/bq/authenticating/useraccount.htm)
+for authentication, Google User Account authentication (that is, `OAuthType=1`) is not recommended for desktop
+use and is not supported at all for unattended use, or use in Docker, as it requires a browser to be available to
+get an access token interactively.
+
 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeeB1dMrvGApG-UWmRSMQjW0MkZe9dlurI3zy8bbvk6O61Q2Q/viewform?embedded=true" width="520" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
