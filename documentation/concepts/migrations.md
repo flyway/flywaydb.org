@@ -378,12 +378,15 @@ Script migrations can be used for a number of tasks such as:
 - Triggering execution of a 3rd party application as part of the migrations (such as a batch upload tool)
 - Cleaning up local files (such as those created by SQL*Plus SPOOL)
 
+### Script Placeholder Replacement
+Flyway also supports script placeholder replacement with configurable pre- and suffixes. Script placeholders can be read through environment variables in your chosen scripting language.
+
+See [Script Placeholders](/documentation/configuration/placeholder#script-migration-placeholders).
+
 ### Important notes
 On linux, if executing an extensionless migration that is not set to be executable, Flyway will attempt to set the file to be executable before running it.
 
 The migration checksum is only calculated for the migration itself, not for any files it references or loads.
-
-Script migrations do not support placeholder replacement during execution, but placeholders are considered when calculating checksums so that repeatables may be re-executed.
 
 ## Transactions
 
