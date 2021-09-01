@@ -17,6 +17,23 @@ Here's an overview of the biggest changes to Flyway since 7.0.0.
 <h2>Full release notes</h2>
 
 <div class="release">
+    <h2 id="7.14.1">Flyway 7.14.1 (2021-09-01)</h2>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        <li>Fix unlocking bug in PostgreSQL</li>
+        {% include issue.html id="3258" title="Adding FUNCTION to the list of special cases for IF EXISTS in HSQL" %}
+        {% include issue.html id="3261" title="Fix various parsing issues in BigQuery" %}
+        {% include issue.html id="3266" title="Detecting abstract Java callback classes no longer cause Flyway to fail." %}
+        {% include issue.html id="3269" title="Simplify MySQL query to fix compatibility with third party tool Vitess" %}
+    </ul>
+
+    <p>
+        Thanks to spadger, ferrisnorth, kgroble and JaspreetSinghJassal for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
     <h2 id="7.14.0">Flyway 7.14.0 (2021-08-17)</h2>
 
     <h3>Bug fixes</h3>
