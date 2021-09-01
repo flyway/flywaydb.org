@@ -9,7 +9,7 @@ redirect_from: /documentation/configuration/connectRetries/
 # Connect Retries
 
 ## Description
-The maximum number of retries when attempting to connect to the database. After each failed attempt, Flyway will wait 1 second before attempting to connect again, up to the maximum number of times specified by connectRetries.
+The maximum number of retries when attempting to connect to the database. After each failed attempt, Flyway will wait 1 second before attempting to connect again, up to the maximum number of times specified by connectRetries. The interval between retries doubles with each subsequent attempt.
 
 ## Default
 0
@@ -18,36 +18,36 @@ The maximum number of retries when attempting to connect to the database. After 
 
 ### Commandline
 ```powershell
-./flyway -connectRetries=50 info
+./flyway -connectRetries=10 info
 ```
 
 ### Configuration File
 ```properties
-flyway.connectRetries=50
+flyway.connectRetries=10
 ```
 
 ### Environment Variable
 ```properties
-FLYWAY_CONNECT_RETRIES=50
+FLYWAY_CONNECT_RETRIES=10
 ```
 
 ### API
 ```java
 Flyway.configure()
-    .connectRetries(50)
+    .connectRetries(10)
     .load()
 ```
 
 ### Gradle
 ```groovy
 flyway {
-    connectRetries = 50
+    connectRetries = 10
 }
 ```
 
 ### Maven
 ```xml
 <configuration>
-    <connectRetries>50</connectRetries>
+    <connectRetries>10</connectRetries>
 </configuration>
 ```
