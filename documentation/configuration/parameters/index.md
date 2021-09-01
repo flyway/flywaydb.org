@@ -32,6 +32,7 @@ If using maven, config parameters can be set in the plugin configuration block, 
 - [password](/documentation/configuration/parameters/password)
 - [driver](/documentation/configuration/parameters/driver)
 - [connectRetries](/documentation/configuration/parameters/connectRetries)
+- [connectRetriesInterval](/documentation/configuration/parameters/connectRetriesInterval)
 - [initSql](/documentation/configuration/parameters/initSql)
 - [jdbcProperties](/documentation/configuration/parameters/jdbcProperties) {% include teams.html %}
 
