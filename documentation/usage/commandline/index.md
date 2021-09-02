@@ -309,7 +309,9 @@ Flyway will automatically detect and use any logger class that it finds on its c
  - Log4J v2 `org.apache.logging.log4j.Logger`
  - the Android built-in log `android.util.Log`
 
-The simplest pattern to achieve this is to put all the necessary JAR files in Flyway's `lib` folder and any configuration in the Flyway root folder.
+Alternatively, you can use the [loggers](/documentation/configuration/parameters/loggers) configuration parameter to specify an exact desired logging framework to use.
+
+The simplest way to make use of Flyway's auto-detection is to put all the necessary JAR files in Flyway's `lib` folder and any configuration in the Flyway root folder.
 For example, if you wished to use `log4j` v2 with the Flyway command line, you would achieve this by placing the log4j JAR files and the corresponding configuration file `log4j2.xml` like this:
 
 <pre class="filetree"><i class="fa fa-folder-open"></i> flyway-{{site.flywayVersion}}

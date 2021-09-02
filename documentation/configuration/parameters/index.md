@@ -53,6 +53,7 @@ If using maven, config parameters can be set in the plugin configuration block, 
 - [locations](/documentation/configuration/parameters/locations)
 - [failOnMissingLocations](/documentation/configuration/parameters/failOnMissingLocations)
 - [lockRetryCount](/documentation/configuration/parameters/lockRetryCount)
+- [loggers](/documentation/configuration/parameters/loggers)
 - [mixed](/documentation/configuration/parameters/mixed)
 - [outOfOrder](/documentation/configuration/parameters/outOfOrder)
 - [outputQueryResults](/documentation/configuration/parameters/outputQueryResults) {% include teams.html %}
