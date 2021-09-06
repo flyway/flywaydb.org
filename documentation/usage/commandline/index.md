@@ -10,7 +10,7 @@ The Flyway command-line tool is a standalone Flyway distribution. It runs on Win
 
 **Pre-requisites**
 To spin up instant copies of dev, test and CI databases in the cloud, for free, you will need a Spawn account.<br/>
-<a href="https://docs.spawn.cc/getting-started/installation#create-a-spawn-account" target="_blank">Create a new Spawn account</a>.
+[Create a new Spawn account](/documentation/spawn/firststeps/installation){:target="_blank"}.
 
 ## Download and installation
 
