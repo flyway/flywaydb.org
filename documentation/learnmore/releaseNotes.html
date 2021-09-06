@@ -17,6 +17,25 @@ Here's an overview of the biggest changes to Flyway since 7.0.0.
 <h2>Full release notes</h2>
 
 <div class="release">
+    <h2 id="7.15.0">Flyway 7.15.0 (2021-09-06)</h2>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        {% include issue.html id="3256" title="Fix issue with CockroachDB delete lock statement timestamp not updating" %}
+    </ul>
+
+    <h3>New features</h3>
+    <ul>
+        <li>Add the ability to configure which logger to use</li>
+        {% include issue.html id="3257" title="Added 'connectionRetriesInterval' property to set customizable connection retry interval (Default: 2 minutes)" %}
+    </ul>
+
+    <p>
+        Thanks to dimw and senthil-yolabs for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
     <h2 id="7.14.1">Flyway 7.14.1 (2021-09-01)</h2>
 
     <h3>Bug fixes</h3>

@@ -95,8 +95,13 @@ Here is a sample configuration file:
 
 # The maximum number of retries when attempting to connect to the database. After each failed attempt,
 # Flyway will wait 1 second before attempting to connect again, up to the maximum number of times specified
-# by connectRetries. (default: 0)
+# by connectRetries. The interval between retries doubles with each subsequent attempt.
+# (default: 0)
 # flyway.connectRetries=
+
+# The maximum time between retries when attempting to connect to the database in seconds.
+# This will cap the interval between connect retry to the value provided. (default: 120)
+# flyway.connectRetriesInterval=
 
 # The SQL statements to run to initialize a new database connection immediately after opening it. (default: none)
 # flyway.initSql=
@@ -153,6 +158,17 @@ flyway.locations=filesystem:sql
 
 # Whether to fail if a location specified in the flyway.locations option doesn't exist (default: false)
 # flyway.failOnMissingLocations=
+
+# The loggers Flyway should use. Valid options are:
+#
+# auto: Auto detect the logger (default behavior)
+# console: Use stdout/stderr (only available when using the CLI)
+# slf4j2: Use the slf4j2 logger
+# log4j2: Use the log4j2 logger
+# apache-commons: Use the Apache Commons logger
+#
+# Alternatively you can provide the fully qualified class name for any other logger to use that.
+# flyway.loggers=
 
 # Comma-separated list of fully qualified class names of custom MigrationResolver to use for resolving migrations.
 # flyway.resolvers=
