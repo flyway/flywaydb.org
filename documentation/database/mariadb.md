@@ -9,7 +9,7 @@ subtitle: MariaDB
 
 - `10.4`
 - `10.3`
-- `10.2`
+- `10.2` {% include teams.html %}
 - `10.1` {% include teams.html %}
 - `10.0` {% include teams.html %}
 - `5.5` {% include teams.html %}

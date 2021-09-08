@@ -8,7 +8,7 @@ subtitle: MySQL
 ## Supported Versions
 
 - `8.0`
-- `5.7`
+- `5.7` {% include teams.html %}
 - `5.6` {% include teams.html %}
 - `5.5` {% include teams.html %}
 - `5.1` {% include teams.html %}
