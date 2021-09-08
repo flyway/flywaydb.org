@@ -12,7 +12,7 @@ subtitle: DB2
 ## Supported Versions
 
 - `11.5`
-- `11.1`
+- `11.1` {% include teams.html %}
 - `10.5` {% include teams.html %}
 - `10.1` {% include teams.html %}
 - `9.8` {% include teams.html %}

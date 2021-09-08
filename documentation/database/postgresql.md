@@ -12,8 +12,8 @@ subtitle: PostgreSQL
 - `12`
 - `11`
 - `10`
-- `9.6`
-- `9.5`
+- `9.6` {% include teams.html %}
+- `9.5` {% include teams.html %}
 - `9.4` {% include teams.html %}
 - `9.3` {% include teams.html %}
 - `9.2` {% include teams.html %}
