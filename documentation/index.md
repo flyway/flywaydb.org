@@ -37,7 +37,7 @@ title: Documentation
     (for advanced data transformations or dealing with LOBs).</p>
 
 <p>It has a <a href="/documentation/usage/commandline">Command-line client</a>.
-    If you are on the JVM, we recommend using the <a href="/documentation/usage/api">Java API</a> (also works on Android)
+    If you are on the JVM, we recommend using the <a href="/documentation/usage/api">Java API</a>
     for migrating the database on application startup.
     Alternatively, you can also use the <a href="/documentation/usage/maven">Maven plugin</a>
     or <a href="/documentation/usage/gradle">Gradle plugin</a>.</p>

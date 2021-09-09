@@ -35,33 +35,27 @@ Support Level determines the degree of support available for this database ([lea
 <tr>
 <th></th>
 <th>Java (Xerial)</th>
-<th>Android (SQLDroid)</th>
 </tr>
 </thead>
 <tr>
 <th>URL format</th>
 <td><code>jdbc:sqlite:<i>database</i></code></td>
-<td><code>jdbc:sqlite:<i>database</i></code></td>
 </tr>
 <tr>
 <th>Ships with Flyway Command-line</th>
 <td>Yes</td>
-<td>No</td>
 </tr>
 <tr>
 <th>Maven Central coordinates</th>
 <td><code>org.xerial:sqlite-jdbc:3.30.1</code></td>
-<td><code>org.sqldroid:sqldroid:1.1.0-rc1</code></td>
 </tr>
 <tr>
 <th>Supported versions</th>
 <td><code>3.7</code> and later</td>
-<td><code>1.1.0-rc1</code> and later</td>
 </tr>
 <tr>
 <th>Default Java class</th>
 <td><code>org.sqlite.JDBC</code></td>
-<td><code>org.sqldroid.SQLDroidDriver</code></td>
 </tr>
 </table>
 
