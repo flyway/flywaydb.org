@@ -307,7 +307,6 @@ Flyway will automatically detect and use any logger class that it finds on its c
  - the Apache Commons Logging framework `org.apache.commons.logging.Log` (including Log4j v1)
  - SLF4J `org.slf4j.Logger`
  - Log4J v2 `org.apache.logging.log4j.Logger`
- - the Android built-in log `android.util.Log`
 
 Alternatively, you can use the [loggers](/documentation/configuration/parameters/loggers) configuration parameter to specify an exact desired logging framework to use.
 

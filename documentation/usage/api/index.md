@@ -197,56 +197,6 @@ See [configuration](/documentation/configuration/parameters) for a full list of 
 You will need to include the relevant JDBC driver for your chosen database as a dependency in your Java project. 
 For instance in your `pom.xml` for a Maven project. The version of the JDBC driver supported for each database is specified in the 'Supported Databases' list in the left hand side navigation menu.
 
-### Programmatic Configuration (Android)
-
-**Note: Android integration may not work correctly due to a bug in the SQLDroid driver. [See this GitHub issue](https://github.com/flyway/flyway/issues/970#issuecomment-543209484).**
-
-In order to use Flyway on Android you have to add flyway-core as well as SQLDroid as dependencies. 
-There are two things to keep in mind with Android: First, you have to load the migrations as *assets*, not *resources* 
-and second, you have to let Flyway know your Android context, by calling `ContextHolder.setContext()`.
-
-Add the necessary dependencies to `build.gradle`:
-
-```groovy
-dependencies {
-    // Your other dependencies
-    // ...
-
-    compile 'org.flywaydb:flyway-core:{{ site.flywayVersion }}'
-    compile 'org.sqldroid:sqldroid:1.1.0-rc1'
-}
-```
-
-Make sure that your migrations are included as assets (notice that assets have to be declared in the project itself and not in a dependency. But you can use reference e.g. `../lib/src/main/resources` to use the resources of a lib project)
-
-```groovy
-android {
-    // SDK, config, buildTypes, etc
-    // ...
-
-    sourceSets {
-        // Place your db/migration folder here
-        main { assets.srcDirs = ['src/main/assets'] }
-    }
-
-    // ...
-}
-```
-
-Include the setup in your main activity onCreate or application onCreate:
-
-```java
-import org.flywaydb.core.Flyway;
-import org.flywaydb.core.api.android.ContextHolder;
-import org.sqldroid.DroidDataSource;
-
-...
-DroidDataSource dataSource = new DroidDataSource(getPackageName(), "...");
-ContextHolder.setContext(this);
-Flyway flyway = Flyway.configure().dataSource(dataSource).load();
-flyway.migrate();
-```
-
 ### Spring Configuration
 
 As an alternative to the programmatic configuration, here is how you can configure and start Flyway in a classic
