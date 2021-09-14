@@ -1,6 +1,5 @@
 org.flywaydb.core
 org.flywaydb.core.api
-org.flywaydb.core.api.android
 org.flywaydb.core.api.callback
 org.flywaydb.core.api.configuration
 org.flywaydb.core.api.exception
