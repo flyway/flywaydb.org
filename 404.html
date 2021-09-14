@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="refresh" content="1;url=/">
     <script type="text/javascript">
-        window.location.href = "/"
+        if (window.location.href.includes("/documentation/v6")) {
+            window.location.href = window.location.href.replace("/documentation/v6", "/documentation")
+        } else {
+            window.location.href = "/"
+        }
     </script>
     <title>Page Not Found</title>
 </head>
