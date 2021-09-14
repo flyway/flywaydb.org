@@ -17,6 +17,35 @@ Here's an overview of the biggest changes to Flyway since 7.0.0.
 <h2>Full release notes</h2>
 
 <div class="release">
+    <h2 id="8.0.0-beta1">Flyway 8.0.0-beta1 (2021-09-14)</h2>
+
+    <h3>Breaking changes</h3>
+    <ul>
+        <li>Remove fields and methods marked as deprecated in V7. This includes the old '-json' flag and 'installedOn' in the JSON output from running info</li>
+        <li>Remove android support</li>
+    </ul>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        {% include issue.html id="3276" title="Fix issue with output from '-v' not appearing" %}
+    </ul>
+
+    <h3>Changes</h3>
+    <ul>
+        <li>Deprecate old 'ignore' parameters for validate (to be removed in v9)</li>
+    </ul>
+
+    <h3>Database compatibility</h3>
+    <ul>
+        <li>Deprecate Community support for database versions older than 5 years</li>
+    </ul>
+
+    <p>
+        Thanks to iilei for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
     <h2 id="7.15.0">Flyway 7.15.0 (2021-09-06)</h2>
 
     <h3>Bug fixes</h3>
