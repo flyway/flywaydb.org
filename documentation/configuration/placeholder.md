@@ -73,19 +73,19 @@ INSERT INTO ${tableName} (name) VALUES ('Mr. T');
 Much like SQL placeholders, Flyway supports placeholder replacement in
 [script migrations](/documentation/concepts/migrations#script-migrations). Placeholders can be read
 through environment variables in your chosen scripting language and by default are prefixed by `FP__`
-and suffixed by `__`.
+and suffixed by `__`. When accessing a placeholder that contains a colon (`:`), you must replace the colon with an underscore (`_`).
 
 ### Example
 Here are some examples of the supported syntax:
 
 Powershell:
 ```powershell
-echo $env:FP__myPlaceholder__
+echo $env:FP__flyway_filename__
 ```
 
 Bash:
 ```bash
-echo $FP__myPlaceholder__
+echo $FP__flyway_filename__
 ```
 
 <p class="next-steps">
