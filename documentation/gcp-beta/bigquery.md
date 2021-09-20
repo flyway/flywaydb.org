@@ -12,6 +12,9 @@ subtitle: GCP BigQuery
 - Using the Flyway Maven plugin?
   - Include the Flyway GCP BigQuery dependency [here](https://search.maven.org/artifact/org.flywaydb/flyway-gcp-bigquery/7.11.0-beta/jar) in your pom
   - Familiarize yourself with basic Flyway Maven usage by reading the docs [here](/documentation/usage/maven/)
+- Using the Flyway Gradle plugin?
+  - Include the Flyway GCP BigQuery dependency [here](https://search.maven.org/artifact/org.flywaydb/flyway-gcp-bigquery/7.11.0-beta/jar) as a buildscript dependency
+  - Familiarize yourself with basic Flyway Gradle usage by reading the docs [here](/documentation/usage/gradle/)
 
 ## Installing dependencies
 Google BigQuery requires a number of dependencies to be installed manually.
