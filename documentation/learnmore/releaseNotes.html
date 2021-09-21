@@ -17,6 +17,30 @@ Here's an overview of the biggest changes to Flyway since 7.0.0.
 <h2>Full release notes</h2>
 
 <div class="release">
+    <h2 id="8.0.0-beta2">Flyway 8.0.0-beta2 (2021-09-21)</h2>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        {% include issue.html id="3275" title="Fix parsing of identifiers with quotes in PostgreSQL" %}
+        {% include issue.html id="3279" title="Repair now checks for an empty description" %}
+    </ul>
+
+    <h3>New features</h3>
+    <ul>
+        {% include issue.html id="3277" title="Add default placeholders to script migrations" %}
+    </ul>
+
+    <h3>Performance improvements</h3>
+    <ul>
+        {% include issue.html id="3278" title="Remove redundant update check during license check" %}
+    </ul>
+
+    <p>
+        Thanks to tychokamphuis-accommodatiehuur, ewie, StefanA2 and Phil-Factor for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
     <h2 id="8.0.0-beta1">Flyway 8.0.0-beta1 (2021-09-14)</h2>
 
     <h3>Breaking changes</h3>
