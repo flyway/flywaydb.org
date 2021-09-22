@@ -9,10 +9,10 @@ subtitle: GCP BigQuery
 - Using the Flyway command-line?
   - Download the latest version [here](/download/community)
   - Familiarize yourself with basic Flyway command-line usage by reading the docs [here](/documentation/usage/commandline/)
-- Using the Flyway Maven plugin?
+- Using the Flyway with Maven?
   - Include the Flyway GCP BigQuery dependency [here](https://search.maven.org/artifact/org.flywaydb/flyway-gcp-bigquery/7.11.0-beta/jar) in your pom
   - Familiarize yourself with basic Flyway Maven usage by reading the docs [here](/documentation/usage/maven/)
-- Using the Flyway Gradle plugin?
+- Using the Flyway with Gradle?
   - Include the Flyway GCP BigQuery dependency [here](https://search.maven.org/artifact/org.flywaydb/flyway-gcp-bigquery/7.11.0-beta/jar) as a buildscript dependency
   - Familiarize yourself with basic Flyway Gradle usage by reading the docs [here](/documentation/usage/gradle/)
 
