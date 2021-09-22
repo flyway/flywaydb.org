@@ -21,7 +21,7 @@ This is particularly useful for very large SQL migrations composed of multiple M
 We will use [Spawn](/documentation/spawn){:target="_blank"} to create a database for this tutorial. Run the following command:
 
 <pre class="console"><span>&gt;</span> spawnctl create data-container \
-  --image postgres:flyway-getting-started \
+  --image postgres-flyway-getting-started \
   --name flyway-batch \
   --lifetime 24h</pre>
 
