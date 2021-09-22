@@ -21,7 +21,7 @@ To get started quickly without having to run through that tutorial first, we wil
 with the migrations from that tutorial already applied:
 
 <pre class="console"><span>&gt;</span> spawnctl create data-container \
-  --image postgres:flyway-getting-started-complete \
+  --image postgres-flyway-getting-started-complete \
   --name flyway-undo \
   --lifetime 24h</pre>
 

@@ -18,12 +18,12 @@ If you are new to Flyway, read through our [getting started](/documentation/gets
 To follow along with the examples, [install Spawn](/documentation/spawn/firststeps/installation){:target="_blank"} and run the following commands to create our Development and Production instances:
 
 <pre class="console">&gt; spawnctl create data-container \
-  --image postgres:flyway-existing-database \
+  --image postgres-flyway-existing-database \
   --name flyway-container-dev \
   --lifetime 24h</pre>
 
 <pre class="console">&gt; spawnctl create data-container \
-  --image postgres:flyway-existing-database \
+  --image postgres-flyway-existing-database \
   --name flyway-container-prod \
   --lifetime 24h</pre>
 

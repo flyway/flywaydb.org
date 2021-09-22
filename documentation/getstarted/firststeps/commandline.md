@@ -25,10 +25,10 @@ the installation steps.
 
 To configure Flyway, we first need a database we can connect to. We’ll use Spawn to create your own, isolated database environment
 from which you can run migrations against. This will create you your first data container, which is your database instance. Here we
-are specifying a PostgreSQL database but you can also specify `mysql:flyway-getting-started` or `mssql:flyway-getting-started`:
+are specifying a PostgreSQL database but you can also specify `mysql-flyway-getting-started` or `mssql-flyway-getting-started`:
 
 <pre class="console"><span>&gt;</span> spawnctl create data-container \
-  --image postgres:flyway-getting-started \
+  --image postgres-flyway-getting-started \
   --name flyway-container \
   --lifetime 24h</pre>
 
