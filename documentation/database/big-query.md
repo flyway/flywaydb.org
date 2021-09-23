@@ -59,9 +59,15 @@ Support Level determines the degree of support available for this database ([lea
 
 ## Flyway Teams Features for BigQuery
 
+### Performance
+
 GCP BigQuery can suffer from performance issues while executing schema changes.
 
-Flyway Teams edition solves this via [batching](/documentation/configuration/parameters/batch) which combines schema changes to reduce the network overhead and improves performance.
+Flyway Teams Edition solves this via [batching](/documentation/configuration/parameters/batch) which combines schema changes to reduce the network overhead and improves performance.
+
+### Data limit
+
+Flyway Community Edition has a 10GB data limit across all datasets, and this is unlimited in Flyway Teams.
 
 To find out more about Flyway Teams click [here](/try-flyway-teams-edition/?ref=big-query-batch).
 
