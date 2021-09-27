@@ -35,7 +35,7 @@ The Secret Store REST API is then accessible at `http://localhost:3500/v1.0/secr
 
 This is a comma-separated list of secrets in Dapr Secret Store which Flyway should try to read from. 
 
-The value of each secret must be structured like a Flyway configuration file. For example, if we wanted to stored a 
+The value of each secret must be structured like a Flyway configuration file. For example, if we wanted to store a 
 database password in a secret we would give the secret `flyway.password=<database_password>` as its value.
 
 ## Testing the integration

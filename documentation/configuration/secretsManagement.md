@@ -74,6 +74,26 @@ In order to read these secrets you need to configure just the following Flyway p
 After configuring the above parameters, we would be able to connect to a database in Flyway without configuring a database connection locally, as all the necessary configuration would be read from Dapr.
 
 
+## Google Cloud Secret Manager
+
+Flyway integrates with [Google CLoud Secret Manager](https://cloud.google.com/secret-manager/) (GCSM) in order to allow users to store Flyway configuration parameters securely. This can be used to securely read license keys without storing them in application configuration, and other configuration parameters can also be stored and read such as your database password or Flyway placeholders.
+
+Parameters stored in secrets in GCSM are read with the highest priority and will override all other configurations.
+
+### Example
+
+Assume we have the following two secrets in GCSM:
+- `secret1` which contains `flyway.url=jdbc:h2:mem:db`
+- `secret2` which contains `flyway.user=sa`
+
+In order to read these secrets you need to configure just the following Flyway parameters:
+- [flyway.gcsm.project](/documentation/configuration/parameters/gcsmProject) - This is the name of your GCSM project e.g. `quixotic-ferret-345678`
+- [flyway.gcsm.secrets](/documentation/configuration/parameters/gcsmSecrets) - This is a comma-separated list of paths to secrets that contain Flyway configurations. In our case we would set `flyway.gcsm.secrets=secret1,secret2`
+
+After configuring the above parameters, we would be able to connect to a database in Flyway without configuring a database connection locally, as all the necessary configuration would be read from GCSM.
+
+
+
 ## HashiCorp Vault
 
 Flyway integrates with [Vault's](https://www.vaultproject.io/) key-value engine in order to allow users to store Flyway configuration parameters securely. This can be used to securely read license keys without storing them in application configuration, and other configuration parameters can also be stored and read such as your database password or Flyway placeholders.
