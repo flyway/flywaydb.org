@@ -75,8 +75,8 @@ title: Documentation
                             <a href="/documentation/concepts/dryruns">Dry Runs</a></li>
 
                             <li
-                            {% if page.menu == 'statescripts' %} class="nav--vertical__active" {% endif %}>
-                            <a href="/documentation/concepts/statescripts">State Scripts</a></li>
+                            {% if page.menu == 'baselinemigrations' %} class="nav--vertical__active" {% endif %}>
+                            <a href="/documentation/concepts/baselinemigrations">Baseline Migrations</a></li>
                         </ul>
                     </details>
 
@@ -303,8 +303,8 @@ title: Documentation
                             <a href="/documentation/tutorials/undo">Undo migrations</a></li>
 
                             <li
-                            {% if page.menu == 'tut_statescripts' %} class="nav--vertical__active" {% endif %}>
-                            <a href="/documentation/tutorials/stateScripts">State Scripts</a></li>
+                            {% if page.menu == 'tut_baselinemigrations' %} class="nav--vertical__active" {% endif %}>
+                            <a href="/documentation/tutorials/baselineMigrations">Baseline Migrations</a></li>
 
                             <li
                             {% if page.menu == 'java' %} class="nav--vertical__active" {% endif %}>
@@ -358,6 +358,10 @@ title: Documentation
                                 <li
                                 {% if page.pill == 'baselineDescription' %} class="nav--vertical__active" {% endif %}>
                                 <a href="/documentation/configuration/parameters/baselineDescription">baselineDescription</a></li>
+
+                                <li
+                                {% if page.pill == 'baselineMigrationPrefix' %} class="nav--vertical__active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/baselineMigrationPrefix">baselineMigrationPrefix</a></li>
 
                                 <li
                                 {% if page.pill == 'baselineOnMigrate' %} class="nav--vertical__active" {% endif %}>
@@ -430,15 +434,15 @@ title: Documentation
                                 <li
                                 {% if page.pill == 'edition' %} class="nav--vertical__active" {% endif %}>
                                 <a href="/documentation/configuration/parameters/edition">edition</a></li>
-                                
+
                                 <li
                                 {% if page.pill == 'encoding' %} class="nav--vertical__active" {% endif %}>
                                 <a href="/documentation/configuration/parameters/encoding">encoding</a></li>
-                                
+
                                 <li
                                 {% if page.pill == 'errorOverrides' %} class="nav--vertical__active" {% endif %}>
                                 <a href="/documentation/configuration/parameters/errorOverrides">errorOverrides</a></li>
-                                
+
                                 <li
                                 {% if page.pill == 'failOnMissingLocations' %} class="nav--vertical__active" {% endif %}>
                                 <a href="/documentation/configuration/parameters/failOnMissingLocations">failOnMissingLocations</a></li>
@@ -490,11 +494,11 @@ title: Documentation
                                 <li
                                 {% if page.pill == 'locations' %} class="nav--vertical__active" {% endif %}>
                                 <a href="/documentation/configuration/parameters/locations">locations</a></li>
-                                
+
                                 <li
                                 {% if page.pill == 'lockRetryCount' %} class="nav--vertical__active" {% endif %}>
                                 <a href="/documentation/configuration/parameters/lockRetryCount">lockRetryCount</a></li>
-                                
+
                                 <li
                                 {% if page.pill == 'loggers' %} class="nav--vertical__active" {% endif %}>
                                 <a href="/documentation/configuration/parameters/loggers">loggers</a></li>
@@ -594,10 +598,6 @@ title: Documentation
                                 <li
                                 {% if page.pill == 'sqlMigrationSuffixes' %} class="nav--vertical__active" {% endif %}>
                                 <a href="/documentation/configuration/parameters/sqlMigrationSuffixes">sqlMigrationSuffixes</a></li>
-
-                                <li
-                                {% if page.pill == 'stateScriptPrefix' %} class="nav--vertical__active" {% endif %}>
-                                <a href="/documentation/configuration/parameters/stateScriptPrefix">stateScriptPrefix</a></li>
 
                                 <li
                                 {% if page.pill == 'stream' %} class="nav--vertical__active" {% endif %}>

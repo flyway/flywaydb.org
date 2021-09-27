@@ -11,7 +11,7 @@ When Flyway migrates a database, it looks for migrations that need to be applied
 directly against the database.
 
 This default behavior is great for the vast majority of the cases.
- 
+
 There are however situations where you may want to
 - preview the changes Flyway will make to the database
 - submit the SQL statements for review to a DBA before applying them
@@ -54,7 +54,7 @@ These changes will be executed as normal during a Dry Run. **The schema history 
 ## Configuration
 
 When using the Flyway [command-line tool](/documentation/usage/commandline), [Maven plugin](/documentation/usage/maven) or
-[Gradle plugin](/documentation/usage/gradle), a SQL file contained the output of the dry run can be configured using the 
+[Gradle plugin](/documentation/usage/gradle), a SQL file contained the output of the dry run can be configured using the
 [`flyway.dryRunOutput`](/documentation/configuration/parameters/dryRunOutput) property. This can be on the local file
 system, or in AWS S3 / Google Cloud Storage.
 
@@ -69,5 +69,5 @@ that would have been applied are sent to the dry run output instead.
 Click [here](/documentation/getstarted/advanced/dryruns) to see a tutorial on using dry runs.
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/concepts/statescripts">State Scripts<i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/concepts/baselinemigrations">Baseline Migrations<i class="fa fa-arrow-right"></i></a>
 </p>

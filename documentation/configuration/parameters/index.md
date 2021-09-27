@@ -97,7 +97,7 @@ If using maven, config parameters can be set in the plugin configuration block, 
 - [sqlMigrationSeparator](/documentation/configuration/parameters/sqlMigrationSeparator)
 - [sqlMigrationSuffixes](/documentation/configuration/parameters/sqlMigrationSuffixes)
 - [undoSqlMigrationPrefix](/documentation/configuration/parameters/undoSqlMigrationPrefix) {% include teams.html %}
-- [stateScriptPrefix](/documentation/configuration/parameters/stateScriptPrefix) {% include teams.html %}
+- [baselineMigrationPrefix](/documentation/configuration/parameters/baselineMigrationPrefix) {% include teams.html %}
 
 ### Placeholders
 - [placeholderPrefix](/documentation/configuration/parameters/placeholderPrefix)
