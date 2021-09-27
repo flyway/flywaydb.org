@@ -13,6 +13,7 @@ Flyway comes with support for the following secrets management solutions that en
 
 - [AWS Secrets Manager](/documentation/configuration/secretsManagement#aws-secrets-manager)
 - [Dapr Secret Store](/documentation/configuration/secretsManagement#dapr-secret-store)
+- [Google Cloud Secret Manager](/documentation/configuration/secretsManagement#google-cloud-secret-manager)
 - [Vault](/documentation/configuration/secretsManagement#hashicorp-vault)
 
 ## AWS Secrets Manager
