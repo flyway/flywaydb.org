@@ -50,7 +50,7 @@ flyway {
 ```xml
 <configuration>
     <gcsmConfiguration>
-        <gcsmUrl>http://localhost:3500/v1.0/secrets/my-secrets-store</gcsmUrl>
+        <gcsmProject>quixotic-ferret-345678</gcsmProject>
     </gcsmConfiguration>
 </configuration>
 ```

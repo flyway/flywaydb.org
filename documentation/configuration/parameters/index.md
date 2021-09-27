@@ -123,7 +123,7 @@ If using maven, config parameters can be set in the plugin configuration block, 
 - [daprSecrets](/documentation/configuration/parameters/daprSecrets) {% include teams.html %}
 
 ### Secrets Management - Google Cloud Secret Manager
-- [gcsmUrl](/documentation/configuration/parameters/gcsmUrl) {% include teams.html %}
+- [gcsmProject](/documentation/configuration/parameters/gcsmProject) {% include teams.html %}
 - [gcsmSecrets](/documentation/configuration/parameters/gcsmSecrets) {% include teams.html %}
 
 ### Secrets Management - Vault

@@ -3,7 +3,7 @@ layout: documentation
 menu: tut_dapr
 subtitle: 'Tutorial: Integrating Google Cloud Secret Manager'
 ---
-# Tutorial: Integrating Integrating Google Cloud Secret Manager
+# Tutorial: Integrating Google Cloud Secret Manager
 {% include teams.html %}
 
 This brief tutorial will teach you **how to integrate Google Cloud Secret Manager into your Flyway process**.
@@ -27,7 +27,7 @@ There are two new parameters to configure in Flyway in order to set up the GCSM 
 
 This is the name of the project you have created that contains the secrets.
 
-### [`dapr.secrets`](/documentation/configuration/parameters/gcsmSecrets)
+### [`gcsm.secrets`](/documentation/configuration/parameters/gcsmSecrets)
 
 This is a comma-separated list of secrets in Google Cloud Secret Manager which Flyway should try to read from. 
 
@@ -62,4 +62,4 @@ display the overview of the schema history table that results from [`info`](/doc
 
 In this brief tutorial we saw how to:
 
-- Integrate Google CLoud Secret Manager into Flyway to securely store and provide access to any confidential Flyway parameters
+- Integrate Google Cloud Secret Manager into Flyway to securely store and provide access to any confidential Flyway parameters
