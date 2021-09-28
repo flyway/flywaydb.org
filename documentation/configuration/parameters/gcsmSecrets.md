@@ -9,9 +9,7 @@ subtitle: flyway.gcsm.secrets
 {% include teams.html %}
 
 ## Description
-A comma-separated list of paths to key-value secrets in a
-[Google Secret Manager](TODO) account that contain 
-Flyway configurations. 
+A comma-separated list of paths to key-value secrets in a [Google Secret Manager](/documentation/configuration/secretsManagement#google-cloud-secret-manager) account that contain Flyway configurations.
 
 If multiple secrets specify the same configuration parameter, then the last secret takes precedence.
 
