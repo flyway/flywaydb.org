@@ -18,11 +18,11 @@ subtitle: Google Cloud Spanner
     </tr>
     <tr>
         <th width="25%">Certified</th>
-        <td>✅</td>
+        <td>⏳ Pending certification</td>
     </tr>
     <tr>
         <th width="25%">Guaranteed</th>
-        <td>✅ {% include teams.html %}</td>
+        <td>❌</td>
     </tr>
 </table>
 
