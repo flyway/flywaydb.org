@@ -18,11 +18,11 @@ subtitle: Google BigQuery
     </tr>
     <tr>
         <th width="25%">Certified</th>
-        <td>⏳ Pending certification</td>
+        <td>✅</td>
     </tr>
     <tr>
         <th width="25%">Guaranteed</th>
-        <td>❌</td>
+        <td>✅ {% include teams.html %}</td>
     </tr>
 </table>
 
@@ -59,7 +59,7 @@ Support Level determines the degree of support available for this database ([lea
 
 ## Flyway Teams Features for BigQuery
 
-GCP BigQuery can suffer from performance issues while executing schema changes. 
+GCP BigQuery can suffer from performance issues while executing schema changes.
 
 Flyway Teams edition solves this via [batching](/documentation/configuration/parameters/batch) which combines schema changes to reduce the network overhead and improves performance.
 
@@ -67,9 +67,58 @@ To find out more about Flyway Teams click [here](/try-flyway-teams-edition/?ref=
 
 ## Using Flyway with Google BigQuery
 
-Google BigQuery is in the process of being certified. The process of certification involves getting real world usage feedback from beta users. 
+### Pre-requisites
+- Using Flyway with Maven?
+  - Include the Flyway GCP BigQuery dependency [here](https://mvnrepository.com/artifact/org.flywaydb/flyway-gcp-bigquery) in your pom
+- Using Flyway with Gradle?
+  - Include the Flyway GCP BigQuery dependency [here](https://mvnrepository.com/artifact/org.flywaydb/flyway-gcp-bigquery) as a buildscript dependency
 
-**If you'd like to use Google BigQuery and you are happy to provide feedback as we build support for this database, please complete the form below  to get access to the getting started documentation**
+### Installing dependencies
+Google BigQuery requires a number of dependencies to be installed manually.
+
+Go to [Google's documentation](https://cloud.google.com/bigquery/docs/reference/odbc-jdbc-drivers#current_jdbc_driver_release_12161020) and download the JDBC driver.
+
+You will get a zip archive with many JARs inside.
+
+If you are using the Flyway command-line, you will need to extract the contents of this archive into the `flyway/drivers/` folder.
+
+If you are using the Flyway Maven plugin, you will need to add the contents of this archive to your classpath.
+​
+### Configuring Flyway
+​
+This is a JDBC URL that points to your database. You can configure a connection using this sample URL as an example:
+
+`jdbc:bigquery://https://www.googleapis.com/bigquery/v2:443;ProjectId=<project_id>;OAuthType=0;OAuthServiceAcctEmail=<service_account_name>;OAuthPvtKeyPath=<path_to_service_account>;`
+
+We need to fetch three things to complete this URL:
+​
+- `project_id`
+- `service_account_name`
+- `path_to_service_account`
+
+`project_id` is the name of your BigQuery project within GCP.
+
+To get `service_account_name` and `path_to_service_account`, you'll need to create a 'service account' for your Flyway connections.
+
+To do this, open `IAM` within GCP project settings. There you can create a service account. Upon creating this, you will be given the `service_account_name` (it will look like `something@projectname.iam.gserviceaccount.com`). Upon creating this you'll have the option to download a keyfile.
+
+The keyfile file needs to be accessible to Flyway, so save it somewhere accessible on your machine. Then configure `path_to_service_account` to point to this file.
+
+You can learn more about service accounts [here](https://cloud.google.com/iam/docs/service-accounts).
+
+Set this URL in the [`url`](/documentation/configuration/parameters/url) property in your Flyway configuration.
+
+### Other configuration
+
+Set the [`schemas`](/documentation/configuration/parameters/schemas) property in your Flyway configuration to the name of a `data set` within your BigQuery project. Set the [`user`](/documentation/configuration/parameters/user) and [`password`](/documentation/configuration/parameters/password) properties to empty in your Flyway configuration since we're authenticating using the JDBC URL i.e.
+
+```
+flyway.schemas=<your data set>
+flyway.user=
+flyway.password=
+```
+​
+In a Flyway configuration file.
 
 ## Limitations
 
@@ -78,4 +127,6 @@ for authentication, Google User Account authentication (that is, `OAuthType=1`) 
 use and is not supported at all for unattended use, or use in Docker, as it requires a browser to be available to
 get an access token interactively.
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeeB1dMrvGApG-UWmRSMQjW0MkZe9dlurI3zy8bbvk6O61Q2Q/viewform?embedded=true" width="520" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+## Share Your Feedback
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSep6p4N-okfCVYi7KmJhDbkfQpT6xovVcA0Lxq50BaLzFjaSg/viewform?embedded=true" width="640" height="1869" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
