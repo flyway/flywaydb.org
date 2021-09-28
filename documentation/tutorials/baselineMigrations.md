@@ -2,6 +2,7 @@
 layout: documentation
 menu: tut_baselinemigrations
 subtitle: 'Tutorial: Baseline Migrations'
+redirect_from: /documentation/tutorials/stateScripts
 ---
 # Tutorial: Baseline Migrations
 {% include teams.html %}
