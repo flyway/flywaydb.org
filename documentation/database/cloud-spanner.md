@@ -26,6 +26,35 @@ subtitle: Google Cloud Spanner
     </tr>
 </table>
 
+## Driver
+
+<table class="table">
+<tr>
+<th>URL format</th>
+<td><code>jdbc:cloudspanner:/projects/<i>project_name</i>/instances/<i>instance_name</i>/databases/<i>database_name</i>?credentials=<i>path/to/keyfile.json</i></code></td>
+</tr>
+<tr>
+<th>SSL support</th>
+<td>No</td>
+</tr>
+<tr>
+<th>Ships with Flyway Command-line</th>
+<td>Yes</td>
+</tr>
+<tr>
+<th>Maven Central coordinates</th>
+<td><code>com.google.cloud:google-cloud-spanner-jdbc:2.2.6</code></td>
+</tr>
+<tr>
+<th>Supported versions</th>
+<td><code>2.2.6</code> and later</td>
+</tr>
+<tr>
+<th>Default Java class</th>
+<td><code>com.google.cloud.spanner.jdbc.JdbcDriver</code></td>
+</tr>
+</table>
+
 Support Level determines the degree of support available for this database ([learn more](/documentation/learnmore/database-support)).
 
 ## Flyway Teams Features for Cloud Spanner
