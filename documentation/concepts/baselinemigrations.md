@@ -2,6 +2,7 @@
 layout: documentation
 menu: baselinemigrations
 subtitle: Baseline Migrations
+redirect_from: /documentation/concepts/statescripts
 ---
 # Baseline Migrations
 {% include teams.html %}
