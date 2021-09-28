@@ -49,7 +49,7 @@ To make Flyway pull credentials from the Secrets Manager, you need to perform th
 - Ensure the AWS CLI is installed and configured to be able to access the Secrets Manager.
 - Add the driver to your project dependencies, or add it to the drivers folder if using the CLI.
 - If you've specified the driver class manually using `flyway.driver` then remove this configuration property.
-- Modify your connection URL to replace `jdbc:` with `jdbc-secretsmanager:`. 
+- Modify your connection URL to replace `jdbc:` with `jdbc-secretsmanager:`.
   - e.g. `jdbc:mariadb://localhost:1234/example_db` -> `jdbc-secretsmanager:mariadb://localhost:1234/example_db`
 - Change the `flyway.user` configuration property to contain the secret id.
 - Remove the `flyway.password` configuration property.
@@ -74,7 +74,6 @@ In order to read these secrets you need to configure just the following Flyway p
 
 After configuring the above parameters, we would be able to connect to a database in Flyway without configuring a database connection locally, as all the necessary configuration would be read from Dapr.
 
-
 ## Google Cloud Secret Manager
 
 Flyway integrates with [Google Cloud Secret Manager](https://cloud.google.com/secret-manager/) (GCSM) in order to allow users to store Flyway configuration parameters securely. This can be used to securely read license keys without storing them in application configuration, and other configuration parameters can also be stored and read such as your database password or Flyway placeholders.
@@ -92,8 +91,6 @@ In order to read these secrets you need to configure just the following Flyway p
 - [flyway.gcsm.secrets](/documentation/configuration/parameters/gcsmSecrets) - This is a comma-separated list of paths to secrets that contain Flyway configurations. In our case we would set `flyway.gcsm.secrets=secret1,secret2`
 
 After configuring the above parameters, we would be able to connect to a database in Flyway without configuring a database connection locally, as all the necessary configuration would be read from GCSM.
-
-
 
 ## HashiCorp Vault
 
