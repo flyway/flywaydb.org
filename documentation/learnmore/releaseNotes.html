@@ -17,6 +17,47 @@ Here's an overview of the biggest changes to Flyway since 7.0.0.
 <h2>Full release notes</h2>
 
 <div class="release">
+    <h2 id="8.0.0-beta3">Flyway 8.0.0-beta3 (2021-09-29)</h2>
+
+    <h3>Breaking changes</h3>
+    <ul>
+        <li>change Configuration boolean getter methods to match Java standard naming convention. (FailOnMissingTarget, DetectEncoding, OutputQueryResults, CreateSchemas and FailOnMissingLocations)</li>
+    </ul>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        {% include issue.html id="3279" title="Fix constantly repairing migrations with an empty description" %}
+        {% include issue.html id="3284" title="HSQLDB not parsing DECLARE CURSOR foo FOR SELECT ... correctly" %}
+    </ul>
+
+    <h3>Changes</h3>
+    <ul>
+        <li>Set 10GB data size limit to using GCP BigQuery in Community Edition</li>
+        <li>Rename State Scripts to Baseline Migrations</li>
+    </ul>
+
+    <h3>Database compatibility</h3>
+    <ul>
+        <li>Support latest version of Azure SQL Server in Community Edition</li>
+    </ul>
+
+    <h3>New features</h3>
+    <ul>
+        <li>Add Command-line extensibility point to allow custom CLI verbs</li>
+        <li>Add support for DAPR and GCSM Secrets Managers</li>
+    </ul>
+
+    <h3>Java compatibility</h3>
+    <ul>
+        <li>Add base dependencies for Project Lombok</li>
+    </ul>
+
+    <p>
+        Thanks to StefanA2 for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
     <h2 id="8.0.0-beta2">Flyway 8.0.0-beta2 (2021-09-21)</h2>
 
     <h3>Bug fixes</h3>
