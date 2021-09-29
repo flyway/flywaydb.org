@@ -61,15 +61,20 @@ Support Level determines the degree of support available for this database ([lea
 
 ### Performance
 
-GCP BigQuery can suffer from performance issues while executing schema changes.
+Executing multiple schema changes against GCP BigQuery is comparatively slow as it is optimized for data. You can read more about it [here](https://cloud.google.com/blog/products/data-analytics/troubleshoot-bigquery-performance-with-these-dashboards).
 
-Flyway Teams Edition solves this via [batching](/documentation/configuration/parameters/batch) which combines schema changes to reduce the network overhead and improves performance.
+Flyway Teams Edition alleviates this via batching which executes multiple schema changes in one batch to minimize latency and improve performance.
+
+To enable batching follow the guide [here](/documentation/configuration/parameters/batch) for your platform. <br/>
+In the Flyway Command-Line this would look like the following:
+
+<pre class="console"><span>&gt;</span> flyway migrate -batch=true</pre>
 
 ### Data limit
 
 Flyway Community Edition has a 10GB data limit across all datasets, and this is unlimited in Flyway Teams.
 
-To find out more about Flyway Teams click [here](/try-flyway-teams-edition/?ref=big-query-batch).
+You can find out more about Flyway Teams Edition [here](/try-flyway-teams-edition/?ref=bigquery-batch).
 
 ## Using Flyway with Google BigQuery
 

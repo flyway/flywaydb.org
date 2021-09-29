@@ -59,11 +59,16 @@ Support Level determines the degree of support available for this database ([lea
 
 ## Flyway Teams Features for Cloud Spanner
 
-GCP Spanner can suffer from performance issues while executing schema changes.
+Executing multiple schema changes against Cloud Spanner is comparatively slow due to its need to validate your data. You can read more about it [here](https://cloud.google.com/spanner/docs/schema-updates#performance).
 
-Flyway Teams edition solves this via [batching](/documentation/configuration/parameters/batch) which combines schema changes to reduce the network overhead and improves performance.
+Flyway Teams Edition alleviates this via batching which executes multiple schema changes in one batch to minimize latency and improve performance.
 
-To find out more about Flyway Teams click [here](/try-flyway-teams-edition/?ref=cloud-spanner-batch).
+To enable batching follow the guide [here](/documentation/configuration/parameters/batch) for your platform. <br/>
+In the Flyway Command-Line this would look like the following:
+
+<pre class="console"><span>&gt;</span> flyway migrate -batch=true</pre>
+
+You can find out more about Flyway Teams Edition [here](/try-flyway-teams-edition/?ref=cloud-spanner-batch).
 
 ## Using Flyway with Google Cloud Spanner
 
