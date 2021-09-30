@@ -78,7 +78,8 @@ Repair not necessary. No failed migration detected.</pre>
   ],
   "flywayVersion": "{{ site.flywayVersion }}",
   "database": "testdb",
-  "warnings": []
+  "warnings": [],
+  "operation": "repair"
 }</pre>
 
 <p class="next-steps">

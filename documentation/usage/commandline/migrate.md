@@ -115,7 +115,8 @@ Successfully applied 2 migrations to schema "PUBLIC" (execution time 00:00.030s)
   "migrationsExecuted": 2,
   "flywayVersion": "{{ site.flywayVersion }}",
   "database": "testdb",
-  "warnings": []
+  "warnings": [],
+  "operation": "migrate"
 }</pre>
 
 <p class="next-steps">

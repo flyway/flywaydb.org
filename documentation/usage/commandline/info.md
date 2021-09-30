@@ -102,7 +102,8 @@ Database: jdbc:h2:file:flyway.db (H2 1.3)
   "allSchemasEmpty": false,
   "flywayVersion": "{{ site.flywayVersion }}",
   "database": "testdb",
-  "warnings": []
+  "warnings": [],
+  "operation": "info"
 }</pre>
 
 ## Filtering output

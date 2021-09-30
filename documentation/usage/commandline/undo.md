@@ -86,13 +86,15 @@ Successfully undid 1 migration to schema "PUBLIC" (execution time 00:00.024s).</
     {
       "version": "1",
       "description": "undoFirst",
-      "filepath": "C:\\flyway\\sql\\U1__undoFirst.sql"
+      "filepath": "C:\\flyway\\sql\\U1__undoFirst.sql",
+      "executionTime": 0
     }
   ],
   "migrationsUndone": 1,
   "flywayVersion": "{{ site.flywayVersion }}",
   "database": "testdb",
-  "warnings": []
+  "warnings": [],
+  "operation": "undo"
 }</pre>
 
 <p class="next-steps">

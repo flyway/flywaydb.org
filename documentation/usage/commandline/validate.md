@@ -76,7 +76,6 @@ No migrations applied yet. No validation necessary.</pre>
 <pre class="console">&gt; flyway validate -outputType=json
 
 {
-  "validationError": null,
   "errorDetails": null,
   "invalidMigrations": [],
   "validationSuccessful": true,

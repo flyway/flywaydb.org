@@ -53,7 +53,8 @@ Cleaned database schema 'PUBLIC' (execution time 00:00.014s)</pre>
   "schemasDropped": [],
   "flywayVersion": "{{ site.flywayVersion }}",
   "database": "testdb",
-  "warnings": []
+  "warnings": [],
+  "operation": "clean"
 }</pre>
 
 <p class="next-steps">

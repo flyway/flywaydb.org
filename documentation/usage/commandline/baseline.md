@@ -55,7 +55,8 @@ Schema baselined with version: 1</pre>
   "baselineVersion": "1",
   "flywayVersion": "{{ site.flywayVersion }}",
   "database": "testdb",
-  "warnings": []
+  "warnings": [],
+  "operation": "baseline"
 }</pre>
 
 <p class="next-steps">
