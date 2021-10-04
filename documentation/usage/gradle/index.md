@@ -6,7 +6,7 @@ redirect_from: /documentation/gradle/
 ---
 # Gradle Plugin
 
-The Flyway Gradle plugin supports **Gradle 3.x**, **Gradle 4.x**, **Gradle 5.x**, and **Gradle 6.x** 
+The Flyway Gradle plugin supports **Gradle 3.x**, **Gradle 4.x**, **Gradle 5.x**, and **Gradle 6.x**
 running on **Java 8**, **Java 9**, **Java 10**, **Java 11** or **Java 12**.
 
 ## Installation
@@ -26,7 +26,7 @@ running on **Java 8**, **Java 9**, **Java 10**, **Java 11** or **Java 12**.
         </div>
         <div class="tab-pane" id="tab-teams">
 <pre class="prettyprint">plugins {
-    id "org.flywaydb.flyway<strong>.enterprise</strong>" version "{{ site.flywayVersion }}"
+    id "org.flywaydb<strong>.enterprise</strong>.flyway" version "{{ site.flywayVersion }}"
 }</pre>
                 </div>
     </div>
@@ -118,7 +118,7 @@ task migrateDatabase2(type: org.flywaydb.gradle.task.FlywayMigrateTask) {
 
 ### Java migrations and callbacks
 
-When using Java migrations and callbacks with the gradle Flyway plugin, you need to ensure that the classes have been compiled before running the `flywayMigrate` (or `flywayClean` etc) task. 
+When using Java migrations and callbacks with the gradle Flyway plugin, you need to ensure that the classes have been compiled before running the `flywayMigrate` (or `flywayClean` etc) task.
 
 You can do this by explicitly running the `classes` task before `flywayMigrate` e.g. `gradle classes flywayMigrate`.
 
@@ -240,7 +240,7 @@ To pass in multiple files, separate their names with commas:
 
 <pre class="console"><span>&gt;</span> gradle <strong>-Dflyway.configFiles</strong>=path/to/myAlternativeConfig.conf,other.conf flywayMigrate</pre>
 
-Relative paths are relative to the directory containing your `build.gradle` file. 
+Relative paths are relative to the directory containing your `build.gradle` file.
 
 Alternatively you can also use the `FLYWAY_CONFIG_FILES` environment variable for this.
 When set it will take preference over the command-line parameter.
@@ -267,12 +267,12 @@ Settings are loaded in the following order (higher items in the list take preced
 2. Environment variables
 3. Custom config files
 4. Gradle properties
-5. Flyway configuration section in `build.gradle` 
+5. Flyway configuration section in `build.gradle`
 6. `<user-home>/flyway.conf`
 7. Flyway Gradle plugin defaults
 
 The means that if for example `flyway.url` is both present in a config file and passed as `-Dflyway.url=` from the command-line,
-the JVM system property passed in via the command-line will take precedence and be used.  
+the JVM system property passed in via the command-line will take precedence and be used.
 
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/usage/gradle/migrate">Gradle: migrate <i class="fa fa-arrow-right"></i></a>
