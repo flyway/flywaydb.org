@@ -17,8 +17,8 @@ These error codes may appear from any command, and are indicative of more genera
 - **Solution:** Please contact support or create a [GitHub issue](https://github.com/flyway/flyway/issues)
 
 ### `ERROR`
-- **Caused by:** An unexpected error within Flyway (e.g. a null pointer exception)
-- **Solution:** Please contact support or create a [GitHub issue](https://github.com/flyway/flyway/issues)
+- **Caused by:** An error due to invalid configuration or usage
+- **Solution:** Ensure all configuration and usage is as per the [documentation](/documentation)
 
 ### `JDBC_DRIVER`
 - **Caused by:** The JDBC driver is unable to be instantiated
