@@ -17,6 +17,21 @@ Here's an overview of the biggest changes to Flyway since 7.0.0.
 <h2>Full release notes</h2>
 
 <div class="release">
+    <h2 id="8.0.0">Flyway 8.0.0 (2021-10-06)</h2>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        <li>Fix issues in applying new migrations on top of baseline migrations</li>
+        {% include issue.html id="3291" title="Fix parsing of multiline configuration parameters that contain a '='" %}
+        {% include issue.html id="3292" title="Fix parsing of empty statements in SQLServer" %}
+    </ul>
+
+    <p>
+        Thanks to vincentoconnell and brynjulv for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
     <h2 id="8.0.0-beta3">Flyway 8.0.0-beta3 (2021-09-29)</h2>
 
     <h3>Breaking changes</h3>
