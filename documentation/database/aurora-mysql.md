@@ -7,7 +7,7 @@ subtitle: Aurora MySQL
 
 ## Supported Versions
 
-- `5.7`
+- `5.7` {% include teams.html %}
 - `5.6` {% include teams.html %}
 
 ## Support Level
@@ -27,7 +27,7 @@ subtitle: Aurora MySQL
     </tr>
 </table>
 
-Support Level determines the degree of support available for this database ([learn more](/documentation/learnmore/database-support)). 
+Support Level determines the degree of support available for this database ([learn more](/documentation/learnmore/database-support)).
 
 ## Drivers
 
@@ -70,7 +70,7 @@ Support Level determines the degree of support available for this database ([lea
 - DDL exported by mysqldump can be used unchanged in a Flyway migration.
 - Any MySQL SQL script executed by Flyway, can be executed by the MySQL command-line tool and other
         MySQL-compatible tools (after the placeholders have been replaced).
-        
+
 ### Example
 
 <pre class="prettyprint">/* Single line comment */
