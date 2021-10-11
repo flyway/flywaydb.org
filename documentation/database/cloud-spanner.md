@@ -3,7 +3,7 @@ layout: documentation
 menu: cloud-spanner
 subtitle: Google Cloud Spanner
 ---
-# Google Cloud Spanner
+# Google Cloud Spanner (Beta)
 
 ## Supported Versions
 

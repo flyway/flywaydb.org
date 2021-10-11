@@ -3,7 +3,7 @@ layout: documentation
 menu: big-query
 subtitle: Google BigQuery
 ---
-# Google BigQuery
+# Google BigQuery (Beta)
 
 ## Supported Versions
 
