@@ -16,6 +16,7 @@ and much more.
 <div class="row">
     {% include plugin.html name="Ant" logo="ant.svg" url="/documentation/usage/plugins/ant" info="Platform-independent automation tool" %}
     {% include plugin.html name="Bootique" logo="bootique.svg" url="https://github.com/bootique/bootique-flyway" info="Minimally opinionated framework for runnable Java apps" %}
+    {% include plugin.html name="Cake" logo="cake.png" url="https://github.com/buthomas/Cake.Flyway" info=" A cross platform build automation system" %}
     {% include plugin.html name="Chef" logo="chef.svg" url="https://supermarket.chef.io/cookbooks/flywaydb" info="Infrastructure Automation" %}
     {% include plugin.html name="Chocolatey" logo="chocolatey.svg" url="https://chocolatey.org/packages/flyway.commandline/" info="Package manager for Windows" %}
     {% include plugin.html name="Dropwizard" logo="dropwizard.png" url="/documentation/usage/plugins/dropwizard" info="Java framework for developing high-performance RESTful web services" %}
@@ -29,6 +30,7 @@ and much more.
     {% include plugin.html name="Micronaut" logo="micronaut.png" url="https://github.com/micronaut-projects/micronaut-flyway" info="Modern, JVM-based, full-stack framework" %}
     {% include plugin.html name="Ninja" logo="ninja.png" url="http://www.ninjaframework.org/documentation/working_with_relational_dbs/db_migrations.html" info="Full stack web framework for Java" %}
     {% include plugin.html name="NPM" logo="npm.svg" url="https://www.npmjs.com/package/flywaydb-cli" info="Package manager for JavaScript" %}
+    {% include plugin.html name="NuGet" logo="nuget.png" url="https://www.nuget.org/packages/Flyway.CommandLine" info="The package manager for .NET" %}
     {% include plugin.html name="Play" logo="play.png" url="/documentation/usage/plugins/play" info="High velocity web framework for Java and Scala" %}
     {% include plugin.html name="PowerShell" logo="powershell.svg" url="https://github.com/cdavid15/flyway-ps-cli" info="Windows command-line shell designed especially for system administrators" %}
     {% include plugin.html name="Quarkus" logo="quarkus.png" url="https://quarkus.io/guides/flyway-guide" info="Kubernetes Native Java stack tailored for GraalVM & OpenJDK HotSpot" %}
