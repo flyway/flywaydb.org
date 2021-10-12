@@ -9,13 +9,16 @@ subtitle: flyway.detectEncoding
 {% include teams.html %}
 
 ## Description
-Whether Flyway should attempt to auto-detect the file encoding of each migration. It can detect each of the following formats:
+Whether Flyway should attempt to auto-detect the file encoding of each migration. <br/>
+**NOTE:** We recommend using a consistent file encoding to minimize the issues you encounter and specifying it to the [`encoding`](/documentation/configuration/parameters/encoding) parameter. See [Troubleshooting](/documentation/configuration/parameters/encoding#troubleshooting) for known problems and solutions.
 
-* UTF-8
-* ISO-8859-1
-* UTF-16 BOMless
-* UTF-16 LE
-* UTF-16 BE
+Flyway can detect each of the following formats:
+
+* `UTF-8`
+* `ISO-8859-1`
+* `UTF-16 BOMless`
+* `UTF-16 LE`
+* `UTF-16 BE`
 
 When Flyway fails to auto-detect, it will default to the configured encoding if set, UTF-8 if not.
 
