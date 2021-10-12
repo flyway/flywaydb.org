@@ -71,4 +71,4 @@ This is because some encoding names are synonyms for others. For instance, an ed
 
 ### I'm getting a MalformedInputException
 
-This execption is due to inconsistent encoding configurations. `ISO-8859-1` is the most compatible supported encoding, so using this encoding could fix your configuration. However, we recommend that all of your scripts have the same encoding.
+This exception is due to inconsistent encoding configurations. `ISO-8859-1` is the most compatible supported encoding, so using this encoding could fix your configuration. However, we recommend that all of your scripts have the same encoding.
