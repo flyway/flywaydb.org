@@ -17,6 +17,30 @@ Here's an overview of the biggest changes to Flyway over the past year or so.
 <h2>Full release notes</h2>
 
 <div class="release">
+    <h2 id="8.0.1">Flyway 8.0.1 (2021-10-13)</h2>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        <li>Fix bug where encoding detection would fail if the file was empty</li>
+        {% include issue.html id="3299" title="Fix bug in the availability of custom placeholders in script migrations" %}
+    </ul>
+
+    <h3>Changes</h3>
+    <ul>
+        <li>Set 10G field limit to using GCP Spanner in Community Edition</li>
+    </ul>
+
+    <h3>New features</h3>
+    <ul>
+        <li>All Gradle tasks now return a result object</li>
+    </ul>
+
+    <p>
+        Thanks to Phil-Factor for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
     <h2 id="8.0.0">Flyway 8.0.0 (2021-10-06)</h2>
 
     <h3>Breaking changes</h3>
