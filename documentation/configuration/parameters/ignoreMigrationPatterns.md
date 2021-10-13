@@ -6,7 +6,6 @@ subtitle: flyway.ignoreMigrationPatterns
 ---
 
 # Ignore Migration Patterns
-{% include teams.html %}
 
 ## Description
 Ignore migrations during `validate` according to a given list of [patterns](https://flywaydb.org/documentation/configuration/parameters/ignoreMigrationPatterns#patterns).
@@ -16,8 +15,8 @@ Patterns are of the form `type`:`status` with `*` matching `type` or `status`.
 
 `type` must be one of (*case insensitive*):
 
-* `repeatable`
-* `versioned`
+* `repeatable` {% include teams.html %}
+* `versioned` {% include teams.html %}
 * `*` *(will match any of the above)*
 
 `status` must be one of (*case insensitive*):
