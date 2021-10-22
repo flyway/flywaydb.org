@@ -28,7 +28,7 @@ subtitle: Snowflake
     </tr>
 </table>
 
-Support Level determines the degree of support available for this database ([learn more](/documentation/learnmore/database-support)). 
+Support Level determines the degree of support available for this database ([learn more](/documentation/learnmore/database-support)).
 
 ## Drivers
 
@@ -93,14 +93,14 @@ Snowflake JDBC supports key-based authentication. To use this, you will need to:
 - assign the public key to the relevant Snowflake user account using <code>ALTER USER</code> - for complete
 instructions on these steps, refer to [Snowflake's documentation](https://docs.snowflake.net/manuals/user-guide/jdbc-configure.html#using-key-pair-authentication)
 
-Finally, amend your JDBC connection string with the extra parameters to enable key-based auth and to refer to the 
-location of the private key: 
+Finally, amend your JDBC connection string with the extra parameters to enable key-based auth and to refer to the
+location of the private key:
 <code>authenticator=snowflake_jwt&private_key_file=&lt;absolute-location-of-pem-file&gt;</code>.
 
 
 ## Limitations
 
-- *None*
+- Parallel migrations as described [here](/documentation/learnmore/faq#parallel) are unavailable in Snowflake. You can track the status of this feature in our GitHub issues [here](https://github.com/flyway/flyway/issues/3305).
 
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/database/sqlite">SQLite <i class="fa fa-arrow-right"></i></a>
