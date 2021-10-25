@@ -202,6 +202,22 @@ flyway.jdbcProperties.accessToken=my-access-token
 
 This is equivalent to the [process of setting `accessToken` as described on this Microsoft documentation page](https://docs.microsoft.com/en-us/sql/connect/jdbc/connecting-using-azure-active-directory-authentication?view=sql-server-ver15#connecting-using-access-token).
 
+## Connecting to a Named Instance
+
+When connecting to a named instance, the JDBC URL must be of the form:
+
+```
+jdbc:sqlserver://<server_name>;instanceName=<instance_name>;databaseName=<database_name>
+```
+
+For example:
+
+```
+jdbc:sqlserver://test_server;instanceName=test_instance;databaseName=test_database
+```
+
+**Note:** If a named instance is used along with the `<host>:<port>` syntax in the JDBC URL, the driver will connect to the port over the named instance.
+
 ## Limitations
 
 - Flyway's automatic detection for whether SQL statements are valid in transactions does not apply to
