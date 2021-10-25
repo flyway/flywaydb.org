@@ -32,7 +32,7 @@ subtitle: SQL Server
     </tr>
 </table>
 
-Support Level determines the degree of support available for this database ([learn more](/documentation/learnmore/database-support)). 
+Support Level determines the degree of support available for this database ([learn more](/documentation/learnmore/database-support)).
 
 ## Driver
 
@@ -71,8 +71,7 @@ Support Level determines the degree of support available for this database ([lea
 ### Compatibility
 
 - DDL exported by SQL Server can be used unchanged in a Flyway migration.
-- Any SQL Server sql script executed by Flyway, can be executed by Sqlcmd, SQL Server Management Studio and
-        other SQL Server-compatible tools (after the placeholders have been replaced).
+- Any SQL Server sql script executed by Flyway, can be executed by Sqlcmd, SQL Server Management Studio and other SQL Server-compatible tools (after the placeholders have been replaced).
 
 ### Example
 
@@ -144,7 +143,7 @@ SQL Server Authentication works 'out-of-the-box' with Flyway, whereas Windows Au
 
 The instructions provided here are adapted from the [Microsoft JDBC Driver for SQL Server documentation](https://docs.microsoft.com/en-us/sql/connect/jdbc/microsoft-jdbc-driver-for-sql-server?view=sql-server-ver15). Refer to this when troubleshooting authentication problems.
 
-**Note** These instructions may be incomplete. Flyway depends on Microsoft's JDBC drivers, which in turn have many environmental dependencies to enable different authentication types. You may have to perform your own research to get the JDBC driver working for the different authentication types.
+**Note:** These instructions may be incomplete. Flyway depends on Microsoft's JDBC drivers, which in turn have many environmental dependencies to enable different authentication types. You may have to perform your own research to get the JDBC driver working for the different authentication types.
 
 ### SQL Server Authentication
 
@@ -187,7 +186,7 @@ To use the various authentication types, amend your JDBC URL to set the `authent
   - e.g: <code>jdbc:sqlserver://<i>host</i>:<i>port</i>;databaseName=<i>database</i>;authentication=ActiveDirectoryInteractive</code>
   - This will begin an interactive process which expects user input (e.g. a dialogue box), so it's not recommended in automated environments
 - For Active Directory Service Principal set `authentication=ActiveDirectoryServicePrincipal `
-  - e.g: <code>jdbc:sqlserver://<i>host</i>:<i>port</i>;databaseName=<i>database</i>;authentication=ActiveDirectoryServicePrincipal </code>
+  - e.g: <code>jdbc:sqlserver://<i>host</i>:<i>port</i>;databaseName=<i>database</i>;authentication=ActiveDirectoryServicePrincipal</code>
 
 [The Microsoft documentation has more details about how these work with JDBC URLs](https://docs.microsoft.com/en-us/sql/connect/jdbc/connecting-using-azure-active-directory-authentication?view=sql-server-ver15).
 
@@ -205,19 +204,17 @@ This is equivalent to the [process of setting `accessToken` as described on this
 
 ## Limitations
 
-- Flyway's automatic detection for whether SQL statements are valid in transactions does not apply to 
-<code>CREATE/ALTER/DROP</code> statements acting on memory-optimised tables (that is, those created with 
-<code>WITH (MEMORY_OPTIMIZED = ON)</code>). You will need to override the `executeInTransaction` setting to be false,
-either on a [per-script basis](https://flywaydb.org/documentation/configuration/scriptconfigfiles) or globally.
+- Flyway's automatic detection for whether SQL statements are valid in transactions does not apply to
+`CREATE/ALTER/DROP` statements acting on memory-optimized tables (that is, those created with
+`WITH (MEMORY_OPTIMIZED = ON)`). You will need to override the `executeInTransaction` setting to be false,
+either on a [per-script basis](/documentation/configuration/scriptconfigfiles) or globally.
 - SQL Server is unable to change the default schema for a session. Therefore, setting the `flyway.defaultSchema` property
-has no value, unless used for a [Placeholder](https://flywaydb.org/documentation/concepts/migrations#placeholder-replacement) in
+has no value, unless used for a [Placeholder](/documentation/concepts/migrations#placeholder-replacement) in
 your sql scripts. If you decide to use `flyway.defaultSchema`, it also must exist in `flyway.schemas`.
 - By default, the flyway schema history table will try to write to the default schema for the database connection. You may
 specify which schema to write this table to by setting `flyway.schemas=custom_schema`, as the first entry will become the
 default schema if `flyway.defaultSchema` itself is not set.
-- With these limitations in mind, please refer to the properties or
-[Options](https://flywaydb.org/documentation/configuration/parameters/defaultSchema) mentioned here for descriptions / 
-consequences.
+- With these limitations in mind, please refer to the properties or options mentioned [here](/documentation/configuration/parameters/defaultSchema) for descriptions/consequences.
 - If using the JTDS driver, then setting `ANSI_NULLS` or `QUOTED_IDENTIFIER` in a script will cause an error. This is
 a driver limitation, and can be solved by using the Microsoft driver instead.
 
