@@ -138,8 +138,9 @@ SQL Server supports several methods of authentication. These include:
 - SQL Server Authentication
 - Windows Authentication
 - Azure Active Directory
+- Kerberos {% include teams.html %}
 
-SQL Server Authentication works 'out-of-the-box' with Flyway, whereas Windows Authentication and Azure Active Directory require extra manual setup.
+SQL Server Authentication works 'out-of-the-box' with Flyway, whereas the others require extra manual setup.
 
 The instructions provided here are adapted from the [Microsoft JDBC Driver for SQL Server documentation](https://docs.microsoft.com/en-us/sql/connect/jdbc/microsoft-jdbc-driver-for-sql-server?view=sql-server-ver15). Refer to this when troubleshooting authentication problems.
 
@@ -201,6 +202,17 @@ flyway.jdbcProperties.accessToken=my-access-token
 ```
 
 This is equivalent to the [process of setting `accessToken` as described on this Microsoft documentation page](https://docs.microsoft.com/en-us/sql/connect/jdbc/connecting-using-azure-active-directory-authentication?view=sql-server-ver15#connecting-using-access-token).
+
+### Kerberos
+{% include teams.html %}
+
+Kerberos authentication can also be used to connect Flyway to your database.
+
+To set this up, you will need to pass the path to your Kerberos configuration file to the parameter [`kerberosConfigFile`](/documentation/configuration/parameters/kerberosConfigFile) and the path to your login module configuration file to the parameter [`sqlServer.kerberosLoginFile`](/documentation/configuration/parameters/sqlServerKerberosLoginFile).
+
+You may also need to add `;authenticationScheme=JavaKerberos` to your JDBC URL.
+
+For more information on Kerberos authentication with SQL Server, you can read the official documentation [here](https://docs.microsoft.com/en-us/sql/connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server?view=sql-server-ver15).
 
 ## Connecting to a Named Instance
 

@@ -26,6 +26,7 @@ By storing your username and password in the environment variables `FLYWAY_USER`
 ### SQL Server and Azure Synapse
 - [Windows Authentication](/documentation/database/sqlserver#windows-authentication)
 - [Azure Active Directory](/documentation/database/sqlserver#azure-active-directory)
+- [Kerberos](/documentation/database/sqlserver#kerberos) {% include teams.html %}
 
 ### MySQL
 - [MySQL Option Files](/documentation/database/mysql#option-files) {% include teams.html %}
@@ -41,7 +42,7 @@ By storing your username and password in the environment variables `FLYWAY_USER`
 
 ### AWS IAM
 
-Configure the JDBC URL to point to an AWS RDS instance:  
+Configure the JDBC URL to point to an AWS RDS instance:
 `flyway.url=jdbc:mysql://<RDS_INSTANCE_HOSTNAME>:<RDS_INSTANCE_PORT>`
 
 Set `flyway.user` to be the database user and `flyway.password` to be the IAM authentication token: `flyway.password=<AuthToken>`
