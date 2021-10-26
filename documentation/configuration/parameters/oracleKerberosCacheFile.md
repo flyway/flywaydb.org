@@ -2,7 +2,7 @@
 layout: documentation
 menu: configuration
 pill: oracleKerberosCacheFile
-subtitle: flyway.oracleKerberosCacheFile
+subtitle: flyway.oracle.kerberosCacheFile
 redirect_from: /documentation/configuration/oracleKerberosCacheFile/
 ---
 
@@ -10,7 +10,7 @@ redirect_from: /documentation/configuration/oracleKerberosCacheFile/
 {% include teams.html %}
 
 ## Description
-The location of the `krb5cc_<UID>` credential cache file for use in Kerberos authentication. This is optional, 
+The location of the `krb5cc_<UID>` credential cache file for use in Kerberos authentication. This is optional,
 and only has any significance when `oracleKerberosConfigFile` is also specified. It may assist performance.
 
 ## Usage
@@ -27,7 +27,7 @@ flyway.oracle.kerberosCacheFile=/temp/krb5cc_123
 
 ### Environment Variable
 ```properties
-FLYWAY_ORACLE_KERBEROSCACHEFILE=/temp/krb5cc_123
+FLYWAY_ORACLE_KERBEROS_CACHE_FILE=/temp/krb5cc_123
 ```
 
 ### API
@@ -40,7 +40,7 @@ Flyway.configure()
 ### Gradle
 ```groovy
 flyway {
-    oracleKerberosCacheFile = /temp/krb5cc_123
+    oracleKerberosCacheFile = '/temp/krb5cc_123'
 }
 ```
 
@@ -50,4 +50,3 @@ flyway {
     <oracleKerberosCacheFile>/temp/krb5cc_123</oracleKerberosCacheFile>
 </configuration>
 ```
-

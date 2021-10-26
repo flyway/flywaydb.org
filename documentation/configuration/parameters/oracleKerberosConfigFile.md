@@ -2,7 +2,7 @@
 layout: documentation
 menu: configuration
 pill: oracleKerberosConfigFile
-subtitle: flyway.oracleKerberosConfigFile
+subtitle: flyway.oracle.kerberosConfigFile
 redirect_from: /documentation/configuration/oracleKerberosConfigFile/
 ---
 
@@ -26,7 +26,7 @@ flyway.oracle.kerberosConfigFile=/etc/krb5.conf
 
 ### Environment Variable
 ```properties
-FLYWAY_ORACLE_KERBEROSCONFIGFILE=/etc/krb5.conf
+FLYWAY_ORACLE_KERBEROS_CONFIG_FILE=/etc/krb5.conf
 ```
 
 ### API
@@ -39,7 +39,7 @@ Flyway.configure()
 ### Gradle
 ```groovy
 flyway {
-    oracleKerberosConfigFile = /etc/krb5.conf
+    oracleKerberosConfigFile = '/etc/krb5.conf'
 }
 ```
 
@@ -49,4 +49,3 @@ flyway {
     <oracleKerberosConfigFile>/etc/krb5.conf</oracleKerberosConfigFile>
 </configuration>
 ```
-
