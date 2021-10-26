@@ -512,6 +512,10 @@ title: Documentation
                                 <a href="/documentation/configuration/parameters/jdbcProperties">jdbcProperties</a></li>
 
                                 <li
+                                {% if page.pill == 'kerberosConfigFile' %} class="nav--vertical__active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/kerberosConfigFile">kerberosConfigFile</a></li>
+
+                                <li
                                 {% if page.pill == 'licenseKey' %} class="nav--vertical__active" {% endif %}>
                                 <a href="/documentation/configuration/parameters/licenseKey">licenseKey</a></li>
 
@@ -622,6 +626,10 @@ title: Documentation
                                 <li
                                 {% if page.pill == 'sqlMigrationSuffixes' %} class="nav--vertical__active" {% endif %}>
                                 <a href="/documentation/configuration/parameters/sqlMigrationSuffixes">sqlMigrationSuffixes</a></li>
+
+                                <li
+                                {% if page.pill == 'sqlServerKerberosLoginFile' %} class="nav--vertical__active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/sqlServerKerberosLoginFile">sqlServerKerberosLoginFile</a></li>
 
                                 <li
                                 {% if page.pill == 'stream' %} class="nav--vertical__active" {% endif %}>
@@ -904,7 +912,7 @@ title: Documentation
                 </ul>
             </nav>
             <h2>Poll</h2>
-            
+
             <script type="text/javascript" charset="utf-8" src="https://secure.polldaddy.com/p/10947915.js"></script>
             <noscript><a href="https://poll.fm/10947915">What best describes your primary role?</a></noscript>
         </div>
