@@ -50,6 +50,7 @@ If using maven, config parameters can be set in the plugin configuration block, 
 - [group](/documentation/configuration/parameters/group)
 - [installedBy](/documentation/configuration/parameters/installedBy)
 - [jarDirs](/documentation/configuration/parameters/jarDirs)
+- [kerberosConfigFile](/documentation/configuration/parameters/kerberosConfigFile) {% include teams.html %}
 - [licenseKey](/documentation/configuration/parameters/licenseKey) {% include teams.html %}
 - [locations](/documentation/configuration/parameters/locations)
 - [failOnMissingLocations](/documentation/configuration/parameters/failOnMissingLocations)
@@ -117,6 +118,9 @@ If using maven, config parameters can be set in the plugin configuration block, 
 - [oracleKerberosCacheFile](/documentation/configuration/parameters/oracleKerberosCacheFile) {% include teams.html %}
 - [oracleKerberosConfigFile](/documentation/configuration/parameters/oracleKerberosConfigFile) {% include teams.html %}
 - [oracleWalletLocation](/documentation/configuration/parameters/oracleWalletLocation) {% include teams.html %}
+
+### SQL Server
+- [sqlServerKerberosLoginFile](/documentation/configuration/parameters/sqlServerKerberosLoginFile) {% include teams.html %}
 
 ### Secrets Management - Dapr Secret Store
 - [daprUrl](/documentation/configuration/parameters/daprUrl) {% include teams.html %}
