@@ -10,14 +10,14 @@ redirect_from: /documentation/configuration/target/
 
 ## Description
 
-The target version up to which Flyway should consider migrations. If set to a value other than `current` or `latest`, 
+The target version up to which Flyway should consider migrations. If set to a value other than `current` or `latest`,
 this must be a valid migration version (e.g. `2.1`).
 
-When migrating forwards, Flyway will apply all migrations up to and including the target version. Migrations with a 
+When migrating forwards, Flyway will apply all migrations up to and including the target version. Migrations with a
 higher version number will be ignored. If the target is `current`, then no versioned migrations will be
 applied but repeatable migrations will be, together with any callbacks.
 
-When undoing migrations, Flyway will apply all undo scripts up to and including the target version. Undo scripts with a 
+When undoing migrations, Flyway will apply all undo scripts up to and including the target version. Undo scripts with a
 lower version number will be ignored. Specifying a target version should be done with care, as undo scripts typically
 destroy database objects.
 
@@ -25,6 +25,7 @@ Special values:
 
   - `current`: designates the current version of the schema
   - `latest`: the latest version of the schema, as defined by the migration with the highest version
+  - `next`: the next version of the schema, as defined by the first pending migration
   - `<version>?`: {% include teams.html %} Instructs Flyway to not fail if the target version doesn't exist. In this case, Flyway will go up to but not beyond the specified target (default: fail if the target version doesn't exist) (e.g.) `target=2.1?`
 
 ## Default
