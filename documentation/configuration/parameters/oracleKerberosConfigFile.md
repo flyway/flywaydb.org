@@ -9,6 +9,8 @@ redirect_from: /documentation/configuration/oracleKerberosConfigFile/
 # Oracle Kerberos Config File
 {% include teams.html %}
 
+This parameter is deprecated and will be removed in V9. Please use [`kerberosConfigFile`](/documentation/configuration/parameters/kerberosConfigFile) instead.
+
 ## Description
 The location of the `krb5.conf` file for use in Kerberos authentication.
 
