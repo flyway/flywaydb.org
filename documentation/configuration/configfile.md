@@ -257,6 +257,7 @@ flyway.locations=filesystem:sql
 # Special values:
 # - 'current': designates the current version of the schema
 # - 'latest': the latest version of the schema, as defined by the migration with the highest version
+# - 'next': the next version of the schema, as defined by the first pending migration
 # - '<version>?' (end with a '?'): Instructs Flyway not to fail if the target version doesn't exist.
 #                                  In this case, Flyway will go up to but not beyond the specified target
 #                                  (default: fail if the target version doesn't exist) - Flyway Teams only
@@ -452,6 +453,14 @@ flyway.locations=filesystem:sql
 # statement it doesn't yet support. (default: false)
 # Flyway Teams only
 # flyway.oracle.sqlplusWarn=
+
+# When connecting to a Kerberos service to authenticate, the path to the Kerberos config file.
+# Flyway Teams only
+# flyway.kerberosConfigFile
+
+# When SQL Server needs to connect to a Kerberos service to authenticate, the path to the Kerberos login file.
+# Flyway Teams only
+# flyway.sqlServer.kerberosLoginFile
 
 # Your Flyway license key (FL01...). Not yet a Flyway Teams Edition customer?
 # Request your Flyway trial license key st https://flywaydb.org/download/

@@ -17,6 +17,39 @@ Here's an overview of the biggest changes to Flyway over the past year or so.
 <h2>Full release notes</h2>
 
 <div class="release">
+    <h2 id="8.0.3">Flyway 8.0.3 (2021-11-01)</h2>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        {% include issue.html id="3304" title="Fix bug in parsing MySQL with multiple 'CASE' statements inside 'ORDER BY'" %}
+        {% include issue.html id="3310" title="Fix bug in detecting emptiness in non-existent schemas" %}
+        {% include issue.html id="3311" title="Fix bug in time function used when updating BigQuery lock" %}
+    </ul>
+
+    <h3>Changes</h3>
+    <ul>
+        {% include issue.html id="3307" title="Remove warning around schemas from CockroachDB" %}
+    </ul>
+
+    <h3>Database compatibility</h3>
+    <ul>
+        {% include issue.html id="3309" title="Support MariaDB 10.6" %}
+        {% include issue.html id="3313" title="Add support for PostgreSQL 14" %}
+    </ul>
+
+    <h3>New features</h3>
+    <ul>
+        <li>Add ability to specify 'target=next' to apply just the next migration</li>
+        <li>Add Kerberos authentication support for SQL Server</li>
+        {% include issue.html id="3306" title="Add 'ignoreMigrationPatterns' setter that takes an array of 'ValidatePattern's" %}
+    </ul>
+
+    <p>
+        Thanks to kevinrjones, cowwoc, todd-dev, A248, geirolz, klesniewski and md5 for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
     <h2 id="8.0.2">Flyway 8.0.2 (2021-10-20)</h2>
 
     <h3>Changes</h3>
