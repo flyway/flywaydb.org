@@ -8,7 +8,7 @@ subtitle: Percona XtraDB Cluster
 ## Supported Versions
 
 - `8.0`
-- `5.7`
+- `5.7` {% include teams.html %}
 
 ## Support Level
 
