@@ -69,7 +69,7 @@ title: Documentation
     <a href="/documentation/database/sqlite">SQLite</a> and
     <a href="/documentation/database/firebird">Firebird</a>.</p>
 
-<p>We recommend using the free Spawn service to spin up dev and test databases for use with Flyway. <a href="/documentation/spawn/overview">Learn more</a>.</p>
+<p>We recommend using the free new <a href="/hub">Flyway Hub and Pre-flight checks service</a> for getting started with Flyway and database CI. <a href="/hub">Learn more</a>.</p>
 
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/concepts/migrations">Migrations <i class="fa fa-arrow-right"></i></a>
