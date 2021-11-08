@@ -260,6 +260,25 @@ title: Documentation
                         </ul>
                     </details>
 
+                    <details {% if page.url contains "documentation/hub" %} open class="nav--vertical__active-parent" {% endif %}>
+                        <summary class="nav-header">Flyway Hub</summary>
+
+                        <ul class="nav nav-pills nav-stacked">
+                            <li
+                            {% if page.menu == 'hub_overview' %} class="nav--vertical__active" {% endif %}>
+                            <a href="/documentation/hub">Overview</a></li>
+                            <li
+                            {% if page.menu == 'hub_checks' %} class="nav--vertical__active" {% endif %}>
+                            <a href="/documentation/hub-checks">Pre-flight Checks</a></li>
+                            <li
+                            {% if page.menu == 'hub_automation' %} class="nav--vertical__active" {% endif %}>
+                            <a href="/documentation/hub-automation">Automation</a></li>
+                            <li
+                            {% if page.menu == 'hub_security' %} class="nav--vertical__active" {% endif %}>
+                            <a href="/documentation/hub-security">Security</a></li>
+                        </ul>
+                    </details>
+                    
                     <details {% if page.url contains "documentation/spawn" %} open class="nav--vertical__active-parent" {% endif %}>
                         <summary class="nav-header">Spawn instant databases</summary>
 
