@@ -11,14 +11,14 @@ We're calling all those tasks that should be completed before a database deploym
 
 ## Build
 
-The Build Pre-flight check will test if your migration scripts can be run against a real, empty database. This has many benefits including:
+The Build pre-flight check will test if your migration scripts can be run against a real, empty database. This has many benefits including:
 
 - Validating syntax of all scripts
 - Checking migration script order
 - Highlighting version number conflicts
 - Ensuring new environments can be built from source control
 
-This simple but effective check is often avoided due to having to provision infrastructure and/or write code to set up and tear down the test. Flyway Hub handles this for you, allowing the check to be run easily with 1 click.
+This simple but effective check is often avoided due to having to provision infrastructure and/or write code to set up and tear down the test. Flyway Hub handles this for you, allowing the check to be run easily with one click.
 
 A build runs through the following steps:
 
