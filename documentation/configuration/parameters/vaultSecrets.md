@@ -20,43 +20,39 @@ Example: `kv/data/flyway/flywayConfig`
 
 ### Commandline
 ```powershell
-./flyway -vault.secrets="kv/data/flyway/flywayConfig1,kv/flyway/flywayConfig2" info
+./flyway -plugins.vault.secrets="kv/data/flyway/flywayConfig1,kv/flyway/flywayConfig2" info
 ```
 
 ### Configuration File
 ```properties
-flyway.vault.secrets=kv/data/flyway/flywayConfig1,kv/flyway/flywayConfig2
+flyway.plugins.vault.secrets=kv/data/flyway/flywayConfig1,kv/flyway/flywayConfig2
 ```
 
 ### Environment Variable
 ```properties
-FLYWAY_VAULT_SECRETS=kv/data/flyway/flywayConfig1,kv/flyway/flywayConfig2
+FLYWAY_PLUGINS_VAULT_SECRETS=kv/data/flyway/flywayConfig1,kv/flyway/flywayConfig2
 ```
 
 ### API
 ```java
-Configuration configuration = new ClassicConfiguration();
-VaultApiExtension apiExtension = configuration.getExtensionConfiguration(VaultApiExtension.class);
-apiExtension.setVaultSecrets("kv/data/flyway/flywayConfig1", "kv/flyway/flywayConfig2");
+VaultConfigurationExtension vaultConfigurationExtension = PluginRegister.getConfigurationExtension(VaultConfigurationExtension.class)
+vaultConfigurationExtension.setVaultSecrets("kv/data/flyway/flywayConfig1", "kv/flyway/flywayConfig2");
 ```
 
 ### Gradle
 ```groovy
 flyway {
-    vaultConfiguration {
-        vaultSecrets = ['kv/data/flyway/flywayConfig1', 'kv/flyway/flywayConfig2']
-    }
+    pluginConfiguration [
+      vaultSecrets: ['kv/data/flyway/flywayConfig1', 'kv/flyway/flywayConfig2']
+    ]
 }
 ```
 
 ### Maven
 ```xml
 <configuration>
-    <vaultConfiguration>
-        <vaultSecrets>
-            <vaultSecret>kv/data/flyway/flywayConfig1</vaultSecret>
-            <vaultSecret>kv/flyway/flywayConfig2</vaultSecret>
-        </vaultSecrets>
-    </vaultConfiguration>
+    <pluginConfiguration>
+      <vaultSecrets>kv/data/flyway/flywayConfig1,kv/flyway/flywayConfig2</vaultSecrets>
+    </pluginConfiguration>
 </configuration>
 ```

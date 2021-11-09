@@ -15,40 +15,39 @@ The [Vault](https://www.vaultproject.io/) token required to access your secrets.
 
 ### Commandline
 ```powershell
-./flyway -vault.token="s.abcdefghijklmnopqrstuvwx" info
+./flyway -plugins.vault.token="s.abcdefghijklmnopqrstuvwx" info
 ```
 
 ### Configuration File
 ```properties
-flyway.vault.token=s.abcdefghijklmnopqrstuvwx
+flyway.plugins.vault.token=s.abcdefghijklmnopqrstuvwx
 ```
 
 ### Environment Variable
 ```properties
-FLYWAY_VAULT_TOKEN=s.abcdefghijklmnopqrstuvwx
+FLYWAY_PLUGINS_VAULT_TOKEN=s.abcdefghijklmnopqrstuvwx
 ```
 
 ### API
 ```java
-Configuration configuration = new ClassicConfiguration();
-VaultApiExtension apiExtension = configuration.getExtensionConfiguration(VaultApiExtension.class);
-apiExtension.setVaultToken("s.abcdefghijklmnopqrstuvwx");
+VaultConfigurationExtension vaultConfigurationExtension = PluginRegister.getConfigurationExtension(VaultConfigurationExtension.class)
+vaultConfigurationExtension.setVaultToken("s.abcdefghijklmnopqrstuvwx");
 ```
 
 ### Gradle
 ```groovy
 flyway {
-    vaultConfiguration {
-        vaultToken = 's.abcdefghijklmnopqrstuvwx'
-    }
+    pluginConfiguration [
+      vaultToken: 's.abcdefghijklmnopqrstuvwx'
+    ]
 }
 ```
 
 ### Maven
 ```xml
 <configuration>
-    <vaultConfiguration>
+    <pluginConfiguration>
         <vaultToken>s.abcdefghijklmnopqrstuvwx</vaultToken>
-    </vaultConfiguration>
+    </pluginConfiguration>
 </configuration>
 ```

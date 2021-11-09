@@ -26,14 +26,14 @@ This is the REST API URL of your Vault server, and should include the API versio
 _Note: Flyway currently only supports API version v1_
 
 If you are using a [Vault dev server](https://learn.hashicorp.com/tutorials/vault/getting-started-dev-server) then an example of what configuring this in Flyway may look like is:<br/>
-`flyway.vault.url=http://localhost:8200/v1/`
+`flyway.plugins.vault.url=http://localhost:8200/v1/`
 
 ### [`vault.token`](/documentation/configuration/parameters/vaultToken)
 
 This is the token required to access your secrets. You can read about generating tokens [here](https://www.vaultproject.io/docs/commands/token/create), including how to add a lifetime to your token in order to control the duration of its validity.
 
 If we have a token `<vault_token>` then configuring this parameter involves adding the following to our Flyway configuration:<br/>
-`flyway.vault.token=<vault_token>`
+`flyway.plugins.vault.token=<vault_token>`
 
 ### [`vault.secrets`](/documentation/configuration/parameters/vaultSecrets)
 
@@ -61,7 +61,7 @@ flyway.password=<database_password>
 If we now execute the following Flyway command: 
 
 ```
-flyway info -vault.url="http://localhost:8200/v1/" -vault.token="<vault_token>" -vault.secrets="secret/data/flyway/flyway_credentials"
+flyway info -plugins.vault.url="http://localhost:8200/v1/" -plugins.vault.token="<vault_token>" -plugins.vault.secrets="secret/data/flyway/flyway_credentials"
 ```
 
 Flyway will connect to your database without needing the database credentials to be provided in plaintext. Instead, Flyway will read in the specified secret and use its value to configure the database credentials and display the overview of the schema history table that results from [`info`](/documentation/command/info).

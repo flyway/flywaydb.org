@@ -69,8 +69,8 @@ Assume we have the following two secrets in Dapr:
 - `secret2` which contains `flyway.user=sa`
 
 In order to read these secrets you need to configure just the following Flyway parameters:
-- [flyway.dapr.url](/documentation/configuration/parameters/daprUrl) - This is the REST API URL of your Dapr sidecar application e.g. `http://localhost:3500/v1.0/secrets/my-secrets-store`
-- [flyway.dapr.secrets](/documentation/configuration/parameters/daprSecrets) - This is a comma-separated list of paths to secrets that contain Flyway configurations. In our case we would set `flyway.dapr.secrets=secret1,secret2`
+- [flyway.plugins.dapr.url](/documentation/configuration/parameters/daprUrl) - This is the REST API URL of your Dapr sidecar application e.g. `http://localhost:3500/v1.0/secrets/my-secrets-store`
+- [flyway.plugins.dapr.secrets](/documentation/configuration/parameters/daprSecrets) - This is a comma-separated list of paths to secrets that contain Flyway configurations. In our case we would set `flyway.plugins.dapr.secrets=secret1,secret2`
 
 After configuring the above parameters, we would be able to connect to a database in Flyway without configuring a database connection locally, as all the necessary configuration would be read from Dapr.
 
@@ -87,8 +87,8 @@ Assume we have the following two secrets in GCSM:
 - `secret2` which contains `flyway.user=sa`
 
 In order to read these secrets you need to configure just the following Flyway parameters:
-- [flyway.gcsm.project](/documentation/configuration/parameters/gcsmProject) - This is the name of your GCSM project e.g. `quixotic-ferret-345678`
-- [flyway.gcsm.secrets](/documentation/configuration/parameters/gcsmSecrets) - This is a comma-separated list of paths to secrets that contain Flyway configurations. In our case we would set `flyway.gcsm.secrets=secret1,secret2`
+- [flyway.plugins.gcsm.project](/documentation/configuration/parameters/gcsmProject) - This is the name of your GCSM project e.g. `quixotic-ferret-345678`
+- [flyway.plugins.gcsm.secrets](/documentation/configuration/parameters/gcsmSecrets) - This is a comma-separated list of paths to secrets that contain Flyway configurations. In our case we would set `flyway.plugins.gcsm.secrets=secret1,secret2`
 
 After configuring the above parameters, we would be able to connect to a database in Flyway without configuring a database connection locally, as all the necessary configuration would be read from GCSM.
 
@@ -105,9 +105,9 @@ Assume we have the following two secrets in Vault:
 - `test/2/config` which contains `flyway.user=sa` and uses key-value engine V2
 
 In order to read these secrets you need to configure just the following Flyway parameters:
-- [flyway.vault.url](/documentation/configuration/parameters/vaultUrl) - This is the REST API URL of your Vault server e.g. `http://localhost:8200/v1/`
-- [flyway.vault.token](/documentation/configuration/parameters/vaultToken) - This is the Vault token required to access your secrets e.g. `s.abcdefghijklmnopqrstuvwx`
-- [flyway.vault.secrets](/documentation/configuration/parameters/vaultSecrets) - This is a comma-separated list of paths to secrets that contain Flyway configurations. This must start with the name of the engine and end with the name of the secret. In our case we would set `flyway.vault.secrets=kv/test/1/config,kv/data/test/2/config`
+- [flyway.plugins.vault.url](/documentation/configuration/parameters/vaultUrl) - This is the REST API URL of your Vault server e.g. `http://localhost:8200/v1/`
+- [flyway.plugins.vault.token](/documentation/configuration/parameters/vaultToken) - This is the Vault token required to access your secrets e.g. `s.abcdefghijklmnopqrstuvwx`
+- [flyway.plugins.vault.secrets](/documentation/configuration/parameters/vaultSecrets) - This is a comma-separated list of paths to secrets that contain Flyway configurations. This must start with the name of the engine and end with the name of the secret. In our case we would set `flyway.plugins.vault.secrets=kv/test/1/config,kv/data/test/2/config`
 
 After configuring the above parameters, we would be able to connect to a database in Flyway without configuring a database connection locally, as all the necessary configuration would be read from Vault.
 

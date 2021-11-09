@@ -17,43 +17,39 @@ If multiple secrets specify the same configuration parameter, then the last secr
 
 ### Commandline
 ```powershell
-./flyway -gcsm.secrets="secret1,secret2" info
+./flyway -plugins.gcsm.secrets="secret1,secret2" info
 ```
 
 ### Configuration File
 ```properties
-flyway.gcsm.secrets=secret1,secret2
+flyway.plugins.gcsm.secrets=secret1,secret2
 ```
 
 ### Environment Variable
 ```properties
-FLYWAY_GCSM_SECRETS=secret1,secret2
+FLYWAY_PLUGINS_GCSM_SECRETS=secret1,secret2
 ```
 
 ### API
 ```java
-Configuration configuration = new ClassicConfiguration();
-GcsmApiExtension apiExtension = configuration.getExtensionConfiguration(GcsmApiExtension.class);
-apiExtension.setGcsmSecrets("secret1", "secret2");
+GcsmConfigurationExtension gcsmConfigurationExtension = PluginRegister.getConfigurationExtension(GcsmConfigurationExtension.class)
+gcsmConfigurationExtension.setGcsmSecrets("secret1", "secret2");
 ```
 
 ### Gradle
 ```groovy
 flyway {
-    gcsmConfiguration {
-        gcsmSecrets = ['secret1', 'secret2']
-    }
+    pluginConfiguration [
+        gcsmSecrets: ['secret1', 'secret2']
+    ]
 }
 ```
 
 ### Maven
 ```xml
 <configuration>
-    <gcsmConfiguration>
-        <gcsmSecrets>
-            <gcsmSecret>secret1</gcsmSecret>
-            <gcsmSecret>secret2</gcsmSecret>
-        </gcsmSecrets>
-    </gcsmConfiguration>
+    <pluginConfiguration>
+        <gcsmSecrets>secret1,secret2</gcsmSecrets>
+    </pluginConfiguration>
 </configuration>
 ```

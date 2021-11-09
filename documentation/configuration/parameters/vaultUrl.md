@@ -17,40 +17,39 @@ Example: `http://localhost:8200/v1/`
 
 ### Commandline
 ```powershell
-./flyway -vault.url="http://localhost:8200/v1/" info
+./flyway -plugins.vault.url="http://localhost:8200/v1/" info
 ```
 
 ### Configuration File
 ```properties
-flyway.vault.url=http://localhost:8200/v1/
+flyway.plugins.vault.url=http://localhost:8200/v1/
 ```
 
 ### Environment Variable
 ```properties
-FLYWAY_VAULT_URL=http://localhost:8200/v1/
+FLYWAY_PLUGINS_VAULT_URL=http://localhost:8200/v1/
 ```
 
 ### API
 ```java
-Configuration configuration = new ClassicConfiguration();
-VaultApiExtension apiExtension = configuration.getExtensionConfiguration(VaultApiExtension.class);
-apiExtension.setVaultUrl("http://localhost:8200/v1/");
+VaultConfigurationExtension vaultConfigurationExtension = PluginRegister.getConfigurationExtension(VaultConfigurationExtension.class)
+vaultConfigurationExtension.setVaultUrl("http://localhost:8200/v1/");
 ```
 
 ### Gradle
 ```groovy
 flyway {
-    vaultConfiguration {
-        vaultUrl = 'http://localhost:8200/v1/'
-    }
+    pluginConfiguration [
+      vaultUrl: 'http://localhost:8200/v1/'
+    ]
 }
 ```
 
 ### Maven
 ```xml
 <configuration>
-    <vaultConfiguration>
+    <pluginConfiguration>
         <vaultUrl>http://localhost:8200/v1/</vaultUrl>
-    </vaultConfiguration>
+    </pluginConfiguration>
 </configuration>
 ```

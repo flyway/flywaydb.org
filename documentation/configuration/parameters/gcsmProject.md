@@ -17,40 +17,39 @@ Example: `quixotic-ferret-345678`
 
 ### Commandline
 ```powershell
-./flyway -gcsm.project="quixotic-ferret-345678" info
+./flyway -plugins.gcsm.project="quixotic-ferret-345678" info
 ```
 
 ### Configuration File
 ```properties
-flyway.gcsm.project=quixotic-ferret-345678
+flyway.plugins.gcsm.project=quixotic-ferret-345678
 ```
 
 ### Environment Variable
 ```properties
-FLYWAY_GCSM_PROJECT=quixotic-ferret-345678
+FLYWAY_PLUGINS_GCSM_PROJECT=quixotic-ferret-345678
 ```
 
 ### API
 ```java
-Configuration configuration = new ClassicConfiguration();
-GcsmApiExtension apiExtension = configuration.getExtensionConfiguration(GcsmApiExtension.class);
-apiExtension.setGcsmProject("quixotic-ferret-345678");
+GcsmConfigurationExtension gcsmConfigurationExtension = PluginRegister.getConfigurationExtension(GcsmConfigurationExtension.class)
+gcsmConfigurationExtension.setGcsmProject("quixotic-ferret-345678");
 ```
 
 ### Gradle
 ```groovy
 flyway {
-    gcsmConfiguration {
-        gcsmProject = 'quixotic-ferret-345678'
-    }
+    pluginConfiguration [
+        gcsmProject: 'quixotic-ferret-345678'
+    ]
 }
 ```
 
 ### Maven
 ```xml
 <configuration>
-    <gcsmConfiguration>
+    <pluginConfiguration>
         <gcsmProject>quixotic-ferret-345678</gcsmProject>
-    </gcsmConfiguration>
+    </pluginConfiguration>
 </configuration>
 ```
