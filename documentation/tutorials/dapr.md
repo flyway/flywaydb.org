@@ -54,7 +54,7 @@ flyway.password=<database_password>
 If we now execute the following Flyway command: 
 
 ```
-flyway info -dapr.url="http://localhost:3500/v1.0/secrets/my-secrets-store" -dapr.secrets="my-flyway-config"
+flyway info -plugins.dapr.url="http://localhost:3500/v1.0/secrets/my-secrets-store" -plugins.dapr.secrets="my-flyway-config"
 ```
 
 Flyway will connect to your database without needing the database credentials to be provided in plaintext. 

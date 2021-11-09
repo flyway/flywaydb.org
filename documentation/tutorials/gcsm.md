@@ -51,7 +51,7 @@ flyway.password=<database_password>
 If we now execute the following Flyway command:
 
 ```
-flyway info -gcsm.project="quixotic-ferret-345678" -gcsm.secrets="my-flyway-config"
+flyway info -plugins.gcsm.project="quixotic-ferret-345678" -plugins.gcsm.secrets="my-flyway-config"
 ```
 
 Flyway will connect to your database without needing the database credentials to be provided in plaintext.

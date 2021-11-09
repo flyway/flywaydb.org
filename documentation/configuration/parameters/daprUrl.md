@@ -17,40 +17,39 @@ Example: `http://localhost:3500/v1.0/secrets/my-secrets-store`
 
 ### Commandline
 ```powershell
-./flyway -dapr.url="http://localhost:3500/v1.0/secrets/my-secrets-store" info
+./flyway -plugins.dapr.url="http://localhost:3500/v1.0/secrets/my-secrets-store" info
 ```
 
 ### Configuration File
 ```properties
-flyway.dapr.url=http://localhost:3500/v1.0/secrets/my-secrets-store
+flyway.plugins.dapr.url=http://localhost:3500/v1.0/secrets/my-secrets-store
 ```
 
 ### Environment Variable
 ```properties
-FLYWAY_DAPR_URL=http://localhost:3500/v1.0/secrets/my-secrets-store
+FLYWAY_PLUGINS_DAPR_URL=http://localhost:3500/v1.0/secrets/my-secrets-store
 ```
 
 ### API
 ```java
-Configuration configuration = new ClassicConfiguration();
-DaprApiExtension apiExtension = configuration.getExtensionConfiguration(DaprApiExtension.class);
-apiExtension.setDaprUrl("http://localhost:3500/v1.0/secrets/my-secrets-store");
+DaprConfigurationExtension daprConfigurationExtension = PluginRegister.getConfigurationExtension(DaprConfigurationExtension.class)
+daprConfigurationExtension.setDaprUrl("http://localhost:3500/v1.0/secrets/my-secrets-store");
 ```
 
 ### Gradle
 ```groovy
 flyway {
-    daprConfiguration {
-        daprUrl = 'http://localhost:3500/v1.0/secrets/my-secrets-store'
-    }
+    pluginConfiguration [
+        daprUrl: 'http://localhost:3500/v1.0/secrets/my-secrets-store'
+    ]
 }
 ```
 
 ### Maven
 ```xml
 <configuration>
-    <daprConfiguration>
+    <pluginConfiguration>
         <daprUrl>http://localhost:3500/v1.0/secrets/my-secrets-store</daprUrl>
-    </daprConfiguration>
+    </pluginConfiguration>
 </configuration>
 ```

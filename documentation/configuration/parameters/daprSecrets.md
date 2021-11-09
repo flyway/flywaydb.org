@@ -19,43 +19,39 @@ If multiple secrets specify the same configuration parameter, then the last secr
 
 ### Commandline
 ```powershell
-./flyway -dapr.secrets="secret1,secret2" info
+./flyway -plugins.dapr.secrets="secret1,secret2" info
 ```
 
 ### Configuration File
 ```properties
-flyway.dapr.secrets=secret1,secret2
+flyway.plugins.dapr.secrets=secret1,secret2
 ```
 
 ### Environment Variable
 ```properties
-FLYWAY_DAPR_SECRETS=secret1,secret2
+FLYWAY_PLUGINS_DAPR_SECRETS=secret1,secret2
 ```
 
 ### API
 ```java
-Configuration configuration = new ClassicConfiguration();
-DaprApiExtension apiExtension = configuration.getExtensionConfiguration(DaprApiExtension.class);
-apiExtension.setDaprSecrets("secret1", "secret2");
+DaprConfigurationExtension daprConfigurationExtension = PluginRegister.getConfigurationExtension(DaprConfigurationExtension.class)
+daprConfigurationExtension.setDaprSecrets("secret1", "secret2");
 ```
 
 ### Gradle
 ```groovy
 flyway {
-    daprConfiguration {
-        daprSecrets = ['secret1', 'secret2']
-    }
+    pluginConfiguration [
+        daprSecrets: ['secret1', 'secret2']
+    ]
 }
 ```
 
 ### Maven
 ```xml
 <configuration>
-    <daprConfiguration>
-        <daprSecrets>
-            <daprSecret>secret1</daprSecret>
-            <daprSecret>secret2</daprSecret>
-        </daprSecrets>
-    </daprConfiguration>
+    <pluginConfiguration>
+        <daprSecrets>secret1,secret2</daprSecrets>
+    </pluginConfiguration>
 </configuration>
 ```
