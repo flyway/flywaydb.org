@@ -29,5 +29,9 @@ Flyway Hub currently supports the following database engines:
 - MySQL
 - MariaDB
 
+## Getting in touch
+
+Want to talk to us about Flyway Hub? <a href="mailto:flywayhub@red-gate.com">Let us know</a>
+
 <a href="/documentation/hub/checks"
         class="btn btn-primary">Pre-flight Checks <i class="fa fa-arrow-right"></i></a>
