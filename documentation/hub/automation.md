@@ -31,7 +31,7 @@ This <a href="https://github.com/red-gate/flyway-hub-migration-test/blob/main/en
 - **Environment variable**: `GITHUB_SHA` - The commit SHA that triggered the workflow. For example, *ffac537e6cbbf934b08745a378932722df287a53*
 - **Script argument**: `Project ID` - The ID of your Flyway Hub project, found in the URL when viewing a project
 
-Would you like to see Flyway Hub integrated into your CI provider? <a href="mailto:flywayhub.red-gate.com">Let us know</a>
+Would you like to see Flyway Hub integrated into your CI provider? <a href="mailto:flywayhub@red-gate.com">Let us know</a>
 
 <a href="/documentation/hub/security"
         class="btn btn-primary">Security <i class="fa fa-arrow-right"></i></a>
