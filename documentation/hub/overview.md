@@ -9,7 +9,7 @@ redirect_from: /documentation/hub
 
 We believe that automating your testing as part of a CI workflow is a great extension of the current Flyway capabilities, and will enable devs to take even more control of the versioning and automation process for databases.
 
-Flyway Hub with Pre-flight checks is a new, simple to use service that enables Flyway migration script testing in just a few minutes. It is a free service with everything hosted in the cloud by us so you don't need to worry about setting up infrastructure.
+Flyway Hub with Pre-flight Checks is a new, simple to use service that enables Flyway migration script testing in just a few minutes. It is a free service with everything hosted in the cloud by us so you don't need to worry about setting up infrastructure.
 
 ## Getting started
 
