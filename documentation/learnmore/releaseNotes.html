@@ -17,6 +17,27 @@ Here's an overview of the biggest changes to Flyway over the past year or so.
 <h2>Full release notes</h2>
 
 <div class="release">
+    <h2 id="8.0.4">Flyway 8.0.4 (2021-11-10)</h2>
+
+    <h3>Breaking changes</h3>
+    <ul>
+        <li>Replace 'ApiExtension' with 'ConfigurationExtension'. Instead of calling 'getExtensionConfiguration()' on a Configuration object, you must now call 'getConfigurationExtension()' on 'PluginRegister' which returns a 'ConfigurationExtension'</li>
+    </ul>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        <li>Add look ahead to parser to fix wrapped sql statements</li>
+        <li>Fix bug with logs not appearing when using 'jarDirs'</li>
+    </ul>
+
+    <h3>Changes</h3>
+    <ul>
+        <li>add notice log pointing to Flyway Hub on completion of validate command</li>
+    </ul>
+
+</div>
+
+<div class="release">
     <h2 id="8.0.3">Flyway 8.0.3 (2021-11-01)</h2>
 
     <h3>Bug fixes</h3>
