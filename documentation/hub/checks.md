@@ -28,9 +28,9 @@ A build runs through the following steps:
 - Collect the results
 - Delete the database instance
 
-The provisioning of the instance typically takes ~30 seconnds with the remaining time depending on the number and size of migrations in your project.
+The provisioning of the instance typically takes ~30 seconds with the remaining time depending on the number and size of migrations in your project.
 
-When creating a new project in Flyway Hub, we will do our best to automatically detect settings from your repository. However on some occassions we may need you to supply the following:
+When creating a new project in Flyway Hub, we will do our best to automatically detect settings from your repository. However on some occasions we may need you to supply the following:
 
 - Migrations folder - The folder in your repository where your migration scripts are located
 - Database engine - The engine to use when running the check
