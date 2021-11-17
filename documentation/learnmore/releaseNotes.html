@@ -17,6 +17,32 @@ Here's an overview of the biggest changes to Flyway over the past year or so.
 <h2>Full release notes</h2>
 
 <div class="release">
+    <h2 id="8.0.5">Flyway 8.0.5 (2021-11-17)</h2>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        <li>fix bug where notice level logs ignored the minimum log level configured</li>
+    </ul>
+
+    <h3>Changes</h3>
+    <ul>
+        <li>Clean XML Schema Collections in SQL Server</li>
+        <li>Rename 'FlywayExtension' in the API to 'PluginMetadata'</li>
+        {% include issue.html id="3327" title="Replace SET SQLBLANKLINES warning with debug message" %}
+    </ul>
+
+    <h3>New features</h3>
+    <ul>
+        <li>Add 'init' callback to Teams that executes before Flyway establishes a connection</li>
+        <li>Add support for SQL*Plus variable concatenation</li>
+    </ul>
+
+    <p>
+        Thanks to everyone who reported these issues.
+    </p>
+</div>
+
+<div class="release">
     <h2 id="8.0.4">Flyway 8.0.4 (2021-11-10)</h2>
 
     <h3>Breaking changes</h3>
