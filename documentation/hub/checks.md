@@ -1,17 +1,17 @@
 ---
 layout: documentation
 menu: hub_checks
-subtitle: Pre-flight Checks with Flyway Hub
+subtitle: Migration script checks with Flyway Hub
 redirect_from: /documentation/hub-checks
 ---
 
-# Introducing Pre-flight Checks
+# Introducing Migration script checks
 
-We're calling all those tasks that should be completed before a database deployment happens "Pre-flight Checks". With Flyway Hub we are introducing the first of those checks, **Build** - with many more to come.
+We're calling all those tasks that should be completed before a database deployment happens "Migration script checks". With Flyway Hub we are introducing the first of those checks, **Build** - with many more to come.
 
 ## Build
 
-The Build pre-flight check will test if your migration scripts can be run against a real, empty database. This has many benefits including:
+The Build check will test if your migration scripts can be run against a real, empty database. This has many benefits including:
 
 - Validating syntax of all scripts
 - Checking migration script order

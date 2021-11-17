@@ -1,13 +1,13 @@
 ---
 layout: documentation
 menu: hub_automation
-subtitle: Automating Pre-flight Checks with Flyway Hub
+subtitle: Automating migration script checks with Flyway Hub
 redirect_from: /documentation/hub-automation
 ---
 
-# Automating Pre-flight Checks
+# Automating migration script checks
 
-If your pre-flight checks aren't run before every database deployment, their value diminishes and issues can slip through the cracks. We've made automating pre-flight checks really easy, especially if you are able to use GitHub actions.
+If your migration script checks aren't run before every database deployment, their value diminishes and issues can slip through the cracks. We've made automating migration script checks really easy, especially if you are able to use GitHub actions.
 
 Having these checks run on every commit and/or Pull Request is the best way to catch issues early and save time firefighting.
 
@@ -16,16 +16,16 @@ Having these checks run on every commit and/or Pull Request is the best way to c
 Flyway Hub provides a wizard to create a GitHub Actions workflow in just a few simple steps. When using Flyway Hub and viewing a project, you can start the wizard by clicking "Configure automated checks". The wizard helps you to:
 
 - Create a <a href="https://docs.github.com/en/actions/security-guides/encrypted-secrets">GitHub Secret</a> containing a Flyway Hub access token
-- Commit a <a href="https://docs.github.com/en/actions/automating-builds-and-tests/about-continuous-integration">GitHub Action workflow</a> to your repository, which runs the Pre-flight checks
+- Commit a <a href="https://docs.github.com/en/actions/automating-builds-and-tests/about-continuous-integration">GitHub Action workflow</a> to your repository, which runs the migration script checks
 - Validate your workflow with a manual run
 
-By default with this workflow, your pre-flight checks will run as a <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/collaborating-on-repositories-with-code-quality-features/about-status-checks">status check</a> on every Pull Request and every time a change to your migrations folder is committed to your default branch. You can modify the workflow file to use any <a href="https://docs.github.com/en/actions/learn-github-actions/events-that-trigger-workflows">GitHub Actions trigger</a>.
+By default with this workflow, your migration script checks will run as a <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/collaborating-on-repositories-with-code-quality-features/about-status-checks">status check</a> on every Pull Request and every time a change to your migrations folder is committed to your default branch. You can modify the workflow file to use any <a href="https://docs.github.com/en/actions/learn-github-actions/events-that-trigger-workflows">GitHub Actions trigger</a>.
 
 ## Other CI Tools
 
-If you do not wish to use GitHub Actions to automate your pre-flight checks, it is possible to use another CI tool.
+If you do not wish to use GitHub Actions to automate your migration script checks, it is possible to use another CI tool.
 
-This <a href="https://github.com/red-gate/flyway-hub-migration-test/blob/main/entrypoint.sh">script</a> can be added as a step in your CI provider, which will run your pre-flight check and report success or failure. The script requires the following to run:
+This <a href="https://github.com/red-gate/flyway-hub-migration-test/blob/main/entrypoint.sh">script</a> can be added as a step in your CI provider, which will run your migration script checks and report success or failure. The script requires the following to run:
 
 - **Environment variable**: `FLYWAY_HUB_ACCESS_TOKEN` - An access token for Flyway Hub creating by clicking "Configure automated checks".
 - **Environment variable**: `GITHUB_SHA` - The commit SHA that triggered the workflow. For example, *ffac537e6cbbf934b08745a378932722df287a53*
