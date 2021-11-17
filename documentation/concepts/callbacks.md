@@ -171,6 +171,10 @@ These are the events Flyway supports:
         <td>createSchema</td>
         <td>Before automatically creating non-existent schemas</td>
     </tr>
+    <tr id="beforeConnect">
+        <td>beforeConnect {% include teams.html %}</td>
+        <td>Before Flyway connects to the database</td>
+    </tr>
     </tbody>
 </table>
 
