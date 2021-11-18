@@ -63,6 +63,38 @@ Support Level determines the degree of support available for this database ([lea
 </tr>
 </table>
 
+## Java Usage
+SQLServer support is a separate dependency for Flyway and will need to be added to your Java project to access these features.
+
+### Maven
+#### Community
+```xml
+<dependency>
+    <groupId>org.flywaydb</groupId>
+    <artifactId>flyway-sqlserver</artifactId>
+</dependency>
+```
+#### Teams
+```xml
+<dependency>
+    <groupId>org.flywaydb.enterprise</groupId>
+    <artifactId>flyway-sqlserver</artifactId>
+</dependency>
+```
+### Gradle
+#### Community
+```groovy
+dependencies {
+    compile "org.flywaydb:flyway-sqlserver"
+}
+```
+#### Teams
+```groovy
+dependencies {
+    compile "org.flywaydb.enterprise:flyway-sqlserver"
+}
+```
+
 ## SQL Script Syntax
 
 - [Standard SQL syntax](/documentation/concepts/migrations#sql-based-migrations#syntax) with statement delimiter **GO**
