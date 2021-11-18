@@ -15,36 +15,39 @@ The path to the SQL Server login module configuration file (e.g. `SQLJDBCDriver.
 
 ### Commandline
 ```powershell
-./flyway -sqlServer.kerberosLoginFile="/path/to/SQLJDBCDriver.conf" info
+./flyway -plugins.sqlserver.kerberos.login.file="/path/to/SQLJDBCDriver.conf" info
 ```
 
 ### Configuration File
 ```properties
-flyway.sqlServer.kerberosLoginFile=/path/to/SQLJDBCDriver.conf
+flyway.plugins.sqlserver.kerberos.login.file=/path/to/SQLJDBCDriver.conf
 ```
 
 ### Environment Variable
 ```properties
-FLYWAY_SQL_SERVER_KERBEROS_LOGIN_FILE=/path/to/SQLJDBCDriver.conf
+FLYWAY_PLUGINS_SQL_SERVER_KERBEROS_LOGIN_FILE=/path/to/SQLJDBCDriver.conf
 ```
 
 ### API
 ```java
-Flyway.configure()
-    .sqlServerKerberosLoginFile("/path/to/SQLJDBCDriver.conf")
-    .load()
+SQLServerConfigurationExtension sqlServerConfigurationExtension = PluginRegister.getConfigurationExtension(SQLServerConfigurationExtension.class)
+sqlServerConfigurationExtension.setKerberosLoginFile("/path/to/SQLJDBCDriver.conf");
 ```
 
 ### Gradle
 ```groovy
 flyway {
-    sqlServerKerberosLoginFile = '/path/to/SQLJDBCDriver.conf'
+    pluginConfiguration [
+        sqlserverKerberosLoginFile: '/path/to/SQLJDBCDriver.conf'
+    ]
 }
 ```
 
 ### Maven
 ```xml
 <configuration>
-    <sqlServerKerberosLoginFile>/path/to/SQLJDBCDriver.conf</sqlServerKerberosLoginFile>
+    <pluginConfiguration>
+        <sqlserverKerberosLoginFile>/path/to/SQLJDBCDriver.conf</sqlserverKerberosLoginFile>
+    </pluginConfiguration>
 </configuration>
 ```
