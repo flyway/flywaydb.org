@@ -35,7 +35,7 @@ FLYWAY_PLUGINS_VAULT_SECRETS=kv/data/flyway/flywayConfig1,kv/flyway/flywayConfig
 
 ### API
 ```java
-VaultConfigurationExtension vaultConfigurationExtension = PluginRegister.getConfigurationExtension(VaultConfigurationExtension.class)
+VaultConfigurationExtension vaultConfigurationExtension = PluginRegister.getPlugin(VaultConfigurationExtension.class)
 vaultConfigurationExtension.setVaultSecrets("kv/data/flyway/flywayConfig1", "kv/flyway/flywayConfig2");
 ```
 
