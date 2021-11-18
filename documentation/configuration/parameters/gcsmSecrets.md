@@ -32,7 +32,7 @@ FLYWAY_PLUGINS_GCSM_SECRETS=secret1,secret2
 
 ### API
 ```java
-GcsmConfigurationExtension gcsmConfigurationExtension = PluginRegister.getConfigurationExtension(GcsmConfigurationExtension.class)
+GcsmConfigurationExtension gcsmConfigurationExtension = PluginRegister.getPlugin(GcsmConfigurationExtension.class)
 gcsmConfigurationExtension.setGcsmSecrets("secret1", "secret2");
 ```
 

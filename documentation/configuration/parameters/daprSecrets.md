@@ -34,7 +34,7 @@ FLYWAY_PLUGINS_DAPR_SECRETS=secret1,secret2
 
 ### API
 ```java
-DaprConfigurationExtension daprConfigurationExtension = PluginRegister.getConfigurationExtension(DaprConfigurationExtension.class)
+DaprConfigurationExtension daprConfigurationExtension = PluginRegister.getPlugin(DaprConfigurationExtension.class)
 daprConfigurationExtension.setDaprSecrets("secret1", "secret2");
 ```
 
