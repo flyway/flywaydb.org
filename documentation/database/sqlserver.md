@@ -208,7 +208,7 @@ This is equivalent to the [process of setting `accessToken` as described on this
 
 Kerberos authentication can also be used to connect Flyway to your database.
 
-To set this up, you will need to pass the path to your Kerberos configuration file to the parameter [`kerberosConfigFile`](/documentation/configuration/parameters/kerberosConfigFile) and the path to your login module configuration file to the parameter [`sqlServer.kerberosLoginFile`](/documentation/configuration/parameters/sqlServerKerberosLoginFile).
+To set this up, you will need to pass the path to your Kerberos configuration file to the parameter [`kerberosConfigFile`](/documentation/configuration/parameters/kerberosConfigFile) and the path to your login module configuration file to the parameter [`plugin.sqlserver.kerberos.login.file`](/documentation/configuration/parameters/sqlServerKerberosLoginFile).
 
 You may also need to add `;authenticationScheme=JavaKerberos` to your JDBC URL.
 
