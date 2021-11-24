@@ -8,7 +8,9 @@ subtitle: flyway.ignoreMigrationPatterns
 # Ignore Migration Patterns
 
 ## Description
-Ignore migrations during `validate` according to a given list of [patterns](https://flywaydb.org/documentation/configuration/parameters/ignoreMigrationPatterns#patterns).
+Ignore migrations during `validate` and `repair` according to a given list of [patterns](https://flywaydb.org/documentation/configuration/parameters/ignoreMigrationPatterns#patterns).
+
+Only `Missing` migrations are ignored during `repair`,
 
 ### Patterns
 Patterns are of the form `type`:`status` with `*` matching `type` or `status`.
