@@ -17,6 +17,32 @@ Here's an overview of the biggest changes to Flyway over the past year or so.
 <h2>Full release notes</h2>
 
 <div class="release">
+    <h2 id="8.1.0">Flyway 8.1.0 (2021-11-25)</h2>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        <li>Grab DBMS_OUTPUT from Oracle when handling errors</li>
+    </ul>
+
+    <h3>Changes</h3>
+    <ul>
+        <li>Extract SQLServer code to plugin. This will need to be added as a new dependency. See <a href="/documentation/database/sqlserver">SQL Server documentation</a>.</li>
+        <li>Clean XML Schema Collections in SQL Server</li>
+        {% include issue.html id="3329" title="Allow null values for installed on by using commit timestamp in GCP Cloud Spanner" %}
+        {% include issue.html id="3332" title="Update GSON to 2.8.9" %}
+    </ul>
+
+    <h3>New features</h3>
+    <ul>
+        <li>Add validation patterns to repair for missing migrations</li>
+    </ul>
+
+    <p>
+        Thanks to plaflamme and leyuzhu for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
     <h2 id="8.0.5">Flyway 8.0.5 (2021-11-17)</h2>
 
     <h3>Bug fixes</h3>
