@@ -54,7 +54,7 @@ Support Level determines the degree of support available for this database ([lea
 </tr>
 <tr>
 <th>Ships with Flyway Command-line</th>
-<td>Yes</td>
+<td>No</td>
 <td>Yes</td>
 </tr>
 <tr>
@@ -73,6 +73,10 @@ Support Level determines the degree of support available for this database ([lea
 <td><code>org.mariadb.jdbc.Driver</code></td>
 </tr>
 </table>
+
+### Compatibility
+
+- If a MySQL driver is not present on the project classpath, MariaDB will be used as a fallback driver. If this is not desired, add `disableMariaDbDriver` to your database URL.
 
 ## SQL Script Syntax
 
