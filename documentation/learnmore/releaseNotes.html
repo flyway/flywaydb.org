@@ -17,6 +17,24 @@ Here's an overview of the biggest changes to Flyway over the past year or so.
 <h2>Full release notes</h2>
 
 <div class="release">
+    <h2 id="8.2.0">Flyway 8.2.0 (2021-11-30)</h2>
+
+    <h3>Breaking changes</h3>
+    <ul>
+        <li>Removing MySQL Driver from inclusion in Flyway distribution due to License. MariaDB will be used as fallback driver if no MySQL driver is present on the Classpath.</li>
+    </ul>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        {% include issue.html id="3331" title="Stop Flyway dropping schemas it did not create" %}
+    </ul>
+
+    <p>
+        Thanks to chipilov for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
     <h2 id="8.1.0">Flyway 8.1.0 (2021-11-25)</h2>
 
     <h3>Bug fixes</h3>
