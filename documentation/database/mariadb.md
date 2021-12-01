@@ -65,6 +65,38 @@ Support Level determines the degree of support available for this database ([lea
 </tr>
 </table>
 
+## Java Usage
+MariaDB support is a separate dependency for Flyway and will need to be added to your Java project to access these features.
+MariaDB is found within the `flyway-mysql` plugin module. 
+### Maven
+#### Community
+```xml
+<dependency>
+    <groupId>org.flywaydb</groupId>
+    <artifactId>flyway-mysql</artifactId>
+</dependency>
+```
+#### Teams
+```xml
+<dependency>
+    <groupId>org.flywaydb.enterprise</groupId>
+    <artifactId>flyway-mysql</artifactId>
+</dependency>
+```
+### Gradle
+#### Community
+```groovy
+dependencies {
+    compile "org.flywaydb:flyway-mysql"
+}
+```
+#### Teams
+```groovy
+dependencies {
+    compile "org.flywaydb.enterprise:flyway-mysql"
+}
+```
+
 ## SQL Script Syntax
 
 - [Standard SQL syntax](/documentation/concepts/migrations#sql-based-migrations#syntax) with statement delimiter **;**
