@@ -20,49 +20,10 @@
     <meta property="og:image" content="https://flywaydb.org/assets/logo/flyway-logo-tm.png"/>
     <meta property="fb:admins" content="762307805"/>
     <script type="text/javascript">
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-        ga('create', 'UA-8034033-6', 'flywaydb.org');
-        ga('set', 'forceSSL', true);
-        ga('set', 'anonymizeIp', true);
-        ga('send', 'pageview');
-    </script>
-    <script type="text/javascript">
-        var didInit = false;
-        function initMunchkin() {
-            if(didInit === false) {
-                didInit = true;
-                Munchkin.init('808-ITG-788');
-            }
-        }
-        var s = document.createElement('script');
-        s.type = 'text/javascript';
-        s.async = true;
-        s.src = '//munchkin.marketo.net/munchkin.js';
-        s.onreadystatechange = function() {
-            if (this.readyState === 'complete' || this.readyState === 'loaded') {
-                initMunchkin();
-            }
-        };
-        s.onload = initMunchkin;
-        document.getElementsByTagName('head')[0].appendChild(s);
-    </script>
-    <script type="text/javascript">
         if (self !== top) {
             top.location = self.location;
         }
     </script>
-    <script src="/assets/jquery-1.12.1/jquery-1.12.1.min.js" type="text/javascript"></script>
 </head>
 
 <body class="{{layout.tab}} {{page.tab}}">
@@ -90,96 +51,7 @@
 
 {% include footer-honeycomb.html %}
 
-<script src="/assets/bootstrap-3.3.6-dist/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="/assets/prettify-20110601/prettify.js" type="text/javascript"></script>
-<script src="/assets/toc.js" type="text/javascript"></script>
-<script type="text/javascript">
-    $(function () {
-        prettyPrint();
-        $('#toc').toc({ listType: 'ul', noBackToTopLinks: true, showSpeed: 0, headers: 'h2, h3', title: '' });
+{% include footer-javascript.html %}
 
-        $("h2[id],h3[id]").click(function () {
-            window.location.hash = $(this).attr("id");
-        });
-        $("tr[id]>td:first-child").click(function () {
-            window.location.hash = $(this).parent().attr("id");
-        });
-
-        $("a[href^=http]").each(function () {
-            if (this.href.indexOf(location.hostname) == -1) {
-                $(this).attr({
-                    target: "_blank"
-                });
-            }
-        });
-        $('.modal').on('shown.bs.modal', function() {
-            $(this).find('[autofocus]').focus();
-        });
-    });
-
-    if (navigator.platform.indexOf('Win') == -1) {
-        // Not windows
-        // Fix line continuation marks
-        $("pre.console").html(function () {
-            return $(this).html().replace(/\^\n/g, "\\\n");
-        });
-        // And prompt char
-        $("pre.console span").html(function () {
-            return $(this).html().replace("&gt;", "$");
-        });
-    }
-
-    function downloadDeferred(url) {
-        setTimeout(function () {
-            document.location.href = url;
-        }, 1000);
-    }
-
-    function hideAndDownload(id, url) {
-        $(id).modal('hide');
-
-        downloadDeferred("/download/thankyou?dl=" + url);
-    }
-
-    function hideAndSubmitTrialForm(formData) {
-        $.ajax({
-            type: "POST",
-            url: 'https://repo.flywaydb.org/license/trial',
-            data: formData
-        });
-
-        $('#flyway-trial-license-modal').modal('hide');
-    }
-</script>
-
-<!-- Twitter universal website tag code -->
-<script>
-    !function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
-    },s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='//static.ads-twitter.com/uwt.js',
-    a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
-    // Insert Twitter Pixel ID and Standard Event data below
-    twq('init','o3gfe');
-    twq('track','PageView');
-</script>
-<!-- End Twitter universal website tag code -->
-
-<!-- Place this tag right after the last button or just before your close body tag. -->
-<script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
-
-<script type="text/javascript">
-    _linkedin_partner_id = "36413";
-    window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
-    window._linkedin_data_partner_ids.push(_linkedin_partner_id);
-    </script><script type="text/javascript">
-    (function(){var s = document.getElementsByTagName("script")[0];
-    var b = document.createElement("script");
-    b.type = "text/javascript";b.async = true;
-    b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
-    s.parentNode.insertBefore(b, s);})();
-    </script>
-<noscript>
-    <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=36413&fmt=gif" />
-</noscript>
-    
 </body>
 </html>

@@ -18,84 +18,81 @@
             </div>
             <div class="modal-body">
                 <form id="mktoForm_2997"></form>
-
-                <div class="privacy-notice">
-                    <p>We'll use your details to follow up with you about our products, solutions and events.</p>
-                    <p>To stop hearing from us, use the unsubscribe links in our emails, or let us know.</p>
-                    <p><a href="https://www.red-gate.com/website/legal" target="_blank" rel="noopener noreferrer">Read the full privacy notice.</a></p>
-                </div>
-
                 <p class="text-center" style="margin-top:10px;"><a class="skip-to-download" href="">Skip to download</a></p>
             </div>
         </div>
     </div>
 </div>
 
-<script src="//content.red-gate.com/js/forms2/js/forms2.min.js"></script>
 <script>
-    MktoForms2.loadForm("//content.red-gate.com", "808-ITG-788", 2997, function(marketoForm) {
-        marketoForm.onValidate(function(successful) {
-            if (!successful) {
-                marketoForm.submittable(false);
-            } else {
+    window.addEventListener('load', function(){
+        window.Redgate.Marketo.create({
+            formId: 2997,
+            callback: function(marketoForm) {
+                marketoForm.onValidate(function(successful) {
+                    if (!successful) {
+                        marketoForm.submittable(false);
+                    } else {
 
-                // Do some custom validation.
+                        // Do some custom validation.
 
-                // Get the fields and their values from the form.
-                var fields = marketoForm.vals();
+                        // Get the fields and their values from the form.
+                        var fields = marketoForm.vals();
 
-                // Custom object for storing info about the fail.
-                var fail = {
-                    isFail: false,
-                    message: '',
-                    element: null,
-                };
+                        // Custom object for storing info about the fail.
+                        var fail = {
+                            isFail: false,
+                            message: '',
+                            element: null,
+                        };
 
-                // Email validation.
-                if (typeof fields.Email !== 'undefined') {
+                        // Email validation.
+                        if (typeof fields.Email !== 'undefined') {
 
-                    // Email regex provided by https://regex101.com/r/L9Z2N0/1.
-                    // Check that the format is {something}@{something}.{something}.
-                    var emailRegex = /\S+@\S+\.\S+/;
+                            // Email regex provided by https://regex101.com/r/L9Z2N0/1.
+                            // Check that the format is {something}@{something}.{something}.
+                            var emailRegex = /\S+@\S+\.\S+/;
 
-                    if (emailRegex.test(fields.Email) === false) {
-                        fail.isFail = true;
-                        fail.message = 'Please enter a valid email address.';
-                        fail.element = marketoForm.getFormElem().find('input[name="Email"]');
+                            if (emailRegex.test(fields.Email) === false) {
+                                fail.isFail = true;
+                                fail.message = 'Please enter a valid email address.';
+                                fail.element = marketoForm.getFormElem().find('input[name="Email"]');
+                            }
+                        }
+
+                        // If form validation fails.
+                        if (fail.isFail) {
+
+                            // Stop the form from being submittable.
+                            marketoForm.submittable(false);
+
+                            // Show an error message against the invalid field.
+                            marketoForm.showErrorMessage(fail.message, fail.element);
+
+                            // Display the field as invalid using the Marketo class.
+                            fail.element.get(0).classList.add('mktoInvalid');
+                        } else {
+
+                            // All is good, continue as normal.
+                            marketoForm.submittable(true);
+                        }
                     }
-                }
+                });
 
-                // If form validation fails.
-                if (fail.isFail) {
+                // On successful submission of the form, redirect the user to the relevant download page.
+                marketoForm.onSuccess(function() {
+                    var downloadLink = document.querySelector('.download-email-modal .skip-to-download');
 
-                    // Stop the form from being submittable.
-                    marketoForm.submittable(false);
+                    if (downloadLink) {
+                        
+                        // Redirect the user to the download page.
+                        window.location.href = downloadLink;
 
-                    // Show an error message against the invalid field.
-                    marketoForm.showErrorMessage(fail.message, fail.element);
-
-                    // Display the field as invalid using the Marketo class.
-                    fail.element.get(0).classList.add('mktoInvalid');
-                } else {
-
-                    // All is good, continue as normal.
-                    marketoForm.submittable(true);
-                }
-            }
-        });
-
-        // On successful submission of the form, redirect the user to the relevant download page.
-        marketoForm.onSuccess(function() {
-            var downloadLink = document.querySelector('.download-email-modal .skip-to-download');
-
-            if (downloadLink) {
-                
-                // Redirect the user to the download page.
-                window.location.href = downloadLink;
-
-                // Return false to stop the form from reloading the page.
-                return false;
-            }
+                        // Return false to stop the form from reloading the page.
+                        return false;
+                    }
+                });
+            },
         });
     });
 
