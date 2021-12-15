@@ -8,10 +8,6 @@ redirect_from: /documentation/commandline/
 
 The Flyway command-line tool is a standalone Flyway distribution. It runs on Windows, macOS and Linux and it is primarily meant for users who wish to migrate their database from the command-line without having to integrate Flyway into their applications nor having to install a build tool.
 
-**Pre-requisites**
-To spin up instant copies of dev, test and CI databases in the cloud, for free, you will need a Spawn account.<br/>
-[Create a new Spawn account](/documentation/spawn/firststeps/installation){:target="_blank"}.
-
 ## Download and installation
 
 Select the platform that you need. Each download contains all editions of Flyway.<br/><br/>
