@@ -8,49 +8,26 @@ redirect_from: /getStarted/firststeps/commandline/
 # First Steps: Command-line
 
 This brief tutorial will teach **how to get up and running with the Flyway Command-line tool**. It will take you through the
-steps on how to configure it and how to write and execute your first few database migrations, using [Spawn](/documentation/spawn){:target="_blank"}
-to provision a database instance without the need for installing any database engines onto your own machine. You can create MySQL,
-MSSQL and PostgreSQL databases with Spawn that will work with Flyway.
+steps on how to configure it and how to write and execute your first few database migrations.
 
-This tutorial should take you about **10 minutes** to complete.
+This tutorial should take you about **5 minutes** to complete.
 
 ## Prerequisites
 
 Start by [downloading the Flyway Command-line Tool](/download) for your platform and extract it.
 
-Install Spawn by visiting the [getting started documentation](/documentation/spawn/firststeps/installation){:target="_blank"} and following
-the installation steps.
-
 ## Configuring Flyway
-
-To configure Flyway, we first need a database we can connect to. We’ll use Spawn to create your own, isolated database environment
-from which you can run migrations against. This will create you your first data container, which is your database instance. Here we
-are specifying a PostgreSQL database but you can also specify `mysql-flyway-getting-started` or `mssql-flyway-getting-started`:
-
-<pre class="console"><span>&gt;</span> spawnctl create data-container \
-  --image postgres-flyway-getting-started \
-  --name flyway-container \
-  --lifetime 24h</pre>
-
-This will return connection string details which is used to connect and query using your normal tools:
-
-<pre class="console">Data container 'flyway-container' created!
--> Host=instances.spawn.cc;Port=xxxxx;Username=xxxx;Database=foobardb;Password=xxxxxxxxx</pre>
-
-You can retrieve these details at any time by running:
-
-<pre class="console"><span>&gt;</span> spawnctl get data-container flyway-container -o yaml</pre>
 
 Let's now jump into our new directory created from downloading Flyway:
 
 <pre class="console"><span>&gt;</span> cd flyway-{{ site.flywayVersion }}</pre>
 
-Configure Flyway by editing `/conf/flyway.conf` with your Spawn data container connection details, like this:
+Configure Flyway by editing `/conf/flyway.conf`, like this:
 
 ```properties
-flyway.url=jdbc:postgresql://instances.spawn.cc:<Port>/foobardb
-flyway.user=<User>
-flyway.password=<Password>
+flyway.url=jdbc:h2:file:./foobardb
+flyway.user=SA
+flyway.password=
 ```
 
 ## Creating the first migration
@@ -72,7 +49,7 @@ It's now time to execute Flyway to migrate your database:
 
 If all went well, you should see the following output:
 
-<pre class="console">Database: jdbc:postgresql://instances.spawn.cc:&lt;Port&gt;/foobardb (PostgreSQL 11.0)
+<pre class="console">Database: jdbc:h2:file:./foobardb (H2 1.4)
 Successfully validated 1 migration (execution time 00:00.008s)
 Creating Schema History table: "PUBLIC"."flyway_schema_history"
 Current version of schema "PUBLIC": << Empty Schema >>
@@ -93,30 +70,17 @@ and execute it by issuing:
 
 You now get:
 
-<pre class="console">Database: jdbc:postgresql://instances.spawn.cc:&lt;Port&gt;/foobardb (PostgreSQL 11.0)
+<pre class="console">Database: jdbc:h2:file:./foobardb (H2 1.4)
 Successfully validated 2 migrations (execution time 00:00.018s)
 Current version of schema "PUBLIC": 1
 Migrating schema "PUBLIC" to version 2 - Add people
 Successfully applied 1 migration to schema "PUBLIC" (execution time 00:00.016s)</pre>
 
-Any time you want to reset your database back to its original state, in this case an empty instance, you can run a
-reset command on your Spawn data container:
-
-<pre class="console"><span>&gt;</span> spawnctl reset data-container flyway-container</pre>
-
-You can then re-run `migrate` on your database.
-
-## Continue to use Spawn
-
-At the start of this tutorial you used [Spawn](https://spawn.cc?utm_source=flyway&utm_medium=docs&utm_campaign=get_started&utm_id=flyway) to provision a database to learn how Flyway works.
-
-[Spawn](https://spawn.cc?utm_source=flyway&utm_medium=docs&utm_campaign=get_started&utm_id=flyway) is a cloud-hosted database provisioning service provided by Redgate. You can continue to use it for development or CI workflows. Read more about the features and use cases on the [Spawn Website](https://spawn.cc?utm_source=flyway&utm_medium=docs&utm_campaign=get_started&utm_id=flyway).
-
 ## Summary
 
 In this brief tutorial we saw how to:
-- install the Flyway Command-line tool and Spawn
-- configure it so it can talk to our Spawn database
+- install the Flyway Command-line tool
+- configure it so it can talk to our database
 - write our first couple of migrations
 
 These migrations were then successfully found and executed.
