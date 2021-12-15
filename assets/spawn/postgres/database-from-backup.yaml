@@ -1,7 +1,0 @@
-sourceType: backup
-name: database-from-backup
-engine: postgresql
-version: 12.0
-backup:
-  folder: .
-  file: dump.sql

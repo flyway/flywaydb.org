@@ -1,7 +1,0 @@
-sourceType: backup
-name: database-from-backup
-engine: mysql
-version: 5.7
-backup:
-  folder: .
-  file: dump.sql
