@@ -10,56 +10,11 @@ redirect_from:
 # Tutorial: Undo Migrations
 {% include teams.html %}
 
+This tutorial assumes you have successfully completed the [**First Steps: Command-line**](/documentation/getstarted/firststeps/commandline)
+tutorial **If you have not done so, please do so first.** This tutorial picks up where that one left off.
+
 This brief tutorial will teach **how to use undo migrations**. It will take you through the
 steps on how to create and use them.
-
-## Setting up the database
-
-This tutorial picks up from where the [**First Steps: Command-line**](/documentation/getstarted/firststeps/commandline) tutorial left off.
-
-To get started quickly without having to run through that tutorial first, we will create a new [Spawn](/documentation/spawn){:target="_blank"} data container
-with the migrations from that tutorial already applied:
-
-<pre class="console"><span>&gt;</span> spawnctl create data-container \
-  --image postgres-flyway-getting-started-complete \
-  --name flyway-undo \
-  --lifetime 24h</pre>
-
-The `flyway-getting-started-complete` image is available for other database engines besides `postgres`. Use:
-
-```bash
-$ spawnctl get data-images --public | grep flyway-getting-started-complete
-```
-
-to find them.
-
-Configure Flyway by editing `./flyway.conf` with your Spawn data container connection details, like this:
-
-```properties
-flyway.url=jdbc:postgresql://instances.spawn.cc:<Port>/foobardb
-flyway.user=<User>
-flyway.password=<Password>
-```
-
-Create a `./sql` directory and create the two migration scripts that have already been applied.
-The first file should be called `V1__Create_person_table.sql`:
-
-```sql
-create table PERSON (
-    ID int not null,
-    NAME varchar(100) not null
-);
-```
-
-and the second one called `V2__Add_people.sql`:
-
-```sql
-insert into PERSON (ID, NAME) values (1, 'Axel');
-insert into PERSON (ID, NAME) values (2, 'Mr. Foo');
-insert into PERSON (ID, NAME) values (3, 'Ms. Bar');
-```
-
-The database is now ready to go.
 
 ## Introduction
 
@@ -74,7 +29,7 @@ After having completed the [First Steps: Command-line](/documentation/getstarted
 
 This should give you the following status:
 
-<pre class="console">Database: jdbc:postgresql://instances.spawn.cc:31585/ (PostgreSQL 11.0)
+<pre class="console">Database: jdbc:h2:file:./foobardb (H2 1.4)
 
 +-----------+---------+---------------------+------+---------------------+---------+----------+
 | Category  | Version | Description         | Type | Installed On        | State   | Undoable |
@@ -104,7 +59,7 @@ This is now the status
 
 <pre class="console"><span>flyway-{{ site.flywayVersion }}&gt;</span> flyway <strong>info</strong>
 
-Database: Database: jdbc:postgresql://instances.spawn.cc:31585/ (PostgreSQL 11.0)
+Database: Database: jdbc:h2:file:./foobardb (H2 1.4)
 
 +-----------+---------+---------------------+------+---------------------+---------+----------+
 | Category  | Version | Description         | Type | Installed On        | State   | Undoable |
@@ -125,7 +80,7 @@ So go ahead and invoke
 
 This will give you the following result:
 
-<pre class="console">Database: Database: jdbc:postgresql://instances.spawn.cc:31585/ (PostgreSQL 11.0)
+<pre class="console">Database: Database: jdbc:h2:file:./foobardb (H2 1.4)
 Current version of schema "PUBLIC": 2
 Undoing migration of schema "PUBLIC" to version 2 - Add people
 Successfully undid 1 migration to schema "PUBLIC" (execution time 00:00.030s)</pre>
@@ -134,7 +89,7 @@ And you can check that this is indeed the new status:
 
 <pre class="console"><span>flyway-{{ site.flywayVersion }}&gt;</span> flyway <strong>info</strong>
 
-Database: Database: jdbc:postgresql://instances.spawn.cc:31585/ (PostgreSQL 11.0)
+Database: Database: jdbc:h2:file:./foobardb (H2 1.4)
 
 +-----------+---------+---------------------+----------+---------------------+---------+----------+
 | Category  | Version | Description         | Type     | Installed On        | State   | Undoable |
@@ -151,7 +106,7 @@ We can now safely reapply it with
 
 <pre class="console"><span>flyway-{{ site.flywayVersion }}&gt;</span> flyway <strong>migrate</strong>
 
-Database: Database: jdbc:postgresql://instances.spawn.cc:31585/ (PostgreSQL 11.0)
+Database: Database: jdbc:h2:file:./foobardb (H2 1.4)
 Successfully validated 5 migrations (execution time 00:00.020s)
 Current version of schema "PUBLIC": 1
 Migrating schema "PUBLIC" to version 2 - Add people
@@ -161,7 +116,7 @@ And the status is now
 
 <pre class="console"><span>flyway-{{ site.flywayVersion }}&gt;</span> flyway <strong>info</strong>
 
-Database: Database: jdbc:postgresql://instances.spawn.cc:31585/ (PostgreSQL 11.0)
+Database: Database: jdbc:h2:file:./foobardb (H2 1.4)
 
 +-----------+---------+---------------------+----------+---------------------+---------+----------+
 | Category  | Version | Description         | Type     | Installed On        | State   | Undoable |

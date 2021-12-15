@@ -9,56 +9,11 @@ redirect_from:
 # Tutorial: Dry Runs
 {% include teams.html %}
 
+This tutorial assumes you have successfully completed the [**First Steps: Command-line**](/documentation/getstarted/firststeps/commandline)
+tutorial. **If you have not done so, please do so first.** This tutorial picks up where that one left off.
+
 This brief tutorial will teach **how to do Dry Runs**. It will take you through the
 steps on how to use them.
-
-## Setting up the database
-
-This tutorial picks up from where the [**First Steps: Command-line**](/documentation/getstarted/firststeps/commandline) tutorial left off.
-
-To get started quickly without having to run through that tutorial first, we will create a new [Spawn](/documentation/spawn/){:target="_blank"} data container
-with the migrations from that tutorial already applied:
-
-<pre class="console"><span>&gt;</span> spawnctl create data-container \
-  --image postgres-flyway-getting-started-complete \
-  --name flyway-dryrun \
-  --lifetime 24h</pre>
-
-The `flyway-getting-started-complete` image is available for other database engines besides `postgres`. Use:
-
-```bash
-$ spawnctl get data-images --public | grep flyway-getting-started-complete
-```
-
-to find them.
-
-Configure Flyway by editing `./flyway.conf` with your Spawn data container connection details, like this:
-
-```properties
-flyway.url=jdbc:postgresql://instances.spawn.cc:<Port>/foobardb
-flyway.user=<User>
-flyway.password=<Password>
-```
-
-Create a `./sql` directory and create the two migration scripts that have already been applied.
-The first file should be called `V1__Create_person_table.sql`:
-
-```sql
-create table PERSON (
-    ID int not null,
-    NAME varchar(100) not null
-);
-```
-
-and the second one called `V2__Add_people.sql`:
-
-```sql
-insert into PERSON (ID, NAME) values (1, 'Axel');
-insert into PERSON (ID, NAME) values (2, 'Mr. Foo');
-insert into PERSON (ID, NAME) values (3, 'Ms. Bar');
-```
-
-The database is now ready to go.
 
 ## Introduction
 
@@ -82,7 +37,7 @@ After having completed the [First Steps: Command-line](/documentation/getstarted
 
 This should give you the following status:
 
-<pre class="console">Database: jdbc:postgresql://instances.spawn.cc:31585/ (PostgreSQL 11.0)
+<pre class="console">Database: jdbc:h2:file:./target/foobar (H2 1.4))
 
 +-----------+---------+---------------------+------+---------------------+---------+
 | Category  | Version | Description         | Type | Installed On        | State   |
@@ -162,7 +117,7 @@ Either one of these approaches yields the same result as you can see using:
 
 This should give you the following status:
 
-<pre class="console">Database: jdbc:postgresql://instances.spawn.cc:31585/ (PostgreSQL 11.0)
+<pre class="console">Database: jdbc:h2:file:./target/foobar (H2 1.4)
 Schema version: 3
 
 +-----------+---------+---------------------+------+---------------------+---------+----------+
