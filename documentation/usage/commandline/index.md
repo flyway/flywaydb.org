@@ -319,8 +319,8 @@ For example, if you wished to use `log4j` v2 with the Flyway command line, you w
   <i class="fa fa-folder"></i> jars
   <i class="fa fa-folder"></i> jre
   <i class="fa fa-folder-open"></i> lib
-    <span><i class="fa fa-file-text"></i> log4j-api-2.11.2.jar</span>       <i class="fa fa-long-arrow-left"></i> log4j v2 jar
-    <span><i class="fa fa-file-text"></i> log4j-core-2.11.2.jar</span>      <i class="fa fa-long-arrow-left"></i> log4j v2 jar
+    <span><i class="fa fa-file-text"></i> log4j-api-2.16.0.jar</span>       <i class="fa fa-long-arrow-left"></i> log4j v2 jar
+    <span><i class="fa fa-file-text"></i> log4j-core-2.16.0.jar</span>      <i class="fa fa-long-arrow-left"></i> log4j v2 jar
   <i class="fa fa-folder"></i> licenses
   <i class="fa fa-folder"></i> sql
   <span><i class="fa fa-file"></i> log4j2.xml</span>                   <i class="fa fa-long-arrow-left"></i> log4j configuration
