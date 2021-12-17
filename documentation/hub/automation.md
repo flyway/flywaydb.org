@@ -23,13 +23,11 @@ By default with this workflow, your migration script checks will run as a <a hre
 
 ## Other CI Tools
 
-If you do not wish to use GitHub Actions to automate your migration script checks, it is possible to use another CI tool.
+If you do not wish to use GitHub Actions to automate your migration script checks, it is possible to use another CI tool by scripting the <a href="/documentation/hub/commandline">`flywayhub` command line</a>.
 
-This <a href="https://github.com/red-gate/flyway-hub-migration-test/blob/main/entrypoint.sh">script</a> can be added as a step in your CI provider, which will run your migration script checks and report success or failure. The script requires the following to run:
+To give you an idea of how the the `flywayhub` command line can be used in your CI process, take a look at the <a href="https://github.com/red-gate/flyway-hub-migration-test/blob/main/entrypoint.sh">implementation</a> of the Flyway Hub Github Action. Ths script requires the following to run:
 
-- **Environment variable**: `FLYWAY_HUB_ACCESS_TOKEN` - An access token for Flyway Hub creating by clicking "Configure automated checks".
-- **Environment variable**: `GITHUB_SHA` - The commit SHA that triggered the workflow. For example, *ffac537e6cbbf934b08745a378932722df287a53*
-- **Script argument**: `Project ID` - The ID of your Flyway Hub project, found in the URL when viewing a project
+- **Environment variable**: `FLYWAYHUB_ACCESS_TOKEN` - An access token for Flyway Hub creating by clicking "Configure automated checks".
 
 Would you like to see Flyway Hub integrated into your CI provider? <a href="mailto:flywayhub@red-gate.com">Let us know</a>
 
