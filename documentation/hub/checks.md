@@ -37,5 +37,5 @@ When creating a new project in Flyway Hub, we will do our best to automatically 
 
 Once you have a project created, you can easily <a href="/documentation/hub/automation">automate</a> the checks.
 
-<a href="/documentation/hub/automation"
-        class="btn btn-primary">Automation <i class="fa fa-arrow-right"></i></a>
+<a href="/documentation/hub/commandline"
+        class="btn btn-primary">Command line <i class="fa fa-arrow-right"></i></a>
