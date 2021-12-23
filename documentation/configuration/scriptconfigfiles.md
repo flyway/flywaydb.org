@@ -8,13 +8,13 @@ redirect_from: /documentation/scriptconfigfiles/
 
 It's possible to configure SQL migrations on a per-script basis.
 
-This is achieved by creating a script configuration file in the same folder as the migration. The script configuration 
+This is achieved by creating a script configuration file in the same folder as the migration. The script configuration
 file name must match the migration file name, with the `.conf` suffix added. Script configuration files do **not**
 need to be explicitly listed in the main configuration, or the command line.
 
 For example, a migration file `sql/V2__my_script.sql` would have a script configuration file `sql/V2__my_script.sql.conf`.
 
-Script Config Files have a subset of the options from the other ways of configuring Flyway (e.g. `flyway.conf`). See 
+Script Config Files have a subset of the options from the other ways of configuring Flyway (e.g. `flyway.conf`). See
 the [Reference](/documentation/configuration/scriptconfigfiles#reference) at the bottom of the page for the complete list of options.
 
 ## Structure
@@ -36,6 +36,10 @@ encoding=ISO_8859_1
 # Manually determine whether or not to execute this migration in a transaction. This is useful for
 # databases like PostgreSQL and SQL Server where certain statements can only execute outside a transaction.
 executeInTransaction=false
+
+# Whether this SQL migration should have its Flyway placeholders replaced. This behaves exactly like the global
+# 'placeholderReplacement' parameter but applies only to this script. Default: true
+placeholderReplacement=true
 
 # Whether this migration should be executed or ignored. Valid values are 'true', 'false', 'A==B', 'A!=B' (where
 # A,B are values), and combinations of these using `&&` (AND), `||` (OR) and parentheses. This
