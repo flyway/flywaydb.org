@@ -17,6 +17,34 @@ Here's an overview of the biggest changes to Flyway over the past year or so.
 <h2>Full release notes</h2>
 
 <div class="release">
+    <h2 id="8.3.0">Flyway 8.3.0 (2021-12-23)</h2>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        {% include issue.html id="3347" title="Fix NPE when parsing single-line 'BEGIN' statements in SQL Server and detect 'BEGIN CONVERSATION' and 'BEGIN DIALOG'" %}
+    </ul>
+
+    <h3>Changes</h3>
+    <ul>
+        <li>Teams license check no longer requires valid URL</li>
+    </ul>
+
+    <h3>Database compatibility</h3>
+    <ul>
+        {% include issue.html id="3343" title="Continue supporting TiDB in Community" %}
+    </ul>
+
+    <h3>New features</h3>
+    <ul>
+        {% include issue.html id="3365" title="Allow disabling placeholder replacement on a per-script basis" %}
+    </ul>
+
+    <p>
+        Thanks to noobgramming, jasouyris and md5 for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
     <h2 id="8.2.3">Flyway 8.2.3 (2021-12-20)</h2>
 
     <h3>Changes</h3>
