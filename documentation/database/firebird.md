@@ -54,6 +54,38 @@ Support Level determines the degree of support available for this database ([lea
 </tr>
 </table>
 
+## Java Usage
+Firebird support is a separate dependency for Flyway and will need to be added to your Java project to access these features.
+
+### Maven
+#### Community
+```xml
+<dependency>
+    <groupId>org.flywaydb</groupId>
+    <artifactId>flyway-firebird</artifactId>
+</dependency>
+```
+#### Teams
+```xml
+<dependency>
+    <groupId>org.flywaydb.enterprise</groupId>
+    <artifactId>flyway-firebird</artifactId>
+</dependency>
+```
+### Gradle
+#### Community
+```groovy
+dependencies {
+    compile "org.flywaydb:flyway-firebird"
+}
+```
+#### Teams
+```groovy
+dependencies {
+    compile "org.flywaydb.enterprise:flyway-firebird"
+}
+```
+
 ## SQL Script Syntax
 
  - [Standard SQL syntax](/documentation/concepts/migrations#syntax)
