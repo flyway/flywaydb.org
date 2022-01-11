@@ -17,6 +17,26 @@ Here's an overview of the biggest changes to Flyway over the past year or so.
 <h2>Full release notes</h2>
 
 <div class="release">
+    <h2 id="8.4.1">Flyway 8.4.1 (2022-01-11)</h2>
+
+    <h3>Changes</h3>
+    <ul>
+        <li>Extract Firebird code to plugin. This will need to be added as a new dependency. See Firebird documentation.</li>
+        <li>Bump Log4J suggested version to 2.17.1 to mitigate CVE-2021-44832</li>
+        {% include issue.html id="3372" title="Bump H2 to 2.0.206 due to GHSA-h376-j262-vhq6" %}
+    </ul>
+
+    <h3>Database compatibility</h3>
+    <ul>
+        {% include issue.html id="3357" title="Add MariaDB 10.2 support back to Community edition" %}
+    </ul>
+
+    <p>
+        Thanks to everflux and dblackstock for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
     <h2 id="8.4.0">Flyway 8.4.0 (2022-01-05)</h2>
 
     <h3>Changes</h3>
