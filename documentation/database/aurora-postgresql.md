@@ -11,7 +11,7 @@ subtitle: Aurora PostgreSQL
 - `12.x`
 - `11.x`
 - `10.x`
-- `9.6`
+- `9.6` {% include teams.html %}
 
 ## Support Level
 
@@ -30,7 +30,7 @@ subtitle: Aurora PostgreSQL
     </tr>
 </table>
 
-Support Level determines the degree of support available for this database ([learn more](/documentation/learnmore/database-support)). 
+Support Level determines the degree of support available for this database ([learn more](/documentation/learnmore/database-support)).
 
 ## Driver
 

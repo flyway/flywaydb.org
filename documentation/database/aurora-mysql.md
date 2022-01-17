@@ -7,6 +7,7 @@ subtitle: Aurora MySQL
 
 ## Supported Versions
 
+- `8.0`
 - `5.7` {% include teams.html %}
 - `5.6` {% include teams.html %}
 
