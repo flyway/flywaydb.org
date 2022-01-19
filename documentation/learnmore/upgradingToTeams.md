@@ -5,9 +5,9 @@ subtitle: Upgrading to Teams
 redirect_from: /documentation/upgradingToTeams/
 ---
 
-# Automatic Teams Trial and Upgrading to Flyway Teams
+# Upgrading to Flyway Teams
 
-Flyway allows you to use the Teams edition with all of its features within the first 28 days from your first deployment, after which it will revert to Community Edition unless you sign up for a [free trial](/download/teams?ref=upgradingTeamsDocs) or purchase a [full license](https://www.red-gate.com/products/dba/flyway/pricing).
+This article assumes you are a proud owner of a Flyway Teams license. If you are not, head over to the [download/pricing page](/download) to purchase a license or start a free trial.
 
 ## Upgrading from Community
 
