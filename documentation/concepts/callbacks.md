@@ -56,6 +56,10 @@ These are the events Flyway supports:
         <td>afterMigrate</td>
         <td>After successful Migrate runs</td>
     </tr>
+    <tr id="afterMigrateApplied">
+        <td>afterMigrateApplied</td>
+        <td>After successful Migrate runs where at least one migration has been applied</td>
+    </tr>
     <tr id="afterVersioned">
         <td>afterVersioned</td>
         <td>After all versioned migrations during Migrate</td>
