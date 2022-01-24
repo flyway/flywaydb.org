@@ -9,7 +9,7 @@ subtitle: MariaDB
 
 - `10.4`
 - `10.3`
-- `10.2` {% include teams.html %}
+- `10.2`
 - `10.1` {% include teams.html %}
 - `10.0` {% include teams.html %}
 - `5.5` {% include teams.html %}
@@ -34,7 +34,7 @@ subtitle: MariaDB
     </tr>
 </table>
 
-Support Level determines the degree of support available for this database ([learn more](/documentation/learnmore/database-support)). 
+Support Level determines the degree of support available for this database ([learn more](/documentation/learnmore/database-support)).
 
 ## Driver
 
@@ -67,7 +67,7 @@ Support Level determines the degree of support available for this database ([lea
 
 ## Java Usage
 MariaDB support is a separate dependency for Flyway and will need to be added to your Java project to access these features.
-MariaDB is found within the `flyway-mysql` plugin module. 
+MariaDB is found within the `flyway-mysql` plugin module.
 ### Maven
 #### Community
 ```xml
