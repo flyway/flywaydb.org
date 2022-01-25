@@ -18,7 +18,7 @@ The Flyway Test Pilot Program has been designed for advanced Flyway users to get
 
 In order to qualify for joining the program, we ask that you
 
-- Can commit to (up to) 4 hours a year helpling us with research, and testing beta features    
+- Can commit to (up to) 4 hours a year helping us with research, and testing beta features    
 - Use Flyway in a professional capacity (eg. as a developer, consultant or manager)
 
 Or that you
