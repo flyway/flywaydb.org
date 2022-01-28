@@ -12,8 +12,8 @@ subtitle: SQL Server
 - `2016` {% include teams.html %}
 - `2014` {% include teams.html %}
 - `2012` {% include teams.html %}
-- `2008 R2` {% include teams.html %}
-- `2008` {% include teams.html %}
+- `2008 R2` {% include enterprise.html %}
+- `2008` {% include enterprise.html %}
 
 ## Support Level
 
