@@ -5,7 +5,7 @@ subtitle: Secrets Management
 redirect_from: /documentation/awsSecretsManager/
 ---
 # Secrets Management
-{% include teams.html %}
+{% include enterprise.html %}
 
 A problem that organizations often encounter is where to store and how to access sensitive data such as the credentials for connecting to a database or their Flyway license key.
 
