@@ -17,8 +17,8 @@ subtitle: PostgreSQL
 - `9.4` {% include teams.html %}
 - `9.3` {% include teams.html %}
 - `9.2` {% include teams.html %}
-- `9.1` {% include teams.html %}
-- `9.0` {% include teams.html %}
+- `9.1` {% include enterprise.html %}
+- `9.0` {% include enterprise.html %}
 
 ## Support Level
 
