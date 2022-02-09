@@ -18,11 +18,11 @@ informative for you to be able to remember what each migration does. The checksu
 Versioned migrations are the most common type of migration. They are applied in order exactly once.
 
 Optionally their effect can be undone by supplying an **undo migration** with the same version.
- 
+
 **Repeatable migrations** have a description and a checksum, but no version. Instead of being run just once, they are
 (re-)applied every time their checksum changes.
 
-Within a single migration run, repeatable migrations are always applied last, after all pending versioned migrations 
+Within a single migration run, repeatable migrations are always applied last, after all pending versioned migrations
 have been executed. Repeatable migrations are applied in the order of their description.
 
 By default both versioned and repeatable migrations can be written either in **[SQL](/documentation/concepts/migrations#sql-based-migrations)**
@@ -114,7 +114,7 @@ several orders of magnitude faster than traditional backups and restores.
 ## Repeatable Migrations
 
 **Repeatable migrations** have a description and a checksum, but no version. Instead of being run just once, they are
-(re-)applied every time their checksum changes. 
+(re-)applied every time their checksum changes.
 
 This is very useful for managing database objects whose definition can then simply be maintained in a single file in
 version control. They are typically used for
@@ -129,7 +129,7 @@ involves making use of `CREATE OR REPLACE` clauses in your DDL statements.
 Here is an example of what a repeatable migration looks like:
 
 ```sql
-CREATE OR REPLACE VIEW blue_cars AS 
+CREATE OR REPLACE VIEW blue_cars AS
     SELECT id, license_plate FROM cars WHERE color='blue';
 ```
 
@@ -137,7 +137,7 @@ CREATE OR REPLACE VIEW blue_cars AS
 
 Migrations are most commonly written in **SQL**. This makes it easy to get started and leverage any existing scripts,
 tools and skills. It gives you access to the full set of capabilities of your database and eliminates the need to
-understand any intermediate translation layer. 
+understand any intermediate translation layer.
 
 SQL-based migrations are typically used for
 - DDL changes (CREATE/ALTER/DROP statements for TABLES,VIEWS,TRIGGERS,SEQUENCES,...)
@@ -187,7 +187,7 @@ The file name consists of the following parts:
 Optionally versioned SQL migrations can also omit both the separator and the description.
 
 The configuration option <code>validateMigrationNaming</code> determines how Flyway handles files that do not correspond with
-the naming pattern when carrying out a migration: if false then Flyway will simply ignore all such files, if true then 
+the naming pattern when carrying out a migration: if false then Flyway will simply ignore all such files, if true then
 Flyway will fail fast and list all files which need to be corrected.
 
 ### Discovery
@@ -204,7 +204,7 @@ property.
     <i class="fa fa-folder-open"></i> main
       <i class="fa fa-folder-open"></i> resources
         <span><i class="fa fa-folder-open"></i> db
-  <i class="fa fa-folder-open"></i> migration</span>                <i class="fa fa-long-arrow-left"></i> <code>classpath:db/migration</code> 
+  <i class="fa fa-folder-open"></i> migration</span>                <i class="fa fa-long-arrow-left"></i> <code>classpath:db/migration</code>
             <i class="fa fa-file-text"></i> R__My_view.sql
             <i class="fa fa-file-text"></i> U1.1__Fix_indexes.sql
             <i class="fa fa-file-text"></i> U2__Add a new table.sql
@@ -214,7 +214,7 @@ property.
   <span><i class="fa fa-folder-open"></i> my-other-folder</span>                  <i class="fa fa-long-arrow-left"></i> <code>filesystem:/my-project/my-other-folder</code>
     <i class="fa fa-file-text"></i> U1.2__Add_constraints.sql
     <i class="fa fa-file-text"></i> V1.2__Add_constraints.sql</pre>
-    
+
 New SQL-based migrations are **discovered automatically** through filesystem and Java classpath scanning at runtime.
 Once you have configured the [`locations`](/documentation/configuration/parameters/locations) you want to use, Flyway will
 automatically pick up any new SQL migrations as long as they conform to the configured *naming convention*.
@@ -301,7 +301,7 @@ Flyway discovers Java-based migrations on the Java classpath in the packages ref
     <i class="fa fa-folder-open"></i> main
       <i class="fa fa-folder-open"></i> java
         <span><i class="fa fa-folder-open"></i> db
-  <i class="fa fa-folder-open"></i> migration</span>            <i class="fa fa-long-arrow-left"></i> <code>classpath:db/migration</code> 
+  <i class="fa fa-folder-open"></i> migration</span>            <i class="fa fa-long-arrow-left"></i> <code>classpath:db/migration</code>
             <i class="fa fa-file-text"></i> R__My_view
             <i class="fa fa-file-text"></i> U1_1__Fix_indexes
             <i class="fa fa-file-text"></i> V1__Initial_version
@@ -314,7 +314,7 @@ scanning is recursive. Java migrations in subpackages of the specified ones are 
 ### Checksums and Validation
 
 Unlike SQL migrations, Java migrations by default do not have a checksum and therefore do not participate in the
-change detection of Flyway's validation. This can be remedied by implementing the 
+change detection of Flyway's validation. This can be remedied by implementing the
 `getChecksum()` method, which you can then use to provide your own checksum, which will then be
 stored and validated for changes.
 
@@ -331,7 +331,7 @@ import java.sql.PreparedStatement;
  */
 public class V1_2__Another_user extends BaseJavaMigration {
     public void migrate(Context context) throws Exception {
-        try (PreparedStatement statement = 
+        try (PreparedStatement statement =
                  context
                      .getConnection()
                      .prepareStatement("INSERT INTO test_user (name) VALUES ('Obelix')")) {
@@ -368,7 +368,7 @@ public class V1_2__Another_user extends BaseJavaMigration {
 }
 ```
 
-## Script migrations 
+## Script migrations
 {% include teams.html %}
 
 Sometimes it may be more desirable to use a scripting language for migrations. Flyway Teams currently supports the `.ps1`, `.bat`, `.cmd`, `.sh`, `.bash`, `.py` file extensions as migrations, and on non-windows platforms it also supports migrations without extensions (assuming a valid [shebang](https://en.wikipedia.org/wiki/Shebang_(Unix))).
