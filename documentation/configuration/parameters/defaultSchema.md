@@ -10,13 +10,12 @@ redirect_from: /documentation/configuration/defaultSchema/
 
 ## Description
 The default schema managed by Flyway. This schema will be the one containing the [schema history table](/documentation/concepts/migrations#schema-history-table).
-If specified, it _must_ be a member of the [schemas](/documentation/configuration/parameters/schemas) configuration parameter.
+If not specified in [schemas](/documentation/configuration/parameters/schemas), Flyway will automatically attempt to create and clean this schema first.
 
 This schema will also be the default for the database connection (provided the database supports this concept).
 
 ## Default
-If [schemas](/documentation/configuration/parameters/schemas) is specified, the first schema in that list. Otherwise,
-the database's default schema.
+If [schemas](/documentation/configuration/parameters/schemas) is specified, the first schema in that list. Otherwise, the database's default schema.
 
 ## Usage
 

@@ -14,8 +14,7 @@ Comma-separated, case-sensitive list of schemas managed by Flyway.
 Flyway will attempt to create these schemas if they do not already exist, and will clean them in the order of this list.
 If Flyway created them, then the schemas themselves will be dropped when cleaning.
 
-If [defaultSchema](/documentation/configuration/parameters/defaultSchema) is not specified, the first schema in this
-list also acts as the default schema, which is where the schema history table will be placed.
+If [defaultSchema](/documentation/configuration/parameters/defaultSchema) is not specified, the first schema in this list also acts as the default schema, which is where the schema history table will be placed.
 
 ## Usage
 
