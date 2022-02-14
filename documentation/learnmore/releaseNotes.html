@@ -16,6 +16,25 @@ Here's an overview of the biggest changes to Flyway over the past year or so.
 
 <h2>Full release notes</h2>
 
+
+<div class="release">
+    <h2 id="8.5.0">Flyway 8.5.0 (2022-02-14)</h2>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        <li>Fix exit code in Windows returning as 0 during error</li>
+        <li>Fix possible NPE when no default schema is specified</li>
+        <li>Ensure 'defaultSchema' is used over the first schema in 'schemas'</li>
+    </ul>
+
+    <h3>Changes</h3>
+    <ul>
+        <li>Upgrade PostgreSQL driver to fix RCE vulnerability</li>
+        <li>Remove displaying "user 'null'" when using Windows Authentication with SQL Server</li>
+    </ul>
+
+</div>
+
 <div class="release">
     <h2 id="8.4.4">Flyway 8.4.4 (2022-02-02)</h2>
 
