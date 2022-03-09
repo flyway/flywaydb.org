@@ -4,7 +4,7 @@ menu: tut_vault
 subtitle: 'Tutorial: Integrating Vault'
 ---
 # Tutorial: Integrating Vault
-{% include teams.html %}
+{% include enterprise.html %}
 
 This brief tutorial will teach you **how to integrate Vault into your Flyway process**.
 
