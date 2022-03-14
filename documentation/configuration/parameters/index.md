@@ -105,6 +105,7 @@ If using maven, config parameters can be set in the plugin configuration block, 
 - [scriptPlaceholderPrefix](/documentation/configuration/parameters/scriptPlaceholderPrefix)
 - [placeholderReplacement](/documentation/configuration/parameters/placeholderReplacement)
 - [placeholders](/documentation/configuration/parameters/placeholders)
+- [placeholderSeparator](/documentation/configuration/parameters/placeholderSeparator)
 - [placeholderSuffix](/documentation/configuration/parameters/placeholderSuffix)
 - [scriptPlaceholderSuffix](/documentation/configuration/parameters/scriptPlaceholderSuffix)
 
