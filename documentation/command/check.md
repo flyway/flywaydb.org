@@ -32,7 +32,7 @@ _One or more flags must be present_
 
 #### Usage Example:
 ```
-flyway check -changes -url=jdbc:example:database -user=username -password=password -check.tempUrl=jdbc:example:tempdatabase
+flyway check -changes -url=jdbc:example:database -user=username -password=password -check.tempUrl=jdbc:example:tempdatabase -check.outputTypes=html,json
 ```
 
 #### Requirements
