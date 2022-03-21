@@ -7,7 +7,9 @@ subtitle: Check
 # Check
 {% include enterprise.html %}
 
-Produces comparison reports to increase confidence in your migrations.
+Produces reports to increase confidence in your migrations.
+
+Flyway migrates against a temporary database and compares this against the target database in order to generate a report.
 
 #### Flags:
 _One or more flags must be present_
@@ -27,8 +29,8 @@ _One or more flags must be present_
 |    check.tempUrl             | **[REQUIRED]** URL of the temporary database
 |    check.tempUsername        | Username for the temporary database. Defaults to 'flyway.user'
 |    check.tempPassword        | Password for the temporary database. Defaults to 'flyway.password'
-|    check.outputLocation      | Destination folder for comparison reports. Defaults to the current directory
-|    check.outputTypes         | Format of comparison reports. Options are: 'json', and 'html'. Defaults to 'json'
+|    check.outputLocation      | Destination folder for reports. Defaults to the current directory
+|    check.outputTypes         | Format of reports. Options are: 'json', and 'html'. Defaults to 'json'
 
 #### Usage Example:
 ```
