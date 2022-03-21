@@ -5,6 +5,7 @@ subtitle: Check
 ---
 
 # Check
+{% include enterprise.html %}
 
 Produces comparison reports to increase confidence in your migrations.
 
