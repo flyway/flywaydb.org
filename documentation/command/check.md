@@ -10,6 +10,7 @@ subtitle: Check
 Produces reports to increase confidence in your migrations.
 
 Flyway migrates against a temporary database and compares this against the target database in order to generate a report.
+This temporary database will be cleaned both before and after it is used, so you must ensure it does not contain anything of importance.
 
 #### Flags:
 _One or more flags must be present_
@@ -26,7 +27,7 @@ _One or more flags must be present_
 |    url                       | **[REQUIRED]** URL of the target database
 |    user                      | **[REQUIRED]** Username for the target database
 |    password                  | **[REQUIRED]** Password for the target database
-|    check.tempUrl             | **[REQUIRED]** URL of the temporary database
+|    check.tempUrl             | **[REQUIRED]** URL of the temporary database. Note: This database will be cleaned!
 |    check.tempUsername        | Username for the temporary database. Defaults to 'flyway.user'
 |    check.tempPassword        | Password for the temporary database. Defaults to 'flyway.password'
 |    check.outputLocation      | Destination folder for reports. Defaults to the current directory
