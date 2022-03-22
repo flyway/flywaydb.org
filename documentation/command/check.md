@@ -31,7 +31,7 @@ _One or more flags must be present_
 |    check.tempUsername        | Username for the temporary database. Defaults to 'flyway.user'
 |    check.tempPassword        | Password for the temporary database. Defaults to 'flyway.password'
 |    check.outputLocation      | Destination folder for reports. Defaults to the current directory
-|    check.outputTypes         | Format of reports. Options are: 'json', and 'html'. Defaults to 'json'
+|    check.outputTypes         | Format of reports. Options are: 'json', and 'html'. Defaults to 'html,json'
 
 #### Usage Example:
 ```
