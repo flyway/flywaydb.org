@@ -27,10 +27,7 @@ _One or more flags must be present_
 
 | Parameter                    | Description
 | ---------------------------- | -----------------------------------------------------------
-|    url                       | **[REQUIRED]** URL of the target database
-|    user                      | **[REQUIRED]** Username for the target database
-|    password                  | **[REQUIRED]** Password for the target database
-|    check.tempUrl             | **[REQUIRED]** URL of the temporary database. Note: This database will be cleaned!
+|    check.tempUrl             | **[REQUIRED]** URL for a temporary database. Note: This database will be cleaned!
 |    check.tempUsername        | Username for the temporary database. Defaults to 'flyway.user'
 |    check.tempPassword        | Password for the temporary database. Defaults to 'flyway.password'
 |    check.outputLocation      | Destination folder for reports. Defaults to the current directory
@@ -38,7 +35,7 @@ _One or more flags must be present_
 
 #### Usage Example:
 ```
-flyway check -changes -url=jdbc:example:database -user=username -password=password -check.tempUrl=jdbc:example:tempdatabase -check.outputTypes=html,json
+flyway check -changes -url=jdbc:example:database -user=username -password=password -check.tempUrl=jdbc:example:tempdatabase
 ```
 
 ##### Example configuration file
