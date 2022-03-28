@@ -18,6 +18,25 @@ Here's an overview of the biggest changes to Flyway over the past year or so.
 
 
 <div class="release">
+    <h2 id="8.5.5">Flyway 8.5.5 (2022-03-28)</h2>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        <li>SQL*Plus 'spool' now ignores value of 'feedback' for update statements</li>
+        {% include issue.html id="3413" title="Script migrations applied previously using Teams Edition no longer cause an error in Community Edition" %}
+    </ul>
+
+    <h3>Java compatibility</h3>
+    <ul>
+        <li>Upgrade jackson-databind to address CVE-2020-36518</li>
+    </ul>
+
+    <p>
+        Thanks to xmanemran for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
     <h2 id="8.5.4">Flyway 8.5.4 (2022-03-15)</h2>
 
     <h3>Changes</h3>
