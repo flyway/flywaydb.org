@@ -21,7 +21,7 @@ _One or more flags must be present_
 | Parameter                    | Description
 | ---------------------------- | --------------------------------------------------------------
 |    -changes                  |  Include pending changes that will be applied to the database
-|    -IAgreeToTheEULA          |  **[REQUIRED]** I agree to the EULA (https://www.red-gate.com/support/license/)
+|    -IAgreeToTheEULA          |  **[REQUIRED]** I agree to the [EULA](https://www.red-gate.com/support/license/)
 
 #### Configuration parameters:
  _Format: -key=value_
