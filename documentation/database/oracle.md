@@ -35,7 +35,7 @@ All editions are supported, including XE.
     </tr>
 </table>
 
-Support Level determines the degree of support available for this database ([learn more](/documentation/learnmore/database-support)). 
+Support Level determines the degree of support available for this database ([learn more](/documentation/learnmore/database-support)).
 
 ## Driver
 
@@ -99,7 +99,7 @@ END;
 -- Placeholder
 INSERT INTO ${tableName} (name) VALUES ('Mr. T');</pre>
 
-## SQL*Plus commands 
+## SQL*Plus commands
 {% include teams.html %}
 
 In addition to the regular Oracle SQL syntax, Flyway Teams also comes with support for many Oracle SQL*Plus commands.
@@ -157,11 +157,11 @@ The following commands are fully supported and can be used just like any regular
 - `WHENEVER SQLERROR EXIT FAILURE`
 - `WHENEVER SQLERROR EXIT SQL.SQLCODE`
 
-The short form of these commands is also supported. 
+The short form of these commands is also supported.
 
 ### Site Profiles (`glogin.sql`) & User Profiles (`login.sql`)
 
-This feature allows you to set up your SQL\*Plus environment to use the same settings with each session. It allows you to execute statements before every script run, and is typically used to configure 
+This feature allows you to set up your SQL\*Plus environment to use the same settings with each session. It allows you to execute statements before every script run, and is typically used to configure
 the session in a consistent manner by calling SQL*Plus commands such as `SET FEEDBACK` and `SET DEFINE`.
 
 Flyway will look for `login.sql` in all the valid migration locations, and load it if present. `glogin.sql` will be loaded from `$ORACLE_HOME/sqlplus/admin/glogin.sql` in UNIX, and `ORACLE_HOME\sqlplus\admin\glogin.sql` otherwise.
@@ -174,12 +174,12 @@ When `SET SERVEROUTPUT ON` is invoked, output produced by `DBMS_OUTPUT.PUT_LINE`
 
 ### Variable substitution
 
-By default SQL\*Plus variable substitution support is enabled. `&VAR`-style variables will automatically be replaced 
-with the matching value supplied by either Flyway's regular placeholder configuration or a `DEFINE` command. 
-Use of these variables can be disabled in the usual way using the `SET DEFINE OFF` command. 
+By default SQL\*Plus variable substitution support is enabled. `&VAR`-style variables will automatically be replaced
+with the matching value supplied by either Flyway's regular placeholder configuration or a `DEFINE` command.
+Use of these variables can be disabled in the usual way using the `SET DEFINE OFF` command.
 
 While SQL\*Plus is interactive and will prompt for missing variable values, Flyway does not; it is an error not
-to provide a value for all variables that need to be substituted. 
+to provide a value for all variables that need to be substituted.
 
 Statements which contain a `&VAR`-style expression which is not intended to be substituted, such as in a
 literal string, will either require `SET DEFINE OFF` beforehand, or some alternative construct to avoid use of
@@ -206,11 +206,11 @@ First you need to ensure you have set the environment variable `TNS_ADMIN` to po
 
 With that configuration you will be able to connect to your database without providing any credentials in config.
 
-### Kerberos 
+### Kerberos
 {% include teams.html %}
 
 You can authenticate using Kerberos by specifying the location of the local Kerberos configuration file (which contains
-details such as the locations of Kerberos Key Distribution Centers), and optionally the local credential cache, to 
+details such as the locations of Kerberos Key Distribution Centers), and optionally the local credential cache, to
 Flyway. For example, in `flyway.conf`:
 
 ```properties
@@ -243,7 +243,7 @@ As much as possible, Flyway aims to emulate the behavior of the SQL*Plus client 
 SQL*Plus client; in general abbreviations are supported by Flyway as documented [here](https://docs.oracle.com/cd/B19306_01/server.102/b14357/ch12041.htm),
 so for example `SHOW ERRORS` can be abbreviated to `SHO ERR`, but not `SHOW ERROR` (which is accepted by the client).
 
-- SQL*Plus is known to replace CRLF pairs in string literals with single LFs. Flyway will not do this - instead it preserves scripts as they are written    
+- SQL*Plus is known to replace CRLF pairs in string literals with single LFs. Flyway will not do this - instead it preserves scripts as they are written
 
 If you encounter a discrepancy between the Oracle SQL*Plus client and Flyway, let us know via the official support email.
 
