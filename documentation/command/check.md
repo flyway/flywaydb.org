@@ -21,6 +21,7 @@ _One or more flags must be present_
 | Parameter                    | Description
 | ---------------------------- | --------------------------------------------------------------
 |    -changes                  |  Include pending changes that will be applied to the database
+|    -IAgreeToTheEULA          |  I agree to the EULA (https://www.red-gate.com/support/license/)
 
 #### Configuration parameters:
  _Format: -key=value_
@@ -35,7 +36,7 @@ _One or more flags must be present_
 
 #### Usage Example:
 ```
-flyway check -changes -url=jdbc:example:database -user=username -password=password -check.tempUrl=jdbc:example:tempdatabase
+flyway check -changes -url=jdbc:example:database -user=username -password=password -check.tempUrl=jdbc:example:tempdatabase -IAgreeToTheEULA
 ```
 
 ##### Example configuration file
