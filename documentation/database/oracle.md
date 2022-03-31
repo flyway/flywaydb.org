@@ -106,6 +106,9 @@ In addition to the regular Oracle SQL syntax, Flyway Teams also comes with suppo
 
 This support is disabled by default and must be activated using the [`oracle.sqlplus`](/documentation/configuration/parameters/oracleSqlPlus) flag.
 
+The SQL\*Plus capability within Flyway is a re-implementation so may not behave exactly as native SQL\*Plus does.
+If a feature you're looking for doesn't work as expected then we recommend using [script migrations](/documentation/concepts/migrations#script-migrations) to invoke the SQL*Plus command-line tool.
+
 ### Supported commands
 
 The following commands are fully supported and can be used just like any regular command within your SQL migrations:
