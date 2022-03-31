@@ -16,7 +16,6 @@ This temporary database will be cleaned both before and after it is used, so you
 - .NET 6 is required in order to generate reports. You can download it from [here](https://dotnet.microsoft.com/en-us/download/dotnet/6.0).
 
 #### Flags:
-_One or more flags must be present_
 
 | Parameter                    | Description
 | ---------------------------- | --------------------------------------------------------------
