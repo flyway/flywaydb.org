@@ -10,7 +10,7 @@ subtitle: Check
 Produces reports to increase confidence in your migrations.
 
 Flyway migrates against a temporary database and compares this against the target database in order to generate a report.
-This temporary database will be cleaned both before and after it is used, so you must ensure it does not contain anything of importance.
+**This temporary database will be cleaned before it is used, so you must ensure it does not contain anything of importance.**
 
 #### Requirements
 - .NET 6 is required in order to generate reports. You can download it from [here](https://dotnet.microsoft.com/en-us/download/dotnet/6.0).
