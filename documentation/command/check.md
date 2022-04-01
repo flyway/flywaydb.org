@@ -28,7 +28,7 @@ This temporary database will be cleaned both before and after it is used, so you
 | Parameter                    | Description
 | ---------------------------- | -----------------------------------------------------------
 |    check.tempUrl             | **[REQUIRED]** URL for a temporary database. Note: This database will be cleaned!
-|    check.tempUsername        | Username for the temporary database. Defaults to 'flyway.user'
+|    check.tempUser            | Username for the temporary database. Defaults to 'flyway.user'
 |    check.tempPassword        | Password for the temporary database. Defaults to 'flyway.password'
 |    check.outputLocation      | Destination folder for reports. Defaults to the current directory
 |    check.outputTypes         | Format of reports. Options are: 'json', and 'html'. Defaults to 'html,json'
