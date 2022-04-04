@@ -2,13 +2,16 @@
 layout: documentation
 menu: check
 subtitle: Check
-redirect_from: /documentation/check/
 ---
 # Check
-{% include teams.html %}
+{% include enterprise.html %}
 
-Check produces comparison reports to indicate differences between the current configuration of your database and what your migration scripts define. You might use this to get a summary of pending changes as part of an in-person review process or as a validation of the effect of all pending changes. 
-## How it works  
+Check produces reports to indicate differences between your current database and what your migration scripts define. You might use this to get a summary of pending changes as part of an in-person review process or as a validation of the effect of all pending changes. 
+
+The command uses a flag to indicate the kind of report to generate:
+## -changes flag  
+
+This is used to report on the pending changes that have yet to be applied to the database.
 - A temporary database is used and your migrations are run against this to produce a view of your target configuration. 
     - There is no requirement for the temporary database to be in your production system 
     - Please note that the temporary database will be cleaned before the operation starts.
@@ -18,6 +21,3 @@ Check produces comparison reports to indicate differences between the current co
     - html : Human readable output
     - json : Machine readable output that is easy to parse as part of your CI/CD pipeline
 
-<p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/command/migrate">Migrate<i class="fa fa-arrow-right"></i></a>
-</p>
