@@ -849,6 +849,10 @@ title: Documentation
                             <a href="/documentation/learnmore/existing">Existing Database Setup</a></li>
 
                             <li
+                            {% if page.menu == 'requirements' %} class="nav--vertical__active" {% endif %}>
+                            <a href="/documentation/learnmore/requirements">Requirements</a></li>
+
+                            <li
                             {% if page.menu == 'articles' %} class="nav--vertical__active" {% endif %}>
                             <a href="/documentation/learnmore/articles">Articles</a></li>
 
@@ -867,8 +871,6 @@ title: Documentation
                             <li
                             {% if page.menu == 'faq' %} class="nav--vertical__active" {% endif %}>
                             <a href="/documentation/learnmore/faq">FAQ</a></li>
-
-
                         </ul>
                     </details>
 
@@ -907,7 +909,7 @@ title: Documentation
 
             <script type="text/javascript" charset="utf-8" src="https://secure.polldaddy.com/p/11081341.js"></script>
             <noscript><a href="https://poll.fm/11081341">How large is your org and what databases are used? (select all that apply)</a></noscript>
-            
+
         </div>
         <div class="col-md-9">
 
