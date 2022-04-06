@@ -18,6 +18,27 @@ Here's an overview of the biggest changes to Flyway over the past year or so.
 
 
 <div class="release">
+    <h2 id="8.5.6">Flyway 8.5.6 (2022-04-06)</h2>
+
+    <h3>Changes</h3>
+    <ul>
+        <li>Add a failed state for Baseline Migrations</li>
+        <li>Update version of Jackson Databind due to GHSA-57j2-w4cx-62h2</li>
+        <li>Mask any parameter that ends with 'password' in the logs</li>
+        {% include issue.html id="3414" title="Ensure we close the connection created during the update stage" %}
+    </ul>
+
+    <h3>Database compatibility</h3>
+    <ul>
+        {% include issue.html id="3399" title="Add support for STRICT and LEGACY modes in H2" %}
+    </ul>
+
+    <p>
+        Thanks to medwards8 and MMaus for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
     <h2 id="8.5.5">Flyway 8.5.5 (2022-03-28)</h2>
 
     <h3>Bug fixes</h3>
