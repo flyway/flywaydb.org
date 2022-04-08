@@ -13,8 +13,6 @@ subtitle: Oracle
 - `12.1` {% include teams.html %}
 - `11.2` {% include enterprise.html %}
 - `11.1` {% include enterprise.html %}
-- `10.2` Unsupported {% include enterprise.html %}
-- `10.1` Unsupported {% include enterprise.html %}
 
 All editions are supported, including XE.
 
