@@ -5,7 +5,8 @@ subtitle: Check
 ---
 # Check
 **The `check` command is currently in beta, and only available in the Enterprise edition of Flyway.**
-<br>{% include enterprise.html %}
+
+{% include enterprise.html %}
 <div id="toc"></div>
 ## Overview 
 
@@ -20,19 +21,19 @@ Before performing a deployment to the target database (most notably, production)
 
 Each of these scenarios can be met with the `check` command, using the corresponding flag: 
 
-| Scenario                                                           | Command & Flag     | Output                                  |
-|--------------------------------------------------------------------|--------------------|-----------------------------------------|
-| _In beta_<br>Will these changes have the effect I am expecting?    | check **-changes** | ChangeReport.html,<br>ChangeReport.json |
-| _In beta_<br>What database changes have been made recently?        | check **-changes** | ChangeReport.html,<br>ChangeReport.json |
-| _Coming soon_<br>Is the production database in the state I am expecting it to be in | check **-drift** |                          |
-| _Coming soon_<br>Are our changes following internal policies                        | check **-drift**                            |
+| Scenario                                                                             | Command & Flag     | Output                                  |
+|--------------------------------------------------------------------------------------|--------------------|-----------------------------------------|
+| _In beta_<br>Will these changes have the effect I am expecting?                      | check **-changes** | ChangeReport.html,<br>ChangeReport.json |
+| _In beta_<br>What database changes have been made recently?                          | check **-changes** | ChangeReport.html,<br>ChangeReport.json |
+| _Coming soon_<br>Is the production database in the state I am expecting it to be in? | check **-drift**   |                                         |
+| _Coming soon_<br>Are our changes following internal policies ?                       | check **-drift**   |                                         |
 
 ## `Check –changes` 
 ### Overview 
 The `–changes` flag produces a report indicating differences between applied migration scripts on your target database and pending migrations scripts (ie. the set of instructions you want to use to change your target database).  
 You can use this capability pre- and post-deployment: 
 - In pre-deployment scenarios to check the effect of your pending changes 
-- In post-deployment scenarios to capture a history of changes for retrospective auditing or reporting 
+- In post-deployment scenarios to have captured a history of changes for retrospective auditing or reporting 
 
 In either scenario, using the `-changes` flag will help you infer which database objects will be/have been affected - and how – when you execute/have executed your migration script(s). 
 
@@ -57,7 +58,7 @@ Flyway’s `check –changes` will then:
 1. Applying pending migrations to the temporary database (let’s say it’s now at V5) 
 1. Take a snapshot of the temporary database 
 1. Compare the V2 temporary database snapshot to the V5 temporary database snapshot 
-1. Generate a HTML (human readable) and JSON (machine readable) Change Report, indicating the additions, deletions, and modifications of database objects between V4 and V6 
+1. Generate a HTML (human readable) and JSON (machine readable) Change Report, indicating the additions, deletions, and modifications of database objects between V2 and V5 
 
 ## Good things to know 
 - There is no requirement for the temporary database to be in your production system 
