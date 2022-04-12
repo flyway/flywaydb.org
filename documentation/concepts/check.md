@@ -45,7 +45,7 @@ The difference between the two states of this temporary database (target now, an
 The process works like this: 
 ![Check_changes.png](/assets/balsamiq/Check_changes.png)
 1. Specify your target database location 
-    1. This is the database you want to apply your changes to, where Flyway is already being used to manage migrations (ie. A Flyway migrations table exists)) 
+    1. This is the database you want to apply your changes to, where Flyway is already being used to manage migrations (ie. A Flyway migrations table exists)
 1. Specify a temporary database
     1. This is an existing temporary database (note: Flyway will “clean” this database, so if you specify a full database, you must ensure it is ok to for Flyway to erase its schema) 
 1. Run `flyway check –changes` 
