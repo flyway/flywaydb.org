@@ -26,7 +26,7 @@ Each of these scenarios can be met with the `check` command, using the correspon
 | _In beta_<br>Will these changes have the effect I am expecting?                      | check **-changes** | ChangeReport.html,<br>ChangeReport.json |
 | _In beta_<br>What database changes have been made recently?                          | check **-changes** | ChangeReport.html,<br>ChangeReport.json |
 | _Coming soon_<br>Is the production database in the state I am expecting it to be in? | check **-drift**   |                                         |
-| _Coming soon_<br>Are our changes following internal policies ?                       | check **-drift**   |                                         |
+| _Coming soon_<br>Are our changes following internal policies ?                       |                    |                                         |
 
 ## `Check –changes`
 ### Overview
