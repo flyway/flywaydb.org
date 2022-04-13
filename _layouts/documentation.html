@@ -63,6 +63,10 @@ title: Documentation
                             <a href="/documentation/concepts/migrations">Migrations</a></li>
 
                             <li
+                            {% if page.menu == 'check' %} class="nav--vertical__active" {% endif %}>
+                            <a href="/documentation/concepts/check">Check</a></li>
+
+                            <li
                             {% if page.menu == 'callbacks' %} class="nav--vertical__active" {% endif %}>
                             <a href="/documentation/concepts/callbacks">Callbacks</a></li>
 
@@ -111,6 +115,10 @@ title: Documentation
                             <li
                             {% if page.menu == 'repair' %} class="nav--vertical__active" {% endif %}>
                             <a href="/documentation/command/repair">Repair</a></li>
+
+                            <li
+                            {% if page.menu == 'check' %} class="nav--vertical__active" {% endif %}>
+                            <a href="/documentation/command/check">Check</a></li>
                         </ul>
                     </details>
 
