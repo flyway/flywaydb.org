@@ -5,12 +5,17 @@ subtitle: Check
 ---
 
 # Check
+
+**The `check` command is currently in beta. This feature will be available in future products, but during the beta phase you can access it through your Flyway Teams or Redgate Deploy license.**
+
 {% include enterprise.html %}
 
-Produces reports to increase confidence in your migrations.
+`check` produces reports to increase confidence in your migrations.
 
 Flyway migrates against a temporary database and compares this against the target database in order to generate a report.
 **This temporary database will be cleaned before it is used, so you must ensure it does not contain anything of importance.**
+
+You can read more about the `check` concept [here](/documentation/concepts/check).
 
 #### Requirements
 - .NET 6 is required in order to generate reports. You can download it from [here](https://dotnet.microsoft.com/en-us/download/dotnet/6.0).
@@ -21,6 +26,7 @@ Flyway migrates against a temporary database and compares this against the targe
 | Parameter                    | Description
 | ---------------------------- | --------------------------------------------------------------
 |    -changes                  |  Include pending changes that will be applied to the database
+|    -drift                    |  _Currently under development_
 
 #### Configuration parameters:
  _Format: -key=value_
