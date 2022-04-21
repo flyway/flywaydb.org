@@ -18,6 +18,25 @@ Here's an overview of the biggest changes to Flyway over the past year or so.
 
 
 <div class="release">
+    <h2 id="8.5.9">Flyway 8.5.9 (2022-04-21)</h2>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        {% include issue.html id="3427" title="PLSQL division on new line in package body is no longer classified as a delimiter" %}
+        {% include issue.html id="3433" title="Fix bug where connection details set in placeholders were overriding the main details" %}
+    </ul>
+
+    <h3>Changes</h3>
+    <ul>
+        <li>Handle errors (with warning) when cleaning procs on snowflake</li>
+    </ul>
+
+    <p>
+        Thanks to olavquorum and bennyr1003 for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
     <h2 id="8.5.8">Flyway 8.5.8 (2022-04-14)</h2>
 
     <h3>Bug fixes</h3>
