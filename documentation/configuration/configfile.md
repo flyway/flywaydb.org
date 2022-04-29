@@ -246,6 +246,9 @@ flyway.locations=filesystem:sql
 # Suffix of every placeholder. (default: } )
 # flyway.placeholderSuffix=
 
+# Separator of default placeholders. (default: : )
+# flyway.placeholderSeparator=
+
 # Prefix of every script placeholder. (default: FP__ )
 # flyway.scriptPlaceholderPrefix=
 

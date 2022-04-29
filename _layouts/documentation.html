@@ -63,6 +63,10 @@ title: Documentation
                             <a href="/documentation/concepts/migrations">Migrations</a></li>
 
                             <li
+                            {% if page.menu == 'check' %} class="nav--vertical__active" {% endif %}>
+                            <a href="/documentation/concepts/check">Check</a></li>
+
+                            <li
                             {% if page.menu == 'callbacks' %} class="nav--vertical__active" {% endif %}>
                             <a href="/documentation/concepts/callbacks">Callbacks</a></li>
 
@@ -111,6 +115,10 @@ title: Documentation
                             <li
                             {% if page.menu == 'repair' %} class="nav--vertical__active" {% endif %}>
                             <a href="/documentation/command/repair">Repair</a></li>
+
+                            <li
+                            {% if page.menu == 'check' %} class="nav--vertical__active" {% endif %}>
+                            <a href="/documentation/command/check">Check</a></li>
                         </ul>
                     </details>
 
@@ -568,6 +576,10 @@ title: Documentation
                                 <a href="/documentation/configuration/parameters/placeholders">placeholders</a></li>
 
                                 <li
+                                {% if page.pill == 'placeholderSeparator' %} class="nav--vertical__active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/placeholderSeparator">placeholderSeparator</a></li>
+
+                                <li
                                 {% if page.pill == 'placeholderSuffix' %} class="nav--vertical__active" {% endif %}>
                                 <a href="/documentation/configuration/parameters/placeholderSuffix">placeholderSuffix</a></li>
 
@@ -845,6 +857,10 @@ title: Documentation
                             <a href="/documentation/learnmore/existing">Existing Database Setup</a></li>
 
                             <li
+                            {% if page.menu == 'requirements' %} class="nav--vertical__active" {% endif %}>
+                            <a href="/documentation/learnmore/requirements">Requirements</a></li>
+
+                            <li
                             {% if page.menu == 'articles' %} class="nav--vertical__active" {% endif %}>
                             <a href="/documentation/learnmore/articles">Articles</a></li>
 
@@ -863,8 +879,6 @@ title: Documentation
                             <li
                             {% if page.menu == 'faq' %} class="nav--vertical__active" {% endif %}>
                             <a href="/documentation/learnmore/faq">FAQ</a></li>
-
-
                         </ul>
                     </details>
 
@@ -901,9 +915,9 @@ title: Documentation
             </nav>
             <h2>Poll</h2>
 
-            <script type="text/javascript" charset="utf-8" src="https://secure.polldaddy.com/p/10985459.js"></script>
-            <noscript><a href="https://poll.fm/10985459">Which OS are your CI build agents running on?</a></noscript>
-            
+    <script type="text/javascript" charset="utf-8" src="https://secure.polldaddy.com/p/11097126.js"></script>
+    <noscript><a href="https://poll.fm/11097126">How do you use Flyway? (select all that apply)</a></noscript>
+
         </div>
         <div class="col-md-9">
 

@@ -9,6 +9,8 @@ Repairs the Flyway schema history table. This will perform the following actions
 - Remove any failed migrations on databases without DDL transactions<br/>
             (User objects left behind must still be cleaned up manually)
 - Realign the checksums, descriptions and types of the applied migrations with the ones of the available migrations
+- Mark all missing migrations as **deleted**
+    - As a result, `repair` must be given the same [`locations`](/documentation/configuration/parameters/locations) as `migrate`!
 
 <a href="/documentation/command/repair"><img src="/assets/balsamiq/command-repair.png" alt="repair"></a>
 

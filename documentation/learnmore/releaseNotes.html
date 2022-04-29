@@ -16,6 +16,198 @@ Here's an overview of the biggest changes to Flyway over the past year or so.
 
 <h2>Full release notes</h2>
 
+
+<div class="release">
+    <h2 id="8.5.10">Flyway 8.5.10 (2022-04-29)</h2>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        <li>Fix NPE in Oracle when 'echo' is set to 'on' during spool</li>
+    </ul>
+
+    <h3>Changes</h3>
+    <ul>
+        <li>Manually register the Oracle driver so Flyway CLI works with AWS Secrets Manager</li>
+    </ul>
+
+    <h3>Java compatibility</h3>
+    <ul>
+        <li>Update recommended Spring JDBC version due to Spring vulnerability</li>
+    </ul>
+
+</div>
+
+<div class="release">
+    <h2 id="8.5.9">Flyway 8.5.9 (2022-04-21)</h2>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        {% include issue.html id="3427" title="PLSQL division on new line in package body is no longer classified as a delimiter" %}
+        {% include issue.html id="3433" title="Fix bug where connection details set in placeholders were overriding the main details" %}
+    </ul>
+
+    <h3>Changes</h3>
+    <ul>
+        <li>Handle errors (with warning) when cleaning procs on snowflake</li>
+    </ul>
+
+    <p>
+        Thanks to olavquorum and bennyr1003 for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
+    <h2 id="8.5.8">Flyway 8.5.8 (2022-04-14)</h2>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        {% include issue.html id="3418" title="Fix error where the 'version' command fails to be handled" %}
+    </ul>
+
+    <p>
+        Thanks to cies for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
+    <h2 id="8.5.7">Flyway 8.5.7 (2022-04-07)</h2>
+
+    <h3>Changes</h3>
+    <ul>
+        <li>Update S3 dependency to fix vulnerability</li>
+    </ul>
+
+</div>
+
+<div class="release">
+    <h2 id="8.5.6">Flyway 8.5.6 (2022-04-06)</h2>
+
+    <h3>Changes</h3>
+    <ul>
+        <li>Add a failed state for Baseline Migrations</li>
+        <li>Update version of Jackson Databind due to GHSA-57j2-w4cx-62h2</li>
+        <li>Mask any parameter that ends with 'password' in the logs</li>
+        {% include issue.html id="3414" title="Ensure we close the connection created during the update stage" %}
+    </ul>
+
+    <h3>Database compatibility</h3>
+    <ul>
+        {% include issue.html id="3399" title="Add support for STRICT and LEGACY modes in H2" %}
+    </ul>
+
+    <p>
+        Thanks to medwards8 and MMaus for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
+    <h2 id="8.5.5">Flyway 8.5.5 (2022-03-28)</h2>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        <li>SQL*Plus 'spool' now ignores value of 'feedback' for update statements</li>
+        {% include issue.html id="3413" title="Script migrations applied previously using Teams Edition no longer cause an error in Community Edition" %}
+    </ul>
+
+    <h3>Java compatibility</h3>
+    <ul>
+        <li>Upgrade jackson-databind to address CVE-2020-36518</li>
+    </ul>
+
+    <p>
+        Thanks to xmanemran for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
+    <h2 id="8.5.4">Flyway 8.5.4 (2022-03-15)</h2>
+
+    <h3>Changes</h3>
+    <ul>
+        <li>Update PostgreSQL driver to fix code injection vulnerability</li>
+    </ul>
+
+    <h3>New features</h3>
+    <ul>
+        {% include issue.html id="3358" title="Add 'placeholderSeparator' parameter to allow an alternative to ':' in default placeholders" %}
+    </ul>
+
+    <p>
+        Thanks to Phil-Factor for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
+    <h2 id="8.5.3">Flyway 8.5.3 (2022-03-14)</h2>
+
+    <h3>Breaking changes</h3>
+    <ul>
+        {% include issue.html id="3405" title="Update shipped MSSQL JDBC driver to 10.2.0, which defaults 'encrypt' to 'true'" %}
+    </ul>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        <li>Fix issue where post schema clean didn't include correct schemas.</li>
+        <li>Clean mode now cleans more schemas for SQL Server integrated authentication logins.</li>
+        {% include issue.html id="3396" title="Maven and Gradle plugins load configuration files from current directory by default" %}
+    </ul>
+
+    <p>
+        Thanks to caseyhall and lbreuss for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
+    <h2 id="8.5.2">Flyway 8.5.2 (2022-03-04)</h2>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        <li>Clean mode now cleans more schemas for SQL Server integrated authentication logins.</li>
+    </ul>
+
+    <h3>Changes</h3>
+    <ul>
+        {% include issue.html id="3403" title="Add info log saying number of SQL migrations skipped due to invalid naming, if any." %}
+    </ul>
+
+    <p>
+        Thanks to sesgoe for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
+    <h2 id="8.5.1">Flyway 8.5.1 (2022-02-23)</h2>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        <li>Check if default 'jarDir' exists before using it</li>
+    </ul>
+
+    <h3>Changes</h3>
+    <ul>
+        <li>Update Jackson Databind to 2.12.6</li>
+    </ul>
+
+</div>
+
+<div class="release">
+    <h2 id="8.5.0">Flyway 8.5.0 (2022-02-14)</h2>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        <li>Fix exit code in Windows returning as 0 during error</li>
+        <li>Fix possible NPE when no default schema is specified</li>
+        <li>Ensure 'defaultSchema' is used over the first schema in 'schemas'</li>
+    </ul>
+
+    <h3>Changes</h3>
+    <ul>
+        <li>Upgrade PostgreSQL driver to fix RCE vulnerability</li>
+        <li>Remove displaying "user 'null'" when using Windows Authentication with SQL Server</li>
+    </ul>
+
+</div>
+
 <div class="release">
     <h2 id="8.4.4">Flyway 8.4.4 (2022-02-02)</h2>
 
