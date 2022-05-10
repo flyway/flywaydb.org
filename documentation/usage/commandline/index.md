@@ -54,7 +54,7 @@ Go to Docker Hub for <a href="https://hub.docker.com/r/flyway/flyway/">detailed 
 
 #### Beta
 
-If you're interested in trying out upcoming features, take a look at our [beta page](/documentation/usage/beta/index.md).
+If you're interested in trying out upcoming features, take a look at our [beta page](/documentation/usage/beta).
 
 ## Directory structure
 
