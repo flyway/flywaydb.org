@@ -42,6 +42,22 @@ There are currently no active betas in Community Edition
 
 Go to Docker Hub for <a href="https://hub.docker.com/r/redgate/flyway/">detailed usage instructions</a>.
 
+# Upcoming changes for API users
+
+Flyway Teams will only be available from our own Maven repository from V9.
+You can access it with the following repository setup in your `pom.xml` or `settings.xml` and similar for Gradle:
+
+```xml
+<repositories>
+...
+   <repository>
+       <id>redgate</id>
+       <url>https://download.red-gate.com/maven/release</url>
+   </repository>
+...
+<repositories>
+```
+
 {% include downloadpopup.html %}
 <script>
     if (typeof updateModalVersion !== 'undefined') {
