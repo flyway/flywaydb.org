@@ -2,6 +2,7 @@ safe: true
 future: true
 exclude: [.gitattributes, .gitignore, flywaydb.org.iml, flywaydb.org.ipr, flywaydb.org.iws, README.md, CNAME, Gemfile, Gemfile.lock, .idea/workspace.xml]
 flywayVersion: 8.5.10
+betaFlywayVersion: 9.0.0-beta2
 markdown: kramdown
 url: https://flywaydb.org
 kramdown:
