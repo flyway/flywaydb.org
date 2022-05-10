@@ -41,3 +41,13 @@ There are currently no active betas in Community Edition
 <pre class="console"><span>&gt;</span> docker pull <strong>redgate/flyway:{{site.betaFlywayVersion}}</strong></pre>
 
 Go to Docker Hub for <a href="https://hub.docker.com/r/redgate/flyway/">detailed usage instructions</a>.
+
+{% include downloadpopup.html %}
+<script>
+    if (typeof updateModalVersion !== 'undefined') {
+        var downloadButtons = document.querySelectorAll('.download-modal-button');
+        for (var i=0; i<downloadButtons.length; i++) {
+            downloadButtons[i].addEventListener('click', updateModalVersion);
+        }
+    }
+</script>
