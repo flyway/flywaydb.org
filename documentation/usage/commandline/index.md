@@ -52,6 +52,10 @@ Go to Docker Hub for <a href="https://hub.docker.com/r/flyway/flyway/">detailed 
 <p class="note">Older versions, packages without JRE and sources are available from <a href="https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline">Maven Central</a></p>
 <p class="note">Older Docker images are available from <a href="https://hub.docker.com/r/boxfuse/flyway/">boxfuse/flyway</a></p>
 
+#### Beta
+
+If you're interested in trying out upcoming features, take a look at our [beta page](/documentation/usage/beta/index.md).
+
 ## Directory structure
 
 The Flyway download, once extracted, now becomes a directory with the following structure:
