@@ -37,7 +37,7 @@ You can use this capability pre- and post-deployment:
 
 In either scenario, using the `-changes` flag will help you infer which database objects will be/have been affected - and how – when you execute/have executed your migration script(s).
 
-### Requirements and behaviour
+### Requirements and behavior
 The `check –changes` command and flag works by building a temporary database. This temporary database is first made to reflect the state of your target schema, and then made to reflect your target schema with the pending changes applied.
 
 The difference between the two states of this temporary database (target now, and target with changes applied) represents the effect your pending migrations will have (or have had) when the scripts are (or were) executed. This difference is captured as an artefact called a “Change Report”. The change report is available as both HTML (human readable) and JSON (machine readable) formats.
@@ -63,7 +63,4 @@ Flyway’s `check –changes` will then:
 ## Good things to know
 - There is no requirement for the temporary database to be in your production system
 - Please note that the temporary database **will be cleaned** before the operation starts
-- The underlying comparison technology is dependent on [.NET 6](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) which is why this is required.
-- The command accepts a flag to indicate the kind of report output to generate (html or json), but generates both by default
-
-
+- The underlying comparison technology is dependent on [.NET 6](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) which is why this is required
