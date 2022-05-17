@@ -26,7 +26,7 @@ You can read more about the `check` concept [here](/documentation/concepts/check
 | Parameter                    | Description
 | ---------------------------- | --------------------------------------------------------------
 |    -changes                  |  Include pending changes that will be applied to the database
-|    -drift                    |  _Currently under development_
+|    -drift                    |  Include changes applied out of process to the database
 
 #### Configuration parameters:
  _Format: -key=value_
