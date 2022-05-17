@@ -6,8 +6,8 @@ title: Features in Beta
 
 # Features in Beta
 
-- [`check`](/documentation/command/check)
-    - This feature will be available in future products, but during the beta phase you can access it through your Flyway Teams or Redgate Deploy license
+- [check](/documentation/command/check)
+    - `check` produces reports to increase confidence in your migrations
 
 # How to access the Beta
 
