@@ -46,10 +46,17 @@ flyway check -changes -url=jdbc:example:database -user=username -password=passwo
 
 ##### Example configuration file
 
-``````properties
+```properties
 flyway.url=jdbc:example:database
 flyway.user=username
 flyway.password=password
 flyway.check.tempUrl=jdbc:example:tempdatabase
 flyway.check.outputTypes=html,json
 ```
+
+#### Check for Oracle
+
+When using Check with an Oracle database there are additional requirements. 
+
+If no schemas are specified in the configuration `flyway.schemas`, then the database connection username will be used as the default schema otherwise `flyway.schemas` will be used.
+These schema names are case-sensitive. 
