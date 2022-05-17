@@ -36,8 +36,7 @@ You can read more about the `check` concept [here](/documentation/concepts/check
 |    check.tempUrl             | **[REQUIRED]** URL for a temporary database. Note: This database will be cleaned!
 |    check.tempUser            | Username for the temporary database. Defaults to 'flyway.user'
 |    check.tempPassword        | Password for the temporary database. Defaults to 'flyway.password'
-|    check.outputLocation      | Destination folder for reports. Defaults to the current directory
-|    check.outputTypes         | Format of reports. Options are: 'json', and 'html'. Defaults to 'html,json'
+|    check.reportFilename      | **[REQUIRED]** Destination filename for reports
 
 #### Usage Example:
 ```
@@ -51,5 +50,5 @@ flyway.url=jdbc:example:database
 flyway.user=username
 flyway.password=password
 flyway.check.tempUrl=jdbc:example:tempdatabase
-flyway.check.outputTypes=html,json
+flyway.check.reportFilename=change_report
 ```
