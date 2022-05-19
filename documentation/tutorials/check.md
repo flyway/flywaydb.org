@@ -101,7 +101,7 @@ This feature can also be accessed through the Flyway Enterprise Docker images.
 First pull the relevant images for this tutorial:
 
 <pre class="console">docker pull mcr.microsoft.com/mssql/server</pre>
-<pre class="console">docker pull redgate/flyway</pre>
+<pre class="console">docker pull redgate/flyway:{{site.betaFlywayVersion}}</pre>
 
 We can then use Docker to set up an instance of SQL Server with a login user `sa` and password `Flyway123`:
 
