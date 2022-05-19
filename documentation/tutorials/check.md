@@ -98,10 +98,14 @@ This creates another pair of HTML and JSON reports. This time the files contain 
 
 This feature can also be accessed through the Flyway Enterprise Docker images.
 
+### Pulling the images
+
 First pull the relevant images for this tutorial:
 
 <pre class="console">docker pull mcr.microsoft.com/mssql/server</pre>
 <pre class="console">docker pull redgate/flyway:{{site.betaFlywayVersion}}</pre>
+
+### Running SQL Server
 
 We can then use Docker to set up an instance of SQL Server with a login user `sa` and password `Flyway123`:
 
@@ -110,6 +114,8 @@ We can then use Docker to set up an instance of SQL Server with a login user `sa
 *Make sure there are no other SQL Server instances running with the same port*
 
 As before, create a target database `foobar` and a temporary database `check_temp_db` e.g. using SSMS.
+
+### Preparing the local working directory
 
 Folders in the local directory can later be mounted to the Flyway Docker image. 
 
@@ -138,6 +144,8 @@ flyway.check.outputLocation=reports
 
 The above config is similar to the one we used for the CLI, except we have also used `flyway.check.outputLocation` to configure the reports to be written to a `reports` directory. 
 
+### Running `check` in Docker
+
 Run the `check -changes` Flyway Docker image:
 
 <pre class="console">docker run --rm --network="host" -v $PWD/sql:/flyway/sql -v $PWD/reports:/flyway/reports -v $PWD/conf:/flyway/conf redgate/flyway check -changes</pre>
@@ -147,6 +155,8 @@ Here, we have mounted the relevant volumes from the working directory and used a
 This will generate a report showing the changes which will be made to the database on the next `migrate`. The HTML and JSON forms of the report can be found in the local `reports` folder. 
 
 Similarly, we could replace `-changes` with `-drift` to instead see how the target schema is different from what's defined in the migrations, or use both `-changes` and `-drift` to have both in the same report. 
+
+### Using Docker Compose
 
 We could also set up a similar environment using `docker compose`:
 
