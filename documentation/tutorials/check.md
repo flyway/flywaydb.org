@@ -22,7 +22,7 @@ More information can be found [here](/documentation/command/check).
 
 ## Download the latest Beta version of Flyway Enterprise CLI
 
-First, [download the latest beta version of the Flyway Enterprise CLI](/documentation/usage/beta/) and extract its contents. 
+First, [download the latest beta version of the Flyway Enterprise CLI](/documentation/learnmore/beta) and extract its contents. 
 
 ## Setting up databases
 
