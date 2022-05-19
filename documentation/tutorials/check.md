@@ -188,3 +188,11 @@ services:
       - 1433:1433
 ```
 In this case, Flyway is using the default SQL Server databases and is being configured using command-line flags rather than mounting the `conf` volume.
+
+## Summary
+
+This tutorial outlined the following concepts:
+
+- How `check` can be used to generate pre-migration reports.
+- Configuring `check` and applying it to SQL Server.
+- Using `check` in Docker. 
