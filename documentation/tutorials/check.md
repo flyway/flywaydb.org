@@ -22,7 +22,7 @@ More information can be found on [the check command page](/documentation/command
 
 ## Install prerequisites
 
-Flyway Check requires .Net 6 so make sure you have this installed.  You can download it from [here](https://dotnet.microsoft.com/en-us/download/dotnet/6.0).
+Flyway Check requires .Net 6 so make sure you have this installed. You can download it from [here](https://dotnet.microsoft.com/en-us/download/dotnet/6.0).
 
 ## Download the latest Beta version of Flyway Enterprise CLI
 
