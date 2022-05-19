@@ -9,16 +9,16 @@ subtitle: 'Tutorial: Using Check with SQL Server'
 
 ## Introduction
 
-This is an enteprise feature, but the beta version is available to Teams users.
+The `check` command is currently in beta. This feature will be available in future products, but during the beta phase you can access it through your Flyway Teams or Redgate Deploy license.
 
-The new `check` command is run prior to migrating, to give us confidence in the state of the post-migration schema by producing a report. 
+The new `check` command is run prior to migrating, to give you confidence by producing a report which allows you to better understand the consequences of your planned migrations.
 
 One or more of the following flags must be set, which determine what the report contains:
 
  - `-changes` produces a report of all the changes that will be applied to the schema in the next migration. 
- - `-drift` produces a report showing objects in the schema which are not the result of any of the currently applied migrations, i.e. previous changes made outside of Flyway.
+ - `-drift` produces a report showing objects in the schema which are not the result of any of the currently applied migrations, i.e. changes made outside of Flyway.
 
-More information can be found [here](/documentation/command/check).
+More information can be found on [the check command page](/documentation/command/check).
 
 ## Download the latest Beta version of Flyway Enterprise CLI
 
@@ -48,7 +48,7 @@ flyway.licenseKey=<put your license key here>
 flyway.check.tempUrl=jdbc:sqlserver://localhost;databaseName=check_temp_db;trustServerCertificate=true
 ```
 
-## Set up some migrations
+## Setting up migrations
 
 In the `sql` folder, we can create a new file `V1__add_table.sql`, containing a simple schema change:
 
@@ -80,7 +80,7 @@ We now know that applying our pending migration(s) will have the intended effect
 
 Before applying future migrations, we might also want to confirm that no drift has occured in the target database, i.e. all schema changes have been applied in the form of flyway migrations, as oppose to unrecorded manual changes. 
 
-To demostrate this, we can apply a manual change to the target database, e.g. using SSMS:
+To demonstrate this, we can apply a manual change to the target database, e.g. using SSMS:
 
 ```sql
 use foobar;
@@ -110,6 +110,8 @@ We can then use Docker to set up an instance of SQL Server with a login user `sa
 *Make sure there are no other SQL Server instances running with the same port*
 
 As before, create a target database `foobar` and a temporary database `check_temp_db` e.g. using SSMS.
+
+Folders in the local directory can later be mounted to the Flyway Docker image. 
 
 Create a folder called `sql` to contain migrations and add a new SQL migration `V1__add_table.sql`:
 
@@ -142,11 +144,11 @@ Run the `check -changes` Flyway Docker image:
 
 Here, we have mounted the relevant volumes from the working directory and used a network where Flyway can access the SQL Server container.
 
-This will generate report showing the changes which will be made to the database on the next `migrate`. The HTML and JSON forms of the report can be found in the local `reports` folder. 
+This will generate a report showing the changes which will be made to the database on the next `migrate`. The HTML and JSON forms of the report can be found in the local `reports` folder. 
 
-Similarly, we could replace `-changes` with `-drift` to instead see how the target schema is different what's defined in the migrations, or use both `-changes` and `-drift` to have both in the same report. 
+Similarly, we could replace `-changes` with `-drift` to instead see how the target schema is different from what's defined in the migrations, or use both `-changes` and `-drift` to have both in the same report. 
 
-We could also set up a similar environment using `docker-compose`:
+We could also set up a similar environment using `docker compose`:
 
 ```yml
 version: '3'
@@ -171,4 +173,4 @@ services:
     ports:
       - 1433:1433
 ```
-In this case, Flyway is using the default SQL Server databases and is being configured using command flags rather than mounting the `conf` volume.
+In this case, Flyway is using the default SQL Server databases and is being configured using command-line flags rather than mounting the `conf` volume.
