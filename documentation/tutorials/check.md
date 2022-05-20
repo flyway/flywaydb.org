@@ -39,7 +39,7 @@ In this example, there are two databases in our SQL Server instance: `foobar` (t
 
 ## Configuration
 
-As well as the usual config parameters (`flyway.url`, `flyway.user`, `flyway.password`, `flyway.licenseKey`...), we also need to configure properties specific to the `check` command (see [the documentation](/documentation/command/check) for more details). In this case, we only need to configure `flyway.check.tempUrl` as the other properties all have suitable default values.
+As well as the usual config parameters (`flyway.url`, `flyway.user`, `flyway.password`, `flyway.licenseKey`...), we also need to configure properties specific to the `check` command (see [the documentation](/documentation/command/check) for more details). In this case, we only need to configure `flyway.check.tempUrl` and `flyway.check.reportFilename` as the other properties all have suitable default values.
 
 Our `flyway.conf` file (found in the `conf` folder), should contain the following values:
 
@@ -50,6 +50,7 @@ flyway.password=Flyway123
 flyway.licenseKey=<put your license key here>
 
 flyway.check.tempUrl=jdbc:sqlserver://localhost;databaseName=check_temp_db;trustServerCertificate=true
+flyway.check.reportFilename=check_report
 ```
 
 ## Setting up migrations
@@ -70,7 +71,7 @@ Before we run `migrate`, we can use `check` to generate a change report by runni
 
 ## Viewing the report output
 
-Having run the command, we can see that Flyway has generated HTML and JSON versions of the `check` report in the working directory. Opening `check-report-<timestamp>.html` in a browser, we can clearly see what objects will change in our target schema as a result of running our pending migration(s), expressed in the form of SQL queries. The JSON report contains the same information but in a more machine-readable format. 
+Having run the command, we can see that Flyway has generated HTML and JSON versions of the `check` report in the working directory. Opening `check-report.html` in a browser, we can clearly see what objects will change in our target schema as a result of running our pending migration(s), expressed in the form of SQL queries. The JSON report contains the same information but in a more machine-readable format. 
 
 <p align="center"><img src="/assets/tutorial/check/change-report-example.png" style="max-width: 100%"/></p>
 
@@ -143,10 +144,8 @@ flyway.password=Flyway123
 flyway.licenseKey=<put your license key here>
 
 flyway.check.tempUrl=jdbc:sqlserver://localhost;databaseName=check_temp_db;trustServerCertificate=true
-flyway.check.outputLocation=reports
+flyway.check.reportFilename=reports/check_report
 ```
-
-The above config is similar to the one we used for the CLI, except we have also used `flyway.check.outputLocation` to configure the reports to be written to a `reports` directory. 
 
 ### Running `check` in Docker
 
@@ -169,7 +168,7 @@ version: '3'
 services:
   flyway:
     image: redgate/flyway
-    command: -url=jdbc:sqlserver://db;trustServerCertificate=true -check.tempUrl=jdbc:sqlserver://db;databaseName=tempdb;trustServerCertificate=true -password=Flyway123 -user=sa -check.outputLocation=reports check -changes
+    command: -url=jdbc:sqlserver://db;trustServerCertificate=true -check.tempUrl=jdbc:sqlserver://db;databaseName=tempdb;trustServerCertificate=true -password=Flyway123 -user=sa -check.reportFilename=reports/check_report check -changes
     environment:
       - FLYWAY_LICENSE_KEY=<put your license key here>
     volumes:
