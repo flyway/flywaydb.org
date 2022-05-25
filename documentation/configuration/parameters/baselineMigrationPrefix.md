@@ -37,21 +37,24 @@ FLYWAY_BASELINE_MIGRATION_PREFIX=IB
 
 ### API
 ```java
-Flyway.configure()
-    .baselineMigrationPrefix("IB")
-    .load()
+BaselineMigrationConfigurationExtension baselineMigrationConfigurationExtension = configuration.getPluginRegister().getPlugin(BaselineMigrationConfigurationExtension.class)
+baselineMigrationConfigurationExtension.setBaselineMigrationPrefix("IB");
 ```
 
 ### Gradle
 ```groovy
 flyway {
-    baselineMigrationPrefix = 'IB'
+    pluginConfiguration [
+      baselineMigrationPrefix: 'IB'
+    ]
 }
 ```
 
 ### Maven
 ```xml
 <configuration>
-    <baselineMigrationPrefix>IB</baselineMigrationPrefix>
+    <pluginConfiguration>
+        <baselineMigrationPrefix>IB</baselineMigrationPrefix>
+    </pluginConfiguration>
 </configuration>
 ```
