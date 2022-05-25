@@ -30,7 +30,7 @@ FLYWAY_PLUGINS_VAULT_TOKEN=s.abcdefghijklmnopqrstuvwx
 
 ### API
 ```java
-VaultConfigurationExtension vaultConfigurationExtension = PluginRegister.getPlugin(VaultConfigurationExtension.class)
+VaultConfigurationExtension vaultConfigurationExtension = configuration.getPluginRegister().getPlugin(VaultConfigurationExtension.class)
 vaultConfigurationExtension.setVaultToken("s.abcdefghijklmnopqrstuvwx");
 ```
 
