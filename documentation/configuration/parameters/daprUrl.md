@@ -9,7 +9,7 @@ subtitle: flyway.daprUrl
 {% include teams.html %}
 
 ## Description
-The REST API URL of your [Dapr](https://docs.dapr.io/developing-applications/building-blocks/secrets/secrets-overview/) sidecar, 
+The REST API URL of your [Dapr](https://docs.dapr.io/developing-applications/building-blocks/secrets/secrets-overview/) sidecar,
 
 Example: `http://localhost:3500/v1.0/secrets/my-secrets-store`
 
@@ -32,7 +32,7 @@ FLYWAY_PLUGINS_DAPR_URL=http://localhost:3500/v1.0/secrets/my-secrets-store
 
 ### API
 ```java
-DaprConfigurationExtension daprConfigurationExtension = PluginRegister.getPlugin(DaprConfigurationExtension.class)
+DaprConfigurationExtension daprConfigurationExtension = configuration.getPluginRegister().getPlugin(DaprConfigurationExtension.class)
 daprConfigurationExtension.setDaprUrl("http://localhost:3500/v1.0/secrets/my-secrets-store");
 ```
 

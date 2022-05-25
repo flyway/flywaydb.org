@@ -10,8 +10,8 @@ subtitle: flyway.daprSecrets
 
 ## Description
 A comma-separated list of paths to key-value secrets in a
-[Dapr](https://docs.dapr.io/developing-applications/building-blocks/secrets/secrets-overview/) Secret Store that contain 
-Flyway configurations. 
+[Dapr](https://docs.dapr.io/developing-applications/building-blocks/secrets/secrets-overview/) Secret Store that contain
+Flyway configurations.
 
 If multiple secrets specify the same configuration parameter, then the last secret takes precedence.
 
@@ -34,7 +34,7 @@ FLYWAY_PLUGINS_DAPR_SECRETS=secret1,secret2
 
 ### API
 ```java
-DaprConfigurationExtension daprConfigurationExtension = PluginRegister.getPlugin(DaprConfigurationExtension.class)
+DaprConfigurationExtension daprConfigurationExtension = configuration.getPluginRegister().getPlugin(DaprConfigurationExtension.class)
 daprConfigurationExtension.setDaprSecrets("secret1", "secret2");
 ```
 

@@ -32,7 +32,7 @@ FLYWAY_PLUGINS_GCSM_PROJECT=quixotic-ferret-345678
 
 ### API
 ```java
-GcsmConfigurationExtension gcsmConfigurationExtension = PluginRegister.getPlugin(GcsmConfigurationExtension.class)
+GcsmConfigurationExtension gcsmConfigurationExtension = configuration.getPluginRegister().getPlugin(GcsmConfigurationExtension.class)
 gcsmConfigurationExtension.setGcsmProject("quixotic-ferret-345678");
 ```
 
