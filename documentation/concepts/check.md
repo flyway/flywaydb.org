@@ -3,11 +3,14 @@ layout: documentation
 menu: check
 subtitle: Check
 ---
+
 # Check
 **The `check` command is currently in beta. This feature will be available in future products, but during the beta phase you can access it through your Flyway Teams or Redgate Deploy license.**
 
 {% include enterprise.html %}
+
 <div id="toc"></div>
+
 ## Overview
 
 In Flyway, “Checks” is the collective term we use for the pre- or post-deployment analysis of some aspect of your database migration. Checks are instantiated using the top level `check` command.
@@ -29,6 +32,7 @@ Each of these scenarios can be met with the `check` command, using the correspon
 | _Coming soon_<br>Are our changes following internal policies ?                       |                    |                                         |
 
 ## `Check –changes`
+
 ### Overview
 The `–changes` flag produces a report indicating differences between applied migration scripts on your target database and pending migrations scripts (ie. the set of instructions you want to use to change your target database).
 You can use this capability pre- and post-deployment:
@@ -60,7 +64,17 @@ Flyway’s `check –changes` will then:
 1. Compare the V2 temporary database snapshot to the V5 temporary database snapshot
 1. Generate a HTML (human readable) and JSON (machine readable) Change Report, indicating the additions, deletions, and modifications of database objects between V2 and V5
 
+## Snapshot and Compare
+Change and Drift reports are pre-orchestrated reports Flyway provides, but this doesn't always meet all the needs.
+
+The `snapshot` command combined with `check -compare` can be used to generate reports that are more meaningful to you by letting you choose what to include.
+
+Some of the situations this lets you handle:
+- Relative drift report
+- Using a DB in a custom initial state (cloned or restored from a backup)
+- Comparing DBs across different networks
+
 ## Good things to know
 - There is no requirement for the temporary database to be in your production system
-- Please note that the temporary database **will be cleaned** before the operation starts
+- Please note that the temporary database **will be cleaned** for Change and Drift reports before the operation starts
 - The underlying comparison technology is dependent on [.NET 6](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) which is why this is required
