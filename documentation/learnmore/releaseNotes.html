@@ -18,6 +18,27 @@ Here's an overview of the biggest changes to Flyway over the past year or so.
 
 
 <div class="release">
+    <h2 id="8.5.12">Flyway 8.5.12 (2022-05-31)</h2>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        <li>Fix relative locations not being relative to the working directory</li>
+        {% include issue.html id="3444" title="When using the delimiter keyword the value can be placed on the next line without entering an infinite loop" %}
+        {% include issue.html id="3449" title="Update checker times out if it doesn't receive a response" %}
+        {% include issue.html id="3454" title="The filename placeholder no longer causes errors in repeatable SQL migrations" %}
+    </ul>
+
+    <h3>Changes</h3>
+    <ul>
+        <li>'version' command now has JSON output</li>
+    </ul>
+
+    <p>
+        Thanks to sleepkever, csudhirr and alexandrugrigor for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
     <h2 id="8.5.11">Flyway 8.5.11 (2022-05-16)</h2>
 
     <h3>Changes</h3>
