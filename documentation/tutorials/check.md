@@ -168,7 +168,7 @@ version: '3'
 services:
   flyway:
     image: redgate/flyway
-    command: -url=jdbc:sqlserver://db;trustServerCertificate=true -check.buildUrl=jdbc:sqlserver://db;databaseName=build_db;trustServerCertificate=true -password=Flyway123 -user=sa -check.reportFilename=reports/check_report check -changes
+    command: -url=jdbc:sqlserver://db;trustServerCertificate=true -check.buildUrl=jdbc:sqlserver://db;databaseName=check_build_db;trustServerCertificate=true -password=Flyway123 -user=sa -check.reportFilename=reports/check_report check -changes
     environment:
       - FLYWAY_LICENSE_KEY=<put your license key here>
     volumes:
