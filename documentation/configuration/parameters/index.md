@@ -85,11 +85,7 @@ If using maven, config parameters can be set in the plugin configuration block, 
 - [cleanOnValidationError](/documentation/configuration/parameters/cleanOnValidationError)
 
 ### Validate
-- [ignoreFutureMigrations](/documentation/configuration/parameters/ignoreFutureMigrations)
-- [ignoreIgnoredMigrations](/documentation/configuration/parameters/ignoreIgnoredMigrations)
-- [ignoreMissingMigrations](/documentation/configuration/parameters/ignoreMissingMigrations)
-- [ignorePendingMigrations](/documentation/configuration/parameters/ignorePendingMigrations)
-- [ignoreMigrationPatterns](/documentation/configuration/parameters/ignoreMigrationPatterns) {% include teams.html %}
+- [ignoreMigrationPatterns](/documentation/configuration/parameters/ignoreMigrationPatterns)
 
 ### Migrations
 - [repeatableSqlMigrationPrefix](/documentation/configuration/parameters/repeatableSqlMigrationPrefix)
