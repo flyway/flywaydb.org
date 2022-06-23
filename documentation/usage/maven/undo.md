@@ -71,9 +71,6 @@ See [configuration](/documentation/configuration/parameters) for a full list of 
     <mixed>false</mixed>
     <group>false</group>
     <cleanOnValidationError>false</cleanOnValidationError>
-    <ignoreMissingMigrations>false</ignoreMissingMigrations>
-    <ignoreIgnoredMigrations>false</ignoreIgnoredMigrations>
-    <ignoreFutureMigrations>false</ignoreFutureMigrations>
     <installedBy>my-user</installedBy>
     <skip>false</skip>
     <configFiles>

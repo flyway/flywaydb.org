@@ -80,10 +80,6 @@ See [configuration](/documentation/configuration/parameters) for a full list of 
     <target>1.1</target>
     <outOfOrder>false</outOfOrder>
     <cleanOnValidationError>false</cleanOnValidationError>
-    <ignoreMissingMigrations>false</ignoreMissingMigrations>
-    <ignoreIgnoredMigrations>false</ignoreIgnoredMigrations>
-    <ignorePendingMigrations>false</ignorePendingMigrations>
-    <ignoreFutureMigrations>false</ignoreFutureMigrations>
     <oracle.sqlplus>true</oracle.sqlplus>
     <oracle.sqlplusWarn>true</oracle.sqlplusWarn>
     <skip>false</skip>

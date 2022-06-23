@@ -82,9 +82,6 @@ See [configuration](/documentation/configuration/parameters) for a full list of 
     <cleanOnValidationError>false</cleanOnValidationError>
     <mixed>false</mixed>
     <group>false</group>
-    <ignoreMissingMigrations>false</ignoreMissingMigrations>
-    <ignoreIgnoredMigrations>false</ignoreIgnoredMigrations>
-    <ignoreFutureMigrations>false</ignoreFutureMigrations>
     <cleanDisabled>false</cleanDisabled>
     <baselineOnMigrate>false</baselineOnMigrate>
     <baselineVersion>5</baselineVersion>

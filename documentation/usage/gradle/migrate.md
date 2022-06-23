@@ -57,9 +57,6 @@ flyway {
     cleanOnValidationError = false
     mixed = false
     group = false
-    ignoreMissingMigrations = false
-    ignoreIgnoredMigrations = false
-    ignoreFutureMigrations = false
     cleanDisabled = false
     baselineOnMigrate = false
     baselineVersion = 5
