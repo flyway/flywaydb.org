@@ -12,8 +12,8 @@ subtitle: Check
 
 `check` produces reports to increase confidence in your migrations.
 
-For `-changes` and `-drift`, Flyway migrates against a temporary database and compares this against the target database in order to generate a report.
-**This temporary database will be cleaned before it is used, so you must ensure it does not contain anything of importance.**
+For `-changes` and `-drift`, Flyway migrates against a build database and compares this against the target database in order to generate a report.
+**This build database will be cleaned before it is used, so you must ensure it does not contain anything of importance.**
 
 You can read more about the `check` concept [here](/documentation/concepts/check).
 
@@ -33,14 +33,14 @@ You can read more about the `check` concept [here](/documentation/concepts/check
 
 | Parameter                    | Description
 | ---------------------------- | -----------------------------------------------------------
-|    check.tempUrl             | **[REQUIRED]** URL for a temporary database.
-|    check.tempUser            | Username for the temporary database. Defaults to 'flyway.user'
-|    check.tempPassword        | Password for the temporary database. Defaults to 'flyway.password'
+|    check.buildUrl             | **[REQUIRED]** URL for a build database. 
+|    check.buildUser            | Username for the build database. Defaults to 'flyway.user'
+|    check.buildPassword        | Password for the build database. Defaults to 'flyway.password'
 |    check.reportFilename      | **[REQUIRED]** Destination filename for reports
 
 #### Usage Example:
 ```
-flyway check -changes -url=jdbc:example:database -user=username -password=password -check.tempUrl=jdbc:example:tempdatabase
+flyway check -changes -url=jdbc:example:database -user=username -password=password -check.buildUrl=jdbc:example:build_database
 ```
 
 ##### Example configuration file
@@ -49,7 +49,7 @@ flyway check -changes -url=jdbc:example:database -user=username -password=passwo
 flyway.url=jdbc:example:database
 flyway.user=username
 flyway.password=password
-flyway.check.tempUrl=jdbc:example:tempdatabase
+flyway.check.buildUrl=jdbc:example:build_database
 flyway.check.reportFilename=change_report
 ```
 
