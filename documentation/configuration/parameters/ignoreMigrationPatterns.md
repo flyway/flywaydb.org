@@ -10,7 +10,7 @@ subtitle: flyway.ignoreMigrationPatterns
 ## Description
 Ignore migrations during `validate` and `repair` according to a given list of [patterns](https://flywaydb.org/documentation/configuration/parameters/ignoreMigrationPatterns#patterns).
 
-Only `Missing` migrations are ignored during `repair`,
+Only `Missing` migrations are ignored during `repair`.
 
 ### Patterns
 Patterns are of the form `type`:`status` with `*` matching `type` or `status`.
@@ -50,7 +50,7 @@ repeatable:*
 will ignore repeatables regardless of their state.
 
 ## Default
-empty
+`*:future`
 
 ## Usage
 
