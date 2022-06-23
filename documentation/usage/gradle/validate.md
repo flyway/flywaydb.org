@@ -56,10 +56,6 @@ flyway {
     target = '1.1'
     outOfOrder = false
     cleanOnValidationError = false
-    ignoreMissingMigrations = false
-    ignoreIgnoredMigrations = false
-    ignorePendingMigrations = false
-    ignoreFutureMigrations = false
     oracleSqlplus = true 
     oracleSqlplusWarn = true 
     workingDirectory = 'C:/myproject'
