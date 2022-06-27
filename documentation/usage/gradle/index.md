@@ -25,7 +25,13 @@ running on **Java 8**, **Java 9**, **Java 10**, **Java 11** or **Java 12**.
 }</pre>
         </div>
         <div class="tab-pane" id="tab-teams">
-<pre class="prettyprint">plugins {
+<pre class="prettyprint">repositories {
+    mavenCentral()
+    maven {
+        url "https://download.red-gate.com/maven/release"
+    }
+}
+plugins {
     id "org.flywaydb<strong>.enterprise</strong>.flyway" version "{{ site.flywayVersion }}"
 }</pre>
                 </div>
