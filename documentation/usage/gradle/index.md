@@ -19,13 +19,23 @@ running on **Java 8**, **Java 9**, **Java 10**, **Java 11** or **Java 12**.
         </li>
     </ul>
     <div class="tab-content">
+    <code>build.gradle</code>
         <div class="tab-pane active" id="tab-community">
-<pre class="prettyprint">plugins {
+<table class="table">
+    <tr>
+        <td>
+            <pre class="prettyprint">plugins {
     id "org.flywaydb.flyway" version "{{ site.flywayVersion }}"
 }</pre>
+        </td>
+    </tr>
+</table>
         </div>
         <div class="tab-pane" id="tab-teams">
-<pre class="prettyprint">repositories {
+<table class="table">
+    <tr>
+        <td>
+            <pre class="prettyprint">repositories {
     mavenCentral()
     maven {
         url "https://download.red-gate.com/maven/release"
@@ -34,9 +44,14 @@ running on **Java 8**, **Java 9**, **Java 10**, **Java 11** or **Java 12**.
 plugins {
     id "org.flywaydb<strong>.enterprise</strong>.flyway" version "{{ site.flywayVersion }}"
 }</pre>
-                </div>
-                <div>
+        </td>
+    </tr>
+    <tr>
+        <td>
 By downloading Flyway Teams/Enterprise Gradle Plugin you confirm that you have read and agree to the terms of the <a href="https://www.red-gate.com/assets/purchase/assets/subscription-license.pdf?_ga=2.265045707.556964523.1656332792-1685764737.1620948215">Redgate EULA</a>.
+        </td>
+    </tr>
+</table>
                 </div>
     </div>
 </div>
