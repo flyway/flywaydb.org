@@ -11,7 +11,7 @@ redirect_from: /documentation/configuration/oracleKerberosCacheFile/
 
 ## Description
 The location of the `krb5cc_<UID>` credential cache file for use in Kerberos authentication. This is optional,
-and only has any significance when `oracleKerberosConfigFile` is also specified. It may assist performance.
+and only has any significance when `kerberosConfigFile` is also specified. It may assist performance.
 
 ## Usage
 
