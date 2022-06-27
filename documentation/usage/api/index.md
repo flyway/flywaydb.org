@@ -107,7 +107,7 @@ be migrated to a state the rest of the code can work with.
     }
 }
 dependencies {
-compile "org.flywaydb<strong>.enterprise</strong>:flyway-core:{{ site.flywayVersion }}"
+    compile "org.flywaydb<strong>.enterprise</strong>:flyway-core:{{ site.flywayVersion }}"
 }</pre>
         </td>
     </tr>
