@@ -43,19 +43,27 @@ be migrated to a state the rest of the code can work with.
     <tr>
         <th>Maven</th>
         <td>
-            <pre class="prettyprint">&lt;dependency&gt;
-    &lt;groupId&gt;org.flywaydb&lt;/groupId&gt;
-    &lt;artifactId&gt;flyway-core&lt;/artifactId&gt;
-    &lt;version&gt;{{ site.flywayVersion }}&lt;/version&gt;
-&lt;/dependency&gt;</pre>
+            <pre class="prettyprint">&lt;dependencies&gt;
+    ...
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.flywaydb&lt;/groupId&gt;
+        &lt;artifactId&gt;flyway-core&lt;/artifactId&gt;
+        &lt;version&gt;{{ site.flywayVersion }}&lt;/version&gt;
+    &lt;/dependency&gt;
+    ...
+&lt;/dependencies&gt;</pre>
         </td>
         {% if site.flywayPreviewVersion %}
         <td>
-            <pre class="prettyprint">&lt;dependency&gt;
-    &lt;groupId&gt;org.flywaydb&lt;/groupId&gt;
-    &lt;artifactId&gt;flyway-core&lt;/artifactId&gt;
-    &lt;version&gt;{{ site.flywayPreviewVersion }}&lt;/version&gt;
-&lt;/dependency&gt;</pre>
+            <pre class="prettyprint">&lt;dependencies&gt;
+    ...
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.flywaydb&lt;/groupId&gt;
+        &lt;artifactId&gt;flyway-core&lt;/artifactId&gt;
+        &lt;version&gt;{{ site.flywayPreviewVersion }}&lt;/version&gt;
+    &lt;/dependency&gt;
+    ...
+&lt;/dependencies&gt;</pre>
         </td>
         {% endif %}
     </tr>
@@ -114,19 +122,43 @@ be migrated to a state the rest of the code can work with.
     <tr>
         <th>Maven</th>
         <td>
-            <pre class="prettyprint">&lt;dependency&gt;
-    &lt;groupId&gt;org.flywaydb<strong>.enterprise</strong>&lt;/groupId&gt;
-    &lt;artifactId&gt;flyway-core&lt;/artifactId&gt;
-    &lt;version&gt;{{ site.flywayVersion }}&lt;/version&gt;
-&lt;/dependency&gt;</pre>
+            <pre class="prettyprint">&lt;repositories&gt;
+    ...
+    &lt;repository&gt;
+        &lt;id&gt;redgate&lt;/id&gt;
+        &lt;url&gt;https://download.red-gate.com/maven/release&lt;/url&gt;
+    &lt;/repository&gt;
+    ...
+&lt;/repositories&gt;
+&lt;dependencies&gt;
+    ...
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.flywaydb<strong>.enterprise</strong>&lt;/groupId&gt;
+        &lt;artifactId&gt;flyway-core&lt;/artifactId&gt;
+        &lt;version&gt;{{ site.flywayVersion }}&lt;/version&gt;
+    &lt;/dependency&gt;
+    ...
+&lt;/dependencies&gt;</pre>
         </td>
         {% if site.flywayPreviewVersion %}
         <td>
-            <pre class="prettyprint">&lt;dependency&gt;
-    &lt;groupId&gt;org.flywaydb<strong>.enterprise</strong>&lt;/groupId&gt;
-    &lt;artifactId&gt;flyway-core&lt;/artifactId&gt;
-    &lt;version&gt;{{ site.flywayPreviewVersion }}&lt;/version&gt;
-&lt;/dependency&gt;</pre>
+            <pre class="prettyprint">&lt;repositories&gt;
+    ...
+    &lt;repository&gt;
+        &lt;id&gt;redgate&lt;/id&gt;
+        &lt;url&gt;https://download.red-gate.com/maven/release&lt;/url&gt;
+    &lt;/repository&gt;
+    ...
+&lt;/repositories&gt;
+&lt;dependencies&gt;
+    ...
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.flywaydb<strong>.enterprise</strong>&lt;/groupId&gt;
+        &lt;artifactId&gt;flyway-core&lt;/artifactId&gt;
+        &lt;version&gt;{{ site.flywayVersion }}&lt;/version&gt;
+    &lt;/dependency&gt;
+    ...
+&lt;/dependencies&gt;</pre>
         </td>
         {% endif %}
     </tr>
