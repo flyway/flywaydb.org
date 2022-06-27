@@ -35,6 +35,9 @@ plugins {
     id "org.flywaydb<strong>.enterprise</strong>.flyway" version "{{ site.flywayVersion }}"
 }</pre>
                 </div>
+                <div>
+By downloading Flyway Teams/Enterprise Gradle Plugin you confirm that you have read and agree to the terms of the <a href="https://www.red-gate.com/assets/purchase/assets/subscription-license.pdf?_ga=2.265045707.556964523.1656332792-1685764737.1620948215">Redgate EULA</a>.
+                </div>
     </div>
 </div>
 <p class="note">
