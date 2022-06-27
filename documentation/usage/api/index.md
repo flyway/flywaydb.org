@@ -33,13 +33,6 @@ be migrated to a state the rest of the code can work with.
     <div class="tab-content">
         <div class="tab-pane active" id="tab-community">
 <table class="table">
-    {% if site.flywayPreviewVersion %}
-    <tr>
-        <th></th>
-        <th>Official Release (recommended)</th>
-        <td>Early-Access Preview</td>
-    </tr>    
-    {% endif %}
     <tr>
         <th>Maven</th>
         <td>
@@ -53,19 +46,6 @@ be migrated to a state the rest of the code can work with.
     ...
 &lt;/dependencies&gt;</pre>
         </td>
-        {% if site.flywayPreviewVersion %}
-        <td>
-            <pre class="prettyprint">&lt;dependencies&gt;
-    ...
-    &lt;dependency&gt;
-        &lt;groupId&gt;org.flywaydb&lt;/groupId&gt;
-        &lt;artifactId&gt;flyway-core&lt;/artifactId&gt;
-        &lt;version&gt;{{ site.flywayPreviewVersion }}&lt;/version&gt;
-    &lt;/dependency&gt;
-    ...
-&lt;/dependencies&gt;</pre>
-        </td>
-        {% endif %}
     </tr>
     <tr>
         <th>Gradle</th>
@@ -74,13 +54,6 @@ be migrated to a state the rest of the code can work with.
     compile "org.flywaydb:flyway-core:{{ site.flywayVersion }}"
 }</pre>
         </td>
-        {% if site.flywayPreviewVersion %}
-        <td>
-            <pre class="prettyprint">dependencies {
-    compile "org.flywaydb:flyway-core:{{ site.flywayPreviewVersion }}"
-}</pre>
-        </td>
-        {% endif %}
     </tr>
     <tr>
         <th>Binary</th>
@@ -89,13 +62,6 @@ be migrated to a state the rest of the code can work with.
             <a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-core/{{site.flywayVersion}}/flyway-core-{{site.flywayVersion}}.jar.md5">md5</a>
             <a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-core/{{site.flywayVersion}}/flyway-core-{{site.flywayVersion}}.jar.sha1">sha1</a>
         </td>
-        {% if site.flywayPreviewVersion %}
-        <td>
-            <a class="btn btn-primary btn-download" href="/download/thankyou?dl=https://repo1.maven.org/maven2/org/flywaydb/flyway-core/{{site.flywayPreviewVersion}}/flyway-core-{{site.flywayPreviewVersion}}.jar"><i class="fa fa-download"></i> flyway-core-{{site.flywayPreviewVersion}}.jar</a>
-            <a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-core/{{site.flywayPreviewVersion}}/flyway-core-{{site.flywayPreviewVersion}}.jar.md5">md5</a>
-            <a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-core/{{site.flywayPreviewVersion}}/flyway-core-{{site.flywayPreviewVersion}}.jar.sha1">sha1</a>
-        </td>
-        {% endif %}
     </tr>
     <tr>
         <th>Sources</th>
@@ -104,25 +70,11 @@ be migrated to a state the rest of the code can work with.
             <a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-core/{{site.flywayVersion}}/flyway-core-{{site.flywayVersion}}-sources.jar.md5">md5</a>
             <a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-core/{{site.flywayVersion}}/flyway-core-{{site.flywayVersion}}-sources.jar.sha1">sha1</a>
         </td>
-        {% if site.flywayPreviewVersion %}
-        <td>
-            <a class="btn btn-primary btn-download" href="/download/thankyou?dl=https://repo1.maven.org/maven2/org/flywaydb/flyway-core/{{site.flywayPreviewVersion}}/flyway-core-{{site.flywayPreviewVersion}}-sources.jar"><i class="fa fa-download"></i> flyway-core-{{site.flywayPreviewVersion}}-sources.jar</a>
-            <a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-core/{{site.flywayPreviewVersion}}/flyway-core-{{site.flywayPreviewVersion}}-sources.jar.md5">md5</a>
-            <a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/flyway-core/{{site.flywayPreviewVersion}}/flyway-core-{{site.flywayPreviewVersion}}-sources.jar.sha1">sha1</a>
-        </td>
-        {% endif %}
     </tr>
 </table>
         </div>
 <div class="tab-pane" id="tab-teams">
 <table class="table">
-    {% if site.flywayPreviewVersion %}
-    <tr>
-        <th></th>
-        <th>Official Release (recommended)</th>
-        <td>Early-Access Preview</td>
-    </tr>    
-    {% endif %}
     <tr>
         <th>Maven</th>
         <td>
@@ -144,27 +96,6 @@ be migrated to a state the rest of the code can work with.
     ...
 &lt;/dependencies&gt;</pre>
         </td>
-        {% if site.flywayPreviewVersion %}
-        <td>
-            <pre class="prettyprint">&lt;repositories&gt;
-    ...
-    &lt;repository&gt;
-        &lt;id&gt;redgate&lt;/id&gt;
-        &lt;url&gt;https://download.red-gate.com/maven/release&lt;/url&gt;
-    &lt;/repository&gt;
-    ...
-&lt;/repositories&gt;
-&lt;dependencies&gt;
-    ...
-    &lt;dependency&gt;
-        &lt;groupId&gt;org.flywaydb<strong>.enterprise</strong>&lt;/groupId&gt;
-        &lt;artifactId&gt;flyway-core&lt;/artifactId&gt;
-        &lt;version&gt;{{ site.flywayVersion }}&lt;/version&gt;
-    &lt;/dependency&gt;
-    ...
-&lt;/dependencies&gt;</pre>
-        </td>
-        {% endif %}
     </tr>
     <tr>
         <th>Gradle</th>
@@ -179,19 +110,6 @@ dependencies {
 compile "org.flywaydb<strong>.enterprise</strong>:flyway-core:{{ site.flywayVersion }}"
 }</pre>
         </td>
-        {% if site.flywayPreviewVersion %}
-        <td>
-            <pre class="prettyprint">repositories {
-    mavenCentral()
-    maven {
-        url "https://download.red-gate.com/maven/release"
-    }
-}
-dependencies {
-compile "org.flywaydb<strong>.enterprise</strong>:flyway-core:{{ site.flywayVersion }}"
-}</pre>
-        </td>
-        {% endif %}
     </tr>
     <tr>
         <th>Binary</th>
@@ -200,24 +118,12 @@ compile "org.flywaydb<strong>.enterprise</strong>:flyway-core:{{ site.flywayVers
             <a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/enterprise/flyway-core/{{site.flywayVersion}}/flyway-core-{{site.flywayVersion}}.jar.md5">md5</a>
             <a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/enterprise/flyway-core/{{site.flywayVersion}}/flyway-core-{{site.flywayVersion}}.jar.sha1">sha1</a>
         </td>
-        {% if site.flywayPreviewVersion %}
-        <td>
-            <a class="btn btn-primary btn-download" href="/download/thankyou?dl=https://repo1.maven.org/maven2/org/flywaydb/enterprise/flyway-core/{{site.flywayPreviewVersion}}/flyway-core-{{site.flywayPreviewVersion}}.jar"><i class="fa fa-download"></i> flyway-core-{{site.flywayPreviewVersion}}.jar</a>
-            <a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/enterprise/flyway-core/{{site.flywayPreviewVersion}}/flyway-core-{{site.flywayPreviewVersion}}.jar.md5">md5</a>
-            <a class="note" href="https://repo1.maven.org/maven2/org/flywaydb/enterprise/flyway-core/{{site.flywayPreviewVersion}}/flyway-core-{{site.flywayPreviewVersion}}.jar.sha1">sha1</a>
-        </td>
-        {% endif %}
     </tr>
     <tr>
         <th>Licensing</th>
         <td>
             By downloading Flyway Teams/Enterprise you confirm that you have read and agree to the terms of the <a href="https://www.red-gate.com/assets/purchase/assets/subscription-license.pdf?_ga=2.265045707.556964523.1656332792-1685764737.1620948215">Redgate EULA</a>.
         </td>
-        {% if site.flywayPreviewVersion %}
-        <td>
-            By downloading Flyway Teams/Enterprise you confirm that you have read and agree to the terms of the <a href="https://www.red-gate.com/assets/purchase/assets/subscription-license.pdf?_ga=2.265045707.556964523.1656332792-1685764737.1620948215">Redgate EULA</a>.
-        </td>
-        {% endif %}
     </tr>
 </table>
         </div>
