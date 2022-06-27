@@ -9,45 +9,45 @@ redirect_from: /documentation/configuration/cleanDisabled/
 # Clean Disabled
 
 ## Description
-Whether to disable clean. This is especially useful for production environments where running clean can be quite a career limiting move.
+Whether to disable clean. This is especially useful for production environments where running clean can be a career limiting move. Set to `false` to allow `clean` to execute.
 
 ## Default
-false
+true
 
 ## Usage
 
 ### Commandline
 ```powershell
-./flyway -cleanDisabled="true" clean
+./flyway -cleanDisabled="false" clean
 ```
 
 ### Configuration File
 ```properties
-flyway.cleanDisabled=true
+flyway.cleanDisabled=false
 ```
 
 ### Environment Variable
 ```properties
-FLYWAY_CLEAN_DISABLED=true
+FLYWAY_CLEAN_DISABLED=false
 ```
 
 ### API
 ```java
 Flyway.configure()
-    .cleanDisabled(true)
+    .cleanDisabled(false)
     .load()
 ```
 
 ### Gradle
 ```groovy
 flyway {
-    cleanDisabled = true
+    cleanDisabled = false
 }
 ```
 
 ### Maven
 ```xml
 <configuration>
-    <cleanDisabled>true</cleanDisabled>
+    <cleanDisabled>false</cleanDisabled>
 </configuration>
 ```
