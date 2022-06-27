@@ -21,13 +21,6 @@ The Flyway Maven plugin supports **Maven 3.x** running on **Java 8**, **Java 9**
     <code>pom.xml</code>
         <div class="tab-pane active" id="tab-community">
 <table class="table">
-    {% if site.flywayPreviewVersion %}
-    <tr>
-        <th></th>
-        <th>Official Release (recommended)</th>
-        <td>Early-Access Preview</td>
-    </tr>    
-    {% endif %}
     <tr>
         <td>
             <pre class="prettyprint">&lt;build&gt;
@@ -40,31 +33,11 @@ The Flyway Maven plugin supports **Maven 3.x** running on **Java 8**, **Java 9**
     ...
 &lt;/build&gt;</pre>
         </td>
-        {% if site.flywayPreviewVersion %}
-        <td>
-            <pre class="prettyprint">&lt;build&gt;
-    ...
-    &lt;plugin&gt;
-        &lt;groupId&gt;org.flywaydb&lt;/groupId&gt;
-        &lt;artifactId&gt;flyway-maven-plugin&lt;/artifactId&gt;
-        &lt;version&gt;{{ site.flywayVersion }}&lt;/version&gt;
-    &lt;/plugin&gt;
-    ...
-&lt;/build&gt;</pre>
-        </td>
-        {% endif %}
     </tr>
 </table>
         </div>
                 <div class="tab-pane" id="tab-teams">
 <table class="table">
-    {% if site.flywayPreviewVersion %}
-    <tr>
-        <th></th>
-        <th>Official Release (recommended)</th>
-        <td>Early-Access Preview</td>
-    </tr>    
-    {% endif %}
     <tr>
         <td>
             <pre class="prettyprint">&lt;repositories&gt;
@@ -85,37 +58,11 @@ The Flyway Maven plugin supports **Maven 3.x** running on **Java 8**, **Java 9**
     ...
 &lt;/build&gt;</pre>
         </td>
-        {% if site.flywayPreviewVersion %}
-        <td>
-            <pre class="prettyprint">&lt;repositories&gt;
-    ...
-    &lt;repository&gt;
-        &lt;id&gt;redgate&lt;/id&gt;
-        &lt;url&gt;https://download.red-gate.com/maven/release&lt;/url&gt;
-    &lt;/repository&gt;
-    ...
-&lt;/repositories&gt;
-&lt;build&gt;
-    ...
-    &lt;plugin&gt;
-        &lt;groupId&gt;org.flywaydb<strong>.enterprise</strong>&lt;/groupId&gt;
-        &lt;artifactId&gt;flyway-maven-plugin&lt;/artifactId&gt;
-        &lt;version&gt;{{ site.flywayVersion }}&lt;/version&gt;
-    &lt;/plugin&gt;
-    ...
-&lt;/build&gt;</pre>
-        </td>
-        {% endif %}
     </tr>
     <tr>
         <td>
             By downloading Flyway Teams/Enterprise Maven Plugin you confirm that you have read and agree to the terms of the <a href="https://www.red-gate.com/assets/purchase/assets/subscription-license.pdf?_ga=2.265045707.556964523.1656332792-1685764737.1620948215">Redgate EULA</a>.
         </td>
-        {% if site.flywayPreviewVersion %}
-        <td>
-            By downloading Flyway Teams/Enterprise Maven Plugin  you confirm that you have read and agree to the terms of the <a href="https://www.red-gate.com/assets/purchase/assets/subscription-license.pdf?_ga=2.265045707.556964523.1656332792-1685764737.1620948215">Redgate EULA</a>.
-        </td>
-        {% endif %}
     </tr>
 </table>
         </div>
