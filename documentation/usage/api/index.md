@@ -70,11 +70,15 @@ be migrated to a state the rest of the code can work with.
     <tr>
         <th>Gradle</th>
         <td>
-            <pre class="prettyprint">compile "org.flywaydb:flyway-core:{{ site.flywayVersion }}"</pre>
+            <pre class="prettyprint">dependencies {
+    compile "org.flywaydb:flyway-core:{{ site.flywayVersion }}"
+}</pre>
         </td>
         {% if site.flywayPreviewVersion %}
         <td>
-            <pre class="prettyprint">compile "org.flywaydb:flyway-core:{{ site.flywayPreviewVersion }}"</pre>
+            <pre class="prettyprint">dependencies {
+    compile "org.flywaydb:flyway-core:{{ site.flywayPreviewVersion }}"
+}</pre>
         </td>
         {% endif %}
     </tr>
@@ -165,11 +169,27 @@ be migrated to a state the rest of the code can work with.
     <tr>
         <th>Gradle</th>
         <td>
-            <pre class="prettyprint">compile "org.flywaydb<strong>.enterprise</strong>:flyway-core:{{ site.flywayVersion }}"</pre>
+            <pre class="prettyprint">repositories {
+    mavenCentral()
+    maven {
+        url "https://download.red-gate.com/maven/release"
+    }
+}
+dependencies {
+compile "org.flywaydb<strong>.enterprise</strong>:flyway-core:{{ site.flywayVersion }}"
+}</pre>
         </td>
         {% if site.flywayPreviewVersion %}
         <td>
-            <pre class="prettyprint">compile "org.flywaydb<strong>.enterprise</strong>:flyway-core:{{ site.flywayVersion }}"</pre>
+            <pre class="prettyprint">repositories {
+    mavenCentral()
+    maven {
+        url "https://download.red-gate.com/maven/release"
+    }
+}
+dependencies {
+compile "org.flywaydb<strong>.enterprise</strong>:flyway-core:{{ site.flywayVersion }}"
+}</pre>
         </td>
         {% endif %}
     </tr>
