@@ -82,7 +82,7 @@ These error codes are surfaced when running `validate` or `validateWithResult`.
 
 ### `RESOLVED_VERSIONED_MIGRATION_NOT_APPLIED`
 - **Caused by:** A versioned migration that was resolved has not been applied
-- **Solution:** To ignore this migration enableset [`ignoreMigrationPatterns`](/documentation/configuration/parameters/ignoreMigrationPatterns) to `*:ignored` and to allow executing this migration enable [`outOfOrder`](/documentation/configuration/parameters/outOfOrder)
+- **Solution:** To ignore this migration set [`ignoreMigrationPatterns`](/documentation/configuration/parameters/ignoreMigrationPatterns) to `*:ignored` and to allow executing this migration enable [`outOfOrder`](/documentation/configuration/parameters/outOfOrder)
 
 ### `OUTDATED_REPEATABLE_MIGRATION`
 - **Caused by:** An applied repeatable migration was resolved with a newer checksum and can be reapplied
