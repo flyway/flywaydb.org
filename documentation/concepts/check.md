@@ -49,6 +49,8 @@ There are 4 ways to generate a change report:
 - If you do not have a build database you should use `check.url` and `check.nextSnapshot`
 - If you cannot access either your target or build database you should use `check.deployedSnapshot` and `check.nextSnapshot`
 
+#### Example: `url` and `buildUrl`
+
 The `check –changes` command and flag works by building a temporary database. This 'build' database is first made to reflect the state of your target schema, and then made to reflect your target schema with the pending changes applied.
 
 The difference between the two states of this build database (target now, and target with changes applied) represents the effect your pending migrations will have (or have had) when the scripts are (or were) executed. This difference is captured as an artefact called a “Change Report”. The change report is available as both HTML (human readable) and JSON (machine readable) formats.
