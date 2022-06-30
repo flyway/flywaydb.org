@@ -12,6 +12,9 @@ subtitle: snapshot
 
 `snapshot` captures the schema of the database specified in `flyway.url` into a file.
 
+This can be used to generate a snapshot of your database in its current state for use with [`check.deployedSnapshot`](/documentation/command/check#configuration-parameters)
+or to take a snapshot of a build database for use with [`check.nextSnapshot`](/documentation/command/check#configuration-parameters)
+
 #### Requirements
 - .NET 6 is required in order to generate reports. You can download it from [here](https://dotnet.microsoft.com/en-us/download/dotnet/6.0).
 
