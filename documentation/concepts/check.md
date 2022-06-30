@@ -64,16 +64,6 @@ Flyway’s `check –changes` will then:
 1. Compare the V2 temporary database snapshot to the V5 temporary database snapshot
 1. Generate a HTML (human readable) and JSON (machine readable) Change Report, indicating the additions, deletions, and modifications of database objects between V2 and V5
 
-## Snapshot and Compare
-Change and Drift reports are pre-orchestrated reports Flyway provides, but this doesn't always meet all the needs.
-
-The `snapshot` command combined with `check -compare` can be used to generate reports that are more meaningful to you by letting you choose what to include.
-
-Some of the situations this lets you handle:
-- Relative drift report
-- Using a DB in a custom initial state (cloned or restored from a backup)
-- Comparing DBs across different networks
-
 ## Good things to know
 - There is no requirement for the temporary database to be in your production system
 - Please note that the temporary database **will be cleaned** for Change and Drift reports before the operation starts
