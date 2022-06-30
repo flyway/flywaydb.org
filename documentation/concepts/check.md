@@ -42,6 +42,13 @@ You can use this capability pre- and post-deployment:
 In either scenario, using the `-changes` flag will help you infer which database objects will be/have been affected - and how – when you execute/have executed your migration script(s).
 
 ### Requirements and behavior
+
+There are 4 ways to generate a change report:
+- If you have access to both your target and build database you should use `check.url` and `check.buildUrl`
+- If you can't access your target database from your build environment you should use `check.deployedSnapshot` and `check.buildUrl`
+- If you do not have a build database you should use `check.url` and `check.nextSnapshot`
+- If you cannot access either your target or build database you should use `check.deployedSnapshot` and `check.nextSnapshot`
+
 The `check –changes` command and flag works by building a temporary database. This 'build' database is first made to reflect the state of your target schema, and then made to reflect your target schema with the pending changes applied.
 
 The difference between the two states of this build database (target now, and target with changes applied) represents the effect your pending migrations will have (or have had) when the scripts are (or were) executed. This difference is captured as an artefact called a “Change Report”. The change report is available as both HTML (human readable) and JSON (machine readable) formats.
