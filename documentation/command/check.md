@@ -33,12 +33,12 @@ You can read more about the `check` concept [here](/documentation/concepts/check
 
 | Parameter                     | Description
 | ----------------------------- | -----------------------------------------------------------
-|    check.buildUrl             | URL for a build database. 
+|    check.buildUrl             | URL for a build database.
 |    check.buildUser            | Username for the build database. Defaults to 'flyway.user'
 |    check.buildPassword        | Password for the build database. Defaults to 'flyway.password'
 |    check.reportFilename       | **[REQUIRED]** Destination filename for reports
-|    check.nextSnapshot         | A snapshot containing all migrations including those that are pending
-|    check.deployedSnapshot     | A snapshot containing all applied migrations and thus matching what should be in the target
+|    check.nextSnapshot         | A snapshot containing all migrations including those that are pending (generated via [`snapshot`](/documentation/command/snapshot))
+|    check.deployedSnapshot     | A snapshot containing all applied migrations and thus matching what should be in the target (generated via [`snapshot`](/documentation/command/snapshot))
 
 #### Usage Example:
 ```
