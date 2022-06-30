@@ -12,9 +12,7 @@ subtitle: Check
 
 `check` produces reports to increase confidence in your migrations.
 
-For `-compare`, `flyway.url` and `flyway.check.tempUrl` can be a [snapshot](#snapshot-usage-example).
-
-For `-changes` and `=drift`, Flyway migrates against a temporary database and compares this against the target database in order to generate a report.
+For `-changes` and `-drift`, Flyway migrates against a temporary database and compares this against the target database in order to generate a report.
 **This temporary database will be cleaned before it is used, so you must ensure it does not contain anything of importance.**
 
 You can read more about the `check` concept [here](/documentation/concepts/check).
@@ -29,7 +27,6 @@ You can read more about the `check` concept [here](/documentation/concepts/check
 | ---------------------------- | --------------------------------------------------------------
 |    -changes                  |  Include pending changes that will be applied to the database
 |    -drift                    |  Include changes applied out of process to the database
-|    -compare                  |  Include comparison between `url` with `check.tempUrl`
 
 #### Configuration parameters:
  _Format: -key=value_
@@ -44,11 +41,6 @@ You can read more about the `check` concept [here](/documentation/concepts/check
 #### Usage Example:
 ```
 flyway check -changes -url=jdbc:example:database -user=username -password=password -check.tempUrl=jdbc:example:tempdatabase
-```
-
-#### Snapshot usage Example:
-```
-flyway check -compare -url=snapshot://C:\snapshots\my_snapshot -check.tempUrl=jdbc:example:tempdatabase
 ```
 
 ##### Example configuration file
