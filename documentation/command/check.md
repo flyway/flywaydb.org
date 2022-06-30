@@ -23,20 +23,22 @@ You can read more about the `check` concept [here](/documentation/concepts/check
 #### Flags:
 - _One or more flags must be present_
 
-| Parameter                    | Description
-| ---------------------------- | --------------------------------------------------------------
-|    -changes                  |  Include pending changes that will be applied to the database
-|    -drift                    |  Include changes applied out of process to the database
+| Parameter                     | Description
+| ----------------------------- | --------------------------------------------------------------
+|    -changes                   |  Include pending changes that will be applied to the database
+|    -drift                     |  Include changes applied out of process to the database
 
 #### Configuration parameters:
  _Format: -key=value_
 
-| Parameter                    | Description
-| ---------------------------- | -----------------------------------------------------------
-|    check.buildUrl             | **[REQUIRED]** URL for a build database. 
+| Parameter                     | Description
+| ----------------------------- | -----------------------------------------------------------
+|    check.buildUrl             | URL for a build database. 
 |    check.buildUser            | Username for the build database. Defaults to 'flyway.user'
 |    check.buildPassword        | Password for the build database. Defaults to 'flyway.password'
-|    check.reportFilename      | **[REQUIRED]** Destination filename for reports
+|    check.reportFilename       | **[REQUIRED]** Destination filename for reports
+|    check.nextSnapshot         | A snapshot containing all migrations including those that are pending
+|    check.deployedSnapshot     | A snapshot containing all applied migrations and thus matching what should be in the target
 
 #### Usage Example:
 ```
