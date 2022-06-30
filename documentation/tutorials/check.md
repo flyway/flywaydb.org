@@ -20,6 +20,8 @@ One or more of the following flags must be set, which determine what the report 
 
 More information can be found on [the check command page](/documentation/command/check).
 
+This tutorial exemplifies the scenario where you have access to both your target DB (`url`) and a build DB (`buildUrl`).
+
 ## Install prerequisites
 
 Flyway Check requires .Net 6 so make sure you have this installed. You can download it from [here](https://dotnet.microsoft.com/en-us/download/dotnet/6.0).
