@@ -115,6 +115,7 @@ The output from `info` can be filtered to only the parts of the history that you
 - `infoSinceVersion`: Limits info to show only migrations greater than or equal to this version, and any repeatable migrations. (e.g `1.1`)
 - `infoUntilVersion`: Limits info to show only migrations less than or equal to this version, and any repeatable migrations. (e.g. `1.1`)
 - `infoOfState`: Limits info to show only migrations of the provided states. This is a case insensitive, comma-separated list. The valid states can be found at [Migration States](/documentation/concepts/migrations#migration-states).
+- `migrationIds`: Suppresses all other output and displays a comma-separated list of migration versions for versioned migrations and descriptions for repeatable migrations. This is equivalent to the expected input to [`cherryPick`](/documentation/configuration/parameters/cherryPick)
 
 Example:
 <pre class="console">&gt; flyway info -infoSinceDate="01/12/2020 13:00"
