@@ -114,7 +114,7 @@ The output from `info` can be filtered to only the parts of the history that you
 - `infoUntilDate`: Limits info to show only migrations applied before this date. Must be in the format `dd/MM/yyyy HH:mm` (e.g. `01/12/2020 13:00`)
 - `infoSinceVersion`: Limits info to show only migrations greater than or equal to this version, and any repeatable migrations. (e.g `1.1`)
 - `infoUntilVersion`: Limits info to show only migrations less than or equal to this version, and any repeatable migrations. (e.g. `1.1`)
-- `infoOfState`: Limits info to show only migrations of the provided state. This is case insensitive. The valid states can be found at [Migration States](/documentation/concepts/migrations#migration-states).
+- `infoOfState`: Limits info to show only migrations of the provided states. This is a case insensitive, comma-separated list. The valid states can be found at [Migration States](/documentation/concepts/migrations#migration-states).
 
 Example:
 <pre class="console">&gt; flyway info -infoSinceDate="01/12/2020 13:00"
