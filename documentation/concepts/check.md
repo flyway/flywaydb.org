@@ -80,11 +80,9 @@ The `–drift` flag produces a report indicating differences between structure o
 
 ### Requirements and behavior
 
-There are 4 ways to generate a drift report:
+There are 2 ways to generate a drift report:
 - If you have access to both your target and build database you should use `check.url` and `check.buildUrl`
-- If you can't access your target database from your build environment you should use `check.deployedSnapshot` and `check.buildUrl`
-- If you do not have a build database you should use `check.url` and `check.nextSnapshot`
-- If you cannot access either your target or build database you should use `check.deployedSnapshot` and `check.nextSnapshot`
+- If you do not have a build database you should use `check.url` and `check.deployedSnapshot`
 
 #### Example: `url` and `buildUrl`
 
