@@ -67,9 +67,9 @@ Flyway’s `check –changes` will then:
 1. Clean your build database
 1. Query the target database for the list of applied migrations (for simplicity, let’s say it’s at V2)
 1. Apply these migrations to the build database
-1. Take a snapshot of the build database (now also at V2)
+1. Take a [`snapshot`](/documentation/command/snapshot) of the build database (now also at V2)
 1. Applying pending migrations to the build database (let’s say it’s now at V5)
-1. Take a snapshot of the build database
+1. Take a [`snapshot`](/documentation/command/snapshot) of the build database
 1. Compare the V2 build database snapshot to the V5 build database snapshot
 1. Generate a HTML (human readable) and JSON (machine readable) Change Report, indicating the additions, deletions, and modifications of database objects between V2 and V5
 
@@ -99,11 +99,11 @@ The process works like this:
 1. Run `flyway check –drift`
 
 Flyway’s `check –drift` will then:
-1. Take a snapshot of the target database
+1. Take a [`snapshot`](/documentation/command/snapshot) of the target database
 2. Clean your build database
 3. Query the target database for the list of applied migrations (for simplicity, let’s say it’s at V2)
 4. Apply these migrations to the build database
-5. Take a snapshot of the build database (now also at V2)
+5. Take a [`snapshot`](/documentation/command/snapshot) of the build database (now also at V2)
 6. Compare the V2 target database snapshot to the V2 build database snapshot
 7. Generate a HTML (human readable) and JSON (machine readable) Drift Report, indicating the additions, deletions, and modifications of database objects between target and build
 
