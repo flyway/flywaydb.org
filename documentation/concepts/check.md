@@ -80,6 +80,7 @@ The `check –changes` command and flag works by building a temporary database. 
 The difference between the two states of this build database (`appliedMigrations`, and `appliedMigrations` with changes applied) represents the effect your pending migrations will have (or have had) when the scripts are (or were) executed. This difference is captured as an artefact called a “Change Report”. The change report is available as both HTML (human readable) and JSON (machine readable) formats.
 
 The process works like this:
+![Check_appliedMigrations.png](/assets/balsamiq/Check_appliedMigrations.png)
 1. Run `flyway info -infoOfState="success,pending,out_of_order" -migrationIds > appliedMigrations.txt`
     1. This will produce a comma-separated list which represents the applied migrations of your target database
 1. Specify a build database
