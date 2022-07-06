@@ -61,7 +61,7 @@ The process works like this:
     1. This is the database you want to apply your changes to, where Flyway is already being used to manage migrations (ie. A Flyway migrations table exists)
 1. Specify a build database
     1. This is an existing build database (note: Flyway will [`clean`](/documentation/command/clean) this database, so if you specify a full database, you must ensure it is ok to for Flyway to erase its schema)
-1. Run `flyway check –changes`
+1. Run `flyway check –changes -check.buildUrl="jdbc://build-url" -check.url="jdbc://url"`
 
 Flyway’s `check –changes` will then:
 1. Clean your build database
@@ -85,7 +85,7 @@ The process works like this:
     1. This will produce a comma-separated list which represents the applied migrations of your target database
 1. Specify a build database
     1. This is an existing build database (note: Flyway will [`clean`](/documentation/command/clean) this database, so if you specify a full database, you must ensure it is ok to for Flyway to erase its schema)
-1. Run `flyway check –changes -check.appliedMigrations="$(cat appliedMigrations.txt)"`
+1. Run `flyway check –changes -check.buildUrl="jdbc://build-url" -check.appliedMigrations="$(cat appliedMigrations.txt)"`
 
 Flyway’s `check –changes` will then:
 1. Clean your build database
@@ -119,7 +119,7 @@ The process works like this:
     1. This is the database you want to apply your changes to, where Flyway is already being used to manage migrations (ie. A Flyway migrations table exists)
 1. Specify a build database
     1. This is an existing build database (note: Flyway will “clean” this database, so if you specify a full database, you must ensure it is ok to for Flyway to erase its schema)
-1. Run `flyway check –drift`
+1. Run `flyway check –drift -check.buildUrl="jdbc://build-url" -check.url="jdbc://url"`
 
 Flyway’s `check –drift` will then:
 1. Take a [`snapshot`](/documentation/command/snapshot) of the target database
