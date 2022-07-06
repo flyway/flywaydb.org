@@ -39,6 +39,7 @@ You can read more about the `check` concept [here](/documentation/concepts/check
 |    check.reportFilename       | **[REQUIRED]** Destination filename for reports
 |    check.nextSnapshot         | A snapshot containing all migrations including those that are pending (generated via [`snapshot`](/documentation/command/snapshot))
 |    check.deployedSnapshot     | A snapshot containing all applied migrations and thus matching what should be in the target (generated via [`snapshot`](/documentation/command/snapshot))
+|    check.appliedMigrations    | A comma-separated list of migration ids (migration versions or repeatable descriptions) to apply to create snapshots (generated via [`info`](/documentation/command/info))
 
 #### Usage Example:
 ```
