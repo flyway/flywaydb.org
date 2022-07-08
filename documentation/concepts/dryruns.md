@@ -30,11 +30,7 @@ directly to the database without using Flyway. This SQL file also contains the n
 
 It is not advised to change a dry run script after it's been generated. Instead, any changes should be made to the migrations and a new dry run script generated. This is to ensure the changes executed match what's in your migrations.
 
-### Exceptions
-
-Not every change is intercepted in a Dry Run. Some changes cannot be intercepted and will be executed as normal. Details are provided:
-
-#### Intercepted in Dry Run
+### Intercepted in Dry Run
 
 These changes are intercepted and written into a file as explained above.
 
@@ -42,9 +38,9 @@ These changes are intercepted and written into a file as explained above.
 - SQL repeatable migrations
 - SQL callbacks
 
-#### Not intercepted in Dry Run
+#### New in V9:
 
-These changes will be executed as normal during a Dry Run. **The schema history table will not be updated, so Flyway will have no record of execution.** Be sure you're aware of the side effects when performing a Dry Run if your Flyway project contains such changes.
+These are no longer executed during a dry run. Instead, their file names are logged in the dry run output.
 
 - [Arbitrary script migrations](/documentation/concepts/migrations#script-migrations)
 - [Arbitrary script callbacks](/documentation/concepts/callbacks#script-callbacks)
