@@ -24,10 +24,8 @@ be migrated to a state the rest of the code can work with.
 
 <div class="tabbable">
     <ul class="nav nav-tabs">
-        <li class="active marketing-item"><a href="#tab-community" data-toggle="tab">Community Edition</a>
-        </li>
-        <li class="marketing-item"><a href="#tab-teams" data-toggle="tab">Teams Edition</a>
-        </li>
+        <li class="active marketing-item"><a href="#tab-community" data-toggle="tab">Community Edition</a></li>
+        <li class="marketing-item"><a href="#tab-teams" data-toggle="tab">Teams Edition</a></li>
     </ul>
     <div class="tab-content">
         <div class="tab-pane active" id="tab-community">
@@ -134,7 +132,7 @@ dependencies {
 
 ## The Flyway Class
 
-The central piece of Flyway's database migration infrastructure is the 
+The central piece of Flyway's database migration infrastructure is the
 **[org.flywaydb.core.Flyway](/documentation/usage/api/javadoc/org/flywaydb/core/Flyway)**
 class. It is your **one-stop shop** for working with Flyway programmatically. It serves both as a
 **configuration** and a **launching** point for all of Flyway's functions.
@@ -162,7 +160,7 @@ See [configuration](/documentation/configuration/parameters) for a full list of 
 
 ### JDBC Drivers
 
-You will need to include the relevant JDBC driver for your chosen database as a dependency in your Java project. 
+You will need to include the relevant JDBC driver for your chosen database as a dependency in your Java project.
 For instance in your `pom.xml` for a Maven project. The version of the JDBC driver supported for each database is specified in the 'Supported Databases' list in the left hand side navigation menu.
 
 ### Spring Configuration
