@@ -5,17 +5,17 @@ subtitle: Upgrading to Teams
 redirect_from: /documentation/upgradingToTeams/
 ---
 
-# Upgrading to Flyway Teams
+# Upgrading to Flyway Teams / Enterprise
 
-This article assumes you are a proud owner of a Flyway Teams license. If you are not, head over to the [download/pricing page](/download) to purchase a license or start a free trial.
+This article assumes you are a proud owner of a Flyway Teams / Enterprise license. If you are not, head over to the [download/pricing page](/download) to purchase a license or start a free trial.
 
 ## Upgrading from Community
 
-If you are currently using Flyway Community and have obtained a Flyway Teams license, please see [license key](/documentation/configuration/parameters/licenseKey) to read about where to configure this License Key.
+If you are currently using Flyway Community and have obtained a license, first you will need to download Flyway Teams / Enterprise. You can find a link in the relevant usage section below. Please see [license key](/documentation/configuration/parameters/licenseKey) to read about where to configure your license key.
 
 ### Command Line
 
-If you are using the command line, simply provide your license key through any of the [supported methods](/documentation/configuration/parameters/licenseKey).
+If you are using the command line, first you need to download Flyway Teams / Enterprise [here](/documentation/usage/commandline/#tab-teams). Then, simply provide your license key through any of the [supported methods](/documentation/configuration/parameters/licenseKey).
 
 For example:
 ```powershell
@@ -24,7 +24,7 @@ For example:
 
 ### API
 
-If you are using the API, simply swap your dependency from `org.flywaydb.flyway` to `org.flywaydb.flyway.enterprise`. Then provide your license key through any of the [supported methods](/documentation/configuration/parameters/licenseKey).
+If you are using the API, simply swap your dependency from `org.flywaydb` to `org.flywaydb.enterprise`. Then provide your license key through any of the [supported methods](/documentation/configuration/parameters/licenseKey).
 
 For example:
 ```groovy
@@ -42,12 +42,12 @@ flyway.info();
 
 ### Gradle
 
-If you are using the Gradle plugin, swap the plugin dependency from `id "org.flywaydb.flyway" version "{{ site.flywayVersion }}"` to `id "org.flywaydb.flyway.enterprise" version "{{ site.flywayVersion }}"`. Then provide your license key(/documentation/configuration/parameters/licenseKey) through any of the [supported methods](/documentation/configuration/parameters/licenseKey).
+If you are using the Gradle plugin, swap the plugin dependency from `id "org.flywaydb" version "{{ site.flywayVersion }}"` to `id "org.flywaydb.enterprise" version "{{ site.flywayVersion }}"`. Then provide your license key through any of the [supported methods](/documentation/configuration/parameters/licenseKey).
 
 For example:
 ```groovy
 plugins {
-    id "org.flywaydb.flyway.enterprise" version "{{ site.flywayVersion }}"
+    id "org.flywaydb.enterprise" version "{{ site.flywayVersion }}"
 }
 
 flyway {
@@ -64,7 +64,7 @@ For example:
 <plugin>
     <groupId>org.flywaydb.enterprise</groupId>
     <artifactId>flyway-maven-plugin</artifactId>
-    <version>7.0.0</version>
+    <version>{{ site.flywayVersion }}</version>
 
     <configuration>
         <licenseKey>FL01...</licenseKey>
@@ -74,7 +74,7 @@ For example:
 
 ## New Features
 
-Now that you are using the Teams edition of Flyway, you can take advantage of all the powerful new features at your disposal:
+Now that you are using the Teams / Enterprise edition of Flyway, you can take advantage of all the powerful new features at your disposal:
 
 - Begin creating [Undo migrations](/documentation/concepts/migrations#undo-migrations) to allow rollback of deployments.
 - Begin storing your migrations in cloud storage such as [Amazon S3](/documentation/configuration/parameters/locations#amazon-s3) or [Google Cloud Storage](/documentation/configuration/parameters/locations#google-cloud-storage).
