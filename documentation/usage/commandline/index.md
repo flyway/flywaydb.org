@@ -66,6 +66,45 @@ The Flyway command-line tool is a standalone Flyway distribution. It runs on Win
         <div class="tab-pane" id="tab-teams">
             <br />
 
+            <h4> <i class="fa fa-windows"></i> Windows </h4>
+
+            <button class="btn btn-primary btn-download download-modal-button" data-toggle="modal" data-target="#download-email-modal" data-download-url="/download/thankyou?dl={{site.enterpriseUrl}}/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-windows-x64.zip">flyway-commandline-{{site.flywayVersion}}-windows-x64.zip</button>
+            <a class="note" href="{{site.enterpriseUrl}}/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-windows-x64.zip.md5">md5</a>
+            <a class="note" href="{{site.enterpriseUrl}}/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-windows-x64.zip.sha1">sha1</a><br/>
+
+            <p class="note"><br/>Extract the archive and simply add the new `flyway-{{site.flywayVersion}}` directory to the `PATH` to make the `flyway` command available from anywhere on your system.</p>
+
+            <h4> <i class="fa fa-apple"></i> macOS </h4>
+
+            <button class="btn btn-primary btn-download download-modal-button" data-toggle="modal" data-target="#download-email-modal" data-download-url="/download/thankyou?dl={{site.enterpriseUrl}}/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-macosx-x64.tar.gz">flyway-commandline-{{site.flywayVersion}}-macosx-x64.tar.gz</button>
+            <a class="note" href="{{site.enterpriseUrl}}/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-macosx-x64.tar.gz.md5">md5</a>
+            <a class="note" href="{{site.enterpriseUrl}}/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-macosx-x64.tar.gz.sha1">sha1</a><br/><br/>
+
+            <h4> <i class="fa fa-linux"></i> Linux </h4>
+
+            Download, extract and install by adding to `PATH` (requires `sudo` permissions):
+            <pre class="console" style="overflow-x: auto"><span>$</span> wget -qO- {{site.enterpriseUrl}}/flyway-commandline/{{site.flywayVersion}}/<strong>flyway-commandline-{{site.flywayVersion}}-linux-x64.tar.gz</strong> | tar xvz && sudo ln -s `pwd`/flyway-{{site.flywayVersion}}/flyway /usr/local/bin </pre>
+
+            Or simply download the archive:
+
+            <br />
+
+            <button class="btn btn-primary btn-download download-modal-button" data-toggle="modal" data-target="#download-email-modal" data-download-url="/download/thankyou?dl={{site.enterpriseUrl}}/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-linux-x64.tar.gz">flyway-commandline-{{site.flywayVersion}}-linux-x64.tar.gz</button>
+            <a class="note" href="{{site.enterpriseUrl}}/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-linux-x64.tar.gz.md5">md5</a>
+            <a class="note" href="{{site.enterpriseUrl}}/flyway-commandline/{{site.flywayVersion}}/flyway-commandline-{{site.flywayVersion}}-linux-x64.tar.gz.sha1">sha1</a><br/><br/>
+
+            <h4> <img title="Docker" style="height: 12px;margin-top: -4px;" src="/assets/logos/docker.png"> Docker </h4>
+
+            (Linux only) Download, extract and install by adding to `PATH` (requires `sudo` permissions):
+
+            <pre class="console"><span>$</span> sudo sh -c 'echo "docker run --rm <strong>redgate/flyway:{{site.flywayVersion}} $*</strong>" > /usr/local/bin/flyway && chmod +x /usr/local/bin/flyway'</pre>
+
+            (All platforms) Or simply download the image:
+
+            <pre class="console"><span>&gt;</span> docker pull <strong>redgate/flyway:{{site.flywayVersion}}</strong></pre>
+
+            Go to Docker Hub for <a href="https://hub.docker.com/r/redgate/flyway/">detailed usage instructions</a>.
+
         </div>
     </div>
 </div>
