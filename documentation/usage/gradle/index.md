@@ -194,6 +194,13 @@ buildscript {
 }
 ```
 
+Signs that you're running into this might be seeing errors like the following:
+
+```
+Caused by: org.flywaydb.core.api.FlywayException: Error occurred while executing flywayValidate
+No database found to handle jdbc:cloudspanner:/projects/my-project/instances/dev/databases/database-name?credentials=/tmp/.appcreds.json
+```
+
 ### Working directory
 
 Some databases can take a relative path inside the JDBC url (such as to specify a file to write to). When running the Flyway gradle plugin, this is relative to `~/.gradle/` not the configuration location. This may not be what you expected, so you may want to specify the path more explicitly such as in the following example:
