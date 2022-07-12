@@ -202,8 +202,9 @@ For details on how to setup and use custom Gradle configurations, see the [offic
 
 ### Using Flyway Database Types
 
-For some Flyway database types, like [Cloud Spanner](/documentation/database/cloud-spanner) or [SQL Server](/documentation/database/sqlserver), you'll need to actually use a `buildScript` to get your
-Gradle commands to work properly.
+For some Flyway database types (non core), like [Cloud Spanner](/documentation/database/cloud-spanner) or [SQL Server](/documentation/database/sqlserver), you'll need to actually use a `buildScript` to get your
+Gradle commands to work properly. You need to enable putting the database type on the build classpath, and not
+the project classpath.
 
 Something like the following should have you set:
 
