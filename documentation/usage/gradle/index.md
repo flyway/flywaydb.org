@@ -176,6 +176,24 @@ flyway {
 
 For details on how to setup and use custom Gradle configurations, see the [official Gradle documentation](https://docs.gradle.org/current/dsl/org.gradle.api.artifacts.ConfigurationContainer.html).
 
+### Using Flyway Database Types
+
+For some Flyway database types, like [Cloud Spanner](/documentation/database/cloud-spanner) or [SQL Server](/documentation/database/sqlserver), you'll need to actually use a `buildScript` to get your
+Gradle commands to work properly.
+
+Something like the following should have you set:
+
+```groovy
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.flywaydb:flyway-mysql:${flywayVersion}"
+    }
+}
+```
+
 ### Working directory
 
 Some databases can take a relative path inside the JDBC url (such as to specify a file to write to). When running the Flyway gradle plugin, this is relative to `~/.gradle/` not the configuration location. This may not be what you expected, so you may want to specify the path more explicitly such as in the following example:
