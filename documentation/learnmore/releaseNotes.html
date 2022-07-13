@@ -7,6 +7,53 @@ redirect_from: /documentation/releaseNotes/
 <h1>Release Notes</h1>
 
 <div class="release">
+    <h2 id="9.0.0">Flyway 9.0.0 (2022-07-13)</h2>
+
+    <h3>Breaking changes</h3>
+    <ul>
+        <li>Migration patterns that are version numbers are treated as numbers rather than strings when matching to migrations</li>
+        <li>Script & Java migrations are no longer executed during a dry run.</li>
+        <li>'getResolvedMigration' method on Java Migrations interface now takes a StatementInterceptor</li>
+        <li>Don't clear the Url/Pass/Username when setting a data source</li>
+        <li>Change default of cleanDisabled to true.</li>
+        <li>Removed deprecated parameters for configuring secrets managers</li>
+        <li>Removed parameter 'oracleKerberosConfigFile' as it is replaced by 'kerberosConfigFile'</li>
+        <li>Removed parameters 'ignorePendingMigrations', 'ignoreMissingMigrations', 'ignoreIgnoredMigrations' and 'ignoreFutureMigrations' as they are replaced by 'ignoreMigrationPatterns'</li>
+        <li>'MigrationType' moved into 'extensibility' package as an enum and replaced with 'CoreMigrationType'</li>
+        <li>'SQL__BASELINE' and 'JDBC__BASELINE' migration types removed from 'flyway-core'</li>
+        <li>'CoreMigrationType' enum field 'baselineMigration' now called 'baseline', for which the type 'BASELINE' now returns true</li>
+        <li>'baselineMigrationPrefix' removed from Configuration - see the docs for this parameter for how to configure it via the API</li>
+        <li>use 'BaselineJavaMigration' from the 'flyway-proprietary' package to make Java-based Baseline Migrations now</li>
+        <li>Removed 'isUndo' and 'isBaselineMigration' from 'ResolvedMigration'</li>
+        <li>'Context' in 'resolveMigrations' on a 'MigrationResolver' is now a class which also has 'ResourceProvider', 'SqlScriptFactory' and 'SqlScriptExecutorFactory'</li>
+    </ul>
+
+    <h3>Changes</h3>
+    <ul>
+        <li>Info filter 'infoOfState' now allows multiple states as a comma-separated list</li>
+        <li>Handle errors (with warning) when cleaning procs on snowflake</li>
+    </ul>
+
+    <h3>Database compatibility</h3>
+    <ul>
+        <li>H2 1.4 is now in Teams</li>
+        <li>Oracle 12.2 is now in Teams</li>
+        <li>MariaDB 10.2 is now in Teams</li>
+        <li>HSQLDB 2.4 is now in Teams</li>
+        {% include issue.html id="3469" title="Flyway CLI now bundles version 2.6.1 of the HSQLDB driver." %}
+    </ul>
+
+    <h3>New features</h3>
+    <ul>
+        <li>Add '-migrationIds' flag to 'info' to get a comma-separated list of versions or descriptions for repeatables</li>
+    </ul>
+
+    <p>
+        Thanks to pzygielo for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
     <h2 id="8.5.13">Flyway 8.5.13 (2022-06-16)</h2>
 
     <h3>Bug fixes</h3>
