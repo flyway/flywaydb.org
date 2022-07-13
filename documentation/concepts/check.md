@@ -44,9 +44,9 @@ In either scenario, using the `-changes` flag will help you infer which database
 ### Requirements and behavior
 
 There are 4 ways to generate a change report:
-- If you have access to both your target and build database you should use `check.url` and `check.buildUrl`
+- If you have access to both your target and build database you should use `url` and `check.buildUrl`
 - If you can't access your target database from your build environment you should use `check.appliedMigrations` and `check.buildUrl`
-- If you do not have a build database you should use `check.url` and `check.nextSnapshot`
+- If you do not have a build database you should use `url` and `check.nextSnapshot`
 - If you cannot access either your target or build database you should use `check.deployedSnapshot` and `check.nextSnapshot`
 
 #### Example: `url` and `buildUrl`
@@ -61,7 +61,7 @@ The process works like this:
     1. This is the database you want to apply your changes to, where Flyway is already being used to manage migrations (ie. A Flyway migrations table exists)
 1. Specify a build database
     1. This is an existing build database (note: Flyway will [`clean`](/documentation/command/clean) this database, so if you specify a full database, you must ensure it is ok to for Flyway to erase its schema)
-1. Run `flyway check –changes -check.buildUrl="jdbc://build-url" -check.url="jdbc://url"`
+1. Run `flyway check –changes -check.buildUrl="jdbc://build-url" -url="jdbc://url"`
 
 Flyway’s `check –changes` will then:
 1. Clean your build database
@@ -104,8 +104,8 @@ The `–drift` flag produces a report indicating differences between structure o
 ### Requirements and behavior
 
 There are 2 ways to generate a drift report:
-- If you have access to both your target and build database you should use `check.url` and `check.buildUrl`
-- If you do not have a build database you should use `check.url` and `check.deployedSnapshot`
+- If you have access to both your target and build database you should use `url` and `check.buildUrl`
+- If you do not have a build database you should use `url` and `check.deployedSnapshot`
 
 #### Example: `url` and `buildUrl`
 
@@ -119,7 +119,7 @@ The process works like this:
     1. This is the database you want to apply your changes to, where Flyway is already being used to manage migrations (ie. A Flyway migrations table exists)
 1. Specify a build database
     1. This is an existing build database (note: Flyway will “clean” this database, so if you specify a full database, you must ensure it is ok to for Flyway to erase its schema)
-1. Run `flyway check –drift -check.buildUrl="jdbc://build-url" -check.url="jdbc://url"`
+1. Run `flyway check –drift -check.buildUrl="jdbc://build-url" -url="jdbc://url"`
 
 Flyway’s `check –drift` will then:
 1. Take a [`snapshot`](/documentation/command/snapshot) of the target database
