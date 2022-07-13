@@ -5,7 +5,6 @@ subtitle: Check
 ---
 
 # Check
-**The `check` command is currently in beta. This feature will be available in future products, but during the beta phase you can access it through your Flyway Teams or Redgate Deploy license.**
 
 {% include enterprise.html %}
 
