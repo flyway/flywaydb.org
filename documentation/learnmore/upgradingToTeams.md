@@ -42,12 +42,12 @@ flyway.info();
 
 ### Gradle
 
-If you are using the Gradle plugin, swap the plugin dependency from `id "org.flywaydb" version "{{ site.flywayVersion }}"` to `id "org.flywaydb.enterprise" version "{{ site.flywayVersion }}"`. Then provide your license key through any of the [supported methods](/documentation/configuration/parameters/licenseKey).
+If you are using the Gradle plugin, swap the plugin dependency from `id "org.flywaydb.flyway" version "{{ site.flywayVersion }}"` to `id "org.flywaydb.enterprise.flyway" version "{{ site.flywayVersion }}"`. Then provide your license key through any of the [supported methods](/documentation/configuration/parameters/licenseKey).
 
 For example:
 ```groovy
 plugins {
-    id "org.flywaydb.enterprise" version "{{ site.flywayVersion }}"
+    id "org.flywaydb.enterprise.flyway" version "{{ site.flywayVersion }}"
 }
 
 flyway {
