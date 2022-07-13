@@ -200,13 +200,11 @@ flyway {
 
 For details on how to setup and use custom Gradle configurations, see the [official Gradle documentation](https://docs.gradle.org/current/dsl/org.gradle.api.artifacts.ConfigurationContainer.html).
 
-### Using Flyway Database Types
+### Adding dependencies on Flyway Database Types
 
-For some Flyway database types (non core), like [Cloud Spanner](/documentation/database/cloud-spanner) or [SQL Server](/documentation/database/sqlserver), you'll need to actually use a `buildScript` to get your
-Gradle commands to work properly. You need to enable putting the database type on the build classpath, and not
-the project classpath.
+For some Flyway database types, like [Cloud Spanner](/documentation/database/cloud-spanner) and [SQL Server](/documentation/database/sqlserver), you'll need to add a dependency to the database type in a `buildscript` closure to get your Gradle commands to work properly. This puts the database type on the build classpath, and not the project classpath.
 
-Something like the following should have you set:
+Here is an example `build.gradle`:
 
 ```groovy
 buildscript {
@@ -214,17 +212,12 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath "org.flywaydb:flyway-mysql:${flywayVersion}"
+        classpath "org.flywaydb:flyway-mysql:{{ site.flywayVersion }} "
     }
 }
 ```
 
-Signs that you're running into this might be seeing errors like the following:
-
-```
-Caused by: org.flywaydb.core.api.FlywayException: Error occurred while executing flywayValidate
-No database found to handle jdbc:cloudspanner:/projects/my-project/instances/dev/databases/database-name?credentials=/tmp/.appcreds.json
-```
+Without this you may see an error like the following: `No database found to handle jdbc:...`
 
 ### Working directory
 
