@@ -7,6 +7,22 @@ redirect_from: /documentation/releaseNotes/
 <h1>Release Notes</h1>
 
 <div class="release">
+    <h2 id="9.0.2">Flyway 9.0.2 (2022-07-26)</h2>
+
+    <h3>Changes</h3>
+    <ul>
+        <li>Multiple 'check' reports now appear as tabs</li>
+        <li>Serialize the LocalDateTime field in the check JSON result as a string</li>
+        <li>No longer include `.html` when generating the JSON result for a check report</li>
+        <li>bash entrypoint now adds 'native' folder to library path for use on Windows</li>
+        <li>Only print the version information in Flyway once per execution</li>
+        <li>No longer display the underlying 'DELETE' rows during 'info'</li>
+        <li>License check now occurs when a Flyway object is constructed</li>
+    </ul>
+
+</div>
+
+<div class="release">
     <h2 id="9.0.1">Flyway 9.0.1 (2022-07-15)</h2>
 
     <h3>Bug fixes</h3>
