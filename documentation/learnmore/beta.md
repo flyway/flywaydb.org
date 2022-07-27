@@ -6,8 +6,7 @@ title: Features in Beta
 
 # Features in Beta
 
-- [check](/documentation/command/check)
-    - `check` produces reports to increase confidence in your migrations
+There are no features in beta at this time.
 
 # How to access the Beta
 
