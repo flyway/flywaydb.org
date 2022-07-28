@@ -26,7 +26,7 @@ Flyway Check requires .Net 6 so make sure you have this installed. You can downl
 
 ## Download the latest version of Flyway Enterprise CLI
 
-First, [download the latest version of the Flyway Teams or Enterprise CLI](/documentation/usage/commandline/#tab-teams) and extract its contents.
+First, [download the latest version of the Flyway Enterprise CLI](/documentation/usage/commandline/#tab-teams) and extract its contents.
 
 ## Setting up databases
 
@@ -101,7 +101,7 @@ This creates another pair of HTML and JSON reports. This time the files contain 
 
 ## Using Check in Docker
 
-This feature can also be accessed through the Flyway Docker images.
+This feature can also be accessed through the Flyway Enterprise Docker images.
 
 ### Pulling the images
 
