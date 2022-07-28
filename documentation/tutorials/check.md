@@ -9,8 +9,6 @@ subtitle: 'Tutorial: Using Check with SQL Server'
 
 ## Introduction
 
-The `check` command is currently in beta. This feature will be available in future products, but during the beta phase you can access it through your Flyway Teams or Redgate Deploy license.
-
 The new `check` command is run prior to migrating, to give you confidence by producing a report which allows you to better understand the consequences of your planned migrations.
 
 One or more of the following flags must be set, which determine what the report contains:
@@ -26,9 +24,9 @@ This tutorial exemplifies the scenario where you have access to both your target
 
 Flyway Check requires .Net 6 so make sure you have this installed. You can download it from [here](https://dotnet.microsoft.com/en-us/download/dotnet/6.0).
 
-## Download the latest Beta version of Flyway Enterprise CLI
+## Download the latest version of Flyway Enterprise CLI
 
-First, [download the latest beta version of the Flyway Enterprise CLI](/documentation/learnmore/beta) and extract its contents.
+First, [download the latest version of the Flyway Teams or Enterprise CLI](/documentation/usage/commandline/#tab-teams) and extract its contents.
 
 ## Setting up databases
 
@@ -103,14 +101,14 @@ This creates another pair of HTML and JSON reports. This time the files contain 
 
 ## Using Check in Docker
 
-This feature can also be accessed through the Flyway Enterprise Docker images.
+This feature can also be accessed through the Flyway Docker images.
 
 ### Pulling the images
 
 First pull the relevant images for this tutorial:
 
 <pre class="console">docker pull mcr.microsoft.com/mssql/server</pre>
-<pre class="console">docker pull redgate/flyway:{{site.betaFlywayVersion}}</pre>
+<pre class="console">docker pull redgate/flyway</pre>
 
 ### Running SQL Server
 
