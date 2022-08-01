@@ -115,6 +115,9 @@ If using maven, config parameters can be set in the plugin configuration block, 
 - [oracleKerberosCacheFile](/documentation/configuration/parameters/oracleKerberosCacheFile) {% include teams.html %}
 - [oracleWalletLocation](/documentation/configuration/parameters/oracleWalletLocation) {% include teams.html %}
 
+### PostgreSQL
+- [postgresqlTransactionalLock](/documentation/configuration/parameters/postgresqlTransactionalLock)
+
 ### SQL Server
 - [sqlServerKerberosLoginFile](/documentation/configuration/parameters/sqlServerKerberosLoginFile) {% include teams.html %}
 

@@ -478,7 +478,7 @@ title: Documentation
                                 <li
                                 {% if page.pill == 'group' %} class="nav--vertical__active" {% endif %}>
                                 <a href="/documentation/configuration/parameters/group">group</a></li>
-                                
+
                                 <li
                                 {% if page.pill == 'ignoreMigrationPatterns' %} class="nav--vertical__active" {% endif %}>
                                 <a href="/documentation/configuration/parameters/ignoreMigrationPatterns">ignoreMigrationPatterns</a></li>
@@ -570,6 +570,10 @@ title: Documentation
                                 <li
                                 {% if page.pill == 'placeholderSuffix' %} class="nav--vertical__active" {% endif %}>
                                 <a href="/documentation/configuration/parameters/placeholderSuffix">placeholderSuffix</a></li>
+
+                                <li
+                                {% if page.pill=='postgresqlTransactionalLock' %} class="nav--vertical__active" {% endif %}>
+                                <a href="/documentation/configuration/parameters/postgresqlTransactionalLock">postgresqlTransactionalLock</a></li>
 
                                 <li
                                 {% if page.pill == 'repeatableSqlMigrationPrefix' %} class="nav--vertical__active" {% endif %}>

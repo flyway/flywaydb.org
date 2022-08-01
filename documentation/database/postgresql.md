@@ -145,6 +145,10 @@ SCRAM authentication encryption is supported transparently using the current dri
 
 Authentication can be done with a pgpass file to retrieve the password for a connection, in which case it does not need to be supplied in configuration. If the path to a pgpass file is set in the environment variable `PGPASSFILE`, it will be read from here. If not, then in Windows the file will be read from the location `%APPDATA%\postgresql\pgpass.conf`, otherwise it is read from`~/.pgpass`. You can read more about pgpass files and their structure [here](https://www.postgresql.org/docs/9.6/libpq-pgpass.html).
 
+## Lock Types
+
+By default Flyway uses a transactional lock with PostgreSQL, however this can cause issues with certain SQL statements, most notably `CREATE INDEX CONCURRENTLY`. In this scenario, transactional locks can be replaced with session-level locks by setting `flyway.postgresql.transactional.lock=false` in your configuration.
+
 ## Limitations
 
 - No support for psql meta-commands with no JDBC equivalent like `\set`
