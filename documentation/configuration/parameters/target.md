@@ -21,7 +21,7 @@ applied but repeatable migrations will be, together with any callbacks.
 
 ### Targeting undo
 
-When undoing migrations, Flyway works its way up the schema history table (i.e, in reverse applied order), undoing versioned migrations until it gets to one meeting one of these conditions:
+When undoing migrations, Flyway works its way up the schema history table (i.e. in reverse applied order), undoing versioned migrations until it gets to one meeting one of these conditions:
  - The migration's version number is below the target version.
  - The migration doesn't have a corresponding undo migration.
 
