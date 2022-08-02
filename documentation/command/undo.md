@@ -11,8 +11,8 @@ Undoes the most recently applied versioned migration.
 
 ![Undo](/assets/balsamiq/command-undo.png)
 
-If `target` is specified, Flyway will attempt to undo versioned migrations in the order they were applied until it hits
-one with a version below the target. If `group` is active, Flyway will attempt to undo all these migrations within a
+If `target` is specified, Flyway will attempt to undo versioned migrations in the reverse of their applied order, until it hits
+one with a version below the target, or one without a corresponding undo migration. If `group` is active, Flyway will attempt to undo all these migrations within a
 single transaction. 
 
 If there is no versioned migration to undo, calling undo has no effect.
