@@ -17,7 +17,7 @@ When migrating forwards, Flyway will apply all migrations up to and including th
 higher version number will be ignored. If the target is `current`, then no versioned migrations will be
 applied but repeatable migrations will be, together with any callbacks.
 
-When undoing migrations, Flyway will apply all undo scripts up to and including the target version. Undo scripts with a
+When undoing migrations, Flyway will apply all undo scripts down to and including the target version. Undo scripts with a
 lower version number will be ignored. Specifying a target version should be done with care, as undo scripts typically
 destroy database objects.
 
