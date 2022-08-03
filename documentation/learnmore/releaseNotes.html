@@ -7,6 +7,31 @@ redirect_from: /documentation/releaseNotes/
 <h1>Release Notes</h1>
 
 <div class="release">
+    <h2 id="9.1.2">Flyway 9.1.2 (2022-08-03)</h2>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        <li>check includes all transitive dependencies so it runs out of the box</li>
+        {% include issue.html id="3479" title="BigQuery procedures containing `END AS` are not cut off early." %}
+        {% include issue.html id="3487" title="Update ensured supported to latest documented versions for Oracle and Snowflake" %}
+    </ul>
+
+    <h3>New features</h3>
+    <ul>
+        {% include issue.html id="2895" title="Use transactional locks in PostgreSQL by default, which enables support for PgBouncer (session locks can be enabled again by setting 'flyway.postgresql.transactional.lock=false')" %}
+    </ul>
+
+    <h3>Java compatibility</h3>
+    <ul>
+        <li>Update bundled JRE to latest version of Java 11 to include security updates</li>
+    </ul>
+
+    <p>
+        Thanks to arshaknorsoyan, matmannion and odin568 for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
     <h2 id="9.0.4">Flyway 9.0.4 (2022-07-29)</h2>
 
     <h3>Bug fixes</h3>
