@@ -40,14 +40,14 @@ The Flyway Maven plugin supports **Maven 3.x** running on **Java 8**, **Java 9**
 <table class="table">
     <tr>
         <td>
-            <pre class="prettyprint">&lt;repositories&gt;
+            <pre class="prettyprint">&lt;pluginRepositories&gt;
     ...
-    &lt;repository&gt;
+    &lt;pluginRepository&gt;
         &lt;id&gt;redgate&lt;/id&gt;
         &lt;url&gt;https://download.red-gate.com/maven/release&lt;/url&gt;
-    &lt;/repository&gt;
+    &lt;/pluginRepository&gt;
     ...
-&lt;/repositories&gt;
+&lt;/pluginRepositories&gt;
 &lt;build&gt;
     ...
     &lt;plugin&gt;
