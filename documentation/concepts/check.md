@@ -135,3 +135,48 @@ Flyway’s `check –drift` will then:
 - Please note that the build database **may be cleaned** before the operation starts
 - The underlying comparison technology is dependent on [.NET 6](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) which is why this is required
 - If you get an ERROR: Invalid argument: -check, this is because some systems do not like the period in the argument.  You can wrap the arguments in a single or double quotes.  Eg, -'check.buildURL'
+
+## `Check -code`
+
+### Overview
+
+The `-code` flag produces a report showing the results of running static code analysis over your SQL migrations.
+This report is an integration with [SQLFluff](https://www.sqlfluff.com/) which analyses your SQL according to a set of rules to ensure standards are met.
+
+### Requirements and behavior
+
+SQLFluff needs to be installed on the machine producing the report. You can do so by running:
+
+```
+pip3 install sqlfluff
+```
+
+As this is an integration, it can be used in Flyway Community too albeit with more manual steps.
+
+#### Example: Flyway Community and SQLFluff
+
+You can invoke SQLFluff by running:
+
+```
+sqlfluff lint --dialect <dialect> [migrations]
+```
+
+The dialect should be the flavour of SQL you are using, such as `ansi` or `tsql`.
+
+`[migrations]` could be either a space-separated list of location(s) containing your migrations, or individual migration(s).
+
+This will produce a report in your terminal.
+
+#### Example: Flyway Teams
+
+In Flyway Teams, you can run:
+
+```
+flyway check -code -check.reportFilename=report.html
+```
+
+This will run SQLFluff under the hood, and produce a HTML and JSON report that you can use to check the standards of your migrations.
+
+Flyway makes use of any configured `locations` to determine what migrations to analyse.
+If you have a `URL` configured, Flyway will only run analysis on pending migrations.
+If no `URL` is configured, then _all_ migrations (pending and applied) will be analysed.
