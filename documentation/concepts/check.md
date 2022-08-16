@@ -28,7 +28,8 @@ Each of these scenarios can be met with the `check` command, using the correspon
 | Will these changes have the effect I am expecting?                                   | check **-changes** | ChangeReport.html,<br>ChangeReport.json |
 | What database changes have been made recently?                                       | check **-changes** | ChangeReport.html,<br>ChangeReport.json |
 | Is the production database in the state I am expecting it to be in?                  | check **-drift**   | ChangeReport.html,<br>ChangeReport.json |
-| _Coming soon_<br>Are our changes following internal policies ?                       |                    |                                         |
+| _In Preview_<br>Are our changes following internal policies?                         | check **-code**    | ChangeReport.html,<br>ChangeReport.json |
+| What SQL will be executed in the next deployment?                                    | check **-dryrun**  | ChangeReport.html,<br>ChangeReport.json |
 
 ## `Check –changes`
 
