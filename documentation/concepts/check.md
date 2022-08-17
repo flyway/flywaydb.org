@@ -172,7 +172,7 @@ This will produce a report in your terminal.
 In Flyway Teams, you can run:
 
 ```
-flyway check -code -check.reportFilename=report.html
+flyway check -code -check.reportFilename=report.html -url=jdbc:postgresql://...
 ```
 
 This will run SQLFluff under the hood, and produce a HTML and JSON report that you can use to check the standards of your migrations.
@@ -180,3 +180,15 @@ This will run SQLFluff under the hood, and produce a HTML and JSON report that y
 Flyway makes use of any configured `locations` to determine what migrations to analyse.
 If you have a `URL` configured, Flyway will only run analysis on pending migrations.
 If no `URL` is configured, then _all_ migrations (pending and applied) will be analysed.
+
+### Configuring SQLFluff
+
+#### Dialects
+
+If you provide a URL to `check -code` Flyway will use it to automatically determine which SQL dialect to use when analysing your SQL.
+
+If no URL is provided, then you need to configure the dialect in a `.sqlfluff` configuration file.
+This file needs to be located in the same location as the migration(s) being analysed.
+You can find more information on SQLFluff configuration [here](https://docs.sqlfluff.com/en/stable/configuration.html).
+
+You can also use this to configure more than just the dialect, such as which rules should be enabled or disabled.
