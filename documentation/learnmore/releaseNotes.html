@@ -7,6 +7,24 @@ redirect_from: /documentation/releaseNotes/
 <h1>Release Notes</h1>
 
 <div class="release">
+    <h2 id="9.1.6">Flyway 9.1.6 (2022-08-18)</h2>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        {% include issue.html id="3499" title="connectRetriesInterval now defaults to 120 instead of 0 on the Maven plugin." %}
+    </ul>
+
+    <h3>Changes</h3>
+    <ul>
+        <li>code analysis now auto detects the dialect if a URL is provided, otherwise a '.sqlfluff' configuration file is needed</li>
+    </ul>
+
+    <p>
+        Thanks to mihalyr for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
     <h2 id="9.1.5">Flyway 9.1.5 (2022-08-16)</h2>
 
     <h3>New features</h3>
