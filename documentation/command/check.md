@@ -61,7 +61,22 @@ flyway.check.buildUrl=jdbc:example:build_database
 flyway.check.reportFilename=change_report
 ```
 
-#### Check for Oracle
+#### Database Support
+
+##### `-changes` and `-drift`
+
+Change and drift reports work on the following databases:
+
+- SQL Server
+- PostgreSQL
+- Oracle
+- SQLite
+
+##### `-code` and `-dryrun`
+
+Code analysis and Dry run reports work on any database supported by Flyway.
+
+##### Check for Oracle
 
 When using Check with an Oracle database there are additional requirements.
 
