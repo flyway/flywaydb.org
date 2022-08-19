@@ -65,5 +65,5 @@ flyway.check.reportFilename=change_report
 
 When using Check with an Oracle database there are additional requirements.
 
-If no schemas are specified in the configuration `flyway.schemas`, then the database connection username will be used as the default schema otherwise `flyway.schemas` will be used.
+If no schemas are specified in the configuration `flyway.schemas`, then the database connection username will be used as the default schema, otherwise `flyway.schemas` will be used.
 These schema names are case-sensitive.
