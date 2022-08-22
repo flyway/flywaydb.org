@@ -17,7 +17,7 @@ You can read more about the `check` concept [here](/documentation/concepts/check
 
 #### Requirements
 - .NET 6 is required in order to generate reports. You can download it from [here](https://dotnet.microsoft.com/en-us/download/dotnet/6.0).
-- `sqlfluff` is required for Code Analysis (`-code`). You can install it by running `pip3 install sqlfluff`.
+- `sqlfluff` is required for Code Analysis (`-code`). You can install it by running `pip3 install sqlfluff==1.2.1`.
 
 #### Flags:
 - _One or more flags must be present_

@@ -145,10 +145,10 @@ This report is an integration with [SQLFluff](https://www.sqlfluff.com/) which a
 
 ### Requirements and behavior
 
-SQLFluff needs to be installed on the machine producing the report. You can do so by running:
+SQLFluff needs to be installed on the machine producing the report. We currently support version 1.2.1. You can install it by running:
 
 ```
-pip3 install sqlfluff
+pip3 install sqlfluff==1.2.1
 ```
 
 As this is an integration, it can be used in Flyway Community too albeit with more manual steps.
