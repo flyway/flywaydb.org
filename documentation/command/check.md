@@ -82,3 +82,7 @@ When using Check with an Oracle database there are additional requirements.
 
 If no schemas are specified in the configuration `flyway.schemas`, then the database connection username will be used as the default schema, otherwise `flyway.schemas` will be used.
 These schema names are case-sensitive.
+
+##### Check for SQL Server
+
+If you see errors about being unable to connect to your database and you are specifying `localhost` as the host, then this may be due to not having pipes configured. Using `127.0.0.1` instead should work.
