@@ -91,3 +91,13 @@ flyway {
     </ignoreMigrationPatterns>
 </configuration>
 ```
+
+## Unsetting the value
+
+By default, `future` migrations are ignored. You can unset this by assigning an empty string to `ignoreMigrationPatterns`
+
+For example, in your configuration file you would add:
+
+```properties
+flyway.ignoreMigrationPatterns=
+```
