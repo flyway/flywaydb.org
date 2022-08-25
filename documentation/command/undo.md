@@ -11,6 +11,22 @@ Undoes the most recently applied versioned migration.
 
 ![Undo](/assets/balsamiq/command-undo.png)
 
+## Usage
+{% include commandUsage.html command="undo" %}
+<br/>
+
+API users will need to include `flyway-proprietary` as a dependency in order to use `undo`. For example:
+
+```
+<dependency>
+    <groupId>org.flywaydb.enterprise</groupId>
+    <artifactId>flyway-proprietary</artifactId>
+    <version>{{ site.flywayVersion }}</version>
+</dependency>
+```
+
+## Description
+
 If `target` is specified, Flyway will attempt to undo versioned migrations in the reverse of their applied order, until it hits
 one with a version below the target, or one without a corresponding undo migration. If `group` is active, Flyway will attempt to undo all these migrations within a
 single transaction. 
@@ -40,9 +56,6 @@ if your infrastructure supports this, we recommend using the snapshot technology
 Especially for larger data volumes, this can be several orders of magnitude faster than traditional backups and restores.
 
 <a class="btn btn-primary" href="https://flywaydb.org/try-flyway-teams-edition">Get Undo in Flyway Teams</a>
-
-## Usage
-{% include commandUsage.html command="undo" %}
 
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/command/baseline">Baseline <i class="fa fa-arrow-right"></i></a>
