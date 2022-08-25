@@ -7,6 +7,36 @@ redirect_from: /documentation/releaseNotes/
 <h1>Release Notes</h1>
 
 <div class="release">
+    <h2 id="9.2.0">Flyway 9.2.0 (2022-08-25)</h2>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        <li>Fix problems when appending to code analysis reports</li>
+        <li>Fix bug in 'check -code' where multiple SQL files were not being correctly linted</li>
+        <li>Configured suffixes are now case insensitive</li>
+    </ul>
+
+    <h3>Changes</h3>
+    <ul>
+        <li>Improvements to the 'check' report</li>
+        <li>Remove the error information from 'CompareResult' so that the existing JSON error handling is used</li>
+    </ul>
+
+    <h3>Java compatibility</h3>
+    <ul>
+        <li>Remove unnecessary dependencies</li>
+        <li>Moved Undo command into flyway-proprietary</li>
+        <li>Remove unnecessary maven-model dependency</li>
+        <li>Make 'CompositeResult' generic</li>
+        {% include issue.html id="3505" title="Include transitive GAX dependency in CLI" %}
+    </ul>
+
+    <p>
+        Thanks to jward-premise for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
     <h2 id="9.1.6">Flyway 9.1.6 (2022-08-18)</h2>
 
     <h3>Bug fixes</h3>
