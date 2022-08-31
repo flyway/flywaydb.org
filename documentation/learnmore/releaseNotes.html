@@ -7,6 +7,32 @@ redirect_from: /documentation/releaseNotes/
 <h1>Release Notes</h1>
 
 <div class="release">
+    <h2 id="9.2.1">Flyway 9.2.1 (2022-08-31)</h2>
+
+    <h3>Changes</h3>
+    <ul>
+        <li>Check report UI improvements</li>
+        <li>change and drift reports now fail for incompatible database types</li>
+    </ul>
+
+    <h3>Database compatibility</h3>
+    <ul>
+        {% include issue.html id="3386" title="Updated to support Snowflake 6 and Snowflake Scripting" %}
+    </ul>
+
+    <h3>Java compatibility</h3>
+    <ul>
+        <li>Remove JNA dependency as no longer needed by MariaDB</li>
+        <li>Increase MariaDB driver version to 3.0.7</li>
+        <li>Move flyway-commandline runtime dependency to correct scope</li>
+    </ul>
+
+    <p>
+        Thanks to filiprichtarik for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
     <h2 id="9.2.0">Flyway 9.2.0 (2022-08-25)</h2>
 
     <h3>Bug fixes</h3>
