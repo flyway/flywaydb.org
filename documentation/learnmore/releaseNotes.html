@@ -7,6 +7,27 @@ redirect_from: /documentation/releaseNotes/
 <h1>Release Notes</h1>
 
 <div class="release">
+    <h2 id="9.2.2">Flyway 9.2.2 (2022-09-02)</h2>
+
+    <h3>Bug fixes</h3>
+    <ul>
+        <li>Fix issue with Flyway not running correctly on Macs with a path that has a space</li>
+        <li>Added null-check to avoid NPE when scanning inaccessible locations</li>
+        <li>Fix bug in 'check' when comparing non-Oracle databases with configured schemas</li>
+        {% include issue.html id="3515" title="Drop MariaDB JDBC driver back to major version 2 to enable MySQL compatibility" %}
+    </ul>
+
+    <h3>Changes</h3>
+    <ul>
+        {% include issue.html id="3296" title="Schemas are now created if the user has edited flyway.schemas after an initial migration" %}
+    </ul>
+
+    <p>
+        Thanks to juliahayward and hemberger for reporting these issues.
+    </p>
+</div>
+
+<div class="release">
     <h2 id="9.2.1">Flyway 9.2.1 (2022-08-31)</h2>
 
     <h3>Changes</h3>
