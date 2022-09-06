@@ -98,12 +98,12 @@ If using maven, config parameters can be set in the plugin configuration block, 
 
 ### Placeholders
 - [placeholderPrefix](/documentation/configuration/parameters/placeholderPrefix)
-- [scriptPlaceholderPrefix](/documentation/configuration/parameters/scriptPlaceholderPrefix)
+- [scriptPlaceholderPrefix](/documentation/configuration/parameters/scriptPlaceholderPrefix) {% include teams.html %}
 - [placeholderReplacement](/documentation/configuration/parameters/placeholderReplacement)
 - [placeholders](/documentation/configuration/parameters/placeholders)
 - [placeholderSeparator](/documentation/configuration/parameters/placeholderSeparator)
 - [placeholderSuffix](/documentation/configuration/parameters/placeholderSuffix)
-- [scriptPlaceholderSuffix](/documentation/configuration/parameters/scriptPlaceholderSuffix)
+- [scriptPlaceholderSuffix](/documentation/configuration/parameters/scriptPlaceholderSuffix) {% include teams.html %}
 
 ### Command Line
 - [color](/documentation/configuration/parameters/cliColor)
