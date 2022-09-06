@@ -6,8 +6,6 @@ subtitle: Check
 
 # Check
 
-{% include enterprise.html %}
-
 <div id="toc"></div>
 
 ## Overview
@@ -23,15 +21,17 @@ Before performing a deployment to the target database (most notably, production)
 
 Each of these scenarios can be met with the `check` command, using the corresponding flag:
 
-| Scenario                                                                             | Command & Flag     | Output                                  |
-|--------------------------------------------------------------------------------------|--------------------|-----------------------------------------|
-| Will these changes have the effect I am expecting?                                   | check **-changes** | ChangeReport.html,<br>ChangeReport.json |
-| What database changes have been made recently?                                       | check **-changes** | ChangeReport.html,<br>ChangeReport.json |
-| Is the production database in the state I am expecting it to be in?                  | check **-drift**   | ChangeReport.html,<br>ChangeReport.json |
-| _In Preview_<br>Are our changes following internal policies?                         | check **-code**    | ChangeReport.html,<br>ChangeReport.json |
-| What SQL will be executed in the next deployment?                                    | check **-dryrun**  | ChangeReport.html,<br>ChangeReport.json |
+| Scenario                                                                             | Command & Flag                                   | Output                                  |
+|--------------------------------------------------------------------------------------|--------------------------------------------------|-----------------------------------------|
+| Will these changes have the effect I am expecting?                                   | check **-changes** {% include enterprise.html %} | ChangeReport.html,<br>ChangeReport.json |
+| What database changes have been made recently?                                       | check **-changes** {% include enterprise.html %} | ChangeReport.html,<br>ChangeReport.json |
+| Is the production database in the state I am expecting it to be in?                  | check **-drift**   {% include enterprise.html %} | ChangeReport.html,<br>ChangeReport.json |
+| _In Preview_<br>Are our changes following internal policies?                         | check **-code**                                  | ChangeReport.html,<br>ChangeReport.json |
+| What SQL will be executed in the next deployment?                                    | check **-dryrun**  {% include teams.html %}      | ChangeReport.html,<br>ChangeReport.json |
 
 ## `Check –changes`
+
+{% include enterprise.html %}
 
 ### Overview
 The `–changes` flag produces a report indicating differences between applied migration scripts on your target database and pending migrations scripts (ie. the set of instructions you want to use to change your target database).
@@ -98,6 +98,8 @@ Flyway’s `check –changes` will then:
 
 ## `Check –drift`
 
+{% include enterprise.html %}
+
 ### Overview
 The `–drift` flag produces a report indicating differences between structure of your target database and structure created by the migrations applied by Flyway.
 
@@ -137,6 +139,8 @@ Flyway’s `check –drift` will then:
 - If you get an ERROR: Invalid argument: -check, this is because some systems do not like the period in the argument.  You can wrap the arguments in a single or double quotes.  Eg, -'check.buildURL'
 
 ## `Check -code`
+
+{% include teams.html %}
 
 ### Overview
 
