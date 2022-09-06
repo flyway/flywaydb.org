@@ -6,6 +6,7 @@ subtitle: flyway.scriptPlaceholderPrefix
 ---
 
 # Script Placeholder Prefix
+{% include teams.html %}
 
 ## Description
 The prefix of every [script migration placeholder](/documentation/configuration/placeholder)
