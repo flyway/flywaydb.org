@@ -6,8 +6,6 @@ subtitle: Check
 
 # Check
 
-{% include enterprise.html %}
-
 `check` produces reports to increase confidence in your migrations.
 
 For `-changes` and `-drift`, Flyway migrates against a build database and compares this against the target database in order to generate a report.
@@ -24,10 +22,10 @@ You can read more about the `check` concept [here](/documentation/concepts/check
 
 | Parameter                     | Description
 | ----------------------------- | --------------------------------------------------------------
-|    -changes                   |  Include pending changes that will be applied to the database
-|    -drift                     |  Include changes applied out of process to the database
-|    -code                      |  **In Preview** Performs code analysis on your migrations
-|    -dryrun                    |  Performs a [dry run](/documentation/concepts/dryruns), showing what changes would be applied in a real deployment
+|    -changes                   | {% include enterprise.html %} Include pending changes that will be applied to the database
+|    -drift                     | {% include enterprise.html %} Include changes applied out of process to the database
+|    -code                      | **In Preview** Performs code analysis on your migrations
+|    -dryrun                    | {% include teams.html %} Performs a [dry run](/documentation/concepts/dryruns), showing what changes would be applied in a real deployment
 
 #### Configuration parameters:
  _Format: -key=value_
