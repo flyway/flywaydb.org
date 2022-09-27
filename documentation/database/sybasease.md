@@ -7,6 +7,7 @@ subtitle: Sybase ASE
 
 ## Supported Versions
 
+- `16.3`
 - `16.2` {% include teams.html %}
 - `16.1` {% include teams.html %}
 - `16.0` {% include teams.html %}
