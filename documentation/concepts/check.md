@@ -140,8 +140,6 @@ Flyway’s `check –drift` will then:
 
 ## `Check -code`
 
-{% include teams.html %}
-
 ### Overview
 
 The `-code` flag produces a report showing the results of running static code analysis over your SQL migrations.
@@ -201,7 +199,7 @@ You can also use this to configure more than just the dialect, such as which rul
 
 {% include teams.html %}
 
-You can configure your pipline to fail when certain SQL Fluff rules are violated.
+You can configure your pipeline to fail when specified SQL Fluff rules are violated beyond a given tolerance level.
 This can be done by configuring `check.majorRules`,`check.minorRules`,`check.majorTolerance` and `check.minorTolerance`.
 
 `majorRules` should contain a comma-separated list of [SQL Fluff rule codes](https://docs.sqlfluff.com/en/stable/rules.html) which are considered to be `major`.
@@ -212,7 +210,7 @@ The same applies to `minorRules` and `minorTolerance`.
 For example:
 
 ```
-./flyway check -code '-check.majorTolerance=3' '-check.majorRules=L034'
+./flyway check -code '-check.majorTolerance=3' '-check.majorRules=L034,L042'
 ```
 
-This will fail if rule `L034` is violated 4 or more times across all scanned migartion scripts.
+This will fail if rules `L034` and `L042` are violated 4 or more times in total across all scanned migration scripts.
