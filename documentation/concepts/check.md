@@ -196,3 +196,15 @@ This file needs to be located in the same location as the migration(s) being ana
 You can find more information on SQLFluff configuration [here](https://docs.sqlfluff.com/en/stable/configuration.html).
 
 You can also use this to configure more than just the dialect, such as which rules should be enabled or disabled.
+
+### Failing on Rule Violations 
+
+{% include teams.html %}
+
+You can configure your pipline to fail when certain SQL Fluff rules are violated.
+This can be done by configuring `check.majorRules`,`check.minorRules`,`check.majorTolerance` and `check.minorTolerance`.
+
+`majorRules` should contain a comma-separated list of [SQL Fluff rule codes](https://docs.sqlfluff.com/en/stable/rules.html) which are considered to be `major`.
+If the total number of `majorRules` violations exceeds the `majorTolerance`, Flyway will fail. 
+
+The same applies to `minorRules` and `minorTolerance`.
