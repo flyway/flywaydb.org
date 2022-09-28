@@ -197,7 +197,7 @@ You can find more information on SQLFluff configuration [here](https://docs.sqlf
 
 You can also use this to configure more than just the dialect, such as which rules should be enabled or disabled.
 
-### Failing on Rule Violations 
+#### Failing on Rule Violations 
 
 {% include teams.html %}
 
@@ -208,3 +208,11 @@ This can be done by configuring `check.majorRules`,`check.minorRules`,`check.maj
 If the total number of `majorRules` violations exceeds the `majorTolerance`, Flyway will fail. 
 
 The same applies to `minorRules` and `minorTolerance`.
+
+For example:
+
+```
+./flyway check -code '-check.majorTolerance=3' '-check.majorRules=L034'
+```
+
+This will fail if rule `L034` is violated 4 or more times across all scanned migartion scripts.
