@@ -5,8 +5,9 @@ subtitle: 'Command-line: clean'
 ---
 # Command-line: clean
 
-Drops all objects (tables, views, procedures, triggers, ...) in the configured schemas.<br/>
-The schemas are cleaned in the order specified by the `schemas` property.
+Drops all objects (tables, views, procedures, triggers, ...) in the configured schemas.
+
+The schemas are cleaned in the order specified by the [`schemas`](/documentation/configuration/parameters/schemas) and [`defaultSchema`](/documentation/configuration/parameters/defaultSchema) property.
 
 <a href="/documentation/command/clean"><img src="/assets/balsamiq/command-clean.png" alt="clean"></a>
 
