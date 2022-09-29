@@ -6,7 +6,9 @@ subtitle: Clean
 
 # Clean
 
-Drops all objects in the configured schemas.
+Drops all objects (tables, views, procedures, triggers, ...) in the configured schemas.
+
+The schemas are cleaned in the order specified by the [`schemas`](/documentation/configuration/parameters/schemas) and [`defaultSchema`](/documentation/configuration/parameters/defaultSchema) property.
 
 ![Clean](/assets/balsamiq/command-clean.png)
 
