@@ -39,6 +39,10 @@ You can read more about the `check` concept [here](/documentation/concepts/check
 |    check.nextSnapshot         | A snapshot containing all migrations including those that are pending (generated via [`snapshot`](/documentation/command/snapshot))
 |    check.deployedSnapshot     | A snapshot containing all applied migrations and thus matching what should be in the target (generated via [`snapshot`](/documentation/command/snapshot))
 |    check.appliedMigrations    | A comma-separated list of migration ids (migration versions or repeatable descriptions) to apply to create snapshots (generated via [`info`](/documentation/command/info))
+|    check.majorRules           | A comma-separated list of SQL Fluff rule codes that are considered to be 'major' issues
+|    check.minorRules           | A comma-separated list of SQL Fluff rule codes that are considered to be 'minor' issues
+|    check.majorTolerance       | The number of 'major' issues to be tolerated before throwing an error
+|    check.minorTolerance       | The number of 'minor' issues to be tolerated before throwing an error
 
 #### `check.reportFilename`
 
