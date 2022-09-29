@@ -63,6 +63,6 @@ flyway {
 ### Maven
 ```xml
 <configuration>
-    <loggers>auto</lockRetryCount>
+    <loggers>auto</loggers>
 </configuration>
 ```
