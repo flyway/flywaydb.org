@@ -41,8 +41,8 @@ configurationExtension.setTransactionalLock(false);
 ### Gradle
 ```groovy
 flyway {
-    pluginConfiguration [
-      postgresqlTransactionalLock: false
+    pluginConfiguration = [
+      postgresqlTransactionalLock: 'false'
     ]
 }
 ```
