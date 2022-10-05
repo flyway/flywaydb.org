@@ -39,7 +39,7 @@ gcsmConfigurationExtension.setGcsmProject("quixotic-ferret-345678");
 ### Gradle
 ```groovy
 flyway {
-    pluginConfiguration [
+    pluginConfiguration = [
         gcsmProject: 'quixotic-ferret-345678'
     ]
 }

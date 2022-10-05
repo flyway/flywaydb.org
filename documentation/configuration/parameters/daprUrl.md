@@ -39,7 +39,7 @@ daprConfigurationExtension.setDaprUrl("http://localhost:3500/v1.0/secrets/my-sec
 ### Gradle
 ```groovy
 flyway {
-    pluginConfiguration [
+    pluginConfiguration = [
         daprUrl: 'http://localhost:3500/v1.0/secrets/my-secrets-store'
     ]
 }

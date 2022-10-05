@@ -44,7 +44,7 @@ baselineMigrationConfigurationExtension.setBaselineMigrationPrefix("IB");
 ### Gradle
 ```groovy
 flyway {
-    pluginConfiguration [
+    pluginConfiguration = [
       baselineMigrationPrefix: 'IB'
     ]
 }

@@ -39,7 +39,7 @@ gcsmConfigurationExtension.setGcsmSecrets("secret1", "secret2");
 ### Gradle
 ```groovy
 flyway {
-    pluginConfiguration [
+    pluginConfiguration = [
         gcsmSecrets: ['secret1', 'secret2']
     ]
 }
