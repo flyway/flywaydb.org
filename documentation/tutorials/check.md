@@ -99,6 +99,39 @@ We can then run `check` with the `-drift` flag:
 
 This creates another pair of HTML and JSON reports. This time the files contain a drift report, showing how the target database schema (in this case `foobar`) differs from whats contained in the applied migrations.
 
+### Programmatically identifying drift
+<h4> <i class="fa fa-windows"></i> Windows </h4>
+
+Powershell script to parse the output JSON,find the last drift report it contains and report the status of the flag
+
+<pre class="console">
+$ip = Get-Content "check_report.json" -Raw | convertfrom-json
+# Extract all the objects that are drift reports
+$drifts = $ip.individualResults | where-Object operation -eq "drift"
+# check if there is anything in the list and look at the status of the last item in the list (most recent drift report)
+if ( ($null -ne $drifts ) -and ($drifts[-1].driftDetected -eq "True") )
+{
+    Write-Output "Drift detected"
+    exit 1
+} else {
+    exit 0
+}</pre>
+
+<h4> <i class="fa fa-linux"></i> Linux </h4>
+
+Bash script to parse the output JSON - this depends on [jq]("https://stedolan.github.io/jq/")
+
+* `--exit-status` jq return code is based on result of the query
+* `[.individualResults[]` break the array of reports up
+* `select(.operation=="drift")` pick the reports that are drift reports
+* `.driftDetected` pick out just the field we are interested in
+* `.[-1]` pick the last object in the array of results (this will be the most recent)
+* `| not` Flyway returns 'true' if drift detected, we need to invert this to be able to get a non-zero return code
+
+<pre class="console">
+jq --exit-status '[.individualResults[] | select(.operation=="drift") | .driftDetected ] | .[-1] | not' "check_report.json"
+</pre>
+
 ## Using Check in Docker
 
 This feature can also be accessed through the Flyway Enterprise Docker images.
