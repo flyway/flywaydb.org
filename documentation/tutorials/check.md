@@ -100,11 +100,13 @@ We can then run `check` with the `-drift` flag:
 This creates another pair of HTML and JSON reports. This time the files contain a drift report, showing how the target database schema (in this case `foobar`) differs from whats contained in the applied migrations.
 
 ### Programmatically identifying drift
+
+We can query the JSON output to identify if drift has been identified in the last drift report.
 <h4> <i class="fa fa-windows"></i> Windows </h4>
 
-Powershell script to parse the output JSON,find the last drift report it contains and report the status of the flag
+The following Powershell script reports the status of the flag:
 
-<pre class="console">
+```powershell
 $ip = Get-Content "check_report.json" -Raw | convertfrom-json
 # Extract all the objects that are drift reports
 $drifts = $ip.individualResults | where-Object operation -eq "drift"
@@ -115,11 +117,12 @@ if ( ($null -ne $drifts ) -and ($drifts[-1].driftDetected -eq "True") )
     exit 1
 } else {
     exit 0
-}</pre>
+}
+```
 
 <h4> <i class="fa fa-linux"></i> Linux </h4>
 
-Bash script to parse the output JSON - this depends on [jq](https://stedolan.github.io/jq/)
+The following Bash script reports the status of the flag - this depends on [jq](https://stedolan.github.io/jq/)
 
 * `--exit-status` jq return code is based on result of the query
 * `[.individualResults[]` break the array of reports up
@@ -128,9 +131,9 @@ Bash script to parse the output JSON - this depends on [jq](https://stedolan.git
 * `.[-1]` pick the last object in the array of results (this will be the most recent)
 * `| not` Flyway returns 'true' if drift detected, we need to invert this to be able to get a non-zero return code
 
-<pre class="console">
+```bash
 jq --exit-status '[.individualResults[] | select(.operation=="drift") | .driftDetected ] | .[-1] | not' "check_report.json"
-</pre>
+```
 
 ## Using Check in Docker
 
