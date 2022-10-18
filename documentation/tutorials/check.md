@@ -119,7 +119,7 @@ if ( ($null -ne $drifts ) -and ($drifts[-1].driftDetected -eq "True") )
 
 <h4> <i class="fa fa-linux"></i> Linux </h4>
 
-Bash script to parse the output JSON - this depends on [jq]("https://stedolan.github.io/jq/")
+Bash script to parse the output JSON - this depends on [jq](https://stedolan.github.io/jq/)
 
 * `--exit-status` jq return code is based on result of the query
 * `[.individualResults[]` break the array of reports up
