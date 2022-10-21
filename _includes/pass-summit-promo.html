@@ -1,0 +1,31 @@
+<style>
+    .pass-summit-promo h1:after {
+        content: "-";
+        position: absolute;
+        right: -2px;
+    }
+
+    .pass-summit-promo__description:after {
+        content: "|";
+        position: absolute;
+        right: -2px;
+    }
+
+    @media (max-width: 600px) {
+        .pass-summit-promo h1:after,
+        .pass-summit-promo__description:after {
+            content: "";
+        }
+    }
+</style>
+<section class="band scheme--black pass-summit-promo spaced-bottom--tight">
+    <div class="band__inner-container padded-v--tight">
+        <a href="https://passdatacommunitysummit.com/?utm_source=pass&utm_medium=referral&utm_campaign=Summit&utm_term=Flywaybanner" target="_blank" rel="noopener noreferrer" class="flex flex-align--center flex-justify--center display--block--small flex-wrap">
+            <img src="/wp-content/themes/flyway/assets/images/pass-2022.svg" alt="PASS Data Community Summit logo" class="spaced-h--tight padded-bottom--tight--small" />
+            <h1 class="delta spaced-bottom--none text--bold spaced-left--tight padded-right--tight padded-bottom--tight--small relative">PASS Data Community Summit</h1>
+            <p class="delta text--normal spaced-bottom--none spaced-left--tight padded-right--tight padded-bottom--tight--small pass-summit-promo__description relative">A hybrid conference in Seattle and online</p>
+            <p class="delta text--normal spaced-bottom--none spaced-h--tight padded-bottom--tight--small">15-18 November</p>
+            <button class="spaced-h--tight button--x-small button--red">Find out more</button>
+        </a>
+    </div>
+</section>
