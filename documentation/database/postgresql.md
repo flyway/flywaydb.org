@@ -160,3 +160,21 @@ By default Flyway uses a transactional lock with PostgreSQL, however this can ca
 <p class="next-steps">
     <a class="btn btn-primary" href="/documentation/database/aurora-postgresql">Aurora PostgreSQL <i class="fa fa-arrow-right"></i></a>
 </p>
+
+## Feature support for check command
+
+Support for the check command on PostgreSQL databases is currently ongoing. Basic support for the following object types has been implemented.
+
+- Aggregates
+- Domains
+- Enums
+- Foreign Keys
+- Functions
+- Indexes
+- Materialized Views
+- Procedures
+- Schemas
+- Sequences
+- Tables
+- Triggers
+- Views
