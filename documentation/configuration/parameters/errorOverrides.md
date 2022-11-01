@@ -14,7 +14,7 @@ Rules for the built-in error handler that let you override specific SQL states a
 
 Each error override has the following format: <code>STATE:12345:W</code>. It is a 5 character SQL state (or <code>*</code> to match all SQL states), a colon, the SQL error code (or <code>*</code> to match all SQL error codes), a colon and finally the desired behavior that should override the initial one.
 
-The following behaviors are accepted:</p>
+The following behaviors are accepted:
 <ul>
     <li><code>D</code> to force a debug message</li>
     <li><code>D-</code> to force a debug message, but do not show the original sql state and error code</li>
