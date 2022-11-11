@@ -1,7 +1,7 @@
 safe: true
 future: true
 exclude: [.gitattributes, .gitignore, flywaydb.org.iml, flywaydb.org.ipr, flywaydb.org.iws, README.md, CNAME, Gemfile, Gemfile.lock, .idea/workspace.xml]
-flywayVersion: 9.8.0
+flywayVersion: 9.8.1
 betaFlywayVersion: 9.0.0-beta5
 enterpriseUrl: https://download.red-gate.com/maven/release/org/flywaydb/enterprise
 markdown: kramdown
