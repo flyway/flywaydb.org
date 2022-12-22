@@ -1,3 +1,9 @@
+# **THIS REPOSITORY IS DEPRECATED**
+
+Documentation is now stored in [flyway/flyway](https://github.com/flyway/flyway/tree/main/documentation) and hosted on [documentation.red-gate.com](https://documentation.red-gate.com/fd/welcome-to-flyway-184127914.html)
+
+---
+
 # flywaydb.org
 
 This is the code for Flyway's documentation hosted at <https://flywaydb.org/documentation>.
