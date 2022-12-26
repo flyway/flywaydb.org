@@ -25,7 +25,7 @@ point on your projects.
 by **[Sandra Parsick](https://twitter.com/SandraParsick)** (2018-02-08)
 
 Sandra is currently touring various events around Germany talking about Continuous Database Integration with Flyway and how to make things even better
-by integration [TestContainers](https://www.testcontainers.org/).
+by integration [Testcontainers](https://www.testcontainers.org/).
 
 Here are her slides:
 

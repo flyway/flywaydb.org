@@ -98,5 +98,5 @@ INSERT INTO ${tableName} (name) VALUES ('Mr. T');
 ```
 
 <p class="next-steps">
-    <a class="btn btn-primary" href="/documentation/database/testcontainers">TestContainers <i class="fa fa-arrow-right"></i></a>
+    <a class="btn btn-primary" href="/documentation/database/testcontainers">Testcontainers <i class="fa fa-arrow-right"></i></a>
 </p>
