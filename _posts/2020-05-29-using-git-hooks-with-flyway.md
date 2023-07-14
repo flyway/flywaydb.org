@@ -1,9 +1,4 @@
----
-layout: blog
-subtitle: Using Git Hooks with Flyway
-permalink: /blog/using-git-hooks-with-flyway.html
-author: julia
----
+_Originally posted May 29 2020 by Julia Hayward on flywaydb.org_
 
 When you're on your own developing a simple application, managing your migration scripts is not a demanding task; each
 time you add a script, it gets the next version number in whatever sequence you've decided on using. When your

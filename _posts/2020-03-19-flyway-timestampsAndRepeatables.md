@@ -1,11 +1,6 @@
----
-layout: blog
-subtitle: Timestamps and Repeatable Migrations
-permalink: /blog/flyway-timestampsAndRepeatables.html
-author: philip
----
+_Originally posted 19th March 2020 by Philip Liddell on flywaydb.org_
 
-In Flyway 6.3.0 we introduced a new feature. The ability to use the `${flyway:timestamp}` placeholder (See **[Placeholders](/documentation/configuration/placeholder)** for more details). This placeholder will insert the current date in the format `yyyy-MM-dd HH:mm:ss` as its value. Now, this has some very obvious uses such as storing the date a migration was executed into your database. However, there is something more complex you can do with it that we want to highlight with this post.
+In Flyway 6.3.0 we introduced a new feature. The ability to use the `${flyway:timestamp}` placeholder (See **[Placeholders](https://documentation.red-gate.com/fd/placeholders-configuration-184127475.html)** for more details). This placeholder will insert the current date in the format `yyyy-MM-dd HH:mm:ss` as its value. Now, this has some very obvious uses such as storing the date a migration was executed into your database. However, there is something more complex you can do with it that we want to highlight with this post.
 
 ## Repeatable migrations
 A repeatable migration is a migration that is run whenever its checksum changes. This allows the project to contain a single file to represent the most up to date version of a particular object (often a function or procedure), instead of a full history of versions. It has no version number, just the 'R__' prefix followed by the migration name. As it is, repeatable migrations are very useful and suit many use cases. However, what if you want your repeatable migration to be re-run, regardless of whether or not the checksum changed? 

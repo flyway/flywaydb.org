@@ -1,9 +1,4 @@
----
-layout: blog
-subtitle: JVM Properties
-permalink: /blog/jvm-properties.html
-author: mikiel
----
+_Originally posted June 8th 2020 by Mikiel Agutu on flywaydb.org_
 
 At its core, Flyway is a Java library, though it hooks into many clients which are frequently used in non-Java contexts. For non-Java contexts we'd like Flyway to be as platform-agnostic as possible. Nonetheless, some Java-specific concepts have to be exposed, like our use of Java Database Connectivity (JDBC) drivers.
 
